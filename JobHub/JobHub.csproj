@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCC.Designer.cs">
+      <DependentUpon>FCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCV.cs">
       <SubType>Form</SubType>
     </Compile>
