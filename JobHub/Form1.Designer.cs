@@ -28,142 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSubLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cboWage = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboExperience = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboCity = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.components = new System.ComponentModel.Container();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.pnHotFob = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAll = new Guna.UI2.WinForms.Guna2Button();
+            this.picTitle = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnFake = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnNewJob = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSeeAll = new System.Windows.Forms.Label();
+            this.lblNewJob = new System.Windows.Forms.Label();
+            this.cboCity = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.cboExperience = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboWage = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTechnique = new Guna.UI2.WinForms.Guna2Button();
             this.btnTourism = new Guna.UI2.WinForms.Guna2Button();
             this.btnEconomy = new Guna.UI2.WinForms.Guna2Button();
             this.btnIT = new Guna.UI2.WinForms.Guna2Button();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picBanner = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblSubLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnHome = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.picTitle = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnNav.SuspendLayout();
+            this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picTitle)).BeginInit();
+            this.pnFake.SuspendLayout();
+            this.pnNewJob.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTitle)).BeginInit();
+            this.pnNav.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnNav
+            // guna2AnimateWindow1
             // 
-            this.pnNav.BackColor = System.Drawing.Color.White;
-            this.pnNav.Controls.Add(this.guna2ImageButton4);
-            this.pnNav.Controls.Add(this.guna2ImageButton2);
-            this.pnNav.Controls.Add(this.guna2ImageButton3);
-            this.pnNav.Controls.Add(this.guna2ImageButton1);
-            this.pnNav.Controls.Add(this.btnHome);
-            this.pnNav.Controls.Add(this.picTitle);
-            this.pnNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnNav.Location = new System.Drawing.Point(0, 0);
-            this.pnNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnNav.Name = "pnNav";
-            this.pnNav.Size = new System.Drawing.Size(50, 601);
-            this.pnNav.TabIndex = 1;
+            this.guna2AnimateWindow1.TargetForm = this;
             // 
-            // lblSubLogo
+            // pnHotFob
             // 
-            this.lblSubLogo.AutoSize = false;
-            this.lblSubLogo.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubLogo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.lblSubLogo.Location = new System.Drawing.Point(649, 30);
-            this.lblSubLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lblSubLogo.Name = "lblSubLogo";
-            this.lblSubLogo.Size = new System.Drawing.Size(67, 22);
-            this.lblSubLogo.TabIndex = 7;
-            this.lblSubLogo.Text = "@job_hub";
+            this.pnHotFob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnHotFob.BorderRadius = 10;
+            this.pnHotFob.BorderThickness = 3;
+            this.pnHotFob.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnHotFob.Location = new System.Drawing.Point(0, 0);
+            this.pnHotFob.Name = "pnHotFob";
+            this.pnHotFob.Size = new System.Drawing.Size(358, 427);
+            this.pnHotFob.TabIndex = 0;
             // 
-            // lblLogo
+            // flowLayoutPanel1
             // 
-            this.lblLogo.AutoSize = false;
-            this.lblLogo.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(638, 5);
-            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(82, 32);
-            this.lblLogo.TabIndex = 8;
-            this.lblLogo.Text = "JobHub";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = false;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(64, 239);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(82, 32);
-            this.lblTitle.TabIndex = 11;
-            this.lblTitle.Text = "Lĩnh Vực";
-            // 
-            // cboWage
-            // 
-            this.cboWage.BackColor = System.Drawing.Color.Transparent;
-            this.cboWage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
-            this.cboWage.BorderRadius = 8;
-            this.cboWage.BorderThickness = 2;
-            this.cboWage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboWage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboWage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboWage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboWage.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboWage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboWage.ItemHeight = 30;
-            this.cboWage.Location = new System.Drawing.Point(64, 313);
-            this.cboWage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cboWage.Name = "cboWage";
-            this.cboWage.Size = new System.Drawing.Size(145, 36);
-            this.cboWage.TabIndex = 16;
-            // 
-            // cboExperience
-            // 
-            this.cboExperience.BackColor = System.Drawing.Color.Transparent;
-            this.cboExperience.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(162)))), ((int)(((byte)(4)))));
-            this.cboExperience.BorderRadius = 8;
-            this.cboExperience.BorderThickness = 2;
-            this.cboExperience.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboExperience.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboExperience.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboExperience.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboExperience.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboExperience.ItemHeight = 30;
-            this.cboExperience.Location = new System.Drawing.Point(244, 313);
-            this.cboExperience.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cboExperience.Name = "cboExperience";
-            this.cboExperience.Size = new System.Drawing.Size(145, 36);
-            this.cboExperience.TabIndex = 17;
-            // 
-            // cboCity
-            // 
-            this.cboCity.BackColor = System.Drawing.Color.Transparent;
-            this.cboCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(161)))), ((int)(((byte)(233)))));
-            this.cboCity.BorderRadius = 8;
-            this.cboCity.BorderThickness = 2;
-            this.cboCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboCity.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboCity.ItemHeight = 30;
-            this.cboCity.Location = new System.Drawing.Point(432, 313);
-            this.cboCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(145, 36);
-            this.cboCity.TabIndex = 18;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(61, 430);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(838, 355);
+            this.flowLayoutPanel1.TabIndex = 39;
             // 
             // btnAll
             // 
@@ -185,12 +105,135 @@
             this.btnAll.Image = global::JobHub.Properties.Resources.all;
             this.btnAll.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btnAll.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnAll.Location = new System.Drawing.Point(620, 313);
-            this.btnAll.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAll.Location = new System.Drawing.Point(742, 377);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(145, 37);
-            this.btnAll.TabIndex = 19;
+            this.btnAll.Size = new System.Drawing.Size(174, 36);
+            this.btnAll.TabIndex = 37;
             this.btnAll.Text = "Tất cả";
+            // 
+            // picTitle
+            // 
+            this.picTitle.BorderRadius = 5;
+            this.picTitle.Image = global::JobHub.Properties.Resources.istockphoto_1170129729_1024x1024;
+            this.picTitle.ImageRotate = 0F;
+            this.picTitle.Location = new System.Drawing.Point(4, 6);
+            this.picTitle.Name = "picTitle";
+            this.picTitle.Size = new System.Drawing.Size(48, 56);
+            this.picTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTitle.TabIndex = 11;
+            this.picTitle.TabStop = false;
+            // 
+            // pnFake
+            // 
+            this.pnFake.Controls.Add(this.pnNewJob);
+            this.pnFake.Controls.Add(this.pnHotFob);
+            this.pnFake.Location = new System.Drawing.Point(940, 5);
+            this.pnFake.Name = "pnFake";
+            this.pnFake.Size = new System.Drawing.Size(358, 780);
+            this.pnFake.TabIndex = 38;
+            // 
+            // pnNewJob
+            // 
+            this.pnNewJob.Controls.Add(this.guna2Panel1);
+            this.pnNewJob.Location = new System.Drawing.Point(0, 425);
+            this.pnNewJob.Name = "pnNewJob";
+            this.pnNewJob.Size = new System.Drawing.Size(358, 352);
+            this.pnNewJob.TabIndex = 1;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.lblSeeAll);
+            this.guna2Panel1.Controls.Add(this.lblNewJob);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(355, 40);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // lblSeeAll
+            // 
+            this.lblSeeAll.AutoSize = true;
+            this.lblSeeAll.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblSeeAll.Location = new System.Drawing.Point(286, 13);
+            this.lblSeeAll.Name = "lblSeeAll";
+            this.lblSeeAll.Size = new System.Drawing.Size(57, 21);
+            this.lblSeeAll.TabIndex = 1;
+            this.lblSeeAll.Text = "See All";
+            // 
+            // lblNewJob
+            // 
+            this.lblNewJob.AutoSize = true;
+            this.lblNewJob.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewJob.Location = new System.Drawing.Point(7, 9);
+            this.lblNewJob.Name = "lblNewJob";
+            this.lblNewJob.Size = new System.Drawing.Size(113, 25);
+            this.lblNewJob.TabIndex = 0;
+            this.lblNewJob.Text = "What\'s New";
+            // 
+            // cboCity
+            // 
+            this.cboCity.BackColor = System.Drawing.Color.Transparent;
+            this.cboCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(161)))), ((int)(((byte)(233)))));
+            this.cboCity.BorderRadius = 8;
+            this.cboCity.BorderThickness = 2;
+            this.cboCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboCity.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboCity.ItemHeight = 30;
+            this.cboCity.Location = new System.Drawing.Point(517, 377);
+            this.cboCity.MaximumSize = new System.Drawing.Size(173, 0);
+            this.cboCity.Name = "cboCity";
+            this.cboCity.Size = new System.Drawing.Size(173, 36);
+            this.cboCity.TabIndex = 36;
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(905, 430);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 355);
+            this.guna2VScrollBar1.TabIndex = 24;
+            // 
+            // cboExperience
+            // 
+            this.cboExperience.BackColor = System.Drawing.Color.Transparent;
+            this.cboExperience.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(162)))), ((int)(((byte)(4)))));
+            this.cboExperience.BorderRadius = 8;
+            this.cboExperience.BorderThickness = 2;
+            this.cboExperience.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboExperience.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboExperience.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboExperience.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboExperience.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboExperience.ItemHeight = 30;
+            this.cboExperience.Location = new System.Drawing.Point(291, 377);
+            this.cboExperience.Name = "cboExperience";
+            this.cboExperience.Size = new System.Drawing.Size(173, 36);
+            this.cboExperience.TabIndex = 35;
+            // 
+            // cboWage
+            // 
+            this.cboWage.BackColor = System.Drawing.Color.Transparent;
+            this.cboWage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
+            this.cboWage.BorderRadius = 8;
+            this.cboWage.BorderThickness = 2;
+            this.cboWage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboWage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboWage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboWage.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboWage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboWage.ItemHeight = 30;
+            this.cboWage.Location = new System.Drawing.Point(75, 377);
+            this.cboWage.Name = "cboWage";
+            this.cboWage.Size = new System.Drawing.Size(173, 36);
+            this.cboWage.TabIndex = 34;
             // 
             // btnTechnique
             // 
@@ -210,14 +253,13 @@
             this.btnTechnique.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(70)))), ((int)(((byte)(225)))));
             this.btnTechnique.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTechnique.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(70)))), ((int)(((byte)(225)))));
-            this.btnTechnique.Image = global::JobHub.Properties.Resources.technique;
+            this.btnTechnique.Image = global::JobHub.Properties.Resources.travel_and_tourism;
             this.btnTechnique.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnTechnique.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTechnique.Location = new System.Drawing.Point(619, 268);
-            this.btnTechnique.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTechnique.Location = new System.Drawing.Point(741, 322);
             this.btnTechnique.Name = "btnTechnique";
-            this.btnTechnique.Size = new System.Drawing.Size(145, 37);
-            this.btnTechnique.TabIndex = 15;
+            this.btnTechnique.Size = new System.Drawing.Size(174, 44);
+            this.btnTechnique.TabIndex = 33;
             this.btnTechnique.Text = "Kỹ Thuật";
             // 
             // btnTourism
@@ -238,14 +280,13 @@
             this.btnTourism.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(136)))));
             this.btnTourism.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTourism.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(136)))));
-            this.btnTourism.Image = global::JobHub.Properties.Resources.travel_and_tourism;
+            this.btnTourism.Image = global::JobHub.Properties.Resources.technique;
             this.btnTourism.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnTourism.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTourism.Location = new System.Drawing.Point(432, 268);
-            this.btnTourism.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTourism.Location = new System.Drawing.Point(516, 322);
             this.btnTourism.Name = "btnTourism";
-            this.btnTourism.Size = new System.Drawing.Size(145, 37);
-            this.btnTourism.TabIndex = 14;
+            this.btnTourism.Size = new System.Drawing.Size(174, 44);
+            this.btnTourism.TabIndex = 32;
             this.btnTourism.Text = "Du Lịch";
             // 
             // btnEconomy
@@ -269,11 +310,10 @@
             this.btnEconomy.Image = global::JobHub.Properties.Resources.economic;
             this.btnEconomy.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnEconomy.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnEconomy.Location = new System.Drawing.Point(244, 268);
-            this.btnEconomy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEconomy.Location = new System.Drawing.Point(291, 322);
             this.btnEconomy.Name = "btnEconomy";
-            this.btnEconomy.Size = new System.Drawing.Size(145, 37);
-            this.btnEconomy.TabIndex = 13;
+            this.btnEconomy.Size = new System.Drawing.Size(174, 44);
+            this.btnEconomy.TabIndex = 31;
             this.btnEconomy.Text = "Kinh Tế";
             // 
             // btnIT
@@ -289,7 +329,7 @@
             this.btnIT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnIT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnIT.FillColor = System.Drawing.Color.White;
-            this.btnIT.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIT.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
             this.btnIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(71)))), ((int)(((byte)(175)))));
             this.btnIT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(8)))), ((int)(((byte)(160)))));
             this.btnIT.HoverState.FillColor = System.Drawing.Color.White;
@@ -297,37 +337,68 @@
             this.btnIT.Image = global::JobHub.Properties.Resources.robotic_hand;
             this.btnIT.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnIT.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnIT.Location = new System.Drawing.Point(64, 268);
-            this.btnIT.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIT.Location = new System.Drawing.Point(75, 322);
             this.btnIT.Name = "btnIT";
-            this.btnIT.Size = new System.Drawing.Size(145, 37);
-            this.btnIT.TabIndex = 12;
+            this.btnIT.Size = new System.Drawing.Size(174, 44);
+            this.btnIT.TabIndex = 30;
             this.btnIT.Text = "Công Nghệ";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = false;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(75, 288);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(98, 38);
+            this.lblTitle.TabIndex = 29;
+            this.lblTitle.Text = "Lĩnh Vực";
             // 
             // picBanner
             // 
             this.picBanner.BorderRadius = 20;
-            this.picBanner.Image = global::JobHub.Properties.Resources.jobhub11;
+            this.picBanner.Image = global::JobHub.Properties.Resources.jobhub1;
             this.picBanner.ImageRotate = 0F;
-            this.picBanner.Location = new System.Drawing.Point(64, 72);
-            this.picBanner.Margin = new System.Windows.Forms.Padding(2);
+            this.picBanner.Location = new System.Drawing.Point(75, 88);
             this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(700, 162);
+            this.picBanner.Size = new System.Drawing.Size(840, 194);
             this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBanner.TabIndex = 10;
+            this.picBanner.TabIndex = 28;
             this.picBanner.TabStop = false;
             // 
             // picLogo
             // 
             this.picLogo.Image = global::JobHub.Properties.Resources.logo;
             this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(725, 5);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picLogo.Location = new System.Drawing.Point(868, 7);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(40, 47);
+            this.picLogo.Size = new System.Drawing.Size(48, 56);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 9;
+            this.picLogo.TabIndex = 27;
             this.picLogo.TabStop = false;
+            // 
+            // lblSubLogo
+            // 
+            this.lblSubLogo.AutoSize = false;
+            this.lblSubLogo.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubLogo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.lblSubLogo.Location = new System.Drawing.Point(777, 37);
+            this.lblSubLogo.Name = "lblSubLogo";
+            this.lblSubLogo.Size = new System.Drawing.Size(80, 26);
+            this.lblSubLogo.TabIndex = 25;
+            this.lblSubLogo.Text = "@job_hub";
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = false;
+            this.lblLogo.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Location = new System.Drawing.Point(764, 7);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(98, 38);
+            this.lblLogo.TabIndex = 26;
+            this.lblLogo.Text = "JobHub";
             // 
             // txtSearch
             // 
@@ -341,129 +412,37 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconLeft = global::JobHub.Properties.Resources.timkiem;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtSearch.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.txtSearch.Location = new System.Drawing.Point(65, 5);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Location = new System.Drawing.Point(76, 7);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập nội dung tìm kiếm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(558, 47);
-            this.txtSearch.TabIndex = 2;
+            this.txtSearch.Size = new System.Drawing.Size(670, 56);
+            this.txtSearch.TabIndex = 23;
             // 
-            // guna2ImageButton4
+            // pnNav
             // 
-            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton4.HoverState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(19, 19);
-            this.guna2ImageButton4.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(3, 556);
-            this.guna2ImageButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton4.Size = new System.Drawing.Size(39, 35);
-            this.guna2ImageButton4.TabIndex = 15;
-            this.guna2ImageButton4.UseTransparentBackground = true;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton2.HoverState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(19, 19);
-            this.guna2ImageButton2.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(3, 259);
-            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(39, 35);
-            this.guna2ImageButton2.TabIndex = 14;
-            this.guna2ImageButton2.UseTransparentBackground = true;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(19, 19);
-            this.guna2ImageButton3.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(3, 177);
-            this.guna2ImageButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton3.Size = new System.Drawing.Size(39, 35);
-            this.guna2ImageButton3.TabIndex = 13;
-            this.guna2ImageButton3.UseTransparentBackground = true;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(19, 19);
-            this.guna2ImageButton1.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(3, 121);
-            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(39, 35);
-            this.guna2ImageButton1.TabIndex = 12;
-            this.guna2ImageButton1.UseTransparentBackground = true;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.HoverState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.btnHome.HoverState.ImageSize = new System.Drawing.Size(19, 19);
-            this.btnHome.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.btnHome.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnHome.ImageRotate = 0F;
-            this.btnHome.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHome.Location = new System.Drawing.Point(3, 70);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.PressedState.Image = global::JobHub.Properties.Resources.home_icon_silhouette;
-            this.btnHome.Size = new System.Drawing.Size(39, 35);
-            this.btnHome.TabIndex = 11;
-            this.btnHome.UseTransparentBackground = true;
-            // 
-            // picTitle
-            // 
-            this.picTitle.BorderRadius = 5;
-            this.picTitle.Image = global::JobHub.Properties.Resources.istockphoto_1170129729_1024x1024;
-            this.picTitle.ImageRotate = 0F;
-            this.picTitle.Location = new System.Drawing.Point(3, 5);
-            this.picTitle.Margin = new System.Windows.Forms.Padding(2);
-            this.picTitle.Name = "picTitle";
-            this.picTitle.Size = new System.Drawing.Size(40, 47);
-            this.picTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTitle.TabIndex = 11;
-            this.picTitle.TabStop = false;
+            this.pnNav.BackColor = System.Drawing.Color.White;
+            this.pnNav.Controls.Add(this.picTitle);
+            this.pnNav.Location = new System.Drawing.Point(-2, 1);
+            this.pnNav.Name = "pnNav";
+            this.pnNav.Size = new System.Drawing.Size(60, 784);
+            this.pnNav.TabIndex = 22;
             // 
             // FJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1062, 601);
+            this.ClientSize = new System.Drawing.Size(1296, 786);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnAll);
+            this.Controls.Add(this.pnFake);
             this.Controls.Add(this.cboCity);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.cboExperience);
             this.Controls.Add(this.cboWage);
             this.Controls.Add(this.btnTechnique);
@@ -478,41 +457,49 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pnNav);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FJob";
             this.Text = "Việc Làm";
-            this.pnNav.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picTitle)).EndInit();
+            this.pnFake.ResumeLayout(false);
+            this.pnNewJob.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTitle)).EndInit();
+            this.pnNav.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel pnNav;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Button btnAll;
+        private Guna.UI2.WinForms.Guna2Panel pnFake;
+        private System.Windows.Forms.FlowLayoutPanel pnNewJob;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label lblSeeAll;
+        private System.Windows.Forms.Label lblNewJob;
+        private Guna.UI2.WinForms.Guna2Panel pnHotFob;
+        private Guna.UI2.WinForms.Guna2ComboBox cboCity;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna.UI2.WinForms.Guna2ComboBox cboExperience;
+        private Guna.UI2.WinForms.Guna2ComboBox cboWage;
+        private Guna.UI2.WinForms.Guna2Button btnTechnique;
+        private Guna.UI2.WinForms.Guna2Button btnTourism;
+        private Guna.UI2.WinForms.Guna2Button btnEconomy;
+        private Guna.UI2.WinForms.Guna2Button btnIT;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
+        private Guna.UI2.WinForms.Guna2PictureBox picBanner;
+        private Guna.UI2.WinForms.Guna2PictureBox picLogo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSubLogo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblLogo;
-        private Guna.UI2.WinForms.Guna2PictureBox picLogo;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Panel pnNav;
         private Guna.UI2.WinForms.Guna2PictureBox picTitle;
-        private Guna.UI2.WinForms.Guna2ImageButton btnHome;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2PictureBox picBanner;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
-        private Guna.UI2.WinForms.Guna2Button btnIT;
-        private Guna.UI2.WinForms.Guna2Button btnEconomy;
-        private Guna.UI2.WinForms.Guna2Button btnTourism;
-        private Guna.UI2.WinForms.Guna2Button btnTechnique;
-        private Guna.UI2.WinForms.Guna2ComboBox cboWage;
-        private Guna.UI2.WinForms.Guna2ComboBox cboExperience;
-        private Guna.UI2.WinForms.Guna2ComboBox cboCity;
-        private Guna.UI2.WinForms.Guna2Button btnAll;
     }
 }
 
