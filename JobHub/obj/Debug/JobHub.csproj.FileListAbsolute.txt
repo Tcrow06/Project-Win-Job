@@ -37,3 +37,17 @@ D:\DaiHoc\2023-2024_HK2\Lap_trinh_window\JobHub\JobHub\JobHub\obj\Debug\JobHub.c
 D:\DaiHoc\2023-2024_HK2\Lap_trinh_window\JobHub\JobHub\JobHub\obj\Debug\JobHub.csproj.CopyComplete
 D:\DaiHoc\2023-2024_HK2\Lap_trinh_window\JobHub\JobHub\JobHub\obj\Debug\JobHub.exe
 D:\DaiHoc\2023-2024_HK2\Lap_trinh_window\JobHub\JobHub\JobHub\obj\Debug\JobHub.pdb
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\bin\Debug\JobHub.exe.config
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\bin\Debug\JobHub.exe
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\bin\Debug\JobHub.pdb
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\bin\Debug\Guna.UI2.dll
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.FCV.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.Fmain.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.FJob.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.Properties.Resources.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.csproj.GenerateResource.cache
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.csproj.CopyComplete
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.exe
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.pdb
