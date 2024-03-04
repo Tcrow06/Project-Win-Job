@@ -58,6 +58,12 @@
     <Compile Include="FCV.Designer.cs">
       <DependentUpon>FCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fmain.cs">
       <SubType>Form</SubType>
     </Compile>
