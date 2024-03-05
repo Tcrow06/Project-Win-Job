@@ -1,5 +1,3 @@
-.vs
-JobHub\bin
-JobHub/bin
-JobHub/obj
-JobHub\obj
+.vs/
+JobHub/bin/
+JobHub/obj/
