@@ -46,6 +46,8 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dateEndedu = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.dateEduEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtEduEnd = new Guna.UI2.WinForms.Guna2TextBox();
             this.dateEduStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtDescribeEdu = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSchoolName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,8 +57,6 @@
             this.txtMajors = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEducation = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dateEduEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txtEduEnd = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.dateExEnd = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtExEnd = new Guna.UI2.WinForms.Guna2TextBox();
@@ -81,6 +81,7 @@
             this.txtAcPosition = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox31 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtActivity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.saveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -423,6 +424,47 @@
             this.dateEndedu.Size = new System.Drawing.Size(1050, 198);
             this.dateEndedu.TabIndex = 23;
             // 
+            // dateEduEnd
+            // 
+            this.dateEduEnd.BackColor = System.Drawing.Color.Transparent;
+            this.dateEduEnd.Checked = true;
+            this.dateEduEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.dateEduEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateEduEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateEduEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dateEduEnd.Location = new System.Drawing.Point(160, 145);
+            this.dateEduEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateEduEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateEduEnd.Name = "dateEduEnd";
+            this.dateEduEnd.Size = new System.Drawing.Size(222, 30);
+            this.dateEduEnd.TabIndex = 26;
+            this.dateEduEnd.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
+            // 
+            // txtEduEnd
+            // 
+            this.txtEduEnd.BorderThickness = 0;
+            this.txtEduEnd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEduEnd.DefaultText = "Kết Thúc";
+            this.txtEduEnd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEduEnd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEduEnd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEduEnd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEduEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.txtEduEnd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEduEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEduEnd.ForeColor = System.Drawing.Color.White;
+            this.txtEduEnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEduEnd.Location = new System.Drawing.Point(53, 145);
+            this.txtEduEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEduEnd.Name = "txtEduEnd";
+            this.txtEduEnd.PasswordChar = '\0';
+            this.txtEduEnd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.txtEduEnd.PlaceholderText = "";
+            this.txtEduEnd.ReadOnly = true;
+            this.txtEduEnd.SelectedText = "";
+            this.txtEduEnd.Size = new System.Drawing.Size(100, 30);
+            this.txtEduEnd.TabIndex = 25;
+            // 
             // dateEduStart
             // 
             this.dateEduStart.BackColor = System.Drawing.Color.Transparent;
@@ -617,47 +659,6 @@
             this.txtEducation.SelectedText = "";
             this.txtEducation.Size = new System.Drawing.Size(138, 43);
             this.txtEducation.TabIndex = 0;
-            // 
-            // dateEduEnd
-            // 
-            this.dateEduEnd.BackColor = System.Drawing.Color.Transparent;
-            this.dateEduEnd.Checked = true;
-            this.dateEduEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.dateEduEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEduEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateEduEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateEduEnd.Location = new System.Drawing.Point(160, 145);
-            this.dateEduEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateEduEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateEduEnd.Name = "dateEduEnd";
-            this.dateEduEnd.Size = new System.Drawing.Size(222, 30);
-            this.dateEduEnd.TabIndex = 26;
-            this.dateEduEnd.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
-            // 
-            // txtEduEnd
-            // 
-            this.txtEduEnd.BorderThickness = 0;
-            this.txtEduEnd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEduEnd.DefaultText = "Kết Thúc";
-            this.txtEduEnd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEduEnd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEduEnd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEduEnd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEduEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.txtEduEnd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEduEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEduEnd.ForeColor = System.Drawing.Color.White;
-            this.txtEduEnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEduEnd.Location = new System.Drawing.Point(53, 145);
-            this.txtEduEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEduEnd.Name = "txtEduEnd";
-            this.txtEduEnd.PasswordChar = '\0';
-            this.txtEduEnd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.txtEduEnd.PlaceholderText = "";
-            this.txtEduEnd.ReadOnly = true;
-            this.txtEduEnd.SelectedText = "";
-            this.txtEduEnd.Size = new System.Drawing.Size(100, 30);
-            this.txtEduEnd.TabIndex = 25;
             // 
             // guna2ShadowPanel3
             // 
@@ -1018,7 +1019,7 @@
             this.txtAcDescribe.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtAcDescribe.PlaceholderText = "Mô tả quá trình tham gia hoạt động của bạn";
             this.txtAcDescribe.SelectedText = "";
-            this.txtAcDescribe.Size = new System.Drawing.Size(603, 30);
+            this.txtAcDescribe.Size = new System.Drawing.Size(603, 33);
             this.txtAcDescribe.TabIndex = 23;
             // 
             // txtOrganizationName
@@ -1175,11 +1176,41 @@
             this.txtActivity.Size = new System.Drawing.Size(242, 43);
             this.txtActivity.TabIndex = 0;
             // 
+            // saveBtn
+            // 
+            this.saveBtn.Animated = true;
+            this.saveBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
+            this.saveBtn.BorderRadius = 10;
+            this.saveBtn.BorderThickness = 2;
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.saveBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.saveBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.saveBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.saveBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
+            this.saveBtn.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
+            this.saveBtn.HoverState.FillColor = System.Drawing.Color.White;
+            this.saveBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
+            this.saveBtn.Image = global::JobHub.Properties.Resources.pngwing_com;
+            this.saveBtn.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.saveBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.saveBtn.Location = new System.Drawing.Point(833, 828);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(206, 50);
+            this.saveBtn.TabIndex = 27;
+            this.saveBtn.Text = "Lưu CV";
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
             // FCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 828);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1052, 886);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.guna2ShadowPanel4);
             this.Controls.Add(this.guna2ShadowPanel3);
             this.Controls.Add(this.dateEndedu);
@@ -1264,5 +1295,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAcPosition;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox31;
         private Guna.UI2.WinForms.Guna2TextBox txtActivity;
+        private Guna.UI2.WinForms.Guna2Button saveBtn;
     }
 }

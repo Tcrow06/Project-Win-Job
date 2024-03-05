@@ -68,3 +68,6 @@ C:\Workspace\ProjectJobQuest\JobHub\obj\Debug\JobHub.exe
 C:\Workspace\ProjectJobQuest\JobHub\obj\Debug\JobHub.pdb
 C:\Workspace\ProjectJobQuest\JobHub\obj\Debug\JobHub.uC_NewJob.resources
 C:\Workspace\ProjectJobQuest\JobHub\obj\Debug\JobHub.uC_SlideJob.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.uC_Job.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.uC_NewJob.resources
+C:\Users\LENOVO\Documents\DoAnCuoiKyLTWD2\JobHub\obj\Debug\JobHub.uC_SlideJob.resources

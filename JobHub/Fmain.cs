@@ -121,5 +121,20 @@ namespace JobHub
         {
 
         }
+
+        private void findJobBtn_Click(object sender, EventArgs e)
+        {
+            FJob ffj = new FJob();
+            this.Hide();
+            ffj.Show();
+            
+        }
+
+        private void writeCvBtn_Click(object sender, EventArgs e)
+        {
+            FCV fcv = new FCV();
+            this.Hide();
+            fcv.Show();
+        }
     }
 }

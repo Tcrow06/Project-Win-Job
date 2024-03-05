@@ -16,5 +16,13 @@ namespace JobHub
         {
             InitializeComponent();
         }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Lưu CV thành công", "Success");
+            this.Close();
+            Fmain fmain = new Fmain();
+            fmain.Show();
+        }
     }
 }
