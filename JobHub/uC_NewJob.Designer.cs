@@ -29,33 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uC_NewJob));
-            this.lblNameJob = new System.Windows.Forms.Label();
-            this.lblNameCompany = new System.Windows.Forms.Label();
+            this.pnContain = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
+            this.lblNameCompany = new System.Windows.Forms.Label();
+            this.lblNameJob = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnContain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblNameJob
+            // pnContain
             // 
-            this.lblNameJob.AutoSize = true;
-            this.lblNameJob.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameJob.Location = new System.Drawing.Point(94, 14);
-            this.lblNameJob.Name = "lblNameJob";
-            this.lblNameJob.Size = new System.Drawing.Size(126, 19);
-            this.lblNameJob.TabIndex = 1;
-            this.lblNameJob.Text = "Tên Công Việc";
-            // 
-            // lblNameCompany
-            // 
-            this.lblNameCompany.AutoSize = true;
-            this.lblNameCompany.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameCompany.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNameCompany.Location = new System.Drawing.Point(94, 43);
-            this.lblNameCompany.Name = "lblNameCompany";
-            this.lblNameCompany.Size = new System.Drawing.Size(93, 21);
-            this.lblNameCompany.TabIndex = 2;
-            this.lblNameCompany.Text = "Tên Công Ty";
+            this.pnContain.BackColor = System.Drawing.Color.Transparent;
+            this.pnContain.Controls.Add(this.btnDetail);
+            this.pnContain.Controls.Add(this.lblNameCompany);
+            this.pnContain.Controls.Add(this.lblNameJob);
+            this.pnContain.Controls.Add(this.guna2PictureBox1);
+            this.pnContain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContain.FillColor = System.Drawing.Color.White;
+            this.pnContain.Location = new System.Drawing.Point(0, 0);
+            this.pnContain.Name = "pnContain";
+            this.pnContain.ShadowColor = System.Drawing.Color.DarkGray;
+            this.pnContain.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            this.pnContain.Size = new System.Drawing.Size(325, 74);
+            this.pnContain.TabIndex = 0;
             // 
             // btnDetail
             // 
@@ -66,27 +63,47 @@
             this.btnDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDetail.FillColor = System.Drawing.Color.White;
-            this.btnDetail.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetail.Font = new System.Drawing.Font("Constantia", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(82)))), ((int)(((byte)(72)))));
             this.btnDetail.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnDetail.Location = new System.Drawing.Point(227, 16);
+            this.btnDetail.Location = new System.Drawing.Point(210, 20);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(115, 45);
-            this.btnDetail.TabIndex = 3;
+            this.btnDetail.Size = new System.Drawing.Size(106, 37);
+            this.btnDetail.TabIndex = 7;
             this.btnDetail.Text = "Chi Tiết";
+            // 
+            // lblNameCompany
+            // 
+            this.lblNameCompany.AutoSize = true;
+            this.lblNameCompany.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameCompany.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblNameCompany.Location = new System.Drawing.Point(83, 39);
+            this.lblNameCompany.Name = "lblNameCompany";
+            this.lblNameCompany.Size = new System.Drawing.Size(93, 21);
+            this.lblNameCompany.TabIndex = 6;
+            this.lblNameCompany.Text = "Tên Công Ty";
+            // 
+            // lblNameJob
+            // 
+            this.lblNameJob.AutoSize = true;
+            this.lblNameJob.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameJob.Location = new System.Drawing.Point(82, 13);
+            this.lblNameJob.Name = "lblNameJob";
+            this.lblNameJob.Size = new System.Drawing.Size(126, 19);
+            this.lblNameJob.TabIndex = 5;
+            this.lblNameJob.Text = "Tên Công Việc";
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BorderRadius = 10;
             this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(8, 6);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(76, 74);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(69, 60);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
             // 
             // uC_NewJob
@@ -94,24 +111,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnDetail);
-            this.Controls.Add(this.lblNameCompany);
-            this.Controls.Add(this.lblNameJob);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.pnContain);
             this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.Name = "uC_NewJob";
-            this.Size = new System.Drawing.Size(358, 74);
+            this.Size = new System.Drawing.Size(325, 74);
+            this.pnContain.ResumeLayout(false);
+            this.pnContain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label lblNameJob;
-        private System.Windows.Forms.Label lblNameCompany;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnContain;
         private Guna.UI2.WinForms.Guna2Button btnDetail;
+        private System.Windows.Forms.Label lblNameCompany;
+        private System.Windows.Forms.Label lblNameJob;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

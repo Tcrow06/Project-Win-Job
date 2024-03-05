@@ -15,6 +15,13 @@ namespace JobHub
         public FJob()
         {
             InitializeComponent();
+
+        }
+
+        private void FJob_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new System.Drawing.Size(855, 530);
+            guna2VScrollBar1.BindingContainer = flowLayoutPanel1;
         }
     }
 }
