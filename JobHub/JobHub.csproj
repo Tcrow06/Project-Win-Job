@@ -105,6 +105,9 @@
     <EmbeddedResource Include="FCV.resx">
       <DependentUpon>FCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fmain.resx">
       <DependentUpon>Fmain.cs</DependentUpon>
     </EmbeddedResource>
