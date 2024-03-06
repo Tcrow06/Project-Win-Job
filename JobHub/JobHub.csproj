@@ -64,6 +64,12 @@
     <Compile Include="FCV.Designer.cs">
       <DependentUpon>FCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FJobDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FJobDetails.Designer.cs">
+      <DependentUpon>FJobDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="FCV.resx">
       <DependentUpon>FCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FJobDetails.resx">
+      <DependentUpon>FJobDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
