@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class FCC : Form
+    public partial class uc_JobDetail : UserControl
     {
-        public FCC()
+        public uc_JobDetail()
         {
             InitializeComponent();
         }

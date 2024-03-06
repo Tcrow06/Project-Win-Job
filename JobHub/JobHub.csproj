@@ -52,11 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FCC.cs">
+    <Compile Include="FCompanyDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCC.Designer.cs">
-      <DependentUpon>FCC.cs</DependentUpon>
+    <Compile Include="FCompanyDetails.Designer.cs">
+      <DependentUpon>FCompanyDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FCV.cs">
       <SubType>Form</SubType>
@@ -102,6 +102,12 @@
     <Compile Include="uC_Job.Designer.cs">
       <DependentUpon>uC_Job.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_JobDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_JobDetail.Designer.cs">
+      <DependentUpon>uc_JobDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="uC_NewJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="uC_SlideJob.Designer.cs">
       <DependentUpon>uC_SlideJob.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FCompanyDetails.resx">
+      <DependentUpon>FCompanyDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCV.resx">
       <DependentUpon>FCV.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="uC_Job.resx">
       <DependentUpon>uC_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_JobDetail.resx">
+      <DependentUpon>uc_JobDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_NewJob.resx">
       <DependentUpon>uC_NewJob.cs</DependentUpon>
