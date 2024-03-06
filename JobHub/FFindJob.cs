@@ -28,5 +28,15 @@ namespace JobHub
         {
             this.Close();
         }
+
+        private void uC_Job1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void uC_Job1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
