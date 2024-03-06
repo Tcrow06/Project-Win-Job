@@ -20,7 +20,7 @@ namespace JobHub
 
         private void FJob_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new System.Drawing.Size(855, 530);
+            this.MinimumSize = new System.Drawing.Size(1000, 550);
             guna2VScrollBar1.BindingContainer = flowLayoutPanel1;
         }
     }

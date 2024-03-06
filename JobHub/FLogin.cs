@@ -16,5 +16,23 @@ namespace JobHub
         {
             InitializeComponent();
         }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+            pnSignin.Visible = false;
+            pnLogin.BringToFront();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pnSignin.BringToFront();
+            pnSignin.Visible = true;
+        }
+
+        private void lblToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pnLogin.BringToFront();
+            pnSignin.Visible = false;
+        }
     }
 }
