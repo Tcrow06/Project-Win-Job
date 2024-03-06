@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uC_SlideJob));
             this.pnContain = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -43,6 +41,8 @@
             this.btnTourism = new Guna.UI2.WinForms.Guna2Button();
             this.picViews = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picImageTitle = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnContain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -70,16 +70,6 @@
             this.pnContain.Name = "pnContain";
             this.pnContain.Size = new System.Drawing.Size(351, 412);
             this.pnContain.TabIndex = 0;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 17;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 25;
-            this.guna2Elipse2.TargetControl = this;
             // 
             // label2
             // 
@@ -181,12 +171,12 @@
             this.btnTourism.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTourism.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTourism.FillColor = System.Drawing.Color.White;
-            this.btnTourism.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTourism.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
             this.btnTourism.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(191)))), ((int)(((byte)(199)))));
             this.btnTourism.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(136)))));
             this.btnTourism.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTourism.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(136)))));
-            this.btnTourism.Image = global::JobHub.Properties.Resources.travel_and_tourism;
+            this.btnTourism.Image = ((System.Drawing.Image)(resources.GetObject("btnTourism.Image")));
             this.btnTourism.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTourism.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnTourism.ImageSize = new System.Drawing.Size(15, 15);
@@ -220,6 +210,16 @@
             this.picImageTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picImageTitle.TabIndex = 21;
             this.picImageTitle.TabStop = false;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 17;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 25;
+            this.guna2Elipse2.TargetControl = this;
             // 
             // uC_SlideJob
             // 

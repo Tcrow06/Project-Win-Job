@@ -62,12 +62,10 @@
             this.uC_Job2 = new JobHub.uC_Job();
             this.uC_Job3 = new JobHub.uC_Job();
             this.uC_Job4 = new JobHub.uC_Job();
-            this.uC_Job5 = new JobHub.uC_Job();
-            this.uC_Job6 = new JobHub.uC_Job();
+            this.uC_SlideJob1 = new JobHub.uC_SlideJob();
             this.uC_NewJob1 = new JobHub.uC_NewJob();
             this.uC_NewJob2 = new JobHub.uC_NewJob();
             this.uC_NewJob3 = new JobHub.uC_NewJob();
-            this.uC_SlideJob1 = new JobHub.uC_SlideJob();
             this.pnHotFob.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnContain.SuspendLayout();
@@ -101,8 +99,6 @@
             this.flowLayoutPanel1.Controls.Add(this.uC_Job2);
             this.flowLayoutPanel1.Controls.Add(this.uC_Job3);
             this.flowLayoutPanel1.Controls.Add(this.uC_Job4);
-            this.flowLayoutPanel1.Controls.Add(this.uC_Job5);
-            this.flowLayoutPanel1.Controls.Add(this.uC_Job6);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(61, 476);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -403,7 +399,7 @@
             // picTitle
             // 
             this.picTitle.BorderRadius = 5;
-            this.picTitle.Image = global::JobHub.Properties.Resources.istockphoto_1170129729_1024x1024;
+            this.picTitle.Image = ((System.Drawing.Image)(resources.GetObject("picTitle.Image")));
             this.picTitle.ImageRotate = 0F;
             this.picTitle.Location = new System.Drawing.Point(4, 6);
             this.picTitle.Margin = new System.Windows.Forms.Padding(2);
@@ -436,7 +432,7 @@
             this.btnAll.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(70)))), ((int)(((byte)(225)))));
             this.btnAll.HoverState.FillColor = System.Drawing.Color.White;
             this.btnAll.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(70)))), ((int)(((byte)(225)))));
-            this.btnAll.Image = global::JobHub.Properties.Resources.all;
+            this.btnAll.Image = ((System.Drawing.Image)(resources.GetObject("btnAll.Image")));
             this.btnAll.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btnAll.ImageSize = new System.Drawing.Size(15, 15);
             this.btnAll.Location = new System.Drawing.Point(941, 322);
@@ -459,12 +455,12 @@
             this.btnTechnique.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTechnique.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTechnique.FillColor = System.Drawing.Color.White;
-            this.btnTechnique.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTechnique.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
             this.btnTechnique.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(144)))), ((int)(((byte)(195)))));
             this.btnTechnique.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(70)))), ((int)(((byte)(225)))));
             this.btnTechnique.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTechnique.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(70)))), ((int)(((byte)(225)))));
-            this.btnTechnique.Image = global::JobHub.Properties.Resources.travel_and_tourism;
+            this.btnTechnique.Image = ((System.Drawing.Image)(resources.GetObject("btnTechnique.Image")));
             this.btnTechnique.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnTechnique.ImageSize = new System.Drawing.Size(15, 15);
             this.btnTechnique.Location = new System.Drawing.Point(739, 322);
@@ -492,7 +488,7 @@
             this.btnTourism.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(136)))));
             this.btnTourism.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTourism.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(121)))), ((int)(((byte)(136)))));
-            this.btnTourism.Image = global::JobHub.Properties.Resources.technique;
+            this.btnTourism.Image = ((System.Drawing.Image)(resources.GetObject("btnTourism.Image")));
             this.btnTourism.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnTourism.ImageSize = new System.Drawing.Size(15, 15);
             this.btnTourism.Location = new System.Drawing.Point(516, 322);
@@ -520,7 +516,7 @@
             this.btnEconomy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
             this.btnEconomy.HoverState.FillColor = System.Drawing.Color.White;
             this.btnEconomy.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.btnEconomy.Image = global::JobHub.Properties.Resources.economic;
+            this.btnEconomy.Image = ((System.Drawing.Image)(resources.GetObject("btnEconomy.Image")));
             this.btnEconomy.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnEconomy.ImageSize = new System.Drawing.Size(15, 15);
             this.btnEconomy.Location = new System.Drawing.Point(292, 322);
@@ -548,7 +544,7 @@
             this.btnIT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(8)))), ((int)(((byte)(160)))));
             this.btnIT.HoverState.FillColor = System.Drawing.Color.White;
             this.btnIT.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(8)))), ((int)(((byte)(160)))));
-            this.btnIT.Image = global::JobHub.Properties.Resources.robotic_hand;
+            this.btnIT.Image = ((System.Drawing.Image)(resources.GetObject("btnIT.Image")));
             this.btnIT.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnIT.ImageSize = new System.Drawing.Size(15, 15);
             this.btnIT.Location = new System.Drawing.Point(74, 322);
@@ -573,7 +569,7 @@
             // 
             // picLogo
             // 
-            this.picLogo.Image = global::JobHub.Properties.Resources.logo;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.ImageRotate = 0F;
             this.picLogo.Location = new System.Drawing.Point(1038, 9);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
@@ -631,23 +627,13 @@
             this.uC_Job4.Size = new System.Drawing.Size(436, 104);
             this.uC_Job4.TabIndex = 3;
             // 
-            // uC_Job5
+            // uC_SlideJob1
             // 
-            this.uC_Job5.BackColor = System.Drawing.Color.White;
-            this.uC_Job5.Location = new System.Drawing.Point(9, 253);
-            this.uC_Job5.Margin = new System.Windows.Forms.Padding(9);
-            this.uC_Job5.Name = "uC_Job5";
-            this.uC_Job5.Size = new System.Drawing.Size(436, 104);
-            this.uC_Job5.TabIndex = 4;
-            // 
-            // uC_Job6
-            // 
-            this.uC_Job6.BackColor = System.Drawing.Color.White;
-            this.uC_Job6.Location = new System.Drawing.Point(463, 253);
-            this.uC_Job6.Margin = new System.Windows.Forms.Padding(9);
-            this.uC_Job6.Name = "uC_Job6";
-            this.uC_Job6.Size = new System.Drawing.Size(436, 104);
-            this.uC_Job6.TabIndex = 5;
+            this.uC_SlideJob1.BackColor = System.Drawing.Color.White;
+            this.uC_SlideJob1.Location = new System.Drawing.Point(2, 1);
+            this.uC_SlideJob1.Name = "uC_SlideJob1";
+            this.uC_SlideJob1.Size = new System.Drawing.Size(351, 412);
+            this.uC_SlideJob1.TabIndex = 0;
             // 
             // uC_NewJob1
             // 
@@ -675,15 +661,6 @@
             this.uC_NewJob3.Name = "uC_NewJob3";
             this.uC_NewJob3.Size = new System.Drawing.Size(325, 74);
             this.uC_NewJob3.TabIndex = 2;
-            // 
-            // uC_SlideJob1
-            // 
-            this.uC_SlideJob1.BackColor = System.Drawing.Color.White;
-            this.uC_SlideJob1.Location = new System.Drawing.Point(2, 4);
-            this.uC_SlideJob1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_SlideJob1.Name = "uC_SlideJob1";
-            this.uC_SlideJob1.Size = new System.Drawing.Size(352, 418);
-            this.uC_SlideJob1.TabIndex = 0;
             // 
             // FJob
             // 
@@ -754,23 +731,21 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Panel pnNav;
         private Guna.UI2.WinForms.Guna2PictureBox picTitle;
-        private uC_SlideJob uC_SlideJob1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel pnSubContain;
         private System.Windows.Forms.FlowLayoutPanel flpnContain;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label lblSeeAll;
         private System.Windows.Forms.Label lblNewJob;
-        private uC_NewJob uC_NewJob1;
-        private uC_NewJob uC_NewJob2;
-        private uC_NewJob uC_NewJob3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private uC_Job uC_Job1;
         private uC_Job uC_Job2;
         private uC_Job uC_Job3;
         private uC_Job uC_Job4;
-        private uC_Job uC_Job5;
-        private uC_Job uC_Job6;
+        private uC_NewJob uC_NewJob1;
+        private uC_NewJob uC_NewJob2;
+        private uC_NewJob uC_NewJob3;
+        private uC_SlideJob uC_SlideJob1;
     }
 }
 
