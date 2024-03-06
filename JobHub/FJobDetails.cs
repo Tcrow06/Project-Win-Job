@@ -51,5 +51,13 @@ namespace JobHub
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FCompanyDetails fcd = new FCompanyDetails();
+            this.Hide();
+            fcd.ShowDialog();
+            fcd = null;
+            this.Show();
+        }
     }
 }
