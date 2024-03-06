@@ -36,6 +36,7 @@
             this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNumbersPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.uC_Job1 = new JobHub.uC_Job();
             this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -115,13 +116,13 @@
             this.txtLocation.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocation.ForeColor = System.Drawing.Color.Black;
             this.txtLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLocation.Location = new System.Drawing.Point(736, 228);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtLocation.Location = new System.Drawing.Point(654, 182);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.PasswordChar = '\0';
             this.txtLocation.PlaceholderText = "Thủ đức, tp.HCM";
             this.txtLocation.SelectedText = "";
-            this.txtLocation.Size = new System.Drawing.Size(310, 51);
+            this.txtLocation.Size = new System.Drawing.Size(276, 41);
             this.txtLocation.TabIndex = 21;
             // 
             // txtLink
@@ -139,13 +140,13 @@
             this.txtLink.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLink.ForeColor = System.Drawing.Color.Black;
             this.txtLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLink.Location = new System.Drawing.Point(736, 184);
-            this.txtLink.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtLink.Location = new System.Drawing.Point(654, 147);
+            this.txtLink.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtLink.Name = "txtLink";
             this.txtLink.PasswordChar = '\0';
             this.txtLink.PlaceholderText = "facebook.com/xyz";
             this.txtLink.SelectedText = "";
-            this.txtLink.Size = new System.Drawing.Size(310, 51);
+            this.txtLink.Size = new System.Drawing.Size(276, 41);
             this.txtLink.TabIndex = 20;
             // 
             // txtDateOfBirth
@@ -163,13 +164,13 @@
             this.txtDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateOfBirth.ForeColor = System.Drawing.Color.Black;
             this.txtDateOfBirth.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDateOfBirth.Location = new System.Drawing.Point(736, 140);
-            this.txtDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(654, 112);
+            this.txtDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.PasswordChar = '\0';
             this.txtDateOfBirth.PlaceholderText = "DD/YY/MM";
             this.txtDateOfBirth.SelectedText = "";
-            this.txtDateOfBirth.Size = new System.Drawing.Size(310, 51);
+            this.txtDateOfBirth.Size = new System.Drawing.Size(276, 41);
             this.txtDateOfBirth.TabIndex = 19;
             // 
             // txtGender
@@ -187,13 +188,13 @@
             this.txtGender.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.ForeColor = System.Drawing.Color.Black;
             this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGender.Location = new System.Drawing.Point(736, 52);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtGender.Location = new System.Drawing.Point(654, 42);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtGender.Name = "txtGender";
             this.txtGender.PasswordChar = '\0';
             this.txtGender.PlaceholderText = "Nam";
             this.txtGender.SelectedText = "";
-            this.txtGender.Size = new System.Drawing.Size(177, 51);
+            this.txtGender.Size = new System.Drawing.Size(157, 41);
             this.txtGender.TabIndex = 18;
             // 
             // txtGmail
@@ -211,13 +212,13 @@
             this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGmail.ForeColor = System.Drawing.Color.Black;
             this.txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGmail.Location = new System.Drawing.Point(736, 104);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtGmail.Location = new System.Drawing.Point(654, 83);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.PasswordChar = '\0';
             this.txtGmail.PlaceholderText = "1234@gmail.com";
             this.txtGmail.SelectedText = "";
-            this.txtGmail.Size = new System.Drawing.Size(310, 51);
+            this.txtGmail.Size = new System.Drawing.Size(276, 41);
             this.txtGmail.TabIndex = 17;
             // 
             // txtNumbersPhone
@@ -235,98 +236,95 @@
             this.txtNumbersPhone.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumbersPhone.ForeColor = System.Drawing.Color.Black;
             this.txtNumbersPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumbersPhone.Location = new System.Drawing.Point(736, 12);
-            this.txtNumbersPhone.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtNumbersPhone.Location = new System.Drawing.Point(654, 10);
+            this.txtNumbersPhone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNumbersPhone.Name = "txtNumbersPhone";
             this.txtNumbersPhone.PasswordChar = '\0';
             this.txtNumbersPhone.PlaceholderText = "012 345 6789";
             this.txtNumbersPhone.SelectedText = "";
-            this.txtNumbersPhone.Size = new System.Drawing.Size(177, 51);
+            this.txtNumbersPhone.Size = new System.Drawing.Size(157, 41);
             this.txtNumbersPhone.TabIndex = 16;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.guna2Panel1.Controls.Add(this.uC_Job1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox10);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox7);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel1.Location = new System.Drawing.Point(683, 12);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(607, 10);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(45, 265);
+            this.guna2Panel1.Size = new System.Drawing.Size(40, 212);
             this.guna2Panel1.TabIndex = 15;
+            // 
+            // uC_Job1
+            // 
+            this.uC_Job1.BackColor = System.Drawing.Color.White;
+            this.uC_Job1.Location = new System.Drawing.Point(26, 193);
+            this.uC_Job1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.uC_Job1.Name = "uC_Job1";
+            this.uC_Job1.Size = new System.Drawing.Size(388, 83);
+            this.uC_Job1.TabIndex = 11;
             // 
             // guna2PictureBox10
             // 
-            this.guna2PictureBox10.Image = global::JobHub.Properties.Resources.iconconnect;
             this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(4, 179);
-            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox10.Location = new System.Drawing.Point(4, 143);
             this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox10.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox10.TabIndex = 10;
             this.guna2PictureBox10.TabStop = false;
             // 
             // guna2PictureBox7
             // 
-            this.guna2PictureBox7.Image = global::JobHub.Properties.Resources.iconloacation;
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(4, 222);
-            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(4, 178);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox7.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox7.TabIndex = 7;
             this.guna2PictureBox7.TabStop = false;
             // 
             // guna2PictureBox5
             // 
-            this.guna2PictureBox5.Image = global::JobHub.Properties.Resources.iconcalender;
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(4, 135);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(4, 108);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox5.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox5.TabIndex = 6;
             this.guna2PictureBox5.TabStop = false;
             // 
             // guna2PictureBox4
             // 
-            this.guna2PictureBox4.Image = global::JobHub.Properties.Resources.icongmail;
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(4, 91);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(4, 73);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox4.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox4.TabIndex = 6;
             this.guna2PictureBox4.TabStop = false;
             // 
             // guna2PictureBox3
             // 
-            this.guna2PictureBox3.Image = global::JobHub.Properties.Resources.iconuser;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(4, 45);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(4, 36);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox3.TabIndex = 6;
             this.guna2PictureBox3.TabStop = false;
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = global::JobHub.Properties.Resources.iconphone;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(4, 4);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(4, 3);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(29, 27);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 5;
             this.guna2PictureBox2.TabStop = false;
@@ -345,13 +343,13 @@
             this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosition.ForeColor = System.Drawing.Color.Gray;
             this.txtPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPosition.Location = new System.Drawing.Point(232, 112);
-            this.txtPosition.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtPosition.Location = new System.Drawing.Point(206, 90);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.PasswordChar = '\0';
             this.txtPosition.PlaceholderText = "Vị trí ứng tuyển";
             this.txtPosition.SelectedText = "";
-            this.txtPosition.Size = new System.Drawing.Size(194, 41);
+            this.txtPosition.Size = new System.Drawing.Size(172, 33);
             this.txtPosition.TabIndex = 14;
             // 
             // guna2ShadowPanel1
@@ -368,11 +366,10 @@
             this.guna2ShadowPanel1.Controls.Add(this.txtNumbersPhone);
             this.guna2ShadowPanel1.Controls.Add(this.txtGmail);
             this.guna2ShadowPanel1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(-1, 15);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(-1, 12);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1181, 292);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1050, 234);
             this.guna2ShadowPanel1.TabIndex = 22;
             // 
             // txtName
@@ -390,24 +387,23 @@
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(233, 29);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtName.Location = new System.Drawing.Point(207, 23);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtName.PlaceholderText = "Họ và tên";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(407, 94);
+            this.txtName.Size = new System.Drawing.Size(362, 75);
             this.txtName.TabIndex = 1;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(11, 10);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(213, 265);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(189, 212);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 22;
             this.guna2PictureBox1.TabStop = false;
@@ -428,11 +424,10 @@
             this.dateEndedu.Controls.Add(this.txtEducation);
             this.dateEndedu.FillColor = System.Drawing.SystemColors.Control;
             this.dateEndedu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEndedu.Location = new System.Drawing.Point(-1, 300);
-            this.dateEndedu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateEndedu.Location = new System.Drawing.Point(-1, 240);
             this.dateEndedu.Name = "dateEndedu";
             this.dateEndedu.ShadowColor = System.Drawing.Color.Black;
-            this.dateEndedu.Size = new System.Drawing.Size(1181, 248);
+            this.dateEndedu.Size = new System.Drawing.Size(1050, 198);
             this.dateEndedu.TabIndex = 23;
             // 
             // dateEduEnd
@@ -443,12 +438,11 @@
             this.dateEduEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEduEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateEduEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateEduEnd.Location = new System.Drawing.Point(180, 181);
-            this.dateEduEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateEduEnd.Location = new System.Drawing.Point(160, 145);
             this.dateEduEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateEduEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateEduEnd.Name = "dateEduEnd";
-            this.dateEduEnd.Size = new System.Drawing.Size(250, 38);
+            this.dateEduEnd.Size = new System.Drawing.Size(222, 30);
             this.dateEduEnd.TabIndex = 26;
             this.dateEduEnd.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
             // 
@@ -466,15 +460,15 @@
             this.txtEduEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEduEnd.ForeColor = System.Drawing.Color.White;
             this.txtEduEnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEduEnd.Location = new System.Drawing.Point(60, 181);
-            this.txtEduEnd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtEduEnd.Location = new System.Drawing.Point(53, 145);
+            this.txtEduEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEduEnd.Name = "txtEduEnd";
             this.txtEduEnd.PasswordChar = '\0';
             this.txtEduEnd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtEduEnd.PlaceholderText = "";
             this.txtEduEnd.ReadOnly = true;
             this.txtEduEnd.SelectedText = "";
-            this.txtEduEnd.Size = new System.Drawing.Size(112, 38);
+            this.txtEduEnd.Size = new System.Drawing.Size(100, 30);
             this.txtEduEnd.TabIndex = 25;
             // 
             // dateEduStart
@@ -485,12 +479,11 @@
             this.dateEduStart.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEduStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateEduStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateEduStart.Location = new System.Drawing.Point(180, 131);
-            this.dateEduStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateEduStart.Location = new System.Drawing.Point(160, 105);
             this.dateEduStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateEduStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateEduStart.Name = "dateEduStart";
-            this.dateEduStart.Size = new System.Drawing.Size(250, 38);
+            this.dateEduStart.Size = new System.Drawing.Size(222, 30);
             this.dateEduStart.TabIndex = 24;
             this.dateEduStart.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
             // 
@@ -509,14 +502,14 @@
             this.txtDescribeEdu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescribeEdu.ForeColor = System.Drawing.Color.Black;
             this.txtDescribeEdu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescribeEdu.Location = new System.Drawing.Point(492, 159);
-            this.txtDescribeEdu.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtDescribeEdu.Location = new System.Drawing.Point(437, 127);
+            this.txtDescribeEdu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDescribeEdu.Name = "txtDescribeEdu";
             this.txtDescribeEdu.PasswordChar = '\0';
             this.txtDescribeEdu.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDescribeEdu.PlaceholderText = "Mô tả quá trình học tập hoặc thành tích của bạn";
             this.txtDescribeEdu.SelectedText = "";
-            this.txtDescribeEdu.Size = new System.Drawing.Size(465, 46);
+            this.txtDescribeEdu.Size = new System.Drawing.Size(413, 37);
             this.txtDescribeEdu.TabIndex = 23;
             // 
             // txtSchoolName
@@ -533,14 +526,14 @@
             this.txtSchoolName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSchoolName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtSchoolName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSchoolName.Location = new System.Drawing.Point(495, 105);
-            this.txtSchoolName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSchoolName.Location = new System.Drawing.Point(440, 84);
+            this.txtSchoolName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSchoolName.Name = "txtSchoolName";
             this.txtSchoolName.PasswordChar = '\0';
             this.txtSchoolName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtSchoolName.PlaceholderText = "Tên trường học";
             this.txtSchoolName.SelectedText = "";
-            this.txtSchoolName.Size = new System.Drawing.Size(309, 39);
+            this.txtSchoolName.Size = new System.Drawing.Size(275, 31);
             this.txtSchoolName.TabIndex = 7;
             // 
             // guna2TextBox14
@@ -557,24 +550,23 @@
             this.guna2TextBox14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox14.Location = new System.Drawing.Point(480, 111);
-            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox14.Location = new System.Drawing.Point(427, 89);
+            this.guna2TextBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox14.Name = "guna2TextBox14";
             this.guna2TextBox14.PasswordChar = '\0';
             this.guna2TextBox14.PlaceholderText = "";
             this.guna2TextBox14.SelectedText = "";
-            this.guna2TextBox14.Size = new System.Drawing.Size(3, 112);
+            this.guna2TextBox14.Size = new System.Drawing.Size(3, 90);
             this.guna2TextBox14.TabIndex = 6;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(476, 105);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(423, 84);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(11, 12);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(10, 10);
             this.guna2CirclePictureBox1.TabIndex = 5;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
@@ -592,15 +584,15 @@
             this.txtEduStart.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEduStart.ForeColor = System.Drawing.Color.White;
             this.txtEduStart.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEduStart.Location = new System.Drawing.Point(60, 131);
-            this.txtEduStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtEduStart.Location = new System.Drawing.Point(53, 105);
+            this.txtEduStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEduStart.Name = "txtEduStart";
             this.txtEduStart.PasswordChar = '\0';
             this.txtEduStart.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtEduStart.PlaceholderText = "Ngành học/ Môn học";
             this.txtEduStart.ReadOnly = true;
             this.txtEduStart.SelectedText = "";
-            this.txtEduStart.Size = new System.Drawing.Size(112, 38);
+            this.txtEduStart.Size = new System.Drawing.Size(100, 30);
             this.txtEduStart.TabIndex = 3;
             // 
             // txtMajors
@@ -617,14 +609,14 @@
             this.txtMajors.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtMajors.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMajors.Location = new System.Drawing.Point(60, 75);
-            this.txtMajors.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtMajors.Location = new System.Drawing.Point(53, 60);
+            this.txtMajors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMajors.Name = "txtMajors";
             this.txtMajors.PasswordChar = '\0';
             this.txtMajors.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtMajors.PlaceholderText = "Ngành học/ Môn học";
             this.txtMajors.SelectedText = "";
-            this.txtMajors.Size = new System.Drawing.Size(309, 44);
+            this.txtMajors.Size = new System.Drawing.Size(275, 35);
             this.txtMajors.TabIndex = 2;
             // 
             // guna2TextBox10
@@ -641,13 +633,13 @@
             this.guna2TextBox10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(27, 61);
-            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox10.Location = new System.Drawing.Point(24, 49);
+            this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox10.Name = "guna2TextBox10";
             this.guna2TextBox10.PasswordChar = '\0';
             this.guna2TextBox10.PlaceholderText = "";
             this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.Size = new System.Drawing.Size(101, 4);
+            this.guna2TextBox10.Size = new System.Drawing.Size(90, 3);
             this.guna2TextBox10.TabIndex = 1;
             // 
             // txtEducation
@@ -664,14 +656,14 @@
             this.txtEducation.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEducation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtEducation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEducation.Location = new System.Drawing.Point(17, 8);
-            this.txtEducation.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtEducation.Location = new System.Drawing.Point(15, 6);
+            this.txtEducation.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtEducation.Name = "txtEducation";
             this.txtEducation.PasswordChar = '\0';
             this.txtEducation.PlaceholderText = "";
             this.txtEducation.ReadOnly = true;
             this.txtEducation.SelectedText = "";
-            this.txtEducation.Size = new System.Drawing.Size(155, 54);
+            this.txtEducation.Size = new System.Drawing.Size(138, 43);
             this.txtEducation.TabIndex = 0;
             // 
             // guna2ShadowPanel3
@@ -690,11 +682,10 @@
             this.guna2ShadowPanel3.Controls.Add(this.txtWorkExperience);
             this.guna2ShadowPanel3.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ShadowPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ShadowPanel3.Location = new System.Drawing.Point(-1, 540);
-            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ShadowPanel3.Location = new System.Drawing.Point(-1, 432);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel3.Size = new System.Drawing.Size(1181, 248);
+            this.guna2ShadowPanel3.Size = new System.Drawing.Size(1050, 198);
             this.guna2ShadowPanel3.TabIndex = 27;
             // 
             // dateExEnd
@@ -705,12 +696,11 @@
             this.dateExEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateExEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateExEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateExEnd.Location = new System.Drawing.Point(180, 181);
-            this.dateExEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateExEnd.Location = new System.Drawing.Point(160, 145);
             this.dateExEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateExEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateExEnd.Name = "dateExEnd";
-            this.dateExEnd.Size = new System.Drawing.Size(250, 38);
+            this.dateExEnd.Size = new System.Drawing.Size(222, 30);
             this.dateExEnd.TabIndex = 26;
             this.dateExEnd.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
             // 
@@ -728,15 +718,15 @@
             this.txtExEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExEnd.ForeColor = System.Drawing.Color.White;
             this.txtExEnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExEnd.Location = new System.Drawing.Point(60, 181);
-            this.txtExEnd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtExEnd.Location = new System.Drawing.Point(53, 145);
+            this.txtExEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtExEnd.Name = "txtExEnd";
             this.txtExEnd.PasswordChar = '\0';
             this.txtExEnd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtExEnd.PlaceholderText = "";
             this.txtExEnd.ReadOnly = true;
             this.txtExEnd.SelectedText = "";
-            this.txtExEnd.Size = new System.Drawing.Size(112, 38);
+            this.txtExEnd.Size = new System.Drawing.Size(100, 30);
             this.txtExEnd.TabIndex = 25;
             // 
             // dateExStart
@@ -747,12 +737,11 @@
             this.dateExStart.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateExStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateExStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateExStart.Location = new System.Drawing.Point(180, 131);
-            this.dateExStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateExStart.Location = new System.Drawing.Point(160, 105);
             this.dateExStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateExStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateExStart.Name = "dateExStart";
-            this.dateExStart.Size = new System.Drawing.Size(250, 38);
+            this.dateExStart.Size = new System.Drawing.Size(222, 30);
             this.dateExStart.TabIndex = 24;
             this.dateExStart.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
             // 
@@ -771,14 +760,14 @@
             this.txtExDescribe.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExDescribe.ForeColor = System.Drawing.Color.Black;
             this.txtExDescribe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExDescribe.Location = new System.Drawing.Point(492, 159);
-            this.txtExDescribe.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtExDescribe.Location = new System.Drawing.Point(437, 127);
+            this.txtExDescribe.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtExDescribe.Name = "txtExDescribe";
             this.txtExDescribe.PasswordChar = '\0';
             this.txtExDescribe.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtExDescribe.PlaceholderText = "Mô tả kinh nghiệm làm việc của bạn";
             this.txtExDescribe.SelectedText = "";
-            this.txtExDescribe.Size = new System.Drawing.Size(465, 46);
+            this.txtExDescribe.Size = new System.Drawing.Size(413, 37);
             this.txtExDescribe.TabIndex = 23;
             // 
             // txtExCompany
@@ -795,14 +784,14 @@
             this.txtExCompany.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtExCompany.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExCompany.Location = new System.Drawing.Point(495, 105);
-            this.txtExCompany.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtExCompany.Location = new System.Drawing.Point(440, 84);
+            this.txtExCompany.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtExCompany.Name = "txtExCompany";
             this.txtExCompany.PasswordChar = '\0';
             this.txtExCompany.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtExCompany.PlaceholderText = "Tên công ty";
             this.txtExCompany.SelectedText = "";
-            this.txtExCompany.Size = new System.Drawing.Size(309, 39);
+            this.txtExCompany.Size = new System.Drawing.Size(275, 31);
             this.txtExCompany.TabIndex = 7;
             // 
             // guna2TextBox20
@@ -819,24 +808,23 @@
             this.guna2TextBox20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2TextBox20.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox20.Location = new System.Drawing.Point(480, 111);
-            this.guna2TextBox20.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox20.Location = new System.Drawing.Point(427, 89);
+            this.guna2TextBox20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox20.Name = "guna2TextBox20";
             this.guna2TextBox20.PasswordChar = '\0';
             this.guna2TextBox20.PlaceholderText = "";
             this.guna2TextBox20.SelectedText = "";
-            this.guna2TextBox20.Size = new System.Drawing.Size(3, 112);
+            this.guna2TextBox20.Size = new System.Drawing.Size(3, 90);
             this.guna2TextBox20.TabIndex = 6;
             // 
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(476, 105);
-            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(423, 84);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(11, 12);
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(10, 10);
             this.guna2CirclePictureBox2.TabIndex = 5;
             this.guna2CirclePictureBox2.TabStop = false;
             // 
@@ -854,15 +842,15 @@
             this.txtExStart.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExStart.ForeColor = System.Drawing.Color.White;
             this.txtExStart.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExStart.Location = new System.Drawing.Point(60, 131);
-            this.txtExStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtExStart.Location = new System.Drawing.Point(53, 105);
+            this.txtExStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtExStart.Name = "txtExStart";
             this.txtExStart.PasswordChar = '\0';
             this.txtExStart.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtExStart.PlaceholderText = "Ngành học/ Môn học";
             this.txtExStart.ReadOnly = true;
             this.txtExStart.SelectedText = "";
-            this.txtExStart.Size = new System.Drawing.Size(112, 38);
+            this.txtExStart.Size = new System.Drawing.Size(100, 30);
             this.txtExStart.TabIndex = 3;
             // 
             // txtExPosition
@@ -879,14 +867,14 @@
             this.txtExPosition.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtExPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExPosition.Location = new System.Drawing.Point(60, 75);
-            this.txtExPosition.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtExPosition.Location = new System.Drawing.Point(53, 60);
+            this.txtExPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtExPosition.Name = "txtExPosition";
             this.txtExPosition.PasswordChar = '\0';
             this.txtExPosition.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtExPosition.PlaceholderText = "Vị trí công việc";
             this.txtExPosition.SelectedText = "";
-            this.txtExPosition.Size = new System.Drawing.Size(309, 44);
+            this.txtExPosition.Size = new System.Drawing.Size(275, 35);
             this.txtExPosition.TabIndex = 2;
             // 
             // guna2TextBox23
@@ -903,13 +891,13 @@
             this.guna2TextBox23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2TextBox23.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox23.Location = new System.Drawing.Point(27, 61);
-            this.guna2TextBox23.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox23.Location = new System.Drawing.Point(24, 49);
+            this.guna2TextBox23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox23.Name = "guna2TextBox23";
             this.guna2TextBox23.PasswordChar = '\0';
             this.guna2TextBox23.PlaceholderText = "";
             this.guna2TextBox23.SelectedText = "";
-            this.guna2TextBox23.Size = new System.Drawing.Size(101, 4);
+            this.guna2TextBox23.Size = new System.Drawing.Size(90, 3);
             this.guna2TextBox23.TabIndex = 1;
             // 
             // txtWorkExperience
@@ -926,14 +914,14 @@
             this.txtWorkExperience.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWorkExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtWorkExperience.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWorkExperience.Location = new System.Drawing.Point(17, 8);
-            this.txtWorkExperience.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtWorkExperience.Location = new System.Drawing.Point(15, 6);
+            this.txtWorkExperience.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtWorkExperience.Name = "txtWorkExperience";
             this.txtWorkExperience.PasswordChar = '\0';
             this.txtWorkExperience.PlaceholderText = "";
             this.txtWorkExperience.ReadOnly = true;
             this.txtWorkExperience.SelectedText = "";
-            this.txtWorkExperience.Size = new System.Drawing.Size(374, 54);
+            this.txtWorkExperience.Size = new System.Drawing.Size(332, 43);
             this.txtWorkExperience.TabIndex = 0;
             // 
             // guna2ShadowPanel4
@@ -952,11 +940,10 @@
             this.guna2ShadowPanel4.Controls.Add(this.txtActivity);
             this.guna2ShadowPanel4.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ShadowPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ShadowPanel4.Location = new System.Drawing.Point(-1, 780);
-            this.guna2ShadowPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ShadowPanel4.Location = new System.Drawing.Point(-1, 624);
             this.guna2ShadowPanel4.Name = "guna2ShadowPanel4";
             this.guna2ShadowPanel4.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel4.Size = new System.Drawing.Size(1181, 248);
+            this.guna2ShadowPanel4.Size = new System.Drawing.Size(1050, 198);
             this.guna2ShadowPanel4.TabIndex = 28;
             // 
             // dateAcEnd
@@ -967,12 +954,11 @@
             this.dateAcEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateAcEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateAcEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateAcEnd.Location = new System.Drawing.Point(180, 181);
-            this.dateAcEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateAcEnd.Location = new System.Drawing.Point(160, 145);
             this.dateAcEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateAcEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateAcEnd.Name = "dateAcEnd";
-            this.dateAcEnd.Size = new System.Drawing.Size(250, 38);
+            this.dateAcEnd.Size = new System.Drawing.Size(222, 30);
             this.dateAcEnd.TabIndex = 26;
             this.dateAcEnd.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
             // 
@@ -990,15 +976,15 @@
             this.txtAcEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcEnd.ForeColor = System.Drawing.Color.White;
             this.txtAcEnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAcEnd.Location = new System.Drawing.Point(60, 181);
-            this.txtAcEnd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtAcEnd.Location = new System.Drawing.Point(53, 145);
+            this.txtAcEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAcEnd.Name = "txtAcEnd";
             this.txtAcEnd.PasswordChar = '\0';
             this.txtAcEnd.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtAcEnd.PlaceholderText = "";
             this.txtAcEnd.ReadOnly = true;
             this.txtAcEnd.SelectedText = "";
-            this.txtAcEnd.Size = new System.Drawing.Size(112, 38);
+            this.txtAcEnd.Size = new System.Drawing.Size(100, 30);
             this.txtAcEnd.TabIndex = 25;
             // 
             // dateAcStart
@@ -1009,12 +995,11 @@
             this.dateAcStart.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateAcStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dateAcStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateAcStart.Location = new System.Drawing.Point(180, 131);
-            this.dateAcStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateAcStart.Location = new System.Drawing.Point(160, 105);
             this.dateAcStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateAcStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateAcStart.Name = "dateAcStart";
-            this.dateAcStart.Size = new System.Drawing.Size(250, 38);
+            this.dateAcStart.Size = new System.Drawing.Size(222, 30);
             this.dateAcStart.TabIndex = 24;
             this.dateAcStart.Value = new System.DateTime(2024, 3, 4, 10, 16, 25, 766);
             // 
@@ -1033,14 +1018,14 @@
             this.txtAcDescribe.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcDescribe.ForeColor = System.Drawing.Color.Black;
             this.txtAcDescribe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAcDescribe.Location = new System.Drawing.Point(492, 159);
-            this.txtAcDescribe.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.txtAcDescribe.Location = new System.Drawing.Point(437, 127);
+            this.txtAcDescribe.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtAcDescribe.Name = "txtAcDescribe";
             this.txtAcDescribe.PasswordChar = '\0';
             this.txtAcDescribe.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtAcDescribe.PlaceholderText = "Mô tả quá trình tham gia hoạt động của bạn";
             this.txtAcDescribe.SelectedText = "";
-            this.txtAcDescribe.Size = new System.Drawing.Size(678, 46);
+            this.txtAcDescribe.Size = new System.Drawing.Size(603, 37);
             this.txtAcDescribe.TabIndex = 23;
             // 
             // txtOrganizationName
@@ -1057,14 +1042,14 @@
             this.txtOrganizationName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrganizationName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtOrganizationName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrganizationName.Location = new System.Drawing.Point(495, 105);
-            this.txtOrganizationName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtOrganizationName.Location = new System.Drawing.Point(440, 84);
+            this.txtOrganizationName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOrganizationName.Name = "txtOrganizationName";
             this.txtOrganizationName.PasswordChar = '\0';
             this.txtOrganizationName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtOrganizationName.PlaceholderText = "Tên tổ chức";
             this.txtOrganizationName.SelectedText = "";
-            this.txtOrganizationName.Size = new System.Drawing.Size(309, 39);
+            this.txtOrganizationName.Size = new System.Drawing.Size(275, 31);
             this.txtOrganizationName.TabIndex = 7;
             // 
             // guna2TextBox28
@@ -1081,24 +1066,23 @@
             this.guna2TextBox28.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2TextBox28.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox28.Location = new System.Drawing.Point(480, 111);
-            this.guna2TextBox28.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox28.Location = new System.Drawing.Point(427, 89);
+            this.guna2TextBox28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox28.Name = "guna2TextBox28";
             this.guna2TextBox28.PasswordChar = '\0';
             this.guna2TextBox28.PlaceholderText = "";
             this.guna2TextBox28.SelectedText = "";
-            this.guna2TextBox28.Size = new System.Drawing.Size(3, 112);
+            this.guna2TextBox28.Size = new System.Drawing.Size(3, 90);
             this.guna2TextBox28.TabIndex = 6;
             // 
             // guna2CirclePictureBox3
             // 
             this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(476, 105);
-            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(423, 84);
             this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
             this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(11, 12);
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(10, 10);
             this.guna2CirclePictureBox3.TabIndex = 5;
             this.guna2CirclePictureBox3.TabStop = false;
             // 
@@ -1116,15 +1100,15 @@
             this.txtAcStart.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcStart.ForeColor = System.Drawing.Color.White;
             this.txtAcStart.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAcStart.Location = new System.Drawing.Point(60, 131);
-            this.txtAcStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtAcStart.Location = new System.Drawing.Point(53, 105);
+            this.txtAcStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAcStart.Name = "txtAcStart";
             this.txtAcStart.PasswordChar = '\0';
             this.txtAcStart.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtAcStart.PlaceholderText = "Ngành học/ Môn học";
             this.txtAcStart.ReadOnly = true;
             this.txtAcStart.SelectedText = "";
-            this.txtAcStart.Size = new System.Drawing.Size(112, 38);
+            this.txtAcStart.Size = new System.Drawing.Size(100, 30);
             this.txtAcStart.TabIndex = 3;
             // 
             // txtAcPosition
@@ -1141,14 +1125,14 @@
             this.txtAcPosition.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtAcPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAcPosition.Location = new System.Drawing.Point(60, 75);
-            this.txtAcPosition.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtAcPosition.Location = new System.Drawing.Point(53, 60);
+            this.txtAcPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAcPosition.Name = "txtAcPosition";
             this.txtAcPosition.PasswordChar = '\0';
             this.txtAcPosition.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtAcPosition.PlaceholderText = "Vị trí công việc ";
             this.txtAcPosition.SelectedText = "";
-            this.txtAcPosition.Size = new System.Drawing.Size(309, 44);
+            this.txtAcPosition.Size = new System.Drawing.Size(275, 35);
             this.txtAcPosition.TabIndex = 2;
             // 
             // guna2TextBox31
@@ -1165,13 +1149,13 @@
             this.guna2TextBox31.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.guna2TextBox31.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox31.Location = new System.Drawing.Point(27, 61);
-            this.guna2TextBox31.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox31.Location = new System.Drawing.Point(24, 49);
+            this.guna2TextBox31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox31.Name = "guna2TextBox31";
             this.guna2TextBox31.PasswordChar = '\0';
             this.guna2TextBox31.PlaceholderText = "";
             this.guna2TextBox31.SelectedText = "";
-            this.guna2TextBox31.Size = new System.Drawing.Size(101, 4);
+            this.guna2TextBox31.Size = new System.Drawing.Size(90, 3);
             this.guna2TextBox31.TabIndex = 1;
             // 
             // txtActivity
@@ -1188,14 +1172,14 @@
             this.txtActivity.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtActivity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
             this.txtActivity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtActivity.Location = new System.Drawing.Point(17, 8);
-            this.txtActivity.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtActivity.Location = new System.Drawing.Point(15, 6);
+            this.txtActivity.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtActivity.Name = "txtActivity";
             this.txtActivity.PasswordChar = '\0';
             this.txtActivity.PlaceholderText = "";
             this.txtActivity.ReadOnly = true;
             this.txtActivity.SelectedText = "";
-            this.txtActivity.Size = new System.Drawing.Size(272, 54);
+            this.txtActivity.Size = new System.Drawing.Size(242, 43);
             this.txtActivity.TabIndex = 0;
             // 
             // saveBtn
@@ -1215,29 +1199,27 @@
             this.saveBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
             this.saveBtn.HoverState.FillColor = System.Drawing.Color.White;
             this.saveBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.saveBtn.Image = global::JobHub.Properties.Resources.pngwing_com;
             this.saveBtn.ImageOffset = new System.Drawing.Point(-4, 0);
             this.saveBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.saveBtn.Location = new System.Drawing.Point(937, 1035);
+            this.saveBtn.Location = new System.Drawing.Point(833, 828);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(232, 62);
+            this.saveBtn.Size = new System.Drawing.Size(206, 50);
             this.saveBtn.TabIndex = 27;
             this.saveBtn.Text = "Lưu CV";
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // FCV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1184, 1050);
+            this.ClientSize = new System.Drawing.Size(1052, 840);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.guna2ShadowPanel4);
             this.Controls.Add(this.guna2ShadowPanel3);
             this.Controls.Add(this.dateEndedu);
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FCV";
             this.Text = "FCV";
             this.guna2Panel1.ResumeLayout(false);
@@ -1319,5 +1301,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox31;
         private Guna.UI2.WinForms.Guna2TextBox txtActivity;
         private Guna.UI2.WinForms.Guna2Button saveBtn;
+        private uC_Job uC_Job1;
     }
 }

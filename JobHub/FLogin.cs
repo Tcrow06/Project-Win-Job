@@ -34,5 +34,10 @@ namespace JobHub
             pnLogin.BringToFront();
             pnSignin.Visible = false;
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
