@@ -84,12 +84,7 @@ namespace JobHub
         private int imageNumber = 1;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (imageNumber == 4)
-            {
-                imageNumber = 1;
-            }
-            bannerPictureBox.ImageLocation = string.Format(@"Images\{0}.jpg", imageNumber);
-            imageNumber++;
+           
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -135,6 +130,11 @@ namespace JobHub
             FCV fcv = new FCV();
             this.Hide();
             fcv.Show();
+        }
+
+        private void postJobBtn_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
