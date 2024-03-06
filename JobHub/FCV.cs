@@ -24,5 +24,10 @@ namespace JobHub
             Fmain fmain = new Fmain();
             fmain.Show();
         }
+
+        private void dateEndedu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
