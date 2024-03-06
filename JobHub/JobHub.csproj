@@ -64,6 +64,12 @@
     <Compile Include="FCV.Designer.cs">
       <DependentUpon>FCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCVGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCVGuide.Designer.cs">
+      <DependentUpon>FCVGuide.cs</DependentUpon>
+    </Compile>
     <Compile Include="FJobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,23 +82,29 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fmain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fmain.Designer.cs">
-      <DependentUpon>Fmain.cs</DependentUpon>
-    </Compile>
     <Compile Include="FFindJob.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FFindJob.Designer.cs">
       <DependentUpon>FFindJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmain.Designer.cs">
+      <DependentUpon>Fmain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPostJob.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FPostJob.Designer.cs">
       <DependentUpon>FPostJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FViews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FViews.Designer.cs">
+      <DependentUpon>FViews.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,20 +138,26 @@
     <EmbeddedResource Include="FCV.resx">
       <DependentUpon>FCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCVGuide.resx">
+      <DependentUpon>FCVGuide.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FJobDetails.resx">
       <DependentUpon>FJobDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fmain.resx">
-      <DependentUpon>Fmain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FFindJob.resx">
       <DependentUpon>FFindJob.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fmain.resx">
+      <DependentUpon>Fmain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FPostJob.resx">
       <DependentUpon>FPostJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FViews.resx">
+      <DependentUpon>FViews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

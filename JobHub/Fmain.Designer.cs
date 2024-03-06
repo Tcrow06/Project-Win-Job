@@ -29,745 +29,506 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
-            this.mainMenuPanel = new System.Windows.Forms.Panel();
-            this.loginBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.companySubMenuPanel = new System.Windows.Forms.Panel();
-            this.topCompanyBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.companyListBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.companyBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.CVSubMenuPanel = new System.Windows.Forms.Panel();
-            this.CVGuideBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.writeCvBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.CVBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.jobSubMenuPanel = new System.Windows.Forms.Panel();
-            this.postJobBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.findJobBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.JobBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnSubMenu1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnJob = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFindJob = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignJob = new Guna.UI2.WinForms.Guna2Button();
+            this.pnSubMenu3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCompany = new Guna.UI2.WinForms.Guna2Button();
+            this.btnListCompany = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.pnSubMenu2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMakeFile = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInstructCV = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnShow = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.jobHubProfileMiniPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.profileMiniBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.jobHubCVMiniPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bannerPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.mainMenuPanel.SuspendLayout();
-            this.companySubMenuPanel.SuspendLayout();
-            this.CVSubMenuPanel.SuspendLayout();
-            this.jobSubMenuPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.jobHubProfileMiniPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.jobHubCVMiniPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            this.guna2ShadowPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).BeginInit();
+            this.pnMenu.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.pnSubMenu1.SuspendLayout();
+            this.pnSubMenu3.SuspendLayout();
+            this.pnSubMenu2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mainMenuPanel
+            // pnMenu
             // 
-            this.mainMenuPanel.AutoScroll = true;
-            this.mainMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mainMenuPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mainMenuPanel.Controls.Add(this.loginBtn);
-            this.mainMenuPanel.Controls.Add(this.companySubMenuPanel);
-            this.mainMenuPanel.Controls.Add(this.companyBtn);
-            this.mainMenuPanel.Controls.Add(this.CVSubMenuPanel);
-            this.mainMenuPanel.Controls.Add(this.CVBtn);
-            this.mainMenuPanel.Controls.Add(this.jobSubMenuPanel);
-            this.mainMenuPanel.Controls.Add(this.JobBtn);
-            this.mainMenuPanel.Controls.Add(this.panel2);
-            this.mainMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(200, 597);
-            this.mainMenuPanel.TabIndex = 0;
+            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.pnMenu.Controls.Add(this.flowLayoutPanel1);
+            this.pnMenu.Controls.Add(this.guna2Button5);
+            this.pnMenu.Controls.Add(this.btnHide);
+            this.pnMenu.Controls.Add(this.btnShow);
+            this.pnMenu.Controls.Add(this.guna2Separator1);
+            this.guna2Transition1.SetDecoration(this.pnMenu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnMenu.Name = "pnMenu";
+            this.pnMenu.Size = new System.Drawing.Size(58, 597);
+            this.pnMenu.TabIndex = 15;
             // 
-            // loginBtn
+            // flowLayoutPanel1
             // 
-            this.loginBtn.Animated = true;
-            this.loginBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.loginBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.loginBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.loginBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.loginBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.loginBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
-            this.loginBtn.ForeColor = System.Drawing.Color.Black;
-            this.loginBtn.Image = ((System.Drawing.Image)(resources.GetObject("loginBtn.Image")));
-            this.loginBtn.Location = new System.Drawing.Point(0, 613);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(177, 53);
-            this.loginBtn.TabIndex = 7;
-            this.loginBtn.Text = "Đăng nhập";
+            this.flowLayoutPanel1.Controls.Add(this.pnSubMenu1);
+            this.flowLayoutPanel1.Controls.Add(this.pnSubMenu3);
+            this.flowLayoutPanel1.Controls.Add(this.pnSubMenu2);
+            this.guna2Transition1.SetDecoration(this.flowLayoutPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(58, 407);
+            this.flowLayoutPanel1.TabIndex = 16;
             // 
-            // companySubMenuPanel
+            // pnSubMenu1
             // 
-            this.companySubMenuPanel.Controls.Add(this.topCompanyBtn);
-            this.companySubMenuPanel.Controls.Add(this.companyListBtn);
-            this.companySubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.companySubMenuPanel.Location = new System.Drawing.Point(0, 498);
-            this.companySubMenuPanel.Name = "companySubMenuPanel";
-            this.companySubMenuPanel.Size = new System.Drawing.Size(177, 115);
-            this.companySubMenuPanel.TabIndex = 6;
+            this.pnSubMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.pnSubMenu1.Controls.Add(this.btnJob);
+            this.pnSubMenu1.Controls.Add(this.btnFindJob);
+            this.pnSubMenu1.Controls.Add(this.btnSignJob);
+            this.guna2Transition1.SetDecoration(this.pnSubMenu1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnSubMenu1.Location = new System.Drawing.Point(3, 2);
+            this.pnSubMenu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 16);
+            this.pnSubMenu1.Name = "pnSubMenu1";
+            this.pnSubMenu1.Size = new System.Drawing.Size(247, 47);
+            this.pnSubMenu1.TabIndex = 8;
             // 
-            // topCompanyBtn
+            // btnJob
             // 
-            this.topCompanyBtn.Animated = true;
-            this.topCompanyBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.topCompanyBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.topCompanyBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.topCompanyBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.topCompanyBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topCompanyBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(167)))), ((int)(((byte)(105)))));
-            this.topCompanyBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.topCompanyBtn.ForeColor = System.Drawing.Color.Black;
-            this.topCompanyBtn.Location = new System.Drawing.Point(0, 59);
-            this.topCompanyBtn.Name = "topCompanyBtn";
-            this.topCompanyBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.topCompanyBtn.Size = new System.Drawing.Size(177, 59);
-            this.topCompanyBtn.TabIndex = 1;
-            this.topCompanyBtn.Text = "Top công ty";
-            this.topCompanyBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJob.Animated = true;
+            this.btnJob.BackColor = System.Drawing.Color.Transparent;
+            this.btnJob.BorderRadius = 10;
+            this.guna2Transition1.SetDecoration(this.btnJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnJob.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnJob.ForeColor = System.Drawing.Color.White;
+            this.btnJob.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnJob.Image = ((System.Drawing.Image)(resources.GetObject("btnJob.Image")));
+            this.btnJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJob.Location = new System.Drawing.Point(3, 2);
+            this.btnJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJob.Name = "btnJob";
+            this.btnJob.Size = new System.Drawing.Size(244, 36);
+            this.btnJob.TabIndex = 2;
+            this.btnJob.Text = "Việc Làm";
+            this.btnJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJob.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnJob.UseTransparentBackground = true;
+            this.btnJob.Click += new System.EventHandler(this.btnJob_Click);
             // 
-            // companyListBtn
+            // btnFindJob
             // 
-            this.companyListBtn.Animated = true;
-            this.companyListBtn.BackColor = System.Drawing.Color.Transparent;
-            this.companyListBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.companyListBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.companyListBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.companyListBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.companyListBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.companyListBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(167)))), ((int)(((byte)(105)))));
-            this.companyListBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.companyListBtn.ForeColor = System.Drawing.Color.Black;
-            this.companyListBtn.Location = new System.Drawing.Point(0, 0);
-            this.companyListBtn.Name = "companyListBtn";
-            this.companyListBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.companyListBtn.Size = new System.Drawing.Size(177, 59);
-            this.companyListBtn.TabIndex = 0;
-            this.companyListBtn.Text = "Danh sách công ty";
-            this.companyListBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFindJob.Animated = true;
+            this.btnFindJob.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnFindJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnFindJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFindJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFindJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnFindJob.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnFindJob.ForeColor = System.Drawing.Color.White;
+            this.btnFindJob.Image = ((System.Drawing.Image)(resources.GetObject("btnFindJob.Image")));
+            this.btnFindJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFindJob.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnFindJob.Location = new System.Drawing.Point(3, 42);
+            this.btnFindJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.btnFindJob.Name = "btnFindJob";
+            this.btnFindJob.Size = new System.Drawing.Size(175, 36);
+            this.btnFindJob.TabIndex = 3;
+            this.btnFindJob.Text = "Tìm việc";
+            this.btnFindJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFindJob.TextOffset = new System.Drawing.Point(23, 0);
+            this.btnFindJob.UseTransparentBackground = true;
+            this.btnFindJob.Click += new System.EventHandler(this.btnFindJob_Click_1);
             // 
-            // companyBtn
+            // btnSignJob
             // 
-            this.companyBtn.Animated = true;
-            this.companyBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.companyBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.companyBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.companyBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.companyBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.companyBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.companyBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
-            this.companyBtn.ForeColor = System.Drawing.Color.Black;
-            this.companyBtn.Image = ((System.Drawing.Image)(resources.GetObject("companyBtn.Image")));
-            this.companyBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.companyBtn.Location = new System.Drawing.Point(0, 442);
-            this.companyBtn.Name = "companyBtn";
-            this.companyBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.companyBtn.Size = new System.Drawing.Size(177, 56);
-            this.companyBtn.TabIndex = 5;
-            this.companyBtn.Text = "Công ty";
-            this.companyBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.companyBtn.Click += new System.EventHandler(this.companyBtn_Click);
+            this.btnSignJob.Animated = true;
+            this.btnSignJob.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnSignJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnSignJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnSignJob.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSignJob.ForeColor = System.Drawing.Color.White;
+            this.btnSignJob.Image = ((System.Drawing.Image)(resources.GetObject("btnSignJob.Image")));
+            this.btnSignJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSignJob.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnSignJob.Location = new System.Drawing.Point(3, 80);
+            this.btnSignJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.btnSignJob.Name = "btnSignJob";
+            this.btnSignJob.Size = new System.Drawing.Size(175, 36);
+            this.btnSignJob.TabIndex = 4;
+            this.btnSignJob.Text = "Đăng việc";
+            this.btnSignJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSignJob.TextOffset = new System.Drawing.Point(23, 0);
+            this.btnSignJob.UseTransparentBackground = true;
+            this.btnSignJob.Click += new System.EventHandler(this.btnSignJob_Click);
             // 
-            // CVSubMenuPanel
+            // pnSubMenu3
             // 
-            this.CVSubMenuPanel.Controls.Add(this.CVGuideBtn);
-            this.CVSubMenuPanel.Controls.Add(this.writeCvBtn);
-            this.CVSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CVSubMenuPanel.Location = new System.Drawing.Point(0, 327);
-            this.CVSubMenuPanel.Name = "CVSubMenuPanel";
-            this.CVSubMenuPanel.Size = new System.Drawing.Size(177, 115);
-            this.CVSubMenuPanel.TabIndex = 4;
+            this.pnSubMenu3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.pnSubMenu3.Controls.Add(this.btnCompany);
+            this.pnSubMenu3.Controls.Add(this.btnListCompany);
+            this.pnSubMenu3.Controls.Add(this.guna2Button4);
+            this.guna2Transition1.SetDecoration(this.pnSubMenu3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnSubMenu3.Location = new System.Drawing.Point(3, 67);
+            this.pnSubMenu3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 16);
+            this.pnSubMenu3.Name = "pnSubMenu3";
+            this.pnSubMenu3.Size = new System.Drawing.Size(247, 47);
+            this.pnSubMenu3.TabIndex = 10;
             // 
-            // CVGuideBtn
+            // btnCompany
             // 
-            this.CVGuideBtn.Animated = true;
-            this.CVGuideBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CVGuideBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CVGuideBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CVGuideBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CVGuideBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CVGuideBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(167)))), ((int)(((byte)(105)))));
-            this.CVGuideBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CVGuideBtn.ForeColor = System.Drawing.Color.Black;
-            this.CVGuideBtn.Location = new System.Drawing.Point(0, 59);
-            this.CVGuideBtn.Name = "CVGuideBtn";
-            this.CVGuideBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.CVGuideBtn.Size = new System.Drawing.Size(177, 59);
-            this.CVGuideBtn.TabIndex = 1;
-            this.CVGuideBtn.Text = "CV Guide";
-            this.CVGuideBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCompany.Animated = true;
+            this.btnCompany.BackColor = System.Drawing.Color.Transparent;
+            this.btnCompany.BorderRadius = 10;
+            this.guna2Transition1.SetDecoration(this.btnCompany, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnCompany.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCompany.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCompany.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCompany.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCompany.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCompany.ForeColor = System.Drawing.Color.White;
+            this.btnCompany.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnCompany.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnCompany.Image")));
+            this.btnCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCompany.Location = new System.Drawing.Point(3, 2);
+            this.btnCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCompany.Name = "btnCompany";
+            this.btnCompany.Size = new System.Drawing.Size(244, 36);
+            this.btnCompany.TabIndex = 2;
+            this.btnCompany.Text = "Công ty";
+            this.btnCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCompany.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnCompany.UseTransparentBackground = true;
+            this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);
             // 
-            // writeCvBtn
+            // btnListCompany
             // 
-            this.writeCvBtn.Animated = true;
-            this.writeCvBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.writeCvBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.writeCvBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.writeCvBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.writeCvBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.writeCvBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(167)))), ((int)(((byte)(105)))));
-            this.writeCvBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.writeCvBtn.ForeColor = System.Drawing.Color.Black;
-            this.writeCvBtn.Location = new System.Drawing.Point(0, 0);
-            this.writeCvBtn.Name = "writeCvBtn";
-            this.writeCvBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.writeCvBtn.Size = new System.Drawing.Size(177, 59);
-            this.writeCvBtn.TabIndex = 0;
-            this.writeCvBtn.Text = "Viết CV";
-            this.writeCvBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.writeCvBtn.Click += new System.EventHandler(this.writeCvBtn_Click);
+            this.btnListCompany.Animated = true;
+            this.btnListCompany.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnListCompany, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnListCompany.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnListCompany.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnListCompany.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnListCompany.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnListCompany.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnListCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnListCompany.ForeColor = System.Drawing.Color.White;
+            this.btnListCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnListCompany.Image")));
+            this.btnListCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnListCompany.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnListCompany.Location = new System.Drawing.Point(3, 42);
+            this.btnListCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.btnListCompany.Name = "btnListCompany";
+            this.btnListCompany.Size = new System.Drawing.Size(175, 36);
+            this.btnListCompany.TabIndex = 3;
+            this.btnListCompany.Text = "DS công ty";
+            this.btnListCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnListCompany.TextOffset = new System.Drawing.Point(23, 0);
+            this.btnListCompany.UseTransparentBackground = true;
+            this.btnListCompany.Click += new System.EventHandler(this.btnListCompany_Click);
             // 
-            // CVBtn
+            // guna2Button4
             // 
-            this.CVBtn.Animated = true;
-            this.CVBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CVBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CVBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CVBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CVBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CVBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.CVBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
-            this.CVBtn.ForeColor = System.Drawing.Color.Black;
-            this.CVBtn.Image = ((System.Drawing.Image)(resources.GetObject("CVBtn.Image")));
-            this.CVBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CVBtn.Location = new System.Drawing.Point(0, 271);
-            this.CVBtn.Name = "CVBtn";
-            this.CVBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CVBtn.Size = new System.Drawing.Size(177, 56);
-            this.CVBtn.TabIndex = 3;
-            this.CVBtn.Text = "Hồ sơ và CV";
-            this.CVBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CVBtn.Click += new System.EventHandler(this.CVBtn_Click);
+            this.guna2Button4.Animated = true;
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2Button4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2Button4.Location = new System.Drawing.Point(3, 80);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(175, 36);
+            this.guna2Button4.TabIndex = 4;
+            this.guna2Button4.Text = "Top công ty";
+            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.TextOffset = new System.Drawing.Point(23, 0);
+            this.guna2Button4.UseTransparentBackground = true;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // jobSubMenuPanel
+            // pnSubMenu2
             // 
-            this.jobSubMenuPanel.Controls.Add(this.postJobBtn);
-            this.jobSubMenuPanel.Controls.Add(this.findJobBtn);
-            this.jobSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.jobSubMenuPanel.Location = new System.Drawing.Point(0, 156);
-            this.jobSubMenuPanel.Name = "jobSubMenuPanel";
-            this.jobSubMenuPanel.Size = new System.Drawing.Size(177, 115);
-            this.jobSubMenuPanel.TabIndex = 2;
+            this.pnSubMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.pnSubMenu2.Controls.Add(this.btnCV);
+            this.pnSubMenu2.Controls.Add(this.btnMakeFile);
+            this.pnSubMenu2.Controls.Add(this.btnInstructCV);
+            this.guna2Transition1.SetDecoration(this.pnSubMenu2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnSubMenu2.Location = new System.Drawing.Point(3, 132);
+            this.pnSubMenu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 16);
+            this.pnSubMenu2.Name = "pnSubMenu2";
+            this.pnSubMenu2.Size = new System.Drawing.Size(247, 47);
+            this.pnSubMenu2.TabIndex = 9;
             // 
-            // postJobBtn
+            // btnCV
             // 
-            this.postJobBtn.Animated = true;
-            this.postJobBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.postJobBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.postJobBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.postJobBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.postJobBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.postJobBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(167)))), ((int)(((byte)(105)))));
-            this.postJobBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postJobBtn.ForeColor = System.Drawing.Color.Black;
-            this.postJobBtn.Location = new System.Drawing.Point(0, 59);
-            this.postJobBtn.Name = "postJobBtn";
-            this.postJobBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.postJobBtn.Size = new System.Drawing.Size(177, 59);
-            this.postJobBtn.TabIndex = 1;
-            this.postJobBtn.Text = "Đăng việc làm";
-            this.postJobBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.postJobBtn.Click += new System.EventHandler(this.postJobBtn_Click);
+            this.btnCV.Animated = true;
+            this.btnCV.BackColor = System.Drawing.Color.Transparent;
+            this.btnCV.BorderRadius = 10;
+            this.guna2Transition1.SetDecoration(this.btnCV, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnCV.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCV.ForeColor = System.Drawing.Color.White;
+            this.btnCV.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnCV.Image = ((System.Drawing.Image)(resources.GetObject("btnCV.Image")));
+            this.btnCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCV.Location = new System.Drawing.Point(3, 2);
+            this.btnCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCV.Name = "btnCV";
+            this.btnCV.Size = new System.Drawing.Size(244, 36);
+            this.btnCV.TabIndex = 2;
+            this.btnCV.Text = "Hồ sơ và CV";
+            this.btnCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCV.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnCV.UseTransparentBackground = true;
+            this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
             // 
-            // findJobBtn
+            // btnMakeFile
             // 
-            this.findJobBtn.Animated = true;
-            this.findJobBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.findJobBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.findJobBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.findJobBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.findJobBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.findJobBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(167)))), ((int)(((byte)(105)))));
-            this.findJobBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findJobBtn.ForeColor = System.Drawing.Color.Black;
-            this.findJobBtn.Location = new System.Drawing.Point(0, 0);
-            this.findJobBtn.Name = "findJobBtn";
-            this.findJobBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.findJobBtn.Size = new System.Drawing.Size(177, 59);
-            this.findJobBtn.TabIndex = 0;
-            this.findJobBtn.Text = "Tìm việc";
-            this.findJobBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.findJobBtn.Click += new System.EventHandler(this.findJobBtn_Click);
+            this.btnMakeFile.Animated = true;
+            this.btnMakeFile.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnMakeFile, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnMakeFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMakeFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMakeFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMakeFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMakeFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnMakeFile.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnMakeFile.ForeColor = System.Drawing.Color.White;
+            this.btnMakeFile.Image = ((System.Drawing.Image)(resources.GetObject("btnMakeFile.Image")));
+            this.btnMakeFile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMakeFile.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnMakeFile.Location = new System.Drawing.Point(3, 42);
+            this.btnMakeFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.btnMakeFile.Name = "btnMakeFile";
+            this.btnMakeFile.Size = new System.Drawing.Size(175, 36);
+            this.btnMakeFile.TabIndex = 3;
+            this.btnMakeFile.Text = "Viết CV";
+            this.btnMakeFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMakeFile.TextOffset = new System.Drawing.Point(23, 0);
+            this.btnMakeFile.UseTransparentBackground = true;
+            this.btnMakeFile.Click += new System.EventHandler(this.btnMakeFile_Click);
             // 
-            // JobBtn
+            // btnInstructCV
             // 
-            this.JobBtn.Animated = true;
-            this.JobBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.JobBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.JobBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.JobBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.JobBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.JobBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.JobBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
-            this.JobBtn.ForeColor = System.Drawing.Color.Black;
-            this.JobBtn.Image = ((System.Drawing.Image)(resources.GetObject("JobBtn.Image")));
-            this.JobBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.JobBtn.Location = new System.Drawing.Point(0, 100);
-            this.JobBtn.Name = "JobBtn";
-            this.JobBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.JobBtn.Size = new System.Drawing.Size(177, 56);
-            this.JobBtn.TabIndex = 1;
-            this.JobBtn.Text = "Việc làm";
-            this.JobBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.JobBtn.TextOffset = new System.Drawing.Point(-15, 0);
-            this.JobBtn.Click += new System.EventHandler(this.JobBtn_Click);
+            this.btnInstructCV.Animated = true;
+            this.btnInstructCV.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnInstructCV, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnInstructCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInstructCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInstructCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInstructCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInstructCV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnInstructCV.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.btnInstructCV.ForeColor = System.Drawing.Color.White;
+            this.btnInstructCV.Image = ((System.Drawing.Image)(resources.GetObject("btnInstructCV.Image")));
+            this.btnInstructCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInstructCV.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnInstructCV.Location = new System.Drawing.Point(3, 80);
+            this.btnInstructCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.btnInstructCV.Name = "btnInstructCV";
+            this.btnInstructCV.Size = new System.Drawing.Size(175, 36);
+            this.btnInstructCV.TabIndex = 4;
+            this.btnInstructCV.Text = "CV guide";
+            this.btnInstructCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInstructCV.TextOffset = new System.Drawing.Point(23, 0);
+            this.btnInstructCV.UseTransparentBackground = true;
+            this.btnInstructCV.Click += new System.EventHandler(this.btnInstructCV_Click);
             // 
-            // panel2
+            // guna2Button5
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 100);
-            this.panel2.TabIndex = 0;
+            this.guna2Button5.Animated = true;
+            this.guna2Button5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
+            this.guna2Button5.BorderRadius = 10;
+            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.guna2Button5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
+            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
+            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.Location = new System.Drawing.Point(0, 502);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(250, 36);
+            this.guna2Button5.TabIndex = 15;
+            this.guna2Button5.Text = "Đăng nhập";
+            this.guna2Button5.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // pictureBox1
+            // btnHide
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnHide.Animated = true;
+            this.btnHide.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnHide, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnHide.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHide.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHide.FillColor = System.Drawing.Color.Transparent;
+            this.btnHide.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHide.ForeColor = System.Drawing.Color.White;
+            this.btnHide.Image = ((System.Drawing.Image)(resources.GetObject("btnHide.Image")));
+            this.btnHide.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHide.Location = new System.Drawing.Point(156, 415);
+            this.btnHide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnHide.Size = new System.Drawing.Size(44, 36);
+            this.btnHide.TabIndex = 14;
+            this.btnHide.UseTransparentBackground = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // btnShow
+            // 
+            this.btnShow.Animated = true;
+            this.btnShow.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.btnShow, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnShow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnShow.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnShow.ForeColor = System.Drawing.Color.White;
+            this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
+            this.btnShow.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnShow.Location = new System.Drawing.Point(20, 415);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnShow.Size = new System.Drawing.Size(44, 36);
+            this.btnShow.TabIndex = 12;
+            this.btnShow.UseTransparentBackground = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2Separator1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator1.FillColor = System.Drawing.Color.White;
+            this.guna2Separator1.Location = new System.Drawing.Point(1, 427);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(199, 8);
+            this.guna2Separator1.TabIndex = 10;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.BorderRadius = 20;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
+            this.guna2Transition1.Cursor = null;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation3;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 2000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // jobHubProfileMiniPanel
-            // 
-            this.jobHubProfileMiniPanel.BackColor = System.Drawing.Color.Transparent;
-            this.jobHubProfileMiniPanel.Controls.Add(this.profileMiniBtn);
-            this.jobHubProfileMiniPanel.Controls.Add(this.guna2PictureBox1);
-            this.jobHubProfileMiniPanel.Controls.Add(this.label3);
-            this.jobHubProfileMiniPanel.Controls.Add(this.label2);
-            this.jobHubProfileMiniPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(231)))));
-            this.jobHubProfileMiniPanel.Font = new System.Drawing.Font("Gadugi", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jobHubProfileMiniPanel.Location = new System.Drawing.Point(222, 260);
-            this.jobHubProfileMiniPanel.Name = "jobHubProfileMiniPanel";
-            this.jobHubProfileMiniPanel.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.jobHubProfileMiniPanel.Size = new System.Drawing.Size(394, 144);
-            this.jobHubProfileMiniPanel.TabIndex = 2;
-            this.jobHubProfileMiniPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.jobHubProfileMiniPanel_Paint);
-            // 
-            // profileMiniBtn
-            // 
-            this.profileMiniBtn.Animated = true;
-            this.profileMiniBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.profileMiniBtn.BorderRadius = 10;
-            this.profileMiniBtn.BorderThickness = 2;
-            this.profileMiniBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.profileMiniBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.profileMiniBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.profileMiniBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.profileMiniBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.profileMiniBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.profileMiniBtn.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
-            this.profileMiniBtn.ForeColor = System.Drawing.Color.White;
-            this.profileMiniBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.profileMiniBtn.HoverState.FillColor = System.Drawing.Color.White;
-            this.profileMiniBtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.profileMiniBtn.Image = ((System.Drawing.Image)(resources.GetObject("profileMiniBtn.Image")));
-            this.profileMiniBtn.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.profileMiniBtn.ImageSize = new System.Drawing.Size(15, 15);
-            this.profileMiniBtn.Location = new System.Drawing.Point(14, 77);
-            this.profileMiniBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.profileMiniBtn.Name = "profileMiniBtn";
-            this.profileMiniBtn.Size = new System.Drawing.Size(206, 50);
-            this.profileMiniBtn.TabIndex = 14;
-            this.profileMiniBtn.Text = "Tạo Profile";
-            this.profileMiniBtn.Click += new System.EventHandler(this.btnEconomy_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(241, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(150, 138);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tạo profile cho riêng bạn";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "JobHub Profile";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.label1.Location = new System.Drawing.Point(219, 226);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(438, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Cùng JobHub xây dựng thương hiệu cá nhân";
-            // 
-            // jobHubCVMiniPanel
-            // 
-            this.jobHubCVMiniPanel.BackColor = System.Drawing.Color.Transparent;
-            this.jobHubCVMiniPanel.Controls.Add(this.guna2Button1);
-            this.jobHubCVMiniPanel.Controls.Add(this.guna2PictureBox2);
-            this.jobHubCVMiniPanel.Controls.Add(this.label4);
-            this.jobHubCVMiniPanel.Controls.Add(this.label5);
-            this.jobHubCVMiniPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(231)))));
-            this.jobHubCVMiniPanel.Font = new System.Drawing.Font("Gadugi", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jobHubCVMiniPanel.Location = new System.Drawing.Point(660, 260);
-            this.jobHubCVMiniPanel.Name = "jobHubCVMiniPanel";
-            this.jobHubCVMiniPanel.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.jobHubCVMiniPanel.Size = new System.Drawing.Size(394, 144);
-            this.jobHubCVMiniPanel.TabIndex = 12;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 2;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button1.Location = new System.Drawing.Point(14, 77);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(206, 50);
-            this.guna2Button1.TabIndex = 14;
-            this.guna2Button1.Text = "Tạo CV";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(241, 3);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(150, 138);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 2;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(189, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Tạo CV chuyên nghiệp";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 22);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "CV Builder";
-            // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Button2);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox3);
-            this.guna2ShadowPanel1.Controls.Add(this.label6);
-            this.guna2ShadowPanel1.Controls.Add(this.label7);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(231)))));
-            this.guna2ShadowPanel1.Font = new System.Drawing.Font("Gadugi", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(222, 433);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(394, 144);
-            this.guna2ShadowPanel1.TabIndex = 13;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button2.Location = new System.Drawing.Point(14, 77);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(206, 50);
-            this.guna2Button2.TabIndex = 14;
-            this.guna2Button2.Text = "Đọc hướng dẫn";
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(241, 3);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(150, 138);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 2;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Hướng dẫn viết CV";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 22);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "CV Guide";
-            // 
-            // guna2ShadowPanel2
-            // 
-            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel2.Controls.Add(this.guna2Button3);
-            this.guna2ShadowPanel2.Controls.Add(this.guna2PictureBox4);
-            this.guna2ShadowPanel2.Controls.Add(this.label8);
-            this.guna2ShadowPanel2.Controls.Add(this.label9);
-            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(231)))));
-            this.guna2ShadowPanel2.Font = new System.Drawing.Font("Gadugi", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ShadowPanel2.Location = new System.Drawing.Point(660, 433);
-            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(394, 144);
-            this.guna2ShadowPanel2.TabIndex = 14;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(-4, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button3.Location = new System.Drawing.Point(14, 77);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(206, 50);
-            this.guna2Button3.TabIndex = 14;
-            this.guna2Button3.Text = "Tìm việc";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(241, 3);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(150, 138);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 2;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(9, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 25);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Tìm công việc phù hợp";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 22);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Top Việc Làm";
-            // 
-            // bannerPictureBox
-            // 
-            this.bannerPictureBox.BorderRadius = 20;
-            this.bannerPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("bannerPictureBox.Image")));
-            this.bannerPictureBox.ImageRotate = 0F;
-            this.bannerPictureBox.Location = new System.Drawing.Point(205, 11);
-            this.bannerPictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.bannerPictureBox.Name = "bannerPictureBox";
-            this.bannerPictureBox.Size = new System.Drawing.Size(849, 205);
-            this.bannerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bannerPictureBox.TabIndex = 11;
-            this.bannerPictureBox.TabStop = false;
-            this.bannerPictureBox.Click += new System.EventHandler(this.bannerPictureBox_Click);
             // 
             // Fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1066, 597);
-            this.Controls.Add(this.guna2ShadowPanel2);
-            this.Controls.Add(this.guna2ShadowPanel1);
-            this.Controls.Add(this.jobHubCVMiniPanel);
-            this.Controls.Add(this.bannerPictureBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.jobHubProfileMiniPanel);
-            this.Controls.Add(this.mainMenuPanel);
+            this.ClientSize = new System.Drawing.Size(1008, 597);
+            this.Controls.Add(this.pnMenu);
+            this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "Fmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fmain";
             this.Load += new System.EventHandler(this.Fmain_Load);
-            this.mainMenuPanel.ResumeLayout(false);
-            this.companySubMenuPanel.ResumeLayout(false);
-            this.CVSubMenuPanel.ResumeLayout(false);
-            this.jobSubMenuPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.jobHubProfileMiniPanel.ResumeLayout(false);
-            this.jobHubProfileMiniPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.jobHubCVMiniPanel.ResumeLayout(false);
-            this.jobHubCVMiniPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            this.guna2ShadowPanel2.ResumeLayout(false);
-            this.guna2ShadowPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bannerPictureBox)).EndInit();
+            this.pnMenu.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.pnSubMenu1.ResumeLayout(false);
+            this.pnSubMenu3.ResumeLayout(false);
+            this.pnSubMenu2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel mainMenuPanel;
-        private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button JobBtn;
-        private System.Windows.Forms.Panel jobSubMenuPanel;
-        private Guna.UI2.WinForms.Guna2Button postJobBtn;
-        private Guna.UI2.WinForms.Guna2Button findJobBtn;
-        private System.Windows.Forms.Panel CVSubMenuPanel;
-        private Guna.UI2.WinForms.Guna2Button CVGuideBtn;
-        private Guna.UI2.WinForms.Guna2Button writeCvBtn;
-        private Guna.UI2.WinForms.Guna2Button CVBtn;
-        private Guna.UI2.WinForms.Guna2Button companyBtn;
-        private System.Windows.Forms.Panel companySubMenuPanel;
-        private Guna.UI2.WinForms.Guna2Button topCompanyBtn;
-        private Guna.UI2.WinForms.Guna2Button companyListBtn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel pnMenu;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel pnSubMenu1;
+        private Guna.UI2.WinForms.Guna2Button btnJob;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private Guna.UI2.WinForms.Guna2Button btnFindJob;
+        private Guna.UI2.WinForms.Guna2Button btnSignJob;
+        private System.Windows.Forms.FlowLayoutPanel pnSubMenu3;
+        private Guna.UI2.WinForms.Guna2Button btnCompany;
+        private Guna.UI2.WinForms.Guna2Button btnListCompany;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private System.Windows.Forms.FlowLayoutPanel pnSubMenu2;
+        private Guna.UI2.WinForms.Guna2Button btnCV;
+        private Guna.UI2.WinForms.Guna2Button btnMakeFile;
+        private Guna.UI2.WinForms.Guna2Button btnInstructCV;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2CircleButton btnHide;
+        private Guna.UI2.WinForms.Guna2CircleButton btnShow;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Timer timer1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel jobHubProfileMiniPanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox bannerPictureBox;
-        private Guna.UI2.WinForms.Guna2Button profileMiniBtn;
-        private Guna.UI2.WinForms.Guna2ShadowPanel jobHubCVMiniPanel;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Button loginBtn;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,114 +16,58 @@ namespace JobHub
         public Fmain()
         {
             InitializeComponent();
-            customizeDesing();
+
         }
 
         private void Fmain_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void customizeDesing()
-        {
-            jobSubMenuPanel.Visible = false;
-            CVSubMenuPanel.Visible = false;
-            companySubMenuPanel.Visible = false;
-        }
-
-        private void hideSubMenu()
-        {
-            if(jobSubMenuPanel.Visible==true)
+            FViews views = new FViews();
+            views.MdiParent = this;
+            views.Dock = DockStyle.Fill;
+            views.Show();
+            if (pnMenu.Width > 50)
             {
-                jobSubMenuPanel.Visible = false;
-            }
-
-            if(CVSubMenuPanel.Visible==true)
-            {
-                CVSubMenuPanel.Visible = false;
-            }
-
-            if(companySubMenuPanel.Visible==true)
-            {
-                companySubMenuPanel.Visible = false;
-            }
-
-        }
-
-        private void showSubMenu(Panel subMenu)
-        {
-            if(subMenu.Visible==false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
+                btnHide.Visible = true;
+                btnShow.Visible = false;
             }
             else
             {
-                subMenu.Visible = false;
+                btnHide.Visible = false;
+                btnShow.Visible = true;
             }
         }
-
-        private void JobBtn_Click(object sender, EventArgs e)
+        private void Show(Panel contain)
         {
-            showSubMenu(jobSubMenuPanel);
+            contain.Height = 94;
+            guna2Transition1.ShowSync(contain);
         }
-
-        private void CVBtn_Click(object sender, EventArgs e)
+        private void Hide(Panel contain)
         {
-            showSubMenu(CVSubMenuPanel);
-        }
-
-        private void companyBtn_Click(object sender, EventArgs e)
-        {
-            showSubMenu(companySubMenuPanel);
+            contain.Height = 38;
+            guna2Transition1.ShowSync(contain);
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-        private int imageNumber = 1;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jobHubProfileMiniPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEconomy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bannerPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+        //private int imageNumber = 1;
+        //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        //    if (imageNumber == 4)
+        //    {
+        //        imageNumber = 1;
+        //    }
+        //    bannerPictureBox.ImageLocation = string.Format(@"Images\{0}.jpg", imageNumber);
+        //    imageNumber++;
+        //}
 
         private void findJobBtn_Click(object sender, EventArgs e)
         {
             FJob ffj = new FJob();
             this.Hide();
             ffj.Show();
-            
+
         }
 
         private void writeCvBtn_Click(object sender, EventArgs e)
@@ -132,9 +77,123 @@ namespace JobHub
             fcv.Show();
         }
 
-        private void postJobBtn_Click(object sender, EventArgs e)
+        private void btnHide_Click(object sender, EventArgs e)
         {
-            
+            btnHide.Visible = false;
+            btnShow.Visible = true;
+            pnMenu.Visible = false;
+            pnMenu.Width = 45;
+            guna2Transition1.ShowSync(pnMenu);
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            btnHide.Visible = true;
+            btnShow.Visible = false;
+            pnMenu.Visible = false;
+            pnMenu.Width = 160;
+            guna2Transition1.ShowSync(pnMenu);
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            FLogin login = new FLogin();
+            this.Hide();
+            login.ShowDialog();
+            this.Show();
+        }
+
+        private void btnJob_Click(object sender, EventArgs e)
+        {
+            if(pnSubMenu1.Height > 55)
+            {
+                Hide(pnSubMenu1);
+            }
+            else
+            {
+                if(pnMenu.Width > 70)
+                {
+                    Show(pnSubMenu1);
+                }  
+            }
+        }
+
+        private void btnCompany_Click(object sender, EventArgs e)
+        {
+            if (pnSubMenu3.Height > 55)
+            {
+
+                Hide(pnSubMenu3);
+            }
+            else
+            {
+                if (pnMenu.Width > 70)
+                {
+                    Show(pnSubMenu3);
+                }
+            }
+        }
+
+        private void btnCV_Click(object sender, EventArgs e)
+        {
+            if (pnSubMenu2.Height > 55)
+            {
+                Hide(pnSubMenu2);
+            }
+            else
+            {
+                if (pnMenu.Width > 70)
+                {
+                    Show(pnSubMenu2);
+                }
+            }
+        }
+
+        private void btnFindJob_Click_1(object sender, EventArgs e)
+        {
+            FJob find = new FJob();
+            this.Hide();
+            find.ShowDialog();
+            this.Show();
+        }
+
+        private void pnContainContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSignJob_Click(object sender, EventArgs e)
+        {
+            FPostJob fpj = new FPostJob();
+            this.Hide();
+            fpj.ShowDialog();
+            this.Show();
+        }
+
+        private void btnListCompany_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMakeFile_Click(object sender, EventArgs e)
+        {
+            FCV fcv = new FCV();
+            this.Hide();
+            fcv.ShowDialog();
+            this.Show();
+        }
+
+        private void btnInstructCV_Click(object sender, EventArgs e)
+        {
+            FCVGuide fcvg = new FCVGuide();
+            this.Hide();
+            fcvg.ShowDialog();
+            this.Show();
         }
     }
 }
