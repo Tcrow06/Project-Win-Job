@@ -22,6 +22,7 @@ namespace JobHub
         {
             this.MinimumSize = new System.Drawing.Size(1015, 550);
             guna2VScrollBar1.BindingContainer = flowLayoutPanel1;
+            uC_Job1.loadJobClick += loadDetailJob;
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -29,14 +30,11 @@ namespace JobHub
             this.Close();
         }
 
-        private void uC_Job1_Load(object sender, EventArgs e)
+        private void loadDetailJob(object sender, EventArgs e)
         {
-            
+            FJobDetails jobDetails = new FJobDetails();
+            jobDetails.ShowDialog();
         }
 
-        private void uC_Job1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
     }
 }

@@ -62,6 +62,7 @@
             this.guna2Panel1.Size = new System.Drawing.Size(317, 104);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            this.guna2Panel1.DoubleClick += new System.EventHandler(this.guna2Panel1_DoubleClick);
             // 
             // label2
             // 
