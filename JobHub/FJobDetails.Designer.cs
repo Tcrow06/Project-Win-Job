@@ -47,6 +47,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -293,7 +293,7 @@
             this.guna2Panel2.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel2.Location = new System.Drawing.Point(2, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(854, 788);
+            this.guna2Panel2.Size = new System.Drawing.Size(869, 630);
             this.guna2Panel2.TabIndex = 1;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
@@ -309,7 +309,7 @@
             this.guna2Panel4.Controls.Add(this.panel1);
             this.guna2Panel4.Location = new System.Drawing.Point(10, 249);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(834, 531);
+            this.guna2Panel4.Size = new System.Drawing.Size(741, 425);
             this.guna2Panel4.TabIndex = 5;
             // 
             // panel3
@@ -321,8 +321,17 @@
             this.panel3.Controls.Add(this.guna2HtmlLabel14);
             this.panel3.Location = new System.Drawing.Point(15, 321);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(732, 185);
+            this.panel3.Size = new System.Drawing.Size(651, 148);
             this.panel3.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(5, 103);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(620, 18);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "+ Được trợ cấp xăng xe";
             // 
             // label9
             // 
@@ -616,21 +625,12 @@
             this.guna2PictureBox2.TabIndex = 0;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 129);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(697, 23);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "+ Được trợ cấp xăng xe";
-            // 
             // FJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(858, 792);
+            this.ClientSize = new System.Drawing.Size(886, 634);
             this.Controls.Add(this.guna2Panel2);
             this.Name = "FJobDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
