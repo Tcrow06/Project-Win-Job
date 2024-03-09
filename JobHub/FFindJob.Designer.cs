@@ -65,8 +65,6 @@
             this.lblSubLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnAll = new Guna.UI2.WinForms.Guna2Button();
             this.btnTechnique = new Guna.UI2.WinForms.Guna2Button();
@@ -82,7 +80,6 @@
             this.pnSubContain.SuspendLayout();
             this.flpnContain.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.pnNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -128,7 +125,7 @@
             this.flowLayoutPanel1.Controls.Add(this.uC_Job13);
             this.flowLayoutPanel1.Controls.Add(this.uC_Job14);
             this.flowLayoutPanel1.Controls.Add(this.uC_Job15);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(114, 244);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 244);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1021, 585);
@@ -273,7 +270,7 @@
             // 
             this.pnContain.Controls.Add(this.pnSubContain);
             this.pnContain.Controls.Add(this.pnHotFob);
-            this.pnContain.Location = new System.Drawing.Point(1165, 5);
+            this.pnContain.Location = new System.Drawing.Point(1055, 5);
             this.pnContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnContain.Name = "pnContain";
             this.pnContain.Size = new System.Drawing.Size(358, 817);
@@ -383,7 +380,7 @@
             "2 năm",
             "3 năm",
             "Trên 3 năm"});
-            this.cboCity.Location = new System.Drawing.Point(680, 200);
+            this.cboCity.Location = new System.Drawing.Point(570, 200);
             this.cboCity.Margin = new System.Windows.Forms.Padding(2);
             this.cboCity.Name = "cboCity";
             this.cboCity.Size = new System.Drawing.Size(244, 28);
@@ -411,7 +408,7 @@
             "6 - 10 triệu",
             "11 - 15 triệu",
             "Trên 15 triệu"});
-            this.cboExperience.Location = new System.Drawing.Point(396, 200);
+            this.cboExperience.Location = new System.Drawing.Point(286, 200);
             this.cboExperience.Margin = new System.Windows.Forms.Padding(2);
             this.cboExperience.Name = "cboExperience";
             this.cboExperience.Size = new System.Drawing.Size(244, 28);
@@ -497,7 +494,7 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cboWage.Location = new System.Drawing.Point(124, 200);
+            this.cboWage.Location = new System.Drawing.Point(14, 200);
             this.cboWage.Margin = new System.Windows.Forms.Padding(2);
             this.cboWage.Name = "cboWage";
             this.cboWage.Size = new System.Drawing.Size(244, 28);
@@ -510,7 +507,7 @@
             this.lblTitle.AutoSize = false;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(121, 74);
+            this.lblTitle.Location = new System.Drawing.Point(11, 74);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(98, 38);
@@ -523,7 +520,7 @@
             this.lblSubLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblSubLogo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.lblSubLogo.Location = new System.Drawing.Point(986, 36);
+            this.lblSubLogo.Location = new System.Drawing.Point(876, 36);
             this.lblSubLogo.Margin = new System.Windows.Forms.Padding(2);
             this.lblSubLogo.Name = "lblSubLogo";
             this.lblSubLogo.Size = new System.Drawing.Size(80, 26);
@@ -535,7 +532,7 @@
             this.lblLogo.AutoSize = false;
             this.lblLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblLogo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(972, 8);
+            this.lblLogo.Location = new System.Drawing.Point(862, 8);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(2);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(98, 38);
@@ -556,7 +553,7 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtSearch.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.txtSearch.Location = new System.Drawing.Point(114, 10);
+            this.txtSearch.Location = new System.Drawing.Point(4, 10);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -564,41 +561,6 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(852, 56);
             this.txtSearch.TabIndex = 23;
-            // 
-            // pnNav
-            // 
-            this.pnNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.pnNav.Controls.Add(this.guna2Button5);
-            this.pnNav.Location = new System.Drawing.Point(-2, 1);
-            this.pnNav.Margin = new System.Windows.Forms.Padding(2);
-            this.pnNav.Name = "pnNav";
-            this.pnNav.Size = new System.Drawing.Size(103, 830);
-            this.pnNav.TabIndex = 22;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.guna2Button5.BorderRadius = 10;
-            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(90)))), ((int)(((byte)(34)))));
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.Location = new System.Drawing.Point(2, 782);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(97, 46);
-            this.guna2Button5.TabIndex = 18;
-            this.guna2Button5.Text = "Thoát";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2BorderlessForm1
             // 
@@ -626,7 +588,7 @@
             this.btnAll.Image = ((System.Drawing.Image)(resources.GetObject("btnAll.Image")));
             this.btnAll.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btnAll.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnAll.Location = new System.Drawing.Point(959, 108);
+            this.btnAll.Location = new System.Drawing.Point(849, 108);
             this.btnAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(174, 44);
@@ -654,7 +616,7 @@
             this.btnTechnique.Image = ((System.Drawing.Image)(resources.GetObject("btnTechnique.Image")));
             this.btnTechnique.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnTechnique.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTechnique.Location = new System.Drawing.Point(760, 108);
+            this.btnTechnique.Location = new System.Drawing.Point(650, 108);
             this.btnTechnique.Margin = new System.Windows.Forms.Padding(2);
             this.btnTechnique.Name = "btnTechnique";
             this.btnTechnique.Size = new System.Drawing.Size(174, 44);
@@ -682,7 +644,7 @@
             this.btnTourism.Image = ((System.Drawing.Image)(resources.GetObject("btnTourism.Image")));
             this.btnTourism.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnTourism.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTourism.Location = new System.Drawing.Point(550, 108);
+            this.btnTourism.Location = new System.Drawing.Point(440, 108);
             this.btnTourism.Margin = new System.Windows.Forms.Padding(2);
             this.btnTourism.Name = "btnTourism";
             this.btnTourism.Size = new System.Drawing.Size(174, 44);
@@ -710,7 +672,7 @@
             this.btnEconomy.Image = ((System.Drawing.Image)(resources.GetObject("btnEconomy.Image")));
             this.btnEconomy.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnEconomy.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnEconomy.Location = new System.Drawing.Point(329, 108);
+            this.btnEconomy.Location = new System.Drawing.Point(219, 108);
             this.btnEconomy.Margin = new System.Windows.Forms.Padding(2);
             this.btnEconomy.Name = "btnEconomy";
             this.btnEconomy.Size = new System.Drawing.Size(174, 44);
@@ -738,7 +700,7 @@
             this.btnIT.Image = ((System.Drawing.Image)(resources.GetObject("btnIT.Image")));
             this.btnIT.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnIT.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnIT.Location = new System.Drawing.Point(121, 108);
+            this.btnIT.Location = new System.Drawing.Point(11, 108);
             this.btnIT.Margin = new System.Windows.Forms.Padding(2);
             this.btnIT.Name = "btnIT";
             this.btnIT.Size = new System.Drawing.Size(174, 44);
@@ -749,7 +711,7 @@
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
             this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(1204, 10);
+            this.picLogo.Location = new System.Drawing.Point(1094, 10);
             this.picLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(48, 56);
@@ -762,7 +724,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(126, 159);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 159);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 35);
@@ -774,7 +736,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1068, 11);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(958, 11);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(59, 50);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -787,7 +749,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1532, 839);
+            this.ClientSize = new System.Drawing.Size(1417, 839);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -805,7 +767,6 @@
             this.Controls.Add(this.lblSubLogo);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.pnNav);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -821,7 +782,6 @@
             this.flpnContain.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.pnNav.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -847,7 +807,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSubLogo;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblLogo;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Panel pnNav;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel pnSubContain;
         private System.Windows.Forms.FlowLayoutPanel flpnContain;
@@ -868,7 +827,6 @@
         private uC_Job uC_Job6;
         private uC_Job uC_Job7;
         private uC_Job uC_Job9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private uC_Job uC_Job10;
         private uC_Job uC_Job11;
