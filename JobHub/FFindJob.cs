@@ -20,7 +20,7 @@ namespace JobHub
 
         private void FJob_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new System.Drawing.Size(1015, 550);
+            this.MinimumSize = new System.Drawing.Size(925, 550);
             uC_Job1.loadJobClick += loadDetailJob;
         }
 
