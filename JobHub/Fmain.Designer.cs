@@ -34,21 +34,20 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.pnControlBox = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnNav = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnSubNav3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCV = new Guna.UI2.WinForms.Guna2Button();
-            this.btnWriteCV = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCvGuide = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnJob = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.pnSubNav3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnWriteCV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCvGuide = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCompany = new Guna.UI2.WinForms.Guna2Button();
             this.btnListCompany = new Guna.UI2.WinForms.Guna2Button();
@@ -57,8 +56,8 @@
             this.pnControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnNav.SuspendLayout();
-            this.pnSubNav3.SuspendLayout();
             this.pnSubNav1.SuspendLayout();
+            this.pnSubNav3.SuspendLayout();
             this.pnSubNav2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +92,6 @@
             // pnControlBox
             // 
             this.pnControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.pnControlBox.Controls.Add(this.txtSearch);
             this.pnControlBox.Controls.Add(this.label1);
             this.pnControlBox.Controls.Add(this.guna2PictureBox1);
             this.pnControlBox.Controls.Add(this.guna2ControlBox3);
@@ -103,35 +101,8 @@
             this.pnControlBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnControlBox.Location = new System.Drawing.Point(0, 0);
             this.pnControlBox.Name = "pnControlBox";
-            this.pnControlBox.Size = new System.Drawing.Size(1303, 47);
+            this.pnControlBox.Size = new System.Drawing.Size(1453, 47);
             this.pnControlBox.TabIndex = 1;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txtSearch.BorderColor = System.Drawing.Color.White;
-            this.txtSearch.BorderRadius = 15;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.txtSearch, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
-            this.txtSearch.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.txtSearch.Location = new System.Drawing.Point(849, 6);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Tìm kiếm";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(286, 30);
-            this.txtSearch.TabIndex = 3;
             // 
             // label1
             // 
@@ -170,7 +141,7 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1142, 8);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1292, 8);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox3.TabIndex = 2;
@@ -183,7 +154,7 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1196, 8);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1346, 8);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 2;
@@ -195,7 +166,7 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1250, 8);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1400, 8);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
@@ -203,8 +174,8 @@
             // pnNav
             // 
             this.pnNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.pnNav.Controls.Add(this.pnSubNav3);
             this.pnNav.Controls.Add(this.pnSubNav1);
+            this.pnNav.Controls.Add(this.pnSubNav3);
             this.pnNav.Controls.Add(this.pnSubNav2);
             this.pnNav.Controls.Add(this.btnLogin);
             this.guna2Transition1.SetDecoration(this.pnNav, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -214,6 +185,98 @@
             this.pnNav.Size = new System.Drawing.Size(261, 792);
             this.pnNav.TabIndex = 2;
             // 
+            // pnSubNav1
+            // 
+            this.pnSubNav1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.pnSubNav1.Controls.Add(this.btnJob);
+            this.pnSubNav1.Controls.Add(this.guna2Button1);
+            this.pnSubNav1.Controls.Add(this.guna2Button2);
+            this.guna2Transition1.SetDecoration(this.pnSubNav1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pnSubNav1.Location = new System.Drawing.Point(3, 3);
+            this.pnSubNav1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.pnSubNav1.Name = "pnSubNav1";
+            this.pnSubNav1.Size = new System.Drawing.Size(257, 158);
+            this.pnSubNav1.TabIndex = 3;
+            // 
+            // btnJob
+            // 
+            this.btnJob.BackColor = System.Drawing.Color.Transparent;
+            this.btnJob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJob.ForeColor = System.Drawing.Color.White;
+            this.btnJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnJob.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnJob.Image = ((System.Drawing.Image)(resources.GetObject("btnJob.Image")));
+            this.btnJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJob.Location = new System.Drawing.Point(3, 3);
+            this.btnJob.Name = "btnJob";
+            this.btnJob.Size = new System.Drawing.Size(257, 45);
+            this.btnJob.TabIndex = 4;
+            this.btnJob.Text = "Việc làm";
+            this.btnJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJob.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnJob.Click += new System.EventHandler(this.btnJob_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Location = new System.Drawing.Point(3, 54);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(257, 45);
+            this.guna2Button1.TabIndex = 5;
+            this.guna2Button1.Text = "Tìm việc";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.Location = new System.Drawing.Point(3, 105);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(257, 45);
+            this.guna2Button2.TabIndex = 6;
+            this.guna2Button2.Text = "Đăng việc";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.TextOffset = new System.Drawing.Point(30, 0);
+            // 
             // pnSubNav3
             // 
             this.pnSubNav3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
@@ -221,8 +284,8 @@
             this.pnSubNav3.Controls.Add(this.btnWriteCV);
             this.pnSubNav3.Controls.Add(this.btnCvGuide);
             this.guna2Transition1.SetDecoration(this.pnSubNav3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav3.Location = new System.Drawing.Point(3, 3);
-            this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.pnSubNav3.Location = new System.Drawing.Point(3, 164);
+            this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.pnSubNav3.Name = "pnSubNav3";
             this.pnSubNav3.Size = new System.Drawing.Size(257, 158);
             this.pnSubNav3.TabIndex = 5;
@@ -305,96 +368,6 @@
             this.btnCvGuide.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCvGuide.TextOffset = new System.Drawing.Point(30, 0);
             // 
-            // pnSubNav1
-            // 
-            this.pnSubNav1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.pnSubNav1.Controls.Add(this.btnJob);
-            this.pnSubNav1.Controls.Add(this.guna2Button1);
-            this.pnSubNav1.Controls.Add(this.guna2Button2);
-            this.guna2Transition1.SetDecoration(this.pnSubNav1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav1.Location = new System.Drawing.Point(3, 179);
-            this.pnSubNav1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
-            this.pnSubNav1.Name = "pnSubNav1";
-            this.pnSubNav1.Size = new System.Drawing.Size(257, 158);
-            this.pnSubNav1.TabIndex = 3;
-            // 
-            // btnJob
-            // 
-            this.btnJob.BackColor = System.Drawing.Color.Transparent;
-            this.btnJob.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnJob, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.btnJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJob.ForeColor = System.Drawing.Color.White;
-            this.btnJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnJob.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnJob.Image = ((System.Drawing.Image)(resources.GetObject("btnJob.Image")));
-            this.btnJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJob.Location = new System.Drawing.Point(3, 3);
-            this.btnJob.Name = "btnJob";
-            this.btnJob.Size = new System.Drawing.Size(257, 45);
-            this.btnJob.TabIndex = 4;
-            this.btnJob.Text = "Việc làm";
-            this.btnJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJob.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 54);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(257, 45);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Tìm việc";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 8;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2Button2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(3, 105);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(257, 45);
-            this.guna2Button2.TabIndex = 6;
-            this.guna2Button2.Text = "Đăng việc";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(30, 0);
-            // 
             // pnSubNav2
             // 
             this.pnSubNav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
@@ -402,8 +375,8 @@
             this.pnSubNav2.Controls.Add(this.btnListCompany);
             this.pnSubNav2.Controls.Add(this.btnTopCompany);
             this.guna2Transition1.SetDecoration(this.pnSubNav2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav2.Location = new System.Drawing.Point(3, 355);
-            this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.pnSubNav2.Location = new System.Drawing.Point(3, 325);
+            this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.pnSubNav2.Name = "pnSubNav2";
             this.pnSubNav2.Size = new System.Drawing.Size(257, 158);
             this.pnSubNav2.TabIndex = 4;
@@ -432,6 +405,7 @@
             this.btnCompany.Text = "công ty";
             this.btnCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCompany.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);
             // 
             // btnListCompany
             // 
@@ -504,8 +478,7 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogin.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnLogin.Location = new System.Drawing.Point(3, 740);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 212, 3, 3);
+            this.btnLogin.Location = new System.Drawing.Point(3, 486);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(257, 45);
             this.btnLogin.TabIndex = 5;
@@ -519,7 +492,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1303, 839);
+            this.ClientSize = new System.Drawing.Size(1453, 839);
             this.Controls.Add(this.pnNav);
             this.Controls.Add(this.pnControlBox);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -534,8 +507,8 @@
             this.pnControlBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnNav.ResumeLayout(false);
-            this.pnSubNav3.ResumeLayout(false);
             this.pnSubNav1.ResumeLayout(false);
+            this.pnSubNav3.ResumeLayout(false);
             this.pnSubNav2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -551,7 +524,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.FlowLayoutPanel pnNav;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav1;
         private Guna.UI2.WinForms.Guna2Button btnJob;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
