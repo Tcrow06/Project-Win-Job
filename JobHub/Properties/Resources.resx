@@ -121,6 +121,12 @@
   <data name="icongmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icongmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imageuser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imageuser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jobhub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jobhub1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="timkiem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\timkiem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,9 +184,6 @@
   <data name="iconloacation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconloacation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jobhub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jobhub1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,10 @@
   <data name="png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imageuser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imageuser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heartChuaLuu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heartChuaLuu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heartDaLuu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heartDaLuu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
