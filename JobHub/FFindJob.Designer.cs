@@ -529,6 +529,7 @@
             this.uC_SlideJob1.Size = new System.Drawing.Size(350, 412);
             this.uC_SlideJob1.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // cboIndustryGroup
             // 
             this.cboIndustryGroup.BackColor = System.Drawing.Color.Transparent;
@@ -561,6 +562,16 @@
             this.cboIndustryGroup.StartIndex = 0;
             this.cboIndustryGroup.TabIndex = 43;
             this.cboIndustryGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+=======
+            // uC_Job6
+            // 
+            this.uC_Job6.BackColor = System.Drawing.Color.White;
+            this.uC_Job6.Location = new System.Drawing.Point(567, 111);
+            this.uC_Job6.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.uC_Job6.Name = "uC_Job6";
+            this.uC_Job6.Size = new System.Drawing.Size(231, 97);
+            this.uC_Job6.TabIndex = 5;
+>>>>>>> 0ac7802686cffd9278cb176ebd3e0f7633d2b38f
             // 
             // FJob
             // 
@@ -627,9 +638,29 @@
         private System.Windows.Forms.Label lblNewJob;
         private Guna.UI2.WinForms.Guna2Panel pnHotFob;
         private uC_SlideJob uC_SlideJob1;
+<<<<<<< HEAD
         private uC_NewJob uC_NewJob4;
         private uC_NewJob uC_NewJob5;
         private Guna.UI2.WinForms.Guna2ComboBox cboIndustryGroup;
+=======
+        private uC_Job uC_Job1;
+        private uC_Job uC_Job2;
+        private uC_Job uC_Job3;
+        private uC_Job uC_Job4;
+        private uC_Job uC_Job5;
+        private uC_Job uC_Job7;
+        private uC_Job uC_Job8;
+        private uC_Job uC_Job9;
+        private uC_Job uC_Job10;
+        private uC_Job uC_Job11;
+        private uC_Job uC_Job12;
+        private uC_Job uC_Job13;
+        private uC_Job uC_Job14;
+        private uC_Job uC_Job15;
+        private uC_NewJob uC_NewJob4;
+        private uC_NewJob uC_NewJob5;
+        private uC_Job uC_Job6;
+>>>>>>> 0ac7802686cffd9278cb176ebd3e0f7633d2b38f
     }
 }
 

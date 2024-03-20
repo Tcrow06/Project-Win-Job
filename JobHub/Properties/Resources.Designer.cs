@@ -73,6 +73,16 @@ namespace JobHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkmark {
+            get {
+                object obj = ResourceManager.GetObject("checkmark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cv_builder_desktop {
             get {
                 object obj = ResourceManager.GetObject("cv-builder-desktop", resourceCulture);
@@ -273,6 +283,16 @@ namespace JobHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plus {
+            get {
+                object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_computer_icons_icon_design_house_symbol_qualifications_wales_main_menu_angle_building_office_thumbnail {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main" +
@@ -337,6 +357,16 @@ namespace JobHub.Properties {
         internal static System.Drawing.Bitmap technique {
             get {
                 object obj = ResourceManager.GetObject("technique", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick {
+            get {
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

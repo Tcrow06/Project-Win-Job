@@ -13,6 +13,7 @@ namespace JobHub
 {
     public partial class Fmain : Form
     {
+        
         public Fmain()
         {
             InitializeComponent();
@@ -25,14 +26,14 @@ namespace JobHub
             FViews view = new FViews();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
-            resize(880);
+            resize(view.Width + 200);
             view.Show();
         }
 
         private void ShowSubNav(Panel nav)
         {
             
-            resize(this.Width + 175);
+            resize(this.Width + 150);
             pnNav.Visible = false;
             pnNav.Width = 175;
             guna2Transition1.ShowSync(pnNav);
@@ -43,7 +44,8 @@ namespace JobHub
             Hide(pnSubNav1);
             Hide(pnSubNav2);
             Hide(pnSubNav3);
-            resize(this.Width - 160);
+            resize(this.Width - 150);
+            
             pnNav.Visible = false;
             pnNav.Width = 45;
             guna2Transition1.ShowSync(pnNav);
