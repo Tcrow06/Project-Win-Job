@@ -126,5 +126,15 @@ namespace JobHub
             job.BringToFront();
             resize(1150);
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FPostJob job = new FPostJob();
+            job.MdiParent = this;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            resize(1150);
+        }
     }
 }
