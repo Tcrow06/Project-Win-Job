@@ -61,7 +61,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtLocation = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLink = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPosition = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDateOfBirth = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -73,9 +72,9 @@
             this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNumbersPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.uc_CVInfor1 = new JobHub.uc_CVInfor();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.uc_CVInfor1 = new JobHub.uc_CVInfor();
             this.guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.dateEndedu.SuspendLayout();
@@ -673,7 +672,6 @@
             this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2ShadowPanel1.Controls.Add(this.txtLocation);
             this.guna2ShadowPanel1.Controls.Add(this.txtLink);
-            this.guna2ShadowPanel1.Controls.Add(this.txtPosition);
             this.guna2ShadowPanel1.Controls.Add(this.txtDateOfBirth);
             this.guna2ShadowPanel1.Controls.Add(this.guna2Panel1);
             this.guna2ShadowPanel1.Controls.Add(this.txtGender);
@@ -767,28 +765,6 @@
             this.txtLink.SelectedText = "";
             this.txtLink.Size = new System.Drawing.Size(276, 41);
             this.txtLink.TabIndex = 20;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.BorderThickness = 0;
-            this.txtPosition.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPosition.DefaultText = "";
-            this.txtPosition.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPosition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPosition.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.ForeColor = System.Drawing.Color.Gray;
-            this.txtPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPosition.Location = new System.Drawing.Point(222, 90);
-            this.txtPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.PasswordChar = '\0';
-            this.txtPosition.PlaceholderText = "Vị trí ứng tuyển";
-            this.txtPosition.SelectedText = "";
-            this.txtPosition.Size = new System.Drawing.Size(172, 33);
-            this.txtPosition.TabIndex = 14;
             // 
             // txtDateOfBirth
             // 
@@ -962,6 +938,13 @@
             this.txtGmail.Size = new System.Drawing.Size(276, 41);
             this.txtGmail.TabIndex = 17;
             // 
+            // uc_CVInfor1
+            // 
+            this.uc_CVInfor1.Location = new System.Drawing.Point(3, 655);
+            this.uc_CVInfor1.Name = "uc_CVInfor1";
+            this.uc_CVInfor1.Size = new System.Drawing.Size(1050, 198);
+            this.uc_CVInfor1.TabIndex = 34;
+            // 
             // btnAdd
             // 
             this.btnAdd.BorderRadius = 10;
@@ -995,13 +978,6 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa mục";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // uc_CVInfor1
-            // 
-            this.uc_CVInfor1.Location = new System.Drawing.Point(3, 655);
-            this.uc_CVInfor1.Name = "uc_CVInfor1";
-            this.uc_CVInfor1.Size = new System.Drawing.Size(1050, 198);
-            this.uc_CVInfor1.TabIndex = 34;
             // 
             // FCV
             // 
@@ -1076,7 +1052,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtLocation;
         private Guna.UI2.WinForms.Guna2TextBox txtLink;
-        private Guna.UI2.WinForms.Guna2TextBox txtPosition;
         private Guna.UI2.WinForms.Guna2TextBox txtDateOfBirth;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
