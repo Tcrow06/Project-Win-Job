@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -72,22 +72,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // pnControlBox
             // 
@@ -102,7 +102,7 @@
             this.pnControlBox.Location = new System.Drawing.Point(0, 0);
             this.pnControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnControlBox.Name = "pnControlBox";
-            this.pnControlBox.Size = new System.Drawing.Size(1454, 48);
+            this.pnControlBox.Size = new System.Drawing.Size(1292, 38);
             this.pnControlBox.TabIndex = 1;
             // 
             // label1
@@ -112,9 +112,9 @@
             this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(67, 6);
+            this.label1.Location = new System.Drawing.Point(60, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 43);
+            this.label1.Size = new System.Drawing.Size(87, 36);
             this.label1.TabIndex = 3;
             this.label1.Text = "JobHub";
             // 
@@ -125,10 +125,10 @@
             this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(13, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 2);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(48, 41);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 33);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
@@ -143,10 +143,10 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1292, 8);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1148, 6);
             this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(40, 23);
             this.guna2ControlBox3.TabIndex = 2;
             // 
             // guna2ControlBox2
@@ -157,10 +157,10 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1346, 8);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1196, 6);
             this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(40, 23);
             this.guna2ControlBox2.TabIndex = 2;
             // 
             // guna2ControlBox1
@@ -170,10 +170,10 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1400, 8);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1244, 6);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(40, 23);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // pnNav
@@ -185,10 +185,10 @@
             this.pnNav.Controls.Add(this.btnLogin);
             this.guna2Transition1.SetDecoration(this.pnNav, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnNav.Location = new System.Drawing.Point(0, 48);
+            this.pnNav.Location = new System.Drawing.Point(0, 38);
             this.pnNav.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnNav.Name = "pnNav";
-            this.pnNav.Size = new System.Drawing.Size(261, 791);
+            this.pnNav.Size = new System.Drawing.Size(232, 633);
             this.pnNav.TabIndex = 2;
             // 
             // pnSubNav1
@@ -201,7 +201,7 @@
             this.pnSubNav1.Location = new System.Drawing.Point(3, 2);
             this.pnSubNav1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav1.Name = "pnSubNav1";
-            this.pnSubNav1.Size = new System.Drawing.Size(256, 158);
+            this.pnSubNav1.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav1.TabIndex = 3;
             // 
             // btnJob
@@ -224,7 +224,7 @@
             this.btnJob.Location = new System.Drawing.Point(3, 2);
             this.btnJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJob.Name = "btnJob";
-            this.btnJob.Size = new System.Drawing.Size(256, 45);
+            this.btnJob.Size = new System.Drawing.Size(228, 36);
             this.btnJob.TabIndex = 4;
             this.btnJob.Text = "Việc làm";
             this.btnJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -249,10 +249,10 @@
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 51);
+            this.guna2Button1.Location = new System.Drawing.Point(3, 42);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(256, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(228, 36);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Tìm việc";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -277,14 +277,15 @@
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(3, 100);
+            this.guna2Button2.Location = new System.Drawing.Point(3, 82);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(256, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(228, 36);
             this.guna2Button2.TabIndex = 6;
             this.guna2Button2.Text = "Đăng việc";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.TextOffset = new System.Drawing.Point(30, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // pnSubNav3
             // 
@@ -293,10 +294,10 @@
             this.pnSubNav3.Controls.Add(this.btnWriteCV);
             this.pnSubNav3.Controls.Add(this.btnCvGuide);
             this.guna2Transition1.SetDecoration(this.pnSubNav3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav3.Location = new System.Drawing.Point(3, 162);
+            this.pnSubNav3.Location = new System.Drawing.Point(3, 130);
             this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav3.Name = "pnSubNav3";
-            this.pnSubNav3.Size = new System.Drawing.Size(256, 158);
+            this.pnSubNav3.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav3.TabIndex = 5;
             // 
             // btnCV
@@ -319,9 +320,9 @@
             this.btnCV.Location = new System.Drawing.Point(3, 2);
             this.btnCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCV.Name = "btnCV";
-            this.btnCV.Size = new System.Drawing.Size(252, 45);
+            this.btnCV.Size = new System.Drawing.Size(224, 36);
             this.btnCV.TabIndex = 4;
-            this.btnCV.Text = "Hồ sơ và cv";
+            this.btnCV.Text = "Hồ sơ và CV";
             this.btnCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCV.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
@@ -344,14 +345,15 @@
             this.btnWriteCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnWriteCV.Image = ((System.Drawing.Image)(resources.GetObject("btnWriteCV.Image")));
             this.btnWriteCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWriteCV.Location = new System.Drawing.Point(3, 51);
+            this.btnWriteCV.Location = new System.Drawing.Point(3, 42);
             this.btnWriteCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWriteCV.Name = "btnWriteCV";
-            this.btnWriteCV.Size = new System.Drawing.Size(256, 45);
+            this.btnWriteCV.Size = new System.Drawing.Size(228, 36);
             this.btnWriteCV.TabIndex = 5;
-            this.btnWriteCV.Text = "Viết cv";
+            this.btnWriteCV.Text = "Viết CV";
             this.btnWriteCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWriteCV.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnWriteCV.Click += new System.EventHandler(this.btnWriteCV_Click);
             // 
             // btnCvGuide
             // 
@@ -371,14 +373,15 @@
             this.btnCvGuide.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCvGuide.Image = ((System.Drawing.Image)(resources.GetObject("btnCvGuide.Image")));
             this.btnCvGuide.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCvGuide.Location = new System.Drawing.Point(3, 100);
+            this.btnCvGuide.Location = new System.Drawing.Point(3, 82);
             this.btnCvGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCvGuide.Name = "btnCvGuide";
-            this.btnCvGuide.Size = new System.Drawing.Size(256, 45);
+            this.btnCvGuide.Size = new System.Drawing.Size(228, 36);
             this.btnCvGuide.TabIndex = 6;
-            this.btnCvGuide.Text = "Cv guide";
+            this.btnCvGuide.Text = "Cv Guide";
             this.btnCvGuide.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCvGuide.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnCvGuide.Click += new System.EventHandler(this.btnCvGuide_Click);
             // 
             // pnSubNav2
             // 
@@ -387,10 +390,10 @@
             this.pnSubNav2.Controls.Add(this.btnListCompany);
             this.pnSubNav2.Controls.Add(this.btnTopCompany);
             this.guna2Transition1.SetDecoration(this.pnSubNav2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav2.Location = new System.Drawing.Point(3, 322);
+            this.pnSubNav2.Location = new System.Drawing.Point(3, 258);
             this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav2.Name = "pnSubNav2";
-            this.pnSubNav2.Size = new System.Drawing.Size(256, 158);
+            this.pnSubNav2.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav2.TabIndex = 4;
             // 
             // btnCompany
@@ -413,9 +416,9 @@
             this.btnCompany.Location = new System.Drawing.Point(3, 2);
             this.btnCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompany.Name = "btnCompany";
-            this.btnCompany.Size = new System.Drawing.Size(256, 45);
+            this.btnCompany.Size = new System.Drawing.Size(228, 36);
             this.btnCompany.TabIndex = 4;
-            this.btnCompany.Text = "công ty";
+            this.btnCompany.Text = "Công ty";
             this.btnCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCompany.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);
@@ -438,10 +441,10 @@
             this.btnListCompany.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnListCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnListCompany.Image")));
             this.btnListCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListCompany.Location = new System.Drawing.Point(3, 51);
+            this.btnListCompany.Location = new System.Drawing.Point(3, 42);
             this.btnListCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListCompany.Name = "btnListCompany";
-            this.btnListCompany.Size = new System.Drawing.Size(256, 45);
+            this.btnListCompany.Size = new System.Drawing.Size(228, 36);
             this.btnListCompany.TabIndex = 5;
             this.btnListCompany.Text = "List công ty";
             this.btnListCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -466,10 +469,10 @@
             this.btnTopCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnTopCompany.Image")));
             this.btnTopCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTopCompany.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnTopCompany.Location = new System.Drawing.Point(3, 100);
+            this.btnTopCompany.Location = new System.Drawing.Point(3, 82);
             this.btnTopCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTopCompany.Name = "btnTopCompany";
-            this.btnTopCompany.Size = new System.Drawing.Size(256, 45);
+            this.btnTopCompany.Size = new System.Drawing.Size(228, 36);
             this.btnTopCompany.TabIndex = 6;
             this.btnTopCompany.Text = "Top công ty";
             this.btnTopCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -493,10 +496,10 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogin.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnLogin.Location = new System.Drawing.Point(3, 482);
+            this.btnLogin.Location = new System.Drawing.Point(3, 386);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(256, 45);
+            this.btnLogin.Size = new System.Drawing.Size(228, 36);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -505,16 +508,15 @@
             // 
             // Fmain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1454, 839);
+            this.ClientSize = new System.Drawing.Size(1292, 671);
             this.Controls.Add(this.pnNav);
             this.Controls.Add(this.pnControlBox);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Fmain";
             this.Text = "  ";
             this.Load += new System.EventHandler(this.Fmain_Load);

@@ -96,10 +96,10 @@
             "2 năm",
             "3 năm",
             "Trên 3 năm"});
-            this.cboCity.Location = new System.Drawing.Point(756, 230);
+            this.cboCity.Location = new System.Drawing.Point(630, 192);
             this.cboCity.Margin = new System.Windows.Forms.Padding(2);
             this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(244, 28);
+            this.cboCity.Size = new System.Drawing.Size(204, 28);
             this.cboCity.StartIndex = 0;
             this.cboCity.TabIndex = 36;
             this.cboCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -124,10 +124,10 @@
             "6-10 triệu",
             "11-15 triệu",
             "Trên 15 triệu"});
-            this.cboExperience.Location = new System.Drawing.Point(386, 230);
+            this.cboExperience.Location = new System.Drawing.Point(322, 192);
             this.cboExperience.Margin = new System.Windows.Forms.Padding(2);
             this.cboExperience.Name = "cboExperience";
-            this.cboExperience.Size = new System.Drawing.Size(244, 28);
+            this.cboExperience.Size = new System.Drawing.Size(204, 28);
             this.cboExperience.StartIndex = 0;
             this.cboExperience.TabIndex = 35;
             this.cboExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -211,10 +211,10 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cboWage.Location = new System.Drawing.Point(17, 230);
+            this.cboWage.Location = new System.Drawing.Point(14, 192);
             this.cboWage.Margin = new System.Windows.Forms.Padding(2);
             this.cboWage.Name = "cboWage";
-            this.cboWage.Size = new System.Drawing.Size(244, 28);
+            this.cboWage.Size = new System.Drawing.Size(204, 28);
             this.cboWage.StartIndex = 0;
             this.cboWage.TabIndex = 34;
             this.cboWage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -226,10 +226,10 @@
             this.lblTitle.AutoSize = false;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(13, 80);
+            this.lblTitle.Location = new System.Drawing.Point(11, 67);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(98, 38);
+            this.lblTitle.Size = new System.Drawing.Size(82, 32);
             this.lblTitle.TabIndex = 29;
             this.lblTitle.Text = "Lĩnh Vực";
             // 
@@ -239,10 +239,10 @@
             this.lblSubLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblSubLogo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.lblSubLogo.Location = new System.Drawing.Point(842, 43);
+            this.lblSubLogo.Location = new System.Drawing.Point(702, 36);
             this.lblSubLogo.Margin = new System.Windows.Forms.Padding(2);
             this.lblSubLogo.Name = "lblSubLogo";
-            this.lblSubLogo.Size = new System.Drawing.Size(80, 26);
+            this.lblSubLogo.Size = new System.Drawing.Size(67, 22);
             this.lblSubLogo.TabIndex = 25;
             this.lblSubLogo.Text = "@job_hub";
             // 
@@ -251,10 +251,10 @@
             this.lblLogo.AutoSize = false;
             this.lblLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblLogo.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(826, 10);
+            this.lblLogo.Location = new System.Drawing.Point(688, 8);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(2);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(98, 38);
+            this.lblLogo.Size = new System.Drawing.Size(82, 32);
             this.lblLogo.TabIndex = 26;
             this.lblLogo.Text = "JobHub";
             // 
@@ -272,13 +272,13 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtSearch.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.txtSearch.Location = new System.Drawing.Point(5, 12);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtSearch.Location = new System.Drawing.Point(4, 10);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập nội dung tìm kiếm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(814, 56);
+            this.txtSearch.Size = new System.Drawing.Size(678, 47);
             this.txtSearch.TabIndex = 23;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -309,10 +309,10 @@
             this.btnTechnique.Image = ((System.Drawing.Image)(resources.GetObject("btnTechnique.Image")));
             this.btnTechnique.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnTechnique.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTechnique.Location = new System.Drawing.Point(551, 121);
+            this.btnTechnique.Location = new System.Drawing.Point(459, 101);
             this.btnTechnique.Margin = new System.Windows.Forms.Padding(2);
             this.btnTechnique.Name = "btnTechnique";
-            this.btnTechnique.Size = new System.Drawing.Size(174, 44);
+            this.btnTechnique.Size = new System.Drawing.Size(145, 37);
             this.btnTechnique.TabIndex = 33;
             this.btnTechnique.Text = "Kỹ thuật";
             this.btnTechnique.Click += new System.EventHandler(this.btnTechnique_Click);
@@ -338,10 +338,10 @@
             this.btnEconomy.Image = ((System.Drawing.Image)(resources.GetObject("btnEconomy.Image")));
             this.btnEconomy.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnEconomy.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnEconomy.Location = new System.Drawing.Point(281, 121);
+            this.btnEconomy.Location = new System.Drawing.Point(234, 101);
             this.btnEconomy.Margin = new System.Windows.Forms.Padding(2);
             this.btnEconomy.Name = "btnEconomy";
-            this.btnEconomy.Size = new System.Drawing.Size(174, 44);
+            this.btnEconomy.Size = new System.Drawing.Size(145, 37);
             this.btnEconomy.TabIndex = 31;
             this.btnEconomy.Text = "Kinh tế";
             this.btnEconomy.Click += new System.EventHandler(this.btnEconomy_Click);
@@ -367,10 +367,10 @@
             this.btnIT.Image = ((System.Drawing.Image)(resources.GetObject("btnIT.Image")));
             this.btnIT.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnIT.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnIT.Location = new System.Drawing.Point(13, 121);
+            this.btnIT.Location = new System.Drawing.Point(11, 101);
             this.btnIT.Margin = new System.Windows.Forms.Padding(2);
             this.btnIT.Name = "btnIT";
-            this.btnIT.Size = new System.Drawing.Size(174, 44);
+            this.btnIT.Size = new System.Drawing.Size(145, 37);
             this.btnIT.TabIndex = 30;
             this.btnIT.Text = "Công nghệ";
             this.btnIT.Click += new System.EventHandler(this.btnIT_Click);
@@ -380,10 +380,10 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 182);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 152);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 35);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(79, 29);
             this.guna2HtmlLabel1.TabIndex = 40;
             this.guna2HtmlLabel1.Text = "Lọc";
             // 
@@ -392,10 +392,9 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(942, 13);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(785, 11);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 50);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(49, 42);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 41;
             this.guna2PictureBox1.TabStop = false;
@@ -406,10 +405,10 @@
             this.pnContain.Controls.Add(this.pnSubContain);
             this.pnContain.Controls.Add(this.pnHotFob);
             this.pnContain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnContain.Location = new System.Drawing.Point(1059, 0);
+            this.pnContain.Location = new System.Drawing.Point(883, 0);
             this.pnContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnContain.Name = "pnContain";
-            this.pnContain.Size = new System.Drawing.Size(387, 787);
+            this.pnContain.Size = new System.Drawing.Size(322, 656);
             this.pnContain.TabIndex = 42;
             // 
             // pnSubContain
@@ -421,10 +420,10 @@
             this.pnSubContain.Controls.Add(this.uC_NewJob5);
             this.pnSubContain.Controls.Add(this.flpnContain);
             this.pnSubContain.Controls.Add(this.guna2Panel2);
-            this.pnSubContain.Location = new System.Drawing.Point(4, 433);
+            this.pnSubContain.Location = new System.Drawing.Point(3, 361);
             this.pnSubContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnSubContain.Name = "pnSubContain";
-            this.pnSubContain.Size = new System.Drawing.Size(367, 348);
+            this.pnSubContain.Size = new System.Drawing.Size(306, 290);
             this.pnSubContain.TabIndex = 1;
             // 
             // flpnContain
@@ -432,30 +431,30 @@
             this.flpnContain.Controls.Add(this.uC_NewJob1);
             this.flpnContain.Controls.Add(this.uC_NewJob2);
             this.flpnContain.Controls.Add(this.uC_NewJob3);
-            this.flpnContain.Location = new System.Drawing.Point(7, 55);
+            this.flpnContain.Location = new System.Drawing.Point(6, 46);
             this.flpnContain.Margin = new System.Windows.Forms.Padding(2);
             this.flpnContain.Name = "flpnContain";
-            this.flpnContain.Size = new System.Drawing.Size(323, 274);
+            this.flpnContain.Size = new System.Drawing.Size(269, 228);
             this.flpnContain.TabIndex = 6;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.lblSeeAll);
             this.guna2Panel2.Controls.Add(this.lblNewJob);
-            this.guna2Panel2.Location = new System.Drawing.Point(5, 7);
+            this.guna2Panel2.Location = new System.Drawing.Point(4, 6);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(334, 40);
+            this.guna2Panel2.Size = new System.Drawing.Size(278, 33);
             this.guna2Panel2.TabIndex = 5;
             // 
             // lblSeeAll
             // 
             this.lblSeeAll.AutoSize = true;
             this.lblSeeAll.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSeeAll.Location = new System.Drawing.Point(262, 13);
+            this.lblSeeAll.Location = new System.Drawing.Point(218, 11);
             this.lblSeeAll.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSeeAll.Name = "lblSeeAll";
-            this.lblSeeAll.Size = new System.Drawing.Size(57, 21);
+            this.lblSeeAll.Size = new System.Drawing.Size(49, 19);
             this.lblSeeAll.TabIndex = 1;
             this.lblSeeAll.Text = "See All";
             // 
@@ -463,10 +462,10 @@
             // 
             this.lblNewJob.AutoSize = true;
             this.lblNewJob.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewJob.Location = new System.Drawing.Point(7, 10);
+            this.lblNewJob.Location = new System.Drawing.Point(6, 8);
             this.lblNewJob.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewJob.Name = "lblNewJob";
-            this.lblNewJob.Size = new System.Drawing.Size(113, 25);
+            this.lblNewJob.Size = new System.Drawing.Size(93, 20);
             this.lblNewJob.TabIndex = 0;
             this.lblNewJob.Text = "What\'s New";
             // 
@@ -478,7 +477,7 @@
             this.pnHotFob.Location = new System.Drawing.Point(0, 0);
             this.pnHotFob.Margin = new System.Windows.Forms.Padding(2);
             this.pnHotFob.Name = "pnHotFob";
-            this.pnHotFob.Size = new System.Drawing.Size(387, 427);
+            this.pnHotFob.Size = new System.Drawing.Size(322, 356);
             this.pnHotFob.TabIndex = 0;
             // 
             // cboIndustryGroup
@@ -507,10 +506,10 @@
             "Sư phạm",
             "Ngôn ngữ",
             "Nông - lâm - ngư nghiệp"});
-            this.cboIndustryGroup.Location = new System.Drawing.Point(803, 121);
+            this.cboIndustryGroup.Location = new System.Drawing.Point(669, 101);
             this.cboIndustryGroup.Margin = new System.Windows.Forms.Padding(2);
             this.cboIndustryGroup.Name = "cboIndustryGroup";
-            this.cboIndustryGroup.Size = new System.Drawing.Size(197, 28);
+            this.cboIndustryGroup.Size = new System.Drawing.Size(165, 28);
             this.cboIndustryGroup.StartIndex = 0;
             this.cboIndustryGroup.TabIndex = 43;
             this.cboIndustryGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -529,54 +528,54 @@
             // uC_NewJob5
             // 
             this.uC_NewJob5.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob5.Location = new System.Drawing.Point(12, 350);
-            this.uC_NewJob5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 23);
+            this.uC_NewJob5.Location = new System.Drawing.Point(10, 292);
+            this.uC_NewJob5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 19);
             this.uC_NewJob5.Name = "uC_NewJob5";
-            this.uC_NewJob5.Size = new System.Drawing.Size(325, 78);
+            this.uC_NewJob5.Size = new System.Drawing.Size(271, 65);
             this.uC_NewJob5.TabIndex = 8;
             // 
             // uC_NewJob1
             // 
             this.uC_NewJob1.BackColor = System.Drawing.Color.White;
             this.uC_NewJob1.Location = new System.Drawing.Point(2, 2);
-            this.uC_NewJob1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
+            this.uC_NewJob1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 18);
             this.uC_NewJob1.Name = "uC_NewJob1";
-            this.uC_NewJob1.Size = new System.Drawing.Size(325, 74);
+            this.uC_NewJob1.Size = new System.Drawing.Size(271, 62);
             this.uC_NewJob1.TabIndex = 0;
             // 
             // uC_NewJob2
             // 
             this.uC_NewJob2.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob2.Location = new System.Drawing.Point(2, 100);
-            this.uC_NewJob2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
+            this.uC_NewJob2.Location = new System.Drawing.Point(2, 84);
+            this.uC_NewJob2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 18);
             this.uC_NewJob2.Name = "uC_NewJob2";
-            this.uC_NewJob2.Size = new System.Drawing.Size(325, 74);
+            this.uC_NewJob2.Size = new System.Drawing.Size(271, 62);
             this.uC_NewJob2.TabIndex = 1;
             // 
             // uC_NewJob3
             // 
             this.uC_NewJob3.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob3.Location = new System.Drawing.Point(2, 198);
-            this.uC_NewJob3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
+            this.uC_NewJob3.Location = new System.Drawing.Point(2, 166);
+            this.uC_NewJob3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 18);
             this.uC_NewJob3.Name = "uC_NewJob3";
-            this.uC_NewJob3.Size = new System.Drawing.Size(325, 74);
+            this.uC_NewJob3.Size = new System.Drawing.Size(271, 62);
             this.uC_NewJob3.TabIndex = 2;
             // 
             // uC_SlideJob1
             // 
             this.uC_SlideJob1.BackColor = System.Drawing.Color.White;
-            this.uC_SlideJob1.Location = new System.Drawing.Point(5, 2);
+            this.uC_SlideJob1.Location = new System.Drawing.Point(4, 2);
             this.uC_SlideJob1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_SlideJob1.Name = "uC_SlideJob1";
-            this.uC_SlideJob1.Size = new System.Drawing.Size(365, 412);
+            this.uC_SlideJob1.Size = new System.Drawing.Size(304, 343);
             this.uC_SlideJob1.TabIndex = 0;
             // 
             // FJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1446, 787);
+            this.ClientSize = new System.Drawing.Size(1205, 656);
             this.Controls.Add(this.cboIndustryGroup);
             this.Controls.Add(this.pnContain);
             this.Controls.Add(this.guna2PictureBox1);
