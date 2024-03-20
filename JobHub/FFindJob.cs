@@ -15,52 +15,21 @@ namespace JobHub
     public partial class FJob : Form
     {
         SqlConnection sqlConnection = new SqlConnection(DBConection.str);
+        DBConection conection = new DBConection();
         public FJob()
         {
             InitializeComponent();
 
         }
-
-        private void setSize(int width, int height, Label label)
-        {
-            label.Width = width;
-            label.Height = height;
-        }
+   
         private void loadJobInPanel()
         {
-            try
-            {
-                if (sqlConnection.State != ConnectionState.Open)
-                {
-                    sqlConnection.Open();
-                }
-
-                string query = @"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
+            string query = @"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
                          FROM Job
                          INNER JOIN Company ON Job.idCompany = Company.idCompany";
-
-                SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    uC_Job job = new uC_Job();
-                    job.lblNameJob.Text = dr["nameJob"].ToString();
-                    setSize(130, 25, job.lblNameJob);
-                    job.lblNameCompany.Text = dr["nameCompany"].ToString();
-                    job.lblSalary.Text = dr["salary"].ToString();
-                    job.lblPositon.Text = dr["position"].ToString();
-                    
-                    pnJob.Controls.Add(job);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
+            SqlDataReader reader = conection.loadData(query);
+            pnJob.Controls.Clear(); 
+            conection.change(reader, pnJob);
         }
 
         private void FJob_Load(object sender, EventArgs e)
@@ -82,79 +51,23 @@ namespace JobHub
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (sqlConnection.State != ConnectionState.Open)
-                {
-                    sqlConnection.Open();
-                }
-
-                string query = @"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
+            string query = $@"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
                          FROM Job
                          INNER JOIN Company ON Job.idCompany = Company.idCompany
-                         where Job.nameJob LIKE @SearchTerm";
-
-                SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                cmd.Parameters.AddWithValue("@SearchTerm", txtSearch.Text.Trim() + "%");
-                SqlDataReader dr = cmd.ExecuteReader();
-                pnJob.Controls.Clear();
-                while (dr.Read())
-                {
-                    uC_Job job = new uC_Job();
-                    job.lblNameJob.Text = dr["nameJob"].ToString();
-                    setSize(130, 25, job.lblNameJob);
-                    job.lblNameCompany.Text = dr["nameCompany"].ToString();
-                    job.lblSalary.Text = dr["salary"].ToString();
-                    job.lblPositon.Text = dr["position"].ToString();
-                    pnJob.Controls.Add(job);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
+                         where Job.nameJob LIKE N'{txtSearch.Text}%'";
+            SqlDataReader dr = conection.loadData(query);
+            pnJob.Controls.Clear();
+            conection.change(dr, pnJob);
         }
 
         private void loadJob(Guna2Button button)
         {
-            try
-            {
-                if (sqlConnection.State != ConnectionState.Open)
-                {
-                    sqlConnection.Open();
-                }
-
-                string query = @"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
-                        FROM Job
-                        INNER JOIN Company ON Job.idCompany = Company.idCompany
-                        where Job.category = @SearchTerm";
-
-                SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                cmd.Parameters.AddWithValue("@SearchTerm", button.Text.Trim());
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    uC_Job job = new uC_Job();
-                    job.lblNameJob.Text = dr["nameJob"].ToString();
-                    setSize(130, 25, job.lblNameJob);
-                    job.lblNameCompany.Text = dr["nameCompany"].ToString();
-                    job.lblSalary.Text = dr["salary"].ToString();
-                    job.lblPositon.Text = dr["position"].ToString();
-                    pnJob.Controls.Add(job);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
+            string query = $@"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                    FROM Job
+                    INNER JOIN Company ON Job.idCompany = Company.idCompany
+                    where Job.category LIKE N'{button.Text}%'";
+            SqlDataReader dr = conection.loadData(query);
+            conection.change(dr, pnJob);
         }
         private void checkStateButton(Guna2Button button)
         {               
@@ -223,45 +136,19 @@ namespace JobHub
 
         private void cboExperience_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (sqlConnection.State != ConnectionState.Open)
-                {
-                    sqlConnection.Open();
-                }
 
-                string query = @"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
-                        FROM Job
-                        INNER JOIN Company ON Job.idCompany = Company.idCompany
-                        where Job.salary = @salary";
-                SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                cmd.Parameters.AddWithValue("@salary", cboExperience.SelectedItem.ToString());
-                SqlDataReader dr = cmd.ExecuteReader();
-                pnJob.Controls.Clear();
-                while (dr.Read())
-                {
-                    uC_Job job = new uC_Job();
-                    job.lblNameJob.Text = dr["nameJob"].ToString();
-                    setSize(130, 25, job.lblNameJob);
-                    job.lblNameCompany.Text = dr["nameCompany"].ToString();
-                    job.lblSalary.Text = dr["salary"].ToString();
-                    job.lblPositon.Text = dr["position"].ToString();
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                sqlConnection.Open();
+            }
 
-                    pnJob.Controls.Add(job);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-            }
-            finally
-            {
-                sqlConnection.Close();
-            }
-            if (cboExperience.SelectedItem.ToString() == "Tất cả mức lương")
-            {
-                loadJobInPanel();
-            }
+            string query = $@"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                    FROM Job
+                    INNER JOIN Company ON Job.idCompany = Company.idCompany
+                    where Job.salary LIKE N'{cboExperience.SelectedItem.ToString()}%'";
+            SqlDataReader dr = conection.loadData(query);
+            pnJob.Controls.Clear();
+            conection.change(dr, pnJob); 
         }
     }
 }

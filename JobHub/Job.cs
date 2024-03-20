@@ -81,9 +81,5 @@ namespace JobHub
             get { return category; }
             set { category = value; }
         }
-
-
     }
-
-
 }
