@@ -10,7 +10,7 @@ namespace JobHub
 {
     class DBConection
     {
-        public static string str = @"Data Source=(local);Initial Catalog=JobHub;Integrated Security=True";
+        public static string str = @"Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobHub;Integrated Security=True;Encrypt=False";
 
         SqlConnection sqlConnection = new SqlConnection(DBConection.str);
 

@@ -175,7 +175,7 @@ namespace JobHub
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Ứng tuyển thành công ","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

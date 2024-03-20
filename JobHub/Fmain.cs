@@ -146,7 +146,7 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            resize(job.Width + 200, job.Height + 50);
         }
 
         private void btnWriteCV_Click(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            resize(job.Width + 200, job.Height + 50);
         }
 
         private void btnCvGuide_Click(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            resize(job.Width + 200, job.Height + 50);
         }
     }
 }
