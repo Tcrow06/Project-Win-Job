@@ -52,6 +52,7 @@
             this.lblNewJob = new System.Windows.Forms.Label();
             this.pnHotFob = new Guna.UI2.WinForms.Guna2Panel();
             this.cboIndustryGroup = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.uC_NewJob5 = new JobHub.uC_NewJob();
             this.uC_NewJob1 = new JobHub.uC_NewJob();
             this.uC_NewJob2 = new JobHub.uC_NewJob();
@@ -68,10 +69,10 @@
             // pnJob
             // 
             this.pnJob.AutoScroll = true;
-            this.pnJob.Location = new System.Drawing.Point(5, 293);
+            this.pnJob.Location = new System.Drawing.Point(11, 293);
             this.pnJob.Margin = new System.Windows.Forms.Padding(2);
             this.pnJob.Name = "pnJob";
-            this.pnJob.Size = new System.Drawing.Size(1038, 492);
+            this.pnJob.Size = new System.Drawing.Size(1027, 483);
             this.pnJob.TabIndex = 39;
             // 
             // cboCity
@@ -119,9 +120,9 @@
             this.cboExperience.Items.AddRange(new object[] {
             "Tất cả mức lương",
             "Dưới 2 triệu",
-            "3 - 5 triệu",
-            "6 - 10 triệu",
-            "11 - 15 triệu",
+            "3-5 triệu",
+            "6-10 triệu",
+            "11-15 triệu",
             "Trên 15 triệu"});
             this.cboExperience.Location = new System.Drawing.Point(386, 230);
             this.cboExperience.Margin = new System.Windows.Forms.Padding(2);
@@ -130,6 +131,7 @@
             this.cboExperience.StartIndex = 0;
             this.cboExperience.TabIndex = 35;
             this.cboExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboExperience.SelectedIndexChanged += new System.EventHandler(this.cboExperience_SelectedIndexChanged);
             // 
             // cboWage
             // 
@@ -216,6 +218,8 @@
             this.cboWage.StartIndex = 0;
             this.cboWage.TabIndex = 34;
             this.cboWage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboWage.SelectedIndexChanged += new System.EventHandler(this.cboWage_SelectedIndexChanged);
+            this.cboWage.SelectedValueChanged += new System.EventHandler(this.cboWage_SelectedValueChanged);
             // 
             // lblTitle
             // 
@@ -276,6 +280,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(814, 56);
             this.txtSearch.TabIndex = 23;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // guna2BorderlessForm1
             // 
@@ -309,7 +314,8 @@
             this.btnTechnique.Name = "btnTechnique";
             this.btnTechnique.Size = new System.Drawing.Size(174, 44);
             this.btnTechnique.TabIndex = 33;
-            this.btnTechnique.Text = "Kỹ Thuật";
+            this.btnTechnique.Text = "Kỹ thuật";
+            this.btnTechnique.Click += new System.EventHandler(this.btnTechnique_Click);
             // 
             // btnEconomy
             // 
@@ -337,7 +343,8 @@
             this.btnEconomy.Name = "btnEconomy";
             this.btnEconomy.Size = new System.Drawing.Size(174, 44);
             this.btnEconomy.TabIndex = 31;
-            this.btnEconomy.Text = "Kinh Tế";
+            this.btnEconomy.Text = "Kinh tế";
+            this.btnEconomy.Click += new System.EventHandler(this.btnEconomy_Click);
             // 
             // btnIT
             // 
@@ -365,7 +372,8 @@
             this.btnIT.Name = "btnIT";
             this.btnIT.Size = new System.Drawing.Size(174, 44);
             this.btnIT.TabIndex = 30;
-            this.btnIT.Text = "Công Nghệ";
+            this.btnIT.Text = "Công nghệ";
+            this.btnIT.Click += new System.EventHandler(this.btnIT_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -489,8 +497,9 @@
             this.cboIndustryGroup.Items.AddRange(new object[] {
             "Sản xuất và chế biến",
             "Kiến trúc và xây dựng",
-            "Kinh Doanh",
-            "Công nghệ thông tin",
+            "Kinh tế",
+            "Công nghệ",
+            "Kỹ thuật",
             "Luật - nhân văn",
             "Nghệ thuật - thẩm mỹ - đồ họa",
             "Báo chí - khoa học xã hội",
@@ -505,6 +514,17 @@
             this.cboIndustryGroup.StartIndex = 0;
             this.cboIndustryGroup.TabIndex = 43;
             this.cboIndustryGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboIndustryGroup.SelectedIndexChanged += new System.EventHandler(this.cboIndustryGroup_SelectedIndexChanged);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 286);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1038, 493);
+            this.guna2Panel1.TabIndex = 0;
             // 
             // uC_NewJob5
             // 
@@ -572,6 +592,7 @@
             this.Controls.Add(this.lblSubLogo);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -618,6 +639,7 @@
         private uC_SlideJob uC_SlideJob1;
         private uC_NewJob uC_NewJob5;
         private Guna.UI2.WinForms.Guna2ComboBox cboIndustryGroup;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
 
