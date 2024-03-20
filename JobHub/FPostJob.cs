@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace JobHub
 {
     public partial class FPostJob : Form
     {
+        SqlConnection sqlConnection = new SqlConnection(DBConection.str);
         public FPostJob()
         {
             InitializeComponent();
@@ -308,11 +310,38 @@ namespace JobHub
         }
 
         private void saveBtn_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Lưu CV thành công", "Success");
-            this.Close();
-            Fmain fmain = new Fmain();
-            fmain.Show();
+        {/*
+            try
+            {
+                if(sqlConnection.State != ConnectionState.Open)
+                {
+                    sqlConnection.Open();
+                }
+
+                string sqlStr = string.Format("INSERT INTO Job(nameJob,idCompany,salary,position,dentail,requirement,benefit,category) VALUES (N'{0}','{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}',N'{7}')", txtNameJob.Text, 1, txtSalary.Text, txtPosition.Text, txtJobDes.Text, txtJobRequirement.Text, txtBenefit.Text, cbCategory.SelectedItem.ToString());
+                SqlCommand cmd = new SqlCommand(sqlStr, sqlConnection);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Đăng việc thành công");
+                    this.Close();
+                    Fmain fm = new Fmain();
+                    fm.Show();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Đăng công việc thất bại" + ex);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }*/
+
+            JobDao jd = new JobDao();
+            Job A=new Job(txtNameJob.Text, 1, txtSalary.Text, txtPosition.Text, txtJobDes.Text, txtJobRequirement.Text, txtBenefit.Text, cbCategory.SelectedItem.ToString());
+            jd.Them(A);
+
         }
     }
 }

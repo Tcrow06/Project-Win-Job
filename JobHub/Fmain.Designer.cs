@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
             Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+=======
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+>>>>>>> e0831b4f7245f106b673c66ae6a6b54c8d462359
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -72,6 +76,7 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
+<<<<<<< HEAD
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -88,6 +93,24 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.guna2Transition1.DefaultAnimation = animation1;
+=======
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
+>>>>>>> e0831b4f7245f106b673c66ae6a6b54c8d462359
             // 
             // pnControlBox
             // 
@@ -285,6 +308,7 @@
             this.guna2Button2.Text = "Đăng việc";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.TextOffset = new System.Drawing.Point(30, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // pnSubNav3
             // 
@@ -321,7 +345,7 @@
             this.btnCV.Name = "btnCV";
             this.btnCV.Size = new System.Drawing.Size(224, 36);
             this.btnCV.TabIndex = 4;
-            this.btnCV.Text = "Hồ sơ và cv";
+            this.btnCV.Text = "Hồ sơ và CV";
             this.btnCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCV.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
@@ -349,9 +373,10 @@
             this.btnWriteCV.Name = "btnWriteCV";
             this.btnWriteCV.Size = new System.Drawing.Size(228, 36);
             this.btnWriteCV.TabIndex = 5;
-            this.btnWriteCV.Text = "Viết cv";
+            this.btnWriteCV.Text = "Viết CV";
             this.btnWriteCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWriteCV.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnWriteCV.Click += new System.EventHandler(this.btnWriteCV_Click);
             // 
             // btnCvGuide
             // 
@@ -376,9 +401,10 @@
             this.btnCvGuide.Name = "btnCvGuide";
             this.btnCvGuide.Size = new System.Drawing.Size(228, 36);
             this.btnCvGuide.TabIndex = 6;
-            this.btnCvGuide.Text = "Cv guide";
+            this.btnCvGuide.Text = "Cv Guide";
             this.btnCvGuide.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCvGuide.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnCvGuide.Click += new System.EventHandler(this.btnCvGuide_Click);
             // 
             // pnSubNav2
             // 
@@ -415,7 +441,7 @@
             this.btnCompany.Name = "btnCompany";
             this.btnCompany.Size = new System.Drawing.Size(228, 36);
             this.btnCompany.TabIndex = 4;
-            this.btnCompany.Text = "công ty";
+            this.btnCompany.Text = "Công ty";
             this.btnCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCompany.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);

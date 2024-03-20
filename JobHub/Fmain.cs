@@ -26,20 +26,14 @@ namespace JobHub
             this.Height = 550;
             FViews view = new FViews();
             view = new FViews();
-            //FJobDetails view = new FJobDetails();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
             resize(view.Width + 200, view.Height + 50);
             view.Show();
-/*            int x = view.Location.X;
-            int y = view.Location.Y;
-            string xx = x.ToString() + " + " + y.ToString();
-            MessageBox.Show(xx);*/
         }
         public void Reset_Load(FJobDetails view)
         {
             this.Height = 550;
-            //FJobDetails view = new FJobDetails();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
             resize(view.Width + 200, view.Height + 50);
@@ -143,6 +137,36 @@ namespace JobHub
             job.BringToFront();
             job.Location= new Point(0,0);
             resize(job.Width + 200, job.Height + 50);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FPostJob job = new FPostJob();
+            job.MdiParent = this;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            resize(1150);
+        }
+
+        private void btnWriteCV_Click(object sender, EventArgs e)
+        {
+            FCV job = new FCV();
+            job.MdiParent = this;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            resize(1150);
+        }
+
+        private void btnCvGuide_Click(object sender, EventArgs e)
+        {
+            FCVGuide job = new FCVGuide();
+            job.MdiParent = this;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            resize(1150);
         }
     }
 }
