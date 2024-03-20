@@ -310,7 +310,7 @@ namespace JobHub
         }
 
         private void saveBtn_Click_1(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 if(sqlConnection.State != ConnectionState.Open)
@@ -336,7 +336,12 @@ namespace JobHub
             finally
             {
                 sqlConnection.Close();
-            }
+            }*/
+
+            JobDao jd = new JobDao();
+            Job A=new Job(txtNameJob.Text, 1, txtSalary.Text, txtPosition.Text, txtJobDes.Text, txtJobRequirement.Text, txtBenefit.Text, cbCategory.SelectedItem.ToString());
+            jd.Them(A);
+
         }
     }
 }

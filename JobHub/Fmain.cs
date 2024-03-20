@@ -136,5 +136,25 @@ namespace JobHub
             job.BringToFront();
             resize(1150);
         }
+
+        private void btnWriteCV_Click(object sender, EventArgs e)
+        {
+            FCV job = new FCV();
+            job.MdiParent = this;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            resize(1150);
+        }
+
+        private void btnCvGuide_Click(object sender, EventArgs e)
+        {
+            FCVGuide job = new FCVGuide();
+            job.MdiParent = this;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            resize(1150);
+        }
     }
 }

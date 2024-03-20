@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPostJob));
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.txtNameJob = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPosition = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,6 +40,7 @@
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2TextBox23 = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNameJob = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.dateEndedu = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.txtJobRequirement = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -67,8 +69,6 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLocation = new Guna.UI2.WinForms.Guna2TextBox();
             this.saveBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPosition = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNameJob = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -109,31 +109,53 @@
             this.guna2ShadowPanel3.TabIndex = 32;
             this.guna2ShadowPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel3_Paint);
             // 
-            // cbCategory
+            // txtNameJob
             // 
-            this.cbCategory.BackColor = System.Drawing.SystemColors.Control;
-            this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Items.AddRange(new object[] {
-            "Công nghệ",
-            "Kinh tế",
-            "Kỹ thuật",
-            "Sản xuất và chế biến",
-            "Kiến trúc và xây dựng",
-            "Kinh Doanh",
-            "Công nghệ thông tin",
-            "Luật - nhân văn",
-            "Nghệ thuật - thẩm mỹ - đồ họa",
-            "Báo chí - khoa học xã hội",
-            "Khoa học cơ bản",
-            "Sư phạm",
-            "Ngôn ngữ",
-            "Nông - lâm - ngư nghiệp"});
-            this.cbCategory.Location = new System.Drawing.Point(119, 68);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(156, 31);
-            this.cbCategory.TabIndex = 34;
-            this.cbCategory.Text = "Chuyên ngành";
+            this.txtNameJob.BorderThickness = 0;
+            this.txtNameJob.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameJob.DefaultText = "";
+            this.txtNameJob.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameJob.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameJob.FillColor = System.Drawing.SystemColors.Control;
+            this.txtNameJob.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameJob.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.txtNameJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameJob.Location = new System.Drawing.Point(108, 57);
+            this.txtNameJob.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNameJob.Name = "txtNameJob";
+            this.txtNameJob.PasswordChar = '\0';
+            this.txtNameJob.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.txtNameJob.PlaceholderText = "Tên công việc";
+            this.txtNameJob.SelectedText = "";
+            this.txtNameJob.Size = new System.Drawing.Size(239, 35);
+            this.txtNameJob.TabIndex = 37;
+            // 
+            // txtPosition
+            // 
+            this.txtPosition.BorderThickness = 0;
+            this.txtPosition.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPosition.DefaultText = "";
+            this.txtPosition.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPosition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPosition.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPosition.FillColor = System.Drawing.SystemColors.Control;
+            this.txtPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.txtPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPosition.Location = new System.Drawing.Point(108, 89);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.PasswordChar = '\0';
+            this.txtPosition.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
+            this.txtPosition.PlaceholderText = "Nơi làm việc.";
+            this.txtPosition.SelectedText = "";
+            this.txtPosition.Size = new System.Drawing.Size(239, 35);
+            this.txtPosition.TabIndex = 36;
             // 
             // guna2CirclePictureBox4
             // 
@@ -290,6 +312,32 @@
             this.lblNameJob.Size = new System.Drawing.Size(265, 40);
             this.lblNameJob.TabIndex = 0;
             this.lblNameJob.TextChanged += new System.EventHandler(this.txtWorkExperience_TextChanged);
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Items.AddRange(new object[] {
+            "Công nghệ",
+            "Kinh tế",
+            "Kỹ thuật",
+            "Sản xuất và chế biến",
+            "Kiến trúc và xây dựng",
+            "Kinh Doanh",
+            "Công nghệ thông tin",
+            "Luật - nhân văn",
+            "Nghệ thuật - thẩm mỹ - đồ họa",
+            "Báo chí - khoa học xã hội",
+            "Khoa học cơ bản",
+            "Sư phạm",
+            "Ngôn ngữ",
+            "Nông - lâm - ngư nghiệp"});
+            this.cbCategory.Location = new System.Drawing.Point(119, 68);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(156, 31);
+            this.cbCategory.TabIndex = 34;
+            this.cbCategory.Text = "Chuyên ngành";
             // 
             // dateEndedu
             // 
@@ -843,54 +891,6 @@
             this.saveBtn.TabIndex = 34;
             this.saveBtn.Text = "Đăng công việc";
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click_1);
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.BorderThickness = 0;
-            this.txtPosition.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPosition.DefaultText = "";
-            this.txtPosition.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPosition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPosition.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPosition.FillColor = System.Drawing.SystemColors.Control;
-            this.txtPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPosition.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.txtPosition.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPosition.Location = new System.Drawing.Point(108, 89);
-            this.txtPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.PasswordChar = '\0';
-            this.txtPosition.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.txtPosition.PlaceholderText = "Nơi làm việc.";
-            this.txtPosition.SelectedText = "";
-            this.txtPosition.Size = new System.Drawing.Size(239, 35);
-            this.txtPosition.TabIndex = 36;
-            // 
-            // txtNameJob
-            // 
-            this.txtNameJob.BorderThickness = 0;
-            this.txtNameJob.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameJob.DefaultText = "";
-            this.txtNameJob.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameJob.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameJob.FillColor = System.Drawing.SystemColors.Control;
-            this.txtNameJob.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameJob.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameJob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.txtNameJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameJob.Location = new System.Drawing.Point(108, 57);
-            this.txtNameJob.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNameJob.Name = "txtNameJob";
-            this.txtNameJob.PasswordChar = '\0';
-            this.txtNameJob.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(186)))), ((int)(((byte)(93)))));
-            this.txtNameJob.PlaceholderText = "Tên công việc";
-            this.txtNameJob.SelectedText = "";
-            this.txtNameJob.Size = new System.Drawing.Size(239, 35);
-            this.txtNameJob.TabIndex = 37;
             // 
             // FPostJob
             // 
