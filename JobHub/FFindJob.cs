@@ -8,14 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace JobHub
 {
     public partial class FJob : Form
     {
         SqlConnection sqlConnection = new SqlConnection(DBConection.str);
+        private Fmain fm;
         public FJob()
         {
+            InitializeComponent();
+
+        }
+        public FJob(Fmain fm)
+        {
+            this.fm = fm;
             InitializeComponent();
 
         }
@@ -34,7 +42,7 @@ namespace JobHub
                     sqlConnection.Open();
                 }
 
-                string query = @"SELECT Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                string query = @"SELECT Job.idJob,Job.nameJob, Job.salary, Job.position, Company.nameCompany, Company.idCompany
                          FROM Job
                          INNER JOIN Company ON Job.idCompany = Company.idCompany";
 
@@ -48,8 +56,13 @@ namespace JobHub
                     job.lblNameCompany.Text = dr["nameCompany"].ToString();
                     job.lblSalary.Text = dr["salary"].ToString();
                     job.lblPositon.Text = dr["position"].ToString();
-                    
+                    int idJob = int.Parse(dr["idJob"].ToString());
+                    int idCp = int.Parse(dr["idCompany"].ToString());
                     pnJob.Controls.Add(job);
+                    job.loadJobClick += (sender, e) =>
+                    {
+                        UCJob_Click(sender, e, idJob, idCp, fm);
+                    };
                 }
             }
             catch (Exception ex)
@@ -58,7 +71,20 @@ namespace JobHub
             }
 
         }
-
+        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
+        {
+            FJobDetails job = new FJobDetails(idJob, idCp, fm);
+            job.MdiParent = fm;
+            job.Dock = DockStyle.Fill;
+            this.Close();
+            job.Show();   
+            job.BringToFront();
+            fm.resize(job.Width,job.Height);
+        }
+        private void UCJob_Click(object sender, EventArgs e, int idJob,int idCp, Fmain fm)
+        {
+            FJobDetails_Load(idJob, idCp,fm);
+        }
         private void FJob_Load(object sender, EventArgs e)
         {
             this.MinimumSize = new System.Drawing.Size(925, 550);
@@ -68,12 +94,6 @@ namespace JobHub
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void loadDetailJob(object sender, EventArgs e)
-        {
-            FJobDetails jobDetails = new FJobDetails();
-            jobDetails.ShowDialog();
         }
 
     }

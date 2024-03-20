@@ -46,12 +46,12 @@
             this.btnApply = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblCompanyAddress = new System.Windows.Forms.Label();
+            this.lblNumofE = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.lblCompany = new System.Windows.Forms.LinkLabel();
+            this.lblCompanyName = new System.Windows.Forms.LinkLabel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -60,21 +60,14 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.pnJobDescription = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.lblDescInfo = new System.Windows.Forms.Label();
+            this.pnRequirement = new System.Windows.Forms.Panel();
+            this.lblRe = new System.Windows.Forms.Label();
+            this.lblReInfo = new System.Windows.Forms.Label();
+            this.pnBenefit = new System.Windows.Forms.Panel();
+            this.lblBe = new System.Windows.Forms.Label();
+            this.lblBeInfo = new System.Windows.Forms.Label();
             this.pnJobInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -86,8 +79,8 @@
             this.guna2Panel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnJobDescription.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnRequirement.SuspendLayout();
+            this.pnBenefit.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnJobInfor
@@ -111,7 +104,7 @@
             this.pnJobInfor.Controls.Add(this.guna2HtmlLabel8);
             this.pnJobInfor.Controls.Add(this.btnApply);
             this.pnJobInfor.Controls.Add(this.guna2PictureBox1);
-            this.pnJobInfor.Location = new System.Drawing.Point(30, 14);
+            this.pnJobInfor.Location = new System.Drawing.Point(30, 7);
             this.pnJobInfor.Margin = new System.Windows.Forms.Padding(5);
             this.pnJobInfor.Name = "pnJobInfor";
             this.pnJobInfor.Size = new System.Drawing.Size(578, 213);
@@ -301,39 +294,39 @@
             this.guna2Panel3.BorderColor = System.Drawing.SystemColors.ControlDark;
             this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.label20);
-            this.guna2Panel3.Controls.Add(this.label22);
+            this.guna2Panel3.Controls.Add(this.lblCompanyAddress);
+            this.guna2Panel3.Controls.Add(this.lblNumofE);
             this.guna2Panel3.Controls.Add(this.label11);
             this.guna2Panel3.Controls.Add(this.label13);
             this.guna2Panel3.Controls.Add(this.label19);
-            this.guna2Panel3.Controls.Add(this.lblCompany);
+            this.guna2Panel3.Controls.Add(this.lblCompanyName);
             this.guna2Panel3.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel3.Controls.Add(this.guna2PictureBox7);
             this.guna2Panel3.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel3.Location = new System.Drawing.Point(633, 14);
+            this.guna2Panel3.Location = new System.Drawing.Point(633, 7);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(20, 5, 10, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(244, 186);
+            this.guna2Panel3.Size = new System.Drawing.Size(244, 213);
             this.guna2Panel3.TabIndex = 8;
             // 
-            // label20
+            // lblCompanyAddress
             // 
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label20.Location = new System.Drawing.Point(113, 134);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(128, 44);
-            this.label20.TabIndex = 25;
-            this.label20.Text = "xx,Bình Đường, Thủ Đức";
+            this.lblCompanyAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblCompanyAddress.Location = new System.Drawing.Point(113, 134);
+            this.lblCompanyAddress.Name = "lblCompanyAddress";
+            this.lblCompanyAddress.Size = new System.Drawing.Size(124, 71);
+            this.lblCompanyAddress.TabIndex = 25;
+            this.lblCompanyAddress.Text = "xx,Bình Đường, Thủ Đức";
             // 
-            // label22
+            // lblNumofE
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label22.Location = new System.Drawing.Point(103, 88);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(39, 20);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "5-10";
+            this.lblNumofE.AutoSize = true;
+            this.lblNumofE.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblNumofE.Location = new System.Drawing.Point(103, 88);
+            this.lblNumofE.Name = "lblNumofE";
+            this.lblNumofE.Size = new System.Drawing.Size(39, 20);
+            this.lblNumofE.TabIndex = 27;
+            this.lblNumofE.Text = "5-10";
             // 
             // label11
             // 
@@ -364,17 +357,17 @@
             this.label19.TabIndex = 26;
             this.label19.Text = "Quy mô:";
             // 
-            // lblCompany
+            // lblCompanyName
             // 
-            this.lblCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.LinkColor = System.Drawing.Color.Black;
-            this.lblCompany.Location = new System.Drawing.Point(69, 17);
-            this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(172, 57);
-            this.lblCompany.TabIndex = 6;
-            this.lblCompany.TabStop = true;
-            this.lblCompany.Text = "Công Ty TNHH1TV Thành Đạt";
-            this.lblCompany.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCompany_LinkClicked);
+            this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyName.LinkColor = System.Drawing.Color.Black;
+            this.lblCompanyName.Location = new System.Drawing.Point(69, 17);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(172, 57);
+            this.lblCompanyName.TabIndex = 6;
+            this.lblCompanyName.TabStop = true;
+            this.lblCompanyName.Text = "Công Ty TNHH1TV Thành Đạt";
+            this.lblCompanyName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCompany_LinkClicked);
             // 
             // guna2PictureBox5
             // 
@@ -418,9 +411,9 @@
             this.guna2Panel4.BorderRadius = 15;
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel4.Location = new System.Drawing.Point(28, 235);
+            this.guna2Panel4.Location = new System.Drawing.Point(28, 228);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(840, 374);
+            this.guna2Panel4.Size = new System.Drawing.Size(840, 371);
             this.guna2Panel4.TabIndex = 9;
             // 
             // flowLayoutPanel1
@@ -429,11 +422,11 @@
             this.flowLayoutPanel1.Controls.Add(this.guna2TextBox1);
             this.flowLayoutPanel1.Controls.Add(this.label23);
             this.flowLayoutPanel1.Controls.Add(this.pnJobDescription);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
+            this.flowLayoutPanel1.Controls.Add(this.pnRequirement);
+            this.flowLayoutPanel1.Controls.Add(this.pnBenefit);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 8);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 361);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 346);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // guna2TextBox1
@@ -474,167 +467,97 @@
             // 
             // pnJobDescription
             // 
-            this.pnJobDescription.Controls.Add(this.label24);
-            this.pnJobDescription.Controls.Add(this.label3);
-            this.pnJobDescription.Controls.Add(this.label2);
-            this.pnJobDescription.Controls.Add(this.label1);
+            this.pnJobDescription.Controls.Add(this.lblDesc);
+            this.pnJobDescription.Controls.Add(this.lblDescInfo);
             this.pnJobDescription.Location = new System.Drawing.Point(2, 40);
             this.pnJobDescription.Margin = new System.Windows.Forms.Padding(2);
             this.pnJobDescription.Name = "pnJobDescription";
             this.pnJobDescription.Size = new System.Drawing.Size(781, 117);
             this.pnJobDescription.TabIndex = 29;
             // 
-            // label24
+            // lblDesc
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(10, 7);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(134, 23);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "Mô tả công việc";
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.lblDesc.Location = new System.Drawing.Point(10, 7);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(134, 23);
+            this.lblDesc.TabIndex = 26;
+            this.lblDesc.Text = "Mô tả công việc";
             // 
-            // label3
+            // lblDescInfo
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(697, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "+ Thực hiện các công việc theo chỉ đạo trực tiếp từ trưởng bộ phận";
+            this.lblDescInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblDescInfo.Location = new System.Drawing.Point(5, 34);
+            this.lblDescInfo.Name = "lblDescInfo";
+            this.lblDescInfo.Size = new System.Drawing.Size(697, 23);
+            this.lblDescInfo.TabIndex = 3;
+            this.lblDescInfo.Text = "+ Tiếp nhận và xử lý dữ liệu trên các sản thương mại điện tử.";
             // 
-            // label2
+            // pnRequirement
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(697, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "+ Soạn thảo thư và các tài liệu liên quan bằng tiếng Anh";
+            this.pnRequirement.Controls.Add(this.lblRe);
+            this.pnRequirement.Controls.Add(this.lblReInfo);
+            this.pnRequirement.Location = new System.Drawing.Point(0, 159);
+            this.pnRequirement.Margin = new System.Windows.Forms.Padding(0);
+            this.pnRequirement.Name = "pnRequirement";
+            this.pnRequirement.Size = new System.Drawing.Size(783, 110);
+            this.pnRequirement.TabIndex = 30;
             // 
-            // label1
+            // lblRe
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(697, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "+ Tiếp nhận và xử lý dữ liệu trên các sản thương mại điện tử.";
+            this.lblRe.AutoSize = true;
+            this.lblRe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.lblRe.Location = new System.Drawing.Point(10, 0);
+            this.lblRe.Name = "lblRe";
+            this.lblRe.Size = new System.Drawing.Size(142, 23);
+            this.lblRe.TabIndex = 27;
+            this.lblRe.Text = "Yêu cầu ứng viên";
             // 
-            // panel2
+            // lblReInfo
             // 
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(0, 159);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(783, 110);
-            this.panel2.TabIndex = 30;
+            this.lblReInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblReInfo.Location = new System.Drawing.Point(5, 27);
+            this.lblReInfo.Name = "lblReInfo";
+            this.lblReInfo.Size = new System.Drawing.Size(697, 23);
+            this.lblReInfo.TabIndex = 6;
+            this.lblReInfo.Text = "+ Tốt nghiệp đại học trở lên";
             // 
-            // label25
+            // pnBenefit
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(10, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(142, 23);
-            this.label25.TabIndex = 27;
-            this.label25.Text = "Yêu cầu ứng viên";
+            this.pnBenefit.Controls.Add(this.lblBe);
+            this.pnBenefit.Controls.Add(this.lblBeInfo);
+            this.pnBenefit.Location = new System.Drawing.Point(0, 269);
+            this.pnBenefit.Margin = new System.Windows.Forms.Padding(0);
+            this.pnBenefit.Name = "pnBenefit";
+            this.pnBenefit.Size = new System.Drawing.Size(783, 140);
+            this.pnBenefit.TabIndex = 31;
             // 
-            // label6
+            // lblBe
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(697, 23);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "+ Chăm chỉ, cẩn thận, trung thực, thật thà";
+            this.lblBe.AutoSize = true;
+            this.lblBe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.lblBe.Location = new System.Drawing.Point(10, 0);
+            this.lblBe.Name = "lblBe";
+            this.lblBe.Size = new System.Drawing.Size(84, 23);
+            this.lblBe.TabIndex = 28;
+            this.lblBe.Text = "Quyền lợi";
             // 
-            // label5
+            // lblBeInfo
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(697, 23);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "+ Thành thạo các ứng dụng văn phòng Excel, Word";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(697, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "+ Tốt nghiệp đại học trở lên";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label26);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(0, 269);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(783, 135);
-            this.panel3.TabIndex = 31;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label26.Location = new System.Drawing.Point(10, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(84, 23);
-            this.label26.TabIndex = 28;
-            this.label26.Text = "Quyền lợi";
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(620, 21);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "+ Được trợ cấp xăng xe";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(5, 77);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(697, 23);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "+ Được tham gia du lịch 1 năm ít nhất 1 lần;";
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 52);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(697, 23);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "+ Được đào tạo bài bản, cung cấp máy tính trang thiết bị phục vụ làm việc";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(5, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(697, 23);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "+ Lộ trình thăng tiến rõ ràng, xét tăng lương định kỳ 6 tháng";
+            this.lblBeInfo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblBeInfo.Location = new System.Drawing.Point(5, 27);
+            this.lblBeInfo.Name = "lblBeInfo";
+            this.lblBeInfo.Size = new System.Drawing.Size(697, 23);
+            this.lblBeInfo.TabIndex = 9;
+            this.lblBeInfo.Text = "+ Lộ trình thăng tiến rõ ràng, xét tăng lương định kỳ 6 tháng";
             // 
             // FJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(892, 634);
+            this.ClientSize = new System.Drawing.Size(892, 611);
             this.Controls.Add(this.pnJobInfor);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel4);
@@ -658,10 +581,10 @@
             this.flowLayoutPanel1.PerformLayout();
             this.pnJobDescription.ResumeLayout(false);
             this.pnJobDescription.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnRequirement.ResumeLayout(false);
+            this.pnRequirement.PerformLayout();
+            this.pnBenefit.ResumeLayout(false);
+            this.pnBenefit.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -678,7 +601,7 @@
         private Guna.UI2.WinForms.Guna2Button btnApply;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.LinkLabel lblCompany;
+        private System.Windows.Forms.LinkLabel lblCompanyName;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
@@ -690,29 +613,22 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblCompanyAddress;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblNumofE;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnBenefit;
+        private System.Windows.Forms.Label lblBeInfo;
+        private System.Windows.Forms.Panel pnRequirement;
+        private System.Windows.Forms.Label lblReInfo;
         private System.Windows.Forms.Panel pnJobDescription;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDescInfo;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Label lblRe;
+        private System.Windows.Forms.Label lblBe;
         public Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }
