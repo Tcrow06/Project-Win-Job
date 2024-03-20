@@ -12,6 +12,7 @@ namespace JobHub
 {
     public partial class FCompanyDetails : Form
     {
+        private int count = 0;
         public FCompanyDetails()
         {
             InitializeComponent();
@@ -19,15 +20,20 @@ namespace JobHub
 
         private void FCompanyDetails_Load(object sender, EventArgs e)
         {
-            this.Width = 745;
-            guna2PictureBox1.Size   = new Size(700,150);
-            guna2CirclePictureBox1.Size = new Size(80, 80);
-            guna2HtmlLabel5.Size = new Size(400, 50);
-            guna2HtmlLabel4.Size = new Size(400, 20);
-            guna2HtmlLabel17.Size = new Size(200, 60);
 
         }
 
-
+        private void btnFollowCompany_Click(object sender, EventArgs e)
+        {
+            count++;
+            if (count % 2 == 0)
+            {
+                btnFollowCompany.Image = Properties.Resources.plus;
+            }
+            else
+            {
+                btnFollowCompany.Image = Properties.Resources.checkmark;
+            }
+        }
     }
 }
