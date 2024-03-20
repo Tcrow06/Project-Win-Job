@@ -46,18 +46,17 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnContain = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSubContain = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_NewJob5 = new JobHub.uC_NewJob();
-            this.uC_NewJob4 = new JobHub.uC_NewJob();
             this.flpnContain = new System.Windows.Forms.FlowLayoutPanel();
-            this.uC_NewJob1 = new JobHub.uC_NewJob();
-            this.uC_NewJob2 = new JobHub.uC_NewJob();
-            this.uC_NewJob3 = new JobHub.uC_NewJob();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSeeAll = new System.Windows.Forms.Label();
             this.lblNewJob = new System.Windows.Forms.Label();
             this.pnHotFob = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_SlideJob1 = new JobHub.uC_SlideJob();
             this.cboIndustryGroup = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.uC_NewJob5 = new JobHub.uC_NewJob();
+            this.uC_NewJob1 = new JobHub.uC_NewJob();
+            this.uC_NewJob2 = new JobHub.uC_NewJob();
+            this.uC_NewJob3 = new JobHub.uC_NewJob();
+            this.uC_SlideJob1 = new JobHub.uC_SlideJob();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnContain.SuspendLayout();
             this.pnSubContain.SuspendLayout();
@@ -72,7 +71,7 @@
             this.pnJob.Location = new System.Drawing.Point(5, 293);
             this.pnJob.Margin = new System.Windows.Forms.Padding(2);
             this.pnJob.Name = "pnJob";
-            this.pnJob.Size = new System.Drawing.Size(1038, 488);
+            this.pnJob.Size = new System.Drawing.Size(1038, 492);
             this.pnJob.TabIndex = 39;
             // 
             // cboCity
@@ -399,10 +398,10 @@
             this.pnContain.Controls.Add(this.pnSubContain);
             this.pnContain.Controls.Add(this.pnHotFob);
             this.pnContain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnContain.Location = new System.Drawing.Point(1062, 0);
+            this.pnContain.Location = new System.Drawing.Point(1059, 0);
             this.pnContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnContain.Name = "pnContain";
-            this.pnContain.Size = new System.Drawing.Size(358, 787);
+            this.pnContain.Size = new System.Drawing.Size(387, 787);
             this.pnContain.TabIndex = 42;
             // 
             // pnSubContain
@@ -412,70 +411,24 @@
             this.pnSubContain.BorderRadius = 10;
             this.pnSubContain.BorderThickness = 2;
             this.pnSubContain.Controls.Add(this.uC_NewJob5);
-            this.pnSubContain.Controls.Add(this.uC_NewJob4);
             this.pnSubContain.Controls.Add(this.flpnContain);
             this.pnSubContain.Controls.Add(this.guna2Panel2);
-            this.pnSubContain.Location = new System.Drawing.Point(-14, 433);
+            this.pnSubContain.Location = new System.Drawing.Point(4, 433);
             this.pnSubContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnSubContain.Name = "pnSubContain";
             this.pnSubContain.Size = new System.Drawing.Size(367, 348);
             this.pnSubContain.TabIndex = 1;
-            // 
-            // uC_NewJob5
-            // 
-            this.uC_NewJob5.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob5.Location = new System.Drawing.Point(12, 350);
-            this.uC_NewJob5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 23);
-            this.uC_NewJob5.Name = "uC_NewJob5";
-            this.uC_NewJob5.Size = new System.Drawing.Size(325, 78);
-            this.uC_NewJob5.TabIndex = 8;
-            // 
-            // uC_NewJob4
-            // 
-            this.uC_NewJob4.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob4.Location = new System.Drawing.Point(14, 162);
-            this.uC_NewJob4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 23);
-            this.uC_NewJob4.Name = "uC_NewJob4";
-            this.uC_NewJob4.Size = new System.Drawing.Size(325, 78);
-            this.uC_NewJob4.TabIndex = 7;
             // 
             // flpnContain
             // 
             this.flpnContain.Controls.Add(this.uC_NewJob1);
             this.flpnContain.Controls.Add(this.uC_NewJob2);
             this.flpnContain.Controls.Add(this.uC_NewJob3);
-            this.flpnContain.Location = new System.Drawing.Point(6, 54);
+            this.flpnContain.Location = new System.Drawing.Point(7, 55);
             this.flpnContain.Margin = new System.Windows.Forms.Padding(2);
             this.flpnContain.Name = "flpnContain";
-            this.flpnContain.Size = new System.Drawing.Size(331, 274);
+            this.flpnContain.Size = new System.Drawing.Size(323, 274);
             this.flpnContain.TabIndex = 6;
-            // 
-            // uC_NewJob1
-            // 
-            this.uC_NewJob1.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob1.Location = new System.Drawing.Point(2, 2);
-            this.uC_NewJob1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
-            this.uC_NewJob1.Name = "uC_NewJob1";
-            this.uC_NewJob1.Size = new System.Drawing.Size(325, 74);
-            this.uC_NewJob1.TabIndex = 0;
-            // 
-            // uC_NewJob2
-            // 
-            this.uC_NewJob2.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob2.Location = new System.Drawing.Point(2, 100);
-            this.uC_NewJob2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
-            this.uC_NewJob2.Name = "uC_NewJob2";
-            this.uC_NewJob2.Size = new System.Drawing.Size(325, 74);
-            this.uC_NewJob2.TabIndex = 1;
-            // 
-            // uC_NewJob3
-            // 
-            this.uC_NewJob3.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob3.Location = new System.Drawing.Point(2, 198);
-            this.uC_NewJob3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
-            this.uC_NewJob3.Name = "uC_NewJob3";
-            this.uC_NewJob3.Size = new System.Drawing.Size(325, 74);
-            this.uC_NewJob3.TabIndex = 2;
             // 
             // guna2Panel2
             // 
@@ -517,19 +470,9 @@
             this.pnHotFob.Location = new System.Drawing.Point(0, 0);
             this.pnHotFob.Margin = new System.Windows.Forms.Padding(2);
             this.pnHotFob.Name = "pnHotFob";
-            this.pnHotFob.Size = new System.Drawing.Size(358, 427);
+            this.pnHotFob.Size = new System.Drawing.Size(387, 427);
             this.pnHotFob.TabIndex = 0;
             // 
-            // uC_SlideJob1
-            // 
-            this.uC_SlideJob1.BackColor = System.Drawing.Color.White;
-            this.uC_SlideJob1.Location = new System.Drawing.Point(2, 2);
-            this.uC_SlideJob1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_SlideJob1.Name = "uC_SlideJob1";
-            this.uC_SlideJob1.Size = new System.Drawing.Size(350, 412);
-            this.uC_SlideJob1.TabIndex = 0;
-            // 
-<<<<<<< HEAD
             // cboIndustryGroup
             // 
             this.cboIndustryGroup.BackColor = System.Drawing.Color.Transparent;
@@ -562,23 +505,58 @@
             this.cboIndustryGroup.StartIndex = 0;
             this.cboIndustryGroup.TabIndex = 43;
             this.cboIndustryGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-=======
-            // uC_Job6
             // 
-            this.uC_Job6.BackColor = System.Drawing.Color.White;
-            this.uC_Job6.Location = new System.Drawing.Point(567, 111);
-            this.uC_Job6.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.uC_Job6.Name = "uC_Job6";
-            this.uC_Job6.Size = new System.Drawing.Size(231, 97);
-            this.uC_Job6.TabIndex = 5;
->>>>>>> 0ac7802686cffd9278cb176ebd3e0f7633d2b38f
+            // uC_NewJob5
+            // 
+            this.uC_NewJob5.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob5.Location = new System.Drawing.Point(12, 350);
+            this.uC_NewJob5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 23);
+            this.uC_NewJob5.Name = "uC_NewJob5";
+            this.uC_NewJob5.Size = new System.Drawing.Size(325, 78);
+            this.uC_NewJob5.TabIndex = 8;
+            // 
+            // uC_NewJob1
+            // 
+            this.uC_NewJob1.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob1.Location = new System.Drawing.Point(2, 2);
+            this.uC_NewJob1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
+            this.uC_NewJob1.Name = "uC_NewJob1";
+            this.uC_NewJob1.Size = new System.Drawing.Size(325, 74);
+            this.uC_NewJob1.TabIndex = 0;
+            // 
+            // uC_NewJob2
+            // 
+            this.uC_NewJob2.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob2.Location = new System.Drawing.Point(2, 100);
+            this.uC_NewJob2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
+            this.uC_NewJob2.Name = "uC_NewJob2";
+            this.uC_NewJob2.Size = new System.Drawing.Size(325, 74);
+            this.uC_NewJob2.TabIndex = 1;
+            // 
+            // uC_NewJob3
+            // 
+            this.uC_NewJob3.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob3.Location = new System.Drawing.Point(2, 198);
+            this.uC_NewJob3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 22);
+            this.uC_NewJob3.Name = "uC_NewJob3";
+            this.uC_NewJob3.Size = new System.Drawing.Size(325, 74);
+            this.uC_NewJob3.TabIndex = 2;
+            // 
+            // uC_SlideJob1
+            // 
+            this.uC_SlideJob1.BackColor = System.Drawing.Color.White;
+            this.uC_SlideJob1.Location = new System.Drawing.Point(5, 2);
+            this.uC_SlideJob1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_SlideJob1.Name = "uC_SlideJob1";
+            this.uC_SlideJob1.Size = new System.Drawing.Size(365, 412);
+            this.uC_SlideJob1.TabIndex = 0;
             // 
             // FJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1420, 787);
+            this.ClientSize = new System.Drawing.Size(1446, 787);
             this.Controls.Add(this.cboIndustryGroup);
             this.Controls.Add(this.pnContain);
             this.Controls.Add(this.guna2PictureBox1);
@@ -638,29 +616,8 @@
         private System.Windows.Forms.Label lblNewJob;
         private Guna.UI2.WinForms.Guna2Panel pnHotFob;
         private uC_SlideJob uC_SlideJob1;
-<<<<<<< HEAD
-        private uC_NewJob uC_NewJob4;
         private uC_NewJob uC_NewJob5;
         private Guna.UI2.WinForms.Guna2ComboBox cboIndustryGroup;
-=======
-        private uC_Job uC_Job1;
-        private uC_Job uC_Job2;
-        private uC_Job uC_Job3;
-        private uC_Job uC_Job4;
-        private uC_Job uC_Job5;
-        private uC_Job uC_Job7;
-        private uC_Job uC_Job8;
-        private uC_Job uC_Job9;
-        private uC_Job uC_Job10;
-        private uC_Job uC_Job11;
-        private uC_Job uC_Job12;
-        private uC_Job uC_Job13;
-        private uC_Job uC_Job14;
-        private uC_Job uC_Job15;
-        private uC_NewJob uC_NewJob4;
-        private uC_NewJob uC_NewJob5;
-        private uC_Job uC_Job6;
->>>>>>> 0ac7802686cffd9278cb176ebd3e0f7633d2b38f
     }
 }
 

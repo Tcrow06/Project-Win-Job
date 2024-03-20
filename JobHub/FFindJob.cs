@@ -48,6 +48,7 @@ namespace JobHub
                     job.lblNameCompany.Text = dr["nameCompany"].ToString();
                     job.lblSalary.Text = dr["salary"].ToString();
                     job.lblPositon.Text = dr["position"].ToString();
+                    
                     pnJob.Controls.Add(job);
                 }
             }

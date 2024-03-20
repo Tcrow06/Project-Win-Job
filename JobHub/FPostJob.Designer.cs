@@ -873,11 +873,7 @@
             this.txtLocation.PasswordChar = '\0';
             this.txtLocation.PlaceholderText = "Tên công ty";
             this.txtLocation.SelectedText = "";
-<<<<<<< HEAD
             this.txtLocation.Size = new System.Drawing.Size(564, 105);
-=======
-            this.txtLocation.Size = new System.Drawing.Size(440, 84);
->>>>>>> 0ac7802686cffd9278cb176ebd3e0f7633d2b38f
             this.txtLocation.TabIndex = 22;
             this.txtLocation.TextChanged += new System.EventHandler(this.txtLocation_TextChanged_1);
             // 
