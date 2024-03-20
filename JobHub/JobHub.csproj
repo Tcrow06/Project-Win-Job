@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConection.cs" />
     <Compile Include="FCompanyDetails.cs">
       <SubType>Form</SubType>
     </Compile>
