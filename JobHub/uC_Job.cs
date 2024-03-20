@@ -12,19 +12,27 @@ namespace JobHub
 {
     public partial class uC_Job : UserControl
     {
-        public event EventHandler addClick;
+        public event EventHandler loadJobClick;
         public uC_Job()
         {
             InitializeComponent();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void guna2Panel1_DoubleClick(object sender, EventArgs e)
         {
+
+            //loadJobClick?.Invoke(this, e);
+        }
+
+        private void ucJob_Click(object sender, EventArgs e)
+        {
+            loadJobClick?.Invoke(this, e);
+        }
+
+        private void ucJob_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

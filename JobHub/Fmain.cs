@@ -13,9 +13,10 @@ namespace JobHub
 {
     public partial class Fmain : Form
     {
-        
+        private Fmain fm;
         public Fmain()
         {
+            fm = this;
             InitializeComponent();
 
         }
@@ -24,16 +25,25 @@ namespace JobHub
         {
             this.Height = 550;
             FViews view = new FViews();
+            view = new FViews();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
-            resize(view.Width + 200);
+            resize(view.Width + 200, view.Height + 50);
+            view.Show();
+        }
+        public void Reset_Load(FJobDetails view)
+        {
+            this.Height = 550;
+            view.MdiParent = this;
+            view.Dock = DockStyle.Fill;
+            resize(view.Width + 200, view.Height + 50);
             view.Show();
         }
 
         private void ShowSubNav(Panel nav)
         {
             
-            resize(this.Width + 150);
+            resize(this.Width + 150, this.Height);
             pnNav.Visible = false;
             pnNav.Width = 175;
             guna2Transition1.ShowSync(pnNav);
@@ -44,7 +54,7 @@ namespace JobHub
             Hide(pnSubNav1);
             Hide(pnSubNav2);
             Hide(pnSubNav3);
-            resize(this.Width - 150);
+            resize(this.Width - 150, this.Height);
             
             pnNav.Visible = false;
             pnNav.Width = 45;
@@ -78,9 +88,10 @@ namespace JobHub
             guna2Transition1.ShowSync(contain);
         }
 
-        private void resize(int width)
+        public void resize(int width, int height)
         {
             this.Width = width;
+            this.Height = height;
         }
 
         private void checkHeight(Panel SubNav)
@@ -119,12 +130,13 @@ namespace JobHub
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FJob job = new FJob();
-            job.MdiParent = this;
+            FJob job = new FJob(fm);
+            job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            job.Location= new Point(0,0);
+            resize(job.Width + 200, job.Height + 50);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -134,7 +146,7 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            resize(job.Width + 200, job.Height + 50);
         }
 
         private void btnWriteCV_Click(object sender, EventArgs e)
@@ -144,7 +156,7 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            resize(job.Width + 200, job.Height + 50);
         }
 
         private void btnCvGuide_Click(object sender, EventArgs e)
@@ -154,7 +166,7 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(1150);
+            resize(job.Width + 200, job.Height + 50);
         }
     }
 }

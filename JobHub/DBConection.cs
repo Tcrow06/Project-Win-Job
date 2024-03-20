@@ -12,11 +12,9 @@ namespace JobHub
 {
     class DBConection
     {
-        public static string str = @"Data Source=(local);Initial Catalog=JobHub;Integrated Security=True";
-        ChangTheSize ChangTheSize = new ChangTheSize();
 
-        SqlConnection sqlConnection = new SqlConnection(str);
-
+        public static string str = @"Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobHub;Integrated Security=True;Encrypt=False";
+        SqlConnection sqlConnection = new SqlConnection(DBConection.str);
 
         public void ThucThi(string sqlStr)
         {

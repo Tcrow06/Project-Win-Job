@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_JobDetail));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
             this.lblNameCompany = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblNameJob = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.ptbSave = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblPositon = new System.Windows.Forms.Label();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblSalary
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(745, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "20-25 Triệu";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblSalary.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblSalary.Location = new System.Drawing.Point(745, 13);
+            this.lblSalary.Margin = new System.Windows.Forms.Padding(5);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(85, 20);
+            this.lblSalary.TabIndex = 8;
+            this.lblSalary.Text = "20-25 Triệu";
             // 
             // lblNameCompany
             // 
@@ -66,14 +66,14 @@
             this.lblNameCompany.TabIndex = 7;
             this.lblNameCompany.Text = "Công ty cổ phần FPT";
             // 
-            // lblPosition
+            // lblNameJob
             // 
-            this.lblPosition.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblPosition.Location = new System.Drawing.Point(117, 13);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(450, 35);
-            this.lblPosition.TabIndex = 6;
-            this.lblPosition.Text = "BackEnd Java";
+            this.lblNameJob.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNameJob.Location = new System.Drawing.Point(117, 13);
+            this.lblNameJob.Name = "lblNameJob";
+            this.lblNameJob.Size = new System.Drawing.Size(450, 35);
+            this.lblNameJob.TabIndex = 6;
+            this.lblNameJob.Text = "BackEnd Java";
             // 
             // guna2Button1
             // 
@@ -99,10 +99,10 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.ptbSave);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lblPositon);
+            this.guna2Panel1.Controls.Add(this.lblSalary);
             this.guna2Panel1.Controls.Add(this.lblNameCompany);
-            this.guna2Panel1.Controls.Add(this.lblPosition);
+            this.guna2Panel1.Controls.Add(this.lblNameJob);
             this.guna2Panel1.Controls.Add(this.picLogo);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -110,18 +110,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(854, 113);
             this.guna2Panel1.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(121, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Hồ Chí Minh";
             // 
             // ptbSave
             // 
@@ -134,6 +122,18 @@
             this.ptbSave.TabIndex = 14;
             this.ptbSave.TabStop = false;
             this.ptbSave.Click += new System.EventHandler(this.ptbSave_Click);
+            // 
+            // lblPositon
+            // 
+            this.lblPositon.AutoSize = true;
+            this.lblPositon.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblPositon.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPositon.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblPositon.Location = new System.Drawing.Point(121, 80);
+            this.lblPositon.Name = "lblPositon";
+            this.lblPositon.Size = new System.Drawing.Size(95, 20);
+            this.lblPositon.TabIndex = 9;
+            this.lblPositon.Text = "Hồ Chí Minh";
             // 
             // picLogo
             // 
@@ -165,13 +165,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Label lblNameCompany;
-        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblNameJob;
         private Guna.UI2.WinForms.Guna2PictureBox picLogo;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox ptbSave;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPositon;
     }
 }
