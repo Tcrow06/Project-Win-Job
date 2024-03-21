@@ -150,11 +150,11 @@
       <DependentUpon>uC_SlideJob.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="UserInfo.cs">
+    <Compile Include="FUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInfo.Designer.cs">
-      <DependentUpon>UserInfo.cs</DependentUpon>
+    <Compile Include="FUserInfo.Designer.cs">
+      <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FCompanyDetails.resx">
       <DependentUpon>FCompanyDetails.cs</DependentUpon>
@@ -212,8 +212,8 @@
     <EmbeddedResource Include="uC_SlideJob.resx">
       <DependentUpon>uC_SlideJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInfo.resx">
-      <DependentUpon>UserInfo.cs</DependentUpon>
+    <EmbeddedResource Include="FUserInfo.resx">
+      <DependentUpon>FUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
