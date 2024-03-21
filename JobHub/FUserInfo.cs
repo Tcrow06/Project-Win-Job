@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class UserInfo : Form
+    public partial class FUserInfo : Form
     {
-        public UserInfo()
+        public FUserInfo()
         {
             InitializeComponent();
         }

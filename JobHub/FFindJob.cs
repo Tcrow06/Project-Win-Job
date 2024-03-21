@@ -15,7 +15,7 @@ namespace JobHub
 {
     public partial class FJob : Form
     {
-        SqlConnection sqlConnection = new SqlConnection(DBConection.str);
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
 
         DBConection conection = new DBConection();
         private Fmain fm;
@@ -46,50 +46,15 @@ namespace JobHub
                 label.Width = width;
                 label.Height = height;
             }
-            /*private void loadJobInPanel()
-            {
-                try
-                {
-                    if (sqlConnection.State != ConnectionState.Open)
-                    {
-                        sqlConnection.Open();
-                    }
-
-                    string query = @"SELECT Job.idJob,Job.nameJob, Job.salary, Job.position, Company.nameCompany, Company.idCompany
-                         FROM Job
-                         INNER JOIN Company ON Job.idCompany = Company.idCompany";
-
-                    SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        uC_Job job = new uC_Job();
-                        job.lblNameJob.Text = dr["nameJob"].ToString();
-                        setSize(130, 25, job.lblNameJob);
-                        job.lblNameCompany.Text = dr["nameCompany"].ToString();
-                        job.lblSalary.Text = dr["salary"].ToString();
-                        job.lblPositon.Text = dr["position"].ToString();
-                        
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-                }
-                finally
-                {
-                    sqlConnection.Close();
-                }
-            }*/
             private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
             {
                 FJobDetails job = new FJobDetails(idJob, idCp, fm);
                 job.MdiParent = fm;
                 job.Dock = DockStyle.Fill;
-                this.Close();
+                fm.Close();
                 job.Show();
                 job.BringToFront();
-                fm.resize(job.Width, job.Height);
+                //fm.resize(job.Width, job.Height);
             }
             private void UCJob_Click(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
             {

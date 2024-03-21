@@ -16,7 +16,7 @@ namespace JobHub
 {
     public partial class FJobDetails : Form
     {
-        SqlConnection sqlConnection = new SqlConnection(DBConection.str);
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         private int count = 0;
         private int IdJob;
         private int IdCp;
@@ -176,6 +176,7 @@ namespace JobHub
         private void btnApply_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Ứng tuyển thành công ","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }

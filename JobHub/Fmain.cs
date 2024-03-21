@@ -25,7 +25,7 @@ namespace JobHub
         {
             this.Height = 550;
             FViews view = new FViews();
-            view = new FViews();
+            //FUserInfo view = new FUserInfo();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
             resize(view.Width + 200, view.Height + 50);

@@ -18,6 +18,7 @@ namespace JobHub
         private string avatar;
         private string address;
 
+        public User() { }
         public User(int id, string name, string phone, string email,
             string gender, string link, DateTime birth, string avatar, string address)
         {
