@@ -72,13 +72,13 @@ namespace JobHub
             }
         }
 
-        private void Show(Panel contain)
+        private void Show(Panel contain, int height)
         {
             if(pnNav.Width < 52)
             {
                 ShowSubNav(pnNav);
             }
-            contain.Height = 102;
+            contain.Height = height;
             guna2Transition1.ShowSync(contain);
         }
 
@@ -94,20 +94,24 @@ namespace JobHub
             this.Height = height;
         }
 
-        private void checkHeight(Panel SubNav)
+        private bool checkHeight(Panel SubNav, int height)
         {
-            if (SubNav.Height > 35)
+            if (SubNav.Height > height)
             {
-                Hide(SubNav);
+                return false;
             }
-            else
-            {
-                Show(SubNav);
-            }
+            return true;
         }
         private void btnCV_Click(object sender, EventArgs e)
         {
-            checkHeight(pnSubNav3);
+            if(checkHeight(pnSubNav3, 35))
+            {
+                Show(pnSubNav3, 132);
+            }
+            else
+            {
+                Hide(pnSubNav3);
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -120,12 +124,26 @@ namespace JobHub
 
         private void btnJob_Click(object sender, EventArgs e)
         {
-            checkHeight(pnSubNav1);
+            if(checkHeight(pnSubNav1, 35))
+            {
+                Show(pnSubNav1, 132);
+            }
+            else
+            {
+                Hide(pnSubNav1);
+            }
         }
 
         private void btnCompany_Click(object sender, EventArgs e)
         {
-            checkHeight(pnSubNav2);
+            if(checkHeight(pnSubNav2, 35))
+            {
+                Show(pnSubNav2, 102);
+            }
+            else
+            {
+                Hide(pnSubNav2);
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -151,12 +169,7 @@ namespace JobHub
 
         private void btnWriteCV_Click(object sender, EventArgs e)
         {
-            FCV job = new FCV();
-            job.MdiParent = this;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
-            resize(job.Width + 200, job.Height + 50);
+
         }
 
         private void btnCvGuide_Click(object sender, EventArgs e)
@@ -167,6 +180,50 @@ namespace JobHub
             job.Show();
             job.BringToFront();
             resize(job.Width + 200, job.Height + 50);
+        }
+
+        private void btnJobCompany_Click(object sender, EventArgs e)
+        {
+            if (checkHeight(pnSubNav11, 35))
+            {
+                Show(pnSubNav11, 102);
+            }
+            else
+            {
+                Hide(pnSubNav11);
+            }
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            if (checkHeight(pnSubNav12, 35))
+            {
+                Show(pnSubNav12, 102);
+            }
+            else
+            {
+                Hide(pnSubNav12);
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            if (checkHeight(pnSubNav13, 35))
+            {
+                Show(pnSubNav13, 102);
+            }
+            else
+            {
+                Hide(pnSubNav13);
+            }
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FCv cv = new FCv();
+            cv.ShowDialog();
+            this.Show();
         }
     }
 }

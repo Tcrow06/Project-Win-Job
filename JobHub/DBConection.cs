@@ -12,8 +12,6 @@ namespace JobHub
 {
     class DBConection
     {
-
-        //public static string str = @"Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobHub;Integrated Security=True;Encrypt=False";
         SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         ChangTheSize changTheSize = new ChangTheSize();
         public void ThucThi(string sqlStr)

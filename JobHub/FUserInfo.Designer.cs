@@ -28,242 +28,387 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FUserInfo));
             this.lblJobName = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.lblNavName = new System.Windows.Forms.Label();
+            this.lblSubPhoneNumber = new System.Windows.Forms.Label();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblSubLink = new System.Windows.Forms.Label();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.txtLink = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblSubAdd = new System.Windows.Forms.Label();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblSubEmail = new System.Windows.Forms.Label();
+            this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.rdoBoy = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.lblGirl = new System.Windows.Forms.Label();
+            this.rdoGirl = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.SuspendLayout();
             // 
             // lblJobName
             // 
+            this.guna2Transition1.SetDecoration(this.lblJobName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblJobName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobName.Location = new System.Drawing.Point(286, 9);
+            this.lblJobName.Location = new System.Drawing.Point(322, 11);
             this.lblJobName.Name = "lblJobName";
-            this.lblJobName.Size = new System.Drawing.Size(328, 32);
+            this.lblJobName.Size = new System.Drawing.Size(369, 40);
             this.lblJobName.TabIndex = 16;
             this.lblJobName.Text = "Cài đặt thông tin cá  nhân";
             // 
-            // label19
+            // txtName
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label19.Location = new System.Drawing.Point(20, 207);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 21);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "Họ và tên";
+            this.txtName.BorderRadius = 8;
+            this.txtName.BorderThickness = 0;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Location = new System.Drawing.Point(46, 190);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "Nhập họ tên";
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(286, 35);
+            this.txtName.TabIndex = 17;
+            this.txtName.Click += new System.EventHandler(this.txtName_Click);
+            this.txtName.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
             // 
-            // textBox1
+            // guna2Separator1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox1.Location = new System.Drawing.Point(24, 245);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 30);
-            this.textBox1.TabIndex = 28;
+            this.guna2Transition1.SetDecoration(this.guna2Separator1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator1.Location = new System.Drawing.Point(46, 221);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator1.TabIndex = 18;
             // 
-            // textBox3
+            // lblNavName
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox3.Location = new System.Drawing.Point(475, 238);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(334, 30);
-            this.textBox3.TabIndex = 32;
+            this.lblNavName.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblNavName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblNavName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavName.Location = new System.Drawing.Point(46, 162);
+            this.lblNavName.Name = "lblNavName";
+            this.lblNavName.Size = new System.Drawing.Size(70, 25);
+            this.lblNavName.TabIndex = 19;
+            this.lblNavName.Text = "Họ Tên";
+            this.lblNavName.Visible = false;
             // 
-            // label2
+            // lblSubPhoneNumber
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label2.Location = new System.Drawing.Point(471, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 21);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Email";
+            this.lblSubPhoneNumber.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblSubPhoneNumber, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblSubPhoneNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubPhoneNumber.Location = new System.Drawing.Point(46, 283);
+            this.lblSubPhoneNumber.Name = "lblSubPhoneNumber";
+            this.lblSubPhoneNumber.Size = new System.Drawing.Size(122, 25);
+            this.lblSubPhoneNumber.TabIndex = 22;
+            this.lblSubPhoneNumber.Text = "Số điện thoại";
+            this.lblSubPhoneNumber.Visible = false;
             // 
-            // textBox4
+            // guna2Separator2
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox4.Location = new System.Drawing.Point(475, 433);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(334, 30);
-            this.textBox4.TabIndex = 34;
+            this.guna2Transition1.SetDecoration(this.guna2Separator2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator2.Location = new System.Drawing.Point(46, 342);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator2.TabIndex = 21;
             // 
-            // label3
+            // txtPhoneNumber
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label3.Location = new System.Drawing.Point(471, 395);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 21);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Địa chỉ";
+            this.txtPhoneNumber.BorderRadius = 8;
+            this.txtPhoneNumber.BorderThickness = 0;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtPhoneNumber, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(46, 311);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PasswordChar = '\0';
+            this.txtPhoneNumber.PlaceholderText = "Nhập số điện thoại";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(286, 35);
+            this.txtPhoneNumber.TabIndex = 20;
+            this.txtPhoneNumber.Click += new System.EventHandler(this.txtPhoneNumber_Click);
+            this.txtPhoneNumber.MouseLeave += new System.EventHandler(this.txtPhoneNumber_MouseLeave);
             // 
-            // label4
+            // lblSubLink
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label4.Location = new System.Drawing.Point(20, 402);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 21);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Giới tính";
+            this.lblSubLink.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblSubLink, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblSubLink.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubLink.Location = new System.Drawing.Point(579, 162);
+            this.lblSubLink.Name = "lblSubLink";
+            this.lblSubLink.Size = new System.Drawing.Size(46, 25);
+            this.lblSubLink.TabIndex = 25;
+            this.lblSubLink.Text = "Link";
+            this.lblSubLink.Visible = false;
             // 
-            // textBox6
+            // guna2Separator3
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox6.Location = new System.Drawing.Point(475, 319);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(334, 30);
-            this.textBox6.TabIndex = 38;
+            this.guna2Transition1.SetDecoration(this.guna2Separator3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator3.Location = new System.Drawing.Point(579, 221);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator3.TabIndex = 24;
             // 
-            // label5
+            // txtLink
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label5.Location = new System.Drawing.Point(471, 281);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 21);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Link";
+            this.txtLink.BorderRadius = 8;
+            this.txtLink.BorderThickness = 0;
+            this.txtLink.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtLink, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtLink.DefaultText = "";
+            this.txtLink.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLink.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLink.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLink.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLink.Location = new System.Drawing.Point(579, 190);
+            this.txtLink.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.PasswordChar = '\0';
+            this.txtLink.PlaceholderText = "Link ";
+            this.txtLink.SelectedText = "";
+            this.txtLink.Size = new System.Drawing.Size(286, 35);
+            this.txtLink.TabIndex = 23;
+            this.txtLink.Click += new System.EventHandler(this.lblLink_Click);
+            this.txtLink.MouseLeave += new System.EventHandler(this.txtLink_MouseLeave);
             // 
-            // textBox7
+            // lblSubAdd
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox7.Location = new System.Drawing.Point(23, 340);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(334, 30);
-            this.textBox7.TabIndex = 40;
+            this.lblSubAdd.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblSubAdd, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblSubAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubAdd.Location = new System.Drawing.Point(579, 283);
+            this.lblSubAdd.Name = "lblSubAdd";
+            this.lblSubAdd.Size = new System.Drawing.Size(67, 25);
+            this.lblSubAdd.TabIndex = 28;
+            this.lblSubAdd.Text = "Địa chỉ";
+            this.lblSubAdd.Visible = false;
             // 
-            // label6
+            // guna2Separator4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label6.Location = new System.Drawing.Point(19, 302);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 21);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Ngày sinh";
+            this.guna2Transition1.SetDecoration(this.guna2Separator4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator4.Location = new System.Drawing.Point(579, 342);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator4.TabIndex = 27;
             // 
-            // radioButton1
+            // txtAddress
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radioButton1.Location = new System.Drawing.Point(121, 441);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 27);
-            this.radioButton1.TabIndex = 41;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nữ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtAddress.BorderRadius = 8;
+            this.txtAddress.BorderThickness = 0;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtAddress, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Location = new System.Drawing.Point(579, 311);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "Nhập địa chỉ";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(286, 35);
+            this.txtAddress.TabIndex = 26;
+            this.txtAddress.Click += new System.EventHandler(this.txtAddress_Click);
+            this.txtAddress.MouseLeave += new System.EventHandler(this.txtAddress_MouseLeave);
             // 
-            // radioButton2
+            // lblSubEmail
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(24, 441);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 27);
-            this.radioButton2.TabIndex = 42;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nam";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.lblSubEmail.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblSubEmail, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblSubEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubEmail.Location = new System.Drawing.Point(41, 406);
+            this.lblSubEmail.Name = "lblSubEmail";
+            this.lblSubEmail.Size = new System.Drawing.Size(56, 25);
+            this.lblSubEmail.TabIndex = 31;
+            this.lblSubEmail.Text = "Email";
+            this.lblSubEmail.Visible = false;
             // 
-            // radioButton3
+            // guna2Separator5
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radioButton3.Location = new System.Drawing.Point(221, 441);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(68, 27);
-            this.radioButton3.TabIndex = 43;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Khác";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.guna2Transition1.SetDecoration(this.guna2Separator5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator5.Location = new System.Drawing.Point(41, 465);
+            this.guna2Separator5.Name = "guna2Separator5";
+            this.guna2Separator5.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator5.TabIndex = 30;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox2.Location = new System.Drawing.Point(475, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 30);
-            this.textBox2.TabIndex = 45;
+            this.txtEmail.BorderRadius = 8;
+            this.txtEmail.BorderThickness = 0;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtEmail, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(41, 434);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "Nhập email";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(286, 35);
+            this.txtEmail.TabIndex = 29;
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtEmail.MouseLeave += new System.EventHandler(this.txtEmail_MouseLeave);
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblSex, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblSex.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(574, 420);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(84, 25);
+            this.lblSex.TabIndex = 34;
+            this.lblSex.Text = "Giới tính";
+            // 
+            // rdoBoy
+            // 
+            this.rdoBoy.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoBoy.CheckedState.BorderThickness = 0;
+            this.rdoBoy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoBoy.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2Transition1.SetDecoration(this.rdoBoy, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.rdoBoy.Location = new System.Drawing.Point(584, 463);
+            this.rdoBoy.Name = "rdoBoy";
+            this.rdoBoy.Size = new System.Drawing.Size(20, 20);
+            this.rdoBoy.TabIndex = 35;
+            this.rdoBoy.Text = "Nam";
+            this.rdoBoy.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoBoy.UncheckedState.BorderThickness = 2;
+            this.rdoBoy.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoBoy.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label1.Location = new System.Drawing.Point(471, 101);
+            this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(615, 460);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 21);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Số điện thoại";
+            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Nam";
             // 
-            // guna2PictureBox1
+            // lblGirl
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(67, 48);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(138, 146);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 46;
-            this.guna2PictureBox1.TabStop = false;
+            this.lblGirl.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblGirl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblGirl.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGirl.Location = new System.Drawing.Point(828, 460);
+            this.lblGirl.Name = "lblGirl";
+            this.lblGirl.Size = new System.Drawing.Size(37, 25);
+            this.lblGirl.TabIndex = 38;
+            this.lblGirl.Text = "Nữ";
+            // 
+            // rdoGirl
+            // 
+            this.rdoGirl.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoGirl.CheckedState.BorderThickness = 0;
+            this.rdoGirl.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoGirl.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2Transition1.SetDecoration(this.rdoGirl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.rdoGirl.Location = new System.Drawing.Point(797, 463);
+            this.rdoGirl.Name = "rdoGirl";
+            this.rdoGirl.Size = new System.Drawing.Size(20, 20);
+            this.rdoGirl.TabIndex = 37;
+            this.rdoGirl.Text = "Nam";
+            this.rdoGirl.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoGirl.UncheckedState.BorderThickness = 2;
+            this.rdoGirl.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoGirl.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // FUserInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(832, 555);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(936, 694);
+            this.Controls.Add(this.lblGirl);
+            this.Controls.Add(this.rdoGirl);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.rdoBoy);
+            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.lblSubEmail);
+            this.Controls.Add(this.guna2Separator5);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblSubAdd);
+            this.Controls.Add(this.guna2Separator4);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.lblSubLink);
+            this.Controls.Add(this.guna2Separator3);
+            this.Controls.Add(this.txtLink);
+            this.Controls.Add(this.lblSubPhoneNumber);
+            this.Controls.Add(this.guna2Separator2);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.lblNavName);
+            this.Controls.Add(this.guna2Separator1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblJobName);
+            this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FUserInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserInfo";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,22 +417,26 @@
         #endregion
 
         private System.Windows.Forms.Label lblJobName;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox textBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private System.Windows.Forms.Label lblNavName;
+        private System.Windows.Forms.Label lblSubPhoneNumber;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label lblSubLink;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
+        private Guna.UI2.WinForms.Guna2TextBox txtLink;
+        private System.Windows.Forms.Label lblSubAdd;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private System.Windows.Forms.Label lblSubEmail;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
+        private System.Windows.Forms.Label lblSex;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoBoy;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label lblGirl;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoGirl;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
     }
 }

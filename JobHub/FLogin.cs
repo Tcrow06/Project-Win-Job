@@ -19,22 +19,21 @@ namespace JobHub
 
         private void FLogin_Load(object sender, EventArgs e)
         {
-            pnSignin.Visible = false;
-            pnResetPass.Visible = false;
-            pnLogin.BringToFront();
+
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pnSignin.BringToFront();
-            pnSignin.Visible = true;
+            FAns fAns = new FAns();
+            this.Hide();
+            fAns.ShowDialog();
+            fAns.Close();
         }
 
         private void lblToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pnLogin.BringToFront();
             pnLogin.Visible = true;
-            pnSignin.Visible = false;
             pnResetPass.Visible = false;
         }
 
@@ -45,7 +44,6 @@ namespace JobHub
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pnSignin.Visible = false;
             pnLogin.Visible = false;
             pnResetPass.Visible = true;
             pnResetPass.BringToFront();
@@ -56,7 +54,6 @@ namespace JobHub
             MessageBox.Show("Lấy lại mật khẩu thành công");
             pnResetPass.Visible = false;
             pnLogin.Visible = true;
-            pnSignin.Visible=false;
             pnLogin.BringToFront();
         }
 
