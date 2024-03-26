@@ -13,9 +13,15 @@ namespace JobHub
     public partial class FCompanyDetails : Form
     {
         private int count = 0;
+        private int idCompany;
         public FCompanyDetails()
         {
             InitializeComponent();
+        }
+        public FCompanyDetails(int idCompany)
+        {
+            InitializeComponent();
+            this.idCompany = idCompany;
         }
 
         private void FCompanyDetails_Load(object sender, EventArgs e)

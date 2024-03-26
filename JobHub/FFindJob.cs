@@ -46,7 +46,7 @@ namespace JobHub
                 label.Width = width;
                 label.Height = height;
             }
-            private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
+/*            private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
             {
                 FJobDetails job = new FJobDetails(idJob, idCp, fm);
                 job.MdiParent = fm;
@@ -55,11 +55,11 @@ namespace JobHub
                 job.Show();
                 job.BringToFront();
                 //fm.resize(job.Width, job.Height);
-            }
-            private void UCJob_Click(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
+            }*/
+/*            private void UCJob_Click(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
             {
                 FJobDetails_Load(idJob, idCp, fm);
-            }
+            }*/
             private void FJob_Load(object sender, EventArgs e)
             {
                 this.MinimumSize = new System.Drawing.Size(925, 550);

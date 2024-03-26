@@ -184,6 +184,9 @@
   <data name="ưqd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ưqd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="telephone (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telephone (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconcalender" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconcalender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,6 +208,9 @@
   <data name="all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconphone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconphone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="travel-and-tourism" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\travel-and-tourism.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -219,5 +225,8 @@
   </data>
   <data name="png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

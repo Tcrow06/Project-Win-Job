@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JobHub
 {
-    public class User
+    public class Candidate
     {
         private int id; //Fk
         private string name;
@@ -18,8 +18,8 @@ namespace JobHub
         private string avatar;
         private string address;
 
-        public User() { }
-        public User(int id, string name, string phone, string email,
+        public Candidate() { }
+        public Candidate(int id, string name, string phone, string email,
             string gender, string link, DateTime birth, string avatar, string address)
         {
             this.Id = id;

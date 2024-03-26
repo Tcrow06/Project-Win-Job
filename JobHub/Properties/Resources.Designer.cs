@@ -113,6 +113,16 @@ namespace JobHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gmail {
+            get {
+                object obj = ResourceManager.GetObject("gmail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap heartChuaLuu {
             get {
                 object obj = ResourceManager.GetObject("heartChuaLuu", resourceCulture);
@@ -186,6 +196,16 @@ namespace JobHub.Properties {
         internal static System.Drawing.Bitmap iconphone {
             get {
                 object obj = ResourceManager.GetObject("iconphone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconphone1 {
+            get {
+                object obj = ResourceManager.GetObject("iconphone1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -357,6 +377,16 @@ namespace JobHub.Properties {
         internal static System.Drawing.Bitmap technique {
             get {
                 object obj = ResourceManager.GetObject("technique", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telephone__1_ {
+            get {
+                object obj = ResourceManager.GetObject("telephone (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
