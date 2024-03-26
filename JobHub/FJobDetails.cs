@@ -16,7 +16,13 @@ namespace JobHub
 {
     public partial class FJobDetails : Form
     {
+        Candidate can = new Candidate();
+        CandidateDao cd = new CandidateDao();
+        CompanyDetailDao cdd = new CompanyDetailDao();
+        JobDetailDao jdd= new JobDetailDao(); 
         SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
+        int i = 2;
+
         private int count = 0;
         private int IdJob;
         private int IdCp;
@@ -34,17 +40,40 @@ namespace JobHub
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FCompanyDetails fcd = new FCompanyDetails();
-            this.Hide();
-            fcd.ShowDialog();
-            fcd = null;
-            this.Show();
+            FCompanyDetails fcd = new FCompanyDetails(IdCp);
+            fcd.MdiParent = fm;
+            fcd.Dock = DockStyle.Fill;
+            fcd.Show();
+            fcd.BringToFront();
+            fm.resize(fcd.Width, fcd.Height);
         }
         private void FJobDetails_Load(object sender, EventArgs e)
         {
-            LoadJobDetails(IdJob,IdCp);
+            LoadJobDetails(IdJob);
+            LoadCompanyDetails(IdCp);
         }
-        private void LoadJobDetails(int idJob, int idCp)
+        private void LoadCompanyDetails(int idCompany)
+        {
+            
+            CompanyDetail cd = cdd.GetInfoCompanyDetailFromDB(idCompany);
+            lblCompanyName.Text = cd.Name;
+            lblCompanyAddress.Text = cd.Address;
+            int numberOfE = cd.Size;
+            lblNumofE.Text = (numberOfE - 2).ToString() + "-" + (numberOfE + 2).ToString();
+        }
+        private void LoadJobDetails(int idJob)
+        {
+            JobDetail jd = jdd.GetInfoJobDetailFromDB(idJob);
+            lblJobName.Text = jd.NameJob;
+            lblSalary.Text = jd.Salary;
+            lblAddress.Text = jd.Address;
+            lblExperience.Text = jd.Experience;
+            //MessageBox.Show(jd.Description);
+            DescribeJob(jd.Description);
+            RequirementJob(jd.Requirement);
+            BenefitJob(jd.Benefit);
+        }
+        private void NhapLoadJobDetails(int idJob, int idCp)
         {
             try
             {
@@ -124,7 +153,8 @@ namespace JobHub
         }
         public void InfoJob(Panel pnInfo, string desc, Label lblName, Label lblInfo)
         {
-
+            //MessageBox.Show(desc);
+            if(desc.Length > 0) { 
             string[] arr = desc.Split('+');
             lblInfo.Text = "+ " + arr[0];
             int x = lblInfo.Location.X;
@@ -150,6 +180,7 @@ namespace JobHub
                 pnInfo.Controls.Add(lbl);
                 lbl.Location = new Point(x, y);
             }
+            }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -157,26 +188,38 @@ namespace JobHub
             if (count%2 == 0)
             {
                 btnSave.Image = Properties.Resources.heartChuaLuu;
+               
             }
             else
             {
                 btnSave.Image = Properties.Resources.heartDaLuu;
+                string query = String.Format($"insert into SavedJob(");
             }
         }
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FCompanyDetails fcd = new FCompanyDetails();
-            this.Hide();
-            fcd.ShowDialog();
-            fcd = null;
-            this.Show();
+            /*            FCompanyDetails fcd = new FCompanyDetails();
+                        this.Hide();
+                        fcd.ShowDialog();
+                        fcd = null;
+                        this.Show();*/
+            FCompanyDetails fcd = new FCompanyDetails(IdCp);
+            fcd.MdiParent = fm;
+            fcd.Dock = DockStyle.Fill;
+            fcd.Show();
+            fcd.BringToFront();
+            fm.resize(fcd.Width+150, fcd.Height+130);
         }
+
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ứng tuyển thành công ","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+            can.Id = i++;
+            int IdCv = i++;
+            cd.Apply(IdJob,can.Id,IdCv);
+
+
         }
     }
 }

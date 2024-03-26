@@ -16,6 +16,7 @@ namespace JobHub
         public uC_Job()
         {
             InitializeComponent();
+            //ucJob.Click += Even;
         }
 
 
@@ -29,10 +30,24 @@ namespace JobHub
         {
             loadJobClick?.Invoke(this, e);
         }
-
-        private void ucJob_Paint(object sender, PaintEventArgs e)
+        //Nháp 
+ /*       private void Even(object sender, EventArgs e)
         {
-
+            FJobDetails f = new FJobDetails();
+            f.Show();
+        }*/
+        public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
+        {
+            FJobDetails_Load(idJob, idCp, fm);
+        }
+        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
+        {
+            FJobDetails job = new FJobDetails(idJob, idCp, fm);
+            job.MdiParent = fm;
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+            fm.resize(job.Width, job.Height);
         }
     }
 }

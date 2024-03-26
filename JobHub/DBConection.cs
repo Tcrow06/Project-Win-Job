@@ -72,7 +72,7 @@ namespace JobHub
                 int idCp = int.Parse(dr["idCompany"].ToString());
                 job.loadJobClick += (sender, e) =>
                 {
-                    UCJob_Click(sender, e, idJob, idCp, fm);
+                    job.LoadJobDetail(sender, e, idJob, idCp, fm);
                 };
             }
             if(sqlConnection.State == ConnectionState.Open)
@@ -80,19 +80,7 @@ namespace JobHub
                 sqlConnection.Close();
             }
         }
-        private void UCJob_Click(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
-        {
-            FJobDetails_Load(idJob, idCp, fm);
-        }
-        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
-        {
-            FJobDetails job = new FJobDetails(idJob, idCp, fm);
-            job.MdiParent = fm;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
-            fm.resize(job.Width, job.Height);
-        }
+
     }
     
 }

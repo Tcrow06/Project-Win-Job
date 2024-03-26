@@ -63,7 +63,6 @@
             this.ucJob.Size = new System.Drawing.Size(282, 83);
             this.ucJob.TabIndex = 0;
             this.ucJob.Click += new System.EventHandler(this.ucJob_Click);
-            this.ucJob.Paint += new System.Windows.Forms.PaintEventHandler(this.ucJob_Paint);
             this.ucJob.DoubleClick += new System.EventHandler(this.guna2Panel1_DoubleClick);
             // 
             // lblPositon
