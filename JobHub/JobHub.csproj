@@ -143,6 +143,12 @@
     <Compile Include="uC_Job.Designer.cs">
       <DependentUpon>uC_Job.cs</DependentUpon>
     </Compile>
+    <Compile Include="uC_JobDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_JobDescription.Designer.cs">
+      <DependentUpon>uC_JobDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_JobDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uC_Job.resx">
       <DependentUpon>uC_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_JobDescription.resx">
+      <DependentUpon>uC_JobDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_JobDetail.resx">
       <DependentUpon>uc_JobDetail.cs</DependentUpon>

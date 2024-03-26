@@ -14,6 +14,8 @@ namespace JobHub
     public partial class Fmain : Form
     {
         private Fmain fm;
+        private Form Curent;
+        private Form Before;
         public Fmain()
         {
             fm = this;
@@ -25,6 +27,7 @@ namespace JobHub
         {
             this.Height = 550;
             FViews view = new FViews();
+            Curent = view;
             //FUserInfo view = new FUserInfo();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
@@ -149,6 +152,8 @@ namespace JobHub
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             FJob job = new FJob(fm);
+            Before = Curent;
+            Curent = job;
             job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();
@@ -160,6 +165,8 @@ namespace JobHub
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             FPostJob job = new FPostJob();
+            Before = Curent;
+            Curent = job;
             job.MdiParent = this;
             job.Dock = DockStyle.Fill;
             job.Show();
@@ -175,6 +182,8 @@ namespace JobHub
         private void btnCvGuide_Click(object sender, EventArgs e)
         {
             FCVGuide job = new FCVGuide();
+            Before = Curent;
+            Curent = job;
             job.MdiParent = this;
             job.Dock = DockStyle.Fill;
             job.Show();
@@ -224,6 +233,17 @@ namespace JobHub
             FCv cv = new FCv();
             cv.ShowDialog();
             this.Show();
+        }
+
+        private Form FormCur(Form form)
+        {
+            return form;
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Curent.Hide();
+            Before.Show();
+            Before.BringToFront();
         }
     }
 }
