@@ -24,9 +24,6 @@ namespace JobHub
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FCV fcv = new FCV();
-            
-            fcv.Show();
            
         }
 

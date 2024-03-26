@@ -53,18 +53,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChangTheSize.cs" />
+    <Compile Include="cv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cv.Designer.cs">
+      <DependentUpon>cv.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConection.cs" />
+    <Compile Include="FAns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAns.Designer.cs">
+      <DependentUpon>FAns.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCompanyDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FCompanyDetails.Designer.cs">
       <DependentUpon>FCompanyDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FCV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FCV.Designer.cs">
-      <DependentUpon>FCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FCVGuide.cs">
       <SubType>Form</SubType>
@@ -108,6 +114,12 @@
     <Compile Include="FPostJob.Designer.cs">
       <DependentUpon>FPostJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRecruiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRecruiter.Designer.cs">
+      <DependentUpon>FRecruiter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FViews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,18 +161,20 @@
     <Compile Include="uC_SlideJob.Designer.cs">
       <DependentUpon>uC_SlideJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
     <Compile Include="FUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FUserInfo.Designer.cs">
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cv.resx">
+      <DependentUpon>cv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAns.resx">
+      <DependentUpon>FAns.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCompanyDetails.resx">
       <DependentUpon>FCompanyDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FCV.resx">
-      <DependentUpon>FCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCVGuide.resx">
       <DependentUpon>FCVGuide.cs</DependentUpon>
@@ -183,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPostJob.resx">
       <DependentUpon>FPostJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRecruiter.resx">
+      <DependentUpon>FRecruiter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FViews.resx">
       <DependentUpon>FViews.cs</DependentUpon>
