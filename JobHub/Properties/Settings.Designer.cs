@@ -12,7 +12,7 @@ namespace JobHub.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -35,8 +35,8 @@ namespace JobHub.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-QHAH49DL\\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Securi" +
-            "ty=True;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-742LD2D;Initial Catalog=JobWin;Integrated Security=True;Encry" +
+            "pt=False")]
         public string conn {
             get {
                 return ((string)(this["conn"]));

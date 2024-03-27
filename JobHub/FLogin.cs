@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace JobHub
 {
     public partial class FLogin : Form
     {
+        DBConection con = new DBConection();
+        private Candidate candidate;
+
+        public Candidate Candidate { get => candidate; set => candidate = value; }
+
         public FLogin()
         {
             InitializeComponent();
@@ -39,7 +45,23 @@ namespace JobHub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            string sql = $@"select * from Account
+                            where account like '{txtAcc.Text.Trim()}%' AND accountPass like '{txtPass.Text.Trim()}%'";
+            SqlDataReader reader = con.loadData(sql);
+            if(reader.HasRows)
+            {
+                if (Int32.Parse(reader["accountType"].ToString()) == 1)
+                {
+                    Candidate = new Candidate(Int32.Parse(reader["accountType"].ToString()));
+                }
+                CustomMessageBox.Show("Đăng nhập thành công");
+            }
+            else
+            {
+                CustomMessageBox.Show("Sai tài khoản hoặc mật khẩu");
+            }
+            Candidate = null;
+            reader.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

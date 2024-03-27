@@ -56,6 +56,13 @@
     <Compile Include="ChangTheSize.cs" />
     <Compile Include="CompanyDetail.cs" />
     <Compile Include="CompanyDetailDao.cs" />
+    <Compile Include="CustomMessageBox.cs" />
+    <Compile Include="FCustomerMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCustomerMessageBox.Designer.cs">
+      <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDentailCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +197,9 @@
     <Compile Include="FUserInfo.Designer.cs">
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FCustomerMessageBox.resx">
+      <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDentailCV.resx">
       <DependentUpon>FDentailCV.cs</DependentUpon>
     </EmbeddedResource>

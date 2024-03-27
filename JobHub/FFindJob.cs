@@ -70,20 +70,13 @@ namespace JobHub
             {
                 this.Close();
             }
-
-            private void loadDetailJob(object sender, EventArgs e)
-            {
-                FJobDetails jobDetails = new FJobDetails();
-                jobDetails.ShowDialog();
-            }
-
             private void txtSearch_TextChanged(object sender, EventArgs e)
             {
                 //string query = $@"SELECT Job.idJob, Company.idCompany, Job.nameJob, Job.salary, Job.position, Company.nameCompany
                   string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName
                         FROM Job
                          INNER JOIN Company ON Job.idCompany = Company.idCompany
-                         where Job.nameJob LIKE N'{txtSearch.Text}%'";
+                         where Job.jobName LIKE N'%{txtSearch.Text}%'";
                 SqlDataReader dr = conection.loadData(query);
                 pnJob.Controls.Clear();
                 conection.change(dr, pnJob, fm);

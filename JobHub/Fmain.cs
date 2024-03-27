@@ -22,7 +22,10 @@ namespace JobHub
             InitializeComponent();
 
         }
-
+        private void setLocation(int x, int y, Control ctrl)
+        {
+            ctrl.Location = new Point(x, y);
+        }
         private void Fmain_Load(object sender, EventArgs e)
         {
             this.Height = 550;
@@ -30,7 +33,10 @@ namespace JobHub
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
             resize(view.Width + 200, view.Height + 50);
+            setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
+            setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
             view.Show();
+            picUp.BringToFront();
         }
         public void Reset_Load(FJobDetails view)
         {
@@ -121,6 +127,18 @@ namespace JobHub
             this.Hide();
             login.ShowDialog();
             this.Show();
+            if(login.Candidate == null)
+            {
+                pnNav.Controls.Clear();
+                pnNav.Controls.Add(pnSubNav11);
+                pnNav.Controls.Add(pnSubNav13);
+                pnNav.Controls.Add(pnSubNav12);
+                pnNav.Controls.Add(btnBack);
+                pnNav.Controls.Add(btnLogin);
+                pnSubNav13.Visible = true;
+                pnSubNav12.Visible = true;
+                pnSubNav11.Visible = true;
+            }
         }
 
         private void btnJob_Click(object sender, EventArgs e)
@@ -242,9 +260,47 @@ namespace JobHub
 
         }
 
-        private Form FormCur(Form form)
+        private void loadForm(Form form)
         {
-            return form;
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+            }
+            form.MdiParent = this;
+            resize(form.Width + 200, form.Height + 50);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            form.BringToFront();
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Forms.Count.ToString());
+            if(Forms.Count >= 1)
+            {
+                Forms.Pop();
+                loadForm(Forms.Pop());
+            }
+
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            pnContainMenu.Visible = true;
+            picUp.SendToBack();
+            picDown.BringToFront();
+        }
+
+        private void picDown_Click(object sender, EventArgs e)
+        {
+            pnContainMenu.Visible = false;
+            picDown.SendToBack();
+            picUp.BringToFront();
+        }
+
+        private void Fmain_SizeChanged(object sender, EventArgs e)
+        {
+            setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
+            setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
         }
     }
 }

@@ -36,6 +36,7 @@ namespace JobHub
             //fm.resize(job.Width, job.Height);*/
 
             FJobDetails job = new FJobDetails(idJob, idCp, fm);
+            fm.Forms.Push(job);
             job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();
