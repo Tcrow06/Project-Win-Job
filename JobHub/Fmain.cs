@@ -186,7 +186,7 @@ namespace JobHub
             {
                 formdelete.Close();
             }
-            FPostJob job = new FPostJob();
+            FCompanyJob job = new FCompanyJob(this);
             resize(job.Width + 200, job.Height + 50);
             job.MdiParent = this;
             job.Dock = DockStyle.Fill;

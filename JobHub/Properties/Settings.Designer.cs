@@ -12,7 +12,7 @@ namespace JobHub.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -35,11 +35,19 @@ namespace JobHub.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-742LD2D;Initial Catalog=JobWin;Integrated Security=True;Encry" +
-            "pt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TU;Initial Catalog=JobWin;Integrated Security=True")]
         public string conn {
             get {
                 return ((string)(this["conn"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TU;Initial Catalog=JobWin;Integrated Security=True")]
+        public string conn2 {
+            get {
+                return ((string)(this["conn2"]));
             }
         }
     }
