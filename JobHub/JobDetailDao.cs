@@ -11,7 +11,7 @@ namespace JobHub
     public class JobDetailDao
     {
         DBConection dbc = new DBConection();
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn1);
 
         public JobDetailDao() { }
 
@@ -24,13 +24,13 @@ namespace JobHub
             if (dr.HasRows)
             {
                 dr.Read();
-                jb.NameJob = dr["nameJob"].ToString();
-                jb.Salary = dr["salary"].ToString();
-                jb.Address= dr["position"].ToString();
-                jb.Experience = dr["experience"].ToString();
-                jb.Description = dr["describe"].ToString();
-                jb.Requirement = dr["requirement"].ToString();
-                jb.Benefit = dr["benefit"].ToString();
+                jb.NameJob = dr["jobName"].ToString();
+                jb.Salary = dr["jobSalary"].ToString();
+                jb.Address= dr["jobAddress"].ToString();
+                jb.Experience = dr["jobExperience"].ToString();
+                jb.Description = dr["jobDescription"].ToString();
+                jb.Requirement = dr["jobRequirement"].ToString();
+                jb.Benefit = dr["jobBenefit"].ToString();
 
             }
             return jb;

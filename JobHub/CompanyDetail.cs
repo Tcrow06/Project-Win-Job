@@ -13,13 +13,13 @@ namespace JobHub
         private string description;
         private string address;
         private string link;
-        private int size;
+        private string size;
 
         public CompanyDetail()
         {
         }
 
-        public CompanyDetail(int id, string name, string description, string address, string link, int size)
+        public CompanyDetail(int id, string name, string description, string address, string link, string size)
         {
             this.id = id;
             this.name = name;
@@ -34,6 +34,6 @@ namespace JobHub
         public string Description { get => description; set => description = value; }
         public string Address { get => address; set => address = value; }
         public string Link { get => link; set => link = value; }
-        public int Size { get => size; set => size = value; }
+        public string Size { get => size; set => size = value; }
     }
 }

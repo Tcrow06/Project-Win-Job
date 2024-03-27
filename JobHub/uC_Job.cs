@@ -16,26 +16,14 @@ namespace JobHub
         public uC_Job()
         {
             InitializeComponent();
-            //ucJob.Click += Even;
         }
 
 
-        private void guna2Panel1_DoubleClick(object sender, EventArgs e)
-        {
-
-            //loadJobClick?.Invoke(this, e);
-        }
 
         private void ucJob_Click(object sender, EventArgs e)
         {
             loadJobClick?.Invoke(this, e);
         }
-        //Nháp 
- /*       private void Even(object sender, EventArgs e)
-        {
-            FJobDetails f = new FJobDetails();
-            f.Show();
-        }*/
         public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
         {
             FJobDetails_Load(idJob, idCp, fm);

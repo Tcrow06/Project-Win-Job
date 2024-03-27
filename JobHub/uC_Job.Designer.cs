@@ -63,7 +63,6 @@
             this.ucJob.Size = new System.Drawing.Size(282, 83);
             this.ucJob.TabIndex = 0;
             this.ucJob.Click += new System.EventHandler(this.ucJob_Click);
-            this.ucJob.DoubleClick += new System.EventHandler(this.guna2Panel1_DoubleClick);
             // 
             // lblPositon
             // 
@@ -91,7 +90,7 @@
             // 
             // lblNameCompany
             // 
-            this.lblNameCompany.AutoSize = true;
+            this.lblNameCompany.AutoEllipsis = true;
             this.lblNameCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameCompany.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblNameCompany.Location = new System.Drawing.Point(84, 31);

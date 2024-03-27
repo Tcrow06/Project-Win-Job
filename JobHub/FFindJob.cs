@@ -15,7 +15,7 @@ namespace JobHub
 {
     public partial class FJob : Form
     {
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn1);
 
         DBConection conection = new DBConection();
         private Fmain fm;
@@ -26,8 +26,9 @@ namespace JobHub
         }
         private void loadJobInPanel()
         {
-            string query = @"SELECT Job.idJob, Job.nameJob, Job.salary, Job.position, Company.nameCompany, Company.idCompany
-                         FROM Job
+            //string query = @"SELECT Job.idJob, Job.nameJob, Job.salary, Job.position, Company.nameCompany, Company.idCompany
+            string query = $@"SELECT Job.idJob, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName, Company.idCompany
+                        FROM Job
                          INNER JOIN Company ON Job.idCompany = Company.idCompany";
             SqlDataReader reader = conection.loadData(query);
             pnJob.Controls.Clear();
@@ -79,8 +80,9 @@ namespace JobHub
 
             private void txtSearch_TextChanged(object sender, EventArgs e)
             {
-                string query = $@"SELECT Job.idJob, Company.idCompany, Job.nameJob, Job.salary, Job.position, Company.nameCompany
-                         FROM Job
+                //string query = $@"SELECT Job.idJob, Company.idCompany, Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                  string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName
+                        FROM Job
                          INNER JOIN Company ON Job.idCompany = Company.idCompany
                          where Job.nameJob LIKE N'{txtSearch.Text}%'";
                 SqlDataReader dr = conection.loadData(query);
@@ -90,7 +92,8 @@ namespace JobHub
 
             private void loadJob(Guna2Button button)
             {
-                string query = $@"SELECT Job.idJob, Company.idCompany, Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                //string query = $@"SELECT Job.idJob, Company.idCompany, Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName 
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany
                     where Job.category LIKE N'{button.Text}%'";
@@ -170,7 +173,7 @@ namespace JobHub
                     sqlConnection.Open();
                 }
 
-                string query = $@"SELECT Job.idJob, Company.idCompany, Job.nameJob, Job.salary, Job.position, Company.nameCompany
+                string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany
                     where Job.salary LIKE N'{cboExperience.SelectedItem.ToString()}%'";

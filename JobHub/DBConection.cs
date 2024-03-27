@@ -62,11 +62,11 @@ namespace JobHub
             while (dr.Read())
             {
                 uC_Job job = new uC_Job();
-                job.lblNameJob.Text = dr["nameJob"].ToString();
+                job.lblNameJob.Text = dr["jobName"].ToString();
                 changTheSize.setSize(130, 25, job.lblNameJob);
-                job.lblNameCompany.Text = dr["nameCompany"].ToString();
-                job.lblSalary.Text = dr["salary"].ToString();
-                job.lblPositon.Text = dr["position"].ToString();
+                job.lblNameCompany.Text = dr["companyName"].ToString();
+                job.lblSalary.Text = dr["jobSalary"].ToString();
+                job.lblPositon.Text = dr["jobAddress"].ToString();
                 flPanel.Controls.Add(job);
                 int idJob = int.Parse(dr["idJob"].ToString());
                 int idCp = int.Parse(dr["idCompany"].ToString());

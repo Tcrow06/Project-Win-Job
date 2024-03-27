@@ -24,9 +24,9 @@ namespace JobHub
             if (dr.HasRows)
             {
                 dr.Read();
-                cd.Name = dr["nameCompany"].ToString();
-                cd.Address = dr["addressCompany"].ToString();
-                cd.Size = int.Parse(dr["size"].ToString());
+                cd.Name = dr["companyName"].ToString();
+                cd.Address = dr["companyAddress"].ToString();
+                cd.Size = dr["companySize"].ToString();
             }
             return cd;
         

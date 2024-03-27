@@ -165,10 +165,7 @@
     <Compile Include="uC_SlideJob.Designer.cs">
       <DependentUpon>uC_SlideJob.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Candidate.cs" />
-=======
->>>>>>> 63957a8cc0b384f51aa1805c726b181744075bac
     <Compile Include="FUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>

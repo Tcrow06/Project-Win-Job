@@ -490,7 +490,7 @@
             this.lblDescInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.lblDescInfo.Location = new System.Drawing.Point(5, 34);
             this.lblDescInfo.Name = "lblDescInfo";
-            this.lblDescInfo.Size = new System.Drawing.Size(697, 23);
+            this.lblDescInfo.Size = new System.Drawing.Size(749, 23);
             this.lblDescInfo.TabIndex = 3;
             this.lblDescInfo.Text = "+ Tiếp nhận và xử lý dữ liệu trên các sản thương mại điện tử.";
             // 

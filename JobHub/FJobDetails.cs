@@ -20,7 +20,7 @@ namespace JobHub
         CandidateDao cd = new CandidateDao();
         CompanyDetailDao cdd = new CompanyDetailDao();
         JobDetailDao jdd= new JobDetailDao(); 
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn1);
         int i = 2;
 
         private int count = 0;
@@ -38,15 +38,6 @@ namespace JobHub
             this.fm = fm;
             InitializeComponent();
         }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FCompanyDetails fcd = new FCompanyDetails(IdCp);
-            fcd.MdiParent = fm;
-            fcd.Dock = DockStyle.Fill;
-            fcd.Show();
-            fcd.BringToFront();
-            fm.resize(fcd.Width, fcd.Height);
-        }
         private void FJobDetails_Load(object sender, EventArgs e)
         {
             LoadJobDetails(IdJob);
@@ -57,9 +48,8 @@ namespace JobHub
             
             CompanyDetail cd = cdd.GetInfoCompanyDetailFromDB(idCompany);
             lblCompanyName.Text = cd.Name;
-            lblCompanyAddress.Text = cd.Address;
-            int numberOfE = cd.Size;
-            lblNumofE.Text = (numberOfE - 2).ToString() + "-" + (numberOfE + 2).ToString();
+            lblCompanyAddress.Text = cd.Address; 
+            lblNumofE.Text = cd.Size;
         }
         private void LoadJobDetails(int idJob)
         {
@@ -68,117 +58,59 @@ namespace JobHub
             lblSalary.Text = jd.Salary;
             lblAddress.Text = jd.Address;
             lblExperience.Text = jd.Experience;
-            //MessageBox.Show(jd.Description);
             DescribeJob(jd.Description);
             RequirementJob(jd.Requirement);
             BenefitJob(jd.Benefit);
         }
-        private void NhapLoadJobDetails(int idJob, int idCp)
-        {
-            try
-            {
-                if (sqlConnection.State != ConnectionState.Open)
-                {
-                    sqlConnection.Open();
-                }
-
-                string query = $"SELECT*from Job where Job.idJob = {idJob}";
-                SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    dr.Read();
-                    lblJobName.Text = dr["nameJob"].ToString();
-                    lblSalary.Text = dr["salary"].ToString();
-                    lblAddress.Text = dr["position"].ToString();
-                    lblExperience.Text = dr["experience"].ToString();
-                    string desc = dr["describe"].ToString();
-                    DescribeJob(desc);
-                    desc = dr["requirement"].ToString() ;
-                    RequirementJob(desc);
-                    desc = dr["benefit"].ToString();
-                    BenefitJob(desc);
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-                Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-            }
-            sqlConnection.Close();
-
-            try
-            {
-                if (sqlConnection.State != ConnectionState.Open)
-                {
-                    sqlConnection.Open();
-                }
-                string query = $"select * from Company where  Company.idCompany = {idCp}";
-
-                SqlCommand cmd = new SqlCommand(query, sqlConnection);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
-                {
-                    dr.Read();
-                    lblCompanyName.Text = dr["nameCompany"].ToString();
-                    lblCompanyAddress.Text = dr["addressCompany"].ToString();
-                    int numberOfE = int.Parse(dr["size"].ToString());
-                    lblNumofE.Text = (numberOfE-2).ToString() + "-" + (numberOfE + 2).ToString();
-                    
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Đã xảy ra lỗi: " + ex.Message);
-            }
-            sqlConnection.Close();
-        }
         public void DescribeJob(string desc)
         {
-
             InfoJob(pnJobDescription, desc, lblDesc, lblDescInfo);
+            pnJobDescription.Height += 10;
         }
         private void RequirementJob(string desc)
         {
             InfoJob(pnRequirement, desc, lblRe, lblReInfo);
-            pnRequirement.Height -= 20;
+            pnRequirement.Height += 10;
         }
         private void BenefitJob(string desc)
         {
             InfoJob(pnBenefit, desc, lblBe, lblBeInfo);
-            pnBenefit.Height -= 20;
         }
         public void InfoJob(Panel pnInfo, string desc, Label lblName, Label lblInfo)
         {
-            //MessageBox.Show(desc);
             if(desc.Length > 0) { 
-            string[] arr = desc.Split('+');
-            lblInfo.Text = "+ " + arr[0];
+            string[] arr = desc.Split('~');
+            if (arr[0][0]=='-')
+                    lblInfo.Text =" ";
+            else 
+                lblInfo.Text = "+ " + arr[0];
             int x = lblInfo.Location.X;
             int y = lblInfo.Location.Y;
             pnInfo.Height = lblName.Height + lblInfo.Height + 10;
+            Label lblBefore = new Label();
+                lblBefore = lblInfo;
             for (int i = 1; i < arr.Length; i++)
             {
-                Label lbl = new Label();
+                Label lblCur = new Label();
+                lblCur.Font = lblInfo.Font;
+                lblCur.Text = " ";
                 if (arr[i][1] != '-')
-                    lbl.Text = "+";
-                lbl.Text += arr[i];
-                lbl.AutoSize = false;
-                lbl.Size = new Size(690, 23);
-                Size textSize = TextRenderer.MeasureText(arr[i], lbl.Font);
-                int j = textSize.Width / lbl.Width;
+                    lblCur.Text = "+";
+
+                lblCur.Text += arr[i];
+                lblCur.AutoSize = false;
+                lblCur.Size = new Size(lblInfo.Width, lblInfo.Height);
+                Size textSize = TextRenderer.MeasureText(arr[i], lblCur.Font);
+                int j = textSize.Width / lblCur.Width;
                 if (j >= 1)
                 {
-                    lbl.Height += 23 * j;
+                    lblCur.Height = lblInfo.Height * j;
                 }
-                lbl.Font = lblInfo.Font;
-                y += 20;
-                pnInfo.Height += lbl.Height;
-                pnInfo.Controls.Add(lbl);
-                lbl.Location = new Point(x, y);
+                y += lblBefore.Height;
+                lblBefore = lblCur; 
+                pnInfo.Height += lblCur.Height;
+                pnInfo.Controls.Add(lblCur);
+                lblCur.Location = new Point(x, y);
             }
             }
         }
@@ -199,11 +131,6 @@ namespace JobHub
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            /*            FCompanyDetails fcd = new FCompanyDetails();
-                        this.Hide();
-                        fcd.ShowDialog();
-                        fcd = null;
-                        this.Show();*/
             FCompanyDetails fcd = new FCompanyDetails(IdCp);
             fcd.MdiParent = fm;
             fcd.Dock = DockStyle.Fill;
