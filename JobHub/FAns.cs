@@ -23,5 +23,10 @@ namespace JobHub
             this.Close();
             fRecruiter.ShowDialog();
         }
+
+        private void btnCandidate_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

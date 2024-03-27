@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCv));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnSkill = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
@@ -55,10 +56,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblLastName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_JobDescription1 = new JobHub.uC_JobDescription();
+            this.uC_JobDescription2 = new JobHub.uC_JobDescription();
+            this.uC_JobDescription3 = new JobHub.uC_JobDescription();
             this.guna2Panel1.SuspendLayout();
             this.pnSkill.SuspendLayout();
             this.pnEducation.SuspendLayout();
@@ -68,11 +73,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(77)))));
+            this.guna2Panel1.Controls.Add(this.btnBack);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.pnSkill);
             this.guna2Panel1.Controls.Add(this.pnEducation);
@@ -84,8 +91,29 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(256, 874);
+            this.guna2Panel1.Size = new System.Drawing.Size(256, 907);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.Transparent;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBack.Location = new System.Drawing.Point(7, 873);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(243, 48);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Thoát";
+            this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBack.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // guna2Button1
             // 
@@ -103,10 +131,9 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(243, 48);
             this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Save cv";
+            this.guna2Button1.Text = "Sửa và lưu";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(20, -2);
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.TextOffset = new System.Drawing.Point(15, 0);
             // 
             // pnSkill
             // 
@@ -230,7 +257,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(50, 45);
+            this.label3.Location = new System.Drawing.Point(51, 46);
             this.label3.MaximumSize = new System.Drawing.Size(190, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 28);
@@ -326,7 +353,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(275, 219);
+            this.label7.Location = new System.Drawing.Point(274, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 32);
             this.label7.TabIndex = 2;
@@ -335,21 +362,30 @@
             // guna2Separator4
             // 
             this.guna2Separator4.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator4.Location = new System.Drawing.Point(281, 254);
+            this.guna2Separator4.Location = new System.Drawing.Point(280, 206);
             this.guna2Separator4.Name = "guna2Separator4";
             this.guna2Separator4.Size = new System.Drawing.Size(444, 14);
             this.guna2Separator4.TabIndex = 3;
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.guna2Separator5);
             this.guna2Panel2.Controls.Add(this.lblLastName);
             this.guna2Panel2.Controls.Add(this.label9);
             this.guna2Panel2.Controls.Add(this.lblFirstName);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(256, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(495, 189);
+            this.guna2Panel2.Size = new System.Drawing.Size(495, 160);
             this.guna2Panel2.TabIndex = 4;
+            // 
+            // guna2Separator5
+            // 
+            this.guna2Separator5.FillColor = System.Drawing.Color.Black;
+            this.guna2Separator5.Location = new System.Drawing.Point(0, 148);
+            this.guna2Separator5.Name = "guna2Separator5";
+            this.guna2Separator5.Size = new System.Drawing.Size(491, 14);
+            this.guna2Separator5.TabIndex = 6;
             // 
             // lblLastName
             // 
@@ -386,17 +422,41 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.uC_JobDescription1);
+            this.flowLayoutPanel1.Controls.Add(this.uC_JobDescription2);
+            this.flowLayoutPanel1.Controls.Add(this.uC_JobDescription3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(256, 291);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(256, 219);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(495, 583);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(495, 688);
             this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // uC_JobDescription1
+            // 
+            this.uC_JobDescription1.Location = new System.Drawing.Point(3, 3);
+            this.uC_JobDescription1.Name = "uC_JobDescription1";
+            this.uC_JobDescription1.Size = new System.Drawing.Size(444, 140);
+            this.uC_JobDescription1.TabIndex = 0;
+            // 
+            // uC_JobDescription2
+            // 
+            this.uC_JobDescription2.Location = new System.Drawing.Point(3, 149);
+            this.uC_JobDescription2.Name = "uC_JobDescription2";
+            this.uC_JobDescription2.Size = new System.Drawing.Size(444, 140);
+            this.uC_JobDescription2.TabIndex = 1;
+            // 
+            // uC_JobDescription3
+            // 
+            this.uC_JobDescription3.Location = new System.Drawing.Point(3, 295);
+            this.uC_JobDescription3.Name = "uC_JobDescription3";
+            this.uC_JobDescription3.Size = new System.Drawing.Size(444, 140);
+            this.uC_JobDescription3.TabIndex = 2;
             // 
             // FCv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 874);
+            this.ClientSize = new System.Drawing.Size(751, 907);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Separator4);
@@ -421,6 +481,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,5 +518,10 @@
         private System.Windows.Forms.Label lblLastName;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
+        private uC_JobDescription uC_JobDescription1;
+        private uC_JobDescription uC_JobDescription2;
+        private uC_JobDescription uC_JobDescription3;
     }
 }

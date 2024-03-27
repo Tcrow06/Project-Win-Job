@@ -26,26 +26,20 @@ namespace JobHub
         private int count = 0;
         private int IdJob;
         private int IdCp;
-        private Fmain fm;
         public FJobDetails()
         {
             InitializeComponent();
         }
-        public FJobDetails(int idJob,int IdCp, Fmain fm)
+        public FJobDetails(int idJob,int IdCp)
         {
             this.IdJob = idJob;
             this.IdCp = IdCp;
-            this.fm = fm;
             InitializeComponent();
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FCompanyDetails fcd = new FCompanyDetails(IdCp);
-            fcd.MdiParent = fm;
-            fcd.Dock = DockStyle.Fill;
             fcd.Show();
-            fcd.BringToFront();
-            fm.resize(fcd.Width, fcd.Height);
         }
         private void FJobDetails_Load(object sender, EventArgs e)
         {
@@ -205,11 +199,7 @@ namespace JobHub
                         fcd = null;
                         this.Show();*/
             FCompanyDetails fcd = new FCompanyDetails(IdCp);
-            fcd.MdiParent = fm;
-            fcd.Dock = DockStyle.Fill;
-            fcd.Show();
-            fcd.BringToFront();
-            fm.resize(fcd.Width+150, fcd.Height+130);
+            fcd.ShowDialog();
         }
 
 
@@ -218,8 +208,6 @@ namespace JobHub
             can.Id = i++;
             int IdCv = i++;
             cd.Apply(IdJob,can.Id,IdCv);
-
-
         }
     }
 }

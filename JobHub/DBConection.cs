@@ -14,6 +14,7 @@ namespace JobHub
     {
         SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         ChangTheSize changTheSize = new ChangTheSize();
+        
         public void ThucThi(string sqlStr)
         {
             try
@@ -72,7 +73,7 @@ namespace JobHub
                 int idCp = int.Parse(dr["idCompany"].ToString());
                 job.loadJobClick += (sender, e) =>
                 {
-                    job.LoadJobDetail(sender, e, idJob, idCp, fm);
+                    job.LoadJobDetail(sender, e, idJob, idCp);
                 };
             }
             if(sqlConnection.State == ConnectionState.Open)

@@ -31,7 +31,7 @@
             Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FUserInfo));
             this.lblJobName = new System.Windows.Forms.Label();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblNavName = new System.Windows.Forms.Label();
             this.lblSubPhoneNumber = new System.Windows.Forms.Label();
@@ -46,12 +46,9 @@
             this.lblSubEmail = new System.Windows.Forms.Label();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblSex = new System.Windows.Forms.Label();
-            this.rdoBoy = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblGirl = new System.Windows.Forms.Label();
-            this.rdoGirl = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
+            this.txtLatName = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // lblJobName
@@ -64,37 +61,37 @@
             this.lblJobName.TabIndex = 16;
             this.lblJobName.Text = "Cài đặt thông tin cá  nhân";
             // 
-            // txtName
+            // txtFirstName
             // 
-            this.txtName.BorderRadius = 8;
-            this.txtName.BorderThickness = 0;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.txtName, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(46, 190);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "Nhập họ tên";
-            this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(286, 35);
-            this.txtName.TabIndex = 17;
-            this.txtName.Click += new System.EventHandler(this.txtName_Click);
-            this.txtName.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
+            this.txtFirstName.BorderRadius = 8;
+            this.txtFirstName.BorderThickness = 0;
+            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtFirstName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtFirstName.DefaultText = "";
+            this.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstName.Location = new System.Drawing.Point(46, 190);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.PasswordChar = '\0';
+            this.txtFirstName.PlaceholderText = "Họ";
+            this.txtFirstName.SelectedText = "";
+            this.txtFirstName.Size = new System.Drawing.Size(97, 35);
+            this.txtFirstName.TabIndex = 17;
+            this.txtFirstName.Click += new System.EventHandler(this.txtName_Click);
+            this.txtFirstName.MouseLeave += new System.EventHandler(this.txtName_MouseLeave);
             // 
             // guna2Separator1
             // 
             this.guna2Transition1.SetDecoration(this.guna2Separator1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Separator1.Location = new System.Drawing.Point(46, 221);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(286, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(97, 10);
             this.guna2Separator1.TabIndex = 18;
             // 
             // lblNavName
@@ -289,73 +286,6 @@
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.MouseLeave += new System.EventHandler(this.txtEmail_MouseLeave);
             // 
-            // lblSex
-            // 
-            this.lblSex.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.lblSex, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblSex.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.Location = new System.Drawing.Point(574, 420);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(84, 25);
-            this.lblSex.TabIndex = 34;
-            this.lblSex.Text = "Giới tính";
-            // 
-            // rdoBoy
-            // 
-            this.rdoBoy.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdoBoy.CheckedState.BorderThickness = 0;
-            this.rdoBoy.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdoBoy.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2Transition1.SetDecoration(this.rdoBoy, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.rdoBoy.Location = new System.Drawing.Point(584, 463);
-            this.rdoBoy.Name = "rdoBoy";
-            this.rdoBoy.Size = new System.Drawing.Size(20, 20);
-            this.rdoBoy.TabIndex = 35;
-            this.rdoBoy.Text = "Nam";
-            this.rdoBoy.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoBoy.UncheckedState.BorderThickness = 2;
-            this.rdoBoy.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdoBoy.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(615, 460);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 25);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Nam";
-            // 
-            // lblGirl
-            // 
-            this.lblGirl.AutoSize = true;
-            this.guna2Transition1.SetDecoration(this.lblGirl, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblGirl.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGirl.Location = new System.Drawing.Point(828, 460);
-            this.lblGirl.Name = "lblGirl";
-            this.lblGirl.Size = new System.Drawing.Size(37, 25);
-            this.lblGirl.TabIndex = 38;
-            this.lblGirl.Text = "Nữ";
-            // 
-            // rdoGirl
-            // 
-            this.rdoGirl.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdoGirl.CheckedState.BorderThickness = 0;
-            this.rdoGirl.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdoGirl.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2Transition1.SetDecoration(this.rdoGirl, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.rdoGirl.Location = new System.Drawing.Point(797, 463);
-            this.rdoGirl.Name = "rdoGirl";
-            this.rdoGirl.Size = new System.Drawing.Size(20, 20);
-            this.rdoGirl.TabIndex = 37;
-            this.rdoGirl.Text = "Nam";
-            this.rdoGirl.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoGirl.UncheckedState.BorderThickness = 2;
-            this.rdoGirl.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdoGirl.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
             // guna2Transition1
             // 
             this.guna2Transition1.Cursor = null;
@@ -376,17 +306,45 @@
             animation2.TransparencyCoeff = 0F;
             this.guna2Transition1.DefaultAnimation = animation2;
             // 
+            // guna2Separator6
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2Separator6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Separator6.Location = new System.Drawing.Point(152, 221);
+            this.guna2Separator6.Name = "guna2Separator6";
+            this.guna2Separator6.Size = new System.Drawing.Size(175, 10);
+            this.guna2Separator6.TabIndex = 40;
+            // 
+            // txtLatName
+            // 
+            this.txtLatName.BorderRadius = 8;
+            this.txtLatName.BorderThickness = 0;
+            this.txtLatName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtLatName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtLatName.DefaultText = "";
+            this.txtLatName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLatName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLatName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLatName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLatName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLatName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLatName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLatName.Location = new System.Drawing.Point(152, 190);
+            this.txtLatName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLatName.Name = "txtLatName";
+            this.txtLatName.PasswordChar = '\0';
+            this.txtLatName.PlaceholderText = "Tên";
+            this.txtLatName.SelectedText = "";
+            this.txtLatName.Size = new System.Drawing.Size(175, 35);
+            this.txtLatName.TabIndex = 39;
+            // 
             // FUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(936, 694);
-            this.Controls.Add(this.lblGirl);
-            this.Controls.Add(this.rdoGirl);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.rdoBoy);
-            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.guna2Separator6);
+            this.Controls.Add(this.txtLatName);
             this.Controls.Add(this.lblSubEmail);
             this.Controls.Add(this.guna2Separator5);
             this.Controls.Add(this.txtEmail);
@@ -401,7 +359,7 @@
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.lblNavName);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblJobName);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -417,7 +375,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblJobName;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label lblNavName;
         private System.Windows.Forms.Label lblSubPhoneNumber;
@@ -431,12 +389,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label lblSubEmail;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
-        private System.Windows.Forms.Label lblSex;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoBoy;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblGirl;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton rdoGirl;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator6;
+        private Guna.UI2.WinForms.Guna2TextBox txtLatName;
     }
 }

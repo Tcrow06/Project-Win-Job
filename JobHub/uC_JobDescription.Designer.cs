@@ -42,8 +42,9 @@
             this.guna2Panel4.Controls.Add(this.label18);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(446, 140);
+            this.guna2Panel4.Size = new System.Drawing.Size(444, 140);
             this.guna2Panel4.TabIndex = 11;
             // 
             // label16
@@ -63,7 +64,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(307, 8);
+            this.label17.Location = new System.Drawing.Point(304, 8);
             this.label17.MaximumSize = new System.Drawing.Size(238, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(129, 28);
@@ -88,7 +89,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel4);
             this.Name = "uC_JobDescription";
-            this.Size = new System.Drawing.Size(446, 140);
+            this.Size = new System.Drawing.Size(444, 140);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.ResumeLayout(false);

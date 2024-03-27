@@ -36,14 +36,13 @@ namespace JobHub
         private void cv_Load(object sender, EventArgs e)
         {
             this.Size = new Size(500, 600);
-            setLocation(lblIntroduce.Location.X, lblIntroduce.Location.Y + lblIntroduce.Height + 10, pnCall);
-            setLocation(pnCall.Location.X, pnCall.Location.Y + pnCall.Height + 10, pnEducation);
+            setLocation(lblIntroduce.Location.X, lblIntroduce.Location.Y + lblIntroduce.Height + 5, pnCall);
+            setLocation(pnCall.Location.X, pnCall.Location.Y + pnCall.Height + 5, pnEducation);
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Done!");
             this.Close();
         }
     }

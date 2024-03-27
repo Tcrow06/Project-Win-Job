@@ -31,23 +31,25 @@ namespace JobHub
             loadJobClick?.Invoke(this, e);
         }
         //Nháp 
- /*       private void Even(object sender, EventArgs e)
+        /*       private void Even(object sender, EventArgs e)
+               {
+                   FJobDetails f = new FJobDetails();
+                   f.Show();
+               }*/
+        public void LoadJobDetail(object sender, EventArgs e, int idjob, int idcp)
         {
-            FJobDetails f = new FJobDetails();
-            f.Show();
-        }*/
-        public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
-        {
-            FJobDetails_Load(idJob, idCp, fm);
+            fjobdetails_load(idjob, idcp);
         }
-        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
+        private void fjobdetails_load(int idjob, int idcp)
         {
-            FJobDetails job = new FJobDetails(idJob, idCp, fm);
-            job.MdiParent = fm;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
-            fm.resize(job.Width, job.Height);
+            FJobDetails job = new FJobDetails(idjob, idcp);
+            job.ShowDialog();
         }
+
+        private void uC_Job_Click(object sender, EventArgs e)
+        {
+            loadJobClick.Invoke(this, e);
+        }
+
     }
 }
