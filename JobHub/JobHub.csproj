@@ -56,11 +56,11 @@
     <Compile Include="ChangTheSize.cs" />
     <Compile Include="CompanyDetail.cs" />
     <Compile Include="CompanyDetailDao.cs" />
-    <Compile Include="cv.cs">
+    <Compile Include="FDentailCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cv.Designer.cs">
-      <DependentUpon>cv.cs</DependentUpon>
+    <Compile Include="FDentailCV.Designer.cs">
+      <DependentUpon>FDentailCV.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConection.cs" />
     <Compile Include="FAns.cs">
@@ -111,6 +111,12 @@
     <Compile Include="Fmain.Designer.cs">
       <DependentUpon>Fmain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMyCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMyCV.Designer.cs">
+      <DependentUpon>FMyCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPostJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     <Compile Include="JobDetailDao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uC_CV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_CV.Designer.cs">
+      <DependentUpon>uC_CV.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_CVInfor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     </Compile>
     <Compile Include="uC_Job.Designer.cs">
       <DependentUpon>uC_Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uC_JobDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_JobDescription.Designer.cs">
+      <DependentUpon>uC_JobDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="uc_JobDetail.cs">
       <SubType>UserControl</SubType>
@@ -172,8 +190,8 @@
     <Compile Include="FUserInfo.Designer.cs">
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="cv.resx">
-      <DependentUpon>cv.cs</DependentUpon>
+    <EmbeddedResource Include="FDentailCV.resx">
+      <DependentUpon>FDentailCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAns.resx">
       <DependentUpon>FAns.cs</DependentUpon>
@@ -200,6 +218,9 @@
       <DependentUpon>Fmain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FMyCV.resx">
+      <DependentUpon>FMyCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FPostJob.resx">
       <DependentUpon>FPostJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,11 +240,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="uC_CV.resx">
+      <DependentUpon>uC_CV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_CVInfor.resx">
       <DependentUpon>uc_CVInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_Job.resx">
       <DependentUpon>uC_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_JobDescription.resx">
+      <DependentUpon>uC_JobDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_JobDetail.resx">
       <DependentUpon>uc_JobDetail.cs</DependentUpon>

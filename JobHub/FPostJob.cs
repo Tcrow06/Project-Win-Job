@@ -13,7 +13,7 @@ namespace JobHub
 {
     public partial class FPostJob : Form
     {
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn1);
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         public FPostJob()
         {
             InitializeComponent();

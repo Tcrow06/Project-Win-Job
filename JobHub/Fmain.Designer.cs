@@ -47,8 +47,8 @@
             this.btnJoinJob = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCV = new Guna.UI2.WinForms.Guna2Button();
-            this.btnWriteCV = new Guna.UI2.WinForms.Guna2Button();
             this.btnCvGuide = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOpenCV = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCompany = new Guna.UI2.WinForms.Guna2Button();
             this.btnListCompany = new Guna.UI2.WinForms.Guna2Button();
@@ -67,7 +67,6 @@
             this.btnCvCad = new Guna.UI2.WinForms.Guna2Button();
             this.btnFavouriteCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.btnOpenCV = new Guna.UI2.WinForms.Guna2Button();
             this.pnControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnNav.SuspendLayout();
@@ -338,14 +337,13 @@
             // 
             this.pnSubNav3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.pnSubNav3.Controls.Add(this.btnCV);
-            this.pnSubNav3.Controls.Add(this.btnWriteCV);
             this.pnSubNav3.Controls.Add(this.btnCvGuide);
             this.pnSubNav3.Controls.Add(this.btnOpenCV);
             this.guna2Transition1.SetDecoration(this.pnSubNav3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnSubNav3.Location = new System.Drawing.Point(3, 210);
             this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav3.Name = "pnSubNav3";
-            this.pnSubNav3.Size = new System.Drawing.Size(256, 206);
+            this.pnSubNav3.Size = new System.Drawing.Size(256, 158);
             this.pnSubNav3.TabIndex = 5;
             // 
             // btnCV
@@ -375,34 +373,6 @@
             this.btnCV.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
             // 
-            // btnWriteCV
-            // 
-            this.btnWriteCV.BackColor = System.Drawing.Color.Transparent;
-            this.btnWriteCV.BorderRadius = 8;
-            this.btnWriteCV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnWriteCV, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnWriteCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnWriteCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnWriteCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnWriteCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnWriteCV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnWriteCV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWriteCV.ForeColor = System.Drawing.Color.White;
-            this.btnWriteCV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnWriteCV.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnWriteCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnWriteCV.Image = ((System.Drawing.Image)(resources.GetObject("btnWriteCV.Image")));
-            this.btnWriteCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWriteCV.Location = new System.Drawing.Point(3, 51);
-            this.btnWriteCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnWriteCV.Name = "btnWriteCV";
-            this.btnWriteCV.Size = new System.Drawing.Size(252, 45);
-            this.btnWriteCV.TabIndex = 5;
-            this.btnWriteCV.Text = "Viết CV";
-            this.btnWriteCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWriteCV.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnWriteCV.Click += new System.EventHandler(this.btnWriteCV_Click);
-            // 
             // btnCvGuide
             // 
             this.btnCvGuide.BackColor = System.Drawing.Color.Transparent;
@@ -421,7 +391,7 @@
             this.btnCvGuide.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCvGuide.Image = ((System.Drawing.Image)(resources.GetObject("btnCvGuide.Image")));
             this.btnCvGuide.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCvGuide.Location = new System.Drawing.Point(3, 100);
+            this.btnCvGuide.Location = new System.Drawing.Point(3, 51);
             this.btnCvGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCvGuide.Name = "btnCvGuide";
             this.btnCvGuide.Size = new System.Drawing.Size(252, 45);
@@ -431,6 +401,34 @@
             this.btnCvGuide.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCvGuide.Click += new System.EventHandler(this.btnCvGuide_Click);
             // 
+            // btnOpenCV
+            // 
+            this.btnOpenCV.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpenCV.BorderRadius = 8;
+            this.btnOpenCV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnOpenCV, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnOpenCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpenCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOpenCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOpenCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOpenCV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnOpenCV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenCV.ForeColor = System.Drawing.Color.White;
+            this.btnOpenCV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnOpenCV.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnOpenCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnOpenCV.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenCV.Image")));
+            this.btnOpenCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOpenCV.Location = new System.Drawing.Point(3, 100);
+            this.btnOpenCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOpenCV.Name = "btnOpenCV";
+            this.btnOpenCV.Size = new System.Drawing.Size(252, 45);
+            this.btnOpenCV.TabIndex = 7;
+            this.btnOpenCV.Text = "Cv của tôi";
+            this.btnOpenCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOpenCV.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnOpenCV.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
             // pnSubNav2
             // 
             this.pnSubNav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
@@ -438,7 +436,7 @@
             this.pnSubNav2.Controls.Add(this.btnListCompany);
             this.pnSubNav2.Controls.Add(this.btnTopCompany);
             this.guna2Transition1.SetDecoration(this.pnSubNav2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav2.Location = new System.Drawing.Point(3, 418);
+            this.pnSubNav2.Location = new System.Drawing.Point(3, 370);
             this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav2.Name = "pnSubNav2";
             this.pnSubNav2.Size = new System.Drawing.Size(256, 158);
@@ -545,8 +543,8 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogin.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnLogin.Location = new System.Drawing.Point(3, 578);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(3, 543);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 15, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(256, 45);
             this.btnLogin.TabIndex = 5;
@@ -755,7 +753,7 @@
             this.pnSubNav13.Controls.Add(this.btnCvCad);
             this.pnSubNav13.Controls.Add(this.btnFavouriteCV);
             this.guna2Transition1.SetDecoration(this.pnSubNav13, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav13.Location = new System.Drawing.Point(271, 405);
+            this.pnSubNav13.Location = new System.Drawing.Point(268, 395);
             this.pnSubNav13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav13.Name = "pnSubNav13";
             this.pnSubNav13.Size = new System.Drawing.Size(256, 158);
@@ -855,34 +853,6 @@
             this.guna2HtmlToolTip1.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlToolTip1.TitleForeColor = System.Drawing.Color.White;
             // 
-            // btnOpenCV
-            // 
-            this.btnOpenCV.BackColor = System.Drawing.Color.Transparent;
-            this.btnOpenCV.BorderRadius = 8;
-            this.btnOpenCV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnOpenCV, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnOpenCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOpenCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOpenCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOpenCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOpenCV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnOpenCV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenCV.ForeColor = System.Drawing.Color.White;
-            this.btnOpenCV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnOpenCV.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnOpenCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnOpenCV.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenCV.Image")));
-            this.btnOpenCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOpenCV.Location = new System.Drawing.Point(3, 149);
-            this.btnOpenCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOpenCV.Name = "btnOpenCV";
-            this.btnOpenCV.Size = new System.Drawing.Size(252, 45);
-            this.btnOpenCV.TabIndex = 7;
-            this.btnOpenCV.Text = "Cv của tôi";
-            this.btnOpenCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOpenCV.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnOpenCV.Click += new System.EventHandler(this.guna2Button6_Click);
-            // 
             // Fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -935,7 +905,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTopCompany;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav3;
         private Guna.UI2.WinForms.Guna2Button btnCV;
-        private Guna.UI2.WinForms.Guna2Button btnWriteCV;
         private Guna.UI2.WinForms.Guna2Button btnCvGuide;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Button btnJoinJob;

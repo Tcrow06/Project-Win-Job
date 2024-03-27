@@ -350,7 +350,7 @@
   <data name="btnJoinJob.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cwAAAHMBY8FD/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHtSURBVDhPYxhU
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHtSURBVDhPYxhU
         QIqXly1AVkIgAYSVZASjWrKd5GMDjTRV5cWCYOI8nGxhQLVKEC0QwKimKDonzt/k6ZqJ8b93z8v4D8KH
         l+b+/3qh4/+bE83/T64qAIuBMEhNfIDJU3UF0XlAvUwMirJCtSv64r78v9H3/9/13v+fzrb/B7GfHKz/
         /+tKN5gNEvt2oRPOBtGrJ8T/UFMSa2Aw0pa5ARKAaarNcvvfmOvxPzva5r+3g9b/50ca/xcnOvxPD7f8
@@ -376,21 +376,6 @@
         9l2BY7f2pWAcOHMnugFtyAacgRkw4cC1/+Hdi+FYyTsOjI3SatEMsMmCG2DVs1XeuH+t5PYn318ip0IQ
         BmlCxu6lnW+ABvwSNrDyhxsAw9ue/HhByID+K59SGBgYGBlCQ5n////PAAAHoXfENiaBSQAAAABJRU5E
         rkJggg==
-</value>
-  </data>
-  <data name="btnWriteCV.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH0SURBVDhPYzBN
-        aDc1S24vN0lqKzBN6ggzSW6zNk7rkGNg+M/IQDRoaGAyi2sTNk3t0DZL7HA3S2pLBuJWELZM7hOCqiId
-        gA1N7qiBcsHg3bt36UB85u3bt+5QIezAMrSP0zSxo9s4oU0DKsTw7fHKbqDmf2/evPl//fr1v3fv3k2C
-        SqECw6ROKdOktikgGirEcHR32vr/pzT/f73T///atWv/L1y48P/OnTvLodKowDSxrdkhoYEDymUImnml
-        oHfVzH+/j2v8/7Cd4//LA04gF7x89eoVD1QJKgDFBDBWJgENSgyYcqYmaOblfwHTL/+fvyzj/5tNDP/f
-        7ZL8+/HxDsKB69t/sgWsecbl/zbdZ/+btp/+P2lR6bd5G6ploUpwA5Cz0TUD6dfmmZMTgYFbB1WGHeDS
-        HNB/XgCUwIAJrw+qFAKM0xq4zBLbU0CB596yfQu6ZuvOU1/NMyY2mSW1N4ASl3FimzlUKwODTWa7ICjK
-        TJPalaqWnZqAobnr7CuXjjP8UOWYwCS5I904vkv5/7k1Jgd37fwXPvPCN6I1g4BpcrsH0PlOT/Ytrv1/
-        esX/OYvX/bfoOvPPuvvsS/NJt/mgyvCB/4ygnJhS2ftiQkvD//+bG/73zt/0KXnOMdIyUUlV85GGhuZV
-        //fPFIEKEQEYGADUGh5yjXNo1wAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnCvGuide.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

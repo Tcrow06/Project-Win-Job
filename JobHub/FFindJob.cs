@@ -15,15 +15,14 @@ namespace JobHub
 {
     public partial class FJob : Form
     {
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn1);
-
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         DBConection conection = new DBConection();
         private Fmain fm;
         public FJob()
         {
             InitializeComponent();
-
         }
+
         private void loadJobInPanel()
         {
             //string query = @"SELECT Job.idJob, Job.nameJob, Job.salary, Job.position, Company.nameCompany, Company.idCompany

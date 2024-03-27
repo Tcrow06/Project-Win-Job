@@ -75,9 +75,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(145, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(480, 28);
+            this.label2.Size = new System.Drawing.Size(492, 28);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Để tối ưu tốt nhất cho trải nghiệm của bạn với TopCV,";
+            this.label2.Text = "Để tối ưu tốt nhất cho trải nghiệm của bạn với JobHub,";
             // 
             // label3
             // 
@@ -114,6 +114,7 @@
             this.btnCandidate.Size = new System.Drawing.Size(232, 62);
             this.btnCandidate.TabIndex = 15;
             this.btnCandidate.Text = "Tôi là ứng viên tìm việc";
+            this.btnCandidate.Click += new System.EventHandler(this.btnCandidate_Click);
             // 
             // btnEmploys
             // 

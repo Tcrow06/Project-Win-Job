@@ -20,7 +20,6 @@ namespace JobHub
         CandidateDao cd = new CandidateDao();
         CompanyDetailDao cdd = new CompanyDetailDao();
         JobDetailDao jdd= new JobDetailDao(); 
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn1);
         int i = 2;
 
         private int count = 0;
@@ -33,9 +32,9 @@ namespace JobHub
         }
         public FJobDetails(int idJob,int IdCp, Fmain fm)
         {
+            this.fm = fm;
             this.IdJob = idJob;
             this.IdCp = IdCp;
-            this.fm = fm;
             InitializeComponent();
         }
         private void FJobDetails_Load(object sender, EventArgs e)
@@ -136,7 +135,7 @@ namespace JobHub
             fcd.Dock = DockStyle.Fill;
             fcd.Show();
             fcd.BringToFront();
-            fm.resize(fcd.Width+150, fcd.Height+130);
+            fm.resize(fcd.Width + 150, fcd.Height + 130);
         }
 
 
@@ -145,8 +144,6 @@ namespace JobHub
             can.Id = i++;
             int IdCv = i++;
             cd.Apply(IdJob,can.Id,IdCv);
-
-
         }
     }
 }

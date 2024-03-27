@@ -14,6 +14,7 @@ namespace JobHub
     {
         SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         ChangTheSize changTheSize = new ChangTheSize();
+        
         public void ThucThi(string sqlStr)
         {
             try

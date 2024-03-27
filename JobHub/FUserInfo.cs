@@ -36,12 +36,12 @@ namespace JobHub
 
         private void txtName_Click(object sender, EventArgs e)
         {
-            clickTextbox(lblNavName, txtName);
+            clickTextbox(lblNavName, txtFirstName);
         }
 
         private void txtName_MouseLeave(object sender, EventArgs e)
         {
-            leaveMouse(lblNavName, txtName, "Nhập họ tên");
+            leaveMouse(lblNavName, txtFirstName, "Nhập họ tên");
         }
 
         private void txtPhoneNumber_Click(object sender, EventArgs e)

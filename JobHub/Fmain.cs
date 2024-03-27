@@ -13,10 +13,12 @@ namespace JobHub
 {
     public partial class Fmain : Form
     {
-        private Fmain fm;
+        private Stack<Form> forms = new Stack<Form>();
+
+        public Stack<Form> Forms { get => forms; set => forms = value; }
+
         public Fmain()
         {
-            fm = this;
             InitializeComponent();
 
         }
@@ -25,7 +27,6 @@ namespace JobHub
         {
             this.Height = 550;
             FViews view = new FViews();
-            //FUserInfo view = new FUserInfo();
             view.MdiParent = this;
             view.Dock = DockStyle.Fill;
             resize(view.Width + 200, view.Height + 50);
@@ -106,7 +107,7 @@ namespace JobHub
         {
             if(checkHeight(pnSubNav3, 35))
             {
-                Show(pnSubNav3, 132);
+                Show(pnSubNav3, 102);
             }
             else
             {
@@ -148,38 +149,56 @@ namespace JobHub
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FJob job = new FJob(fm);
-            job.MdiParent = fm;
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FJob job = new FJob(this);
+            job.MdiParent = this;
+            resize(job.Width + 300, job.Height + 50);
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            job.Location= new Point(0,0);
-            resize(job.Width + 200, job.Height + 50);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+            }
             FPostJob job = new FPostJob();
+            resize(job.Width + 200, job.Height + 50);
             job.MdiParent = this;
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(job.Width + 200, job.Height + 50);
+            
         }
 
         private void btnWriteCV_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FCv cv = new FCv();
+            cv.ShowDialog();
+            this.Show();
         }
 
         private void btnCvGuide_Click(object sender, EventArgs e)
         {
+            
+            foreach(Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+            }
             FCVGuide job = new FCVGuide();
+            resize(job.Width + 200, job.Height + 50);
             job.MdiParent = this;
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            resize(job.Width + 200, job.Height + 50);
+            
         }
 
         private void btnJobCompany_Click(object sender, EventArgs e)
@@ -220,10 +239,12 @@ namespace JobHub
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FCv cv = new FCv();
-            cv.ShowDialog();
-            this.Show();
+
+        }
+
+        private Form FormCur(Form form)
+        {
+            return form;
         }
     }
 }
