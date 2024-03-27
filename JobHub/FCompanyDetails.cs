@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,11 @@ namespace JobHub
     public partial class FCompanyDetails : Form
     {
         private int count = 0;
-        private int idCompany;
+        private CompanyDetailDao cdd= new CompanyDetailDao();
+        CandidateDao cd = new CandidateDao();
+        Candidate can = new Candidate();
+        
+        CompanyDetail company= new CompanyDetail();
         public FCompanyDetails()
         {
             InitializeComponent();
@@ -21,12 +26,63 @@ namespace JobHub
         public FCompanyDetails(int idCompany)
         {
             InitializeComponent();
-            this.idCompany = idCompany;
+            company.Id = idCompany;
         }
-
         private void FCompanyDetails_Load(object sender, EventArgs e)
         {
+            LoadCompanyDetail();
+        }
+        private void LoadCompanyDetail()
+        {
+            company = cdd.GetInfoCompanyDetailFromDB(company.Id); 
+            lblCompanyName.Text = company.Name;
+            lblSize.Text = company.Size;
+            lblSize.Width = GetWidth(lblSize);
+            lblEmployee.Location = new Point(lblSize.Location.X+ lblSize.Width - 5, lblSize.Location.Y);
+            lblDescription.Text = company.Address;
+            lblGmail.Text = company.Email;
 
+            lblGmail.Width = GetWidth(lblGmail);
+
+            lblPhone.Text = company.Phone;
+            lblLink.Text = company.Link;
+            lblLink.Width = GetWidth(lblLink);
+            Description(company.Description);
+            
+
+        }
+        private int GetWidth(Guna2HtmlLabel l)
+        {
+            return TextRenderer.MeasureText(l.Text, l.Font).Width;
+        }
+        public void Description(string desc)
+        {
+            Label lb = new Label();
+            lb = lblDescription;
+            lblDescription.Dispose();
+            if (desc.Length > 0)
+            {
+                string[] arr = desc.Split('~');
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    Label lbl = new Label();
+                    lbl.Font = lb.Font;
+                    lbl.Width = lb.Width;
+                    lbl.Height = lb.Font.Height;
+                    lbl.Text = "  *";
+                    lbl.Text += arr[i];
+                    lbl.AutoSize = false;
+
+                    Size textSize = TextRenderer.MeasureText(arr[i], lbl.Font);
+                    int j = textSize.Width / lbl.Width;
+
+                    if (j >= 1)
+                    {
+                        lbl.Height = lbl.Font.Height* (j+1);
+                    }
+                    flpDescription.Controls.Add(lbl);
+                }
+            }
         }
 
         private void btnFollowCompany_Click(object sender, EventArgs e)
@@ -35,10 +91,13 @@ namespace JobHub
             if (count % 2 == 0)
             {
                 btnFollowCompany.Image = Properties.Resources.plus;
+
             }
             else
             {
+                can.Id = 1;
                 btnFollowCompany.Image = Properties.Resources.checkmark;
+                cd.FollowedCompany(can.Id, company.Id);
             }
         }
     }

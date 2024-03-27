@@ -48,7 +48,7 @@
             this.lblSalary.BackColor = System.Drawing.Color.Gainsboro;
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSalary.Location = new System.Drawing.Point(745, 13);
+            this.lblSalary.Location = new System.Drawing.Point(837, 13);
             this.lblSalary.Margin = new System.Windows.Forms.Padding(5);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(85, 20);
@@ -85,7 +85,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(655, 61);
+            this.guna2Button1.Location = new System.Drawing.Point(747, 61);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(124, 35);
             this.guna2Button1.TabIndex = 12;
@@ -108,14 +108,14 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(854, 113);
+            this.guna2Panel1.Size = new System.Drawing.Size(950, 126);
             this.guna2Panel1.TabIndex = 14;
             // 
             // ptbSave
             // 
             this.ptbSave.Image = global::JobHub.Properties.Resources.heartChuaLuu;
             this.ptbSave.ImageRotate = 0F;
-            this.ptbSave.Location = new System.Drawing.Point(793, 62);
+            this.ptbSave.Location = new System.Drawing.Point(885, 62);
             this.ptbSave.Name = "ptbSave";
             this.ptbSave.Size = new System.Drawing.Size(46, 35);
             this.ptbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "uc_JobDetail";
-            this.Size = new System.Drawing.Size(854, 113);
+            this.Size = new System.Drawing.Size(950, 126);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).EndInit();

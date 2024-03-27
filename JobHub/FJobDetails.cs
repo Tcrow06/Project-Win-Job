@@ -79,38 +79,40 @@ namespace JobHub
         {
             if(desc.Length > 0) { 
             string[] arr = desc.Split('~');
-            if (arr[0][0]=='-')
-                    lblInfo.Text =" ";
-            else 
-                lblInfo.Text = "+ " + arr[0];
-            int x = lblInfo.Location.X;
-            int y = lblInfo.Location.Y;
-            pnInfo.Height = lblName.Height + lblInfo.Height + 10;
-            Label lblBefore = new Label();
-                lblBefore = lblInfo;
-            for (int i = 1; i < arr.Length; i++)
-            {
-                Label lblCur = new Label();
-                lblCur.Font = lblInfo.Font;
-                lblCur.Text = " ";
-                if (arr[i][1] != '-')
-                    lblCur.Text = "+";
+/*                lblInfo.Text = "";
+                if (arr[0][0] != '-')
+                    lblInfo.Text = "+ ";
+                lblInfo.Text +=arr[0];*/
+                int x = lblInfo.Location.X;
+                int y = lblInfo.Location.Y - lblInfo.Height;
+                //pnInfo.Height = lblName.Height + lblInfo.Height + 10;
+                pnInfo.Height = lblName.Height  + 10;
 
-                lblCur.Text += arr[i];
-                lblCur.AutoSize = false;
-                lblCur.Size = new Size(lblInfo.Width, lblInfo.Height);
-                Size textSize = TextRenderer.MeasureText(arr[i], lblCur.Font);
-                int j = textSize.Width / lblCur.Width;
-                if (j >= 1)
+                Label lblBefore = new Label();
+                lblBefore = lblInfo;
+                lblInfo.Dispose();
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    lblCur.Height = lblInfo.Height * j;
+                    Label lblCur = new Label();
+                    lblCur.Font = lblInfo.Font;
+                    if (arr[i][0] != '-')
+                        lblCur.Text = "+";
+
+                    lblCur.Text += arr[i];
+                    lblCur.AutoSize = false;
+                    lblCur.Size = new Size(lblInfo.Width, lblInfo.Height);
+                    Size textSize = TextRenderer.MeasureText(arr[i], lblCur.Font);
+                    int j = textSize.Width / lblCur.Width;
+                    if (j >= 1)
+                    {
+                        lblCur.Height = lblInfo.Height * (j);
+                    }
+                    y += lblBefore.Height;
+                    lblBefore = lblCur; 
+                    pnInfo.Height += lblCur.Height;
+                    pnInfo.Controls.Add(lblCur);
+                    lblCur.Location = new Point(x, y);
                 }
-                y += lblBefore.Height;
-                lblBefore = lblCur; 
-                pnInfo.Height += lblCur.Height;
-                pnInfo.Controls.Add(lblCur);
-                lblCur.Location = new Point(x, y);
-            }
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -124,25 +126,27 @@ namespace JobHub
             else
             {
                 btnSave.Image = Properties.Resources.heartDaLuu;
-                string query = String.Format($"insert into SavedJob(");
+                can.Id = 2;
+                cd.SavedJob(IdJob,can.Id);
             }
         }
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FCompanyDetails fcd = new FCompanyDetails(IdCp);
+            fm.resize(fcd.Width + 200, fcd.Height +50);
             fcd.MdiParent = fm;
             fcd.Dock = DockStyle.Fill;
             fcd.Show();
             fcd.BringToFront();
-            fm.resize(fcd.Width + 150, fcd.Height + 130);
+            
         }
 
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            can.Id = i++;
-            int IdCv = i++;
+            can.Id = 2;
+            int IdCv = 2;
             cd.Apply(IdJob,can.Id,IdCv);
         }
     }

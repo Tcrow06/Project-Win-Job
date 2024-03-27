@@ -60,6 +60,7 @@ namespace JobHub
 
         public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
+            //int i = 1;
             while (dr.Read())
             {
                 uC_Job job = new uC_Job();
@@ -71,6 +72,8 @@ namespace JobHub
                 flPanel.Controls.Add(job);
                 int idJob = int.Parse(dr["idJob"].ToString());
                 int idCp = int.Parse(dr["idCompany"].ToString());
+                //MessageBox.Show(i.ToString());
+                //i++;
                 job.loadJobClick += (sender, e) =>
                 {
                     job.LoadJobDetail(sender, e, idJob, idCp, fm);
