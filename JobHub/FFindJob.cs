@@ -88,7 +88,7 @@ namespace JobHub
                 string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName 
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany
-                    where Job.category LIKE N'{button.Text}%'";
+                    where Job.jobField LIKE N'{button.Text}%'";
                 SqlDataReader dr = conection.loadData(query);
                 conection.change(dr, pnJob,fm);
             }
@@ -168,7 +168,7 @@ namespace JobHub
                 string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany
-                    where Job.salary LIKE N'{cboExperience.SelectedItem.ToString()}%'";
+                    where Job.jobSalary LIKE N'{cboExperience.SelectedItem.ToString()}%'";
                 SqlDataReader dr = conection.loadData(query);
                 pnJob.Controls.Clear();
                 conection.change(dr, pnJob,fm);

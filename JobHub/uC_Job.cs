@@ -28,20 +28,14 @@ namespace JobHub
         }
         private void FJobDetails_Load(int idJob, int idCp,Fmain fm)
         {
-/*            FJobDetails job = new FJobDetails(idJob, idCp, fm);
-            job.MdiParent = fm;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
-            //fm.resize(job.Width, job.Height);*/
 
             FJobDetails job = new FJobDetails(idJob, idCp, fm);
             fm.Forms.Push(job);
+            fm.resize(job.Width+160, job.Height + 50);
             job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
-            //fm.resize(job.Width, job.Height);
         }
 
     }

@@ -25,8 +25,14 @@ namespace JobHub
             {
                 dr.Read();
                 cd.Name = dr["companyName"].ToString();
+                cd.Avatar = dr["companyAvatar"].ToString() ;
                 cd.Address = dr["companyAddress"].ToString();
+                cd.Phone = dr["companyPhone"].ToString();
+                cd.Description = dr["companyDescription"].ToString();
+                cd.Email = dr["companyEmail"].ToString();
+                cd.Link = dr["companyLink"].ToString();
                 cd.Size = dr["companySize"].ToString();
+                
             }
             return cd;
         
