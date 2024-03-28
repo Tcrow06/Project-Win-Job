@@ -12,7 +12,7 @@ namespace JobHub.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -35,11 +35,24 @@ namespace JobHub.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+<<<<<<< HEAD
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-QHAH49DL\\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Securi" +
             "ty=True;Encrypt=False;MultipleActiveResultSets=True;")]
+=======
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TU;Initial Catalog=JobWin;Integrated Security=True")]
+>>>>>>> dd2543783333daec2f4194d048e5d09bfaf33081
         public string conn {
             get {
                 return ((string)(this["conn"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TU;Initial Catalog=JobWin;Integrated Security=True")]
+        public string conn2 {
+            get {
+                return ((string)(this["conn2"]));
             }
         }
     }

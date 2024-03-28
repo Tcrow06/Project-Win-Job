@@ -10,33 +10,44 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class uC_Job : UserControl
+    public partial class uC_Job2: UserControl
     {
         public event EventHandler loadJobClick;
-        public uC_Job()
+        public uC_Job2()
         {
             InitializeComponent();
         }
 
-        private void ucJob_Click(object sender, EventArgs e)
+        private void uC_Job2_Click(object sender, EventArgs e)
         {
             loadJobClick?.Invoke(this, e);
         }
+
+
         public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
         {
             FJobDetails_Load(idJob, idCp, fm);
         }
-        private void FJobDetails_Load(int idJob, int idCp,Fmain fm)
+        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
         {
 
             FJobDetails job = new FJobDetails(idJob, idCp, fm);
             fm.Forms.Push(job);
-            fm.resize(job.Width+160, job.Height + 50);
+            fm.resize(job.Width + 160, job.Height + 50);
             job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
         }
 
+        private void ucJob_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblNameCompany_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,5 +42,10 @@ namespace JobHub
         public DateTime Birth { get => birth; set => birth = value; }
         public string Avatar { get => avatar; set => avatar = value; }
         public string Address { get => address; set => address = value; }
+
+        public Candidate(int id)
+        {
+            this.Id = id;
+        }
     }
 }
