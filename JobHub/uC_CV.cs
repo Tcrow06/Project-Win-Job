@@ -12,9 +12,15 @@ namespace JobHub
 {
     public partial class uC_CV : UserControl
     {
+        public EventHandler loadJob;
         public uC_CV()
         {
             InitializeComponent();
+        }
+
+        private void uC_CV_Click(object sender, EventArgs e)
+        {
+            loadJob?.Invoke(sender, e);
         }
     }
 }

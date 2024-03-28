@@ -118,35 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMakeCV.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFNSURBVDhPY0AH
-        1suytW2WZfZaL8+8bLM88wMYr8i4ZLUiq8d2VboWVBkm0F4VygbUNAWI/wDxfxz4j83yrInGM9NYodog
-        AKTZannGHiwacOCsXSiGAAVBNmMojNzS8D96axOGOAiDXALWbLUiQwcogNXZsy5t+r/g6nYMcSj+Aw4T
-        q2UZE7BIgjEBA/6DAhsY6plXsUmCMCEDgPgyyP+fYQJRWxv/Nx1fAMf7H537f/jJRRSxmG1IYbIs8xOK
-        AYX7J/3fcf8kHN9+//j/3Q9PUcRKD05DGLA88yPlXgBFBxYJMCZsQEYfg+WSHF0g5y+mJOFoBCV7cFoA
-        pvdpWBT8Lzow+X/ZIRQ/I/CKzElgzSDguS2XHSi4H0MRbrwXlPyh2iEAZAjUJVi9A8XAFJs1GUMzMgCF
-        CShggYZdA2r4CsIgNkgMlOyhyqCAgQEAXtwE60o54jcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFvSURBVDhPjVPB
-        TsJAEB0SFLg2HPkC9cJHcOPKP3DiH4ArRFH6E/4AFqoQL140xmr01As3ksZYewGlGWd2u6W7NMGXvHR3
-        9s3rTHcKe3DgjHgOU3gjRjCDb7Hm2A2cJqocXMMxiW0Sx0RULLvldE3cEq+EVgMHpnCbEQouPhcY/ARo
-        3VlanOjqJvLNmmi8HKOCF3lmJUgtXcpk7lmWlh52/W6SuoMTOFhxK1mTLdVxArS4yAS15HW8Fs9NvBFP
-        NjEqGbIBf20R6Pk9IWSwUfgbinXno5OaTYIJltySMvDYIOJN7b4mBAxO5pgyqD/UsfncTCtpvbSUQcgG
-        IW8K0wL2/T6239vqUDPgfeOpgfbSRmue3sqX1oJJ0yCH1IKcurzD/xgMQIyncY2KBwySa2TweO4LDhmM
-        ZDJDjrJrCMQorzYrrM6rWpzansEjHCXZCdiEx9NopzgrZpP5bLSfnIX8JkPia/Ir8zV7xMGuZwWAP0Mr
-        1MDAeCMBAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="guna2CirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFKQSURBVHhe7b0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFKQSURBVHhe7b0J
         dBXXne7r9Eunk7793lrpzk2nO7mv0zEeMHkd53Z3BhuMmCcNIJDEJDEYJEYNINDAJEACiUHMg8AGG2xs
         MwVPzDZGTMJDnHggHuNkpdudXLcTT0nARtpv76N9zOHok3TqnBp2nfp+a/0WjmPq1Kna+//tU7Vr1w2E
         EEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGE
@@ -500,6 +475,31 @@
         6xNCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
         hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
         hABuuOH/B6pqG3TiMQ+uAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnMakeCV.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFNSURBVDhPY0AH
+        1suytW2WZfZaL8+8bLM88wMYr8i4ZLUiq8d2VboWVBkm0F4VygbUNAWI/wDxfxz4j83yrInGM9NYodog
+        AKTZannGHiwacOCsXSiGAAVBNmMojNzS8D96axOGOAiDXALWbLUiQwcogNXZsy5t+r/g6nYMcSj+Aw4T
+        q2UZE7BIgjEBA/6DAhsY6plXsUmCMCEDgPgyyP+fYQJRWxv/Nx1fAMf7H537f/jJRRSxmG1IYbIs8xOK
+        AYX7J/3fcf8kHN9+//j/3Q9PUcRKD05DGLA88yPlXgBFBxYJMCZsQEYfg+WSHF0g5y+mJOFoBCV7cFoA
+        pvdpWBT8Lzow+X/ZIRQ/I/CKzElgzSDguS2XHSi4H0MRbrwXlPyh2iEAZAjUJVi9A8XAFJs1GUMzMgCF
+        CShggYZdA2r4CsIgNkgMlOyhyqCAgQEAXtwE60o54jcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFvSURBVDhPjVPB
+        TsJAEB0SFLg2HPkC9cJHcOPKP3DiH4ArRFH6E/4AFqoQL140xmr01As3ksZYewGlGWd2u6W7NMGXvHR3
+        9s3rTHcKe3DgjHgOU3gjRjCDb7Hm2A2cJqocXMMxiW0Sx0RULLvldE3cEq+EVgMHpnCbEQouPhcY/ARo
+        3VlanOjqJvLNmmi8HKOCF3lmJUgtXcpk7lmWlh52/W6SuoMTOFhxK1mTLdVxArS4yAS15HW8Fs9NvBFP
+        NjEqGbIBf20R6Pk9IWSwUfgbinXno5OaTYIJltySMvDYIOJN7b4mBAxO5pgyqD/UsfncTCtpvbSUQcgG
+        IW8K0wL2/T6239vqUDPgfeOpgfbSRmue3sqX1oJJ0yCH1IKcurzD/xgMQIyncY2KBwySa2TweO4LDhmM
+        ZDJDjrJrCMQorzYrrM6rWpzansEjHCXZCdiEx9NopzgrZpP5bLSfnIX8JkPia/Ir8zV7xMGuZwWAP0Mr
+        1MDAeCMBAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
