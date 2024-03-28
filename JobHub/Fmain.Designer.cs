@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -105,22 +105,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // pnControlBox
             // 
@@ -665,6 +665,7 @@
             this.btnPostJob.Text = "Đăng công việc";
             this.btnPostJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPostJob.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnPostJob.Click += new System.EventHandler(this.btnPostJob_Click);
             // 
             // btnListJob
             // 
@@ -903,7 +904,6 @@
             this.pnAcount.TabIndex = 10;
             // 
             // lblNameAcc
-<<<<<<< HEAD
             // 
             this.lblNameAcc.AutoSize = true;
             this.lblNameAcc.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -916,46 +916,6 @@
             this.lblNameAcc.Size = new System.Drawing.Size(102, 19);
             this.lblNameAcc.TabIndex = 1;
             this.lblNameAcc.Text = "Lê Trường Sơn";
-=======
-            // 
-            this.lblNameAcc.AutoSize = true;
-            this.lblNameAcc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.lblNameAcc, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblNameAcc.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameAcc.ForeColor = System.Drawing.Color.White;
-            this.lblNameAcc.Location = new System.Drawing.Point(47, 10);
-            this.lblNameAcc.MaximumSize = new System.Drawing.Size(200, 0);
-            this.lblNameAcc.Name = "lblNameAcc";
-            this.lblNameAcc.Size = new System.Drawing.Size(116, 21);
-            this.lblNameAcc.TabIndex = 1;
-            this.lblNameAcc.Text = "Lê Trường Sơn";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 1);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(37, 37);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // picDown
-            // 
-            this.guna2Transition1.SetDecoration(this.picDown, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.picDown.Image = ((System.Drawing.Image)(resources.GetObject("picDown.Image")));
-            this.picDown.ImageRotate = 0F;
-            this.picDown.Location = new System.Drawing.Point(262, 11);
-            this.picDown.Name = "picDown";
-            this.picDown.Size = new System.Drawing.Size(16, 17);
-            this.picDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDown.TabIndex = 11;
-            this.picDown.TabStop = false;
-            this.picDown.Click += new System.EventHandler(this.picDown_Click);
->>>>>>> 31404a96c9d9fe638eb0fbfeb9d75266f025d1bf
             // 
             // guna2CirclePictureBox1
             // 
@@ -971,7 +931,6 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-<<<<<<< HEAD
             // picDown
             // 
             this.guna2Transition1.SetDecoration(this.picDown, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1000,8 +959,6 @@
             this.picUp.TabStop = false;
             this.picUp.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
-=======
->>>>>>> 31404a96c9d9fe638eb0fbfeb9d75266f025d1bf
             // pnContainMenu
             // 
             this.pnContainMenu.BackColor = System.Drawing.SystemColors.Control;
@@ -1034,16 +991,10 @@
             this.btnOut.FillColor = System.Drawing.Color.White;
             this.btnOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-<<<<<<< HEAD
             this.btnOut.Location = new System.Drawing.Point(7, 148);
             this.btnOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(243, 36);
-=======
-            this.btnOut.Location = new System.Drawing.Point(8, 185);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(273, 45);
->>>>>>> 31404a96c9d9fe638eb0fbfeb9d75266f025d1bf
             this.btnOut.TabIndex = 14;
             this.btnOut.Text = "Đăng xuất";
             // 
@@ -1106,16 +1057,10 @@
             this.btnJobMenu.FillColor = System.Drawing.Color.White;
             this.btnJobMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-<<<<<<< HEAD
             this.btnJobMenu.Location = new System.Drawing.Point(4, 12);
             this.btnJobMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobMenu.Name = "btnJobMenu";
             this.btnJobMenu.Size = new System.Drawing.Size(243, 36);
-=======
-            this.btnJobMenu.Location = new System.Drawing.Point(5, 15);
-            this.btnJobMenu.Name = "btnJobMenu";
-            this.btnJobMenu.Size = new System.Drawing.Size(273, 45);
->>>>>>> 31404a96c9d9fe638eb0fbfeb9d75266f025d1bf
             this.btnJobMenu.TabIndex = 11;
             this.btnJobMenu.Text = "Việc làm";
             // 
@@ -1147,6 +1092,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "Fmain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.Load += new System.EventHandler(this.Fmain_Load);
             this.SizeChanged += new System.EventHandler(this.Fmain_SizeChanged);

@@ -18,24 +18,25 @@ namespace JobHub
 
         public JobDetail GetInfoJobDetailFromDB(int idJob)
         {
-            JobDetail jb = new JobDetail();
+            JobDetail jd = new JobDetail();
 
             string query = $"SELECT*from Job where Job.idJob = {idJob}";
             SqlDataReader dr = dbc.loadData(query);
             if (dr.HasRows)
             {
                 dr.Read();
-                jb.NameJob = dr["jobName"].ToString();
-                jb.Salary = dr["jobSalary"].ToString();
-                jb.Address= dr["jobAddress"].ToString();
-                jb.Experience = dr["jobExperience"].ToString();
-                jb.Description = dr["jobDescription"].ToString();
-                jb.Requirement = dr["jobRequirement"].ToString();
-                jb.Benefit = dr["jobBenefit"].ToString();
-                jb.RegisterDead = Convert.ToDateTime(dr["jobRegisterDead"]);
-        
+                jd.NameJob = dr["jobName"].ToString();
+                jd.Salary = dr["jobSalary"].ToString();
+                jd.Address= dr["jobAddress"].ToString();
+                jd.Experience = dr["jobExperience"].ToString();
+                jd.Description = dr["jobDescription"].ToString();
+                jd.Requirement = dr["jobRequirement"].ToString();
+                jd.Benefit = dr["jobBenefit"].ToString();
+                jd.RegisterDead = Convert.ToDateTime(dr["jobRegisterDead"]);
+                jd.PostDate = Convert.ToDateTime(dr["jobPostDate"]);
+
             }
-            return jb;
+            return jd;
         }
     }
 }

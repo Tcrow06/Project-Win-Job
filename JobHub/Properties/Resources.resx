@@ -169,6 +169,12 @@
   <data name="iconconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconconnect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,14 +202,11 @@
   <data name="jobhub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jobhub1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mi-desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mi-desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="jobhub11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jobhub1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mi-desktop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mi-desktop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,7 +229,7 @@
   <data name="png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="up-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\up-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

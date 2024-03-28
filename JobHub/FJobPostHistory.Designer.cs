@@ -108,7 +108,7 @@
             this.dgJobPostHistory.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgJobPostHistory.RowTemplate.Height = 24;
             this.dgJobPostHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgJobPostHistory.Size = new System.Drawing.Size(1068, 494);
+            this.dgJobPostHistory.Size = new System.Drawing.Size(1135, 494);
             this.dgJobPostHistory.TabIndex = 51;
             this.dgJobPostHistory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgJobPostHistory.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -136,9 +136,10 @@
             // 
             this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.date.HeaderText = "Ngày";
-            this.date.MinimumWidth = 6;
+            this.date.MinimumWidth = 100;
             this.date.Name = "date";
             this.date.ReadOnly = true;
+            this.date.Width = 211;
             // 
             // JobName
             // 
@@ -175,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1129, 617);
+            this.ClientSize = new System.Drawing.Size(1188, 617);
             this.Controls.Add(this.dgJobPostHistory);
             this.Controls.Add(this.lblAddress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

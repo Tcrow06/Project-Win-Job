@@ -173,8 +173,9 @@ namespace JobHub
 
             }
             FJob job = new FJob(this);
+            forms.Push(job);
             job.MdiParent = this;
-            resize(job.Width + 300, job.Height + 50);
+            resize(job.Width + 200, job.Height + 50);
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
@@ -272,7 +273,7 @@ namespace JobHub
         {
             foreach (Form formdelete in this.MdiChildren)
             {
-                formdelete.Close();
+                formdelete.Hide();
             }
             form.MdiParent = this;
             resize(form.Width + 200, form.Height + 50);
@@ -282,7 +283,7 @@ namespace JobHub
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Forms.Count.ToString());
+            //MessageBox.Show(Forms.Count.ToString());
             if(Forms.Count >= 1)
             {
                 Forms.Pop();
@@ -318,6 +319,20 @@ namespace JobHub
                 formdelete.Close();
             }
             FJobPostHistory jsh = new FJobPostHistory();
+            jsh.MdiParent = this;
+            resize(jsh.Width + 200, jsh.Height + 50);
+            jsh.Dock = DockStyle.Fill;
+            jsh.Show();
+            jsh.BringToFront();
+        }
+
+        private void btnPostJob_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+            }
+            FPostJob jsh = new FPostJob();
             jsh.MdiParent = this;
             resize(jsh.Width + 200, jsh.Height + 50);
             jsh.Dock = DockStyle.Fill;

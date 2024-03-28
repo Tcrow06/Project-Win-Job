@@ -17,6 +17,7 @@ namespace JobHub
         private string email;
         private string link;
         private string size;
+         
 
 
         public CompanyDetail()
