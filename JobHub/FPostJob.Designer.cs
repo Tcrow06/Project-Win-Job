@@ -64,9 +64,9 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dtpDateDead = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpDateDead = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1.SuspendLayout();
             this.pnCall.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -399,6 +399,7 @@
             this.postJobBtn.Text = "Đăng công việc";
             this.postJobBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.postJobBtn.TextOffset = new System.Drawing.Point(15, 0);
+            this.postJobBtn.Click += new System.EventHandler(this.postJobBtn_Click);
             // 
             // guna2ImageButton1
             // 
@@ -586,18 +587,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(643, 463);
             this.guna2Panel2.TabIndex = 9;
             // 
-            // dtpDateDead
+            // label11
             // 
-            this.dtpDateDead.Checked = true;
-            this.dtpDateDead.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpDateDead.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDateDead.Location = new System.Drawing.Point(9, 128);
-            this.dtpDateDead.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDateDead.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDateDead.Name = "dtpDateDead";
-            this.dtpDateDead.Size = new System.Drawing.Size(277, 36);
-            this.dtpDateDead.TabIndex = 64;
-            this.dtpDateDead.Value = new System.DateTime(2024, 3, 27, 19, 40, 57, 765);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(315, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 28);
+            this.label11.TabIndex = 66;
+            this.label11.Text = "Chuyên ngành";
             // 
             // label8
             // 
@@ -610,16 +609,18 @@
             this.label8.TabIndex = 65;
             this.label8.Text = "Hạn chót apply";
             // 
-            // label11
+            // dtpDateDead
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(315, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(145, 28);
-            this.label11.TabIndex = 66;
-            this.label11.Text = "Chuyên ngành";
+            this.dtpDateDead.Checked = true;
+            this.dtpDateDead.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDateDead.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDateDead.Location = new System.Drawing.Point(9, 128);
+            this.dtpDateDead.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDateDead.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDateDead.Name = "dtpDateDead";
+            this.dtpDateDead.Size = new System.Drawing.Size(277, 36);
+            this.dtpDateDead.TabIndex = 64;
+            this.dtpDateDead.Value = new System.DateTime(2024, 3, 27, 19, 40, 57, 765);
             // 
             // FPostJob
             // 

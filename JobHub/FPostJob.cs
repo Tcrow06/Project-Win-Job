@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace JobHub
 {
     public partial class FPostJob : Form
     {
+        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         public FPostJob()
         {
             InitializeComponent();
@@ -339,6 +341,24 @@ namespace JobHub
 
           
 
+        }
+
+        private void postJobBtn_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT MAX(idJob) FROM Job";
+            SqlConnection sqlCnn;
+            SqlCommand sqlCmd;
+            int storeMaxId = 0;
+            sqlConnection.Open();
+
+            sqlCmd = new SqlCommand(sql, sqlConnection);
+            storeMaxId = Convert.ToInt32(sqlCmd.ExecuteScalar());
+
+            JobDetailDao jd = new JobDetailDao();
+
+            storeMaxId += 1;
+            JobDetail A = new JobDetail(storeMaxId, txtName.Text, 3, txtSalary.Text, txtAddress.Text, txtDescription.Text, txtExp.Text, txtRequire.Text, txtBenefit.Text, cboCatogory.Text, DateTime.Today, dtpDateDead.Value);
+            jd.Them(A);
         }
     }
 }

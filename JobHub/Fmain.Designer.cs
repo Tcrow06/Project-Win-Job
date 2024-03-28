@@ -910,8 +910,8 @@
             this.guna2Transition1.SetDecoration(this.lblNameAcc, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblNameAcc.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameAcc.ForeColor = System.Drawing.Color.White;
-            this.lblNameAcc.Location = new System.Drawing.Point(46, 6);
-            this.lblNameAcc.MaximumSize = new System.Drawing.Size(178, 0);
+            this.lblNameAcc.Location = new System.Drawing.Point(47, 10);
+            this.lblNameAcc.MaximumSize = new System.Drawing.Size(200, 0);
             this.lblNameAcc.Name = "lblNameAcc";
             this.lblNameAcc.Size = new System.Drawing.Size(102, 19);
             this.lblNameAcc.TabIndex = 1;
@@ -991,10 +991,10 @@
             this.btnOut.FillColor = System.Drawing.Color.White;
             this.btnOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.btnOut.Location = new System.Drawing.Point(7, 148);
+            this.btnOut.Location = new System.Drawing.Point(8, 185);
             this.btnOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(243, 36);
+            this.btnOut.Size = new System.Drawing.Size(273, 45);
             this.btnOut.TabIndex = 14;
             this.btnOut.Text = "Đăng xuất";
             // 
@@ -1057,10 +1057,10 @@
             this.btnJobMenu.FillColor = System.Drawing.Color.White;
             this.btnJobMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.btnJobMenu.Location = new System.Drawing.Point(4, 12);
+            this.btnJobMenu.Location = new System.Drawing.Point(5, 15);
             this.btnJobMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobMenu.Name = "btnJobMenu";
-            this.btnJobMenu.Size = new System.Drawing.Size(243, 36);
+            this.btnJobMenu.Size = new System.Drawing.Size(273, 45);
             this.btnJobMenu.TabIndex = 11;
             this.btnJobMenu.Text = "Việc làm";
             // 

@@ -338,6 +338,16 @@ namespace JobHub
             jsh.Dock = DockStyle.Fill;
             jsh.Show();
             jsh.BringToFront();
+/*=======
+
+            }
+            FPostJob job = new FPostJob();
+            job.MdiParent = this;
+            resize(job.Width + 300, job.Height + 50);
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+>>>>>>> c498e217e719322c672c1042ab5c3e597960eeed*/
         }
     }
 }
