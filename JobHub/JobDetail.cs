@@ -18,14 +18,15 @@ namespace JobHub
         private string requirement;
         private string benefit;
         private string category;
+        private DateTime postDate;
+        private DateTime registerDead;
         public JobDetail()
         {
 
         }
 
-        public JobDetail(int idJob, string nameJob, int idCompany, string salary
-                , string address, string description, string experience, 
-                string requirement, string benefit, string category)
+        public JobDetail(int idJob, string nameJob, int idCompany, string salary,
+            string address, string description, string experience, string requirement, string benefit, string category, DateTime postDate, DateTime registerDead)
         {
             this.idJob = idJob;
             this.nameJob = nameJob;
@@ -37,6 +38,8 @@ namespace JobHub
             this.requirement = requirement;
             this.benefit = benefit;
             this.category = category;
+            this.PostDate = postDate;
+            this.RegisterDead = registerDead;
         }
 
         public int IdJob { get => idJob; set => idJob = value; }
@@ -49,5 +52,7 @@ namespace JobHub
         public string Benefit { get => benefit; set => benefit = value; }
         public string Category { get => category; set => category = value; }
         public string Experience { get => experience; set => experience = value; }
+        public DateTime PostDate { get => postDate; set => postDate = value; }
+        public DateTime RegisterDead { get => registerDead; set => registerDead = value; }
     }
 }

@@ -36,7 +36,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpUC_JobDetail = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -61,10 +61,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flpDescription = new System.Windows.Forms.FlowLayoutPanel();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.uc_JobDetail1 = new JobHub.uc_JobDetail();
-            this.uc_JobDetail2 = new JobHub.uc_JobDetail();
-            this.uc_JobDetail3 = new JobHub.uc_JobDetail();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).BeginInit();
@@ -176,18 +172,15 @@
             this.guna2HtmlLabel9.TabIndex = 44;
             this.guna2HtmlLabel9.Text = "Tuyển dụng";
             // 
-            // flowLayoutPanel1
+            // flpUC_JobDetail
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel1.Controls.Add(this.uc_JobDetail1);
-            this.flowLayoutPanel1.Controls.Add(this.uc_JobDetail2);
-            this.flowLayoutPanel1.Controls.Add(this.uc_JobDetail3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 408);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(997, 312);
-            this.flowLayoutPanel1.TabIndex = 45;
+            this.flpUC_JobDetail.AutoScroll = true;
+            this.flpUC_JobDetail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flpUC_JobDetail.Location = new System.Drawing.Point(21, 408);
+            this.flpUC_JobDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpUC_JobDetail.Name = "flpUC_JobDetail";
+            this.flpUC_JobDetail.Size = new System.Drawing.Size(997, 304);
+            this.flpUC_JobDetail.TabIndex = 45;
             // 
             // label2
             // 
@@ -230,7 +223,7 @@
             this.guna2PictureBox12.Location = new System.Drawing.Point(8, 437);
             this.guna2PictureBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2PictureBox12.Name = "guna2PictureBox12";
-            this.guna2PictureBox12.Size = new System.Drawing.Size(1022, 302);
+            this.guna2PictureBox12.Size = new System.Drawing.Size(1022, 290);
             this.guna2PictureBox12.TabIndex = 42;
             this.guna2PictureBox12.TabStop = false;
             // 
@@ -491,27 +484,6 @@
             this.lblDescription.TabIndex = 49;
             this.lblDescription.Text = "Salemall được thành lập 2016, thành viên của tập đoàn iNET";
             // 
-            // uc_JobDetail1
-            // 
-            this.uc_JobDetail1.Location = new System.Drawing.Point(3, 3);
-            this.uc_JobDetail1.Name = "uc_JobDetail1";
-            this.uc_JobDetail1.Size = new System.Drawing.Size(950, 126);
-            this.uc_JobDetail1.TabIndex = 0;
-            // 
-            // uc_JobDetail2
-            // 
-            this.uc_JobDetail2.Location = new System.Drawing.Point(3, 135);
-            this.uc_JobDetail2.Name = "uc_JobDetail2";
-            this.uc_JobDetail2.Size = new System.Drawing.Size(950, 126);
-            this.uc_JobDetail2.TabIndex = 1;
-            // 
-            // uc_JobDetail3
-            // 
-            this.uc_JobDetail3.Location = new System.Drawing.Point(3, 267);
-            this.uc_JobDetail3.Name = "uc_JobDetail3";
-            this.uc_JobDetail3.Size = new System.Drawing.Size(950, 126);
-            this.uc_JobDetail3.TabIndex = 2;
-            // 
             // FCompanyDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,7 +497,7 @@
             this.Controls.Add(this.lblGmail);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpUC_JobDetail);
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.guna2PictureBox11);
             this.Controls.Add(this.guna2PictureBox12);
@@ -553,7 +525,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "s";
             this.Load += new System.EventHandler(this.FCompanyDetails_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).EndInit();
@@ -601,7 +572,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox11;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox12;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox13;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpUC_JobDetail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAddress;
         private Guna.UI2.WinForms.Guna2PictureBox ptbGmail;
@@ -611,8 +582,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.FlowLayoutPanel flpDescription;
         private System.Windows.Forms.Label lblDescription;
-        private uc_JobDetail uc_JobDetail1;
-        private uc_JobDetail uc_JobDetail2;
-        private uc_JobDetail uc_JobDetail3;
     }
 }

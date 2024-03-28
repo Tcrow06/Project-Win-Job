@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
 
 namespace JobHub
 {
@@ -31,7 +32,8 @@ namespace JobHub
                 jb.Description = dr["jobDescription"].ToString();
                 jb.Requirement = dr["jobRequirement"].ToString();
                 jb.Benefit = dr["jobBenefit"].ToString();
-
+                jb.RegisterDead = Convert.ToDateTime(dr["jobRegisterDead"]);
+        
             }
             return jb;
         }

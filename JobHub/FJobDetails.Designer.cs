@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FJobDetails));
             this.pnJobInfor = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblRegisterDead = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lblExperience = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@
             this.pnJobInfor.BorderRadius = 15;
             this.pnJobInfor.BorderThickness = 1;
             this.pnJobInfor.Controls.Add(this.label12);
-            this.pnJobInfor.Controls.Add(this.label18);
+            this.pnJobInfor.Controls.Add(this.lblRegisterDead);
             this.pnJobInfor.Controls.Add(this.label17);
             this.pnJobInfor.Controls.Add(this.lblExperience);
             this.pnJobInfor.Controls.Add(this.lblAddress);
@@ -120,17 +120,17 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "Kinh nghiệm";
             // 
-            // label18
+            // lblRegisterDead
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Silver;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 8.3F);
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(138, 145);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 19);
-            this.label18.TabIndex = 23;
-            this.label18.Text = "5/5/2024";
+            this.lblRegisterDead.AutoSize = true;
+            this.lblRegisterDead.BackColor = System.Drawing.Color.Silver;
+            this.lblRegisterDead.Font = new System.Drawing.Font("Segoe UI", 8.3F);
+            this.lblRegisterDead.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblRegisterDead.Location = new System.Drawing.Point(138, 145);
+            this.lblRegisterDead.Name = "lblRegisterDead";
+            this.lblRegisterDead.Size = new System.Drawing.Size(67, 19);
+            this.lblRegisterDead.TabIndex = 23;
+            this.lblRegisterDead.Text = "5/5/2024";
             // 
             // label17
             // 
@@ -610,7 +610,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblExperience;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblRegisterDead;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label19;
