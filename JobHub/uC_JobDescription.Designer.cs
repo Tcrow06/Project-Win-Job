@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblReviewJob = new System.Windows.Forms.Label();
+            this.lblSince = new System.Windows.Forms.Label();
+            this.lblViewJob = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel4
             // 
-            this.guna2Panel4.Controls.Add(this.label16);
-            this.guna2Panel4.Controls.Add(this.label17);
-            this.guna2Panel4.Controls.Add(this.label18);
+            this.guna2Panel4.Controls.Add(this.lblReviewJob);
+            this.guna2Panel4.Controls.Add(this.lblSince);
+            this.guna2Panel4.Controls.Add(this.lblViewJob);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
@@ -47,41 +47,41 @@
             this.guna2Panel4.Size = new System.Drawing.Size(444, 140);
             this.guna2Panel4.TabIndex = 11;
             // 
-            // label16
+            // lblReviewJob
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(14, 50);
-            this.label16.MaximumSize = new System.Drawing.Size(440, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(160, 28);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Làm gì ở vị trí đó";
+            this.lblReviewJob.AutoSize = true;
+            this.lblReviewJob.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReviewJob.ForeColor = System.Drawing.Color.Gray;
+            this.lblReviewJob.Location = new System.Drawing.Point(14, 50);
+            this.lblReviewJob.MaximumSize = new System.Drawing.Size(440, 0);
+            this.lblReviewJob.Name = "lblReviewJob";
+            this.lblReviewJob.Size = new System.Drawing.Size(160, 28);
+            this.lblReviewJob.TabIndex = 5;
+            this.lblReviewJob.Text = "Làm gì ở vị trí đó";
             // 
-            // label17
+            // lblSince
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(304, 8);
-            this.label17.MaximumSize = new System.Drawing.Size(238, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(129, 28);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "2020-present";
+            this.lblSince.AutoSize = true;
+            this.lblSince.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSince.ForeColor = System.Drawing.Color.Gray;
+            this.lblSince.Location = new System.Drawing.Point(304, 8);
+            this.lblSince.MaximumSize = new System.Drawing.Size(238, 0);
+            this.lblSince.Name = "lblSince";
+            this.lblSince.Size = new System.Drawing.Size(129, 28);
+            this.lblSince.TabIndex = 4;
+            this.lblSince.Text = "2020-present";
             // 
-            // label18
+            // lblViewJob
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(13, 8);
-            this.label18.MaximumSize = new System.Drawing.Size(160, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 32);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Làm ở vị trí";
+            this.lblViewJob.AutoSize = true;
+            this.lblViewJob.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewJob.ForeColor = System.Drawing.Color.Black;
+            this.lblViewJob.Location = new System.Drawing.Point(13, 8);
+            this.lblViewJob.MaximumSize = new System.Drawing.Size(160, 0);
+            this.lblViewJob.Name = "lblViewJob";
+            this.lblViewJob.Size = new System.Drawing.Size(138, 32);
+            this.lblViewJob.TabIndex = 3;
+            this.lblViewJob.Text = "Làm ở vị trí";
             // 
             // uC_JobDescription
             // 
@@ -98,9 +98,9 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        public Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        public System.Windows.Forms.Label lblReviewJob;
+        public System.Windows.Forms.Label lblSince;
+        public System.Windows.Forms.Label lblViewJob;
     }
 }

@@ -198,7 +198,7 @@ namespace JobHub
         private void btnWriteCV_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FCv cv = new FCv();
+            FCVDetail cv = new FCVDetail();
             cv.ShowDialog();
             this.Show();
         }
@@ -257,7 +257,15 @@ namespace JobHub
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+            }
+            FMyCV fMyCV = new FMyCV();
+            fMyCV.MdiParent = this;
+            resize(fMyCV.Width + 200, fMyCV.Height + 50);
+            fMyCV.Dock = DockStyle.Fill;
+            fMyCV.Show();
         }
 
         private void loadForm(Form form)

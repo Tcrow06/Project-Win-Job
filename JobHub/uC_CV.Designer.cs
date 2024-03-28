@@ -32,7 +32,7 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblJobName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblIntroduce = new System.Windows.Forms.Label();
@@ -71,16 +71,16 @@
             this.lblLastName.TabIndex = 9;
             this.lblLastName.Text = "TRƯỜNG SƠN";
             // 
-            // label9
+            // lblJobName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(127, 61);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 21);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Fullstack developer";
+            this.lblJobName.AutoSize = true;
+            this.lblJobName.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobName.ForeColor = System.Drawing.Color.Black;
+            this.lblJobName.Location = new System.Drawing.Point(127, 61);
+            this.lblJobName.Name = "lblJobName";
+            this.lblJobName.Size = new System.Drawing.Size(143, 21);
+            this.lblJobName.TabIndex = 8;
+            this.lblJobName.Text = "Fullstack developer";
             // 
             // lblFirstName
             // 
@@ -134,12 +134,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Separator5);
             this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblJobName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Margin = new System.Windows.Forms.Padding(15, 15, 7, 7);
             this.Name = "uC_CV";
             this.Size = new System.Drawing.Size(321, 238);
+            this.Click += new System.EventHandler(this.uC_CV_Click);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,13 +149,13 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblIntroduce;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator5;
+        public System.Windows.Forms.Label lblLastName;
+        public System.Windows.Forms.Label lblJobName;
+        public System.Windows.Forms.Label lblFirstName;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblIntroduce;
+        public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

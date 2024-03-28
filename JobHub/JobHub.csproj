@@ -63,11 +63,11 @@
     <Compile Include="FCustomerMessageBox.Designer.cs">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDentailCV.cs">
+    <Compile Include="FCVDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDentailCV.Designer.cs">
-      <DependentUpon>FDentailCV.cs</DependentUpon>
+    <Compile Include="FCVDetail.Designer.cs">
+      <DependentUpon>FCVDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConection.cs" />
     <Compile Include="FAns.cs">
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="FCustomerMessageBox.resx">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDentailCV.resx">
-      <DependentUpon>FDentailCV.cs</DependentUpon>
+    <EmbeddedResource Include="FCVDetail.resx">
+      <DependentUpon>FCVDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAns.resx">
       <DependentUpon>FAns.cs</DependentUpon>
