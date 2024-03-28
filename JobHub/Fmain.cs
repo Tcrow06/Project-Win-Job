@@ -324,5 +324,20 @@ namespace JobHub
             jsh.Show();
             jsh.BringToFront();
         }
+
+        private void btnPostJob_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FPostJob job = new FPostJob();
+            job.MdiParent = this;
+            resize(job.Width + 300, job.Height + 50);
+            job.Dock = DockStyle.Fill;
+            job.Show();
+            job.BringToFront();
+        }
     }
 }
