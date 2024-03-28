@@ -144,7 +144,7 @@ namespace JobHub
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FCompanyDetails fcd = new FCompanyDetails(IdCp);
+            FCompanyDetails fcd = new FCompanyDetails(idCp, fm);
             fm.Forms.Push(fcd);
             fm.resize(fcd.Width + 200, fcd.Height +50);
             fcd.MdiParent = fm;

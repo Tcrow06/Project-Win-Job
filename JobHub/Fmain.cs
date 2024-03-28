@@ -302,5 +302,19 @@ namespace JobHub
             setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
             setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
         }
+
+        private void btnListJob_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+            }
+            FJobPostHistory jsh = new FJobPostHistory();
+            jsh.MdiParent = this;
+            resize(jsh.Width + 200, jsh.Height + 50);
+            jsh.Dock = DockStyle.Fill;
+            jsh.Show();
+            jsh.BringToFront();
+        }
     }
 }
