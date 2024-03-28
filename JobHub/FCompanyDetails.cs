@@ -13,19 +13,21 @@ namespace JobHub
 {
     public partial class FCompanyDetails : Form
     {
-        private int count = 0;
+        private bool saveCheck = false;
         private CompanyDetailDao cdd= new CompanyDetailDao();
         CandidateDao cd = new CandidateDao();
         Candidate can = new Candidate();
+        Fmain fm = new Fmain();
         
         CompanyDetail company= new CompanyDetail();
         public FCompanyDetails()
         {
             InitializeComponent();
         }
-        public FCompanyDetails(int idCompany)
+        public FCompanyDetails(int idCompany, Fmain fm)
         {
             InitializeComponent();
+            this.fm = fm;   
             company.Id = idCompany;
         }
         private void FCompanyDetails_Load(object sender, EventArgs e)
@@ -41,14 +43,12 @@ namespace JobHub
             lblEmployee.Location = new Point(lblSize.Location.X+ lblSize.Width - 5, lblSize.Location.Y);
             lblDescription.Text = company.Address;
             lblGmail.Text = company.Email;
-
             lblGmail.Width = GetWidth(lblGmail);
-
             lblPhone.Text = company.Phone;
             lblLink.Text = company.Link;
             lblLink.Width = GetWidth(lblLink);
             Description(company.Description);
-            
+            cdd.LoadUc_JobDetail(company.Id, can.Id, flpUC_JobDetail, fm);
 
         }
         private int GetWidth(Guna2HtmlLabel l)
@@ -87,14 +87,17 @@ namespace JobHub
 
         private void btnFollowCompany_Click(object sender, EventArgs e)
         {
-            count++;
-            if (count % 2 == 0)
+            if (saveCheck)
             {
+                can.Id = 1;
                 btnFollowCompany.Image = Properties.Resources.plus;
+                cd.UnFollowedCompany(can.Id, company.Id);
+                saveCheck = false;
 
             }
             else
             {
+                saveCheck = true;
                 can.Id = 1;
                 btnFollowCompany.Image = Properties.Resources.checkmark;
                 cd.FollowedCompany(can.Id, company.Id);

@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_JobDetail));
             this.lblSalary = new System.Windows.Forms.Label();
-            this.lblNameCompany = new System.Windows.Forms.Label();
-            this.lblNameJob = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCompanyName = new System.Windows.Forms.Label();
+            this.lblJobName = new System.Windows.Forms.Label();
+            this.btnApply = new Guna.UI2.WinForms.Guna2Button();
+            this.pnluc = new Guna.UI2.WinForms.Guna2Panel();
             this.ptbSave = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblPositon = new System.Windows.Forms.Label();
+            this.lblJobAddress = new System.Windows.Forms.Label();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel1.SuspendLayout();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.pnluc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -55,61 +57,62 @@
             this.lblSalary.TabIndex = 8;
             this.lblSalary.Text = "20-25 Triệu";
             // 
-            // lblNameCompany
+            // lblCompanyName
             // 
-            this.lblNameCompany.AutoSize = true;
-            this.lblNameCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblNameCompany.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNameCompany.Location = new System.Drawing.Point(118, 52);
-            this.lblNameCompany.Name = "lblNameCompany";
-            this.lblNameCompany.Size = new System.Drawing.Size(171, 23);
-            this.lblNameCompany.TabIndex = 7;
-            this.lblNameCompany.Text = "Công ty cổ phần FPT";
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCompanyName.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblCompanyName.Location = new System.Drawing.Point(118, 52);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(171, 23);
+            this.lblCompanyName.TabIndex = 7;
+            this.lblCompanyName.Text = "Công ty cổ phần FPT";
             // 
-            // lblNameJob
+            // lblJobName
             // 
-            this.lblNameJob.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblNameJob.Location = new System.Drawing.Point(117, 13);
-            this.lblNameJob.Name = "lblNameJob";
-            this.lblNameJob.Size = new System.Drawing.Size(450, 35);
-            this.lblNameJob.TabIndex = 6;
-            this.lblNameJob.Text = "BackEnd Java";
+            this.lblJobName.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblJobName.Location = new System.Drawing.Point(117, 13);
+            this.lblJobName.Name = "lblJobName";
+            this.lblJobName.Size = new System.Drawing.Size(450, 35);
+            this.lblJobName.TabIndex = 6;
+            this.lblJobName.Text = "BackEnd Java";
             // 
-            // guna2Button1
+            // btnApply
             // 
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(747, 61);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(124, 35);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Ứng tuyển";
+            this.btnApply.BorderRadius = 5;
+            this.btnApply.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnApply.ForeColor = System.Drawing.Color.White;
+            this.btnApply.Location = new System.Drawing.Point(747, 61);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(124, 35);
+            this.btnApply.TabIndex = 12;
+            this.btnApply.Text = "Ứng tuyển";
             // 
-            // guna2Panel1
+            // pnluc
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.ptbSave);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.lblPositon);
-            this.guna2Panel1.Controls.Add(this.lblSalary);
-            this.guna2Panel1.Controls.Add(this.lblNameCompany);
-            this.guna2Panel1.Controls.Add(this.lblNameJob);
-            this.guna2Panel1.Controls.Add(this.picLogo);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(950, 126);
-            this.guna2Panel1.TabIndex = 14;
+            this.pnluc.BackColor = System.Drawing.Color.White;
+            this.pnluc.BorderColor = System.Drawing.Color.Silver;
+            this.pnluc.BorderRadius = 10;
+            this.pnluc.BorderThickness = 2;
+            this.pnluc.Controls.Add(this.ptbSave);
+            this.pnluc.Controls.Add(this.btnApply);
+            this.pnluc.Controls.Add(this.lblJobAddress);
+            this.pnluc.Controls.Add(this.lblSalary);
+            this.pnluc.Controls.Add(this.lblCompanyName);
+            this.pnluc.Controls.Add(this.lblJobName);
+            this.pnluc.Controls.Add(this.picLogo);
+            this.pnluc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnluc.Location = new System.Drawing.Point(0, 0);
+            this.pnluc.Margin = new System.Windows.Forms.Padding(5);
+            this.pnluc.Name = "pnluc";
+            this.pnluc.Size = new System.Drawing.Size(950, 126);
+            this.pnluc.TabIndex = 14;
+            this.pnluc.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
             // ptbSave
             // 
@@ -123,17 +126,17 @@
             this.ptbSave.TabStop = false;
             this.ptbSave.Click += new System.EventHandler(this.ptbSave_Click);
             // 
-            // lblPositon
+            // lblJobAddress
             // 
-            this.lblPositon.AutoSize = true;
-            this.lblPositon.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblPositon.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPositon.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPositon.Location = new System.Drawing.Point(121, 80);
-            this.lblPositon.Name = "lblPositon";
-            this.lblPositon.Size = new System.Drawing.Size(95, 20);
-            this.lblPositon.TabIndex = 9;
-            this.lblPositon.Text = "Hồ Chí Minh";
+            this.lblJobAddress.AutoSize = true;
+            this.lblJobAddress.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblJobAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobAddress.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblJobAddress.Location = new System.Drawing.Point(121, 80);
+            this.lblJobAddress.Name = "lblJobAddress";
+            this.lblJobAddress.Size = new System.Drawing.Size(95, 20);
+            this.lblJobAddress.TabIndex = 9;
+            this.lblJobAddress.Text = "Hồ Chí Minh";
             // 
             // picLogo
             // 
@@ -149,15 +152,21 @@
             this.picLogo.TabIndex = 5;
             this.picLogo.TabStop = false;
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // uc_JobDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.pnluc);
             this.Name = "uc_JobDetail";
             this.Size = new System.Drawing.Size(950, 126);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.pnluc.ResumeLayout(false);
+            this.pnluc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
@@ -165,13 +174,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Label lblNameCompany;
-        private System.Windows.Forms.Label lblNameJob;
-        private Guna.UI2.WinForms.Guna2PictureBox picLogo;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox ptbSave;
-        private System.Windows.Forms.Label lblPositon;
+        private Guna.UI2.WinForms.Guna2Button btnApply;
+        private Guna.UI2.WinForms.Guna2Panel pnluc;
+        public System.Windows.Forms.Label lblCompanyName;
+        public System.Windows.Forms.Label lblJobName;
+        public Guna.UI2.WinForms.Guna2PictureBox picLogo;
+        public System.Windows.Forms.Label lblJobAddress;
+        public System.Windows.Forms.Label lblSalary;
+        public Guna.UI2.WinForms.Guna2PictureBox ptbSave;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

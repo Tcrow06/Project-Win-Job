@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Security=True;Encrypt=False</Value>
     </Setting>
     <Setting Name="conn" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Security=True;Encrypt=False</Value>
+      <Value Profile="(Default)">Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Security=True;Encrypt=False;MultipleActiveResultSets=True;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

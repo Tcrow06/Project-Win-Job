@@ -36,7 +36,7 @@ namespace JobHub.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-QHAH49DL\\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Securi" +
-            "ty=True;Encrypt=False")]
+            "ty=True;Encrypt=False;MultipleActiveResultSets=True;")]
         public string conn {
             get {
                 return ((string)(this["conn"]));

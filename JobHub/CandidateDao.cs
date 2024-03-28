@@ -21,12 +21,28 @@ namespace JobHub
         public void SavedJob(int idJob, int idCan)
         {
             string sql = string.Format($"insert into SavedJob(idJob, idCandidate) values ({idJob},{idCan})");
-            db.ThucThi(sql);
+            db.ExcuteNoMess(sql);
         }
+        public void UnSavedJob(int idJob, int idCan)
+        {
+            string sql = string.Format($"delete SavedJob where idJob = {idJob} and  idCandidate = {idCan}  ");
+            db.ExcuteNoMess(sql);
+        }
+
         public void FollowedCompany(int idCan, int idCompany)
         {
             string sql = string.Format($"insert into FollowedCompany(idCandidate, idCompany) values ({idCan},{idCompany})");
-            db.ThucThi(sql);
+            db.ExcuteNoMess(sql);
+        }
+        public void UnFollowedCompany(int idCan, int idCompany)
+        {
+            string sql = string.Format($"delete FollowedCompany where idCandidate ={idCan} and idCompany = {idCompany} ");
+            db.ExcuteNoMess(sql);
+        }
+        public bool CheckSaveStatus(int idJob, int idCan)
+        {
+            string sql = string.Format($"select * from SavedJob where idJob = {idJob} and idCandidate = {idCan}");
+            return db.CheckNull(sql);
         }
 
     }

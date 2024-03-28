@@ -20,11 +20,11 @@ namespace JobHub
         CandidateDao cd = new CandidateDao();
         CompanyDetailDao cdd = new CompanyDetailDao();
         JobDetailDao jdd= new JobDetailDao(); 
-        int i = 2;
+        
 
         private int count = 0;
-        private int IdJob;
-        private int IdCp;
+        private int idJob;
+        private int idCp;
         private Fmain fm;
         public FJobDetails()
         {
@@ -32,15 +32,16 @@ namespace JobHub
         }
         public FJobDetails(int idJob,int IdCp, Fmain fm)
         {
+            can.Id = 1;
             this.fm = fm;
-            this.IdJob = idJob;
-            this.IdCp = IdCp;
+            this.idJob = idJob;
+            this.idCp = IdCp;
             InitializeComponent();
         }
         private void FJobDetails_Load(object sender, EventArgs e)
         {
-            LoadJobDetails(IdJob);
-            LoadCompanyDetails(IdCp);
+            LoadJobDetails(idJob);
+            LoadCompanyDetails(idCp);
         }
         private void LoadCompanyDetails(int idCompany)
         {
@@ -57,6 +58,12 @@ namespace JobHub
             lblSalary.Text = jd.Salary;
             lblAddress.Text = jd.Address;
             lblExperience.Text = jd.Experience;
+            DateTime date = jd.RegisterDead;
+            string day = date.ToString("dd/MM/yyyy");
+            lblRegisterDead.Text = day;
+            
+            
+            SaveStatus();
             DescribeJob(jd.Description);
             RequirementJob(jd.Requirement);
             BenefitJob(jd.Benefit);
@@ -79,13 +86,8 @@ namespace JobHub
         {
             if(desc.Length > 0) { 
             string[] arr = desc.Split('~');
-/*                lblInfo.Text = "";
-                if (arr[0][0] != '-')
-                    lblInfo.Text = "+ ";
-                lblInfo.Text +=arr[0];*/
                 int x = lblInfo.Location.X;
                 int y = lblInfo.Location.Y - lblInfo.Height;
-                //pnInfo.Height = lblName.Height + lblInfo.Height + 10;
                 pnInfo.Height = lblName.Height  + 10;
 
                 Label lblBefore = new Label();
@@ -115,25 +117,34 @@ namespace JobHub
                 }
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void SaveStatus()
         {
-            count++;
-            if (count%2 == 0)
+            if (!cd.CheckSaveStatus(idJob, can.Id))
             {
                 btnSave.Image = Properties.Resources.heartChuaLuu;
-               
             }
             else
             {
                 btnSave.Image = Properties.Resources.heartDaLuu;
-                can.Id = 2;
-                cd.SavedJob(IdJob,can.Id);
+            }
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (cd.CheckSaveStatus(idJob, can.Id))
+            {
+                btnSave.Image = Properties.Resources.heartChuaLuu;
+                cd.UnSavedJob(idJob, can.Id);
+            }
+            else
+            {
+                cd.SavedJob(idJob, can.Id);
+                btnSave.Image = Properties.Resources.heartDaLuu;
             }
         }
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FCompanyDetails fcd = new FCompanyDetails(IdCp);
+            FCompanyDetails fcd = new FCompanyDetails(idCp, fm);
             fm.resize(fcd.Width + 200, fcd.Height +50);
             fcd.MdiParent = fm;
             fcd.Dock = DockStyle.Fill;
@@ -147,7 +158,7 @@ namespace JobHub
         {
             can.Id = 2;
             int IdCv = 2;
-            cd.Apply(IdJob,can.Id,IdCv);
+            cd.Apply(idJob,can.Id,IdCv);
         }
     }
 }

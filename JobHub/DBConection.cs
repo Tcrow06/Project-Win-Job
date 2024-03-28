@@ -37,6 +37,24 @@ namespace JobHub
                 MessageBox.Show("Thất bại" + ex);
             }
         }
+        public void ExcuteNoMess(string sqlStr)
+        {
+            try
+            {
+                // Ket noi
+                if (sqlConnection.State != ConnectionState.Open)
+                {
+                    sqlConnection.Open();
+                }
+                SqlCommand cmd = new SqlCommand(sqlStr, sqlConnection);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thất bại" + ex);
+            }
+        }
 
         public SqlDataReader loadData(string sql)
         {
@@ -83,6 +101,17 @@ namespace JobHub
             {
                 sqlConnection.Close();
             }
+            dr.Dispose();
+        }
+        public bool CheckNull (string sql)
+        {
+            //string sql = string.Format($"select * from Job");
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count > 0)
+                return true;  
+            return false;
         }
 
     }
