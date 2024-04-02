@@ -20,6 +20,7 @@ namespace JobHub
         CandidateDao cd = new CandidateDao();
         CompanyDetailDao cdd = new CompanyDetailDao();
         JobDetailDao jdd= new JobDetailDao();
+        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
         private Account account;
 
         private int idJob;
@@ -69,7 +70,6 @@ namespace JobHub
             DateTime date = jd.RegisterDead;
             string day = date.ToString("dd/MM/yyyy");
             lblRegisterDead.Text = day;
-            
             ApplyStatus();
             SaveStatus();
             DescribeJob(jd.Description);
@@ -134,7 +134,6 @@ namespace JobHub
         {
             if (Account == null)
             {
-                //CustomMessageBox.Show("Bạn chưa đăng nhập");
                 FLogin login = new FLogin();
                 login.Show();
             }
@@ -154,9 +153,7 @@ namespace JobHub
         {
             if(Account == null)
             {
-                //CustomMessageBox.Show("Bạn chưa đăng nhập");
-                FLogin login = new FLogin(IdJob, IdCp, fm);
-                login.Show();
+                Login();
             }
             else
             {
@@ -203,19 +200,27 @@ namespace JobHub
                 }
             }
         }
-
+        private void Login()
+        {
+            FLogin login = new FLogin(fm);
+            login.ShowDialog();
+            login = null;
+            if (fm.Account != null)
+            {
+                FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
+                fm.loadFormReload(form.Form);
+            }
+        }
         private void btnApply_Click(object sender, EventArgs e)
         {
             if (Account == null)
             {
-                FLogin login = new FLogin(IdJob, IdCp, fm);
-                login.Show();
+                Login();    
             }
             else
             {
                 if (cd.CheckApplyStatus(IdJob, Account.Id))
                 {
-
                     cd.UnApplyJob(IdJob, Account.Id, Account.Id);
                     ApplyStatus();
                 }
@@ -230,9 +235,5 @@ namespace JobHub
   
         }
 
-/*        public override void LoadForm(Account account)
-        {
-            throw new NotImplementedException();
-        }*/
     }
 }

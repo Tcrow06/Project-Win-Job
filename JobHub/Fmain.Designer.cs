@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -105,22 +105,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation4;
             // 
             // pnControlBox
             // 
@@ -962,7 +962,7 @@
             // 
             // pnContainMenu
             // 
-            this.pnContainMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.pnContainMenu.BackColor = System.Drawing.Color.Silver;
             this.pnContainMenu.BorderColor = System.Drawing.Color.Silver;
             this.pnContainMenu.BorderThickness = 2;
             this.pnContainMenu.Controls.Add(this.btnOut);
@@ -992,12 +992,13 @@
             this.btnOut.FillColor = System.Drawing.Color.White;
             this.btnOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.btnOut.Location = new System.Drawing.Point(8, 185);
+            this.btnOut.Location = new System.Drawing.Point(4, 141);
             this.btnOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(273, 45);
+            this.btnOut.Size = new System.Drawing.Size(246, 45);
             this.btnOut.TabIndex = 14;
             this.btnOut.Text = "Đăng xuất";
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // btnCVMenu
             // 
@@ -1014,10 +1015,10 @@
             this.btnCVMenu.FillColor = System.Drawing.Color.White;
             this.btnCVMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCVMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.btnCVMenu.Location = new System.Drawing.Point(4, 58);
+            this.btnCVMenu.Location = new System.Drawing.Point(4, 48);
             this.btnCVMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCVMenu.Name = "btnCVMenu";
-            this.btnCVMenu.Size = new System.Drawing.Size(243, 36);
+            this.btnCVMenu.Size = new System.Drawing.Size(246, 45);
             this.btnCVMenu.TabIndex = 12;
             this.btnCVMenu.Text = "Hồ sơ và CV";
             // 
@@ -1036,10 +1037,10 @@
             this.btnSetting.FillColor = System.Drawing.Color.White;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.btnSetting.Location = new System.Drawing.Point(4, 104);
+            this.btnSetting.Location = new System.Drawing.Point(4, 94);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(243, 36);
+            this.btnSetting.Size = new System.Drawing.Size(246, 45);
             this.btnSetting.TabIndex = 13;
             this.btnSetting.Text = "Cài đặt";
             // 
@@ -1058,10 +1059,10 @@
             this.btnJobMenu.FillColor = System.Drawing.Color.White;
             this.btnJobMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
-            this.btnJobMenu.Location = new System.Drawing.Point(5, 15);
+            this.btnJobMenu.Location = new System.Drawing.Point(4, 2);
             this.btnJobMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobMenu.Name = "btnJobMenu";
-            this.btnJobMenu.Size = new System.Drawing.Size(273, 45);
+            this.btnJobMenu.Size = new System.Drawing.Size(246, 45);
             this.btnJobMenu.TabIndex = 11;
             this.btnJobMenu.Text = "Việc làm";
             // 

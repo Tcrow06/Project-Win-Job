@@ -13,7 +13,6 @@ namespace JobHub
 {
     public partial class Fmain : Form
     {
-        //private Stack<Form> forms = new Stack<Form>();
         private Stack<FormAndInfoCandidate> forms = new Stack<FormAndInfoCandidate>();
         private Account account;
         private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
@@ -131,31 +130,51 @@ namespace JobHub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            if(this.Forms.Count > 0)
+            if(btnLogin.Text =="Đăng nhập")
             {
-                FormAndInfoCandidate fai = this.Forms.Peek();
-                FLogin login = new FLogin(fai.IdJob,fai.IdCompany, this);
-                login.Show();
+                FLogin login = new FLogin(this);
+                this.Hide();
+                login.ShowDialog();
+                login = null;
+                this.Show();
+                if (this.Account != null)
+                {
+                    btnLogin.Text = "Đăng xuất";
+                    if (this.Account.Type == 0)
+                    {
+                        if (this.Forms.Count > 0)
+                        {
+                            FormAndInfoCandidate form = reLoadForm.ReLoadLogin(this);
+                            this.loadFormReload(form.Form);
+                        }
+                        else
+                        {
+                            FViews fv = new FViews();
+                            this.Account = Account;
+                            this.Forms.Clear();
+                            this.loadForm(fv);
+                        }
+                    }
+                    else
+                    {
+                        pnNav.Controls.Clear();
+                        pnNav.Controls.Add(pnSubNav11);
+                        pnNav.Controls.Add(pnSubNav13);
+                        pnNav.Controls.Add(pnSubNav12);
+                        pnNav.Controls.Add(btnBack);
+                        pnNav.Controls.Add(btnLogin);
+                        pnSubNav13.Visible = true;
+                        pnSubNav12.Visible = true;
+                        pnSubNav11.Visible = true;
+                    }
+                }
             }
-
-            //FLogin login = new FLogin(this);
-            //this.Hide();
-            //login.Show();
-            
-            //this.Show();
-/*            if (login.Candidate == null)
+            else
             {
-                pnNav.Controls.Clear();
-                pnNav.Controls.Add(pnSubNav11);
-                pnNav.Controls.Add(pnSubNav13);
-                pnNav.Controls.Add(pnSubNav12);
-                pnNav.Controls.Add(btnBack);
-                pnNav.Controls.Add(btnLogin);
-                pnSubNav13.Visible = true;
-                pnSubNav12.Visible = true;
-                pnSubNav11.Visible = true;
-            }*/
+                Forms.Clear();
+                this.Account = null;
+                this.loadFormReload(new FViews());
+            }
         }
 
         private void btnJob_Click(object sender, EventArgs e)
@@ -414,6 +433,13 @@ namespace JobHub
             fcv.Dock = DockStyle.Fill;
             fcv.Show();
             fcv.BringToFront();
+        }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            Forms.Clear();
+            this.Account = null;
+            this.loadFormReload(new FViews());
         }
     }
 }

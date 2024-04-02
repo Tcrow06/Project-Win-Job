@@ -100,7 +100,6 @@ namespace JobHub
             if(account == null)
             {
                 btnFollowCompany.Image = Properties.Resources.plus;
-                //MessageBox.Show("Bạn chưa đăng nhập");
             }
             else
             {
@@ -110,7 +109,6 @@ namespace JobHub
                 }
                 else
                     btnFollowCompany.Image = Properties.Resources.checkmark;
-                //MessageBox.Show("co");
 
 
             }
@@ -121,7 +119,6 @@ namespace JobHub
 
             if (account == null)
             {
-                    //CustomMessageBox.Show("Bạn chưa đăng nhập");
                     FLogin login = new FLogin(company.Id, fm);
                     login.Show();
             }

@@ -78,8 +78,14 @@ namespace JobHub
         private void btnLogin_Click(object sender, EventArgs e)
         {
             CustomMessageBox cmb = new CustomMessageBox();
-            this.Account = ld.CheckAccount(txtAcc.Text.Trim(), txtPass.Text.Trim());
-            if(Account != null)
+            fm.Account = ld.CheckAccount(txtAcc.Text.Trim(), txtPass.Text.Trim());
+            if(fm.Account == null)
+            {
+                cmb.Show("Sai tài khoản hoặc mật khẩu");
+            }
+            else
+                this.Dispose();
+            /*if(Account != null)
             {
                 if (Account.Type == 0)
                 {
@@ -108,7 +114,7 @@ namespace JobHub
             else
             {
                 cmb.Show("Sai tài khoản hoặc mật khẩu");
-            }
+            }*/
 
         }
 
