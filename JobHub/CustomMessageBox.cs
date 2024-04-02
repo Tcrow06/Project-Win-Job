@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 
 namespace JobHub
 {
-    internal class CustomMessageBox
+    public class CustomMessageBox
     {
-        public static FCustomerMessageBox FCustomerMessageBox;
-        public static void Show(string message)
+        public FCustomerMessageBox FCustomerMessageBox;
+        public CustomMessageBox() { }
+        public void Show(string message)
         {
             FCustomerMessageBox = new FCustomerMessageBox();
             FCustomerMessageBox.lblMessage.Text = message;
             FCustomerMessageBox.Show();
+        }
+        public void ShowDialog(string message)
+        {
+            FCustomerMessageBox = new FCustomerMessageBox();
+            FCustomerMessageBox.lblMessage.Text = message;
+            FCustomerMessageBox.ShowDialog();
         }
     }
 }

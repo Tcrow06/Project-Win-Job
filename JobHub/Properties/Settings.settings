@@ -3,11 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="conn" Type="System.String" Scope="Application">
-<<<<<<< HEAD
       <Value Profile="(Default)">Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobWinLo;Integrated Security=True;Encrypt=False;MultipleActiveResultSets=True;</Value>
-=======
-      <Value Profile="(Default)">Data Source=TU;Initial Catalog=JobWin;Integrated Security=True</Value>
->>>>>>> c498e217e719322c672c1042ab5c3e597960eeed
     </Setting>
     <Setting Name="conn1" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobWin;Integrated Security=True;Encrypt=False</Value>

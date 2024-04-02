@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace JobHub
@@ -14,15 +15,46 @@ namespace JobHub
     public partial class FLogin : Form
     {
         DBConection con = new DBConection();
+        LoginDao ld = new LoginDao();
         private Candidate candidate;
+        ReLoadFormCandidate rlf = new ReLoadFormCandidate();
+        private Fmain fm = new Fmain();
+        private int idJob;
+        private int idCp;
+        private Account account;
 
-        public Candidate Candidate { get => candidate; set => candidate = value; }
+        public Account Account { get => account; set => account = value; }
 
         public FLogin()
         {
             InitializeComponent();
         }
-
+        public FLogin(Fmain fm)
+        {
+            this.fm = fm;
+            InitializeComponent();
+        }
+        public FLogin(int idJob, int IdCp, Fmain fm)
+        {
+            this.fm = fm;   
+            this.idJob = idJob;
+            this.idCp = IdCp;
+            InitializeComponent();
+        }
+        public FLogin( int IdCp, Fmain fm)
+        {
+            this.fm = fm;
+            this.idCp = IdCp;
+            InitializeComponent();
+        }
+        public FLogin(int idJob, int IdCp, Fmain fm, Account account)
+        {
+            this.fm = fm;
+            this.idJob = idJob;
+            this.idCp = IdCp;
+            this.Account = account;
+            InitializeComponent();
+        }
         private void FLogin_Load(object sender, EventArgs e)
         {
 
@@ -45,23 +77,39 @@ namespace JobHub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string sql = $@"select * from Account
-                            where account like '{txtAcc.Text.Trim()}%' AND accountPass like '{txtPass.Text.Trim()}%'";
-            SqlDataReader reader = con.loadData(sql);
-            if(reader.HasRows)
+            CustomMessageBox cmb = new CustomMessageBox();
+            this.Account = ld.CheckAccount(txtAcc.Text.Trim(), txtPass.Text.Trim());
+            if(Account != null)
             {
-                if (Int32.Parse(reader["accountType"].ToString()) == 1)
+                if (Account.Type == 0)
                 {
-                    Candidate = new Candidate(Int32.Parse(reader["accountType"].ToString()));
+                    if (fm.Forms.Count > 0)
+                    {
+                        fm.Account = Account;
+                        FormAndInfoCandidate form = rlf.ReLoadLogin(fm);
+                        this.Close();
+                        fm.loadFormReload(form.Form);
+                        this.Close();
+                    }
+                    else
+                    {
+                        FViews fv = new FViews();
+                        fm.Account = Account;
+                        fm.Forms.Clear();
+                        fm.loadForm(fv);
+                    }
                 }
-                CustomMessageBox.Show("Đăng nhập thành công");
+                else
+                {
+
+                }
+
             }
             else
             {
-                CustomMessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                cmb.Show("Sai tài khoản hoặc mật khẩu");
             }
-            Candidate = null;
-            reader.Close();
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

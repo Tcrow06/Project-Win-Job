@@ -10,68 +10,44 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class uc_JobDetail : UserControl
+    public partial class uc_JobDetail : uc_JobMain
     {
-        //private bool saveCheck= false;
         CandidateDao cd = new CandidateDao();
-        public event EventHandler loadJobClick;
         public event EventHandler JobSavedClick;
         public uc_JobDetail()
         {
             InitializeComponent();
         }
 
-        private void ptbSave_Click(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
-        {
-            //JobSavedClick?.Invoke(this, e);
-            //if()
-            /* if (saveCheck)
-             {   
-                 ptbSave.Image = Properties.Resources.heartChuaLuu;
-                 cd.SavedJob(can.Id, company.Id);
-                 saveCheck = false;
-             }
-             else
-             {
-                 ptbSave.Image = Properties.Resources.heartDaLuu;
-
-             }*/
-        }
 
         private void uc_JobDetail_Click(object sender, EventArgs e)
         {
-            loadJobClick?.Invoke(this, e);
-        }
-        public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
-        {
-            FJobDetails_Load(idJob, idCp, fm);
-        }
-        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
-        {
-
-            FJobDetails job = new FJobDetails(idJob, idCp, fm);
-            fm.resize(job.Width + 160, job.Height + 50);
-            job.MdiParent = fm;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
+            OnJobDetailClick(e);
         }
 
         private void ptbSave_Click(object sender, EventArgs e)
         {
             JobSavedClick?.Invoke(this, e);
         }
-        public void SaveJob(object sender, EventArgs e, int idJob, int idCan)
+        public void SaveJob(object sender, EventArgs e, int idJob, int idCan, Account account)
         {
-            if (cd.CheckSaveStatus(idJob, idCan))
+            if (account == null)
             {
-                ptbSave.Image = Properties.Resources.heartChuaLuu;
-                cd.UnSavedJob(idJob, idCan);
+                FLogin login = new FLogin();    
+                login.ShowDialog(); 
             }
             else
             {
-                cd.SavedJob(idJob, idCan);
-                ptbSave.Image = Properties.Resources.heartDaLuu;
+                if (cd.CheckSaveStatus(idJob, idCan))
+                {
+                    ptbSave.Image = Properties.Resources.heartChuaLuu;
+                    cd.UnSavedJob(idJob, idCan);
+                }
+                else
+                {
+                    cd.SavedJob(idJob, idCan);
+                    ptbSave.Image = Properties.Resources.heartDaLuu;
+                }
             }
         }
     }

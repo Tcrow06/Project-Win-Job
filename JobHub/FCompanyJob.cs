@@ -59,7 +59,7 @@ namespace JobHub
             //Chưa có chức năng đăng nhập bằng cty nên để tạm idcompany=3 làm ví dụ
             SqlDataReader reader = conection.loadData(query);
             pnJob.Controls.Clear();
-            conection.changeforCompany(reader, pnJob, fm);
+            //conection.changeforCompany(reader, pnJob, fm);
 
         }
 

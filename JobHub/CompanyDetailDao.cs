@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 using System.Data.Common;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
 
 namespace JobHub
 {
     public class CompanyDetailDao
     {
-        //SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
         DBConection dbc = new DBConection();
         CandidateDao cd = new CandidateDao();
         public CompanyDetailDao() { }
@@ -40,9 +41,9 @@ namespace JobHub
             return cd;
         
         }
-        public void LoadUc_JobDetail(int idCompany, int idCan,FlowLayoutPanel pn, Fmain fm)
+        public void LoadUc_JobDetail(int idCompany,FlowLayoutPanel pn, Fmain fm)
         {
-            string query = $"select * from Job inner join Company on Company.idCompany = Job.idJob where job.idCompany = {idCompany}";
+            string query = $"select * from Job inner join Company on Company.idCompany = Job.idCompany where job.idCompany = {idCompany}";
 
             SqlDataReader dr = dbc.loadData(query);
             if(dr !=null)
@@ -51,30 +52,46 @@ namespace JobHub
                 {
                     uc_JobDetail job = new uc_JobDetail();
                     job.lblJobName.Text = dr["jobName"].ToString();
-                    //changTheSize.setSize(130, 25, job.lblNameJob);
                     job.lblCompanyName.Text = dr["companyName"].ToString();
                     job.lblSalary.Text = dr["jobSalary"].ToString();
                     job.lblJobAddress.Text = dr["jobAddress"].ToString();
+                    string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+
+                    // Kết hợp với đường dẫn tương đối của tập tin ảnh
+                    string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
+
+                    // Nạp hình ảnh vào PictureBox
+                    
+                    job.pbAvatar.Image = Image.FromFile(imagePath);
+ 
                     pn.Controls.Add(job);
                     
                     int idJob = int.Parse(dr["idJob"].ToString());
                     int idCp = int.Parse(dr["idCompany"].ToString());
-                    idCan = 1;
-                    if (!cd.CheckSaveStatus(idJob, idCan))
+                    if(fm.Account == null)
                     {
                         job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                        FLogin login = new FLogin();
+                        login.Show();
                     }
                     else
                     {
-                        job.ptbSave.Image = Properties.Resources.heartDaLuu;
+                        if (!cd.CheckSaveStatus(idJob, fm.Account.Id))
+                        {
+                            job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                        }
+                        else
+                        {
+                            job.ptbSave.Image = Properties.Resources.heartDaLuu;
+                        }
                     }
                     job.loadJobClick += (sender, e) =>
                     {
-                        job.LoadJobDetail(sender, e, idJob, idCp, fm);
+                        job.LoadJobDetail(sender, e, idJob, idCp, fm, fm.Account);
                     };
                     job.JobSavedClick += (sender, e) =>
                     {
-                        job.SaveJob(sender, e, idJob, idCp);
+                        job.SaveJob(sender, e, idJob, idCp, fm.Account);
                     };
                 }
                 dr.Dispose();
@@ -82,10 +99,6 @@ namespace JobHub
             
 
 
-        }
-        private void SaveStatus()
-        {
-            
-        }
+        } 
     }
 }

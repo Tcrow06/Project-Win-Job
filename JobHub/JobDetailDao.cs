@@ -12,7 +12,6 @@ namespace JobHub
     public class JobDetailDao
     {
         DBConection dbc = new DBConection();
-        SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
 
         public JobDetailDao() { }
 

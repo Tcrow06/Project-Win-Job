@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class uC_Job : UserControl
+    public partial class uC_Job : uc_JobMain
     {
-        public event EventHandler loadJobClick;
+        public event EventHandler loadCompanyClick;
         public uC_Job()
         {
             InitializeComponent();
@@ -20,18 +20,25 @@ namespace JobHub
 
         private void ucJob_Click(object sender, EventArgs e)
         {
-            loadJobClick?.Invoke(this, e);
+            OnJobDetailClick(e);
         }
-        public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCp, Fmain fm)
+
+        private void lblNameCompany_Click(object sender, EventArgs e)
         {
-            FJobDetails_Load(idJob, idCp, fm);
+            loadCompanyClick?.Invoke(sender,e);
         }
-        private void FJobDetails_Load(int idJob, int idCp,Fmain fm)
+        public void LoadCompanyDetail(object sender, EventArgs e, int idCp, Fmain fm, Account account)
+        {
+            FCompanyDetails_Load(idCp, fm, account);
+        }
+        private void FCompanyDetails_Load( int idCp, Fmain fm, Account account)
         {
 
-            FJobDetails job = new FJobDetails(idJob, idCp, fm);
-            fm.Forms.Push(job);
-            fm.resize(job.Width+160, job.Height + 50);
+            FCompanyDetails job = new FCompanyDetails(idCp, fm, account);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job,-1, idCp);
+            fm.HideChildForm();
+            fm.Forms.Push(fai);
+            fm.resize(job.Width + 170, job.Height + 50);
             job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();

@@ -70,7 +70,7 @@
             this.pnJob.Location = new System.Drawing.Point(11, 293);
             this.pnJob.Margin = new System.Windows.Forms.Padding(2);
             this.pnJob.Name = "pnJob";
-            this.pnJob.Size = new System.Drawing.Size(857, 351);
+            this.pnJob.Size = new System.Drawing.Size(863, 351);
             this.pnJob.TabIndex = 39;
             // 
             // cboCity
@@ -397,7 +397,7 @@
             this.pnContain.Controls.Add(this.pnSubContain);
             this.pnContain.Controls.Add(this.pnHotFob);
             this.pnContain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnContain.Location = new System.Drawing.Point(883, 0);
+            this.pnContain.Location = new System.Drawing.Point(894, 0);
             this.pnContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnContain.Name = "pnContain";
             this.pnContain.Size = new System.Drawing.Size(322, 660);
@@ -514,7 +514,7 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Location = new System.Drawing.Point(5, 286);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(873, 365);
+            this.guna2Panel1.Size = new System.Drawing.Size(880, 365);
             this.guna2Panel1.TabIndex = 0;
             // 
             // uC_NewJob5
@@ -567,7 +567,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1205, 660);
+            this.ClientSize = new System.Drawing.Size(1216, 660);
             this.Controls.Add(this.cboIndustryGroup);
             this.Controls.Add(this.pnContain);
             this.Controls.Add(this.guna2PictureBox1);

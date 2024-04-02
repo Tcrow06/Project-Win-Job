@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -42,7 +42,7 @@
             this.pnNav = new System.Windows.Forms.FlowLayoutPanel();
             this.pnSubNav1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnJob = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.FindJob = new Guna.UI2.WinForms.Guna2Button();
             this.btnSaveJob = new Guna.UI2.WinForms.Guna2Button();
             this.btnJoinJob = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -105,22 +105,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // pnControlBox
             // 
@@ -229,7 +229,7 @@
             // 
             this.pnSubNav1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.pnSubNav1.Controls.Add(this.btnJob);
-            this.pnSubNav1.Controls.Add(this.guna2Button1);
+            this.pnSubNav1.Controls.Add(this.FindJob);
             this.pnSubNav1.Controls.Add(this.btnSaveJob);
             this.pnSubNav1.Controls.Add(this.btnJoinJob);
             this.guna2Transition1.SetDecoration(this.pnSubNav1, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -266,33 +266,33 @@
             this.btnJob.TextOffset = new System.Drawing.Point(30, 0);
             this.btnJob.Click += new System.EventHandler(this.btnJob_Click);
             // 
-            // guna2Button1
+            // FindJob
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 42);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(224, 36);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Tìm việc";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.FindJob.BackColor = System.Drawing.Color.Transparent;
+            this.FindJob.BorderRadius = 8;
+            this.FindJob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.FindJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.FindJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.FindJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.FindJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.FindJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.FindJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.FindJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindJob.ForeColor = System.Drawing.Color.White;
+            this.FindJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.FindJob.HoverState.FillColor = System.Drawing.Color.White;
+            this.FindJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.FindJob.Image = ((System.Drawing.Image)(resources.GetObject("FindJob.Image")));
+            this.FindJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.FindJob.Location = new System.Drawing.Point(3, 42);
+            this.FindJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FindJob.Name = "FindJob";
+            this.FindJob.Size = new System.Drawing.Size(224, 36);
+            this.FindJob.TabIndex = 5;
+            this.FindJob.Text = "Tìm việc";
+            this.FindJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.FindJob.TextOffset = new System.Drawing.Point(30, 0);
+            this.FindJob.Click += new System.EventHandler(this.FindJob_Click);
             // 
             // btnSaveJob
             // 
@@ -888,6 +888,7 @@
             this.btnFavouriteCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFavouriteCV.TextOffset = new System.Drawing.Point(30, 0);
             this.guna2HtmlToolTip1.SetToolTip(this.btnFavouriteCV, "Danh sách công việc của công ty");
+            this.btnFavouriteCV.Click += new System.EventHandler(this.btnFavouriteCV_Click);
             // 
             // pnAcount
             // 
@@ -1128,7 +1129,7 @@
         private System.Windows.Forms.FlowLayoutPanel pnNav;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav1;
         private Guna.UI2.WinForms.Guna2Button btnJob;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button FindJob;
         private Guna.UI2.WinForms.Guna2Button btnSaveJob;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav2;
         private Guna.UI2.WinForms.Guna2Button btnCompany;

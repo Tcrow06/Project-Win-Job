@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,26 +14,30 @@ namespace JobHub
 {
     public partial class FCompanyDetails : Form
     {
-        private bool saveCheck = false;
         private CompanyDetailDao cdd= new CompanyDetailDao();
         CandidateDao cd = new CandidateDao();
-        Candidate can = new Candidate();
         Fmain fm = new Fmain();
+        private Account account;
         
         CompanyDetail company= new CompanyDetail();
         public FCompanyDetails()
         {
             InitializeComponent();
         }
-        public FCompanyDetails(int idCompany, Fmain fm)
+        public FCompanyDetails(int idCompany, Fmain fm, Account account)
         {
             InitializeComponent();
             this.fm = fm;   
             company.Id = idCompany;
+            this.account = account;
         }
         private void FCompanyDetails_Load(object sender, EventArgs e)
         {
             LoadCompanyDetail();
+        }
+        private int GetWidth(Guna2HtmlLabel l)
+        {
+            return TextRenderer.MeasureText(l.Text, l.Font).Width;
         }
         private void LoadCompanyDetail()
         {
@@ -47,14 +52,20 @@ namespace JobHub
             lblPhone.Text = company.Phone;
             lblLink.Text = company.Link;
             lblLink.Width = GetWidth(lblLink);
+            lblAddress.Text = company.Address;
+
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            string imagePath = Path.Combine(projectFolderPath ,company.Avatar);
+            pbAvatar.Image = Image.FromFile(imagePath);
+
+            pbBackground.Size = new Size(100, 100);
+            pbBackground.BorderRadius = 50;
             Description(company.Description);
-            cdd.LoadUc_JobDetail(company.Id, can.Id, flpUC_JobDetail, fm);
+            FollowStatus();
+            cdd.LoadUc_JobDetail(company.Id, flpUC_JobDetail, fm);
 
         }
-        private int GetWidth(Guna2HtmlLabel l)
-        {
-            return TextRenderer.MeasureText(l.Text, l.Font).Width;
-        }
+
         public void Description(string desc)
         {
             Label lb = new Label();
@@ -84,23 +95,48 @@ namespace JobHub
                 }
             }
         }
-
-        private void btnFollowCompany_Click(object sender, EventArgs e)
+        private void FollowStatus()
         {
-            if (saveCheck)
+            if(account == null)
             {
-                can.Id = 1;
                 btnFollowCompany.Image = Properties.Resources.plus;
-                cd.UnFollowedCompany(can.Id, company.Id);
-                saveCheck = false;
-
+                //MessageBox.Show("Bạn chưa đăng nhập");
             }
             else
             {
-                saveCheck = true;
-                can.Id = 1;
-                btnFollowCompany.Image = Properties.Resources.checkmark;
-                cd.FollowedCompany(can.Id, company.Id);
+                if (!cd.CheckFollowStatus(company.Id, account.Id))
+                {
+                    btnFollowCompany.Image = Properties.Resources.plus;
+                }
+                else
+                    btnFollowCompany.Image = Properties.Resources.checkmark;
+                //MessageBox.Show("co");
+
+
+            }
+        }
+        private void btnFollowCompany_Click(object sender, EventArgs e)
+        {
+
+
+            if (account == null)
+            {
+                    //CustomMessageBox.Show("Bạn chưa đăng nhập");
+                    FLogin login = new FLogin(company.Id, fm);
+                    login.Show();
+            }
+            else
+            {
+                if (cd.CheckFollowStatus(company.Id, account.Id))
+                {
+                    cd.UnFollowedCompany(account.Id, company.Id);
+                    FollowStatus();
+                }
+                else
+                {
+                    cd.FollowedCompany(account.Id, company.Id);
+                    FollowStatus();
+                }
             }
         }
     }

@@ -13,14 +13,22 @@ namespace JobHub
 {
     public partial class Fmain : Form
     {
-        private Stack<Form> forms = new Stack<Form>();
-
-        public Stack<Form> Forms { get => forms; set => forms = value; }
+        //private Stack<Form> forms = new Stack<Form>();
+        private Stack<FormAndInfoCandidate> forms = new Stack<FormAndInfoCandidate>();
+        private Account account;
+        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
+        public Stack<FormAndInfoCandidate> Forms { get => forms; set => forms = value; }
+        public Account Account { get => account; set => account = value; }
 
         public Fmain()
         {
             InitializeComponent();
 
+        }
+        public Fmain(Account account)
+        {
+            this.Account = account;
+            InitializeComponent();
         }
         private void setLocation(int x, int y, Control ctrl)
         {
@@ -123,11 +131,20 @@ namespace JobHub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FLogin login = new FLogin();
-            this.Hide();
-            login.ShowDialog();
-            this.Show();
-            if(login.Candidate == null)
+
+            if(this.Forms.Count > 0)
+            {
+                FormAndInfoCandidate fai = this.Forms.Peek();
+                FLogin login = new FLogin(fai.IdJob,fai.IdCompany, this);
+                login.Show();
+            }
+
+            //FLogin login = new FLogin(this);
+            //this.Hide();
+            //login.Show();
+            
+            //this.Show();
+/*            if (login.Candidate == null)
             {
                 pnNav.Controls.Clear();
                 pnNav.Controls.Add(pnSubNav11);
@@ -138,7 +155,7 @@ namespace JobHub
                 pnSubNav13.Visible = true;
                 pnSubNav12.Visible = true;
                 pnSubNav11.Visible = true;
-            }
+            }*/
         }
 
         private void btnJob_Click(object sender, EventArgs e)
@@ -165,21 +182,6 @@ namespace JobHub
             }
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            foreach (Form formdelete in this.MdiChildren)
-            {
-                formdelete.Close();
-
-            }
-            FJob job = new FJob(this);
-            forms.Push(job);
-            job.MdiParent = this;
-            resize(job.Width + 200, job.Height + 50);
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
-        }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
@@ -269,25 +271,57 @@ namespace JobHub
             fMyCV.Show();
         }
 
-        private void loadForm(Form form)
+        public void loadForm(Form form)
         {
-            foreach (Form formdelete in this.MdiChildren)
-            {
-                formdelete.Hide();
-            }
+            this.HideChildForm();
             form.MdiParent = this;
-            resize(form.Width + 200, form.Height + 50);
+            if (form.Name == "FJobDetails")
+            {
+                resize(form.Width + 100, form.Height - 50);
+            }
+            else if (form.Name == "FJob")
+                resize(form.Width + 178, form.Height + 35);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            form.BringToFront();
+        }
+        public void loadFormReload(Form form)
+        {
+            this.HideChildForm();
+            form.MdiParent = this;
+            if (form.Name == "FJobDetails")
+            {
+                resize(form.Width + 200, form.Height + 70);
+            }
+            else if (form.Name == "FJob")
+                resize(form.Width + 178, form.Height + 35);
             form.Dock = DockStyle.Fill;
             form.Show();
             form.BringToFront();
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(Forms.Count.ToString());
-            if(Forms.Count >= 1)
+            if(Forms.Count > 1)
             {
+                if (Forms.Peek().Form.Name == "FJobDetails")
+                {
+                    while (Forms.Peek().Form.Name != "FJob")
+                        Forms.Pop();
+                    FormAndInfoCandidate tmp = new FormAndInfoCandidate();
+                    Forms.Push(tmp);
+                }
+
                 Forms.Pop();
-                loadForm(Forms.Pop());
+                
+                FormAndInfoCandidate form = reLoadForm.ReLoadBack(this);
+                this.loadFormReload(form.Form);
+
+            }
+            else
+            {
+                    FViews fv = new FViews();
+                    Forms.Clear();
+                    loadForm(fv);
             }
 
         }
@@ -314,10 +348,7 @@ namespace JobHub
 
         private void btnListJob_Click(object sender, EventArgs e)
         {
-            foreach (Form formdelete in this.MdiChildren)
-            {
-                formdelete.Close();
-            }
+            this.DeleteChildForm();
             FJobPostHistory jsh = new FJobPostHistory();
             jsh.MdiParent = this;
             resize(jsh.Width + 200, jsh.Height + 50);
@@ -325,29 +356,64 @@ namespace JobHub
             jsh.Show();
             jsh.BringToFront();
         }
-
-        private void btnPostJob_Click(object sender, EventArgs e)
+        public void HideChildForm()
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Hide();
+            }
+        }
+        public void DeleteChildForm()
         {
             foreach (Form formdelete in this.MdiChildren)
             {
                 formdelete.Close();
             }
+        }
+
+        private void btnPostJob_Click(object sender, EventArgs e)
+        {
+            this.DeleteChildForm();   
             FPostJob jsh = new FPostJob();
             jsh.MdiParent = this;
             resize(jsh.Width + 200, jsh.Height + 50);
             jsh.Dock = DockStyle.Fill;
             jsh.Show();
             jsh.BringToFront();
-/*=======
+        }
+
+        private void FindJob_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
 
             }
-            FPostJob job = new FPostJob();
+            FJob job = new FJob(this,Account);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job, -1, -1);
+            forms.Push(fai);
             job.MdiParent = this;
-            resize(job.Width + 300, job.Height + 50);
+            resize(job.Width + 200, job.Height + 70);
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
->>>>>>> c498e217e719322c672c1042ab5c3e597960eeed*/
+        }
+
+        private void btnFavouriteCV_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FFollowCV fcv = new FFollowCV(this);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(fcv,-1,-1);
+            forms.Push(fai);
+            fcv.MdiParent = this;
+            resize(fcv.Width + 200, fcv.Height + 70);
+            fcv.Dock = DockStyle.Fill;
+            fcv.Show();
+            fcv.BringToFront();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -16,40 +17,47 @@ namespace JobHub
 {
     public partial class FJobDetails : Form
     {
-        Candidate can = new Candidate();
         CandidateDao cd = new CandidateDao();
         CompanyDetailDao cdd = new CompanyDetailDao();
-        JobDetailDao jdd= new JobDetailDao(); 
-        
+        JobDetailDao jdd= new JobDetailDao();
+        private Account account;
 
-        private int count = 0;
         private int idJob;
         private int idCp;
         private Fmain fm;
+
+        public int IdJob { get => idJob; set => idJob = value; }
+        public int IdCp { get => idCp; set => idCp = value; }
+        public Account Account { get => account; set => account = value; }
+
         public FJobDetails()
         {
             InitializeComponent();
         }
-        public FJobDetails(int idJob,int IdCp, Fmain fm)
+        public FJobDetails(int idJob,int IdCp, Fmain fm, Account account)
         {
-            can.Id = 1;
             this.fm = fm;
-            this.idJob = idJob;
-            this.idCp = IdCp;
+            this.IdJob = idJob;
+            this.IdCp = IdCp;
+            this.Account = account;
             InitializeComponent();
         }
         private void FJobDetails_Load(object sender, EventArgs e)
         {
-            LoadJobDetails(idJob);
-            LoadCompanyDetails(idCp);
+            LoadJobDetails(IdJob);
+            LoadCompanyDetails(IdCp);
         }
         private void LoadCompanyDetails(int idCompany)
         {
-            
+
             CompanyDetail cd = cdd.GetInfoCompanyDetailFromDB(idCompany);
             lblCompanyName.Text = cd.Name;
-            lblCompanyAddress.Text = cd.Address; 
+            lblCompanyAddress.Text = cd.Address;
             lblNumofE.Text = cd.Size;
+            lblEmployee.Location = new System.Drawing.Point(lblNumofE.Location.Y + lblNumofE.Width + 2, lblNumofE.Location.Y);
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            string imagePath = Path.Combine(projectFolderPath, cd.Avatar);
+            pbCompanyAvatar.Image = Image.FromFile(imagePath);
         }
         private void LoadJobDetails(int idJob)
         {
@@ -62,7 +70,7 @@ namespace JobHub
             string day = date.ToString("dd/MM/yyyy");
             lblRegisterDead.Text = day;
             
-            
+            ApplyStatus();
             SaveStatus();
             DescribeJob(jd.Description);
             RequirementJob(jd.Requirement);
@@ -84,68 +92,92 @@ namespace JobHub
         }
         public void InfoJob(Panel pnInfo, string desc, Label lblName, Label lblInfo)
         {
-            if(desc.Length > 0) { 
-            string[] arr = desc.Split('~');
-                int x = lblInfo.Location.X;
-                int y = lblInfo.Location.Y - lblInfo.Height;
-                pnInfo.Height = lblName.Height  + 10;
-
-                Label lblBefore = new Label();
-                lblBefore = lblInfo;
-                lblInfo.Dispose();
-                for (int i = 0; i < arr.Length; i++)
+            if(desc != null)
+            {
+                if (desc.Length > 0)
                 {
-                    Label lblCur = new Label();
-                    lblCur.Font = lblInfo.Font;
-                    if (arr[i][0] != '-')
-                        lblCur.Text = "+";
+                    string[] arr = desc.Split('~');
+                    int x = lblInfo.Location.X;
+                    int y = lblInfo.Location.Y - lblInfo.Height;
+                    pnInfo.Height = lblName.Height + 10;
 
-                    lblCur.Text += arr[i];
-                    lblCur.AutoSize = false;
-                    lblCur.Size = new Size(lblInfo.Width, lblInfo.Height);
-                    Size textSize = TextRenderer.MeasureText(arr[i], lblCur.Font);
-                    int j = textSize.Width / lblCur.Width;
-                    if (j >= 1)
+                    Label lblBefore = new Label();
+                    lblBefore = lblInfo;
+                    lblInfo.Dispose();
+                    for (int i = 0; i < arr.Length; i++)
                     {
-                        lblCur.Height = lblInfo.Height * (j);
+                        Label lblCur = new Label();
+                        lblCur.Font = lblInfo.Font;
+                        if (arr[i][0] != '-')
+                            lblCur.Text = "+";
+
+                        lblCur.Text += arr[i];
+                        lblCur.AutoSize = false;
+                        lblCur.Size = new Size(lblInfo.Width, lblInfo.Height);
+                        Size textSize = TextRenderer.MeasureText(arr[i], lblCur.Font);
+                        int j = textSize.Width / lblCur.Width;
+                        if (j >= 1)
+                        {
+                            lblCur.Height = lblInfo.Height * (j);
+                        }
+                        y += lblBefore.Height;
+                        lblBefore = lblCur;
+                        pnInfo.Height += lblCur.Height;
+                        pnInfo.Controls.Add(lblCur);
+                        lblCur.Location = new Point(x, y);
                     }
-                    y += lblBefore.Height;
-                    lblBefore = lblCur; 
-                    pnInfo.Height += lblCur.Height;
-                    pnInfo.Controls.Add(lblCur);
-                    lblCur.Location = new Point(x, y);
                 }
             }
         }
+        
         private void SaveStatus()
         {
-            if (!cd.CheckSaveStatus(idJob, can.Id))
+            if (Account == null)
             {
-                btnSave.Image = Properties.Resources.heartChuaLuu;
+                //CustomMessageBox.Show("Bạn chưa đăng nhập");
+                FLogin login = new FLogin();
+                login.Show();
             }
             else
             {
-                btnSave.Image = Properties.Resources.heartDaLuu;
+                if (!cd.CheckSaveStatus(IdJob, Account.Id))
+                {
+                    btnSave.Image = Properties.Resources.heartChuaLuu;
+                }
+                else
+                {
+                    btnSave.Image = Properties.Resources.heartDaLuu;
+                }
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (cd.CheckSaveStatus(idJob, can.Id))
+            if(Account == null)
             {
-                btnSave.Image = Properties.Resources.heartChuaLuu;
-                cd.UnSavedJob(idJob, can.Id);
+                //CustomMessageBox.Show("Bạn chưa đăng nhập");
+                FLogin login = new FLogin(IdJob, IdCp, fm);
+                login.Show();
             }
             else
             {
-                cd.SavedJob(idJob, can.Id);
-                btnSave.Image = Properties.Resources.heartDaLuu;
+                if (cd.CheckSaveStatus(IdJob, Account.Id))
+                {
+                    cd.UnSavedJob(IdJob, Account.Id);
+                    SaveStatus();
+                }
+                else
+                {
+                    cd.SavedJob(IdJob, Account.Id);
+                    SaveStatus();
+                }
             }
         }
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FCompanyDetails fcd = new FCompanyDetails(idCp, fm);
-            fm.Forms.Push(fcd);
+            FCompanyDetails fcd = new FCompanyDetails(IdCp, fm, Account);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(fcd, -1, IdCp);
+            fm.Forms.Push(fai);
             fm.resize(fcd.Width + 200, fcd.Height +50);
             fcd.MdiParent = fm;
             fcd.Dock = DockStyle.Fill;
@@ -153,13 +185,54 @@ namespace JobHub
             fcd.BringToFront();
             
         }
-
+        private void ApplyStatus()
+        {
+            if(Account  == null)
+            {
+                btnApply.Text = "Ứng tuyển";
+            }
+            else
+            {
+                if (!cd.CheckApplyStatus(IdJob, Account.Id))
+                {
+                    btnApply.Text = "Ứng tuyển";
+                }
+                else
+                {
+                    btnApply.Text = "Hủy ứng tuyển";
+                }
+            }
+        }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            can.Id = 2;
-            int IdCv = 2;
-            cd.Apply(idJob,can.Id,IdCv);
+            if (Account == null)
+            {
+                FLogin login = new FLogin(IdJob, IdCp, fm);
+                login.Show();
+            }
+            else
+            {
+                if (cd.CheckApplyStatus(IdJob, Account.Id))
+                {
+
+                    cd.UnApplyJob(IdJob, Account.Id, Account.Id);
+                    ApplyStatus();
+                }
+                else
+                {
+
+                    cd.ApplyJob(IdJob, Account.Id, Account.Id);
+                    ApplyStatus();
+                }
+            }
+                
+  
         }
+
+/*        public override void LoadForm(Account account)
+        {
+            throw new NotImplementedException();
+        }*/
     }
 }

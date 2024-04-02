@@ -37,11 +37,11 @@
             this.pnluc = new Guna.UI2.WinForms.Guna2Panel();
             this.ptbSave = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblJobAddress = new System.Windows.Forms.Label();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pnluc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSalary
@@ -56,6 +56,7 @@
             this.lblSalary.Size = new System.Drawing.Size(85, 20);
             this.lblSalary.TabIndex = 8;
             this.lblSalary.Text = "20-25 Triệu";
+            this.lblSalary.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
             // lblCompanyName
             // 
@@ -67,6 +68,7 @@
             this.lblCompanyName.Size = new System.Drawing.Size(171, 23);
             this.lblCompanyName.TabIndex = 7;
             this.lblCompanyName.Text = "Công ty cổ phần FPT";
+            this.lblCompanyName.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
             // lblJobName
             // 
@@ -76,6 +78,7 @@
             this.lblJobName.Size = new System.Drawing.Size(450, 35);
             this.lblJobName.TabIndex = 6;
             this.lblJobName.Text = "BackEnd Java";
+            this.lblJobName.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
             // btnApply
             // 
@@ -92,6 +95,7 @@
             this.btnApply.Size = new System.Drawing.Size(124, 35);
             this.btnApply.TabIndex = 12;
             this.btnApply.Text = "Ứng tuyển";
+            this.btnApply.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
             // pnluc
             // 
@@ -105,7 +109,7 @@
             this.pnluc.Controls.Add(this.lblSalary);
             this.pnluc.Controls.Add(this.lblCompanyName);
             this.pnluc.Controls.Add(this.lblJobName);
-            this.pnluc.Controls.Add(this.picLogo);
+            this.pnluc.Controls.Add(this.pbAvatar);
             this.pnluc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnluc.Location = new System.Drawing.Point(0, 0);
             this.pnluc.Margin = new System.Windows.Forms.Padding(5);
@@ -137,20 +141,22 @@
             this.lblJobAddress.Size = new System.Drawing.Size(95, 20);
             this.lblJobAddress.TabIndex = 9;
             this.lblJobAddress.Text = "Hồ Chí Minh";
+            this.lblJobAddress.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
-            // picLogo
+            // pbAvatar
             // 
-            this.picLogo.BackColor = System.Drawing.Color.White;
-            this.picLogo.BorderRadius = 8;
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(15, 12);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(90, 90);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 5;
-            this.picLogo.TabStop = false;
+            this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(15, 12);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(90, 90);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 5;
+            this.pbAvatar.TabStop = false;
+            this.pbAvatar.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
             // guna2BorderlessForm1
             // 
@@ -168,7 +174,7 @@
             this.pnluc.ResumeLayout(false);
             this.pnluc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,7 +184,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnluc;
         public System.Windows.Forms.Label lblCompanyName;
         public System.Windows.Forms.Label lblJobName;
-        public Guna.UI2.WinForms.Guna2PictureBox picLogo;
+        public Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
         public System.Windows.Forms.Label lblJobAddress;
         public System.Windows.Forms.Label lblSalary;
         public Guna.UI2.WinForms.Guna2PictureBox ptbSave;

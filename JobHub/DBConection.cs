@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace JobHub
 {
@@ -76,7 +77,7 @@ namespace JobHub
         }
 
 
-        public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
+       /* public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
             //int i = 1;
             while (dr.Read())
@@ -90,11 +91,13 @@ namespace JobHub
                 flPanel.Controls.Add(job);
                 int idJob = int.Parse(dr["idJob"].ToString());
                 int idCp = int.Parse(dr["idCompany"].ToString());
-                //MessageBox.Show(i.ToString());
-                //i++;
                 job.loadJobClick += (sender, e) =>
                 {
                     job.LoadJobDetail(sender, e, idJob, idCp, fm);
+                };
+                job.loadCompanyClick += (sender, e) =>
+                {
+                    job.LoadCompanyDetail(sender, e,idCp, fm);
                 };
             }
             if(sqlConnection.State == ConnectionState.Open)
@@ -102,19 +105,27 @@ namespace JobHub
                 sqlConnection.Close();
             }
             dr.Dispose();
-        }
+        }*/
         public bool CheckNull (string sql)
         {
-            //string sql = string.Format($"select * from Job");
             SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             if (dt.Rows.Count > 0)
                 return true;  
             return false;
+
+        }
+        public DataTable CheckAcount(string sql)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+
         }
 
-        public void changeforCompany(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
+        /*public void changeforCompany(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
             //int i = 1;
             while (dr.Read())
@@ -128,8 +139,6 @@ namespace JobHub
                 flPanel.Controls.Add(job);
                 int idJob = int.Parse(dr["idJob"].ToString());
                 int idCp = int.Parse(dr["idCompany"].ToString());
-                //MessageBox.Show(i.ToString());
-                //i++;
                 job.loadJobClick += (sender, e) =>
                 {
                     job.LoadJobDetail(sender, e, idJob, idCp, fm);
@@ -139,7 +148,7 @@ namespace JobHub
             {
                 sqlConnection.Close();
             }
-        }
+        }*/
 
 
     }
