@@ -1,82 +1,115 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace JobHub
 {
     public class FindJobDao
     {
-        private DBConection db = new DBConection();
-        ChangTheSize changTheSize = new ChangTheSize();
-        private Account account;
-        public FindJobDao(Account account)
+        DBConection db = new DBConection();
+        public FindJobDao()
         {
-            this.account = account;
         }
-        public void LoadUc_Job(FlowLayoutPanel flPanel, Fmain fm)
+        public SqlDataReader LoadUc_Job()
         {
-            string query = $@"SELECT Job.idJob, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName, Company.idCompany
-                        FROM Job
-                         INNER JOIN Company ON Job.idCompany = Company.idCompany";
-            SqlDataReader dr = db.loadData(query);
-            while (dr.Read())
+            string query = $@"SELECT Job.idJob, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, 
+                            Job.jobAddress, Company.companyName, Company.idCompany, Company.companyAvatar
+                            FROM Job
+                            INNER JOIN Company ON Job.idCompany = Company.idCompany and Job.jobRegisterDead >= '{DateTime.Now.Date}'";
+            return db.loadData(query);
+        }
+        public SqlDataReader LoadButton(string txtButton)
+        {
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, Job.jobAddress, Company.companyName ,Company.companyAvatar
+                    FROM Job
+                    INNER JOIN Company ON Job.idCompany = Company.idCompany
+                    where Job.jobField LIKE N'{txtButton}%'";
+            return db.loadData(query);
+        }
+        public SqlDataReader LoadTxtSearch(string txtSearch)
+        {
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,
+                            Job.jobMaxSalary, Job.jobAddress, Company.companyName, Company.companyAvatar
+                             FROM Job
+                             INNER JOIN Company ON Job.idCompany = Company.idCompany
+                             where Job.jobName LIKE N'%{txtSearch}%'";
+            return db.loadData(query);
+        }
+        public SqlDataReader LoadTxtExperience(string txtEx)
+        {
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,
+                            Job.jobMaxSalary, Job.jobAddress, Company.companyName, Company.companyAvatar
+                            FROM Job
+                            INNER JOIN Company ON Job.idCompany = Company.idCompany
+                            where Job.jobExperience LIKE N'{txtEx.Trim()}%'";
+            return db.loadData(query);
+        }
+        public SqlDataReader LoadTxtAddress(string txtAddress)
+        {
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,
+                            Job.jobMaxSalary, Job.jobAddress, Company.companyName, Company.companyAvatar
+                            FROM Job
+                            INNER JOIN Company ON Job.idCompany = Company.idCompany
+                            where Job.jobAddress LIKE N'{txtAddress.Trim()}%'";
+            return db.loadData(query);
+        }
+        public SqlDataReader LoadTxtIndustry(string txtIndustry)
+        {
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,
+                            Job.jobMaxSalary, Job.jobAddress, Company.companyName, Company.companyAvatar
+                            FROM Job
+                            INNER JOIN Company ON Job.idCompany = Company.idCompany
+                            where Job.jobField LIKE N'{txtIndustry.Trim()}%'";
+            return db.loadData(query);
+        }
+        public SqlDataReader LoadTxtSalary(string txtEx)
+        {
+            float minSalary;
+            float maxSalary;
+            string[] txt = txtEx.Trim().Split();
+            if (txtEx == "Thỏa thuận")
             {
-                uC_Job job = new uC_Job();
-                job.lblNameJob.Text = dr["jobName"].ToString();
-                changTheSize.setSize(130, 25, job.lblNameJob);
-                job.lblNameCompany.Text = dr["companyName"].ToString();
-                job.lblSalary.Text = dr["jobSalary"].ToString();
-                job.lblPositon.Text = dr["jobAddress"].ToString();
-                flPanel.Controls.Add(job);
-                int idJob = int.Parse(dr["idJob"].ToString());
-                int idCp = int.Parse(dr["idCompany"].ToString());
-                job.loadJobClick += (sender, e) =>
-                {
-                    job.LoadJobDetail(sender, e, idJob, idCp, fm, account);
-                };
-                job.loadCompanyClick += (sender, e) =>
-                {
-                    job.LoadCompanyDetail(sender, e, idCp, fm,account);
-                };
+                minSalary = 0; maxSalary = 0;
             }
-            dr.Dispose();
-        }
-        public void LoadTxtSearch(FlowLayoutPanel flPanel, Fmain fm, string txtSearch)
-        {
-            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Job.jobSalary, Job.jobAddress, Company.companyName
-                        FROM Job
-                         INNER JOIN Company ON Job.idCompany = Company.idCompany
-                         where Job.jobName LIKE N'%{txtSearch}%'";
-            SqlDataReader dr = db.loadData(query);
+            else if (txt[1] == "-")
+            {
+                minSalary = float.Parse(txt[0]);
+                maxSalary = float.Parse(txt[2]);
+            }
+            else
+            {
+                minSalary=0; maxSalary = float.Parse(txt[1]);
+            }
 
-            while (dr.Read())
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,
+                            Job.jobMaxSalary, Job.jobAddress, Company.companyName, Company.companyAvatar
+                            FROM Job
+                            INNER JOIN Company ON Job.idCompany = Company.idCompany
+                            where ";
+            if (minSalary == 0 && maxSalary == 0)
             {
-                uC_Job job = new uC_Job();
-                job.lblNameJob.Text = dr["jobName"].ToString();
-                changTheSize.setSize(130, 25, job.lblNameJob);
-                job.lblNameCompany.Text = dr["companyName"].ToString();
-                job.lblSalary.Text = dr["jobSalary"].ToString();
-                job.lblPositon.Text = dr["jobAddress"].ToString();
-                flPanel.Controls.Add(job);
-                int idJob = int.Parse(dr["idJob"].ToString());
-                int idCp = int.Parse(dr["idCompany"].ToString());
-                job.loadJobClick += (sender, e) =>
-                {
-                    job.LoadJobDetail(sender, e, idJob, idCp, fm, account);
-                };
-                job.loadCompanyClick += (sender, e) =>
-                {
-                    job.LoadCompanyDetail(sender, e, idCp, fm, account);
-                };
+                query += $"Job.jobMinSalary = 0 and Job.jobMaxSalary = 0";
             }
-            dr.Dispose();
+            else if (minSalary == 0 && maxSalary != 0)
+                query += $"Job.jobMaxSalary >= {maxSalary}";
+            else
+                query += $@"((Job.jobMinSalary <= {minSalary} and Job.jobMaxSalary >=  {minSalary}) 
+                            or (Job.jobMinSalary <= {maxSalary} and jobMaxSalary >= {maxSalary} )) 
+                            and Job.jobMinSalary != 0";
+            return db.loadData(query);
         }
-        }
+    }
 }

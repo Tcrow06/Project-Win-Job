@@ -14,16 +14,8 @@ namespace JobHub
 {
     public partial class FLogin : Form
     {
-        DBConection con = new DBConection();
-        LoginDao ld = new LoginDao();
-        private Candidate candidate;
-        ReLoadFormCandidate rlf = new ReLoadFormCandidate();
+        private LoginDao ld = new LoginDao();
         private Fmain fm = new Fmain();
-        private int idJob;
-        private int idCp;
-        private Account account;
-
-        public Account Account { get => account; set => account = value; }
 
         public FLogin()
         {
@@ -32,27 +24,6 @@ namespace JobHub
         public FLogin(Fmain fm)
         {
             this.fm = fm;
-            InitializeComponent();
-        }
-        public FLogin(int idJob, int IdCp, Fmain fm)
-        {
-            this.fm = fm;   
-            this.idJob = idJob;
-            this.idCp = IdCp;
-            InitializeComponent();
-        }
-        public FLogin( int IdCp, Fmain fm)
-        {
-            this.fm = fm;
-            this.idCp = IdCp;
-            InitializeComponent();
-        }
-        public FLogin(int idJob, int IdCp, Fmain fm, Account account)
-        {
-            this.fm = fm;
-            this.idJob = idJob;
-            this.idCp = IdCp;
-            this.Account = account;
             InitializeComponent();
         }
         private void FLogin_Load(object sender, EventArgs e)
@@ -81,41 +52,13 @@ namespace JobHub
             fm.Account = ld.CheckAccount(txtAcc.Text.Trim(), txtPass.Text.Trim());
             if(fm.Account == null)
             {
-                cmb.Show("Sai tài khoản hoặc mật khẩu");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
+            {
                 this.Dispose();
-            /*if(Account != null)
-            {
-                if (Account.Type == 0)
-                {
-                    if (fm.Forms.Count > 0)
-                    {
-                        fm.Account = Account;
-                        FormAndInfoCandidate form = rlf.ReLoadLogin(fm);
-                        this.Close();
-                        fm.loadFormReload(form.Form);
-                        this.Close();
-                    }
-                    else
-                    {
-                        FViews fv = new FViews();
-                        fm.Account = Account;
-                        fm.Forms.Clear();
-                        fm.loadForm(fv);
-                    }
-                }
-                else
-                {
-
-                }
-
+                fm.LoadTaskBar();
             }
-            else
-            {
-                cmb.Show("Sai tài khoản hoặc mật khẩu");
-            }*/
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

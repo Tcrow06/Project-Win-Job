@@ -14,22 +14,21 @@ namespace JobHub
 {
     public partial class FCompanyDetails : Form
     {
-        private CompanyDetailDao cdd= new CompanyDetailDao();
-        CandidateDao cd = new CandidateDao();
+        private CompanyDetail companyDetail= new CompanyDetail();
+        private Candidate cd = new Candidate();
         Fmain fm = new Fmain();
-        private Account account;
+        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
         
         CompanyDetail company= new CompanyDetail();
         public FCompanyDetails()
         {
             InitializeComponent();
         }
-        public FCompanyDetails(int idCompany, Fmain fm, Account account)
+        public FCompanyDetails(int idCompany, Fmain fm)
         {
             InitializeComponent();
             this.fm = fm;   
             company.Id = idCompany;
-            this.account = account;
         }
         private void FCompanyDetails_Load(object sender, EventArgs e)
         {
@@ -41,7 +40,7 @@ namespace JobHub
         }
         private void LoadCompanyDetail()
         {
-            company = cdd.GetInfoCompanyDetailFromDB(company.Id); 
+            company = companyDetail.GetInfoCompanyDetail(company.Id); 
             lblCompanyName.Text = company.Name;
             lblSize.Text = company.Size;
             lblSize.Width = GetWidth(lblSize);
@@ -62,7 +61,7 @@ namespace JobHub
             pbBackground.BorderRadius = 50;
             Description(company.Description);
             FollowStatus();
-            cdd.LoadUc_JobDetail(company.Id, flpUC_JobDetail, fm);
+            companyDetail.LoadUc_JobDetail(company.Id, flpUC_JobDetail, fm);
 
         }
 
@@ -94,44 +93,51 @@ namespace JobHub
                     flpDescription.Controls.Add(lbl);
                 }
             }
-        }
+        } 
         private void FollowStatus()
         {
-            if(account == null)
+            if(fm.Account == null)
             {
                 btnFollowCompany.Image = Properties.Resources.plus;
+                
             }
             else
             {
-                if (!cd.CheckFollowStatus(company.Id, account.Id))
+                if (!cd.CheckFollowStatus(company.Id, fm.Account.Id))
                 {
                     btnFollowCompany.Image = Properties.Resources.plus;
                 }
                 else
                     btnFollowCompany.Image = Properties.Resources.checkmark;
-
-
+            }
+        }
+        private void Login()
+        {
+            FLogin login = new FLogin(fm);
+            login.ShowDialog();
+            login = null;
+            if (fm.Account != null)
+            {
+                FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
+                fm.loadFormReload(form.Form);
             }
         }
         private void btnFollowCompany_Click(object sender, EventArgs e)
         {
-
-
-            if (account == null)
+            if (fm.Account == null)
             {
-                    FLogin login = new FLogin(company.Id, fm);
-                    login.Show();
+                Login();
             }
             else
             {
-                if (cd.CheckFollowStatus(company.Id, account.Id))
+                if (cd.CheckFollowStatus(company.Id, fm.Account.Id))
                 {
-                    cd.UnFollowedCompany(account.Id, company.Id);
+                    cd.UnFollowedCompany(fm.Account.Id, company.Id);
                     FollowStatus();
                 }
                 else
                 {
-                    cd.FollowedCompany(account.Id, company.Id);
+                    cd.FollowedCompany(fm.Account.Id, company.Id);
                     FollowStatus();
                 }
             }

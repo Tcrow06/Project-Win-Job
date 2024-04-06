@@ -17,45 +17,39 @@ namespace JobHub
 {
     public partial class FJobDetails : Form
     {
-        CandidateDao cd = new CandidateDao();
-        CompanyDetailDao cdd = new CompanyDetailDao();
-        JobDetailDao jdd= new JobDetailDao();
-        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
-        private Account account;
+        private Candidate cd = new Candidate();
+        private CompanyDetail cdd = new CompanyDetail();
+        private JobDetail jdd = new JobDetail(); 
 
         private int idJob;
         private int idCp;
         private Fmain fm;
-
-        public int IdJob { get => idJob; set => idJob = value; }
-        public int IdCp { get => idCp; set => idCp = value; }
-        public Account Account { get => account; set => account = value; }
-
         public FJobDetails()
         {
             InitializeComponent();
         }
-        public FJobDetails(int idJob,int IdCp, Fmain fm, Account account)
+        public FJobDetails(int idJob,int IdCp, Fmain fm)
         {
             this.fm = fm;
-            this.IdJob = idJob;
-            this.IdCp = IdCp;
-            this.Account = account;
+            this.idJob = idJob;
+            this.idCp = IdCp;
             InitializeComponent();
         }
         private void FJobDetails_Load(object sender, EventArgs e)
         {
-            LoadJobDetails(IdJob);
-            LoadCompanyDetails(IdCp);
+            LoadJobDetails(idJob);
+            LoadCompanyDetails(idCp);
         }
         private void LoadCompanyDetails(int idCompany)
         {
 
-            CompanyDetail cd = cdd.GetInfoCompanyDetailFromDB(idCompany);
+            CompanyDetail cd = cdd.GetInfoCompanyDetail(idCompany);
             lblCompanyName.Text = cd.Name;
             lblCompanyAddress.Text = cd.Address;
             lblNumofE.Text = cd.Size;
-            lblEmployee.Location = new System.Drawing.Point(lblNumofE.Location.Y + lblNumofE.Width + 2, lblNumofE.Location.Y);
+            Size textSize = TextRenderer.MeasureText(lblNumofE.Text, lblNumofE.Font);
+
+            lblEmployee.Location = new System.Drawing.Point(lblNumofE.Location.X + textSize.Width, lblNumofE.Location.Y);
             string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
             string imagePath = Path.Combine(projectFolderPath, cd.Avatar);
             pbCompanyAvatar.Image = Image.FromFile(imagePath);
@@ -132,14 +126,16 @@ namespace JobHub
         
         private void SaveStatus()
         {
-            if (Account == null)
+            if (fm.Account == null)
             {
-                FLogin login = new FLogin();
-                login.Show();
+                btnSave.Image = Properties.Resources.heartChuaLuu;
+                /*                fm.Login();
+                                *//*FLogin login = new FLogin();
+                                login.Show();*/
             }
             else
             {
-                if (!cd.CheckSaveStatus(IdJob, Account.Id))
+                if (!cd.CheckSaveStatus(idJob, fm.Account.Id))
                 {
                     btnSave.Image = Properties.Resources.heartChuaLuu;
                 }
@@ -151,20 +147,20 @@ namespace JobHub
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(Account == null)
+            if(fm.Account == null)
             {
-                Login();
+                fm.Login();
             }
             else
             {
-                if (cd.CheckSaveStatus(IdJob, Account.Id))
+                if (cd.CheckSaveStatus(idJob, fm.Account.Id))
                 {
-                    cd.UnSavedJob(IdJob, Account.Id);
+                    cd.UnSavedJob(idJob, fm.Account.Id);
                     SaveStatus();
                 }
                 else
                 {
-                    cd.SavedJob(IdJob, Account.Id);
+                    cd.SavedJob(idJob, fm.Account.Id);
                     SaveStatus();
                 }
             }
@@ -172,25 +168,18 @@ namespace JobHub
 
         private void lblCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FCompanyDetails fcd = new FCompanyDetails(IdCp, fm, Account);
-            FormAndInfoCandidate fai = new FormAndInfoCandidate(fcd, -1, IdCp);
-            fm.Forms.Push(fai);
-            fm.resize(fcd.Width + 200, fcd.Height +50);
-            fcd.MdiParent = fm;
-            fcd.Dock = DockStyle.Fill;
-            fcd.Show();
-            fcd.BringToFront();
-            
+            uC_Job job = new uC_Job();
+            job.FCompanyDetails_Load(idCp, fm);
         }
         private void ApplyStatus()
         {
-            if(Account  == null)
+            if(fm.Account  == null)
             {
                 btnApply.Text = "Ứng tuyển";
             }
             else
             {
-                if (!cd.CheckApplyStatus(IdJob, Account.Id))
+                if (!cd.CheckApplyStatus(idJob, fm.Account.Id))
                 {
                     btnApply.Text = "Ứng tuyển";
                 }
@@ -200,34 +189,29 @@ namespace JobHub
                 }
             }
         }
-        private void Login()
-        {
-            FLogin login = new FLogin(fm);
-            login.ShowDialog();
-            login = null;
-            if (fm.Account != null)
-            {
-                FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
-                fm.loadFormReload(form.Form);
-            }
-        }
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if (Account == null)
+            if (fm.Account == null)
             {
-                Login();    
+                fm.Login();   
             }
             else
             {
-                if (cd.CheckApplyStatus(IdJob, Account.Id))
+                ///Chưa hoàn hành nộp cv 
+                ///
+
+
+
+                /////
+                if (cd.CheckApplyStatus(idJob, fm.Account.Id))
                 {
-                    cd.UnApplyJob(IdJob, Account.Id, Account.Id);
+                    cd.UnApplyJob(idJob, fm.Account.Id, fm.Account.Id);
                     ApplyStatus();
                 }
                 else
                 {
 
-                    cd.ApplyJob(IdJob, Account.Id, Account.Id);
+                    cd.ApplyJob(idJob, fm.Account.Id,  fm.Account.Id);
                     ApplyStatus();
                 }
             }

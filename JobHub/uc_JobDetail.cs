@@ -14,6 +14,13 @@ namespace JobHub
     {
         CandidateDao cd = new CandidateDao();
         public event EventHandler JobSavedClick;
+        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
+
+        private int idJob;
+        private int idCompany;
+
+        public int IdJob { get => idJob; set => idJob = value; }
+        public int IdCompany { get => idCompany; set => idCompany = value; }
         public uc_JobDetail()
         {
             InitializeComponent();
@@ -29,12 +36,49 @@ namespace JobHub
         {
             JobSavedClick?.Invoke(this, e);
         }
-        public void SaveJob(object sender, EventArgs e, int idJob, int idCan, Account account)
+        private void Login(Fmain fm)
         {
-            if (account == null)
+            FLogin login = new FLogin(fm);
+            login.ShowDialog();
+            login = null;
+            if (fm.Account != null)
             {
-                FLogin login = new FLogin();    
-                login.ShowDialog(); 
+                FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
+                fm.loadFormReload(form.Form);
+            }
+        }
+        public void SaveJob(object sender, EventArgs e, int idJob, Fmain fm)
+        {
+            if (fm.Account == null)
+            {
+                Login(fm);
+            }
+            else
+            {
+                if (cd.CheckSaveStatus(idJob, fm.Account.Id))
+                {
+                    ptbSave.Image = Properties.Resources.heartChuaLuu;
+                    cd.UnSavedJob(idJob, fm.Account.Id);
+                }
+                else
+                {
+                    cd.SavedJob(idJob, fm.Account.Id);
+                    ptbSave.Image = Properties.Resources.heartDaLuu;
+                }
+            }
+        }
+        public void UnSaveJob(object sender, EventArgs e, int idJob, FlowLayoutPanel pn,Fmain fm, FFavouriteJob ffj)
+        {
+            ptbSave.Image = Properties.Resources.heartChuaLuu;
+            cd.UnSavedJob(idJob, fm.Account.Id);
+            pn.Controls.Clear();
+            ffj.LoadUcDetail();
+        }
+        /*public void UnSaveJob(object sender, EventArgs e, int idJob, int idCan, Fmain fm)
+        {
+            if (fm.Account == null)
+            {
+                Login(fm);
             }
             else
             {
@@ -49,6 +93,6 @@ namespace JobHub
                     ptbSave.Image = Properties.Resources.heartDaLuu;
                 }
             }
-        }
+        }*/
     }
 }

@@ -14,13 +14,13 @@ namespace JobHub
         {
             if (form.Form.Name == "FJobDetails")
             {
-                FJobDetails fjd  =new FJobDetails(form.IdJob, form.IdCompany, fm, fm.Account);
+                FJobDetails fjd  =new FJobDetails(form.IdJob, form.IdCompany, fm);
                 FormAndInfoCandidate f = new FormAndInfoCandidate(fjd , form.IdJob, form.IdCompany);
                 return f;
             }
             else if(form.Form.Name == "FCompanyDetails")
             {
-                FCompanyDetails fcd = new FCompanyDetails(form.IdCompany, fm, fm.Account);
+                FCompanyDetails fcd = new FCompanyDetails(form.IdCompany, fm);
                 return new FormAndInfoCandidate(fcd, form.IdJob, form.IdCompany);
             }
             else if ( form.Form.Name == "FJob")
@@ -38,7 +38,7 @@ namespace JobHub
         }
         public FormAndInfoCandidate ReLoadBack(Fmain fm)
         {
-            FormAndInfoCandidate form= fm.Forms.Pop();
+            FormAndInfoCandidate form= fm.Forms.Peek();
             return Reload(form, fm);
         }
 

@@ -1,13 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace JobHub
 {
     public class CompanyDetail
+
+
     {
+        private CompanyDetailDao companyDetailDao = new CompanyDetailDao(); 
+        private CandidateDao candidate = new CandidateDao();  
+        private JobDetail jobDetail = new JobDetail();
+        
+        
         private int id;
         private string name;
         private string avatar;
@@ -18,8 +29,6 @@ namespace JobHub
         private string link;
         private string size;
          
-
-
         public CompanyDetail()
         {
         }
@@ -47,5 +56,68 @@ namespace JobHub
         public string Email { get => email; set => email = value; }
         public string Link { get => link; set => link = value; }
         public string Size { get => size; set => size = value; }
+
+
+        public CompanyDetail GetInfoCompanyDetail(int idCompany)
+        {
+            
+            SqlDataReader dr = companyDetailDao.GetInfoCompanyDetailFromDB(idCompany);
+            if (dr.HasRows)
+            {
+                dr.Read();
+                return GetInfoCompanyDetail(dr);
+            }
+            return null;
+
+        }
+        public CompanyDetail GetInfoCompanyDetail(SqlDataReader dr)
+        {
+            CompanyDetail companyDetail = new CompanyDetail();
+            companyDetail.Id = int.Parse(dr["idCompany"].ToString());
+            companyDetail.Name = dr["companyName"].ToString();
+            companyDetail.Avatar = dr["companyAvatar"].ToString();
+            companyDetail.Address = dr["companyAddress"].ToString();
+            companyDetail.Phone = dr["companyPhone"].ToString();
+            companyDetail.Description = dr["companyDescription"].ToString();
+            companyDetail.Email = dr["companyEmail"].ToString();
+            companyDetail.Link = dr["companyLink"].ToString();
+            companyDetail.Size = dr["companySize"].ToString();
+            return companyDetail;
+
+        }
+        
+        public void LoadUc_JobDetail(int idCompany, FlowLayoutPanel pn, Fmain fm)
+        {
+           
+            SqlDataReader dr = companyDetailDao.LoadAllCompanyJobInformation(idCompany);
+            if (dr != null)
+            {
+                while (dr.Read())
+                {
+                    uc_JobDetail job = jobDetail.InsertInfoAndEventIntoUcJobDetail(dr, fm);
+                    int idJob = int.Parse(dr["idJob"].ToString());
+                    if (fm.Account == null)
+                    {
+                        job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                    }
+                    else
+                    {
+                        if (!candidate.CheckSaveStatus(idJob, fm.Account.Id))
+                        {
+                            job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                        }
+                        else
+                        {
+                            job.ptbSave.Image = Properties.Resources.heartDaLuu;
+                        }
+                    }
+                    pn.Controls.Add(job);
+                }
+                dr.Dispose();
+            }
+
+
+
+        }
     }
 }

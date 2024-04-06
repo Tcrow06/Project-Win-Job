@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -77,17 +78,17 @@ namespace JobHub
         }
 
 
-       /* public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
+        public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
             //int i = 1;
             while (dr.Read())
             {
                 uC_Job job = new uC_Job();
-                job.lblNameJob.Text = dr["jobName"].ToString();
-                changTheSize.setSize(130, 25, job.lblNameJob);
-                job.lblNameCompany.Text = dr["companyName"].ToString();
+                job.lblJobName.Text = dr["jobName"].ToString();
+                changTheSize.setSize(130, 25, job.lblJobName);
+                job.lblCompanyName.Text = dr["companyName"].ToString();
                 job.lblSalary.Text = dr["jobSalary"].ToString();
-                job.lblPositon.Text = dr["jobAddress"].ToString();
+                job.lblJobAddress.Text = dr["jobAddress"].ToString();
                 flPanel.Controls.Add(job);
                 int idJob = int.Parse(dr["idJob"].ToString());
                 int idCp = int.Parse(dr["idCompany"].ToString());
@@ -97,15 +98,15 @@ namespace JobHub
                 };
                 job.loadCompanyClick += (sender, e) =>
                 {
-                    job.LoadCompanyDetail(sender, e,idCp, fm);
+                    job.LoadCompanyDetail(sender, e, idCp, fm);
                 };
             }
-            if(sqlConnection.State == ConnectionState.Open)
+            if (sqlConnection.State == ConnectionState.Open)
             {
                 sqlConnection.Close();
             }
             dr.Dispose();
-        }*/
+        }
         public bool CheckNull (string sql)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);

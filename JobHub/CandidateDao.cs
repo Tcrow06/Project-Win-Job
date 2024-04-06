@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing.Text;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,12 @@ namespace JobHub
         private DBConection db = new DBConection();
         public CandidateDao() { }
         
+        public SqlDataReader GetInfoCandidate(int idCan)
+        {
+            string sql = string.Format($"select * from Candidate where idCandidate = {idCan}");
+            return db.loadData(sql);
+                
+        }
         public void ApplyJob(int idJob, int idCan, int idCv)
         {
             string sql = string.Format($"insert into AppliedCV(idJob, idCandidate, idCV) values ({idJob}, {idCan}, {idCv})"); 

@@ -21,5 +21,20 @@ namespace JobHub
         {
             this.Close();
         }
+
+        private void pnNav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

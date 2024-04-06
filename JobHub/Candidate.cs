@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace JobHub
 {
@@ -17,6 +19,7 @@ namespace JobHub
         private DateTime birth;
         private string avatar;
         private string address;
+        private CandidateDao cdd = new CandidateDao();
 
         public Candidate() { }
         public Candidate(int id, string name, string phone, string email,
@@ -47,5 +50,55 @@ namespace JobHub
         {
             this.Id = id;
         }
+        public Candidate GetInfoCandidate(Account account)
+        {
+            Candidate cd = new Candidate();
+            SqlDataReader dr = cdd.GetInfoCandidate(account.Id);
+            if (dr.Read())
+            {
+                cd.name = dr["candidateLastName"].ToString() + " " + dr["candidateFirstName"].ToString();
+
+            }
+            return cd;
+        }
+        public void ApplyJob(int idJob, int idCan, int idCv)
+        {
+            cdd.ApplyJob(idJob, idCan, idCv);
+        }
+        public void UnApplyJob(int idJob, int idCan, int idCv)
+        {
+            cdd.UnApplyJob(idJob, idCan, idCv);
+        }
+        public void SavedJob(int idJob, int idCan)
+        {
+            cdd.SavedJob(idJob, idCan);
+        }
+        public void UnSavedJob(int idJob, int idCan)
+        {
+            cdd.UnSavedJob(idJob, idCan);
+        }
+
+        public void FollowedCompany(int idCan, int idCompany)
+        {
+            cdd.FollowedCompany(idCan, idCompany);
+        }
+        public void UnFollowedCompany(int idCan, int idCompany)
+        {
+            cdd.UnFollowedCompany(idCan, idCompany);
+        }
+        public bool CheckSaveStatus(int idJob, int idCan)
+        {
+            return cdd.CheckSaveStatus(idJob,idCan);
+        }
+        public bool CheckApplyStatus(int idJob, int idCan)
+        {
+            return cdd.CheckApplyStatus(idJob, idCan);
+        }
+        public bool CheckFollowStatus(int idCompany, int idCan)
+        {
+            return cdd.CheckFollowStatus(idCompany, idCan);
+        }
+
+
     }
 }

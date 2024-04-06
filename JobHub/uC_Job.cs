@@ -13,6 +13,12 @@ namespace JobHub
     public partial class uC_Job : uc_JobMain
     {
         public event EventHandler loadCompanyClick;
+        private int idJob;
+        private int idCompany;
+
+        public int IdJob { get => idJob; set => idJob = value; }
+        public int IdCompany { get => idCompany; set => idCompany = value; }
+
         public uC_Job()
         {
             InitializeComponent();
@@ -27,18 +33,18 @@ namespace JobHub
         {
             loadCompanyClick?.Invoke(sender,e);
         }
-        public void LoadCompanyDetail(object sender, EventArgs e, int idCp, Fmain fm, Account account)
+        public void LoadCompanyDetail(object sender, EventArgs e, int idCp, Fmain fm)
         {
-            FCompanyDetails_Load(idCp, fm, account);
+            FCompanyDetails_Load(idCp, fm);
         }
-        private void FCompanyDetails_Load( int idCp, Fmain fm, Account account)
+        public void FCompanyDetails_Load( int idCp, Fmain fm)
         {
 
-            FCompanyDetails job = new FCompanyDetails(idCp, fm, account);
+            FCompanyDetails job = new FCompanyDetails(idCp, fm);
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job,-1, idCp);
             fm.HideChildForm();
             fm.Forms.Push(fai);
-            fm.resize(job.Width + 170, job.Height + 50);
+            fm.resize(955, 640);
             job.MdiParent = fm;
             job.Dock = DockStyle.Fill;
             job.Show();

@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FJob));
             this.pnJob = new System.Windows.Forms.FlowLayoutPanel();
-            this.cboCity = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboExperience = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboWage = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboSalary = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboAddress = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSubLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLogo = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -73,39 +73,10 @@
             this.pnJob.Size = new System.Drawing.Size(863, 351);
             this.pnJob.TabIndex = 39;
             // 
-            // cboCity
-            // 
-            this.cboCity.BackColor = System.Drawing.Color.Transparent;
-            this.cboCity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(161)))), ((int)(((byte)(233)))));
-            this.cboCity.BorderRadius = 9;
-            this.cboCity.BorderThickness = 2;
-            this.cboCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboCity.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.cboCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboCity.ItemHeight = 22;
-            this.cboCity.Items.AddRange(new object[] {
-            "Tất cả kinh nghiệm",
-            "Chưa có kinh nghiệm",
-            "Dưới 1 năm",
-            "1 năm",
-            "2 năm",
-            "3 năm",
-            "Trên 3 năm"});
-            this.cboCity.Location = new System.Drawing.Point(630, 192);
-            this.cboCity.Margin = new System.Windows.Forms.Padding(2);
-            this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(204, 28);
-            this.cboCity.StartIndex = 0;
-            this.cboCity.TabIndex = 36;
-            this.cboCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // cboExperience
             // 
             this.cboExperience.BackColor = System.Drawing.Color.Transparent;
-            this.cboExperience.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(162)))), ((int)(((byte)(4)))));
+            this.cboExperience.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(161)))), ((int)(((byte)(233)))));
             this.cboExperience.BorderRadius = 9;
             this.cboExperience.BorderThickness = 2;
             this.cboExperience.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -116,35 +87,65 @@
             this.cboExperience.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboExperience.ItemHeight = 22;
             this.cboExperience.Items.AddRange(new object[] {
-            "Tất cả mức lương",
-            "Dưới 2 triệu",
-            "3-5 triệu",
-            "6-10 triệu",
-            "11-15 triệu",
-            "Trên 15 triệu"});
-            this.cboExperience.Location = new System.Drawing.Point(322, 192);
+            "Tất cả kinh nghiệm",
+            "Không yêu cầu kinh nghiệm",
+            "Dưới 1 năm",
+            "1 năm",
+            "2 năm",
+            "3 năm",
+            "Trên 3 năm"});
+            this.cboExperience.Location = new System.Drawing.Point(630, 192);
             this.cboExperience.Margin = new System.Windows.Forms.Padding(2);
             this.cboExperience.Name = "cboExperience";
-            this.cboExperience.Size = new System.Drawing.Size(204, 28);
+            this.cboExperience.Size = new System.Drawing.Size(226, 28);
             this.cboExperience.StartIndex = 0;
-            this.cboExperience.TabIndex = 35;
+            this.cboExperience.TabIndex = 36;
             this.cboExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cboExperience.SelectedIndexChanged += new System.EventHandler(this.cboExperience_SelectedIndexChanged);
             // 
-            // cboWage
+            // cboSalary
             // 
-            this.cboWage.BackColor = System.Drawing.Color.Transparent;
-            this.cboWage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
-            this.cboWage.BorderRadius = 9;
-            this.cboWage.BorderThickness = 2;
-            this.cboWage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboWage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboWage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboWage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboWage.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.cboWage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboWage.ItemHeight = 22;
-            this.cboWage.Items.AddRange(new object[] {
+            this.cboSalary.BackColor = System.Drawing.Color.Transparent;
+            this.cboSalary.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(162)))), ((int)(((byte)(4)))));
+            this.cboSalary.BorderRadius = 9;
+            this.cboSalary.BorderThickness = 2;
+            this.cboSalary.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboSalary.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSalary.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboSalary.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.cboSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboSalary.ItemHeight = 22;
+            this.cboSalary.Items.AddRange(new object[] {
+            "Tất cả mức lương",
+            "3 - 5 triệu",
+            "6 - 10 triệu",
+            "11 - 15 triệu",
+            "Trên 15 triệu",
+            "Thỏa thuận"});
+            this.cboSalary.Location = new System.Drawing.Point(322, 192);
+            this.cboSalary.Margin = new System.Windows.Forms.Padding(2);
+            this.cboSalary.Name = "cboSalary";
+            this.cboSalary.Size = new System.Drawing.Size(204, 28);
+            this.cboSalary.StartIndex = 0;
+            this.cboSalary.TabIndex = 35;
+            this.cboSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboSalary.SelectedIndexChanged += new System.EventHandler(this.cboSalary_SelectedIndexChanged);
+            // 
+            // cboAddress
+            // 
+            this.cboAddress.BackColor = System.Drawing.Color.Transparent;
+            this.cboAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
+            this.cboAddress.BorderRadius = 9;
+            this.cboAddress.BorderThickness = 2;
+            this.cboAddress.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAddress.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboAddress.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.cboAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboAddress.ItemHeight = 22;
+            this.cboAddress.Items.AddRange(new object[] {
             "Tất cả tỉnh/thành phố",
             "TP. Hồ Chí Minh",
             "An Giang",
@@ -209,15 +210,14 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cboWage.Location = new System.Drawing.Point(14, 192);
-            this.cboWage.Margin = new System.Windows.Forms.Padding(2);
-            this.cboWage.Name = "cboWage";
-            this.cboWage.Size = new System.Drawing.Size(204, 28);
-            this.cboWage.StartIndex = 0;
-            this.cboWage.TabIndex = 34;
-            this.cboWage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cboWage.SelectedIndexChanged += new System.EventHandler(this.cboWage_SelectedIndexChanged);
-            this.cboWage.SelectedValueChanged += new System.EventHandler(this.cboWage_SelectedValueChanged);
+            this.cboAddress.Location = new System.Drawing.Point(14, 192);
+            this.cboAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.cboAddress.Name = "cboAddress";
+            this.cboAddress.Size = new System.Drawing.Size(204, 28);
+            this.cboAddress.StartIndex = 0;
+            this.cboAddress.TabIndex = 34;
+            this.cboAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboAddress.SelectedIndexChanged += new System.EventHandler(this.cboAddress_SelectedIndexChanged);
             // 
             // lblTitle
             // 
@@ -301,7 +301,7 @@
             this.btnTechnique.Image = ((System.Drawing.Image)(resources.GetObject("btnTechnique.Image")));
             this.btnTechnique.ImageOffset = new System.Drawing.Point(-3, 0);
             this.btnTechnique.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTechnique.Location = new System.Drawing.Point(459, 101);
+            this.btnTechnique.Location = new System.Drawing.Point(430, 101);
             this.btnTechnique.Margin = new System.Windows.Forms.Padding(2);
             this.btnTechnique.Name = "btnTechnique";
             this.btnTechnique.Size = new System.Drawing.Size(145, 37);
@@ -330,7 +330,7 @@
             this.btnEconomy.Image = ((System.Drawing.Image)(resources.GetObject("btnEconomy.Image")));
             this.btnEconomy.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnEconomy.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnEconomy.Location = new System.Drawing.Point(234, 101);
+            this.btnEconomy.Location = new System.Drawing.Point(210, 101);
             this.btnEconomy.Margin = new System.Windows.Forms.Padding(2);
             this.btnEconomy.Name = "btnEconomy";
             this.btnEconomy.Size = new System.Drawing.Size(145, 37);
@@ -484,8 +484,9 @@
             this.cboIndustryGroup.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboIndustryGroup.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.cboIndustryGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboIndustryGroup.ItemHeight = 22;
+            this.cboIndustryGroup.ItemHeight = 29;
             this.cboIndustryGroup.Items.AddRange(new object[] {
+            "Tất cả các ngành",
             "Sản xuất và chế biến",
             "Kiến trúc và xây dựng",
             "Kinh tế",
@@ -498,10 +499,10 @@
             "Sư phạm",
             "Ngôn ngữ",
             "Nông - lâm - ngư nghiệp"});
-            this.cboIndustryGroup.Location = new System.Drawing.Point(669, 101);
+            this.cboIndustryGroup.Location = new System.Drawing.Point(630, 101);
             this.cboIndustryGroup.Margin = new System.Windows.Forms.Padding(2);
             this.cboIndustryGroup.Name = "cboIndustryGroup";
-            this.cboIndustryGroup.Size = new System.Drawing.Size(165, 28);
+            this.cboIndustryGroup.Size = new System.Drawing.Size(220, 35);
             this.cboIndustryGroup.StartIndex = 0;
             this.cboIndustryGroup.TabIndex = 43;
             this.cboIndustryGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -573,9 +574,9 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.pnJob);
-            this.Controls.Add(this.cboCity);
             this.Controls.Add(this.cboExperience);
-            this.Controls.Add(this.cboWage);
+            this.Controls.Add(this.cboSalary);
+            this.Controls.Add(this.cboAddress);
             this.Controls.Add(this.btnTechnique);
             this.Controls.Add(this.btnEconomy);
             this.Controls.Add(this.btnIT);
@@ -604,9 +605,9 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel pnJob;
-        private Guna.UI2.WinForms.Guna2ComboBox cboCity;
         private Guna.UI2.WinForms.Guna2ComboBox cboExperience;
-        private Guna.UI2.WinForms.Guna2ComboBox cboWage;
+        private Guna.UI2.WinForms.Guna2ComboBox cboSalary;
+        private Guna.UI2.WinForms.Guna2ComboBox cboAddress;
         private Guna.UI2.WinForms.Guna2Button btnTechnique;
         private Guna.UI2.WinForms.Guna2Button btnEconomy;
         private Guna.UI2.WinForms.Guna2Button btnIT;

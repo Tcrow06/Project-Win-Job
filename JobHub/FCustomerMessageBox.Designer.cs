@@ -30,16 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCustomerMessageBox));
+            this.lblMessage = new System.Windows.Forms.Label();
             this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pnNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(19, 52);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(307, 47);
+            this.lblMessage.TabIndex = 5;
+            this.lblMessage.Text = "Done!";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMessage.Click += new System.EventHandler(this.lblMessage_Click);
             // 
             // pnNav
             // 
@@ -48,9 +59,11 @@
             this.pnNav.Controls.Add(this.guna2PictureBox1);
             this.pnNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnNav.Location = new System.Drawing.Point(0, 0);
+            this.pnNav.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnNav.Name = "pnNav";
-            this.pnNav.Size = new System.Drawing.Size(393, 55);
-            this.pnNav.TabIndex = 0;
+            this.pnNav.Size = new System.Drawing.Size(349, 44);
+            this.pnNav.TabIndex = 4;
+            this.pnNav.Paint += new System.Windows.Forms.PaintEventHandler(this.pnNav_Paint);
             // 
             // label1
             // 
@@ -58,9 +71,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(139, 11);
+            this.label1.Location = new System.Drawing.Point(124, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 32);
+            this.label1.Size = new System.Drawing.Size(111, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thông báo";
             // 
@@ -68,22 +81,13 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(126, 48);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(112, 38);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(21, 65);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(345, 59);
-            this.lblMessage.TabIndex = 1;
-            this.lblMessage.Text = "Done!";
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button1
             // 
@@ -97,10 +101,11 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(307, 139);
+            this.guna2Button1.Location = new System.Drawing.Point(273, 111);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(79, 32);
-            this.guna2Button1.TabIndex = 2;
+            this.guna2Button1.Size = new System.Drawing.Size(70, 26);
+            this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "OK";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -118,21 +123,21 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(393, 177);
-            this.guna2Panel1.TabIndex = 3;
+            this.guna2Panel1.Size = new System.Drawing.Size(349, 142);
+            this.guna2Panel1.TabIndex = 7;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // FCustomerMessageBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(393, 177);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(349, 142);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pnNav);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Panel1);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCustomerMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -146,10 +151,10 @@
 
         #endregion
 
+        public System.Windows.Forms.Label lblMessage;
         private Guna.UI2.WinForms.Guna2Panel pnNav;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        public System.Windows.Forms.Label lblMessage;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

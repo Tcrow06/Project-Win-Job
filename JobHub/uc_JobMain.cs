@@ -21,14 +21,14 @@ namespace JobHub
         {
             loadJobClick?.Invoke(this, e);
         }
-        public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCompany, Fmain fm, Account account)
+        public void LoadJobDetail(object sender, EventArgs e, int idJob, int idCompany, Fmain fm)
         {
-            FJobDetails_Load(idJob, idCompany, fm, account);
+            FJobDetails_Load(idJob, idCompany, fm);
         }
-        private void FJobDetails_Load(int idJob, int idCp, Fmain fm, Account account)
+        private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
         {
 
-            FJobDetails job = new FJobDetails(idJob, idCp, fm, account);
+            FJobDetails job = new FJobDetails(idJob, idCp, fm);
             fm.HideChildForm();
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job, idJob, idCp);
             fm.Forms.Push(fai);
@@ -37,6 +37,15 @@ namespace JobHub
             job.Dock = DockStyle.Fill;
             job.Show();
             job.BringToFront();
+        }
+        public string HandleSalary(string x, string y)
+        {
+            if (x == "0" && y == "0") return "Thoả thuận";
+
+            if (x == "0") return "Trên " + y + " triệu";
+
+            return x + " - " + y + " triệu";
+
         }
     }
 }

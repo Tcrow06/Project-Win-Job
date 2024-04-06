@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uC_Job));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ucJob = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblPositon = new System.Windows.Forms.Label();
+            this.lblJobAddress = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
-            this.lblNameCompany = new System.Windows.Forms.Label();
-            this.lblNameJob = new System.Windows.Forms.Label();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblCompanyName = new System.Windows.Forms.Label();
+            this.lblJobName = new System.Windows.Forms.Label();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ucJob.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -51,11 +51,11 @@
             this.ucJob.BorderColor = System.Drawing.Color.Silver;
             this.ucJob.BorderRadius = 10;
             this.ucJob.BorderThickness = 2;
-            this.ucJob.Controls.Add(this.lblPositon);
+            this.ucJob.Controls.Add(this.lblJobAddress);
             this.ucJob.Controls.Add(this.lblSalary);
-            this.ucJob.Controls.Add(this.lblNameCompany);
-            this.ucJob.Controls.Add(this.lblNameJob);
-            this.ucJob.Controls.Add(this.picLogo);
+            this.ucJob.Controls.Add(this.lblCompanyName);
+            this.ucJob.Controls.Add(this.lblJobName);
+            this.ucJob.Controls.Add(this.pbAvatar);
             this.ucJob.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucJob.Location = new System.Drawing.Point(0, 0);
             this.ucJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -64,18 +64,18 @@
             this.ucJob.TabIndex = 0;
             this.ucJob.Click += new System.EventHandler(this.ucJob_Click);
             // 
-            // lblPositon
+            // lblJobAddress
             // 
-            this.lblPositon.AutoSize = true;
-            this.lblPositon.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblPositon.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPositon.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPositon.Location = new System.Drawing.Point(144, 56);
-            this.lblPositon.Name = "lblPositon";
-            this.lblPositon.Size = new System.Drawing.Size(95, 20);
-            this.lblPositon.TabIndex = 4;
-            this.lblPositon.Text = "Hồ Chí Minh";
-            this.lblPositon.Click += new System.EventHandler(this.ucJob_Click);
+            this.lblJobAddress.AutoSize = true;
+            this.lblJobAddress.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblJobAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobAddress.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblJobAddress.Location = new System.Drawing.Point(144, 56);
+            this.lblJobAddress.Name = "lblJobAddress";
+            this.lblJobAddress.Size = new System.Drawing.Size(95, 20);
+            this.lblJobAddress.TabIndex = 4;
+            this.lblJobAddress.Text = "Hồ Chí Minh";
+            this.lblJobAddress.Click += new System.EventHandler(this.ucJob_Click);
             // 
             // lblSalary
             // 
@@ -90,43 +90,43 @@
             this.lblSalary.Text = "20-25 Triệu";
             this.lblSalary.Click += new System.EventHandler(this.ucJob_Click);
             // 
-            // lblNameCompany
+            // lblCompanyName
             // 
-            this.lblNameCompany.AutoEllipsis = true;
-            this.lblNameCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameCompany.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNameCompany.Location = new System.Drawing.Point(84, 31);
-            this.lblNameCompany.Name = "lblNameCompany";
-            this.lblNameCompany.Size = new System.Drawing.Size(162, 20);
-            this.lblNameCompany.TabIndex = 2;
-            this.lblNameCompany.Text = "Công ty cổ phần FPT";
-            this.lblNameCompany.Click += new System.EventHandler(this.lblNameCompany_Click);
+            this.lblCompanyName.AutoEllipsis = true;
+            this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyName.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblCompanyName.Location = new System.Drawing.Point(84, 31);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(162, 20);
+            this.lblCompanyName.TabIndex = 2;
+            this.lblCompanyName.Text = "Công ty cổ phần FPT";
+            this.lblCompanyName.Click += new System.EventHandler(this.lblNameCompany_Click);
             // 
-            // lblNameJob
+            // lblJobName
             // 
-            this.lblNameJob.AutoEllipsis = true;
-            this.lblNameJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameJob.Location = new System.Drawing.Point(85, 10);
-            this.lblNameJob.Name = "lblNameJob";
-            this.lblNameJob.Size = new System.Drawing.Size(106, 20);
-            this.lblNameJob.TabIndex = 1;
-            this.lblNameJob.Text = "BackEnd Java";
-            this.lblNameJob.Click += new System.EventHandler(this.ucJob_Click);
+            this.lblJobName.AutoEllipsis = true;
+            this.lblJobName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobName.Location = new System.Drawing.Point(85, 10);
+            this.lblJobName.Name = "lblJobName";
+            this.lblJobName.Size = new System.Drawing.Size(106, 20);
+            this.lblJobName.TabIndex = 1;
+            this.lblJobName.Text = "BackEnd Java";
+            this.lblJobName.Click += new System.EventHandler(this.ucJob_Click);
             // 
-            // picLogo
+            // pbAvatar
             // 
-            this.picLogo.BackColor = System.Drawing.SystemColors.Control;
-            this.picLogo.BorderRadius = 8;
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(15, 10);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(56, 44);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.ucJob_Click);
+            this.pbAvatar.BackColor = System.Drawing.SystemColors.Control;
+            this.pbAvatar.BorderRadius = 8;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(15, 10);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(56, 44);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
+            this.pbAvatar.Click += new System.EventHandler(this.ucJob_Click);
             // 
             // uC_Job
             // 
@@ -139,7 +139,7 @@
             this.Size = new System.Drawing.Size(282, 83);
             this.ucJob.ResumeLayout(false);
             this.ucJob.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,10 +147,10 @@
         #endregion
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2Panel ucJob;
-        public Guna.UI2.WinForms.Guna2PictureBox picLogo;
+        public Guna.UI2.WinForms.Guna2PictureBox pbAvatar;
         public System.Windows.Forms.Label lblSalary;
-        public System.Windows.Forms.Label lblNameCompany;
-        public System.Windows.Forms.Label lblNameJob;
-        public System.Windows.Forms.Label lblPositon;
+        public System.Windows.Forms.Label lblCompanyName;
+        public System.Windows.Forms.Label lblJobName;
+        public System.Windows.Forms.Label lblJobAddress;
     }
 }

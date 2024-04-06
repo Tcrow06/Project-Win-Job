@@ -20,55 +20,35 @@ namespace JobHub
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
         private Image edit = Properties.Resources.edit;
         private Image delete = Properties.Resources.detele;
-        public FJobPostHistory()
+        private Fmain fm;
+        JobDetail jobDetail = new JobDetail();
+        JobPostHistory jobPostHistory = new JobPostHistory();   
+        public FJobPostHistory(Fmain fm)
         {
+            this.fm = fm;
             InitializeComponent();
-            //dgJobPostHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.Red; // Màu nền
+        }
+        private void SetSizeDGV()
+        {
+            if (dgv.DisplayedRowCount(false) < dgv.RowCount)
+            {
+                dgv.Width = 814;
+            }
+            else
+            {
+                dgv.Width = 796;
+            }
         }
 
         private void FJobPostHistory_Load(object sender, EventArgs e)
         {
-            /*dgJobPostHistory.Rows.Add("12/23/2023",
-                "Nhân Viên Kinh Doanh Có Lương Cứng + Hoa Hồng Cao, Thu Nhập Trên 20 Triệu",
-                1, 1, 1);*/
             LoadFullGridView();
-            
         }
         private void LoadFullGridView()
         {
-            int idCompany = 3;
-            try
-            {
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-
-                    string query = string.Format($"select* from Job where Job.idCompany = {idCompany}");
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    JobDetail jd = new JobDetail();
-                    while (dr.Read())
-                    {
-                        jd.NameJob = dr["jobName"].ToString();
-                        jd.Salary = dr["jobSalary"].ToString();
-                        jd.Address = dr["jobAddress"].ToString();
-                        jd.Experience = dr["jobExperience"].ToString();
-                        jd.Description = dr["jobDescription"].ToString();
-                        jd.Requirement = dr["jobRequirement"].ToString();
-                        jd.Benefit = dr["jobBenefit"].ToString();
-                        jd.RegisterDead = Convert.ToDateTime(dr["jobRegisterDead"]);
-                        jd.PostDate = Convert.ToDateTime(dr["jobPostDate"]);
-
-                        DateTime date = Convert.ToDateTime(jd.PostDate);
-                        string datePost = date.ToString("dd-MM-yyyy");
-                        dgv.Rows.Add(datePost, jd.NameJob, jd.Address, jd.Salary, edit, delete);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            dgv.Rows.Clear();
+            jobPostHistory.LoadFullGridView(fm.Account.Id, dgv);
+            SetSizeDGV();
         }
         
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -76,49 +56,78 @@ namespace JobHub
             int x = e.ColumnIndex, y = e.RowIndex;
             if (y >= 0)
             {
-                // If click Update button 
+                CustomMessageBox cmb = new CustomMessageBox();
                 if (x == 4)
                 {
-                    /*if (taiKhoan.CapDoQuyen == 1)
-                    {
-                        CTMessageBox.Show("Bạn không có quyền thực hiện thao tác này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }*/
                     FPostJob fpj = new FPostJob();
                     try
                     {
-                        int idJob = int.Parse(dgv.Rows[y].Cells[1].Value.ToString());
+                        int idJob = int.Parse(dgv.Rows[y].Cells[6].Value.ToString());
+
+                        //Hiện form chỉnh sửa tại đây
                         fpj.ShowDialog();
+                        LoadFullGridView();
                     }
                     catch (Exception)
                     {
-                        //CustomMessageBox.Show("Lỗi không thể sửa");
+                        cmb.Show("Lỗi không thể sửa");
                     }
                     finally
                     {
-                        LoadFullGridView();
                         
                     }
                 }
                 if (x == 5)
                 {
-
-
-                    //CustomMessageBox.Show("Bạn có muốn xóa");
-                    
+                    try
+                    {
+                        DialogResult result = MessageBox.Show("Xác nhận xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if(result == DialogResult.Yes)
+                        {
+                            DeleteJob(int.Parse(dgv.Rows[y].Cells[6].Value.ToString()));
+                            LoadFullGridView();
+                        }
+                        
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.");
+                    }
+                    finally
+                    {
+                    }
                 }
 
                 }
             }
-
+        private void DeleteJob(int idJob)
+        {
+            jobPostHistory.DeleteJob(idJob);
+        }
         private void dgv_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             int y = e.RowIndex, x = e.ColumnIndex;
-
-            if (y >= 0 && x == 4 || y >= 0 && x == 5 || y == -1)
+            int[] arrX = { 0, 1, 2, 3, };
+            bool isExists = false;
+            if (Array.IndexOf(arrX, x) != -1)
+                isExists = true;
+            if (y >= 0 && (x == 4 || x == 5) || (y == -1 && isExists))
                 dgv.Cursor = Cursors.Hand;
             else
+            {
                 dgv.Cursor = Cursors.Default;
+            }
+
+        }
+
+        private void dgv_MouseMove(object sender, MouseEventArgs e)
+        {
+            DataGridView.HitTestInfo hit = dgv.HitTest(e.X, e.Y);
+            if (hit.Type == DataGridViewHitTestType.None && e.X >= 0 && e.X <= dgv.Width && e.Y >= 0 && e.Y <= dgv.Height)
+            {
+                dgv.Cursor = Cursors.Default;
+            }
+
         }
     }
 
