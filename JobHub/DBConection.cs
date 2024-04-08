@@ -151,7 +151,42 @@ namespace JobHub
             }
         }*/
 
+        public DataTable ExcutionReadData(string cmd)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection((Properties.Settings.Default.conn)))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(cmd, connection))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
 
+        public void ExcutionWriteData(DataTable dt, FlowLayoutPanel fpn)
+        {
+            FormHandler handler = new FormHandler();
+            foreach (DataRow dr in dt.Rows)
+            {
+                uC_CV uC_CV = new uC_CV();
+                uC_CV.lblFirstName.Text = dr["candidateFirstName"].ToString();
+                uC_CV.lblLastName.Text = dr["candidateLastName"].ToString();
+                uC_CV.lblJobName.Text = dr["jobName"].ToString();
+                uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblFirstName.Text} {uC_CV.lblLastName.Text}";    
+                uC_CV.OpenForm += (sender, e) =>
+                {
+                    int idCandiate = Int32.Parse(dr["idCandidate"].ToString());
+                    int idCV = Int32.Parse(dr["idCV"].ToString());
+                    handler.OpenNewForm(idCandiate, idCV);
+                };
+                fpn.Controls.Add(uC_CV);
+            }
+        }
     }
     
 }

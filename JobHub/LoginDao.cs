@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace JobHub
 {
@@ -26,7 +27,7 @@ namespace JobHub
                 account.Type = int.Parse(dt.Rows[0][3].ToString());
                 return account;
             }
-            else return null;
+            return null;
         }
 
     }

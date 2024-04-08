@@ -346,7 +346,6 @@ namespace JobHub
         private void postJobBtn_Click(object sender, EventArgs e)
         {
             string sql = "SELECT MAX(idJob) FROM Job";
-            SqlConnection sqlCnn;
             SqlCommand sqlCmd;
             int storeMaxId = 0;
             sqlConnection.Open();
