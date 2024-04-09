@@ -122,9 +122,23 @@ namespace JobHub
             SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
+            int i = 4;
             return dt;
 
         }
+        public DataRow GetHotUcJob(string sql)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            Random random = new Random();
+
+            int randomNumber = random.Next(0, dt.Rows.Count);
+            return dt.Rows[randomNumber];
+
+        }
+
+
 
         /*public void changeforCompany(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {

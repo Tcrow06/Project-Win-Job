@@ -67,17 +67,18 @@
             this.pnContain.Controls.Add(this.picImageTitle);
             this.pnContain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContain.Location = new System.Drawing.Point(0, 0);
+            this.pnContain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnContain.Name = "pnContain";
-            this.pnContain.Size = new System.Drawing.Size(351, 412);
-            this.pnContain.TabIndex = 0;
+            this.pnContain.Size = new System.Drawing.Size(312, 330);
+            this.pnContain.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(308, 201);
+            this.label2.Location = new System.Drawing.Point(274, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 19);
+            this.label2.Size = new System.Drawing.Size(16, 17);
             this.label2.TabIndex = 29;
             this.label2.Text = "5";
             // 
@@ -85,9 +86,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 202);
+            this.label1.Location = new System.Drawing.Point(160, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 19);
+            this.label1.Size = new System.Drawing.Size(32, 17);
             this.label1.TabIndex = 27;
             this.label1.Text = "46K";
             // 
@@ -95,9 +96,9 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(11, 243);
+            this.lblTitle.Location = new System.Drawing.Point(10, 194);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(98, 23);
+            this.lblTitle.Size = new System.Drawing.Size(81, 20);
             this.lblTitle.TabIndex = 24;
             this.lblTitle.Text = "Lĩnh Vực";
             // 
@@ -105,9 +106,9 @@
             // 
             this.lblView.AutoSize = true;
             this.lblView.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblView.Location = new System.Drawing.Point(50, 202);
+            this.lblView.Location = new System.Drawing.Point(44, 162);
             this.lblView.Name = "lblView";
-            this.lblView.Size = new System.Drawing.Size(27, 19);
+            this.lblView.Size = new System.Drawing.Size(24, 17);
             this.lblView.TabIndex = 23;
             this.lblView.Text = "1K";
             // 
@@ -131,9 +132,10 @@
             this.btnApply.Image = ((System.Drawing.Image)(resources.GetObject("btnApply.Image")));
             this.btnApply.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnApply.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnApply.Location = new System.Drawing.Point(15, 343);
+            this.btnApply.Location = new System.Drawing.Point(13, 274);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(325, 44);
+            this.btnApply.Size = new System.Drawing.Size(289, 35);
             this.btnApply.TabIndex = 31;
             this.btnApply.Text = "Ứng Tuyển";
             // 
@@ -141,9 +143,10 @@
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(281, 200);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(250, 160);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 20);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(22, 16);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 28;
             this.guna2PictureBox2.TabStop = false;
@@ -152,9 +155,10 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(153, 202);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(136, 162);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 20);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(22, 16);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 26;
             this.guna2PictureBox1.TabStop = false;
@@ -180,9 +184,10 @@
             this.btnTourism.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTourism.ImageOffset = new System.Drawing.Point(-4, 0);
             this.btnTourism.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnTourism.Location = new System.Drawing.Point(13, 276);
+            this.btnTourism.Location = new System.Drawing.Point(12, 221);
+            this.btnTourism.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTourism.Name = "btnTourism";
-            this.btnTourism.Size = new System.Drawing.Size(148, 44);
+            this.btnTourism.Size = new System.Drawing.Size(132, 35);
             this.btnTourism.TabIndex = 25;
             this.btnTourism.Text = "Du Lịch";
             this.btnTourism.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -191,9 +196,10 @@
             // 
             this.picViews.Image = ((System.Drawing.Image)(resources.GetObject("picViews.Image")));
             this.picViews.ImageRotate = 0F;
-            this.picViews.Location = new System.Drawing.Point(17, 200);
+            this.picViews.Location = new System.Drawing.Point(15, 160);
+            this.picViews.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picViews.Name = "picViews";
-            this.picViews.Size = new System.Drawing.Size(30, 25);
+            this.picViews.Size = new System.Drawing.Size(27, 20);
             this.picViews.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picViews.TabIndex = 22;
             this.picViews.TabStop = false;
@@ -204,9 +210,10 @@
             this.picImageTitle.FillColor = System.Drawing.SystemColors.Control;
             this.picImageTitle.Image = ((System.Drawing.Image)(resources.GetObject("picImageTitle.Image")));
             this.picImageTitle.ImageRotate = 0F;
-            this.picImageTitle.Location = new System.Drawing.Point(11, 8);
+            this.picImageTitle.Location = new System.Drawing.Point(10, 6);
+            this.picImageTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picImageTitle.Name = "picImageTitle";
-            this.picImageTitle.Size = new System.Drawing.Size(325, 180);
+            this.picImageTitle.Size = new System.Drawing.Size(289, 144);
             this.picImageTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picImageTitle.TabIndex = 21;
             this.picImageTitle.TabStop = false;
@@ -223,12 +230,13 @@
             // 
             // uC_SlideJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnContain);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "uC_SlideJob";
-            this.Size = new System.Drawing.Size(351, 412);
+            this.Size = new System.Drawing.Size(312, 330);
             this.pnContain.ResumeLayout(false);
             this.pnContain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
