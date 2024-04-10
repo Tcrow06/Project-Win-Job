@@ -13,18 +13,20 @@ namespace JobHub
 {
     public partial class FCVDetail : Form
     {
-        private int id;
+        private int idCandidate;
+        private int idCV;
         DBConection con = new DBConection();
-        public int Id { get => id; set => id = value; }
+
 
         public FCVDetail()
         {
             InitializeComponent();
         }
-        public FCVDetail(int x)
+        public FCVDetail(int idCanidate, int idCV)
         {
             InitializeComponent();
-            this.Id = 1;
+            this.idCandidate = idCanidate;
+            this.idCV = idCV;
         }
         private void loadData()
         {

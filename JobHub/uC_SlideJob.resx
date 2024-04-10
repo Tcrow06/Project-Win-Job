@@ -121,7 +121,11 @@
   <data name="btnApply.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+<<<<<<< HEAD
         vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFYKSURBVHhe7d0H
+=======
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFYKSURBVHhe7d0H
+>>>>>>> a9cf6c49f419650d0d15ec1e1e798102e4d9635c
         vBbFvTdwOfTekY6IICAdCwpiARQboiioKGKLvUSxYo0FCypIbFFji73EksQYjb3GHntL9abc9JuYcvPe
         O+/zO/G52T3nx8LMzuyz++zvfD7f9+ZdD7szszv/+Z2n7K5jjBGxUvkZW3FmxQMVP6/ARhHJ1s8q7q04
         uWIkm6siSehGEaby06oCC/9/V0QLkYjU1j8qTqtoxeauCEM3ijRV+ele8WpFtOiISL68UtGdzWGRpuhG
@@ -506,7 +510,11 @@
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+<<<<<<< HEAD
         cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADOSURBVDhPjdNB
+=======
+        cQAAAHEBHD+AdwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADOSURBVDhPjdNB
+>>>>>>> a9cf6c49f419650d0d15ec1e1e798102e4d9635c
         CgFRAMbxkYUNZUdZy0LZcATFQVxCkZWcwUbZYWUrSwsrZecORHEC/w8zvZl5741//YrpzacmExhN8HB4
         YYYcrBVxQ+nzLd0RJyyQ14VkVVy+H61poIkltiggVtbAAQP0cMYKsbIG+lhj8/NEGVFZA8l0VvdEmQP6
         pb3DFMo7UEfboQblHeig69CA8g7MET6spCGUd+CfvAPhQ9yhoguWvAPhQ2zB9d/3DvxTakAv0xWul8lM
@@ -516,7 +524,11 @@
   <data name="btnTourism.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+<<<<<<< HEAD
         cwAAAHMBY8FD/gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAL5SURBVDhPdZHb
+=======
+        dAAAAHQBMYXlgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAL5SURBVDhPdZHb
+>>>>>>> a9cf6c49f419650d0d15ec1e1e798102e4d9635c
         T5JhAMbppnXRYf0DrYuabcw2RVNDFEQzKSA/8QDI4UMRFVBERUQlQEglAQ+ZZuo0Oyxt1uZFW3XRadrp
         wlqZudmk1K3D1lquliuf/D5R1+nZnr2Hvc9v7/u8jD8lEQrEwrSUPr1dx88iRf3yAqLLETBFxrOYu5hM
         5uZ0QYqey2RuDR3/S5uIDMECUadbSmirQMQtPyLutEIgF8PT6Fq2Vpk+ygjR25iYPdtD5zck5cTsb1Kl

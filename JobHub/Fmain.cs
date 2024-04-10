@@ -383,7 +383,7 @@ namespace JobHub
             {
                 formdelete.Close();
             }
-            FMyCV fMyCV = new FMyCV();
+            FMyCV fMyCV = new FMyCV(Account.Id);
             fMyCV.MdiParent = this;
             resize(fMyCV.Width + 200, fMyCV.Height + 50);
             fMyCV.Dock = DockStyle.Fill;
