@@ -535,7 +535,7 @@ namespace JobHub
         private void btnPostJob_Click(object sender, EventArgs e)
         {
             this.DeleteChildForm();   
-            FPostJob jsh = new FPostJob();
+            FPostJob jsh = new FPostJob(this);
             jsh.MdiParent = this;
             resize(jsh.Width + 200, jsh.Height + 50);
             jsh.Dock = DockStyle.Fill;
