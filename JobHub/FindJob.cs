@@ -22,6 +22,7 @@ namespace JobHub
         JobDetail jobDetail = new JobDetail();
         public FindJob() { }
 
+//<<<<<<< HEAD
         public void LoadUc_SlideJob(Guna2Panel pn, Fmain fm)
         {
             //Chưa hoàn thiện
@@ -129,10 +130,9 @@ namespace JobHub
 
 
             SqlDataReader dr = findJobDao.LoadFilterUcJob(sql);
-            LoadIntoPanel(dr, flPanel, fm);
-
+            LoadUcIntoPanel(dr, flPanel, fm);
         }
-        private void LoadIntoPanel(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
+        public void LoadUcIntoPanel(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
             flPanel.Controls.Clear();
             if (dr != null)
@@ -146,5 +146,6 @@ namespace JobHub
                 dr.Close();
             }
         }
+        
     }
 }

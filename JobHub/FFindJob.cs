@@ -32,22 +32,12 @@ namespace JobHub
         private void FJob_Load(object sender, EventArgs e)
         {
             LoadFilterUcJob();
-
-        }
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            LoadFilterUcJob();
         }
         private void LoadFilterUcJob()
         {
             fjd.LoadFilterUcJob(pnJob, fm, btnTechnique.Checked, btnIT.Checked, btnEconomy.Checked, cboIndustryGroup.SelectedItem.ToString(),
                                 cboSalary.SelectedItem.ToString(),cboAddress.SelectedItem.ToString(),
                                 cboExperience.SelectedItem.ToString(), txtSearch.Text.Trim());
-        }
-
-        private void btnFilter_Click(object sender, EventArgs e)
-        {
-            LoadFilterUcJob();
         }
 
         private void cboIndustryGroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,17 +56,11 @@ namespace JobHub
             }
             LoadFilterUcJob();
         }
-        private void cboFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectUcFilter(object sender, EventArgs e)
         {
             LoadFilterUcJob();
-
         }
-        private void cboFilterAndSearch(object sender, EventArgs e)
-        {
-            LoadFilterUcJob();
-
-        }
-
+      
     }
 } 
 

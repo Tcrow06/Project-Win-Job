@@ -101,7 +101,7 @@
             this.cboExperience.StartIndex = 0;
             this.cboExperience.TabIndex = 36;
             this.cboExperience.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cboExperience.SelectedIndexChanged += new System.EventHandler(this.cboFilterAndSearch);
+            this.cboExperience.SelectedIndexChanged += new System.EventHandler(this.SelectUcFilter);
             // 
             // cboSalary
             // 
@@ -130,7 +130,7 @@
             this.cboSalary.StartIndex = 0;
             this.cboSalary.TabIndex = 35;
             this.cboSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cboSalary.SelectedIndexChanged += new System.EventHandler(this.cboFilterAndSearch);
+            this.cboSalary.SelectedIndexChanged += new System.EventHandler(this.SelectUcFilter);
             // 
             // cboAddress
             // 
@@ -217,7 +217,7 @@
             this.cboAddress.StartIndex = 0;
             this.cboAddress.TabIndex = 34;
             this.cboAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cboAddress.SelectedIndexChanged += new System.EventHandler(this.cboFilterAndSearch);
+            this.cboAddress.SelectedIndexChanged += new System.EventHandler(this.SelectUcFilter);
             // 
             // lblTitle
             // 
@@ -278,7 +278,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(678, 47);
             this.txtSearch.TabIndex = 23;
-            this.txtSearch.TextChanged += new System.EventHandler(this.cboFilterAndSearch);
+            this.txtSearch.TextChanged += new System.EventHandler(this.SelectUcFilter);
             // 
             // btnTechnique
             // 
@@ -307,7 +307,7 @@
             this.btnTechnique.Size = new System.Drawing.Size(145, 37);
             this.btnTechnique.TabIndex = 33;
             this.btnTechnique.Text = "Kỹ thuật";
-            this.btnTechnique.Click += new System.EventHandler(this.btnFilter_Click);
+            this.btnTechnique.Click += new System.EventHandler(this.SelectUcFilter);
             // 
             // btnEconomy
             // 
@@ -336,7 +336,7 @@
             this.btnEconomy.Size = new System.Drawing.Size(145, 37);
             this.btnEconomy.TabIndex = 31;
             this.btnEconomy.Text = "Kinh tế";
-            this.btnEconomy.Click += new System.EventHandler(this.btnFilter_Click);
+            this.btnEconomy.Click += new System.EventHandler(this.SelectUcFilter);
             // 
             // btnIT
             // 
@@ -365,7 +365,7 @@
             this.btnIT.Size = new System.Drawing.Size(145, 37);
             this.btnIT.TabIndex = 30;
             this.btnIT.Text = "Công nghệ";
-            this.btnIT.Click += new System.EventHandler(this.btnFilter_Click);
+            this.btnIT.Click += new System.EventHandler(this.SelectUcFilter);
             // 
             // guna2HtmlLabel1
             // 

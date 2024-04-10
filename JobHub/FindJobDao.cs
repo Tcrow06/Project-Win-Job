@@ -34,7 +34,8 @@ namespace JobHub
         }
         public SqlDataReader LoadFilterUcJob(string txt)
         {
-            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, Job.jobAddress, Company.companyName ,Company.companyAvatar
+            string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, Job.jobAddress, 
+                            Company.companyName ,Company.companyAvatar
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany and Job.jobRegisterDead >= '{DateTime.Now.Date}'
                     {txt}";
