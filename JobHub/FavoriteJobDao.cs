@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public class FavoriteJobDao
+    public class FavoriteJobDAO
     {
         DBConection dbc = new DBConection();
 

@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="ApplyWithCV.cs" />
+    <Compile Include="ApplyWithCVDAO.cs" />
     <Compile Include="CandidateDao.cs" />
     <Compile Include="ChangTheSize.cs" />
     <Compile Include="CompanyDetail.cs" />
@@ -78,6 +80,12 @@
     <Compile Include="CVDAO.cs" />
     <Compile Include="DetailCV.cs" />
     <Compile Include="DetailCVDAO.cs" />
+    <Compile Include="FApplyWithCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FApplyWithCV.Designer.cs">
+      <DependentUpon>FApplyWithCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FavoriteJob.cs" />
     <Compile Include="FCompanyJob.cs">
       <SubType>Form</SubType>
@@ -136,7 +144,7 @@
     <Compile Include="FFavouriteJob.Designer.cs">
       <DependentUpon>FFavouriteJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="FavoriteJobDao.cs" />
+    <Compile Include="FavoriteJobDAO.cs" />
     <Compile Include="FindJob.cs" />
     <Compile Include="FindJobDao.cs" />
     <Compile Include="FJobCandidate.cs">
@@ -222,6 +230,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReLoadFormCandidate.cs" />
     <Compile Include="UcJobComparer.cs" />
+    <Compile Include="Uc_ChoiceCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc_ChoiceCV.Designer.cs">
+      <DependentUpon>Uc_ChoiceCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uc_Comparer.cs" />
     <Compile Include="uC_CV.cs">
       <SubType>UserControl</SubType>
@@ -284,6 +298,9 @@
     <Compile Include="FUserInfo.Designer.cs">
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FApplyWithCV.resx">
+      <DependentUpon>FApplyWithCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCompanyJob.resx">
       <DependentUpon>FCompanyJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +375,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Uc_ChoiceCV.resx">
+      <DependentUpon>Uc_ChoiceCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uC_CV.resx">
       <DependentUpon>uC_CV.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +404,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uC_SlideJob.resx">
       <DependentUpon>uC_SlideJob.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FUserInfo.resx">
       <DependentUpon>FUserInfo.cs</DependentUpon>
