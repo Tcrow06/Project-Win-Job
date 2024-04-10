@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,54 +19,109 @@ namespace JobHub
         JobDetail jobDetail = new JobDetail();
         public FindJob() { }
 
-        public void LoadUc_Job(FlowLayoutPanel flPanel, Fmain fm)
+        public void LoadUcJobFilter(FlowLayoutPanel flPanel, Fmain fm, bool tech, bool it, bool eco, string industry, string  salary,
+            string address, string ex, string search)
         {
-            List<ListUcJobAndBool> ls = new List<ListUcJobAndBool>();
-            ls.Add(new ListUcJobAndBool());
-            SqlDataReader dr = findJobDao.LoadUc_Job();
-            LoadUCIntoList(dr, flPanel, fm, ls, 0);
-            LoadUc(ls, fm, flPanel);
-        }
-        public void LoadButton(FlowLayoutPanel flPanel, Fmain fm, string txtButton, List<ListUcJobAndBool> list, int index)
-        {
-            SqlDataReader dr = findJobDao.LoadButton(txtButton);
-            LoadUCIntoList(dr, flPanel, fm, list, index);
-            LoadUc(list, fm, flPanel);
-        }
-        public void LoadTxtSearch(FlowLayoutPanel flPanel, Fmain fm, string txtSearch, List<ListUcJobAndBool> list, int index)
-        {
-            SqlDataReader dr = findJobDao.LoadTxtSearch(txtSearch);
-            LoadUCIntoList(dr, flPanel, fm, list, index);
-            LoadUc(list, fm, flPanel);
+            string sql = "where (";
+            bool check = false;
+            if (tech)
+            {
+                sql += " Job.jobField LIKE N'Kỹ thuật%'";
+                check = true;
+            }
+            if (it) //Kinh tế
+            {
+                if (check)
+                    sql += " or ";
+                check = true;
+                sql += "Job.jobField LIKE N'Công nghệ%'";
+            }
+            if (eco)
+            {
+                if (check)
+                    sql += " or ";
+                check = true;
+                sql += "Job.jobField LIKE N'Kinh tế%'";
+            }
+            if(industry!= "Tất cả các ngành")
+            {
+                if (check)
+                    sql += " or ";
+                check = true;
+                sql += $"Job.jobField LIKE N'{industry}%'";
+            }
+            sql += ")";
+            if (!check)
+            {
+                sql = "where ";
+            }
 
+
+            if (salary != "Tất cả mức lương")
+            {
+                float minSalary;
+                float maxSalary;
+                string[] txt = salary.Trim().Split();
+                if (salary == "Thỏa thuận")
+                {
+                    minSalary = 0; maxSalary = 0;
+                }
+                else if (txt[1] == "-")
+                {
+                    minSalary = float.Parse(txt[0]);
+                    maxSalary = float.Parse(txt[2]);
+                }
+                else
+                {
+                    minSalary = 0; maxSalary = float.Parse(txt[1]);
+                }
+                if (check)
+                    sql += " and ";
+                check = true;
+                if (minSalary == 0 && maxSalary == 0)
+                {
+                    sql += $"Job.jobMinSalary = 0 and Job.jobMaxSalary = 0";
+                }
+                else if (minSalary == 0 && maxSalary != 0)
+                    sql += $"Job.jobMaxSalary >= {maxSalary}";
+                else
+                    sql += $@"((Job.jobMinSalary <= {minSalary} and Job.jobMaxSalary >=  {minSalary}) 
+                            or (Job.jobMinSalary <= {maxSalary} and jobMaxSalary >= {maxSalary} )) 
+                            and Job.jobMinSalary != 0";
+            }
+            if(ex != "Tất cả kinh nghiệm")
+            {
+                if (check)
+                    sql += " and ";
+                check = true;
+                sql += $"Job.jobExperience LIKE N'{ex}%'";
+            }
+            if(address!= "Tất cả tỉnh/thành phố")
+            {
+                if (check)
+                    sql += " and ";
+                check = true;
+                sql += $"Job.jobAddress LIKE N'{address}%'";
+            }
+                
+            if(search.Length > 0)
+            {
+                if (check)
+                    sql += " and ";
+                check = true;
+                sql += $"Job.jobName LIKE N'{search}%'";
+            }
+                
+            if (!check)
+            {
+                sql = "";
+            }
+
+            SqlDataReader dr = findJobDao.LoadUcJobFilter(sql);
+            LoadUcIntoPanel(dr, flPanel, fm);
         }
-        public void LoadTxtExperience(FlowLayoutPanel flPanel, Fmain fm, string txtEx, List<ListUcJobAndBool> list, int index)
+        public void LoadUcIntoPanel(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
-            SqlDataReader dr = findJobDao.LoadTxtExperience(txtEx);
-            LoadUCIntoList(dr, flPanel, fm, list, index);
-            LoadUc(list, fm, flPanel);
-        }
-        public void LoadTxtAddress(FlowLayoutPanel flPanel, Fmain fm, string txtAddress, List<ListUcJobAndBool> list, int index)
-        {
-            SqlDataReader dr = findJobDao.LoadTxtAddress(txtAddress);
-            LoadUCIntoList(dr, flPanel, fm, list, index);
-            LoadUc(list, fm, flPanel);
-        }
-        public void LoadTxtIndustry(FlowLayoutPanel flPanel, Fmain fm, string txtIndustry, List<ListUcJobAndBool> list, int index)
-        {
-            SqlDataReader dr = findJobDao.LoadTxtIndustry(txtIndustry);
-            LoadUCIntoList(dr, flPanel, fm, list, index);
-            LoadUc(list, fm, flPanel);
-        }
-        public void LoadTxtSalary(FlowLayoutPanel flPanel, Fmain fm, string txtSalary, List<ListUcJobAndBool> list, int index)
-        {
-            SqlDataReader dr = findJobDao.LoadTxtSalary(txtSalary);
-            LoadUCIntoList(dr, flPanel, fm, list, index);
-            LoadUc(list, fm, flPanel);
-        }
-        private void LoadUCIntoList(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm, List<ListUcJobAndBool> list, int index)
-        {
-            list[index].List.Clear();
             flPanel.Controls.Clear();
             if (dr != null)
             {
@@ -73,70 +129,11 @@ namespace JobHub
                 {
                     uC_Job job = jobDetail.InsertInfoAndEventIntoUcJob(dr, fm);
                     changTheSize.setSize(130, 25, job.lblJobName);
-                    list[index].List.Add(job);
+                    flPanel.Controls.Add(job);
                 }
-                dr.Dispose();
+                dr.Close();
             }
         }
-        private ListUcJobAndBool UnionAndInter(List<ListUcJobAndBool> list)
-        {
-            bool check = true;
-            ListUcJobAndBool lst1 = new ListUcJobAndBool();
-            for (int i = 0; i <= Math.Min(3, list.Count - 1); i++)
-            {
-                if (list[i].Check == true)
-                {
-                    check = false;
-
-                }
-                if (list[i].List.Count > 0)
-                {
-                    lst1.List.AddRange(list[i].List);
-                }
-
-            }
-
-            ListUcJobAndBool lst2 = new ListUcJobAndBool();
-            ListUcJobAndBool lst3 = new ListUcJobAndBool();
-            if (lst1.List.Count > 0)
-                lst2 = lst1;
-            bool check1 = true;
-            for (int i = Math.Min(4, list.Count - 1); i <= Math.Min(7, list.Count - 1); i++)
-            {
-                if (i < 4) break;
-                if (list[i].Check == true)
-                {
-                    if (lst2.List.Count == 0 && check1 && check)
-                    {
-                        check1 = false;
-                        if (list[i].List.Count > 0)
-                        {
-
-                            lst2 = list[i];
-                        }
-
-                    }
-                    var comparer = new UcJobComparer();
-                    foreach (uC_Job job in lst2.List)
-                        if (list[i].List.Contains(job, comparer))
-                            lst3.List.Add(job);
-                    lst2 = lst3;
-                    lst3 = new ListUcJobAndBool();
-                }
-            }
-
-            return lst2;
-        }
-        public void LoadUc(List<ListUcJobAndBool> list, Fmain fm, FlowLayoutPanel flPanel)
-        {
-
-
-            ListUcJobAndBool uc = UnionAndInter(list);
-            flPanel.Controls.Clear();
-            foreach (var job in uc.List)
-            {
-                flPanel.Controls.Add(job);
-            }
-        }
+        
     }
 }
