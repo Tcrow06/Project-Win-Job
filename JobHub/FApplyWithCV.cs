@@ -15,16 +15,20 @@ namespace JobHub
     public partial class FApplyWithCV : Form
     {
         ApplyWithCV awc = new ApplyWithCV();
-        Account account;
         int idJob;
+        Fmain fm;
+        int idCV ;
+        string name = null;
+        
         public FApplyWithCV()
         {
             InitializeComponent();
         }
-        public FApplyWithCV(int idJob,Account account)
+        public FApplyWithCV(int idJob, Fmain fm)
         {
-            this.account = account;
+            this.idJob = idJob;
             InitializeComponent();
+            this.fm = fm;
         }
 
         private void pnCV1_MouseHover(object sender, EventArgs e)
@@ -47,6 +51,7 @@ namespace JobHub
                 rb2.Checked = false;
                 pn2.BorderColor = Color.Silver;
             }
+            btnChange.Visible = false;
             pn1.BorderColor = Color.FromArgb(0, 139, 0);
             btnChoice.FillColor = pnCV2.BorderColor;
             rb1.Checked = true;
@@ -118,7 +123,22 @@ namespace JobHub
         private void FApplyWithCV_Load(object sender, EventArgs e)
         {
             pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, 105);
-            awc.LoadForm(pnCV1, lblCVOn, lblCVLoad, account);
+            awc.LoadForm(this,pnCV1, lblCVOn, lblCVLoad, fm.Account, idJob, idCV);
+        }
+        public void LoadFormChoiceCVOn(Uc_ChoiceCV uc1)
+        {
+            Uc_ChoiceCV uc = uc1;
+            pnCV1.Height = 100;
+            uc.pnChoiceCV.BorderColor = Color.Transparent;
+            uc.Size = new Size(20, 50);
+            //lblName.Text = ": " + name;
+            uc.Location = new Point(lblCVOn.Location.X + lblCVOn.Width + 5, lblCVOn.Location.Y);
+            btnChange.Visible = true;
+
+        }
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,25 +74,5 @@ namespace JobHub
             pn.Controls.Clear();
             ffj.LoadUcDetail();
         }
-        /*public void UnSaveJob(object sender, EventArgs e, int idJob, int idCan, Fmain fm)
-        {
-            if (fm.Account == null)
-            {
-                Login(fm);
-            }
-            else
-            {
-                if (cd.CheckSaveStatus(idJob, idCan))
-                {
-                    ptbSave.Image = Properties.Resources.heartChuaLuu;
-                    cd.UnSavedJob(idJob, idCan);
-                }
-                else
-                {
-                    cd.SavedJob(idJob, idCan);
-                    ptbSave.Image = Properties.Resources.heartDaLuu;
-                }
-            }
-        }*/
     }
 }

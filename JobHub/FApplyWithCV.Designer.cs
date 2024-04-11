@@ -51,8 +51,8 @@
             this.btnApply = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.uc_ChoiceCV2 = new JobHub.Uc_ChoiceCV();
-            this.uc_ChoiceCV1 = new JobHub.Uc_ChoiceCV();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.pnCV1.SuspendLayout();
             this.pnCV2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -104,8 +104,7 @@
             this.pnCV1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
             this.pnCV1.BorderRadius = 5;
             this.pnCV1.BorderThickness = 1;
-            this.pnCV1.Controls.Add(this.uc_ChoiceCV2);
-            this.pnCV1.Controls.Add(this.uc_ChoiceCV1);
+            this.pnCV1.Controls.Add(this.btnChange);
             this.pnCV1.Controls.Add(this.lblCVLoad);
             this.pnCV1.Controls.Add(this.lblCVOn);
             this.pnCV1.Controls.Add(this.rbChoiceCV1);
@@ -135,7 +134,7 @@
             this.lblCVOn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblCVOn.Location = new System.Drawing.Point(34, 47);
             this.lblCVOn.Name = "lblCVOn";
-            this.lblCVOn.Size = new System.Drawing.Size(112, 22);
+            this.lblCVOn.Size = new System.Drawing.Size(73, 22);
             this.lblCVOn.TabIndex = 60;
             this.lblCVOn.Text = "CV online";
             // 
@@ -332,6 +331,7 @@
             this.btnApply.Size = new System.Drawing.Size(700, 38);
             this.btnApply.TabIndex = 61;
             this.btnApply.Text = "Nộp hồ sơ để ứng tuyển ";
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnCancel
             // 
@@ -359,19 +359,35 @@
             this.guna2Separator2.Size = new System.Drawing.Size(787, 10);
             this.guna2Separator2.TabIndex = 63;
             // 
-            // uc_ChoiceCV2
+            // guna2Panel1
             // 
-            this.uc_ChoiceCV2.Location = new System.Drawing.Point(33, 117);
-            this.uc_ChoiceCV2.Name = "uc_ChoiceCV2";
-            this.uc_ChoiceCV2.Size = new System.Drawing.Size(723, 40);
-            this.uc_ChoiceCV2.TabIndex = 63;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(853, 621);
+            this.guna2Panel1.TabIndex = 64;
             // 
-            // uc_ChoiceCV1
+            // btnChange
             // 
-            this.uc_ChoiceCV1.Location = new System.Drawing.Point(33, 71);
-            this.uc_ChoiceCV1.Name = "uc_ChoiceCV1";
-            this.uc_ChoiceCV1.Size = new System.Drawing.Size(723, 40);
-            this.uc_ChoiceCV1.TabIndex = 62;
+            this.btnChange.BorderColor = System.Drawing.Color.Transparent;
+            this.btnChange.BorderRadius = 10;
+            this.btnChange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChange.FillColor = System.Drawing.Color.Silver;
+            this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChange.ForeColor = System.Drawing.Color.White;
+            this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
+            this.btnChange.Location = new System.Drawing.Point(631, 31);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(96, 26);
+            this.btnChange.TabIndex = 65;
+            this.btnChange.Text = "Thay đổi";
             // 
             // FApplyWithCV
             // 
@@ -389,6 +405,7 @@
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FApplyWithCV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -420,8 +437,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private System.Windows.Forms.Label lblCVOn;
         private System.Windows.Forms.Label lblCVLoad;
-        private Uc_ChoiceCV uc_ChoiceCV1;
-        private Uc_ChoiceCV uc_ChoiceCV2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label3;
@@ -432,5 +447,7 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private System.Windows.Forms.Label lblCVName;
         private Guna.UI2.WinForms.Guna2PictureBox pbDelete;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnChange;
     }
 }
