@@ -57,7 +57,7 @@ namespace JobHub
                     experience += ">" + uc.txtReviewJob.Text.Trim();
                 }
             }
-            Candidate candidate = new Candidate(idCandidate, txtFirstName.Text.Trim() + txtLastName.Text.Trim(), txtPhoneNumber.Text.Trim(),  txtEmail.Text.Trim(),
+            Candidate candidate = new Candidate(idCandidate, txtFirstName.Text.Trim() , txtLastName.Text.Trim(), txtPhoneNumber.Text.Trim(),  txtEmail.Text.Trim(),
              rdoBoy.Checked.ToString(),  txtLink.Text.Trim(), dtpYob.Value,  txtLink.Text.Trim(),  txtAddress.Text.Trim());
             DetailCV detail = new DetailCV(idCV,  txtNameJob.Text.Trim(), txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtLink.Text.Trim(),  txtPhoneNumber.Text.Trim(), 
                 txtEmail.Text.Trim(), txtAddress.Text.Trim(), txtEducation.Text.Trim(), txtSkill.Text.Trim(),  experience);

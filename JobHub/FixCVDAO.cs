@@ -50,7 +50,7 @@ namespace JobHub
         public void UpdateData(Candidate candidate)
         {
             string cmd = $@"UPDATE Candidate
-                SET Candidate.candidateFirstName = '{candidate.Name}', Candidate.candidateLastName = '{candidate.Name}', Candidate.candidatePhone = '{candidate.Phone}', Candidate.candidateEmail = '{candidate.Email}', Candidate.candidateAddress = '{candidate.Address}',
+                SET Candidate.candidateFirstName = '{candidate.FirstName}', Candidate.candidateLastName = '{candidate.LastName}', Candidate.candidatePhone = '{candidate.Phone}', Candidate.candidateEmail = '{candidate.Email}', Candidate.candidateAddress = '{candidate.Address}',
                 Candidate.candidateGender = '{candidate.Gender}', Candidate.candidateBirth = '{candidate.Birth}'
                 FROM Candidate
                 INNER JOIN CV ON Candidate.idCandidate = CV.idCandidate

@@ -11,7 +11,9 @@ namespace JobHub
     public class Candidate
     {
         private int id; //Fk
-        private string name;
+        private string lastName;
+        private string firstName;
+        private string fullName;
         private string phone;
         private string email;
         private string gender;
@@ -22,11 +24,12 @@ namespace JobHub
         private CandidateDao cdd = new CandidateDao();
 
         public Candidate() { }
-        public Candidate(int id, string name, string phone, string email,
+        public Candidate(int id, string first,string lastName, string phone, string email,
             string gender, string link, DateTime birth, string avatar, string address)
         {
             this.Id = id;
-            this.Name = name;
+            this.LastName = lastName;
+            this.FirstName = firstName;
             this.Phone = phone;
             this.Email = email;
             this.Gender = gender;
@@ -37,7 +40,7 @@ namespace JobHub
         }
 
         public int Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
+        //blic string Name { get => name; set => name = value; }
         public string Phone { get => phone; set => phone = value; }
         public string Email { get => email; set => email = value; }
         public string Gender { get => gender; set => gender = value; }
@@ -45,18 +48,24 @@ namespace JobHub
         public DateTime Birth { get => birth; set => birth = value; }
         public string Avatar { get => avatar; set => avatar = value; }
         public string Address { get => address; set => address = value; }
+        public string LastName { get => lastName; set => lastName = value; }
+        public string FirstName { get => firstName; set => firstName = value; }
+        public string FullName { get => fullName; set => fullName = value; }
 
         public Candidate(int id)
         {
             this.Id = id;
         }
+
         public Candidate GetInfoCandidate(Account account)
         {
             Candidate cd = new Candidate();
             SqlDataReader dr = cdd.GetInfoCandidate(account.Id);
             if (dr.Read())
             {
-                cd.name = dr["candidateLastName"].ToString() + " " + dr["candidateFirstName"].ToString();
+                cd.LastName = dr["candidateLastName"].ToString();
+                cd.FirstName = dr["candidateFirstName"].ToString();
+                cd.FullName = cd.LastName + " " + cd.FirstName; 
 
             }
             return cd;
