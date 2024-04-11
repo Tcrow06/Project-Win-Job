@@ -14,9 +14,11 @@ namespace JobHub
 {
     public partial class FPostJob : Form
     {
+        private Fmain fm;
         SqlConnection sqlConnection = new SqlConnection(Properties.Settings.Default.conn);
-        public FPostJob()
+        public FPostJob(Fmain fm)
         {
+            this.fm = fm;
             InitializeComponent();
         }
 
@@ -355,9 +357,55 @@ namespace JobHub
 
             JobDetailDao jd = new JobDetailDao();
 
+
             storeMaxId += 1;
-            JobDetail A = new JobDetail(storeMaxId, txtName.Text, 3, txtSalary.Text, txtAddress.Text, txtDescription.Text, txtExp.Text, txtRequire.Text, txtBenefit.Text, cboCatogory.Text, DateTime.Today, dtpDateDead.Value);
+            float minSalary=0;
+            float maxSalary=0;
+
+            if(cboSalary.SelectedItem.ToString()== "Thỏa thuận khi gặp")
+            {
+                minSalary = 0;
+                maxSalary = 0;
+            }
+            else if(cboSalary.SelectedItem.ToString()== "Quy định tối thiểu tối đa")
+            {
+                minSalary= (float)Convert.ToDouble(txtMinSalary.Text);
+                maxSalary= (float)Convert.ToDouble(txtMaxSalary.Text);
+            }
+            else if(cboSalary.SelectedItem.ToString() == "Mức lương trên 1 khoảng nhất định")
+            {
+                minSalary = 0;
+                maxSalary = (float)Convert.ToDouble(txtMaxSalary.Text);
+            }
+
+            JobDetail A = new JobDetail(storeMaxId, txtName.Text, fm.Account.Id, cboSalary.SelectedItem.ToString(), cboAddress.SelectedItem.ToString(), txtDescription.Text, txtExp.Text, txtRequire.Text, txtBenefit.Text, cboCatogory.Text, DateTime.Today, dtpDateDead.Value, minSalary, maxSalary);
             jd.Them(A);
+        }
+
+        private void guna2Panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtMinSalary_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMinSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMaxSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

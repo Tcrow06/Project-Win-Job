@@ -21,13 +21,13 @@ namespace JobHub
         }
         public void AddJob(JobDetail A)
         {
-            string sqlStr = string.Format("INSERT INTO Job(idJob,idCompany,jobName,jobSalary,jobAddress,jobExperience,jobDescription,jobRequirement,jobBenefit,jobPostDate,JobRegisterDead) VALUES (N'{0}','{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}')",A.IdJob, A.IdCompany, A.NameJob, A.Salary, A.Address, A.Experience, A.Description, A.Requirement, A.Benefit, A.PostDate, A.RegisterDead);
+            string sqlStr = string.Format("INSERT INTO Job(idJob,idCompany,jobName,jobAddress,jobExperience,jobDescription,jobRequirement,jobBenefit,jobPostDate,JobRegisterDead,jobMinSalary,jobMaxSalary) VALUES (N'{0}','{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}')",A.IdJob, A.IdCompany, A.NameJob, A.Salary, A.Address, A.Experience, A.Description, A.Requirement, A.Benefit, A.PostDate, A.RegisterDead);
             dbc.ThucThi(sqlStr);
 
         }
         public void Them(JobDetail A)
         {
-            string sqlStr = string.Format("INSERT INTO Job(idJob,idCompany,jobName,jobSalary,jobAddress,jobExperience,jobDescription,jobRequirement,jobBenefit,jobPostDate,JobRegisterDead) VALUES (N'{0}','{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}')", A.IdJob, A.IdCompany, A.NameJob, A.Salary, A.Address, A.Experience, A.Description, A.Requirement, A.Benefit, A.PostDate, A.RegisterDead);
+            string sqlStr = string.Format("INSERT INTO Job(idJob,idCompany,jobName,jobAddress,jobExperience,jobDescription,jobRequirement,jobBenefit,jobPostDate,JobRegisterDead,jobField,jobMinSalary,jobMaxSalary) VALUES (N'{0}','{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}',N'{7}',N'{8}',N'{9}',N'{10}',N'{11}',N'{12}')", A.IdJob, A.IdCompany, A.NameJob, A.Address, A.Experience, A.Description, A.Requirement, A.Benefit, A.PostDate, A.RegisterDead,A.Category,A.MinSalary,A.MaxSalary);
             dbc.ThucThi(sqlStr);
 
         }

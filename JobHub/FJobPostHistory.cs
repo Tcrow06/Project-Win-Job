@@ -59,7 +59,7 @@ namespace JobHub
                 CustomMessageBox cmb = new CustomMessageBox();
                 if (x == 4)
                 {
-                    FPostJob fpj = new FPostJob();
+                    FPostJob fpj = new FPostJob(fm);
                     try
                     {
                         int idJob = int.Parse(dgv.Rows[y].Cells[6].Value.ToString());

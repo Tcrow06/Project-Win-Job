@@ -210,9 +210,10 @@ namespace JobHub
                 }
                 else
                 {
-
-                    cd.ApplyJob(idJob, fm.Account.Id,  fm.Account.Id);
-                    ApplyStatus();
+                    FApplyWithCV fApplyWithCV = new FApplyWithCV(idJob,fm.Account);
+                    fApplyWithCV.ShowDialog();
+                    //cd.ApplyJob(idJob, fm.Account.Id,  fm.Account.Id);
+                    //ApplyStatus();
                 }
             }
                 

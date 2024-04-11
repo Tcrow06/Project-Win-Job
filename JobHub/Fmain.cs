@@ -53,22 +53,28 @@ namespace JobHub
             DeleteChildForm();
             this.Height = 550;
             FJobPostHistory view = new FJobPostHistory(this);
-            view.MdiParent = this;
+            this.loadForm(view);
+            /*view.MdiParent = this;
             view.Dock = DockStyle.Fill;
-            resize(view.Width + 200, view.Height + 50);
+            resize(1050, 530);
+            //resize(862, 488);
+            //MessageBox.Show(view.Width.ToString() + " " + view.Height.ToString());
             view.Show();
-            picUp.BringToFront();
+            picUp.BringToFront();*/
         }
         private void FirstLoadLoginOrLoginOut()
         {
             DeleteChildForm();
             this.Height = 550;
             FViews view = new FViews();
-            view.MdiParent = this;
+            this.loadForm(view);
+            /*view.MdiParent = this;
             view.Dock = DockStyle.Fill;
-            resize(Math.Min(view.Width + 200,900), Math.Min(view.Height + 50,500));
+            //resize(Math.Min(view.Width + 200,900), Math.Min(view.Height + 50,500));
+            MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
+            //resize(900, 500);
             view.Show();
-            picUp.BringToFront();
+            picUp.BringToFront();*/
         }
         public void LoadTaskBar()
         {
@@ -249,6 +255,7 @@ namespace JobHub
             else
             {
                 FirstLoadLoginOrLoginOut();
+                this.Forms.Clear();
                 this.account = null;
                 LoadTaskBar();
 
@@ -300,11 +307,13 @@ namespace JobHub
             FFavouriteJob job = new FFavouriteJob(this);
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
             this.Forms.Push(fai);
-            resize(job.Width + 200, job.Height + 50);
+            this.loadForm(job);
+/*            resize(job.Width + 200, job.Height + 50);
+            MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
             job.MdiParent = this;
             job.Dock = DockStyle.Fill;
             job.Show();
-            job.BringToFront();
+            job.BringToFront();*/
 
         }
 
@@ -387,10 +396,33 @@ namespace JobHub
             form.MdiParent = this;
             if (form.Name == "FJobDetails")
             {
-                resize(form.Width + 100, form.Height - 50);
+                resize(909, 568);
             }
             else if (form.Name == "FJob")
                 resize(form.Width + 178, form.Height + 35);
+            else if (form.Name == "FViews")
+            {
+                resize(900, 500);
+            }
+            else if (form.Name == "FCompanyDetails")
+            {
+                resize(955, 640);
+            }
+            else if (form.Name == "FJobPostHistory")
+            {
+                resize(1050, 530);
+            }
+            else if (form.Name == "FFollowCV")
+            {
+                resize(967, 571);
+            }
+            else if (form.Name == "FFavouriteJob")
+            {
+                resize(974, 538);
+            }
+            
+
+
             form.Dock = DockStyle.Fill;
             form.Show();
             form.BringToFront();
@@ -415,7 +447,8 @@ namespace JobHub
             }
             else if (form.Name == "FJobPostHistory")
             {
-                resize(form.Width, form.Height);
+                //resize(form.Width, form.Height);
+                //MessageBox.Show(form.Width.ToString() + " " + form.Height.ToString());
             }
             form.Dock = DockStyle.Fill;
             form.Show();
@@ -475,11 +508,14 @@ namespace JobHub
         {
             this.DeleteChildForm();
             FJobPostHistory jsh = new FJobPostHistory(this);
-            jsh.MdiParent = this;
-            resize(jsh.Width + 200, jsh.Height + 50);
+            this.loadForm(jsh);
+            /*jsh.MdiParent = this;
+            resize(1050, 530);
+            //resize(jsh.Width + 200, jsh.Height + 50);
+            //MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
             jsh.Dock = DockStyle.Fill;
             jsh.Show();
-            jsh.BringToFront();
+            jsh.BringToFront();*/
         }
         public void HideChildForm()
         {
@@ -499,7 +535,7 @@ namespace JobHub
         private void btnPostJob_Click(object sender, EventArgs e)
         {
             this.DeleteChildForm();   
-            FPostJob jsh = new FPostJob();
+            FPostJob jsh = new FPostJob(this);
             jsh.MdiParent = this;
             resize(jsh.Width + 200, jsh.Height + 50);
             jsh.Dock = DockStyle.Fill;
@@ -532,13 +568,16 @@ namespace JobHub
 
             }
             FFollowCV fcv = new FFollowCV(this);
+            
             FormAndInfoCandidate fai = new FormAndInfoCandidate(fcv);
             forms.Push(fai);
-            fcv.MdiParent = this;
+            this.loadForm(fai.Form);
+            /*fcv.MdiParent = this;
             resize(fcv.Width + 200, fcv.Height + 70);
+            MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
             fcv.Dock = DockStyle.Fill;
             fcv.Show();
-            fcv.BringToFront();
+            fcv.BringToFront();*/
         }
 
         private void btnOut_Click(object sender, EventArgs e)

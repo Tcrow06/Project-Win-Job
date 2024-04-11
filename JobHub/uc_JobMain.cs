@@ -32,11 +32,7 @@ namespace JobHub
             fm.HideChildForm();
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job, idJob, idCp);
             fm.Forms.Push(fai);
-            fm.resize(job.Width + 160, job.Height + 50);
-            job.MdiParent = fm;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
+            fm.loadForm(fai.Form);
         }
         public string HandleSalary(string x, string y)
         {

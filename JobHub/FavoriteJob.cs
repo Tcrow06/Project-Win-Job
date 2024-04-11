@@ -12,7 +12,7 @@ namespace JobHub
 {
     public class FavoriteJob
     {
-        private FavoriteJobDao favoriteJobDao = new FavoriteJobDao();
+        private FavoriteJobDAO favoriteJobDao = new FavoriteJobDAO();
         JobDetail jobDetail = new JobDetail();
         public FavoriteJob() { }
 

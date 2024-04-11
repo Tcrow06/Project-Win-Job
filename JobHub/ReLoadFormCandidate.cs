@@ -25,8 +25,9 @@ namespace JobHub
             }
             else if ( form.Form.Name == "FJob")
             {
-                FJob fj = new FJob(fm, fm.Account);
-                return new FormAndInfoCandidate(fj);
+                return form;
+                /*FJob fj = new FJob(fm, fm.Account);
+                return new FormAndInfoCandidate(fj);*/
             }
             return new FormAndInfoCandidate(new FViews(),-1, -1);
         }
