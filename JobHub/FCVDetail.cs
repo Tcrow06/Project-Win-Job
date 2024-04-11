@@ -33,7 +33,7 @@ namespace JobHub
             string query = $@"SELECT Candidate.*, CV.*
                             FROM CV
                             INNER JOIN Candidate ON CV.idCandidate = Candidate.idCandidate
-                            Where CV.idCV = {1}";
+                            Where CV.idCV = {idCV}";
             SqlDataReader reader = con.loadData(query);
             if(reader.Read())
             {
@@ -44,6 +44,7 @@ namespace JobHub
                 lblPhoneNumber.Text = reader["candidatePhone"].ToString();
                 lblEmail.Text = reader["candidateEmail"].ToString();
                 lblAddress.Text = reader["candidateAddress"].ToString();
+                lblSkill.Text = reader["Skill"].ToString();
                 string s = reader["CVDescription"].ToString().Trim();
                 string[] array = s.Split('+');
                 for(int i = 0; i < array.Length; i++)
@@ -99,6 +100,14 @@ namespace JobHub
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnFix_Click(object sender, EventArgs e)
+        {
+            FFixInfCV fix = new FFixInfCV(this.idCV, this.idCandidate);
+            this.Hide();
+            fix.ShowDialog();
+            this.Show();
         }
     }
 }

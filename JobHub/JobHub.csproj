@@ -72,6 +72,7 @@
     <Compile Include="ChangTheSize.cs" />
     <Compile Include="CompanyDetail.cs" />
     <Compile Include="CompanyDetailDao.cs" />
+    <Compile Include="ControlManager.cs" />
     <Compile Include="CTMessageBox.cs" />
     <Compile Include="CustomMessageBox.cs" />
     <Compile Include="CV.cs" />
@@ -91,6 +92,13 @@
     <Compile Include="FCustomerMessageBox.Designer.cs">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFixInfCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFixInfCV.Designer.cs">
+      <DependentUpon>FFixInfCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FixCVDAO.cs" />
     <Compile Include="FormHandler.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="NhapFCustomerMessageBox.cs">
@@ -265,6 +273,12 @@
     <Compile Include="uc_JobMain.Designer.cs">
       <DependentUpon>uc_JobMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="uC_LoadIfJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_LoadIfJob.Designer.cs">
+      <DependentUpon>uC_LoadIfJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="uC_NewJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FCustomerMessageBox.resx">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFixInfCV.resx">
+      <DependentUpon>FFixInfCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapFCustomerMessageBox.resx">
       <DependentUpon>NhapFCustomerMessageBox.cs</DependentUpon>
@@ -378,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_JobMain.resx">
       <DependentUpon>uc_JobMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_LoadIfJob.resx">
+      <DependentUpon>uC_LoadIfJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_NewJob.resx">
       <DependentUpon>uC_NewJob.cs</DependentUpon>
