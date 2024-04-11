@@ -121,6 +121,7 @@
             this.btnMakeCV.Size = new System.Drawing.Size(137, 45);
             this.btnMakeCV.TabIndex = 5;
             this.btnMakeCV.Text = "Tạo CV";
+            this.btnMakeCV.Click += new System.EventHandler(this.btnMakeCV_Click);
             // 
             // pnContainCV
             // 

@@ -37,5 +37,10 @@ namespace JobHub
         {
 
         }
+
+        private void btnMakeCV_Click(object sender, EventArgs e)
+        {
+            FFixInfCV fFixInfCV = new FFixInfCV();
+        }
     }
 }

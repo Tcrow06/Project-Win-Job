@@ -59,7 +59,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFix = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnCall.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -75,9 +75,9 @@
             // guna2Separator4
             // 
             this.guna2Separator4.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator4.Location = new System.Drawing.Point(280, 206);
+            this.guna2Separator4.Location = new System.Drawing.Point(262, 206);
             this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(444, 14);
+            this.guna2Separator4.Size = new System.Drawing.Size(461, 14);
             this.guna2Separator4.TabIndex = 8;
             // 
             // lblIntroduce
@@ -320,9 +320,9 @@
             // pnExperience
             // 
             this.pnExperience.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnExperience.Location = new System.Drawing.Point(256, 318);
+            this.pnExperience.Location = new System.Drawing.Point(256, 352);
             this.pnExperience.Name = "pnExperience";
-            this.pnExperience.Size = new System.Drawing.Size(473, 625);
+            this.pnExperience.Size = new System.Drawing.Size(473, 591);
             this.pnExperience.TabIndex = 10;
             // 
             // label1
@@ -356,7 +356,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Controls.Add(this.btnBack);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnFix);
             this.guna2Panel1.Controls.Add(this.pnSkill);
             this.guna2Panel1.Controls.Add(this.pnEducation);
             this.guna2Panel1.Controls.Add(this.pnCall);
@@ -391,25 +391,26 @@
             this.btnBack.TextOffset = new System.Drawing.Point(15, 0);
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // guna2Button1
+            // btnFix
             // 
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(6, 811);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(243, 48);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Sửa và lưu";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnFix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFix.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFix.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFix.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFix.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFix.FillColor = System.Drawing.Color.Transparent;
+            this.btnFix.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFix.ForeColor = System.Drawing.Color.White;
+            this.btnFix.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.Image")));
+            this.btnFix.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFix.Location = new System.Drawing.Point(6, 811);
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(243, 48);
+            this.btnFix.TabIndex = 5;
+            this.btnFix.Text = "Chỉnh sửa";
+            this.btnFix.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFix.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -475,7 +476,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label lblFirstName;
         private Guna.UI2.WinForms.Guna2Button btnBack;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnFix;
         private Guna.UI2.WinForms.Guna2Panel pnEducation;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private System.Windows.Forms.Label label8;

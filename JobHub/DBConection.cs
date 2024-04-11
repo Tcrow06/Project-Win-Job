@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Management;
 using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
@@ -140,31 +142,6 @@ namespace JobHub
 
 
 
-        /*public void changeforCompany(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
-        {
-            //int i = 1;
-            while (dr.Read())
-            {
-                uC_Job2 job = new uC_Job2();
-                job.lblNameJob.Text = dr["jobName"].ToString();
-                changTheSize.setSize(130, 25, job.lblNameJob);
-                job.lblNameCompany.Text = dr["companyName"].ToString();
-                job.lblSalary.Text = dr["jobSalary"].ToString();
-                job.lblPositon.Text = dr["jobAddress"].ToString();
-                flPanel.Controls.Add(job);
-                int idJob = int.Parse(dr["idJob"].ToString());
-                int idCp = int.Parse(dr["idCompany"].ToString());
-                job.loadJobClick += (sender, e) =>
-                {
-                    job.LoadJobDetail(sender, e, idJob, idCp, fm);
-                };
-            }
-            if (sqlConnection.State == ConnectionState.Open)
-            {
-                sqlConnection.Close();
-            }
-        }*/
-
         public DataTable ExcutionReadData(string cmd)
         {
             DataTable dt = new DataTable();
@@ -201,6 +178,34 @@ namespace JobHub
                 fpn.Controls.Add(uC_CV);
             }
         }
-    }
-    
+
+        public void ExcutionUpdateDate(string cmd)
+        {
+            try
+            {
+                using (SqlConnection conection = new SqlConnection(Properties.Settings.Default.conn))
+                {
+                    conection.Open();
+                    using (SqlCommand ex = new SqlCommand(cmd, conection))
+                    {
+                        ex.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void envenAddPanel(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ShowData(Guna2TextBox txtAddress, Guna2TextBox txtEducation, Guna2TextBox txtEmail, Guna2TextBox txtFirstName, Guna2TextBox txtLastName, Guna2TextBox txtLink, Guna2TextBox txtNameJob, Guna2TextBox txtPhoneNumber, Guna2TextBox txtSkill, DataTable dt, FlowLayoutPanel fpn, Guna2CustomRadioButton boy, Guna2CustomRadioButton girl, Guna2DateTimePicker yob)
+        {
+            
+        }
+    }  
 }

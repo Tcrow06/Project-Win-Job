@@ -26,13 +26,15 @@ namespace JobHub
         private string category;
         private DateTime postDate;
         private DateTime registerDead;
+        private float minSalary;
+        private float maxSalary;
         public JobDetail()
         {
 
         }
 
         public JobDetail(int idJob, string nameJob, int idCompany, string salary,
-            string address, string description, string experience, string requirement, string benefit, string category, DateTime postDate, DateTime registerDead)
+            string address, string description, string experience, string requirement, string benefit, string category, DateTime postDate, DateTime registerDead, float minSalary,float maxSalary)
         {
             this.idJob = idJob;
             this.nameJob = nameJob;
@@ -46,6 +48,9 @@ namespace JobHub
             this.category = category;
             this.PostDate = postDate;
             this.RegisterDead = registerDead;
+            this.minSalary = minSalary;
+            this.maxSalary = maxSalary;
+
         }
 
         public int IdJob { get => idJob; set => idJob = value; }
@@ -60,6 +65,10 @@ namespace JobHub
         public string Experience { get => experience; set => experience = value; }
         public DateTime PostDate { get => postDate; set => postDate = value; }
         public DateTime RegisterDead { get => registerDead; set => registerDead = value; }
+
+        public float MinSalary { get => minSalary; set => minSalary = value; }
+        public float MaxSalary { get => maxSalary; set => maxSalary = value; }
+
         public string HandleSalary(string x, string y)
         {
             if (x == "0" && y == "0") return "Thoả thuận";
