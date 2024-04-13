@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class uC_NewJob : UserControl
-    {
+    public partial class uC_NewJob : uc_JobMain
+    { 
         public uC_NewJob()
         {
             InitializeComponent();
+        }
+
+        private void pnContain_Click(object sender, EventArgs e)
+        {
+            OnJobDetailClick(e);
         }
     }
 }

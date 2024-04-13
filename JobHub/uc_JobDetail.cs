@@ -14,7 +14,6 @@ namespace JobHub
     {
         CandidateDao cd = new CandidateDao();
         public event EventHandler JobSavedClick;
-        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
 
         private int idJob;
         private int idCompany;
@@ -36,22 +35,11 @@ namespace JobHub
         {
             JobSavedClick?.Invoke(this, e);
         }
-        private void Login(Fmain fm)
-        {
-            FLogin login = new FLogin(fm);
-            login.ShowDialog();
-            login = null;
-            if (fm.Account != null)
-            {
-                FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
-                fm.loadFormReload(form.Form);
-            }
-        }
         public void SaveJob(object sender, EventArgs e, int idJob, Fmain fm)
         {
             if (fm.Account == null)
             {
-                Login(fm);
+                fm.Login();
             }
             else
             {
@@ -74,25 +62,5 @@ namespace JobHub
             pn.Controls.Clear();
             ffj.LoadUcDetail();
         }
-        /*public void UnSaveJob(object sender, EventArgs e, int idJob, int idCan, Fmain fm)
-        {
-            if (fm.Account == null)
-            {
-                Login(fm);
-            }
-            else
-            {
-                if (cd.CheckSaveStatus(idJob, idCan))
-                {
-                    ptbSave.Image = Properties.Resources.heartChuaLuu;
-                    cd.UnSavedJob(idJob, idCan);
-                }
-                else
-                {
-                    cd.SavedJob(idJob, idCan);
-                    ptbSave.Image = Properties.Resources.heartDaLuu;
-                }
-            }
-        }*/
     }
 }

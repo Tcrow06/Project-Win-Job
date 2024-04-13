@@ -89,8 +89,9 @@ namespace JobHub
             SqlDataReader dr = cdd.GetInfoCandidate(account.Id);
             if (dr.Read())
             {
-                cd.FirstName = dr["candidateLastName"].ToString();
-                cd.LastName =  dr["candidateFirstName"].ToString();
+                cd.LastName = dr["candidateLastName"].ToString();
+                cd.FirstName = dr["candidateFirstName"].ToString();
+                cd.FullName = cd.LastName + " " + cd.FirstName; 
 
             }
             return cd;

@@ -20,7 +20,7 @@ namespace JobHub
         private Candidate cd = new Candidate();
         private CompanyDetail cdd = new CompanyDetail();
         private JobDetail jdd = new JobDetail(); 
-
+        private ReLoadFormCandidate reLoad = new ReLoadFormCandidate();
         private int idJob;
         private int idCp;
         private Fmain fm;
@@ -129,9 +129,6 @@ namespace JobHub
             if (fm.Account == null)
             {
                 btnSave.Image = Properties.Resources.heartChuaLuu;
-                /*                fm.Login();
-                                *//*FLogin login = new FLogin();
-                                login.Show();*/
             }
             else
             {
@@ -197,12 +194,6 @@ namespace JobHub
             }
             else
             {
-                ///Chưa hoàn hành nộp cv 
-                ///
-
-
-
-                /////
                 if (cd.CheckApplyStatus(idJob, fm.Account.Id))
                 {
                     cd.UnApplyJob(idJob, fm.Account.Id, fm.Account.Id);
@@ -210,10 +201,12 @@ namespace JobHub
                 }
                 else
                 {
-                    FApplyWithCV fApplyWithCV = new FApplyWithCV(idJob,fm.Account);
+                    FApplyWithCV fApplyWithCV = new FApplyWithCV(idJob, fm);
+                    fm.Hide();
                     fApplyWithCV.ShowDialog();
-                    //cd.ApplyJob(idJob, fm.Account.Id,  fm.Account.Id);
-                    //ApplyStatus();
+                    fm.Show();
+                    FormAndInfoCandidate form = reLoad.ReLoadBack(fm);
+                    fm.loadForm(form.Form);
                 }
             }
                 

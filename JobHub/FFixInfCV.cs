@@ -78,6 +78,15 @@ namespace JobHub
             {
                 MessageBox.Show(ex.Message);
             }
+<<<<<<< HEAD
+=======
+            Candidate candidate = new Candidate(idCandidate, txtFirstName.Text.Trim() , txtLastName.Text.Trim(), txtPhoneNumber.Text.Trim(),  txtEmail.Text.Trim(),
+             rdoBoy.Checked.ToString(),  txtLink.Text.Trim(), dtpYob.Value,  txtLink.Text.Trim(),  txtAddress.Text.Trim());
+            DetailCV detail = new DetailCV(idCV,  txtNameJob.Text.Trim(), txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtLink.Text.Trim(),  txtPhoneNumber.Text.Trim(), 
+                txtEmail.Text.Trim(), txtAddress.Text.Trim(), txtEducation.Text.Trim(), txtSkill.Text.Trim(),  experience);
+            fixCVDAO.UpdateData(detail);
+            fixCVDAO.UpdateData(candidate);
+>>>>>>> a0c623e0cb1a0ba06943a1831d2a9f1f8dbf0b2b
         }
     }
 }

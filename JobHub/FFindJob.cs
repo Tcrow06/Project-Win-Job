@@ -19,11 +19,16 @@ namespace JobHub
     {
         private FindJob fjd=new FindJob();
         private Fmain fm;
-        private void LoadUc_SlideJob()
+        private void LoadUc_NewJob()
         {
-            fjd.LoadUc_SlideJob(pnHotFob, fm);
+            fjd.LoadUCNewJob(fpnNewJob, fm);
+            
         }
-        public FJob(Fmain fm,Account account)
+        private void LoadUc_HotJob()
+        {
+            fjd.LoadUCHotJob(pnHotJob, fm);
+        }
+        public FJob(Fmain fm)
         {
                 this.fm = fm;
                 InitializeComponent();
@@ -32,12 +37,15 @@ namespace JobHub
         private void FJob_Load(object sender, EventArgs e)
         {
             LoadFilterUcJob();
+            
         }
         private void LoadFilterUcJob()
         {
             fjd.LoadFilterUcJob(pnJob, fm, btnTechnique.Checked, btnIT.Checked, btnEconomy.Checked, cboIndustryGroup.SelectedItem.ToString(),
                                 cboSalary.SelectedItem.ToString(),cboAddress.SelectedItem.ToString(),
                                 cboExperience.SelectedItem.ToString(), txtSearch.Text.Trim());
+            LoadUc_NewJob();
+            LoadUc_HotJob();
         }
 
         private void cboIndustryGroup_SelectedIndexChanged(object sender, EventArgs e)

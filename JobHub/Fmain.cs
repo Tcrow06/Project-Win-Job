@@ -95,6 +95,7 @@ namespace JobHub
             }
             else if (this.Account.Type == 0)
             {
+<<<<<<< HEAD
                     pnNav.Controls.Clear();
                     pnNav.Controls.Add(pnSubNav1);
                     pnNav.Controls.Add(pnSubNav2);
@@ -109,6 +110,22 @@ namespace JobHub
                     pnAcount.Visible = true;
                     lblAccName.Text = cd.GetInfoCandidate(this.Account).LastName + " " + cd.GetInfoCandidate(this.Account).FirstName;
                     btnLogin.Text = "Đăng xuất";
+=======
+                pnNav.Controls.Clear();
+                pnNav.Controls.Add(pnSubNav1);
+                pnNav.Controls.Add(pnSubNav2);
+                pnNav.Controls.Add(pnSubNav3);
+                pnNav.Controls.Add(btnLogin);
+                pnNav.Controls.Add(btnBack);
+                pnSubNav1.Visible = true;
+                pnSubNav2.Visible = true;
+                pnSubNav3.Visible = true;
+                setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
+                setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
+                pnAcount.Visible = true;
+                lblAccName.Text = cd.GetInfoCandidate(this.Account).FullName;
+                btnLogin.Text = "Đăng xuất";
+>>>>>>> a0c623e0cb1a0ba06943a1831d2a9f1f8dbf0b2b
                     
 
             }
@@ -238,7 +255,7 @@ namespace JobHub
                         if (this.Forms.Count > 0)
                         {
                             FormAndInfoCandidate form = reLoadForm.ReLoadLogin(this);
-                            this.loadFormReload(form.Form);
+                            this.loadForm(form.Form);
                         }
                         else
                         {
@@ -399,7 +416,7 @@ namespace JobHub
                 resize(909, 568);
             }
             else if (form.Name == "FJob")
-                resize(form.Width + 178, form.Height + 35);
+                resize(1173, 598);
             else if (form.Name == "FViews")
             {
                 resize(900, 500);
@@ -427,7 +444,7 @@ namespace JobHub
             form.Show();
             form.BringToFront();
         }
-        public void loadFormReload(Form form)
+/*        public void loadFormReload(Form form)
         {
             this.HideChildForm();
             form.MdiParent = this;
@@ -436,7 +453,7 @@ namespace JobHub
                 resize(form.Width + 200, form.Height + 70);
             }
             else if (form.Name == "FJob")
-                resize(form.Width + 178, form.Height + 35);
+                resize(1173, 598);
             else if(form.Name == "FViews")
             {
                 resize(900, 500);
@@ -453,7 +470,7 @@ namespace JobHub
             form.Dock = DockStyle.Fill;
             form.Show();
             form.BringToFront();
-        }
+        }*/
         private void btnBack_Click(object sender, EventArgs e)
         {
             if(Forms.Count > 1)
@@ -472,14 +489,14 @@ namespace JobHub
                 Forms.Pop();
                 
                 FormAndInfoCandidate form = reLoadForm.ReLoadBack(this);
-                this.loadFormReload(form.Form);
+                this.loadForm(form.Form);
 
             }
             else
             {
                     FViews fv = new FViews();
                     Forms.Clear();
-                    this.loadFormReload(fv);
+                    this.loadForm(fv);
             }
 
         }
@@ -509,13 +526,6 @@ namespace JobHub
             this.DeleteChildForm();
             FJobPostHistory jsh = new FJobPostHistory(this);
             this.loadForm(jsh);
-            /*jsh.MdiParent = this;
-            resize(1050, 530);
-            //resize(jsh.Width + 200, jsh.Height + 50);
-            //MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
-            jsh.Dock = DockStyle.Fill;
-            jsh.Show();
-            jsh.BringToFront();*/
         }
         public void HideChildForm()
         {
@@ -550,14 +560,10 @@ namespace JobHub
                 formdelete.Close();
 
             }
-            FJob job = new FJob(this,Account);
+            FJob job = new FJob(this);
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
             forms.Push(fai);
-            job.MdiParent = this;
-            resize(job.Width + 200, job.Height + 70);
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();
+            this.loadForm(job);
         }
 
         private void btnFavouriteCV_Click(object sender, EventArgs e)
@@ -572,19 +578,13 @@ namespace JobHub
             FormAndInfoCandidate fai = new FormAndInfoCandidate(fcv);
             forms.Push(fai);
             this.loadForm(fai.Form);
-            /*fcv.MdiParent = this;
-            resize(fcv.Width + 200, fcv.Height + 70);
-            MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
-            fcv.Dock = DockStyle.Fill;
-            fcv.Show();
-            fcv.BringToFront();*/
         }
 
         private void btnOut_Click(object sender, EventArgs e)
         {
             Forms.Clear();
             this.Account = null;
-            this.loadFormReload(new FViews());
+            this.loadForm(new FViews());
             btnLogin.Text = "Đăng nhập";
             LoadTaskBar();  
         }
@@ -598,7 +598,7 @@ namespace JobHub
                 if (this.Account.Type == 0) 
                 {
                     FormAndInfoCandidate form = reLoadForm.ReLoadLogin(this);
-                    this.loadFormReload(form.Form);
+                    this.loadForm(form.Form);
                 }
                 else
                 {

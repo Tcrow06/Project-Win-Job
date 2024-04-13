@@ -82,16 +82,19 @@
             this.lblView.Size = new System.Drawing.Size(47, 16);
             this.lblView.TabIndex = 1;
             this.lblView.Text = "Xem";
+            this.lblView.Click += new System.EventHandler(this.pnChoiceCV_Click);
             this.lblView.MouseLeave += new System.EventHandler(this.UCChoiceCV_MouseLeave);
             this.lblView.MouseHover += new System.EventHandler(this.UCChoiceCV_MouseHover);
             // 
             // lblCVName
             // 
+            this.lblCVName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblCVName.Location = new System.Drawing.Point(17, 9);
             this.lblCVName.Name = "lblCVName";
             this.lblCVName.Size = new System.Drawing.Size(138, 23);
             this.lblCVName.TabIndex = 0;
             this.lblCVName.Text = "Tên CV đã lưu";
+            this.lblCVName.Click += new System.EventHandler(this.pnChoiceCV_Click);
             this.lblCVName.MouseLeave += new System.EventHandler(this.UCChoiceCV_MouseLeave);
             this.lblCVName.MouseHover += new System.EventHandler(this.UCChoiceCV_MouseHover);
             // 
@@ -108,10 +111,9 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel pnChoiceCV;
-        private System.Windows.Forms.Label lblCVName;
         private System.Windows.Forms.Label lblView;
+        public Guna.UI2.WinForms.Guna2Panel pnChoiceCV;
         private Guna.UI2.WinForms.Guna2Button btn;
+        public System.Windows.Forms.Label lblCVName;
     }
 }

@@ -152,6 +152,49 @@ namespace JobHub
             changTheSize.setSize(130, 25, job.lblJobName);
             return job;
         }
+        public uC_NewJob InsertInfoAndEventIntoUcNewJob(SqlDataReader dr, Fmain fm)
+        {
+            uC_NewJob job = new uC_NewJob();
+            job.lblJobName.Text = dr["jobName"].ToString();
+
+            job.lblCompanyName.Text = dr["companyName"].ToString();
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
+            job.pbAvatar.Image = Image.FromFile(imagePath);
+
+            
+            int idJob = int.Parse(dr["idJob"].ToString());
+            int idCompany = int.Parse(dr["idCompany"].ToString());
+            job.loadJobClick += (sender, e) =>
+            {
+                job.LoadJobDetail(sender, e, idJob, idCompany, fm);
+            };
+            return job;
+        }
+        public uC_HotJob InsertInfoAndEventIntoUcHotJob(SqlDataReader dr, Fmain fm)
+        {
+            uC_HotJob job = new uC_HotJob();
+            job.lblJobName.Text = dr["jobName"].ToString();
+
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
+            job.pbAvatar.Image = Image.FromFile(imagePath);
+            job.pbAvatar.Height = job.pbAvatar.Width;
+            job.btnField.Text = dr["jobField"].ToString();
+            job.lblNumberOfViews.Text = dr["jobNumberOfViews"]?.ToString() ?? "0";
+            job.lblNumberOfCandidates.Text = dr["jobNumberOfCandidates"].ToString();
+
+            job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
+
+            int idJob = int.Parse(dr["idJob"].ToString());
+            int idCompany = int.Parse(dr["idCompany"].ToString());
+            job.loadJobClick += (sender, e) =>
+            {
+                job.LoadJobDetail(sender, e, idJob, idCompany, fm);
+            };
+            /*            changTheSize.setSize(130, 25, job.lblJobName);*/
+            return job;
+        }
         public void AddJob(JobDetail a)
         {
             jdd.AddJob(a);

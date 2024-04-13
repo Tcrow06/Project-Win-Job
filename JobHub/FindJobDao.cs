@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Configuration;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace JobHub
 {
@@ -28,8 +29,8 @@ namespace JobHub
             string query = $@"SELECT Job.idJob, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, 
                             Job.jobAddress, Company.companyName, Company.idCompany, Company.companyAvatar
                             FROM Job
-                            INNER JOIN Company ON Job.idCompany = Company.idCompany and Job.jobRegisterDead >= '{DateTime.Now.Date}'
-                            where Job.jobNumberOf = (select max(Job.jobNumberOfViews) from Job)";
+                            INNER JOIN Company ON Job.idCompany = Company.idCompany 
+                            where Job.jobNumberOf = (select max(Job.jobNumberOfViews) from Job) and Job.jobRegisterDead >= '{DateTime.Now.Date}'";
             return db.loadData(query);
         }
         public SqlDataReader LoadFilterUcJob(string txt)
@@ -37,10 +38,35 @@ namespace JobHub
             string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, Job.jobAddress, 
                             Company.companyName ,Company.companyAvatar
                     FROM Job
-                    INNER JOIN Company ON Job.idCompany = Company.idCompany and Job.jobRegisterDead >= '{DateTime.Now.Date}'
-                    {txt}";
+                    INNER JOIN Company ON Job.idCompany = Company.idCompany  
+                    {txt} Job.jobRegisterDead >= '{DateTime.Now.Date}'";
             return db.loadData(query);
         }
-       
+        public SqlDataReader LoadUCHotJob()
+        {
+            SqlDataReader dr = null;
+                string sql = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Company.companyName ,Company.companyAvatar, Job.jobNumberOfViews
+                                ,Job.jobNumberOfCandidates, Job.jobField ,Job.jobMinSalary,Job.jobMaxSalary
+                    FROM Job
+                    INNER JOIN Company ON Job.idCompany = Company.idCompany
+                    where Job.jobRegisterDead >= '{DateTime.Now.Date}' and Job.jobNumberOfViews = (select max(jobNumberOfViews) from Job)";
+                dr = db.loadData(sql);
+            return dr;
+        }
+
+        public SqlDataReader LoadUCNewJob()
+        {
+            SqlDataReader dr = null;
+                string sql = $@"SELECT top 5 
+                                        Job.idJob, Company.idCompany, Job.jobName, Company.companyName ,Company.companyAvatar
+                                FROM Job
+                                INNER JOIN Company ON Job.idCompany = Company.idCompany
+                                where Job.jobRegisterDead >= '{DateTime.Now.Date}'
+                                order by Job.jobPostDate desc";
+                dr = db.loadData(sql);
+            return dr;
+        }
+        
+
     }
 }

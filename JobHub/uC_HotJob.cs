@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class uC_SlideJob : uc_JobMain
+    public partial class uC_HotJob : uc_JobMain
     {
-        public uC_SlideJob()
+        public uC_HotJob()
         {
             InitializeComponent();
         }
@@ -27,7 +27,16 @@ namespace JobHub
         private void ucSlideJob_Click(object sender, EventArgs e)
         {
             OnJobDetailClick(e);
+            
+        }
+        public void click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.pbAvatar.Width.ToString() + " " + this.Width.ToString());
         }
 
+        private void pnContain_Click(object sender, EventArgs e)
+        {
+            OnJobDetailClick(e);
+        }
     }
 }

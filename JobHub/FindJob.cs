@@ -9,9 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
+using System.Threading.Tasks;using System.Windows.Forms;
 
 namespace JobHub
 {
@@ -22,12 +20,13 @@ namespace JobHub
         JobDetail jobDetail = new JobDetail();
         public FindJob() { }
 
-//<<<<<<< HEAD
         public void LoadUc_SlideJob(Guna2Panel pn, Fmain fm)
         {
             //Chưa hoàn thiện
             SqlDataReader dr = findJobDao.LoadUc_SlideJob();
             
+
+
         }
         public void LoadFilterUcJob(FlowLayoutPanel flPanel, Fmain fm, bool tech, bool it, bool economy, string industry, string salary,
                                     string address, string experience, string search)
@@ -126,7 +125,9 @@ namespace JobHub
                 sql += $"Job.jobName LIKE N'%{search}%'";
             }
             if (!check)
-                sql = "";
+                sql = "where ";
+            else
+                sql += " and";
 
 
             SqlDataReader dr = findJobDao.LoadFilterUcJob(sql);
@@ -145,6 +146,40 @@ namespace JobHub
                 }
                 dr.Close();
             }
+        }
+        
+        public void LoadUCHotJob(Panel pn, Fmain fm)
+        {
+            SqlDataReader dr = findJobDao.LoadUCHotJob();
+            pn.SendToBack();
+            pn.Controls.Clear();
+            if (dr != null)
+            {
+                dr.Read();
+             
+                    uC_HotJob job = jobDetail.InsertInfoAndEventIntoUcHotJob(dr, fm);
+                    pn.Controls.Add(job);
+                    job.Dock = DockStyle.Bottom;
+                dr.Close();
+            }
+        }
+        public void LoadUCNewJob(FlowLayoutPanel flPanel, Fmain fm)
+        {
+            SqlDataReader dr = findJobDao.LoadUCNewJob();
+
+            flPanel.Controls.Clear();
+
+            if (dr != null)
+            { 
+                while (dr.Read())
+                {
+                    uC_NewJob job = jobDetail.InsertInfoAndEventIntoUcNewJob(dr, fm);
+                    job.Width = 231;
+                    flPanel.Controls.Add(job);
+                }
+            dr.Close();
+        }
+            
         }
         
     }
