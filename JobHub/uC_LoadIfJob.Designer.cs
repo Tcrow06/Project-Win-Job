@@ -38,6 +38,7 @@
             this.btnAddPanel = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnRemove = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddPanel)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).BeginInit();
@@ -145,6 +146,7 @@
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.btnRemove);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -165,6 +167,17 @@
             this.btnRemove.TabStop = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(17, 1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(305, 25);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Lưu ý: Mô tả không chứa kì tự + - >";
+            // 
             // uC_LoadIfJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -182,6 +195,7 @@
             this.Size = new System.Drawing.Size(1025, 190);
             ((System.ComponentModel.ISupportInitialize)(this.btnAddPanel)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemove)).EndInit();
             this.ResumeLayout(false);
 
@@ -198,5 +212,6 @@
         public Guna.UI2.WinForms.Guna2PictureBox btnAddPanel;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2PictureBox btnRemove;
+        private System.Windows.Forms.Label label6;
     }
 }

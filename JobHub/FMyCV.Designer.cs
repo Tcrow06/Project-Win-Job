@@ -125,6 +125,7 @@
             // 
             // pnContainCV
             // 
+            this.pnContainCV.AutoScroll = true;
             this.pnContainCV.Location = new System.Drawing.Point(5, 60);
             this.pnContainCV.Name = "pnContainCV";
             this.pnContainCV.Size = new System.Drawing.Size(776, 282);
@@ -172,6 +173,7 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 60);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(776, 261);

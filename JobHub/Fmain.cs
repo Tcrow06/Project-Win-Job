@@ -107,7 +107,7 @@ namespace JobHub
                     setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
                     setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
                     pnAcount.Visible = true;
-                    lblAccName.Text = cd.GetInfoCandidate(this.Account).Name;
+                    lblAccName.Text = cd.GetInfoCandidate(this.Account).LastName + " " + cd.GetInfoCandidate(this.Account).FirstName;
                     btnLogin.Text = "Đăng xuất";
                     
 
