@@ -1,4 +1,6 @@
 ﻿using Guna.UI2.WinForms;
+using Guna.UI2.WinForms.Enums;
+using Guna.UI2.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +21,7 @@ namespace JobHub
         Fmain fm = new Fmain();
         private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
         
-        CompanyDetail company= new CompanyDetail();
+        private CompanyDetail company= new CompanyDetail();
         public FCompanyDetails()
         {
             InitializeComponent();
@@ -33,6 +35,8 @@ namespace JobHub
         private void FCompanyDetails_Load(object sender, EventArgs e)
         {
             LoadCompanyDetail();
+            pnDetail.BringToFront();
+            LoadPanelImage();   
         }
         private int GetWidth(Guna2HtmlLabel l)
         {
@@ -119,7 +123,7 @@ namespace JobHub
             if (fm.Account != null)
             {
                 FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
-                fm.loadFormReload(form.Form);
+                fm.loadForm(form.Form);
             }
         }
         private void btnFollowCompany_Click(object sender, EventArgs e)
@@ -141,6 +145,37 @@ namespace JobHub
                     FollowStatus();
                 }
             }
+        }
+        
+        private void btnDetail_Click(object sender, EventArgs e)
+        {   
+            pnImage.Visible = false;
+            pnDetail.Visible = true;
+            pnDetail.BringToFront();
+/*            btnDetail.ButtonMode = ButtonMode.ToogleButton;
+            btnImage.ButtonMode = ButtonMode.DefaultButton;*/
+            //btnDetail.BackColor = Color.Silver;
+        }
+        private void LoadPanelImage()
+        {
+            pnImage.Size = pnDetail.Size;
+            pnImage.BackColor = Color.Black;
+            PictureBox pictureBox = new PictureBox();
+            pictureBox.Image = Properties.Resources.checkmark;
+            pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox.Size = new Size(100,100);
+            pnImage.Controls.Add(pictureBox);
+            pictureBox.Dock = DockStyle.Fill;
+            pnImage.Location = pnDetail.Location; 
+        }
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            pnDetail.Visible = false;
+            pnImage.Visible = true;
+            pnImage.BringToFront();
+/*            btnDetail.ButtonMode = ButtonMode.DefaultButton;
+            btnImage.ButtonMode = ButtonMode.ToogleButton;*/
+
         }
     }
 }

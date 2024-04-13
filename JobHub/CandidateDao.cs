@@ -20,7 +20,7 @@ namespace JobHub
             return db.loadData(sql);
                 
         }
-        public void ApplyJob(int idJob, int idCan, int idCv)
+        public void ApplyJob(int idJob, int idCv, int idCan)
         {
             string sql = string.Format($"insert into AppliedCV(idJob, idCandidate, idCV) values ({idJob}, {idCan}, {idCv})"); 
             db.ThucThi(sql);

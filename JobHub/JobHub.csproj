@@ -235,19 +235,16 @@
     <Compile Include="JobDetailDao.cs" />
     <Compile Include="JobPostHistory.cs" />
     <Compile Include="JobPostHistoryDao.cs" />
-    <Compile Include="ListUcJobAndBool.cs" />
     <Compile Include="LoginDao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReLoadFormCandidate.cs" />
-    <Compile Include="UcJobComparer.cs" />
     <Compile Include="Uc_ChoiceCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Uc_ChoiceCV.Designer.cs">
       <DependentUpon>Uc_ChoiceCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_Comparer.cs" />
     <Compile Include="uC_CV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -302,11 +299,11 @@
     <Compile Include="uC_NewJob.Designer.cs">
       <DependentUpon>uC_NewJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="uC_SlideJob.cs">
+    <Compile Include="uC_HotJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uC_SlideJob.Designer.cs">
-      <DependentUpon>uC_SlideJob.cs</DependentUpon>
+    <Compile Include="uC_HotJob.Designer.cs">
+      <DependentUpon>uC_HotJob.cs</DependentUpon>
     </Compile>
     <Compile Include="Candidate.cs" />
     <Compile Include="FUserInfo.cs">
@@ -425,8 +422,8 @@
     <EmbeddedResource Include="uC_NewJob.resx">
       <DependentUpon>uC_NewJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uC_SlideJob.resx">
-      <DependentUpon>uC_SlideJob.cs</DependentUpon>
+    <EmbeddedResource Include="uC_HotJob.resx">
+      <DependentUpon>uC_HotJob.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FUserInfo.resx">

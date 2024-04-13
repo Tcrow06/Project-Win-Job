@@ -27,7 +27,6 @@ namespace JobHub
         }
         private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
         {
-
             FJobDetails job = new FJobDetails(idJob, idCp, fm);
             fm.HideChildForm();
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job, idJob, idCp);

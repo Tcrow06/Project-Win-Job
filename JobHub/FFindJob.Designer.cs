@@ -44,24 +44,21 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnContain = new Guna.UI2.WinForms.Guna2Panel();
             this.pnSubContain = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_NewJob5 = new JobHub.uC_NewJob();
-            this.flpnContain = new System.Windows.Forms.FlowLayoutPanel();
-            this.uC_NewJob3 = new JobHub.uC_NewJob();
-            this.uC_NewJob1 = new JobHub.uC_NewJob();
-            this.uC_NewJob2 = new JobHub.uC_NewJob();
+            this.fpnNewJob = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSeeAll = new System.Windows.Forms.Label();
             this.lblNewJob = new System.Windows.Forms.Label();
-            this.pnHotFob = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_SlideJob1 = new JobHub.uC_SlideJob();
+            this.pnHotJob = new Guna.UI2.WinForms.Guna2Panel();
             this.cboIndustryGroup = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.uC_NewJob4 = new JobHub.uC_NewJob();
+            this.uC_NewJob2 = new JobHub.uC_NewJob();
+            this.uC_NewJob1 = new JobHub.uC_NewJob();
+            this.uC_NewJob3 = new JobHub.uC_NewJob();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnContain.SuspendLayout();
             this.pnSubContain.SuspendLayout();
-            this.flpnContain.SuspendLayout();
+            this.fpnNewJob.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.pnHotFob.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnJob
@@ -395,12 +392,12 @@
             // pnContain
             // 
             this.pnContain.Controls.Add(this.pnSubContain);
-            this.pnContain.Controls.Add(this.pnHotFob);
+            this.pnContain.Controls.Add(this.pnHotJob);
             this.pnContain.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnContain.Location = new System.Drawing.Point(894, 0);
+            this.pnContain.Location = new System.Drawing.Point(895, 0);
             this.pnContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnContain.Name = "pnContain";
-            this.pnContain.Size = new System.Drawing.Size(322, 660);
+            this.pnContain.Size = new System.Drawing.Size(335, 660);
             this.pnContain.TabIndex = 42;
             // 
             // pnSubContain
@@ -408,84 +405,36 @@
             this.pnSubContain.BorderColor = System.Drawing.Color.Silver;
             this.pnSubContain.BorderRadius = 10;
             this.pnSubContain.BorderThickness = 2;
-            this.pnSubContain.Controls.Add(this.uC_NewJob5);
-            this.pnSubContain.Controls.Add(this.flpnContain);
+            this.pnSubContain.Controls.Add(this.fpnNewJob);
             this.pnSubContain.Controls.Add(this.guna2Panel2);
             this.pnSubContain.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnSubContain.Location = new System.Drawing.Point(0, 356);
             this.pnSubContain.Margin = new System.Windows.Forms.Padding(2);
             this.pnSubContain.Name = "pnSubContain";
-            this.pnSubContain.Size = new System.Drawing.Size(322, 290);
-            this.pnSubContain.TabIndex = 1;
+            this.pnSubContain.Size = new System.Drawing.Size(335, 295);
+            this.pnSubContain.TabIndex = 3;
             // 
-            // uC_NewJob5
+            // fpnNewJob
             // 
-            this.uC_NewJob5.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob5.Location = new System.Drawing.Point(10, 292);
-            this.uC_NewJob5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 19);
-            this.uC_NewJob5.Name = "uC_NewJob5";
-            this.uC_NewJob5.Size = new System.Drawing.Size(271, 65);
-            this.uC_NewJob5.TabIndex = 8;
-            // 
-            // flpnContain
-            // 
-            this.flpnContain.AutoScroll = true;
-            this.flpnContain.Controls.Add(this.uC_NewJob3);
-            this.flpnContain.Controls.Add(this.uC_NewJob1);
-            this.flpnContain.Controls.Add(this.uC_NewJob2);
-            this.flpnContain.Location = new System.Drawing.Point(6, 46);
-            this.flpnContain.Margin = new System.Windows.Forms.Padding(2);
-            this.flpnContain.Name = "flpnContain";
-            this.flpnContain.Size = new System.Drawing.Size(298, 228);
-            this.flpnContain.TabIndex = 6;
-            // 
-            // uC_NewJob3
-            // 
-            this.uC_NewJob3.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob3.Location = new System.Drawing.Point(3, 2);
-            this.uC_NewJob3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
-            this.uC_NewJob3.Name = "uC_NewJob3";
-            this.uC_NewJob3.Size = new System.Drawing.Size(289, 59);
-            this.uC_NewJob3.TabIndex = 2;
-            // 
-            // uC_NewJob1
-            // 
-            this.uC_NewJob1.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob1.Location = new System.Drawing.Point(3, 80);
-            this.uC_NewJob1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
-            this.uC_NewJob1.Name = "uC_NewJob1";
-            this.uC_NewJob1.Size = new System.Drawing.Size(289, 59);
-            this.uC_NewJob1.TabIndex = 3;
-            // 
-            // uC_NewJob2
-            // 
-            this.uC_NewJob2.BackColor = System.Drawing.Color.White;
-            this.uC_NewJob2.Location = new System.Drawing.Point(3, 158);
-            this.uC_NewJob2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
-            this.uC_NewJob2.Name = "uC_NewJob2";
-            this.uC_NewJob2.Size = new System.Drawing.Size(289, 59);
-            this.uC_NewJob2.TabIndex = 4;
+            this.fpnNewJob.AutoScroll = true;
+            this.fpnNewJob.Controls.Add(this.uC_NewJob4);
+            this.fpnNewJob.Controls.Add(this.uC_NewJob2);
+            this.fpnNewJob.Controls.Add(this.uC_NewJob1);
+            this.fpnNewJob.Controls.Add(this.uC_NewJob3);
+            this.fpnNewJob.Location = new System.Drawing.Point(6, 46);
+            this.fpnNewJob.Margin = new System.Windows.Forms.Padding(2);
+            this.fpnNewJob.Name = "fpnNewJob";
+            this.fpnNewJob.Size = new System.Drawing.Size(320, 242);
+            this.fpnNewJob.TabIndex = 6;
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.lblSeeAll);
             this.guna2Panel2.Controls.Add(this.lblNewJob);
             this.guna2Panel2.Location = new System.Drawing.Point(7, 7);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(278, 33);
             this.guna2Panel2.TabIndex = 5;
-            // 
-            // lblSeeAll
-            // 
-            this.lblSeeAll.AutoSize = true;
-            this.lblSeeAll.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblSeeAll.Location = new System.Drawing.Point(218, 11);
-            this.lblSeeAll.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSeeAll.Name = "lblSeeAll";
-            this.lblSeeAll.Size = new System.Drawing.Size(49, 19);
-            this.lblSeeAll.TabIndex = 1;
-            this.lblSeeAll.Text = "See All";
             // 
             // lblNewJob
             // 
@@ -498,28 +447,15 @@
             this.lblNewJob.TabIndex = 0;
             this.lblNewJob.Text = "What\'s New";
             // 
-            // pnHotFob
+            // pnHotJob
             // 
-            this.pnHotFob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnHotFob.Controls.Add(this.uC_SlideJob1);
-            this.pnHotFob.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnHotFob.Location = new System.Drawing.Point(0, 0);
-            this.pnHotFob.Margin = new System.Windows.Forms.Padding(2);
-            this.pnHotFob.Name = "pnHotFob";
-            this.pnHotFob.Size = new System.Drawing.Size(322, 356);
-            this.pnHotFob.TabIndex = 0;
-            // 
-            // uC_SlideJob1
-            // 
-            this.uC_SlideJob1.BackColor = System.Drawing.Color.White;
-            this.uC_SlideJob1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uC_SlideJob1.IdCompany = 0;
-            this.uC_SlideJob1.IdJob = 0;
-            this.uC_SlideJob1.Location = new System.Drawing.Point(0, 0);
-            this.uC_SlideJob1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_SlideJob1.Name = "uC_SlideJob1";
-            this.uC_SlideJob1.Size = new System.Drawing.Size(322, 340);
-            this.uC_SlideJob1.TabIndex = 0;
+            this.pnHotJob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnHotJob.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnHotJob.Location = new System.Drawing.Point(0, 0);
+            this.pnHotJob.Margin = new System.Windows.Forms.Padding(2);
+            this.pnHotJob.Name = "pnHotJob";
+            this.pnHotJob.Size = new System.Drawing.Size(335, 356);
+            this.pnHotJob.TabIndex = 0;
             // 
             // cboIndustryGroup
             // 
@@ -567,12 +503,48 @@
             this.guna2Panel1.Size = new System.Drawing.Size(880, 365);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // uC_NewJob4
+            // 
+            this.uC_NewJob4.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob4.Location = new System.Drawing.Point(3, 2);
+            this.uC_NewJob4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
+            this.uC_NewJob4.Name = "uC_NewJob4";
+            this.uC_NewJob4.Size = new System.Drawing.Size(289, 59);
+            this.uC_NewJob4.TabIndex = 3;
+            // 
+            // uC_NewJob2
+            // 
+            this.uC_NewJob2.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob2.Location = new System.Drawing.Point(3, 80);
+            this.uC_NewJob2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
+            this.uC_NewJob2.Name = "uC_NewJob2";
+            this.uC_NewJob2.Size = new System.Drawing.Size(289, 60);
+            this.uC_NewJob2.TabIndex = 1;
+            // 
+            // uC_NewJob1
+            // 
+            this.uC_NewJob1.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob1.Location = new System.Drawing.Point(3, 159);
+            this.uC_NewJob1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
+            this.uC_NewJob1.Name = "uC_NewJob1";
+            this.uC_NewJob1.Size = new System.Drawing.Size(289, 59);
+            this.uC_NewJob1.TabIndex = 0;
+            // 
+            // uC_NewJob3
+            // 
+            this.uC_NewJob3.BackColor = System.Drawing.Color.White;
+            this.uC_NewJob3.Location = new System.Drawing.Point(3, 237);
+            this.uC_NewJob3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 17);
+            this.uC_NewJob3.Name = "uC_NewJob3";
+            this.uC_NewJob3.Size = new System.Drawing.Size(289, 59);
+            this.uC_NewJob3.TabIndex = 2;
+            // 
             // FJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1216, 660);
+            this.ClientSize = new System.Drawing.Size(1230, 660);
             this.Controls.Add(this.cboIndustryGroup);
             this.Controls.Add(this.pnContain);
             this.Controls.Add(this.guna2PictureBox1);
@@ -599,10 +571,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnContain.ResumeLayout(false);
             this.pnSubContain.ResumeLayout(false);
-            this.flpnContain.ResumeLayout(false);
+            this.fpnNewJob.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.pnHotFob.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -623,18 +594,16 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel pnContain;
         private Guna.UI2.WinForms.Guna2Panel pnSubContain;
-        private System.Windows.Forms.FlowLayoutPanel flpnContain;
+        private System.Windows.Forms.FlowLayoutPanel fpnNewJob;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label lblSeeAll;
         private System.Windows.Forms.Label lblNewJob;
-        private Guna.UI2.WinForms.Guna2Panel pnHotFob;
-        private uC_NewJob uC_NewJob5;
+        private Guna.UI2.WinForms.Guna2Panel pnHotJob;
         private Guna.UI2.WinForms.Guna2ComboBox cboIndustryGroup;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private uC_NewJob uC_NewJob3;
-        private uC_NewJob uC_NewJob1;
+        private uC_NewJob uC_NewJob4;
         private uC_NewJob uC_NewJob2;
-        private uC_SlideJob uC_SlideJob1;
+        private uC_NewJob uC_NewJob1;
+        private uC_NewJob uC_NewJob3;
     }
 }
 

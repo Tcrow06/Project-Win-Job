@@ -21,8 +21,8 @@ namespace JobHub
         public Uc_ChoiceCV()
         {
             InitializeComponent();
-            lblView.Visible = false;
-            btn.Visible = false;
+/*            lblView.Visible = false;
+            btn.Visible = false;*/
         }
 
         private void UCChoiceCV_MouseHover(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace JobHub
 
         private void UCChoiceCV_MouseLeave(object sender, EventArgs e)
         {
-            lblView.Visible = false ;
-            btn.Visible = false;
+/*            lblView.Visible = false;
+            btn.Visible = false;*/
             pnChoiceCV.BorderColor = Color.Silver;
         }
 
@@ -45,14 +45,14 @@ namespace JobHub
 
         }
 
-        public Uc_ChoiceCV InsertInfoAndEventIntoUcChoiceCv(FApplyWithCV fa,SqlDataReader dr, Account account, Guna2Panel pn, int idCv)
+        public Uc_ChoiceCV InsertInfoAndEventIntoUcChoiceCv(FApplyWithCV fa,SqlDataReader dr, Account account, Guna2Panel pn)
         {
             Uc_ChoiceCV uc = new Uc_ChoiceCV();
             uc.lblCVName.Text = dr["CVName"].ToString();
             //MessageBox.Show(uc.lblCVName.Text);
             Size textSize = TextRenderer.MeasureText(lblCVName.Text, lblCVName.Font);
             uc.lblCVName.Width = textSize.Width+50;
-            uc.lblView.Location = new Point(lblCVName.Location.X + uc.lblCVName.Width + 10, lblView.Location.Y);
+            uc.lblView.Location = new Point(lblCVName.Location.X + uc.lblCVName.Width, lblView.Location.Y);
             //int idJob1 = idJob;
             int idCV = int.Parse(dr["idCv"].ToString());
             int idCandidate = account.Id;
@@ -63,8 +63,9 @@ namespace JobHub
             };
             uc.clickBtn += (sender, e) =>
             {
-                //MessageBox.Show("");
-                uc.LoadSelectedForm(sender, e,uc, fa);
+               // MessageBox.Show(idCV.ToString());
+              //  idCv = idCVClick;
+                uc.LoadSelectedForm(sender, e,uc, fa, idCV);
                 /*idCv= idCV;*/
             };
             return uc;
@@ -74,9 +75,9 @@ namespace JobHub
             FormHandler handler = new FormHandler();
             handler.OpenNewForm(idCandidate, idCV);
         }
-        public void LoadSelectedForm(object sender, EventArgs e, Uc_ChoiceCV uc, FApplyWithCV fa)
+        public void LoadSelectedForm(object sender, EventArgs e, Uc_ChoiceCV uc, FApplyWithCV fa, int idCV)
         {
-            fa.LoadFormChoiceCVOn(uc);
+            fa.LoadFormChoiceCVOn(uc,idCV);
         }
         public void ChoiceCV(object sender, EventArgs e, int idCV, int idCandidate)
         {

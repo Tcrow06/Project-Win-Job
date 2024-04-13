@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FApplyWithCV));
             this.lblAddress = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblJobName = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label2 = new System.Windows.Forms.Label();
             this.pnCV1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.lblCVLoad = new System.Windows.Forms.Label();
             this.lblCVOn = new System.Windows.Forms.Label();
             this.rbChoiceCV1 = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -52,7 +53,6 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.pnCV1.SuspendLayout();
             this.pnCV2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -67,20 +67,20 @@
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(41, 36);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(112, 28);
+            this.lblAddress.Size = new System.Drawing.Size(114, 28);
             this.lblAddress.TabIndex = 51;
             this.lblAddress.Text = "Ứng tuyển ";
             // 
-            // label1
+            // lblJobName
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(43, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(688, 64);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Ứng tuyển ";
+            this.lblJobName.BackColor = System.Drawing.Color.White;
+            this.lblJobName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.lblJobName.Location = new System.Drawing.Point(43, 36);
+            this.lblJobName.Name = "lblJobName";
+            this.lblJobName.Size = new System.Drawing.Size(688, 64);
+            this.lblJobName.TabIndex = 52;
+            this.lblJobName.Text = "Ứng tuyển ";
             // 
             // guna2Separator1
             // 
@@ -118,6 +118,26 @@
             this.pnCV1.MouseLeave += new System.EventHandler(this.pnCV1_MouseLeave);
             this.pnCV1.MouseHover += new System.EventHandler(this.pnCV1_MouseHover);
             // 
+            // btnChange
+            // 
+            this.btnChange.BorderColor = System.Drawing.Color.Transparent;
+            this.btnChange.BorderRadius = 5;
+            this.btnChange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChange.FillColor = System.Drawing.Color.Silver;
+            this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnChange.ForeColor = System.Drawing.Color.White;
+            this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
+            this.btnChange.Location = new System.Drawing.Point(623, 54);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(96, 26);
+            this.btnChange.TabIndex = 65;
+            this.btnChange.Text = "Thay đổi";
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // lblCVLoad
             // 
             this.lblCVLoad.BackColor = System.Drawing.Color.White;
@@ -132,9 +152,9 @@
             // 
             this.lblCVOn.BackColor = System.Drawing.Color.White;
             this.lblCVOn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblCVOn.Location = new System.Drawing.Point(34, 47);
+            this.lblCVOn.Location = new System.Drawing.Point(34, 53);
             this.lblCVOn.Name = "lblCVOn";
-            this.lblCVOn.Size = new System.Drawing.Size(73, 22);
+            this.lblCVOn.Size = new System.Drawing.Size(78, 22);
             this.lblCVOn.TabIndex = 60;
             this.lblCVOn.Text = "CV online";
             // 
@@ -185,7 +205,7 @@
             // 
             this.pbDelete.Image = ((System.Drawing.Image)(resources.GetObject("pbDelete.Image")));
             this.pbDelete.ImageRotate = 0F;
-            this.pbDelete.Location = new System.Drawing.Point(389, 135);
+            this.pbDelete.Location = new System.Drawing.Point(424, 135);
             this.pbDelete.Name = "pbDelete";
             this.pbDelete.Size = new System.Drawing.Size(30, 30);
             this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,14 +215,14 @@
             // 
             // lblCVName
             // 
+            this.lblCVName.AutoEllipsis = true;
             this.lblCVName.BackColor = System.Drawing.Color.White;
             this.lblCVName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblCVName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.lblCVName.Location = new System.Drawing.Point(316, 137);
+            this.lblCVName.Location = new System.Drawing.Point(296, 137);
             this.lblCVName.Name = "lblCVName";
-            this.lblCVName.Size = new System.Drawing.Size(71, 22);
+            this.lblCVName.Size = new System.Drawing.Size(111, 22);
             this.lblCVName.TabIndex = 67;
-            this.lblCVName.Text = "Tên Cv";
             // 
             // btnChoice
             // 
@@ -361,33 +381,14 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderRadius = 5;
-            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(853, 621);
             this.guna2Panel1.TabIndex = 64;
-            // 
-            // btnChange
-            // 
-            this.btnChange.BorderColor = System.Drawing.Color.Transparent;
-            this.btnChange.BorderRadius = 10;
-            this.btnChange.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChange.FillColor = System.Drawing.Color.Silver;
-            this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChange.ForeColor = System.Drawing.Color.White;
-            this.btnChange.Image = ((System.Drawing.Image)(resources.GetObject("btnChange.Image")));
-            this.btnChange.Location = new System.Drawing.Point(631, 31);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(96, 26);
-            this.btnChange.TabIndex = 65;
-            this.btnChange.Text = "Thay đổi";
             // 
             // FApplyWithCV
             // 
@@ -404,7 +405,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblJobName);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FApplyWithCV";
@@ -426,7 +427,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblJobName;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -435,8 +436,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton rbChoiceCV2;
         private Guna.UI2.WinForms.Guna2RadioButton rbChoiceCV1;
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
-        private System.Windows.Forms.Label lblCVOn;
-        private System.Windows.Forms.Label lblCVLoad;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label3;
@@ -449,5 +448,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox pbDelete;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnChange;
+        public System.Windows.Forms.Label lblCVOn;
+        public System.Windows.Forms.Label lblCVLoad;
     }
 }
