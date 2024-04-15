@@ -20,7 +20,7 @@ namespace JobHub
         Fmain fm = new Fmain();
         bool checkSelectCVInLibrary = true;
         bool checkSelectUpFileCV = true;
-        int idCV = 0;
+        int idCV = -1;
         Uc_ChoiceCV uc;
         
         public FApplyWithCV()
@@ -57,7 +57,7 @@ namespace JobHub
             }
             btnChange.Visible = false;
             pn1.BorderColor = Color.FromArgb(0, 139, 0);
-            btnChoice.FillColor = pnCV2.BorderColor;
+            btnSelectCVImage.FillColor = pnCV2.BorderColor;
             rb1.Checked = true;
             pn2.Height = height2;
             pn1.Height = height1;
@@ -80,7 +80,7 @@ namespace JobHub
         private void pnCV2_MouseHover(object sender, EventArgs e)
         {
             pnCV2.BorderColor = Color.FromArgb(0, 139, 0);
-            btnChoice.FillColor = Color.FromArgb(0, 139, 0);
+            btnSelectCVImage.FillColor = Color.FromArgb(0, 139, 0);
         }
 
         private void pnCV2_MouseLeave(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace JobHub
             if (!rbChoiceCV2.Checked)
             {
                 pnCV2.BorderColor = Color.Silver;
-                btnChoice.FillColor = Color.Silver;
+                btnSelectCVImage.FillColor = Color.Silver;
             }
         }
 
@@ -111,34 +111,6 @@ namespace JobHub
             this.Close();
         }
 
-        private void btnChoice_Click(object sender, EventArgs e)
-        {
-            checkSelectUpFileCV = false;
-            pnCVClick(rbChoiceCV2, pnCV2, rbChoiceCV1, pnCV1,200, 35);
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Tệp PDF|*.pdf|Tệp DOCX|*.docx"; // Chỉ cho phép tải lên tệp PDF hoặc DOCX
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                lblCVName.Visible = true;
-                pbDelete.Visible = true;
-
-                string filePath = openFileDialog.FileName;
-                lblCVName.Text = Path.GetFileName(filePath);
-
-                // Tạo một thư mục mới nếu nó không tồn tại
-                string folderPath = Path.Combine(Application.StartupPath, "image");
-                if (!Directory.Exists(folderPath))
-                {
-                    Directory.CreateDirectory(folderPath);
-                }
-
-                string fileName = Path.GetFileName(filePath);
-                string destinationPath = GetUniqueFileName(folderPath, fileName);
-                File.Copy(filePath, destinationPath);
-                //byte[] fileData = File.ReadAllBytes(filePath);
-            }
-        }
         private string GetUniqueFileName(string folderPath, string fileName)
         {
             int count = 1;
@@ -187,10 +159,17 @@ namespace JobHub
         }
         private void btnApply_Click(object sender, EventArgs e)
         {
-           if(rbChoiceCV1.Checked == true)
+           if(rbChoiceCV1.Checked == true )
            {
-                awc.Apply(idJob, idCV, fm);
-                this.Dispose(); 
+                if (idCV != -1)
+                {
+                    awc.Apply(idJob, idCV, fm);
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn CV để ứng tuyển");
+                }
            }
            else
            {
@@ -210,9 +189,39 @@ namespace JobHub
                 }
             }
             checkSelectCVInLibrary = true;
+            idCV = -1;
             awc.LoadForm(this, pnCV1, lblCVOn, lblCVLoad, fm.Account);
             pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, 200, 105);
             
+        }
+
+        private void btnSelectCVImage_Click(object sender, EventArgs e)
+        {
+            checkSelectUpFileCV = false;
+            pnCVClick(rbChoiceCV2, pnCV2, rbChoiceCV1, pnCV1, 200, 35);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Tệp PDF|*.pdf|Tệp DOCX|*.docx"; // Chỉ cho phép tải lên tệp PDF hoặc DOCX
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                lblCVName.Visible = true;
+                pbDelete.Visible = true;
+
+                string filePath = openFileDialog.FileName;
+                lblCVName.Text = Path.GetFileName(filePath);
+
+                // Tạo một thư mục mới nếu nó không tồn tại
+                string folderPath = Path.Combine(Application.StartupPath, "image");
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                string fileName = Path.GetFileName(filePath);
+                string destinationPath = GetUniqueFileName(folderPath, fileName);
+                File.Copy(filePath, destinationPath);
+                //byte[] fileData = File.ReadAllBytes(filePath);
+            }
         }
     }
 }

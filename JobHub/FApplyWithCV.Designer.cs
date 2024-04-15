@@ -41,7 +41,7 @@
             this.pnCV2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pbDelete = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCVName = new System.Windows.Forms.Label();
-            this.btnChoice = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSelectCVImage = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -186,7 +186,7 @@
             this.pnCV2.BorderThickness = 1;
             this.pnCV2.Controls.Add(this.pbDelete);
             this.pnCV2.Controls.Add(this.lblCVName);
-            this.pnCV2.Controls.Add(this.btnChoice);
+            this.pnCV2.Controls.Add(this.btnSelectCVImage);
             this.pnCV2.Controls.Add(this.label4);
             this.pnCV2.Controls.Add(this.guna2PictureBox2);
             this.pnCV2.Controls.Add(this.label3);
@@ -224,25 +224,25 @@
             this.lblCVName.Size = new System.Drawing.Size(111, 22);
             this.lblCVName.TabIndex = 67;
             // 
-            // btnChoice
+            // btnSelectCVImage
             // 
-            this.btnChoice.BorderColor = System.Drawing.Color.Transparent;
-            this.btnChoice.BorderRadius = 5;
-            this.btnChoice.BorderThickness = 1;
-            this.btnChoice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChoice.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChoice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChoice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChoice.FillColor = System.Drawing.Color.Silver;
-            this.btnChoice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnChoice.ForeColor = System.Drawing.Color.White;
-            this.btnChoice.Location = new System.Drawing.Point(321, 90);
-            this.btnChoice.Name = "btnChoice";
-            this.btnChoice.Size = new System.Drawing.Size(106, 31);
-            this.btnChoice.TabIndex = 66;
-            this.btnChoice.Text = "Chọn CV";
-            this.btnChoice.Click += new System.EventHandler(this.btnChoice_Click);
-            this.btnChoice.MouseEnter += new System.EventHandler(this.pnCV2_MouseHover);
+            this.btnSelectCVImage.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSelectCVImage.BorderRadius = 5;
+            this.btnSelectCVImage.BorderThickness = 1;
+            this.btnSelectCVImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectCVImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSelectCVImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSelectCVImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSelectCVImage.FillColor = System.Drawing.Color.Silver;
+            this.btnSelectCVImage.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelectCVImage.ForeColor = System.Drawing.Color.White;
+            this.btnSelectCVImage.Location = new System.Drawing.Point(321, 90);
+            this.btnSelectCVImage.Name = "btnSelectCVImage";
+            this.btnSelectCVImage.Size = new System.Drawing.Size(106, 31);
+            this.btnSelectCVImage.TabIndex = 66;
+            this.btnSelectCVImage.Text = "Chọn CV";
+            this.btnSelectCVImage.Click += new System.EventHandler(this.btnSelectCVImage_Click);
+            this.btnSelectCVImage.MouseEnter += new System.EventHandler(this.pnCV2_MouseHover);
             // 
             // label4
             // 
@@ -440,7 +440,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button btnChoice;
+        private Guna.UI2.WinForms.Guna2Button btnSelectCVImage;
         private Guna.UI2.WinForms.Guna2Button btnApply;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;

@@ -28,13 +28,14 @@ namespace JobHub
         private string email;
         private string link;
         private string size;
+        private List<string> listCompanyImage;
          
         public CompanyDetail()
         {
         }
 
         public CompanyDetail(int id, string nsame, string avatar, string address
-            , string phone, string description, string email, string link, string size)
+            , string phone, string description, string email, string link, string size, List<string> listCompanyImage)
         {
             this.Id = id;
             this.Name = name;
@@ -45,6 +46,7 @@ namespace JobHub
             this.email = email;
             this.Link = link;
             this.Size = size;
+            this.ListCompanyImage = listCompanyImage;
         }
 
         public int Id { get => id; set => id = value; }
@@ -56,7 +58,7 @@ namespace JobHub
         public string Email { get => email; set => email = value; }
         public string Link { get => link; set => link = value; }
         public string Size { get => size; set => size = value; }
-
+        public List<string> ListCompanyImage { get => listCompanyImage; set => listCompanyImage = value; }
 
         public CompanyDetail GetInfoCompanyDetail(int idCompany)
         {
@@ -82,6 +84,7 @@ namespace JobHub
             companyDetail.Email = dr["companyEmail"].ToString();
             companyDetail.Link = dr["companyLink"].ToString();
             companyDetail.Size = dr["companySize"].ToString();
+            companyDetail.listCompanyImage = dr["companyImagePath"].ToString().Split('+').ToList();
             return companyDetail;
 
         }

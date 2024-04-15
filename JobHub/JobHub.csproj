@@ -558,9 +558,7 @@
   <ItemGroup>
     <None Include="Resources\up-arrow.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="image\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>
@@ -590,6 +588,17 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\28TheAnh.png" />
+    <Content Include="image\ATHENAHOLDING.png" />
+    <Content Include="image\Edmicro.jpg" />
+    <Content Include="image\GIGAREAL.jpg" />
+    <Content Include="image\GIGAREAL1.jpg" />
+    <Content Include="image\GIGAREAL2.jpg" />
+    <Content Include="image\GIGAREAL3.jpg" />
+    <Content Include="image\LogJobHub.png" />
+    <None Include="Resources\next.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

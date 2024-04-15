@@ -308,12 +308,6 @@ namespace JobHub
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
             this.Forms.Push(fai);
             this.loadForm(job);
-/*            resize(job.Width + 200, job.Height + 50);
-            MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
-            job.MdiParent = this;
-            job.Dock = DockStyle.Fill;
-            job.Show();
-            job.BringToFront();*/
 
         }
 
@@ -427,33 +421,6 @@ namespace JobHub
             form.Show();
             form.BringToFront();
         }
-/*        public void loadFormReload(Form form)
-        {
-            this.HideChildForm();
-            form.MdiParent = this;
-            if (form.Name == "FJobDetails")
-            {
-                resize(form.Width + 200, form.Height + 70);
-            }
-            else if (form.Name == "FJob")
-                resize(1173, 598);
-            else if(form.Name == "FViews")
-            {
-                resize(900, 500);
-            }
-            else if (form.Name == "FCompanyDetails")
-            {
-                resize(955, 640);
-            }
-            else if (form.Name == "FJobPostHistory")
-            {
-                //resize(form.Width, form.Height);
-                //MessageBox.Show(form.Width.ToString() + " " + form.Height.ToString());
-            }
-            form.Dock = DockStyle.Fill;
-            form.Show();
-            form.BringToFront();
-        }*/
         private void btnBack_Click(object sender, EventArgs e)
         {
             if(Forms.Count > 1)

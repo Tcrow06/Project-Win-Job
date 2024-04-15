@@ -19,9 +19,11 @@ namespace JobHub
         private CompanyDetail companyDetail= new CompanyDetail();
         private Candidate cd = new Candidate();
         Fmain fm = new Fmain();
-        private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
         
         private CompanyDetail company= new CompanyDetail();
+        private List<string> listCompanyImage = new List<string>();
+        int indexImage = 0;
+
         public FCompanyDetails()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace JobHub
         public FCompanyDetails(int idCompany, Fmain fm)
         {
             InitializeComponent();
-            this.fm = fm;   
+            this.fm = fm;
             company.Id = idCompany;
         }
         private void FCompanyDetails_Load(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace JobHub
             lblLink.Text = company.Link;
             lblLink.Width = GetWidth(lblLink);
             lblAddress.Text = company.Address;
-
+            listCompanyImage = company.ListCompanyImage;
             string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
             string imagePath = Path.Combine(projectFolderPath ,company.Avatar);
             pbAvatar.Image = Image.FromFile(imagePath);
@@ -115,22 +117,11 @@ namespace JobHub
                     btnFollowCompany.Image = Properties.Resources.checkmark;
             }
         }
-        private void Login()
-        {
-            FLogin login = new FLogin(fm);
-            login.ShowDialog();
-            login = null;
-            if (fm.Account != null)
-            {
-                FormAndInfoCandidate form = reLoadForm.ReLoadLogin(fm);
-                fm.loadForm(form.Form);
-            }
-        }
         private void btnFollowCompany_Click(object sender, EventArgs e)
         {
             if (fm.Account == null)
             {
-                Login();
+                fm.Login();
             }
             else
             {
@@ -145,37 +136,46 @@ namespace JobHub
                     FollowStatus();
                 }
             }
-        }
-        
+        }        
         private void btnDetail_Click(object sender, EventArgs e)
         {   
             pnImage.Visible = false;
             pnDetail.Visible = true;
             pnDetail.BringToFront();
-/*            btnDetail.ButtonMode = ButtonMode.ToogleButton;
-            btnImage.ButtonMode = ButtonMode.DefaultButton;*/
-            //btnDetail.BackColor = Color.Silver;
+        }
+        private void LoadImageIntoPictureBox(Guna2PictureBox pictureBox, int indexImage)
+        {
+            lblImage.Text = (indexImage + 1).ToString() + "/" + listCompanyImage.Count.ToString();
+            string image = listCompanyImage[indexImage].Trim();
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            string imagePath = Path.Combine(projectFolderPath, image);
+            pictureBox.Image = Image.FromFile(imagePath);
         }
         private void LoadPanelImage()
         {
-            pnImage.Size = pnDetail.Size;
-            pnImage.BackColor = Color.Black;
-            PictureBox pictureBox = new PictureBox();
-            pictureBox.Image = Properties.Resources.checkmark;
-            pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox.Size = new Size(100,100);
-            pnImage.Controls.Add(pictureBox);
-            pictureBox.Dock = DockStyle.Fill;
-            pnImage.Location = pnDetail.Location; 
+            LoadImageIntoPictureBox(pbCompanyInfo, 0);
+            pnImage.Location = pnDetail.Location;
+            pnImage.Visible = false;
         }
         private void btnImage_Click(object sender, EventArgs e)
         {
             pnDetail.Visible = false;
             pnImage.Visible = true;
             pnImage.BringToFront();
-/*            btnDetail.ButtonMode = ButtonMode.DefaultButton;
-            btnImage.ButtonMode = ButtonMode.ToogleButton;*/
-
+        }
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            indexImage -= 1;
+            if(indexImage < 0)
+                indexImage = listCompanyImage.Count - 1;
+            LoadImageIntoPictureBox(pbCompanyInfo, indexImage);
+        }
+        private void pbNext_Click(object sender, EventArgs e)
+        {
+            indexImage += 1;
+            if (indexImage >= listCompanyImage.Count)
+                indexImage = 0;
+            LoadImageIntoPictureBox(pbCompanyInfo, indexImage);
         }
     }
 }
