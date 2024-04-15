@@ -15,6 +15,7 @@ namespace JobHub
         private int id; //Fk
         private string firstName;
         private string lastName;
+        private string fullName;
         private string phone;
         private string email;
         private bool gender;
@@ -37,6 +38,7 @@ namespace JobHub
         public string Address { get => address; set => address = value; }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
+        public string FullName { get => fullName; set => fullName = value; }
 
         public Candidate(int id)
         {

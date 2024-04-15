@@ -95,7 +95,7 @@ namespace JobHub
             }
             else if (this.Account.Type == 0)
             {
-<<<<<<< HEAD
+/*
                     pnNav.Controls.Clear();
                     pnNav.Controls.Add(pnSubNav1);
                     pnNav.Controls.Add(pnSubNav2);
@@ -109,8 +109,7 @@ namespace JobHub
                     setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
                     pnAcount.Visible = true;
                     lblAccName.Text = cd.GetInfoCandidate(this.Account).LastName + " " + cd.GetInfoCandidate(this.Account).FirstName;
-                    btnLogin.Text = "Đăng xuất";
-=======
+                    btnLogin.Text = "Đăng xuất";*/
                 pnNav.Controls.Clear();
                 pnNav.Controls.Add(pnSubNav1);
                 pnNav.Controls.Add(pnSubNav2);
@@ -125,7 +124,7 @@ namespace JobHub
                 pnAcount.Visible = true;
                 lblAccName.Text = cd.GetInfoCandidate(this.Account).FullName;
                 btnLogin.Text = "Đăng xuất";
->>>>>>> a0c623e0cb1a0ba06943a1831d2a9f1f8dbf0b2b
+
                     
 
             }
