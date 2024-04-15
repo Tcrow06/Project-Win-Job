@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
@@ -10,6 +11,15 @@ namespace JobHub
 {
     internal class ControlManager
     {
+        private int idCV;
+        private int idCadidate;
+        public ControlManager(int idCV, int idCadidate)
+        {
+            this.idCV = idCV;
+
+            this.idCadidate = idCadidate;
+
+        }
         public void AddPenal(FlowLayoutPanel fpn, uC_LoadIfJob olduC_LoadJob, Stack<uC_LoadIfJob> containUC)
         {
             uC_LoadIfJob newUC_LoadJob = new uC_LoadIfJob();
@@ -29,7 +39,25 @@ namespace JobHub
 
         public void RemoveControl(FlowLayoutPanel fpn, uC_LoadIfJob load, Stack<uC_LoadIfJob> containUC)
         {
-            if(load.btnAddPanel.Visible == true)
+            string cmd = $@"select CV.CVDescription
+                            from CV
+                            inner join Candidate on CV.idCandidate = Candidate.idCandidate
+                            where CV.idCV = {this.idCV}";
+            Function function = new Function();
+            DataTable dt = function.ReadData(cmd);
+            if(load.txtReviewJob.Text.Trim().Length > 0 && load.txtReviewJob.Text.Trim().Length > 0 && load.txtTime.Text.Trim().Length > 0)
+            {
+                string newExperience = "+" + load.txtWhatJob.Text.Trim() + "-" + load.txtTime.Text.Trim() + ">" + load.txtReviewJob.Text.Trim();
+                string oldExperience = dt.Rows[0]["CVDescription"].ToString().Trim();
+                string result = oldExperience.Replace(newExperience, "").Trim();
+                string cmdUpdate = $@"Update CV
+                                  SET CV.CVDescription = N'{result}'
+                                  from CV
+                                  inner join Candidate on Candidate.idCandidate = CV.idCandidate
+                                  where CV.idCV = {this.idCV}";
+                function.Update(cmdUpdate);
+            }
+            if (load.btnAddPanel.Visible == true)
             {
                 containUC.Pop();
                 if(containUC.Count > 0)

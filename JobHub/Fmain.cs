@@ -95,6 +95,22 @@ namespace JobHub
             }
             else if (this.Account.Type == 0)
             {
+<<<<<<< HEAD
+                    pnNav.Controls.Clear();
+                    pnNav.Controls.Add(pnSubNav1);
+                    pnNav.Controls.Add(pnSubNav2);
+                    pnNav.Controls.Add(pnSubNav3);
+                    pnNav.Controls.Add(btnLogin);
+                    pnNav.Controls.Add(btnBack);
+                    pnSubNav1.Visible = true;
+                    pnSubNav2.Visible = true;
+                    pnSubNav3.Visible = true;
+                    setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
+                    setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
+                    pnAcount.Visible = true;
+                    lblAccName.Text = cd.GetInfoCandidate(this.Account).LastName + " " + cd.GetInfoCandidate(this.Account).FirstName;
+                    btnLogin.Text = "Đăng xuất";
+=======
                 pnNav.Controls.Clear();
                 pnNav.Controls.Add(pnSubNav1);
                 pnNav.Controls.Add(pnSubNav2);
@@ -109,6 +125,7 @@ namespace JobHub
                 pnAcount.Visible = true;
                 lblAccName.Text = cd.GetInfoCandidate(this.Account).FullName;
                 btnLogin.Text = "Đăng xuất";
+>>>>>>> a0c623e0cb1a0ba06943a1831d2a9f1f8dbf0b2b
                     
 
             }

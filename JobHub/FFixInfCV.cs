@@ -27,42 +27,66 @@ namespace JobHub
 
         }
 
+        public void readData()
+        {
+            DataTable dt = fixCVDAO.readData(this.idCandidate, this.idCV);
+            fixCVDAO.ShowData(this.idCV, this.idCandidate, uC_MakeCV1.txtAddress, uC_MakeCV1.txtEducation, uC_MakeCV1.txtEmail, uC_MakeCV1.txtFirstName, uC_MakeCV1.txtLastName, uC_MakeCV1.txtLink, uC_MakeCV1.txtNameJob, uC_MakeCV1.txtPhoneNumber, uC_MakeCV1.txtSkill, dt, uC_MakeCV1.fpnContain, uC_MakeCV1.rdoBoy, uC_MakeCV1.rdoGirl, uC_MakeCV1.dtpYob);
+        }
         public FFixInfCV(int idCV, int idCandidate)
         {
             InitializeComponent();
             this.idCV = idCV;
             this.idCandidate = idCandidate;
-            DataTable dt = fixCVDAO.readData(idCandidate, idCV);
-            fixCVDAO.ShowData(txtAddress, txtEducation, txtEmail, txtFirstName, txtLastName, txtLink, txtNameJob, txtPhoneNumber, txtSkill, dt, fpnContain, rdoBoy, rdoGirl, dtpYob);
         }
 
         private void FFixInfCV_Load(object sender, EventArgs e)
         {
-            handler.setSizeForm(740, 680, this);
-            //string experience = "";
-            //DetailCV detailCV = new DetailCV(id, txtNameJob.Text.Trim(), txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtLink.Text.Trim(), txtPhoneNumber.Text.Trim(), txtEmail.Text.Trim(), txtAddress.Text.Trim(), txtEducation.Text.Trim(), txtSkill.Text.Trim(), experience);
-            
+            handler.setSizeForm(755, 670, this);
+            readData();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string experience = "";
-            foreach(Control control in fpnContain.Controls)
+            try
             {
-                if(control is uC_LoadIfJob)
+                string experience = "";
+                foreach (Control control in uC_MakeCV1.fpnContain.Controls)
                 {
-                    uC_LoadIfJob uc = (uC_LoadIfJob)control;
-                    experience += "+" + uc.txtWhatJob.Text.Trim();
-                    experience += "-" + uc.txtTime.Text.Trim();
-                    experience += ">" + uc.txtReviewJob.Text.Trim();
+                    if (control is uC_LoadIfJob)
+                    {
+                        uC_LoadIfJob uc = (uC_LoadIfJob)control;
+                        if(uc.txtReviewJob.Text.Trim().Length > 0 && uc.txtTime.Text.Trim().Length > 0 && uc.txtReviewJob.Text.Trim().Length > 0)
+                        {
+                            experience += "+" + uc.txtWhatJob.Text.Trim();
+                            experience += "-" + uc.txtTime.Text.Trim();
+                            experience += ">" + uc.txtReviewJob.Text.Trim();
+                        }
+                    }
                 }
+                FixCVDAO fix = new FixCVDAO(idCV, idCandidate);
+                experience += "<" + uC_MakeCV1.txtEducation.Text;
+                Candidate candidate = new Candidate(idCandidate, uC_MakeCV1.txtFirstName.Text.Trim(), uC_MakeCV1.txtLastName.Text.Trim(), uC_MakeCV1.txtPhoneNumber.Text.Trim(), uC_MakeCV1.txtEmail.Text.Trim(),
+                uC_MakeCV1.rdoBoy.Checked, uC_MakeCV1.dtpYob.Value, uC_MakeCV1.txtAddress.Text.Trim());
+                DetailCV detail = new DetailCV(idCV, idCandidate, uC_MakeCV1.txtNameJob.Text.Trim(), uC_MakeCV1.txtLink.Text.Trim(), uC_MakeCV1.txtSkill.Text.Trim(), experience);
+                fix.UpdateData(detail);
+                fix.UpdateData(candidate);
+                CustomMessageBox custom = new CustomMessageBox();
+                custom.Show("Sửa thành công");
+                FFixInfCV_Load(sender, e);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+<<<<<<< HEAD
+=======
             Candidate candidate = new Candidate(idCandidate, txtFirstName.Text.Trim() , txtLastName.Text.Trim(), txtPhoneNumber.Text.Trim(),  txtEmail.Text.Trim(),
              rdoBoy.Checked.ToString(),  txtLink.Text.Trim(), dtpYob.Value,  txtLink.Text.Trim(),  txtAddress.Text.Trim());
             DetailCV detail = new DetailCV(idCV,  txtNameJob.Text.Trim(), txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtLink.Text.Trim(),  txtPhoneNumber.Text.Trim(), 
                 txtEmail.Text.Trim(), txtAddress.Text.Trim(), txtEducation.Text.Trim(), txtSkill.Text.Trim(),  experience);
             fixCVDAO.UpdateData(detail);
             fixCVDAO.UpdateData(candidate);
+>>>>>>> a0c623e0cb1a0ba06943a1831d2a9f1f8dbf0b2b
         }
     }
 }

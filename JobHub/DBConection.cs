@@ -140,7 +140,18 @@ namespace JobHub
 
         }
 
-
+        public void ExcutionInsertData(string cmd)
+        {
+            using (SqlConnection connection = new SqlConnection((Properties.Settings.Default.conn)))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(cmd, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+             
 
         public DataTable ExcutionReadData(string cmd)
         {
@@ -159,25 +170,6 @@ namespace JobHub
             return dt;
         }
 
-        public void ExcutionWriteData(DataTable dt, FlowLayoutPanel fpn)
-        {
-            FormHandler handler = new FormHandler();
-            foreach (DataRow dr in dt.Rows)
-            {
-                uC_CV uC_CV = new uC_CV();
-                uC_CV.lblFirstName.Text = dr["candidateFirstName"].ToString();
-                uC_CV.lblLastName.Text = dr["candidateLastName"].ToString();
-                uC_CV.lblJobName.Text = dr["jobName"].ToString();
-                uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblFirstName.Text} {uC_CV.lblLastName.Text}";    
-                uC_CV.OpenForm += (sender, e) =>
-                {
-                    int idCandiate = Int32.Parse(dr["idCandidate"].ToString());
-                    int idCV = Int32.Parse(dr["idCV"].ToString());
-                    handler.OpenNewForm(idCandiate, idCV);
-                };
-                fpn.Controls.Add(uC_CV);
-            }
-        }
 
         public void ExcutionUpdateDate(string cmd)
         {
@@ -196,16 +188,6 @@ namespace JobHub
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        public void envenAddPanel(object sender, EventArgs e)
-        {
-
-        }
-
-        public void ShowData(Guna2TextBox txtAddress, Guna2TextBox txtEducation, Guna2TextBox txtEmail, Guna2TextBox txtFirstName, Guna2TextBox txtLastName, Guna2TextBox txtLink, Guna2TextBox txtNameJob, Guna2TextBox txtPhoneNumber, Guna2TextBox txtSkill, DataTable dt, FlowLayoutPanel fpn, Guna2CustomRadioButton boy, Guna2CustomRadioButton girl, Guna2DateTimePicker yob)
-        {
-            
         }
     }  
 }

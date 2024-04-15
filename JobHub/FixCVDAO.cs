@@ -42,7 +42,7 @@ namespace JobHub
         public void UpdateData(DetailCV detailCV)
         {
             string cmd = $@"UPDATE CV
-                        SET CV.CVAvatar = {detailCV.CVAvatar1}, CV.jobName = {detailCV.JobName}, CV.CVDescription = {detailCV.Experience}
+                        SET CV.CVAvatar = '{detailCV.CVAvatar1}', CV.jobName = N'{detailCV.JobName}', CV.CVDescription = N'{detailCV.Experience}', CV.Skill = N'{detailCV.Skill}'
                         WHERE CV.idCV = {this.idCV} and CV.idCandidate = {idCadidate};";
             function.Update(cmd);
         }
@@ -50,7 +50,11 @@ namespace JobHub
         public void UpdateData(Candidate candidate)
         {
             string cmd = $@"UPDATE Candidate
+<<<<<<< HEAD
+                SET Candidate.candidateFirstName = N'{candidate.FirstName}', Candidate.candidateLastName = N'{candidate.LastName}', Candidate.candidatePhone = '{candidate.Phone}', Candidate.candidateEmail = '{candidate.Email}', Candidate.candidateAddress = N'{candidate.Address}',
+=======
                 SET Candidate.candidateFirstName = '{candidate.FirstName}', Candidate.candidateLastName = '{candidate.LastName}', Candidate.candidatePhone = '{candidate.Phone}', Candidate.candidateEmail = '{candidate.Email}', Candidate.candidateAddress = '{candidate.Address}',
+>>>>>>> a0c623e0cb1a0ba06943a1831d2a9f1f8dbf0b2b
                 Candidate.candidateGender = '{candidate.Gender}', Candidate.candidateBirth = '{candidate.Birth}'
                 FROM Candidate
                 INNER JOIN CV ON Candidate.idCandidate = CV.idCandidate
@@ -58,9 +62,13 @@ namespace JobHub
             function.Update(cmd);
         }
 
-        public void ShowData(Guna2TextBox txtAddress, Guna2TextBox txtEducation, Guna2TextBox txtEmail, Guna2TextBox txtFirstName, Guna2TextBox txtLastName, Guna2TextBox txtLink, Guna2TextBox txtNameJob, Guna2TextBox txtPhoneNumber, Guna2TextBox txtSkill, DataTable dt, FlowLayoutPanel fpnContain, Guna2CustomRadioButton boy, Guna2CustomRadioButton girl, Guna2DateTimePicker yob)
+        public void ShowData(int idCV, int idCandidate, Guna2TextBox txtAddress, Guna2TextBox txtEducation, 
+            Guna2TextBox txtEmail, Guna2TextBox txtFirstName, Guna2TextBox txtLastName, 
+            Guna2TextBox txtLink, Guna2TextBox txtNameJob, Guna2TextBox txtPhoneNumber, 
+            Guna2TextBox txtSkill, DataTable dt, FlowLayoutPanel fpnContain, 
+            Guna2CustomRadioButton boy, Guna2CustomRadioButton girl, Guna2DateTimePicker yob)
         {
-            function.ShowData(txtAddress, txtEducation, txtEmail, txtFirstName, txtLastName, txtLink, txtNameJob, txtPhoneNumber, txtSkill, dt, fpnContain, boy, girl, yob);
+            function.ShowData(idCV, idCandidate, txtAddress, txtEducation, txtEmail, txtFirstName, txtLastName, txtLink, txtNameJob, txtPhoneNumber, txtSkill, dt, fpnContain, boy, girl, yob);
         }
 
         public void LoadData(string s, Guna2TextBox txtWhatJob, Guna2TextBox txtTime, Guna2TextBox txtReviewJob, Guna2TextBox txtEducation)

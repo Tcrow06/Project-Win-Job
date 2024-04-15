@@ -110,8 +110,15 @@
       <DependentUpon>FFixInfCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FixCVDAO.cs" />
+    <Compile Include="FMakeCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMakeCV.Designer.cs">
+      <DependentUpon>FMakeCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHandler.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="MakeCVDAO.cs" />
     <Compile Include="NhapFCustomerMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +300,12 @@
     <Compile Include="uC_LoadIfJob.Designer.cs">
       <DependentUpon>uC_LoadIfJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="uC_MakeCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_MakeCV.Designer.cs">
+      <DependentUpon>uC_MakeCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="uC_NewJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FFixInfCV.resx">
       <DependentUpon>FFixInfCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMakeCV.resx">
+      <DependentUpon>FMakeCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapFCustomerMessageBox.resx">
       <DependentUpon>NhapFCustomerMessageBox.cs</DependentUpon>
@@ -418,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uC_LoadIfJob.resx">
       <DependentUpon>uC_LoadIfJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_MakeCV.resx">
+      <DependentUpon>uC_MakeCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_NewJob.resx">
       <DependentUpon>uC_NewJob.cs</DependentUpon>

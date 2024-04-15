@@ -40,7 +40,12 @@ namespace JobHub
 
         private void btnMakeCV_Click(object sender, EventArgs e)
         {
-            FFixInfCV fFixInfCV = new FFixInfCV();
+            FMakeCV make = new FMakeCV(this.Id);
+            this.Hide();
+            make.ShowDialog();
+            DataTable dt = CVDAO.ReadData(this.Id);
+            CVDAO.WriteData(dt, pnContainCV);
+            this.Show();
         }
     }
 }

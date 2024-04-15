@@ -971,7 +971,7 @@
             // 
             // pnContainMenu
             // 
-            this.pnContainMenu.BackColor = System.Drawing.Color.Silver;
+            this.pnContainMenu.BackColor = System.Drawing.Color.White;
             this.pnContainMenu.BorderColor = System.Drawing.Color.Silver;
             this.pnContainMenu.BorderThickness = 2;
             this.pnContainMenu.Controls.Add(this.btnOut);
@@ -990,7 +990,7 @@
             // 
             this.btnOut.BackColor = System.Drawing.Color.Silver;
             this.btnOut.BorderColor = System.Drawing.Color.Silver;
-            this.btnOut.BorderRadius = 8;
+            this.btnOut.BorderRadius = 5;
             this.btnOut.BorderThickness = 1;
             this.btnOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnOut, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1013,7 +1013,7 @@
             // 
             this.btnCVMenu.BackColor = System.Drawing.Color.Silver;
             this.btnCVMenu.BorderColor = System.Drawing.Color.Silver;
-            this.btnCVMenu.BorderRadius = 8;
+            this.btnCVMenu.BorderRadius = 5;
             this.btnCVMenu.BorderThickness = 1;
             this.btnCVMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnCVMenu, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1035,7 +1035,7 @@
             // 
             this.btnSetting.BackColor = System.Drawing.Color.Silver;
             this.btnSetting.BorderColor = System.Drawing.Color.Silver;
-            this.btnSetting.BorderRadius = 8;
+            this.btnSetting.BorderRadius = 5;
             this.btnSetting.BorderThickness = 1;
             this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnSetting, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1057,7 +1057,7 @@
             // 
             this.btnJobMenu.BackColor = System.Drawing.Color.Silver;
             this.btnJobMenu.BorderColor = System.Drawing.Color.Silver;
-            this.btnJobMenu.BorderRadius = 8;
+            this.btnJobMenu.BorderRadius = 5;
             this.btnJobMenu.BorderThickness = 1;
             this.btnJobMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnJobMenu, Guna.UI2.AnimatorNS.DecorationType.None);

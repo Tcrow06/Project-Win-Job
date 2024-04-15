@@ -1,8 +1,10 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,12 +13,11 @@ namespace JobHub
     public class Candidate
     {
         private int id; //Fk
-        private string lastName;
         private string firstName;
-        private string fullName;
+        private string lastName;
         private string phone;
         private string email;
-        private string gender;
+        private bool gender;
         private string link;
         private DateTime birth;
         private string avatar;
@@ -24,39 +25,64 @@ namespace JobHub
         private CandidateDao cdd = new CandidateDao();
 
         public Candidate() { }
-        public Candidate(int id, string first,string lastName, string phone, string email,
-            string gender, string link, DateTime birth, string avatar, string address)
-        {
-            this.Id = id;
-            this.LastName = lastName;
-            this.FirstName = firstName;
-            this.Phone = phone;
-            this.Email = email;
-            this.Gender = gender;
-            this.Link = link;
-            this.Birth = birth;
-            this.Avatar = avatar;
-            this.Address = address;
-        }
+       
 
         public int Id { get => id; set => id = value; }
-        //blic string Name { get => name; set => name = value; }
         public string Phone { get => phone; set => phone = value; }
         public string Email { get => email; set => email = value; }
-        public string Gender { get => gender; set => gender = value; }
+        public bool Gender { get => gender; set => gender = value; }
         public string Link { get => link; set => link = value; }
         public DateTime Birth { get => birth; set => birth = value; }
         public string Avatar { get => avatar; set => avatar = value; }
         public string Address { get => address; set => address = value; }
-        public string LastName { get => lastName; set => lastName = value; }
         public string FirstName { get => firstName; set => firstName = value; }
-        public string FullName { get => fullName; set => fullName = value; }
+        public string LastName { get => lastName; set => lastName = value; }
 
         public Candidate(int id)
         {
             this.Id = id;
         }
 
+        public Candidate(int id, string firstName, string lastName, string phone, string email, bool gender, string link, DateTime birth, string avatar, string address)
+        {
+            this.Id = id;
+            this.FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
+            this.LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
+            this.Phone = phone ?? throw new ArgumentNullException(nameof(phone));
+            this.Email = email ?? throw new ArgumentNullException(nameof(email));
+            this.Gender = gender;
+            this.Link = link ?? throw new ArgumentNullException(nameof(link));
+            this.Birth = birth;
+            this.Avatar = avatar ?? throw new ArgumentNullException(nameof(avatar));
+            this.Address = address ?? throw new ArgumentNullException(nameof(address));
+        }
+
+        public bool checkEmail(string email)
+        {
+            Regex regex = new Regex(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
+            return regex.IsMatch(email);
+        }
+
+        public bool checkPhone(string phone)
+        {
+            Regex regex = new Regex(@"^\d{10}$");
+            return regex.IsMatch(phone);
+        }
+        public Candidate(int id, string firstName, string lastName, string phone, string email, bool gender, DateTime birth, string address)
+        {
+            if(checkEmail(email) && checkPhone(phone) && firstName.Length > 0 && lastName.Length > 0
+                && address.Length > 0)
+            {
+                this.Phone = phone ?? throw new ArgumentNullException(nameof(phone));
+                this.Email = email ?? throw new ArgumentNullException(nameof(email));
+                this.Id = id;
+                this.FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
+                this.LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
+                this.Gender = gender;
+                this.Birth = birth;
+                this.Address = address ?? throw new ArgumentNullException(nameof(address));
+            }
+        }
         public Candidate GetInfoCandidate(Account account)
         {
             Candidate cd = new Candidate();
