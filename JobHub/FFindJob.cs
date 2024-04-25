@@ -37,15 +37,15 @@ namespace JobHub
         private void FJob_Load(object sender, EventArgs e)
         {
             LoadFilterUcJob();
-            
+            LoadUc_NewJob();
+            LoadUc_HotJob();
+
         }
         private void LoadFilterUcJob()
         {
             fjd.LoadFilterUcJob(pnJob, fm, btnTechnique.Checked, btnIT.Checked, btnEconomy.Checked, cboIndustryGroup.SelectedItem.ToString(),
                                 cboSalary.SelectedItem.ToString(),cboAddress.SelectedItem.ToString(),
                                 cboExperience.SelectedItem.ToString(), txtSearch.Text.Trim());
-            LoadUc_NewJob();
-            LoadUc_HotJob();
         }
 
         private void cboIndustryGroup_SelectedIndexChanged(object sender, EventArgs e)

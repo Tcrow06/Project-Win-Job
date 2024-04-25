@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -14,7 +15,8 @@ namespace JobHub
 {
     public partial class FLogin : Form
     {
-        private LoginDao ld = new LoginDao();
+        //private LoginDao ld = new LoginDao();
+        private Login login = new Login();
         private Fmain fm = new Fmain();
 
         public FLogin()
@@ -28,61 +30,40 @@ namespace JobHub
         }
         private void FLogin_Load(object sender, EventArgs e)
         {
-
+            pnRegister.Visible = false;
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FAns fAns = new FAns();
+            FAns fAns = new FAns(this);
             this.Hide();
             fAns.ShowDialog();
-            fAns.Close();
+            this.Show();
         }
 
         private void lblToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pnLogin.BringToFront();
+            pnRegister.Visible = false;
             pnLogin.Visible = true;
-            pnResetPass.Visible = false;
+            pnLogin.BringToFront();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            CustomMessageBox cmb = new CustomMessageBox();
-            fm.Account = ld.CheckAccount(txtAcc.Text.Trim(), txtPass.Text.Trim());
-            if(fm.Account == null)
+
+            if(login.CheckAccount(txtLoginEmail.Text.Trim(), txtLoginPassword.Text.Trim(), fm))
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Dispose();
+                this.Close();
                 fm.LoadTaskBar();
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            pnLogin.Visible = false;
-            pnResetPass.Visible = true;
-            pnResetPass.BringToFront();
-        }
-
-        private void btnOke_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Lấy lại mật khẩu thành công");
-            pnResetPass.Visible = false;
-            pnLogin.Visible = true;
-            pnLogin.BringToFront();
-        }
-
-        private void picBackGround_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
+            Candidate can = new Candidate(txtFirstName.Text, txtLastName.Text, txtRegisterEmail.Text.ToString());
+            Account account = new Account(txtRegisterEmail.Text.ToString(), txtRegisterPassowrd.Text.ToString(), can);
+            login.Register(can, account, this);
+            
 
         }
     }

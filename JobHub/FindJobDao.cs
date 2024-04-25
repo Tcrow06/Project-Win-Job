@@ -45,11 +45,15 @@ namespace JobHub
         public SqlDataReader LoadUCHotJob()
         {
             SqlDataReader dr = null;
-                string sql = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Company.companyName ,Company.companyAvatar, Job.jobNumberOfViews
-                                ,Job.jobNumberOfCandidates, Job.jobField ,Job.jobMinSalary,Job.jobMaxSalary
+                string sql = $@"SELECT Job.idJob, Company.idCompany, Job.jobName, Company.companyName ,Company.companyAvatar, 
+                            Job.jobNumberOfViews, Job.jobField ,Job.jobMinSalary,Job.jobMaxSalary
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany
-                    where Job.jobRegisterDead >= '{DateTime.Now.Date}' and Job.jobNumberOfViews = (select max(jobNumberOfViews) from Job)";
+                    where Job.jobRegisterDead >= '{DateTime.Now.Date}' and Job.jobNumberOfViews = (
+                                                                                        select max(jobNumberOfViews) 
+                                                                                        from Job
+                                                                                        where Job.jobRegisterDead >= '{DateTime.Now.Date}'
+                                                                                        )";
                 dr = db.loadData(sql);
             return dr;
         }
@@ -66,7 +70,8 @@ namespace JobHub
                 dr = db.loadData(sql);
             return dr;
         }
-        
+       
+
 
     }
 }

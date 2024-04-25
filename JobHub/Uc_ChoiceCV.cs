@@ -34,8 +34,6 @@ namespace JobHub
 
         private void UCChoiceCV_MouseLeave(object sender, EventArgs e)
         {
-/*            lblView.Visible = false;
-            btn.Visible = false;*/
             pnChoiceCV.BorderColor = Color.Silver;
         }
 
@@ -45,15 +43,13 @@ namespace JobHub
 
         }
 
-        public Uc_ChoiceCV InsertInfoAndEventIntoUcChoiceCv(FApplyWithCV fa,SqlDataReader dr, Account account, Guna2Panel pn)
+        public Uc_ChoiceCV InsertInfoAndEventIntoUcChoiceCv(FApplyWithCV fa,SqlDataReader dr, Account account, Guna2Panel pn, int CVType)
         {
             Uc_ChoiceCV uc = new Uc_ChoiceCV();
             uc.lblCVName.Text = dr["CVName"].ToString();
-            //MessageBox.Show(uc.lblCVName.Text);
             Size textSize = TextRenderer.MeasureText(lblCVName.Text, lblCVName.Font);
             uc.lblCVName.Width = textSize.Width+50;
             uc.lblView.Location = new Point(lblCVName.Location.X + uc.lblCVName.Width, lblView.Location.Y);
-            //int idJob1 = idJob;
             int idCV = int.Parse(dr["idCv"].ToString());
             int idCandidate = account.Id;
 
@@ -63,10 +59,7 @@ namespace JobHub
             };
             uc.clickBtn += (sender, e) =>
             {
-               // MessageBox.Show(idCV.ToString());
-              //  idCv = idCVClick;
-                uc.LoadSelectedForm(sender, e,uc, fa, idCV);
-                /*idCv= idCV;*/
+                uc.LoadSelectedForm(sender, e,uc, fa, idCV, CVType);
             };
             return uc;
         }
@@ -75,9 +68,9 @@ namespace JobHub
             FormHandler handler = new FormHandler();
             handler.OpenNewForm(idCandidate, idCV);
         }
-        public void LoadSelectedForm(object sender, EventArgs e, Uc_ChoiceCV uc, FApplyWithCV fa, int idCV)
+        public void LoadSelectedForm(object sender, EventArgs e, Uc_ChoiceCV uc, FApplyWithCV fa, int idCV, int CVType)
         {
-            fa.LoadFormChoiceCVOn(uc,idCV);
+            fa.LoadFormChoiceCVOn(uc,idCV, CVType);
         }
         public void ChoiceCV(object sender, EventArgs e, int idCV, int idCandidate)
         {

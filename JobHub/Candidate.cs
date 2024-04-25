@@ -58,6 +58,12 @@ namespace JobHub
             this.Avatar = avatar ?? throw new ArgumentNullException(nameof(avatar));
             this.Address = address ?? throw new ArgumentNullException(nameof(address));
         }
+        public Candidate(string firstName, string lastName, string email)
+        {
+            this.FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
+            this.LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
+            this.Email = email ?? throw new ArgumentNullException(nameof(email));
+        }
 
         public bool checkEmail(string email)
         {
@@ -91,20 +97,48 @@ namespace JobHub
             SqlDataReader dr = cdd.GetInfoCandidate(account.Id);
             if (dr.Read())
             {
+                //cd.LastName = dr["candidateLastName"] != DBNull.Value ? dr["candidateLastName"].ToString() : "la";
                 cd.LastName = dr["candidateLastName"].ToString();
                 cd.FirstName = dr["candidateFirstName"].ToString();
                 cd.FullName = cd.LastName + " " + cd.FirstName; 
-
+                cd.Avatar = dr["candidateAvatar"].ToString();
             }
             return cd;
+        }
+        public bool CheckAllNotNull()
+        {
+            if(this.Email.Length > 0&&!checkEmail(this.Email)) {
+                MessageBox.Show("Sai định dạng email");
+                return false;
+            }
+            else if (this.lastName.Length == 0)
+            {
+                MessageBox.Show("Họ không được để trống");
+                return false;
+            }
+            else if (this.firstName.Length == 0)
+            {
+                MessageBox.Show("Tên không được để trống");
+                return false;
+            }
+            return true;
+        }
+        public void AddCandidate()
+        {
+            cdd.AddCandidate(this);
+        }
+        public void InsertInfoRegister( Account account)
+        {
+            this.Email= account.Email;
+            this.Id = account.Id;   
         }
         public void ApplyJob(int idJob, int idCan, int idCv)
         {
             cdd.ApplyJob(idJob, idCan, idCv);
         }
-        public void UnApplyJob(int idJob, int idCan, int idCv)
+        public void UnApplyJob(int idJob, int idCan)
         {
-            cdd.UnApplyJob(idJob, idCan, idCv);
+            cdd.UnApplyJob(idJob, idCan);
         }
         public void SavedJob(int idJob, int idCan)
         {

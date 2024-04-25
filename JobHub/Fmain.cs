@@ -54,13 +54,6 @@ namespace JobHub
             this.Height = 550;
             FJobPostHistory view = new FJobPostHistory(this);
             this.loadForm(view);
-            /*view.MdiParent = this;
-            view.Dock = DockStyle.Fill;
-            resize(1050, 530);
-            //resize(862, 488);
-            //MessageBox.Show(view.Width.ToString() + " " + view.Height.ToString());
-            view.Show();
-            picUp.BringToFront();*/
         }
         private void FirstLoadLoginOrLoginOut()
         {
@@ -68,13 +61,6 @@ namespace JobHub
             this.Height = 550;
             FViews view = new FViews();
             this.loadForm(view);
-            /*view.MdiParent = this;
-            view.Dock = DockStyle.Fill;
-            //resize(Math.Min(view.Width + 200,900), Math.Min(view.Height + 50,500));
-            MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
-            //resize(900, 500);
-            view.Show();
-            picUp.BringToFront();*/
         }
         public void LoadTaskBar()
         {
@@ -95,21 +81,6 @@ namespace JobHub
             }
             else if (this.Account.Type == 0)
             {
-/*
-                    pnNav.Controls.Clear();
-                    pnNav.Controls.Add(pnSubNav1);
-                    pnNav.Controls.Add(pnSubNav2);
-                    pnNav.Controls.Add(pnSubNav3);
-                    pnNav.Controls.Add(btnLogin);
-                    pnNav.Controls.Add(btnBack);
-                    pnSubNav1.Visible = true;
-                    pnSubNav2.Visible = true;
-                    pnSubNav3.Visible = true;
-                    setLocation(crtMini.Location.X - pnAcount.Width - 10, crtMini.Location.Y, pnAcount);
-                    setLocation(pnAcount.Location.X, pnAcount.Location.Y + pnAcount.Height, pnContainMenu);
-                    pnAcount.Visible = true;
-                    lblAccName.Text = cd.GetInfoCandidate(this.Account).LastName + " " + cd.GetInfoCandidate(this.Account).FirstName;
-                    btnLogin.Text = "Đăng xuất";*/
                 pnNav.Controls.Clear();
                 pnNav.Controls.Add(pnSubNav1);
                 pnNav.Controls.Add(pnSubNav2);
@@ -420,7 +391,7 @@ namespace JobHub
             }
             else if (form.Name == "FJobPostHistory")
             {
-                resize(1050, 530);
+                resize(980, 520);
             }
             else if (form.Name == "FFollowCV")
             {

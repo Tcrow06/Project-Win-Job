@@ -20,10 +20,10 @@ namespace JobHub
         {
             string sql = $@"select * from Account
                             where account = '{txtAcc}' AND accountPass = '{txtPass}'";
-            DataTable dt = db.CheckAcount(sql);
+            DataTable dt = db.CheckExists(sql);
             if (dt.Rows.Count > 0)
             {
-                account.Id = int.Parse(dt.Rows[0][2].ToString());
+                account.Id = int.Parse(dt.Rows[0][0].ToString());
                 account.Type = int.Parse(dt.Rows[0][3].ToString());
                 return account;
             }

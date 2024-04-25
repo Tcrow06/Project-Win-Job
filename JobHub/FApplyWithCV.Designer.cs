@@ -53,12 +53,14 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSelectName = new System.Windows.Forms.Label();
             this.pnCV1.SuspendLayout();
             this.pnCV2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAddress
@@ -84,7 +86,7 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(2, 115);
+            this.guna2Separator1.Location = new System.Drawing.Point(25, 102);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(787, 10);
             this.guna2Separator1.TabIndex = 53;
@@ -104,6 +106,7 @@
             this.pnCV1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
             this.pnCV1.BorderRadius = 5;
             this.pnCV1.BorderThickness = 1;
+            this.pnCV1.Controls.Add(this.lblSelectName);
             this.pnCV1.Controls.Add(this.btnChange);
             this.pnCV1.Controls.Add(this.lblCVLoad);
             this.pnCV1.Controls.Add(this.lblCVOn);
@@ -307,7 +310,7 @@
             this.btnClose.BorderThickness = 2;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(803, 6);
+            this.btnClose.Location = new System.Drawing.Point(790, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
@@ -331,7 +334,7 @@
             this.flowLayoutPanel1.Controls.Add(this.pnCV2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 160);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(792, 403);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(792, 401);
             this.flowLayoutPanel1.TabIndex = 60;
             // 
             // btnApply
@@ -346,7 +349,7 @@
             this.btnApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Location = new System.Drawing.Point(117, 578);
+            this.btnApply.Location = new System.Drawing.Point(117, 593);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(700, 38);
             this.btnApply.TabIndex = 61;
@@ -365,7 +368,7 @@
             this.btnCancel.FillColor = System.Drawing.Color.Silver;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(25, 577);
+            this.btnCancel.Location = new System.Drawing.Point(25, 592);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(77, 38);
             this.btnCancel.TabIndex = 62;
@@ -374,7 +377,7 @@
             // 
             // guna2Separator2
             // 
-            this.guna2Separator2.Location = new System.Drawing.Point(25, 566);
+            this.guna2Separator2.Location = new System.Drawing.Point(29, 582);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(787, 10);
             this.guna2Separator2.TabIndex = 63;
@@ -384,26 +387,36 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.guna2Separator2);
+            this.guna2Panel1.Controls.Add(this.guna2Separator1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(853, 621);
+            this.guna2Panel1.Size = new System.Drawing.Size(840, 648);
             this.guna2Panel1.TabIndex = 64;
+            // 
+            // lblSelectName
+            // 
+            this.lblSelectName.BackColor = System.Drawing.Color.White;
+            this.lblSelectName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblSelectName.Location = new System.Drawing.Point(34, 53);
+            this.lblSelectName.Name = "lblSelectName";
+            this.lblSelectName.Size = new System.Drawing.Size(78, 22);
+            this.lblSelectName.TabIndex = 66;
+            this.lblSelectName.Text = "CV online";
             // 
             // FApplyWithCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(853, 621);
-            this.Controls.Add(this.guna2Separator2);
+            this.ClientSize = new System.Drawing.Size(840, 648);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblJobName);
             this.Controls.Add(this.guna2Panel1);
@@ -420,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -450,5 +464,6 @@
         private Guna.UI2.WinForms.Guna2Button btnChange;
         public System.Windows.Forms.Label lblCVOn;
         public System.Windows.Forms.Label lblCVLoad;
+        public System.Windows.Forms.Label lblSelectName;
     }
 }

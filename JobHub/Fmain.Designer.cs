@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -69,7 +69,7 @@
             this.btnFavouriteCV = new Guna.UI2.WinForms.Guna2Button();
             this.pnAcount = new Guna.UI2.WinForms.Guna2Panel();
             this.lblAccName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picDown = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picUp = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnContainMenu = new Guna.UI2.WinForms.Guna2Panel();
@@ -95,7 +95,7 @@
             this.pnSubNav21.SuspendLayout();
             this.pnSubNav31.SuspendLayout();
             this.pnAcount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUp)).BeginInit();
             this.pnContainMenu.SuspendLayout();
@@ -114,22 +114,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // pnControlBox
             // 
@@ -903,14 +903,14 @@
             // 
             this.pnAcount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
             this.pnAcount.Controls.Add(this.lblAccName);
-            this.pnAcount.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnAcount.Controls.Add(this.pbAvatar);
             this.pnAcount.Controls.Add(this.picDown);
             this.pnAcount.Controls.Add(this.picUp);
             this.guna2Transition1.SetDecoration(this.pnAcount, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnAcount.Location = new System.Drawing.Point(565, 247);
             this.pnAcount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnAcount.Name = "pnAcount";
-            this.pnAcount.Size = new System.Drawing.Size(255, 34);
+            this.pnAcount.Size = new System.Drawing.Size(255, 32);
             this.pnAcount.TabIndex = 10;
             // 
             // lblAccName
@@ -927,19 +927,19 @@
             this.lblAccName.TabIndex = 1;
             this.lblAccName.Text = "Lê Trường Sơn";
             // 
-            // guna2CirclePictureBox1
+            // pbAvatar
             // 
-            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 1);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(33, 30);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2Transition1.SetDecoration(this.pbAvatar, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(4, 1);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbAvatar.Size = new System.Drawing.Size(33, 30);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
             // 
             // picDown
             // 
@@ -1262,7 +1262,7 @@
             this.pnSubNav31.ResumeLayout(false);
             this.pnAcount.ResumeLayout(false);
             this.pnAcount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUp)).EndInit();
             this.pnContainMenu.ResumeLayout(false);
@@ -1309,10 +1309,8 @@
         private Guna.UI2.WinForms.Guna2Button btnCvCad;
         private Guna.UI2.WinForms.Guna2Button btnFavouriteCV;
         private Guna.UI2.WinForms.Guna2Button btnBack;
-        private Guna.UI2.WinForms.Guna2Panel pnAcount;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbAvatar;
         private System.Windows.Forms.Label lblAccName;
-        private Guna.UI2.WinForms.Guna2Panel pnContainMenu;
         private Guna.UI2.WinForms.Guna2PictureBox picUp;
         private Guna.UI2.WinForms.Guna2PictureBox picDown;
         private Guna.UI2.WinForms.Guna2Button btnCVMenu;
@@ -1327,5 +1325,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button btnMyCV;
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
+        private Guna.UI2.WinForms.Guna2Panel pnAcount;
+        private Guna.UI2.WinForms.Guna2Panel pnContainMenu;
     }
 }

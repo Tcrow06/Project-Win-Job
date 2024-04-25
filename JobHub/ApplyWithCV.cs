@@ -23,33 +23,54 @@ namespace JobHub
             JobDetail jobDetail = job.GetInfoJobDetailFromDB(idJob);
             lblJobName.Text = "Ứng tuyển " + jobDetail.NameJob;
         }
-        public void LoadForm(FApplyWithCV fa,Guna2Panel pn1, Label cvOn, Label cvLoad, Account account)
+        public void LoadUC_CV(FApplyWithCV fa,Guna2Panel pn1, Label cvOn, Label cvLoad, Account account)
         {
             
 
-            SqlDataReader dr = dao.GetUcInfoOnCVOn(account.Id);
+            SqlDataReader drON = dao.GetUcInfoOnCV(account.Id);
             int x = cvOn.Location.X;
             int y = cvOn.Location.Y + cvOn.Height + 10;
             cvOn.Visible = false;
             cvLoad.Visible = false;
-            if (dr != null)
+            if (drON != null)
             {
                 cvOn.Visible = true;
-                while (dr.Read())
+                while (drON.Read())
                 {
-                    Uc_ChoiceCV job = choiceCV.InsertInfoAndEventIntoUcChoiceCv(fa,dr, account, pn1);
+                    Uc_ChoiceCV job = choiceCV.InsertInfoAndEventIntoUcChoiceCv(fa, drON, account, pn1,0);
                     pn1.Controls.Add(job);
                     job.Location = new System.Drawing.Point(x,y);
                     y += job.Height;
                 }
-                dr.Dispose();
+                drON.Dispose();
             }
+            cvLoad.Location = new Point(x, y + 20);
+            y = y + cvLoad.Height + 25;
+            SqlDataReader drLoad = dao.GetUcInfoLoadCV(account.Id);
+            if (drLoad != null)
+            {
 
-            //cvLoad.Hide();
+                cvLoad.Visible = true;
+                while (drLoad.Read())
+                {
+                    Uc_ChoiceCV job = choiceCV.InsertInfoAndEventIntoUcChoiceCv(fa, drLoad, account, pn1,1);
+                    pn1.Controls.Add(job);
+                    job.Location = new System.Drawing.Point(x, y);
+                    y += job.Height;
+                }
+                drLoad.Dispose();
+            }
+            pn1.Height = y - pn1.Location.Y+ 20;
+            fa.HeightPanel1 = pn1.Height;
+
         }
         public void Apply(int idJob,int idCV, Fmain fm)
         {
             cd.ApplyJob(idJob, idCV, fm.Account.Id);
+        }
+        public void Apply(int idJob, int idCV, Fmain fm, int CVType)
+        {
+            cd.ApplyJob(idJob, idCV, fm.Account.Id, CVType);
         }
 
 

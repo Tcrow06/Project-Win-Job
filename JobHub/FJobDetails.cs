@@ -69,6 +69,7 @@ namespace JobHub
             DescribeJob(jd.Description);
             RequirementJob(jd.Requirement);
             BenefitJob(jd.Benefit);
+            jdd.IncreaseView(idJob);
         }
         public void DescribeJob(string desc)
         {
@@ -196,8 +197,12 @@ namespace JobHub
             {
                 if (cd.CheckApplyStatus(idJob, fm.Account.Id))
                 {
-                    cd.UnApplyJob(idJob, fm.Account.Id, fm.Account.Id);
-                    ApplyStatus();
+                    DialogResult dialog = MessageBox.Show("Bạn có chắc chắn hủy ứng tuyển ?","Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if(dialog == DialogResult.OK) {
+                        cd.UnApplyJob(idJob, fm.Account.Id);
+                        ApplyStatus();
+                    }
+                    
                 }
                 else
                 {

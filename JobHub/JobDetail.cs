@@ -14,6 +14,8 @@ namespace JobHub
     {
         private JobDetailDao jdd = new JobDetailDao();
         private ChangTheSize changTheSize = new ChangTheSize();
+        private Function function= new Function();
+
         private int idJob;
         private string nameJob;
         private int idCompany;
@@ -78,6 +80,10 @@ namespace JobHub
             return x + " - " + y + " triệu";
 
         }
+        public void IncreaseView(int idJob)
+        {
+            jdd.IncreaseView(idJob);
+        }
         public JobDetail GetInfoJobDetailFromDB(int idJob)
         {
             SqlDataReader dr = jdd.GetJobData(idJob);
@@ -110,9 +116,12 @@ namespace JobHub
             job.lblCompanyName.Text = dr["companyName"].ToString();
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
             job.lblJobAddress.Text = dr["jobAddress"].ToString();
+            
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+/*
             string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
             string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+            job.pbAvatar.Image = Image.FromFile(imagePath);*/
             job.IdJob = int.Parse(dr["idJob"].ToString());
             job.IdCompany = int.Parse(dr["idCompany"].ToString());
 
@@ -134,9 +143,14 @@ namespace JobHub
             job.lblCompanyName.Text = dr["companyName"].ToString();
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
 
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+
+/*            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
             string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+            job.pbAvatar.Image = Image.FromFile(imagePath);*/
+
+
 
             job.lblJobAddress.Text = dr["jobAddress"].ToString();
             job.IdJob = int.Parse(dr["idJob"].ToString());
@@ -158,9 +172,12 @@ namespace JobHub
             job.lblJobName.Text = dr["jobName"].ToString();
 
             job.lblCompanyName.Text = dr["companyName"].ToString();
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+
+/*            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
             string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+            job.pbAvatar.Image = Image.FromFile(imagePath);*/
 
             
             int idJob = int.Parse(dr["idJob"].ToString());
@@ -176,24 +193,70 @@ namespace JobHub
             uC_HotJob job = new uC_HotJob();
             job.lblJobName.Text = dr["jobName"].ToString();
 
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+
+/*            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
             string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+            job.pbAvatar.Image = Image.FromFile(imagePath);*/
+
+
             job.pbAvatar.Height = job.pbAvatar.Width;
-            job.btnField.Text = dr["jobField"].ToString();
-            job.lblNumberOfViews.Text = dr["jobNumberOfViews"]?.ToString() ?? "0";
-            job.lblNumberOfCandidates.Text = dr["jobNumberOfCandidates"].ToString();
-
+            job.lblField.Text = dr["jobField"].ToString();
+            job.lblNumberOfViews.Text = HandleNumbers(int.Parse(dr["jobNumberOfViews"]?.ToString()));
+            
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
-
-            int idJob = int.Parse(dr["idJob"].ToString());
-            int idCompany = int.Parse(dr["idCompany"].ToString());
+            job.IdJob = int.Parse(dr["idJob"].ToString());
+            job.IdCompany = int.Parse(dr["idCompany"].ToString()); 
             job.loadJobClick += (sender, e) =>
             {
-                job.LoadJobDetail(sender, e, idJob, idCompany, fm);
+                job.LoadJobDetail(sender, e, job.IdJob, job.IdCompany, fm);
             };
-            /*            changTheSize.setSize(130, 25, job.lblJobName);*/
+            SqlDataReader drCount = jdd.CountCandiDate(job.IdJob);
+            int candidateNumber = 0;
+            if (dr!=null)
+            {
+                
+                drCount.Read();
+                candidateNumber = int.Parse(drCount["CandidateNumbers"].ToString());
+            }
+            job.lblNumberOfCandidates.Text = HandleNumbers(candidateNumber);
+
             return job;
+        }
+        private string HandleNumbers(int number)
+        {
+            StringBuilder str = new StringBuilder();
+            str.Append("");
+            if (number< 1000)
+            {
+                str.Append(number.ToString());
+            }else if(number>=1000&& number < 1000000)
+            {
+                int n1 = number/1000;
+                number %= 1000;
+                int n2 = number/100;
+                
+                str.Append(n1.ToString());
+                if(n2 > 0)
+                {
+                    str.Append(","+n2.ToString());
+                }
+                str.Append(" N");
+            }
+            else
+            {
+                int n1 = number / 1000000;
+                number %= 1000000;
+                int n2 = number / 100000;
+
+                str.Append(n1.ToString());
+                if (n2 > 0)
+                {
+                    str.Append("," + n2.ToString());
+                }
+                str.Append(" Tr");
+            }
+            return str.ToString();
         }
         public void AddJob(JobDetail a)
         {

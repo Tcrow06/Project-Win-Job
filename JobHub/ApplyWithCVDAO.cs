@@ -11,7 +11,12 @@ namespace JobHub
     public class ApplyWithCVDAO
     {
         DBConection db = new DBConection();
-        public SqlDataReader GetUcInfoOnCVOn(int idCandidate)
+        public SqlDataReader GetUcInfoOnCV(int idCandidate)
+        {
+            string sql = $"select* from CV where CV.idCandidate ={idCandidate}";
+            return db.loadData(sql);
+        }
+        public SqlDataReader GetUcInfoLoadCV(int idCandidate)
         {
             string sql = $"select* from CV where CV.idCandidate ={idCandidate}";
             return db.loadData(sql);

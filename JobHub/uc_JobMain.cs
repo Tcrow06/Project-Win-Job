@@ -13,6 +13,11 @@ namespace JobHub
     public partial class uc_JobMain : UserControl
     {
         public event EventHandler loadJobClick;
+        private int idJob;
+        private int idCompany;
+
+        public int IdJob { get => idJob; set => idJob = value; }
+        public int IdCompany { get => idCompany; set => idCompany = value; }
         public uc_JobMain()
         {
             InitializeComponent();
@@ -32,6 +37,7 @@ namespace JobHub
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job, idJob, idCp);
             fm.Forms.Push(fai);
             fm.loadForm(fai.Form);
+
         }
         public string HandleSalary(string x, string y)
         {
