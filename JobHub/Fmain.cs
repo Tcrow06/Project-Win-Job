@@ -216,7 +216,8 @@ namespace JobHub
                 FLogin login = new FLogin(this);
                 this.Hide();
                 login.ShowDialog();
-                login = null;
+                login.Close();
+                //login = null;
                 this.Show();
                 if (this.Account != null)
                 {
@@ -377,7 +378,8 @@ namespace JobHub
             form.MdiParent = this;
             if (form.Name == "FJobDetails")
             {
-                resize(909, 568);
+                //resize(909, 568);
+                resize(950, 668);
             }
             else if (form.Name == "FJob")
                 resize(1173, 598);

@@ -15,11 +15,11 @@ namespace JobHub
         CandidateDao cd = new CandidateDao();
         public event EventHandler JobSavedClick;
 
-        private int idJob;
+/*        private int idJob;
         private int idCompany;
 
         public int IdJob { get => idJob; set => idJob = value; }
-        public int IdCompany { get => idCompany; set => idCompany = value; }
+        public int IdCompany { get => idCompany; set => idCompany = value; }*/
         public uc_JobDetail()
         {
             InitializeComponent();

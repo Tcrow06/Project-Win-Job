@@ -27,7 +27,7 @@ namespace JobHub
         public SqlDataReader LoadUc_SlideJob()
         {
             string query = $@"SELECT Job.idJob, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, 
-                            Job.jobAddress, Company.companyName, Company.idCompany, Company.companyAvatar
+                            Job.jobAddress, Company.companyName, Company.idCompany, Company.companyAvatar, Job.jobField
                             FROM Job
                             INNER JOIN Company ON Job.idCompany = Company.idCompany 
                             where Job.jobNumberOf = (select max(Job.jobNumberOfViews) from Job) and Job.jobRegisterDead >= '{DateTime.Now.Date}'";
@@ -36,7 +36,7 @@ namespace JobHub
         public SqlDataReader LoadFilterUcJob(string txt)
         {
             string query = $@"SELECT Job.idJob, Company.idCompany, Job.jobName,Job.jobMinSalary,Job.jobMaxSalary, Job.jobAddress, 
-                            Company.companyName ,Company.companyAvatar
+                            Company.companyName ,Company.companyAvatar, Job.jobField
                     FROM Job
                     INNER JOIN Company ON Job.idCompany = Company.idCompany  
                     {txt} Job.jobRegisterDead >= '{DateTime.Now.Date}'";
@@ -62,7 +62,7 @@ namespace JobHub
         {
             SqlDataReader dr = null;
                 string sql = $@"SELECT top 5 
-                                        Job.idJob, Company.idCompany, Job.jobName, Company.companyName ,Company.companyAvatar
+                                        Job.idJob, Company.idCompany, Job.jobName, Company.companyName ,Company.companyAvatar, Job.jobField
                                 FROM Job
                                 INNER JOIN Company ON Job.idCompany = Company.idCompany
                                 where Job.jobRegisterDead >= '{DateTime.Now.Date}'

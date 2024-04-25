@@ -41,6 +41,14 @@ namespace JobHub
             dbc.ThucThi(sqlStr);
 
         }
+        public SqlDataReader LoadRelatedJobs(int idJob)
+        {
+            string sqlField = $@"select Job.jobField form Job where idJob = {idJob}";
+            string sql = string.Format($@"select top 5 * from Job inner join Company on Company.idCompany = Job.idCompany
+                                          where Job.jobField = (select Job.jobField from Job where idJob = {idJob}) and job.idJob != {idJob}");
+
+            return dbc.loadData(sql);
+        }
 
     }
 }

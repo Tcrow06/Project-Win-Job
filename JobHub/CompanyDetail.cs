@@ -93,6 +93,36 @@ namespace JobHub
         {
            
             SqlDataReader dr = companyDetailDao.LoadAllCompanyJobInformation(idCompany);
+            LoadUC_JobIntoPanel(dr, pn, fm);
+/*            if (dr != null)
+            {
+                while (dr.Read())
+                {
+                    uc_JobDetail job = jobDetail.InsertInfoAndEventIntoUcJobDetail(dr, fm);
+                    int idJob = int.Parse(dr["idJob"].ToString());
+                    if (fm.Account == null)
+                    {
+                        job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                    }
+                    else
+                    {
+                        if (!candidate.CheckSaveStatus(idJob, fm.Account.Id))
+                        {
+                            job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                        }
+                        else
+                        {
+                            job.ptbSave.Image = Properties.Resources.heartDaLuu;
+                        }
+                    }
+                    pn.Controls.Add(job);
+                }
+                dr.Dispose();
+            }*/
+        }
+        public void LoadUC_JobIntoPanel(SqlDataReader dr, FlowLayoutPanel pn, Fmain fm)
+        {
+            pn.Controls.Clear();    
             if (dr != null)
             {
                 while (dr.Read())
@@ -118,9 +148,6 @@ namespace JobHub
                 }
                 dr.Dispose();
             }
-
-
-
         }
     }
 }

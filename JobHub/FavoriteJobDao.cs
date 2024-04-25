@@ -16,8 +16,8 @@ namespace JobHub
 
         public SqlDataReader LoadUc_JobDetail(FlowLayoutPanel pn, Fmain fm, Label x)
         {
-            string query = $@"select Job.idJob, Job.idCompany, Job.idCandidate, Job.jobName,Company.companyName,Company.companyAvatar, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress
-                from Company join (select  Job.idJob, Job.idCompany, SavedJob.idCandidate, Job.jobName, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress 
+            string query = $@"select Job.idJob, Job.idCompany, Job.idCandidate, Job.jobField ,Job.jobName,Company.companyName,Company.companyAvatar, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress
+                from Company join (select  Job.idJob,Job.jobField, Job.idCompany, SavedJob.idCandidate, Job.jobName, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress 
                 from SavedJob join Job on Job.idJob = SavedJob.idJob) as Job on Job.idCompany = Company.idCompany where Job.idCandidate = {fm.Account.Id} ";
 
             return dbc.loadData(query);

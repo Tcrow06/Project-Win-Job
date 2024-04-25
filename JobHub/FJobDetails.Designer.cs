@@ -68,6 +68,11 @@
             this.pnBenefit = new System.Windows.Forms.Panel();
             this.lblBe = new System.Windows.Forms.Label();
             this.lblBeInfo = new System.Windows.Forms.Label();
+            this.flpnRelatedJobs = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.uc_JobDetail1 = new JobHub.uc_JobDetail();
+            this.uc_JobDetail2 = new JobHub.uc_JobDetail();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnJobInfor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -81,6 +86,8 @@
             this.pnJobDescription.SuspendLayout();
             this.pnRequirement.SuspendLayout();
             this.pnBenefit.SuspendLayout();
+            this.flpnRelatedJobs.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnJobInfor
@@ -107,14 +114,14 @@
             this.pnJobInfor.Location = new System.Drawing.Point(30, 7);
             this.pnJobInfor.Margin = new System.Windows.Forms.Padding(5);
             this.pnJobInfor.Name = "pnJobInfor";
-            this.pnJobInfor.Size = new System.Drawing.Size(578, 213);
+            this.pnJobInfor.Size = new System.Drawing.Size(624, 193);
             this.pnJobInfor.TabIndex = 7;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label12.Location = new System.Drawing.Point(435, 81);
+            this.label12.Location = new System.Drawing.Point(435, 66);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 20);
             this.label12.TabIndex = 25;
@@ -126,7 +133,7 @@
             this.lblRegisterDead.BackColor = System.Drawing.Color.Silver;
             this.lblRegisterDead.Font = new System.Drawing.Font("Segoe UI", 8.3F);
             this.lblRegisterDead.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblRegisterDead.Location = new System.Drawing.Point(138, 145);
+            this.lblRegisterDead.Location = new System.Drawing.Point(138, 121);
             this.lblRegisterDead.Name = "lblRegisterDead";
             this.lblRegisterDead.Size = new System.Drawing.Size(67, 19);
             this.lblRegisterDead.TabIndex = 23;
@@ -138,7 +145,7 @@
             this.label17.BackColor = System.Drawing.Color.Silver;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 8.3F);
             this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(23, 145);
+            this.label17.Location = new System.Drawing.Point(23, 121);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 19);
             this.label17.TabIndex = 22;
@@ -147,7 +154,7 @@
             // lblExperience
             // 
             this.lblExperience.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.lblExperience.Location = new System.Drawing.Point(435, 102);
+            this.lblExperience.Location = new System.Drawing.Point(435, 87);
             this.lblExperience.Name = "lblExperience";
             this.lblExperience.Size = new System.Drawing.Size(116, 48);
             this.lblExperience.TabIndex = 21;
@@ -157,7 +164,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.lblAddress.Location = new System.Drawing.Point(253, 108);
+            this.lblAddress.Location = new System.Drawing.Point(253, 93);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(62, 20);
             this.lblAddress.TabIndex = 20;
@@ -167,7 +174,7 @@
             // 
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.lblSalary.Location = new System.Drawing.Point(59, 107);
+            this.lblSalary.Location = new System.Drawing.Point(59, 92);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(93, 20);
             this.lblSalary.TabIndex = 19;
@@ -177,7 +184,7 @@
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbl.Location = new System.Drawing.Point(253, 81);
+            this.lbl.Location = new System.Drawing.Point(253, 66);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(70, 20);
             this.lbl.TabIndex = 17;
@@ -187,7 +194,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbl1.Location = new System.Drawing.Point(59, 81);
+            this.lbl1.Location = new System.Drawing.Point(59, 66);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(85, 20);
             this.lbl1.TabIndex = 16;
@@ -196,7 +203,7 @@
             // lblJobName
             // 
             this.lblJobName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobName.Location = new System.Drawing.Point(17, 19);
+            this.lblJobName.Location = new System.Drawing.Point(17, 4);
             this.lblJobName.Name = "lblJobName";
             this.lblJobName.Size = new System.Drawing.Size(529, 62);
             this.lblJobName.TabIndex = 15;
@@ -216,7 +223,7 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
             this.btnSave.Image = global::JobHub.Properties.Resources.heartChuaLuu;
-            this.btnSave.Location = new System.Drawing.Point(434, 172);
+            this.btnSave.Location = new System.Drawing.Point(434, 148);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 38);
             this.btnSave.TabIndex = 14;
@@ -228,7 +235,7 @@
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(214, 85);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(214, 70);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(33, 34);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -240,7 +247,7 @@
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(394, 91);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(394, 76);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(33, 34);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,7 +259,7 @@
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(256, 81);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(256, 66);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(91, 33);
             this.guna2HtmlLabel8.TabIndex = 7;
@@ -270,7 +277,7 @@
             this.btnApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Location = new System.Drawing.Point(20, 172);
+            this.btnApply.Location = new System.Drawing.Point(20, 148);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(390, 38);
             this.btnApply.TabIndex = 6;
@@ -282,7 +289,7 @@
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 84);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 69);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(33, 34);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,10 +310,10 @@
             this.guna2Panel3.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel3.Controls.Add(this.guna2PictureBox7);
             this.guna2Panel3.Controls.Add(this.pbCompanyAvatar);
-            this.guna2Panel3.Location = new System.Drawing.Point(633, 7);
+            this.guna2Panel3.Location = new System.Drawing.Point(707, 7);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(20, 5, 10, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(292, 213);
+            this.guna2Panel3.Size = new System.Drawing.Size(309, 193);
             this.guna2Panel3.TabIndex = 8;
             // 
             // lblCompanyAddress
@@ -315,7 +322,7 @@
             this.lblCompanyAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblCompanyAddress.Location = new System.Drawing.Point(113, 125);
             this.lblCompanyAddress.Name = "lblCompanyAddress";
-            this.lblCompanyAddress.Size = new System.Drawing.Size(162, 84);
+            this.lblCompanyAddress.Size = new System.Drawing.Size(189, 62);
             this.lblCompanyAddress.TabIndex = 25;
             this.lblCompanyAddress.Text = "xx,Bình Đường, Thủ Đức";
             // 
@@ -413,9 +420,9 @@
             this.guna2Panel4.BorderRadius = 15;
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel4.Location = new System.Drawing.Point(28, 227);
+            this.guna2Panel4.Location = new System.Drawing.Point(29, 205);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(897, 398);
+            this.guna2Panel4.Size = new System.Drawing.Size(987, 294);
             this.guna2Panel4.TabIndex = 9;
             // 
             // flowLayoutPanel1
@@ -428,7 +435,7 @@
             this.flowLayoutPanel1.Controls.Add(this.pnBenefit);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 13);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(872, 346);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(976, 269);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // guna2TextBox1
@@ -474,7 +481,7 @@
             this.pnJobDescription.Location = new System.Drawing.Point(2, 40);
             this.pnJobDescription.Margin = new System.Windows.Forms.Padding(2);
             this.pnJobDescription.Name = "pnJobDescription";
-            this.pnJobDescription.Size = new System.Drawing.Size(819, 117);
+            this.pnJobDescription.Size = new System.Drawing.Size(921, 83);
             this.pnJobDescription.TabIndex = 29;
             // 
             // lblDesc
@@ -492,7 +499,7 @@
             this.lblDescInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.lblDescInfo.Location = new System.Drawing.Point(5, 38);
             this.lblDescInfo.Name = "lblDescInfo";
-            this.lblDescInfo.Size = new System.Drawing.Size(713, 23);
+            this.lblDescInfo.Size = new System.Drawing.Size(887, 23);
             this.lblDescInfo.TabIndex = 3;
             this.lblDescInfo.Text = "+ Tiếp nhận và xử lý dữ liệu trên các sản thương mại điện tử.";
             // 
@@ -500,10 +507,10 @@
             // 
             this.pnRequirement.Controls.Add(this.lblRe);
             this.pnRequirement.Controls.Add(this.lblReInfo);
-            this.pnRequirement.Location = new System.Drawing.Point(0, 159);
+            this.pnRequirement.Location = new System.Drawing.Point(0, 125);
             this.pnRequirement.Margin = new System.Windows.Forms.Padding(0);
             this.pnRequirement.Name = "pnRequirement";
-            this.pnRequirement.Size = new System.Drawing.Size(821, 110);
+            this.pnRequirement.Size = new System.Drawing.Size(923, 69);
             this.pnRequirement.TabIndex = 30;
             // 
             // lblRe
@@ -521,7 +528,7 @@
             this.lblReInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.lblReInfo.Location = new System.Drawing.Point(5, 32);
             this.lblReInfo.Name = "lblReInfo";
-            this.lblReInfo.Size = new System.Drawing.Size(697, 23);
+            this.lblReInfo.Size = new System.Drawing.Size(889, 23);
             this.lblReInfo.TabIndex = 6;
             this.lblReInfo.Text = "+ Tốt nghiệp đại học trở lên";
             // 
@@ -529,10 +536,10 @@
             // 
             this.pnBenefit.Controls.Add(this.lblBe);
             this.pnBenefit.Controls.Add(this.lblBeInfo);
-            this.pnBenefit.Location = new System.Drawing.Point(0, 269);
+            this.pnBenefit.Location = new System.Drawing.Point(0, 194);
             this.pnBenefit.Margin = new System.Windows.Forms.Padding(0);
             this.pnBenefit.Name = "pnBenefit";
-            this.pnBenefit.Size = new System.Drawing.Size(821, 140);
+            this.pnBenefit.Size = new System.Drawing.Size(923, 140);
             this.pnBenefit.TabIndex = 31;
             // 
             // lblBe
@@ -550,16 +557,67 @@
             this.lblBeInfo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold);
             this.lblBeInfo.Location = new System.Drawing.Point(5, 32);
             this.lblBeInfo.Name = "lblBeInfo";
-            this.lblBeInfo.Size = new System.Drawing.Size(697, 23);
+            this.lblBeInfo.Size = new System.Drawing.Size(889, 23);
             this.lblBeInfo.TabIndex = 9;
             this.lblBeInfo.Text = "+ Lộ trình thăng tiến rõ ràng, xét tăng lương định kỳ 6 tháng";
+            // 
+            // flpnRelatedJobs
+            // 
+            this.flpnRelatedJobs.AutoScroll = true;
+            this.flpnRelatedJobs.Controls.Add(this.uc_JobDetail1);
+            this.flpnRelatedJobs.Controls.Add(this.uc_JobDetail2);
+            this.flpnRelatedJobs.Location = new System.Drawing.Point(7, 9);
+            this.flpnRelatedJobs.Name = "flpnRelatedJobs";
+            this.flpnRelatedJobs.Size = new System.Drawing.Size(983, 214);
+            this.flpnRelatedJobs.TabIndex = 10;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.flpnRelatedJobs);
+            this.guna2Panel1.Location = new System.Drawing.Point(26, 532);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(994, 232);
+            this.guna2Panel1.TabIndex = 11;
+            // 
+            // uc_JobDetail1
+            // 
+            this.uc_JobDetail1.IdCompany = 0;
+            this.uc_JobDetail1.IdJob = 0;
+            this.uc_JobDetail1.Location = new System.Drawing.Point(3, 3);
+            this.uc_JobDetail1.Name = "uc_JobDetail1";
+            this.uc_JobDetail1.Size = new System.Drawing.Size(950, 126);
+            this.uc_JobDetail1.TabIndex = 0;
+            // 
+            // uc_JobDetail2
+            // 
+            this.uc_JobDetail2.IdCompany = 0;
+            this.uc_JobDetail2.IdJob = 0;
+            this.uc_JobDetail2.Location = new System.Drawing.Point(3, 135);
+            this.uc_JobDetail2.Name = "uc_JobDetail2";
+            this.uc_JobDetail2.Size = new System.Drawing.Size(950, 126);
+            this.uc_JobDetail2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(27, 506);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 23);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Các công việc liên quan: ";
             // 
             // FJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(999, 637);
+            this.ClientSize = new System.Drawing.Size(1030, 850);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnJobInfor);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel4);
@@ -587,7 +645,10 @@
             this.pnRequirement.PerformLayout();
             this.pnBenefit.ResumeLayout(false);
             this.pnBenefit.PerformLayout();
+            this.flpnRelatedJobs.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -632,5 +693,10 @@
         private System.Windows.Forms.Label lblRe;
         private System.Windows.Forms.Label lblBe;
         public Guna.UI2.WinForms.Guna2Button btnSave;
+        private System.Windows.Forms.FlowLayoutPanel flpnRelatedJobs;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private uc_JobDetail uc_JobDetail1;
+        private uc_JobDetail uc_JobDetail2;
+        private System.Windows.Forms.Label label1;
     }
 }

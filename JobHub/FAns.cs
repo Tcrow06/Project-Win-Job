@@ -27,7 +27,6 @@ namespace JobHub
         private void btnEmploys_Click(object sender, EventArgs e)
         {
             FRecruiter fRecruiter = new FRecruiter();
-            
             this.Close();
             fRecruiter.ShowDialog();
         }
