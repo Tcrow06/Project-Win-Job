@@ -54,11 +54,15 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +77,7 @@
     <Compile Include="Account.cs" />
     <Compile Include="ApplyWithCV.cs" />
     <Compile Include="ApplyWithCVDAO.cs" />
+    <Compile Include="BestApplyDAO.cs" />
     <Compile Include="CandidateDao.cs" />
     <Compile Include="ChangTheSize.cs" />
     <Compile Include="CompanyDetail.cs" />
@@ -91,6 +96,12 @@
       <DependentUpon>FApplyWithCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FavoriteJob.cs" />
+    <Compile Include="FBestApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBestApply.Designer.cs">
+      <DependentUpon>FBestApply.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCompanyJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +339,9 @@
     <EmbeddedResource Include="FApplyWithCV.resx">
       <DependentUpon>FApplyWithCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FBestApply.resx">
+      <DependentUpon>FBestApply.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCompanyJob.resx">
       <DependentUpon>FCompanyJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,9 +511,6 @@
     <None Include="Resources\png-transparent-computer-icons-icon-design-house-symbol-qualifications-wales-main-menu-angle-building-office-thumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Images\3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\profile-desktop %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -577,7 +588,10 @@
   <ItemGroup>
     <None Include="Resources\up-arrow.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="PDF\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>
@@ -617,6 +631,7 @@
     <Content Include="image\GIGAREAL2.jpg" />
     <Content Include="image\GIGAREAL3.jpg" />
     <Content Include="image\LogJobHub.png" />
+    <Content Include="Resources\user.png" />
     <None Include="Resources\next.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

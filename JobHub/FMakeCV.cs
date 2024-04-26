@@ -34,6 +34,7 @@ namespace JobHub
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+
             makeCVDAO = new MakeCVDAO(this.idCandidate);
             string cmd = "select max(CV.idCV) as max from CV";
             string experience = "";
@@ -55,12 +56,13 @@ namespace JobHub
             {
                 experience = "";
             }
-            MessageBox.Show(experience);
             DataTable dt = makeCVDAO.ReadData(cmd);
             this.idCV = Int32.Parse(dt.Rows[0]["max"].ToString()) + 1;
-            DetailCV detailCV = new DetailCV(idCV, idCandidate, uC_MakeCV1.txtNameJob.Text.Trim(), uC_MakeCV1.txtLink.Text.Trim(),
-                uC_MakeCV1.txtSkill.Text.Trim(), experience);        
+            DetailCV detailCV = new DetailCV(idCV, idCandidate, uC_MakeCV1.txtNameJob.Text.Trim(),
+            uC_MakeCV1.txtSkill.Text.Trim(), experience);        
             makeCVDAO.Insert(detailCV);
+            MessageBox.Show("Lưu thành công");
+            this.Close();
         }
 
         public void makeViewJob()
@@ -81,7 +83,7 @@ namespace JobHub
         }
         private void FMakeCV_Load(object sender, EventArgs e)
         {
-            handler.setSizeForm(755, 670, this);
+            handler.setSizeForm(755, 700, this);
             makeViewJob();
             makeCVDAO = new MakeCVDAO(this.idCandidate);
             DataTable dt = makeCVDAO.readData(this.idCandidate);
