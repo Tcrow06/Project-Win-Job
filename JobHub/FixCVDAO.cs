@@ -60,11 +60,11 @@ namespace JobHub
 
         public void ShowData(int idCV, int idCandidate, Guna2TextBox txtAddress, Guna2TextBox txtEducation, 
             Guna2TextBox txtEmail, Guna2TextBox txtFirstName, Guna2TextBox txtLastName, 
-            Guna2TextBox txtLink, Guna2TextBox txtNameJob, Guna2TextBox txtPhoneNumber, 
+            Guna2TextBox txtNameJob, Guna2TextBox txtPhoneNumber, 
             Guna2TextBox txtSkill, DataTable dt, FlowLayoutPanel fpnContain, 
             Guna2CustomRadioButton boy, Guna2CustomRadioButton girl, Guna2DateTimePicker yob)
         {
-            function.ShowData(idCV, idCandidate, txtAddress, txtEducation, txtEmail, txtFirstName, txtLastName, txtLink, txtNameJob, txtPhoneNumber, txtSkill, dt, fpnContain, boy, girl, yob);
+            function.ShowData(idCV, idCandidate, txtAddress, txtEducation, txtEmail, txtFirstName, txtLastName, txtNameJob, txtPhoneNumber, txtSkill, dt, fpnContain, boy, girl, yob);
         }
 
         public void LoadData(string s, Guna2TextBox txtWhatJob, Guna2TextBox txtTime, Guna2TextBox txtReviewJob, Guna2TextBox txtEducation)

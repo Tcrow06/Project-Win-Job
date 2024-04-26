@@ -30,7 +30,7 @@ namespace JobHub
         public void readData()
         {
             DataTable dt = fixCVDAO.readData(this.idCandidate, this.idCV);
-            fixCVDAO.ShowData(this.idCV, this.idCandidate, uC_MakeCV1.txtAddress, uC_MakeCV1.txtEducation, uC_MakeCV1.txtEmail, uC_MakeCV1.txtFirstName, uC_MakeCV1.txtLastName, uC_MakeCV1.txtLink, uC_MakeCV1.txtNameJob, uC_MakeCV1.txtPhoneNumber, uC_MakeCV1.txtSkill, dt, uC_MakeCV1.fpnContain, uC_MakeCV1.rdoBoy, uC_MakeCV1.rdoGirl, uC_MakeCV1.dtpYob);
+            fixCVDAO.ShowData(this.idCV, this.idCandidate, uC_MakeCV2.txtAddress, uC_MakeCV2.txtEducation, uC_MakeCV2.txtEmail, uC_MakeCV2.txtFirstName, uC_MakeCV2.txtLastName, uC_MakeCV2.txtNameJob, uC_MakeCV2.txtPhoneNumber, uC_MakeCV2.txtSkill, dt, uC_MakeCV2.fpnContain, uC_MakeCV2.rdoBoy, uC_MakeCV2.rdoGirl, uC_MakeCV2.dtpYob);
         }
         public FFixInfCV(int idCV, int idCandidate)
         {
@@ -41,7 +41,7 @@ namespace JobHub
 
         private void FFixInfCV_Load(object sender, EventArgs e)
         {
-            handler.setSizeForm(755, 670, this);
+            handler.setSizeForm(755, 710, this);
             readData();
         }
 
@@ -50,7 +50,7 @@ namespace JobHub
             try
             {
                 string experience = "";
-                foreach (Control control in uC_MakeCV1.fpnContain.Controls)
+                foreach (Control control in uC_MakeCV2.fpnContain.Controls)
                 {
                     if (control is uC_LoadIfJob)
                     {
@@ -64,10 +64,10 @@ namespace JobHub
                     }
                 }
                 FixCVDAO fix = new FixCVDAO(idCV, idCandidate);
-                experience += "<" + uC_MakeCV1.txtEducation.Text;
-                Candidate candidate = new Candidate(idCandidate, uC_MakeCV1.txtFirstName.Text.Trim(), uC_MakeCV1.txtLastName.Text.Trim(), uC_MakeCV1.txtPhoneNumber.Text.Trim(), uC_MakeCV1.txtEmail.Text.Trim(),
-                uC_MakeCV1.rdoBoy.Checked, uC_MakeCV1.dtpYob.Value, uC_MakeCV1.txtAddress.Text.Trim());
-                DetailCV detail = new DetailCV(idCV, idCandidate, uC_MakeCV1.txtNameJob.Text.Trim(), uC_MakeCV1.txtLink.Text.Trim(), uC_MakeCV1.txtSkill.Text.Trim(), experience);
+                experience += "<" + uC_MakeCV2.txtEducation.Text;
+                Candidate candidate = new Candidate(idCandidate, uC_MakeCV2.txtFirstName.Text.Trim(), uC_MakeCV2.txtLastName.Text.Trim(), uC_MakeCV2.txtPhoneNumber.Text.Trim(), uC_MakeCV2.txtEmail.Text.Trim(),
+                uC_MakeCV2.rdoBoy.Checked, uC_MakeCV2.dtpYob.Value, uC_MakeCV2.txtAddress.Text.Trim());
+                DetailCV detail = new DetailCV(idCV, idCandidate, uC_MakeCV2.txtNameJob.Text.Trim(), uC_MakeCV2.txtSkill.Text.Trim(), experience);
                 fix.UpdateData(detail);
                 fix.UpdateData(candidate);
                 CustomMessageBox custom = new CustomMessageBox();

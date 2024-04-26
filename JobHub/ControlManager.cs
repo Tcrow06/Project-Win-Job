@@ -100,5 +100,10 @@ namespace JobHub
             }
             fpn.Controls.Remove(load);
         }
+
+        public void LoadData(int idCompany, int idJob)
+        {
+
+        }
     }
 }

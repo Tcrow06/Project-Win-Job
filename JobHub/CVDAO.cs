@@ -14,18 +14,28 @@ namespace JobHub
         private CV myCV;
         Function function = new Function();
 
-        public DataTable ReadData(int id)
+        public DataTable ReadData(string cmd)
         {
-            string cmd = $@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, CV.jobName, CV.CVAvatar, CV.idCV
-                            FROM Candidate
-                            INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
-                            where Candidate.idCandidate = {id}";
             return function.ReadData(cmd);
         }
 
+        public void Insert(string cmd )
+        {
+            function.Insert(cmd);   
+        }
         public void WriteData(DataTable dt, FlowLayoutPanel fpn)
         {
              function.WriteData(dt, fpn);
+        }
+
+        public string SelectImageButton(string pathRoot, string dir)
+        {
+            return function.SelectImageButton(pathRoot, dir);
+        }
+
+        public void Update(string cmd)
+        {
+            function.Update(cmd);
         }
         internal CV MyCV { get => myCV; set => myCV = value; }
     }

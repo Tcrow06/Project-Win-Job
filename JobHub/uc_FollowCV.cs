@@ -12,9 +12,21 @@ namespace JobHub
 {
     public partial class uc_FollowCV : UserControl
     {
+        public event EventHandler Sumbit_Click;
+        public event EventHandler Remove_Click;
         public uc_FollowCV()
         {
             InitializeComponent();
+        }
+
+        private void btnSumbit_Click(object sender, EventArgs e)
+        {
+            Sumbit_Click?.Invoke(sender, EventArgs.Empty);
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            Remove_Click?.Invoke(sender, EventArgs.Empty);
         }
     }
 }

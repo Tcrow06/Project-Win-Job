@@ -554,6 +554,20 @@ namespace JobHub
             }
         }
 
-        
+        private void btnCvCad_Click(object sender, EventArgs e)
+        {
+            this.DeleteChildForm();
+            FBestApply fBest = new FBestApply(this);
+            fBest.MdiParent = this;
+            fBest.Dock = DockStyle.Fill;
+            resize(fBest.Width + 200, fBest.Height + 50);
+            fBest.Show();
+            fBest.BringToFront();
+        }
+
+        private void btnTopCompany_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

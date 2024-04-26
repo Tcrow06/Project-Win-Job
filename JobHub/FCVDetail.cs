@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace JobHub
                             Where CV.idCV = {idCV}";
             DataTable dt = detailCVDAO.ReadData(query);
             detailCVDAO.WriteData(lblFirstName, lblLastName, lblJobName, lblIntroduce, lblPhoneNumber,
-                lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, dt);
+                lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt);
             
             
             
@@ -64,6 +65,8 @@ namespace JobHub
             this.Size = new Size(500, 600);
             setLocation(lblIntroduce.Location.X, lblIntroduce.Location.Y + lblIntroduce.Height + 5, pnCall);
             setLocation(pnCall.Location.X, pnCall.Location.Y + pnCall.Height + 5, pnEducation);
+            setLocation(pnEducation.Location.X, pnEducation.Location.Y + 5 + pnEducation.Height, pnSkill);
+            setLocation(pnSkill.Location.X, pnSkill.Location.Y + 5 + pnSkill.Height, pnControl);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -78,6 +81,52 @@ namespace JobHub
             fix.ShowDialog();
             FCVDetail_Load(sender, e);
             this.Show();
+        }
+
+        private void updateCV(string path)
+        {
+            try
+            {
+                string absoluteImagePath = Path.Combine(Application.StartupPath,"..\\..\\", path);
+                if (File.Exists(absoluteImagePath))
+                {
+                    Image img = Image.FromFile(absoluteImagePath);
+                    picAvatarCV.Image = img;
+                    string cmd_update = $@"update CV
+                                   set CV.CVAvatar = N'{path}'
+                                   from CV
+                                   inner join Candidate on CV.idCandidate = Candidate.idCandidate
+                                   where CV.idCV = {this.idCV} and Candidate.idCandidate = {this.idCandidate}";
+                    detailCVDAO.Update(cmd_update);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy tập tin ảnh.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void SelectImageButton()
+        {
+
+            string path = detailCVDAO.SelectImageButton(Application.StartupPath, "Resources");
+            if (path != null)
+            {
+                updateCV(path);
+            }
+            else
+            {
+                MessageBox.Show("Đã xảy ra lỗi");
+            }
+        }
+
+        private void picLoadImage_Click(object sender, EventArgs e)
+        {
+            SelectImageButton();
         }
     }
 }

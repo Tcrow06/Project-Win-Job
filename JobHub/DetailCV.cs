@@ -13,7 +13,7 @@ namespace JobHub
         private string jobName;
         private string firstName;
         private string lastName;
-        private string CVAvatar;
+        private string CVAvatar = "";
         private string aboutMe;
         private string phoneNumber;
         private string email;
@@ -21,12 +21,11 @@ namespace JobHub
         private string skill;
         private string experience;
 
-        public DetailCV(int id, int idCandidate, string jobName, string CVAvata, string skill, string experience)
+        public DetailCV(int id, int idCandidate, string jobName, string skill, string experience)
         {
             this.Id = id;
             this.IdCandidate = idCandidate;
             this.JobName = jobName ?? throw new ArgumentNullException(nameof(jobName));
-            this.CVAvatar1 = CVAvata ?? throw new ArgumentException(nameof(CVAvatar));
             this.Skill = skill ?? throw new ArgumentException(nameof(email));
             this.Experience = experience ?? throw new ArgumentException(nameof(experience));
         }

@@ -44,9 +44,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 1003);
+            this.guna2Button1.Location = new System.Drawing.Point(8, 652);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(1073, 49);
+            this.guna2Button1.Size = new System.Drawing.Size(715, 32);
             this.guna2Button1.TabIndex = 26;
             this.guna2Button1.Text = "Lưu";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -62,23 +63,24 @@
             this.uC_MakeCV1.BackColor = System.Drawing.Color.White;
             this.uC_MakeCV1.Dock = System.Windows.Forms.DockStyle.Top;
             this.uC_MakeCV1.Location = new System.Drawing.Point(0, 0);
+            this.uC_MakeCV1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.uC_MakeCV1.Name = "uC_MakeCV1";
-            this.uC_MakeCV1.Size = new System.Drawing.Size(1149, 985);
+            this.uC_MakeCV1.Size = new System.Drawing.Size(766, 640);
             this.uC_MakeCV1.TabIndex = 0;
             // 
             // FMakeCV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1149, 1069);
+            this.ClientSize = new System.Drawing.Size(766, 695);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.uC_MakeCV1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FMakeCV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMakeCV";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FMakeCV_Load);
             this.ResumeLayout(false);
 
