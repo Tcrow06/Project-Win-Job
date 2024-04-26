@@ -16,7 +16,7 @@ namespace JobHub
 {
     public class FindJob
     {
-        private FindJobDao findJobDao = new FindJobDao();
+        private FindJobDAO findJobDao = new FindJobDAO();
         ChangTheSize changTheSize = new ChangTheSize();
         JobDetail jobDetail = new JobDetail();
         public FindJob() { }

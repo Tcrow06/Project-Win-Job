@@ -11,19 +11,21 @@ namespace JobHub
 {
     public class Account
     {
-        private AccountDao accountDao = new AccountDao();
+        private AccountDAO accountDao = new AccountDAO();
         private Candidate myCandidate;
-        //private Candidate myCandidate1;
+        private Company myCompany;
         private string email;
         private string pass;
         private int id;
         private int type;
+        private int status;
 
         public string Email { get => email; set => email = value; }
         public string Pass { get => pass; set => pass = value; }
         public int Id { get => id; set => id = value; }
         public int Type { get => type; set => type = value; }
         public Candidate MyCandidate { get => myCandidate; set => myCandidate = value; }
+        public int Status { get => status; set => status = value; }
 
         public Account() { }
         public Account(string email, string pass, int id, int type)
@@ -40,6 +42,13 @@ namespace JobHub
             this.Pass = pass;
             this.MyCandidate = candidate;
             this.Type = 0;
+        }
+        public Account(string email, string pass, Company company)
+        {
+            this.Email = email;
+            this.Pass = pass;
+            this.myCompany = company;
+            this.Type = 1;
         }
 
         public Account(string email, string pass)

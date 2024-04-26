@@ -12,7 +12,7 @@ namespace JobHub
 {
     public class JobPostHistory
     {
-        private JobPostHistoryDao dao = new JobPostHistoryDao();
+        private JobPostHistoryDAO dao = new JobPostHistoryDAO();
         private JobDetail jobDetail = new JobDetail();
         private Image edit = Properties.Resources.edit;
         private Image delete = Properties.Resources.detele;

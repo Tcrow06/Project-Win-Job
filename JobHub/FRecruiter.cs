@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ namespace JobHub
 {
     public partial class FRecruiter : Form
     {
+        private Recruiter recruiter = new Recruiter();
+        private Function function = new Function(); 
+        private string imagePath;
         public FRecruiter()
         {
             InitializeComponent();
@@ -19,7 +23,7 @@ namespace JobHub
 
         private void btnLoadPicture_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            /*using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Title = "Chọn ảnh";
                 openFileDialog.Filter = "Tất cả các tệp (*.*)|*.*|Ảnh (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
@@ -30,36 +34,33 @@ namespace JobHub
                 {
                     try
                     {
-                        string imagePath = openFileDialog.FileName;
+                        imagePath = openFileDialog.FileName;
                         Image im = Image.FromFile(imagePath);
-                        // Đặt kích thước của PictureBox theo kích thước của ảnh và giữ chiều rộng không đổi
-                        /*if (guna2PictureBox1.Width < im.Width)
-                        {
-                            guna2PictureBox1.Height = guna2PictureBox1.Width * im.Height / im.Width;
-                        }
-                        else
-                        {
-                            guna2PictureBox1.Size = im.Size;
-                        }
-                        guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-
-                        // Hiển thị ảnh trong PictureBox
-                        guna2PictureBox1.Image = im;*/
-                        tbBusinessLicensLink.Text = im.ToString();
+                        txtBusinessLicenseLink.Text = Path.GetFileName(imagePath);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Lỗi khi mở tệp ảnh: " + ex.Message);
                     }
                 }
+            }*/
+            imagePath = function.SelectPicture();
+            if(imagePath != null)
+            {
+                txtBusinessLicenseLink.Text = Path.GetFileName(imagePath);
             }
         }
 
         private void btnCompanyyAccountRegister_Click(object sender, EventArgs e)
         {
-            CompanyDetail cd = new CompanyDetail();
-            cd.Email = txtAccount.Text;
-            cd.Name = txtCompanyName.Text;
+            Company company = new Company(txtEmail.Text.Trim(),txtCompanyName.Text.Trim(),txtManagerName.Text.Trim(), txtBusinessLicenseLink.Text.Trim(),
+                                        txtTaxCode.Text.Trim(), txtAddress.Text.Trim() + " " + cbCity.SelectedItem);
+            Account account = new Account(txtEmail.Text.ToString(), txtPassword.Text.ToString(), company);
+            recruiter.Register(company, account, this, txtConfirmPassword.Text.Trim());
+            function.SaveImage(imagePath);    
+
+                
         }
+
     }
 }

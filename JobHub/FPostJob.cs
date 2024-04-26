@@ -355,7 +355,7 @@ namespace JobHub
             sqlCmd = new SqlCommand(sql, sqlConnection);
             storeMaxId = Convert.ToInt32(sqlCmd.ExecuteScalar());
 
-            JobDetailDao jd = new JobDetailDao();
+            JobDetailDAO jd = new JobDetailDAO();
 
 
             storeMaxId += 1;

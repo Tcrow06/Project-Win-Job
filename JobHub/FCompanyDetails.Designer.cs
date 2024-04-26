@@ -501,7 +501,7 @@
             this.pnImage.Controls.Add(this.pbBack);
             this.pnImage.Controls.Add(this.pbCompanyInfo);
             this.pnImage.Controls.Add(this.guna2PictureBox7);
-            this.pnImage.Location = new System.Drawing.Point(1039, 225);
+            this.pnImage.Location = new System.Drawing.Point(1039, 130);
             this.pnImage.Name = "pnImage";
             this.pnImage.Size = new System.Drawing.Size(1027, 564);
             this.pnImage.TabIndex = 80;
@@ -544,7 +544,6 @@
             // 
             // pbCompanyInfo
             // 
-            this.pbCompanyInfo.Image = ((System.Drawing.Image)(resources.GetObject("pbCompanyInfo.Image")));
             this.pbCompanyInfo.ImageRotate = 0F;
             this.pbCompanyInfo.Location = new System.Drawing.Point(7, 6);
             this.pbCompanyInfo.Name = "pbCompanyInfo";

@@ -19,12 +19,14 @@ namespace JobHub
         public Account CheckAccount(string txtAcc, string txtPass)
         {
             string sql = $@"select * from Account
-                            where account = '{txtAcc}' AND accountPass = '{txtPass}'";
+                            where accountEmail = '{txtAcc}' AND accountPass = '{txtPass}'";
             DataTable dt = db.CheckExists(sql);
             if (dt.Rows.Count > 0)
             {
-                account.Id = int.Parse(dt.Rows[0][0].ToString());
-                account.Type = int.Parse(dt.Rows[0][3].ToString());
+                DataRow row = dt.Rows[0];
+                account.Id = int.Parse(row["idAccount"].ToString());
+                account.Type = int.Parse(row["accountType"].ToString());
+                account.Status = int.Parse(row["accountStatus"].ToString()) ;
                 return account;
             }
             return null;

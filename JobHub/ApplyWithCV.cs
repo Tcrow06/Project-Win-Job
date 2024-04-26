@@ -15,7 +15,7 @@ namespace JobHub
     {
         ApplyWithCVDAO dao = new ApplyWithCVDAO();
         Uc_ChoiceCV choiceCV = new Uc_ChoiceCV();
-        CandidateDao cd = new CandidateDao();
+        CandidateDAO cd = new CandidateDAO();
         public ApplyWithCV() { }
         public void LoadJobNameOfForm(Label lblJobName, int idJob)
         {

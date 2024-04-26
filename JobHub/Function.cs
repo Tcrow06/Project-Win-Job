@@ -217,5 +217,50 @@ namespace JobHub
             string imagePath = Path.Combine(projectFolderPath, link);
             pb.Image = Image.FromFile(imagePath);
         }
+        private string GetUniqueFileName(string folderPath, string fileName)
+        {
+            int count = 1;
+            string newFileName = fileName;
+            string extension = Path.GetExtension(fileName);
+            string fileNameOnly = Path.GetFileNameWithoutExtension(fileName);
+
+            while (File.Exists(Path.Combine(folderPath, newFileName)))
+            {
+                newFileName = $"{fileNameOnly} ({count++}){extension}";
+            }
+
+            return Path.Combine(folderPath, newFileName);
+        }
+        public void SaveImage(string imagePath)
+        {
+            string imageFolder = Directory.GetParent(Application.StartupPath).Parent.FullName + "\\image";
+            string nameImage = Path.GetFileName(imagePath);
+            string destinationPath = GetUniqueFileName(imageFolder, nameImage);
+            File.Copy(imagePath, destinationPath, true);
+        }
+        public string SelectPicture()
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Chọn ảnh";
+                openFileDialog.Filter = "Tất cả các tệp (*.*)|*.*|Ảnh (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        return openFileDialog.FileName;
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi mở tệp ảnh: " + ex.Message);
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

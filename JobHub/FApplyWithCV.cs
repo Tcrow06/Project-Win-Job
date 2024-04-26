@@ -14,6 +14,7 @@ namespace JobHub
 {
     public partial class FApplyWithCV : Form
     {
+        private Function function = new Function();
         ApplyWithCV awc = new ApplyWithCV();
         int idJob;
         Fmain fm = new Fmain();
@@ -22,6 +23,7 @@ namespace JobHub
         int idCV = -1;
         private int heightPanel1;
         Uc_ChoiceCV uc;
+        private string pathImage;
 
         public int HeightPanel1 { get => heightPanel1; set => heightPanel1 = value; }
 
@@ -179,15 +181,18 @@ namespace JobHub
                 this.Dispose();
                     
            }
-           else if(rbChoiceCV2.Checked == true&& idCV != -1)
+           else if(rbChoiceCV2.Checked == true&&lblCVName.Text.Trim().Length>0)
            {
-                    awc.Apply(idJob, idCV, fm, 1);
-                    this.Dispose();
+
+                ///Lưu CV vào bảng CV rồi sau đó lấy ID lại 
+                int idCVSelect = 1;
+                awc.Apply(idJob, idCVSelect, fm, 1);
+                function.SaveImage(pathImage);
+                this.Dispose();
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn CV để ứng tuyển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
 
         }
@@ -212,33 +217,13 @@ namespace JobHub
 
         private void btnSelectCVImage_Click(object sender, EventArgs e)
         {
-            checkSelectUpFileCV = true;
             pnCVClick(rbChoiceCV2, pnCV2, rbChoiceCV1, pnCV1, 200, 35);
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Tệp PDF (*.pdf)|*.pdf|Tệp Word (*.doc;*.docx)|*.doc;*.docx";
-
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            pathImage = function.SelectPicture();
+            if(pathImage != null)
             {
-                string filePath = openFileDialog.FileName;
-
-
-
                 lblCVName.Visible = true;
                 pbDelete.Visible = true;
-
-               
-                lblCVName.Text = Path.GetFileName(filePath);
-
-                string folderPath = Path.Combine(Application.StartupPath, "image");
-                if (!Directory.Exists(folderPath))
-                {
-                    Directory.CreateDirectory(folderPath);
-                }
-
-                string fileName = Path.GetFileName(filePath);
-                string destinationPath = GetUniqueFileName(folderPath, fileName);
-                File.Copy(filePath, destinationPath);
+                lblCVName.Text = Path.GetFileName(pathImage);
             }
         }
     }

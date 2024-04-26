@@ -39,12 +39,8 @@
             this.lbl = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lblJobName = new System.Windows.Forms.Label();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnApply = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblCompanyAddress = new System.Windows.Forms.Label();
             this.lblNumofE = new System.Windows.Forms.Label();
@@ -52,9 +48,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.lblCompanyName = new System.Windows.Forms.LinkLabel();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pbCompanyAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -70,17 +63,18 @@
             this.lblBeInfo = new System.Windows.Forms.Label();
             this.flpnRelatedJobs = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.uc_JobDetail1 = new JobHub.uc_JobDetail();
             this.uc_JobDetail2 = new JobHub.uc_JobDetail();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbCompanyAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnJobInfor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyAvatar)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnJobDescription.SuspendLayout();
@@ -88,6 +82,12 @@
             this.pnBenefit.SuspendLayout();
             this.flpnRelatedJobs.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnJobInfor
@@ -209,51 +209,6 @@
             this.lblJobName.TabIndex = 15;
             this.lblJobName.Text = "Nhân Viên Tư Vấn Bán Hàng /Sales - Thu Nhập Trung Bình Từ 20 - 50M/Tháng";
             // 
-            // btnSave
-            // 
-            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.btnSave.BorderRadius = 10;
-            this.btnSave.BorderThickness = 1;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.White;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
-            this.btnSave.Image = global::JobHub.Properties.Resources.heartChuaLuu;
-            this.btnSave.Location = new System.Drawing.Point(434, 148);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(112, 38);
-            this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "Lưu Tin";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(214, 70);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(33, 34);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 13;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(394, 76);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(33, 34);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 12;
-            this.guna2PictureBox4.TabStop = false;
-            // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.AutoSize = false;
@@ -283,18 +238,6 @@
             this.btnApply.TabIndex = 6;
             this.btnApply.Text = "Ứng tuyển ngay";
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 69);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(33, 34);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 3;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2Panel3
             // 
@@ -377,41 +320,6 @@
             this.lblCompanyName.TabStop = true;
             this.lblCompanyName.Text = "Công Ty TNHH1TV Thành Đạt";
             this.lblCompanyName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCompany_LinkClicked);
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(5, 122);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(33, 23);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 20;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(5, 83);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(33, 23);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 18;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // pbCompanyAvatar
-            // 
-            this.pbCompanyAvatar.Image = global::JobHub.Properties.Resources.png_transparent_computer_icons_icon_design_house_symbol_qualifications_wales_main_menu_angle_building_office_thumbnail;
-            this.pbCompanyAvatar.ImageRotate = 0F;
-            this.pbCompanyAvatar.Location = new System.Drawing.Point(3, 19);
-            this.pbCompanyAvatar.Name = "pbCompanyAvatar";
-            this.pbCompanyAvatar.Size = new System.Drawing.Size(60, 57);
-            this.pbCompanyAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCompanyAvatar.TabIndex = 0;
-            this.pbCompanyAvatar.TabStop = false;
             // 
             // guna2Panel4
             // 
@@ -582,24 +490,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(994, 232);
             this.guna2Panel1.TabIndex = 11;
             // 
-            // uc_JobDetail1
-            // 
-            this.uc_JobDetail1.IdCompany = 0;
-            this.uc_JobDetail1.IdJob = 0;
-            this.uc_JobDetail1.Location = new System.Drawing.Point(3, 3);
-            this.uc_JobDetail1.Name = "uc_JobDetail1";
-            this.uc_JobDetail1.Size = new System.Drawing.Size(950, 126);
-            this.uc_JobDetail1.TabIndex = 0;
-            // 
-            // uc_JobDetail2
-            // 
-            this.uc_JobDetail2.IdCompany = 0;
-            this.uc_JobDetail2.IdJob = 0;
-            this.uc_JobDetail2.Location = new System.Drawing.Point(3, 135);
-            this.uc_JobDetail2.Name = "uc_JobDetail2";
-            this.uc_JobDetail2.Size = new System.Drawing.Size(950, 126);
-            this.uc_JobDetail2.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -609,6 +499,118 @@
             this.label1.Size = new System.Drawing.Size(201, 23);
             this.label1.TabIndex = 27;
             this.label1.Text = "Các công việc liên quan: ";
+            // 
+            // uc_JobDetail1
+            // 
+            this.uc_JobDetail1.IdCompany = 0;
+            this.uc_JobDetail1.IdJob = 0;
+            this.uc_JobDetail1.JobField = null;
+            this.uc_JobDetail1.Location = new System.Drawing.Point(3, 3);
+            this.uc_JobDetail1.Name = "uc_JobDetail1";
+            this.uc_JobDetail1.Size = new System.Drawing.Size(950, 126);
+            this.uc_JobDetail1.TabIndex = 0;
+            // 
+            // uc_JobDetail2
+            // 
+            this.uc_JobDetail2.IdCompany = 0;
+            this.uc_JobDetail2.IdJob = 0;
+            this.uc_JobDetail2.JobField = null;
+            this.uc_JobDetail2.Location = new System.Drawing.Point(3, 135);
+            this.uc_JobDetail2.Name = "uc_JobDetail2";
+            this.uc_JobDetail2.Size = new System.Drawing.Size(950, 126);
+            this.uc_JobDetail2.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
+            this.btnSave.BorderRadius = 10;
+            this.btnSave.BorderThickness = 1;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.White;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(189)))), ((int)(((byte)(87)))));
+            this.btnSave.Image = global::JobHub.Properties.Resources.heartChuaLuu;
+            this.btnSave.Location = new System.Drawing.Point(434, 148);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(112, 38);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "Lưu Tin";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(214, 70);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 13;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(394, 76);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 12;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 69);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(33, 34);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 3;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(5, 122);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(33, 23);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 20;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(5, 83);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(33, 23);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 18;
+            this.guna2PictureBox7.TabStop = false;
+            // 
+            // pbCompanyAvatar
+            // 
+            this.pbCompanyAvatar.Image = global::JobHub.Properties.Resources.office_building;
+            this.pbCompanyAvatar.ImageRotate = 0F;
+            this.pbCompanyAvatar.Location = new System.Drawing.Point(3, 19);
+            this.pbCompanyAvatar.Name = "pbCompanyAvatar";
+            this.pbCompanyAvatar.Size = new System.Drawing.Size(45, 45);
+            this.pbCompanyAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCompanyAvatar.TabIndex = 0;
+            this.pbCompanyAvatar.TabStop = false;
             // 
             // FJobDetails
             // 
@@ -628,14 +630,8 @@
             this.Load += new System.EventHandler(this.FJobDetails_Load);
             this.pnJobInfor.ResumeLayout(false);
             this.pnJobInfor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyAvatar)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -647,6 +643,12 @@
             this.pnBenefit.PerformLayout();
             this.flpnRelatedJobs.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -9,11 +9,11 @@ using Microsoft.SqlServer.Server;
 
 namespace JobHub
 {
-    public class JobDetailDao
+    public class JobDetailDAO
     {
         DBConection dbc = new DBConection();
 
-        public JobDetailDao() { }
+        public JobDetailDAO() { }
         public SqlDataReader GetJobData(int idJob)
         {
             string query = $"SELECT*from Job where Job.idJob = {idJob}";

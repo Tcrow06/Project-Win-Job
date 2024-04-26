@@ -13,11 +13,11 @@ using System.Drawing;
 
 namespace JobHub
 {
-    public class CompanyDetailDao
+    public class CompanyDetailDAO
     {
         DBConection dbc = new DBConection();
-        CandidateDao cd = new CandidateDao();
-        public CompanyDetailDao() { }
+        CandidateDAO cd = new CandidateDAO();
+        public CompanyDetailDAO() { }
 
         public SqlDataReader GetInfoCompanyDetailFromDB(int idCompany)
         {

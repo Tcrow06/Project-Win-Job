@@ -12,7 +12,7 @@ namespace JobHub
 {
     public class JobDetail
     {
-        private JobDetailDao jdd = new JobDetailDao();
+        private JobDetailDAO jdd = new JobDetailDAO();
         private ChangTheSize changTheSize = new ChangTheSize();
         private Function function= new Function();
 

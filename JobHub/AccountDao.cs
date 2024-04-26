@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace JobHub
 {
-    public class AccountDao
+    public class AccountDAO
     {
         private DBConection db = new DBConection(); 
-        public AccountDao() { }
+        public AccountDAO() { }
        
         public DataTable CheckEmailExists(string email)
         {
             string sql = $@"select * from Account
-                            where account = '{email}'";
+                            where accountEmail = '{email}'";
             return  db.CheckExists(sql);
         }
         public void AddAcount(Account account)
@@ -30,7 +30,7 @@ namespace JobHub
             {
                 account.Id = int.Parse(dr["id"].ToString())+1;
             }
-            string sql = $@"insert into Account(idAccount,account, accountPass, accountType) 
+            string sql = $@"insert into Account(idAccount, accountEmail, accountPass, accountType) 
                             values ('{account.Id}','{account.Email}', '{account.Pass}','{account.Type}')";
             db.ThucThi(sql);
         }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public class Candidate
+    public class Candidate : User
     {
         private int id; //Fk
         private string firstName;
@@ -23,19 +23,19 @@ namespace JobHub
         private DateTime birth;
         private string avatar;
         private string address;
-        private CandidateDao cdd = new CandidateDao();
+        private CandidateDAO cdd = new CandidateDAO();
 
         public Candidate() { }
        
 
-        public int Id { get => id; set => id = value; }
+/*        public int Id { get => id; set => id = value; }
         public string Phone { get => phone; set => phone = value; }
-        public string Email { get => email; set => email = value; }
+        public string Email { get => email; set => email = value; }*/
         public bool Gender { get => gender; set => gender = value; }
-        public string Link { get => link; set => link = value; }
+        //public string Link { get => link; set => link = value; }
         public DateTime Birth { get => birth; set => birth = value; }
-        public string Avatar { get => avatar; set => avatar = value; }
-        public string Address { get => address; set => address = value; }
+        //public string Avatar { get => avatar; set => avatar = value; }
+        //public string Address { get => address; set => address = value; }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string FullName { get => fullName; set => fullName = value; }
@@ -65,11 +65,11 @@ namespace JobHub
             this.Email = email ?? throw new ArgumentNullException(nameof(email));
         }
 
-        public bool checkEmail(string email)
+/*        public bool checkEmail(string email)
         {
             Regex regex = new Regex(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
             return regex.IsMatch(email);
-        }
+        }*/
 
         public bool checkPhone(string phone)
         {

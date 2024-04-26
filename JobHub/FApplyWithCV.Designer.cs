@@ -34,6 +34,7 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label2 = new System.Windows.Forms.Label();
             this.pnCV1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSelectName = new System.Windows.Forms.Label();
             this.btnChange = new Guna.UI2.WinForms.Guna2Button();
             this.lblCVLoad = new System.Windows.Forms.Label();
             this.lblCVOn = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSelectName = new System.Windows.Forms.Label();
             this.pnCV1.SuspendLayout();
             this.pnCV2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
@@ -120,6 +120,16 @@
             this.pnCV1.Click += new System.EventHandler(this.pnCV1_Click);
             this.pnCV1.MouseLeave += new System.EventHandler(this.pnCV1_MouseLeave);
             this.pnCV1.MouseHover += new System.EventHandler(this.pnCV1_MouseHover);
+            // 
+            // lblSelectName
+            // 
+            this.lblSelectName.BackColor = System.Drawing.Color.White;
+            this.lblSelectName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblSelectName.Location = new System.Drawing.Point(34, 53);
+            this.lblSelectName.Name = "lblSelectName";
+            this.lblSelectName.Size = new System.Drawing.Size(78, 22);
+            this.lblSelectName.TabIndex = 66;
+            this.lblSelectName.Text = "CV online";
             // 
             // btnChange
             // 
@@ -208,7 +218,7 @@
             // 
             this.pbDelete.Image = ((System.Drawing.Image)(resources.GetObject("pbDelete.Image")));
             this.pbDelete.ImageRotate = 0F;
-            this.pbDelete.Location = new System.Drawing.Point(424, 135);
+            this.pbDelete.Location = new System.Drawing.Point(433, 135);
             this.pbDelete.Name = "pbDelete";
             this.pbDelete.Size = new System.Drawing.Size(30, 30);
             this.pbDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,7 +232,7 @@
             this.lblCVName.BackColor = System.Drawing.Color.White;
             this.lblCVName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblCVName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.lblCVName.Location = new System.Drawing.Point(296, 137);
+            this.lblCVName.Location = new System.Drawing.Point(316, 135);
             this.lblCVName.Name = "lblCVName";
             this.lblCVName.Size = new System.Drawing.Size(111, 22);
             this.lblCVName.TabIndex = 67;
@@ -394,16 +404,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(840, 648);
             this.guna2Panel1.TabIndex = 64;
-            // 
-            // lblSelectName
-            // 
-            this.lblSelectName.BackColor = System.Drawing.Color.White;
-            this.lblSelectName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblSelectName.Location = new System.Drawing.Point(34, 53);
-            this.lblSelectName.Name = "lblSelectName";
-            this.lblSelectName.Size = new System.Drawing.Size(78, 22);
-            this.lblSelectName.TabIndex = 66;
-            this.lblSelectName.Text = "CV online";
             // 
             // FApplyWithCV
             // 

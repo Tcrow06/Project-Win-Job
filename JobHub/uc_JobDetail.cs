@@ -12,7 +12,7 @@ namespace JobHub
 {
     public partial class uc_JobDetail : uc_JobMain
     {
-        CandidateDao cd = new CandidateDao();
+        CandidateDAO cd = new CandidateDAO();
         public event EventHandler JobSavedClick;
 
 /*        private int idJob;

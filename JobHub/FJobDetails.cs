@@ -36,14 +36,6 @@ namespace JobHub
             this.idCp = IdCp;
             InitializeComponent();
         }
-/*        public FJobDetails(int idJob, int IdCp,string field, Fmain fm)
-        {
-            this.fm = fm;
-            this.idJob = idJob;
-            this.idCp = IdCp;
-            this.field = field; 
-            InitializeComponent();
-        }*/
         private void FJobDetails_Load(object sender, EventArgs e)
         {
             LoadJobDetails(idJob);
@@ -57,7 +49,7 @@ namespace JobHub
         private void LoadCompanyDetails(int idCompany)
         {
 
-            CompanyDetail cd = cdd.GetInfoCompanyDetail(idCompany);
+            Company cd = cdd.GetInfoCompanyDetail(idCompany);
             lblCompanyName.Text = cd.Name;
             lblCompanyAddress.Text = cd.Address;
             lblNumofE.Text = cd.Size;

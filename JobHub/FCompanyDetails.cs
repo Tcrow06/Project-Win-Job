@@ -20,7 +20,9 @@ namespace JobHub
         private Candidate cd = new Candidate();
         Fmain fm = new Fmain();
         
-        private CompanyDetail company= new CompanyDetail();
+        private Company company= new Company();
+        private Function function = new Function(); 
+
         private List<string> listCompanyImage = new List<string>();
         int indexImage = 0;
 
@@ -59,9 +61,8 @@ namespace JobHub
             lblLink.Width = GetWidth(lblLink);
             lblAddress.Text = company.Address;
             listCompanyImage = company.ListCompanyImage;
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath ,company.Avatar);
-            pbAvatar.Image = Image.FromFile(imagePath);
+
+            function.InsertPicture(company.Avatar, pbAvatar);
 
             pbBackground.Size = new Size(100, 100);
             pbBackground.BorderRadius = 50;
@@ -147,15 +148,29 @@ namespace JobHub
         {
             lblImage.Text = (indexImage + 1).ToString() + "/" + listCompanyImage.Count.ToString();
             string image = listCompanyImage[indexImage].Trim();
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, image);
-            pictureBox.Image = Image.FromFile(imagePath);
+            if(image.Length > 0)
+            {
+                function.InsertPicture(image, pictureBox);
+            }
         }
         private void LoadPanelImage()
         {
-            LoadImageIntoPictureBox(pbCompanyInfo, 0);
-            pnImage.Location = pnDetail.Location;
-            pnImage.Visible = false;
+             
+            if (listCompanyImage!=null)
+            {
+                LoadImageIntoPictureBox(pbCompanyInfo, 0);
+                pnImage.Location = pnDetail.Location;
+                lblImage.Visible = true;
+                pbNext.Visible = true;
+                pbBack.Visible = true;
+            }
+            else
+            {
+                lblImage.Visible = false;
+                pbNext.Visible = false;
+                pbBack.Visible = false; 
+                pnImage.Visible = false;
+            }
         }
         private void btnImage_Click(object sender, EventArgs e)
         {

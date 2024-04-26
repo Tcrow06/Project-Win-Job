@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
-    public class CandidateDao
+    public class CandidateDAO
     {
         private DBConection db = new DBConection();
-        public CandidateDao() { }
+        public CandidateDAO() { }
         
         public SqlDataReader GetInfoCandidate(int idCan)
         {
@@ -20,7 +20,6 @@ namespace JobHub
             return db.loadData(sql);
                 
         }
-        //
         public void ApplyJob(int idJob, int idCv, int idCan)
         {
             string sql = string.Format($"insert into AppliedCV(idJob, idCandidate, idCV) values ({idJob}, {idCan}, {idCv})"); 
@@ -34,8 +33,8 @@ namespace JobHub
         public void AddCandidate(Candidate candidate)
         {
             
-            string sql = string.Format($@"insert into Candidate(idCandidate,candidateFirstName,candidateLastname) values(
-                                       {candidate.Id},'{candidate.FirstName}','{candidate.LastName}')");
+            string sql = string.Format($@"insert into Candidate(idCandidate,candidateFirstName,candidateLastname, candidateEmail) values(
+                                       {candidate.Id},N'{candidate.FirstName}',N'{candidate.LastName}','{candidate.Email}')");
             db.ExcuteNoMess(sql);   
         }
 

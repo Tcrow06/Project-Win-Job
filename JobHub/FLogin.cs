@@ -61,10 +61,8 @@ namespace JobHub
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Candidate can = new Candidate(txtFirstName.Text, txtLastName.Text, txtRegisterEmail.Text.ToString());
-            Account account = new Account(txtRegisterEmail.Text.ToString(), txtRegisterPassowrd.Text.ToString(), can);
-            login.Register(can, account, this);
-            
-
+            Account account = new Account(txtRegisterEmail.Text.ToString(), txtRegisterPassword.Text.ToString(), can);
+            login.Register(can, account, this, txtConfirmPassword.Text.Trim());
         }
     }
 }

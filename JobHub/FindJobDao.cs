@@ -18,10 +18,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace JobHub
 {
-    public class FindJobDao
+    public class FindJobDAO
     {
         DBConection db = new DBConection();
-        public FindJobDao()
+        public FindJobDAO()
         {
         }
         public SqlDataReader LoadUc_SlideJob()

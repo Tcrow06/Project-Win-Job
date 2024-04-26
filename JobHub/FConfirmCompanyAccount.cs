@@ -1,33 +1,25 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Drawing.Text;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace JobHub
 {
-    public partial class FJobPostHistory : Form
+    public partial class FConfirmCompanyAccount : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
-        private Image edit = Properties.Resources.edit;
-        private Image delete = Properties.Resources.detele;
-        private Fmain fm;
-        JobDetail jobDetail = new JobDetail();
-        JobPostHistory jobPostHistory = new JobPostHistory();   
-        public FJobPostHistory(Fmain fm)
+        Image company = Properties.Resources.enterprise;
+        Image file = Properties.Resources.checklist__1_;
+        Image delete = Properties.Resources.detele;
+        public FConfirmCompanyAccount()
         {
-            this.fm = fm;
             InitializeComponent();
         }
+
         private void SetSizeDGV()
         {
             if (dgv.DisplayedRowCount(false) < dgv.RowCount)
@@ -39,55 +31,61 @@ namespace JobHub
                 dgv.Width = 796;
             }
         }
-
-        private void FJobPostHistory_Load(object sender, EventArgs e)
+        private void ConfirmCreationOfCompanyAccount_Load(object sender, EventArgs e)
         {
-            LoadFullGridView();
+            for(int i=0; i< 20; i++)
+            {
+                dgv.Rows.Add(company, "Text2", file, true, delete, true);
+            }
+
+
+            SetSizeDGV();
+
         }
         private void LoadFullGridView()
         {
-            dgv.Rows.Clear();
-            jobPostHistory.LoadFullGridView(fm.Account.Id, dgv);
+            //dgv.Rows.Clear();
+            //jobPostHistory.LoadFullGridView(fm.Account.Id, dgv);
             SetSizeDGV();
         }
-        
+
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int x = e.ColumnIndex, y = e.RowIndex;
             if (y >= 0)
             {
                 CustomMessageBox cmb = new CustomMessageBox();
-                if (x == 4)
+                if (x == 2)
                 {
-                    FPostJob fpj = new FPostJob(fm);
+                    //FPostJob fpj = new FPostJob(fm);
                     try
                     {
-                        int idJob = int.Parse(dgv.Rows[y].Cells[6].Value.ToString());
+                        int idJob = int.Parse(dgv.Rows[y].Cells[5].Value.ToString());
 
                         //Hiện form chỉnh sửa tại đây
-                        fpj.ShowDialog();
+                        //fpj.ShowDialog();
                         LoadFullGridView();
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Lỗi không thể sửa");
+                        cmb.Show("Lỗi không thể sửa");
                     }
                     finally
                     {
-                        
+
                     }
                 }
-                if (x == 5)
+                if (x == 4)
                 {
                     try
                     {
                         DialogResult result = MessageBox.Show("Xác nhận xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if(result == DialogResult.Yes)
+                        if (result == DialogResult.Yes)
                         {
-                            DeleteJob(int.Parse(dgv.Rows[y].Cells[6].Value.ToString()));
+                            //DeleteJob(int.Parse(dgv.Rows[y].Cells[6].Value.ToString()));
                             LoadFullGridView();
                         }
-                        
+
                     }
                     catch (Exception)
                     {
@@ -98,12 +96,9 @@ namespace JobHub
                     }
                 }
 
-                }
             }
-        private void DeleteJob(int idJob)
-        {
-            jobPostHistory.DeleteJob(idJob);
         }
+
         private void dgv_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             int y = e.RowIndex, x = e.ColumnIndex;
@@ -117,7 +112,6 @@ namespace JobHub
             {
                 dgv.Cursor = Cursors.Default;
             }
-
         }
 
         private void dgv_MouseMove(object sender, MouseEventArgs e)
@@ -127,10 +121,6 @@ namespace JobHub
             {
                 dgv.Cursor = Cursors.Default;
             }
-
         }
     }
-
-
- 
 }
