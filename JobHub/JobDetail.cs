@@ -14,6 +14,8 @@ namespace JobHub
     {
         private JobDetailDao jdd = new JobDetailDao();
         private ChangTheSize changTheSize = new ChangTheSize();
+        private Function function= new Function();
+
         private int idJob;
         private string nameJob;
         private int idCompany;
@@ -78,6 +80,10 @@ namespace JobHub
             return x + " - " + y + " triệu";
 
         }
+        public void IncreaseView(int idJob)
+        {
+            jdd.IncreaseView(idJob);
+        }
         public JobDetail GetInfoJobDetailFromDB(int idJob)
         {
             SqlDataReader dr = jdd.GetJobData(idJob);
@@ -110,15 +116,16 @@ namespace JobHub
             job.lblCompanyName.Text = dr["companyName"].ToString();
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
             job.lblJobAddress.Text = dr["jobAddress"].ToString();
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+            
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
             job.IdJob = int.Parse(dr["idJob"].ToString());
             job.IdCompany = int.Parse(dr["idCompany"].ToString());
 
+            job.JobField = dr["jobField"].ToString();
+
             job.loadJobClick += (sender, e) =>
             {
-                job.LoadJobDetail(sender, e, job.IdJob, job.IdCompany, fm);
+                job.LoadJobDetail(sender, e,job.IdJob, job.IdCompany, fm);
             };
             job.JobSavedClick += (sender, e) =>
             {
@@ -129,18 +136,23 @@ namespace JobHub
         public uC_Job InsertInfoAndEventIntoUcJob(SqlDataReader dr, Fmain fm)
         {
             uC_Job job = new uC_Job();
+            int idJob = int.Parse(dr["idJob"].ToString());
+            job.IdJob = idJob;
+
+            string field = dr["jobField"].ToString();
+            job.JobField = field;
+
             job.lblJobName.Text = dr["jobName"].ToString();
 
             job.lblCompanyName.Text = dr["companyName"].ToString();
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
 
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
 
             job.lblJobAddress.Text = dr["jobAddress"].ToString();
-            job.IdJob = int.Parse(dr["idJob"].ToString());
             job.IdCompany = int.Parse(dr["idCompany"].ToString());
+
             job.loadJobClick += (sender, e) =>
             {
                 job.LoadJobDetail(sender, e, job.IdJob, job.IdCompany, fm);
@@ -155,49 +167,100 @@ namespace JobHub
         public uC_NewJob InsertInfoAndEventIntoUcNewJob(SqlDataReader dr, Fmain fm)
         {
             uC_NewJob job = new uC_NewJob();
+            job.IdJob = int.Parse(dr["idJob"].ToString());
+            job.JobField = dr["jobField"].ToString();
+            job.IdCompany = int.Parse(dr["idCompany"].ToString());
             job.lblJobName.Text = dr["jobName"].ToString();
-
+            string field = dr["jobField"].ToString() ;
             job.lblCompanyName.Text = dr["companyName"].ToString();
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
 
-            
-            int idJob = int.Parse(dr["idJob"].ToString());
-            int idCompany = int.Parse(dr["idCompany"].ToString());
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+
             job.loadJobClick += (sender, e) =>
             {
-                job.LoadJobDetail(sender, e, idJob, idCompany, fm);
+                job.LoadJobDetail(sender, e, job.IdJob, job.IdCompany, fm);
             };
             return job;
         }
         public uC_HotJob InsertInfoAndEventIntoUcHotJob(SqlDataReader dr, Fmain fm)
         {
             uC_HotJob job = new uC_HotJob();
+            job.IdJob = int.Parse(dr["idJob"].ToString());
+            job.JobField = dr["jobField"].ToString();
             job.lblJobName.Text = dr["jobName"].ToString();
 
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, dr["companyAvatar"].ToString());
-            job.pbAvatar.Image = Image.FromFile(imagePath);
+            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+
             job.pbAvatar.Height = job.pbAvatar.Width;
-            job.btnField.Text = dr["jobField"].ToString();
-            job.lblNumberOfViews.Text = dr["jobNumberOfViews"]?.ToString() ?? "0";
-            job.lblNumberOfCandidates.Text = dr["jobNumberOfCandidates"].ToString();
-
+            job.lblField.Text = dr["jobField"].ToString();
+            job.lblNumberOfViews.Text = HandleNumbers(int.Parse(dr["jobNumberOfViews"]?.ToString()));
+            
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
-
-            int idJob = int.Parse(dr["idJob"].ToString());
-            int idCompany = int.Parse(dr["idCompany"].ToString());
+            job.IdCompany = int.Parse(dr["idCompany"].ToString()); 
             job.loadJobClick += (sender, e) =>
             {
-                job.LoadJobDetail(sender, e, idJob, idCompany, fm);
+                job.LoadJobDetail(sender, e, job.IdJob, job.IdCompany, fm);
             };
-            /*            changTheSize.setSize(130, 25, job.lblJobName);*/
+            SqlDataReader drCount = jdd.CountCandiDate(job.IdJob);
+            int candidateNumber = 0;
+            if (dr!=null)
+            {
+                
+                drCount.Read();
+                candidateNumber = int.Parse(drCount["CandidateNumbers"].ToString());
+            }
+            job.lblNumberOfCandidates.Text = HandleNumbers(candidateNumber);
+
             return job;
+        }
+        private string HandleNumbers(int number)
+        {
+            StringBuilder str = new StringBuilder();
+            str.Append("");
+            if (number< 1000)
+            {
+                str.Append(number.ToString());
+            }else if(number>=1000&& number < 1000000)
+            {
+                int n1 = number/1000;
+                number %= 1000;
+                int n2 = number/100;
+                
+                str.Append(n1.ToString());
+                if(n2 > 0)
+                {
+                    str.Append(","+n2.ToString());
+                }
+                str.Append(" N");
+            }
+            else
+            {
+                int n1 = number / 1000000;
+                number %= 1000000;
+                int n2 = number / 100000;
+
+                str.Append(n1.ToString());
+                if (n2 > 0)
+                {
+                    str.Append("," + n2.ToString());
+                }
+                str.Append(" Tr");
+            }
+            return str.ToString();
         }
         public void AddJob(JobDetail a)
         {
             jdd.AddJob(a);
+        }
+
+        public void LoadRelatedJobs(int idJob, FlowLayoutPanel flpn, Fmain fm)
+        {
+            SqlDataReader dr = jdd.LoadRelatedJobs(idJob);
+          CompanyDetail companyDetail = new CompanyDetail();
+          companyDetail.LoadUC_JobIntoPanel(dr,flpn,fm);
+
+
+
         }
     }
 }

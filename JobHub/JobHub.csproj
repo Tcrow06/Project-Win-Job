@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="AccountDao.cs" />
     <Compile Include="ApplyWithCV.cs" />
     <Compile Include="ApplyWithCVDAO.cs" />
     <Compile Include="BestApplyDAO.cs" />
@@ -129,6 +130,7 @@
     </Compile>
     <Compile Include="FormHandler.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="MakeCVDAO.cs" />
     <Compile Include="NhapFCustomerMessageBox.cs">
       <SubType>Form</SubType>

@@ -8,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace JobHub
@@ -18,11 +17,14 @@ namespace JobHub
         ApplyWithCV awc = new ApplyWithCV();
         int idJob;
         Fmain fm = new Fmain();
-        bool checkSelectCVInLibrary = true;
-        bool checkSelectUpFileCV = true;
+        bool checkSelectCVInLibrary = false;
+        bool checkSelectUpFileCV = false;
         int idCV = -1;
+        private int heightPanel1;
         Uc_ChoiceCV uc;
-        
+
+        public int HeightPanel1 { get => heightPanel1; set => heightPanel1 = value; }
+
         public FApplyWithCV()
         {
             InitializeComponent();
@@ -55,6 +57,8 @@ namespace JobHub
                 rb2.Checked = false;
                 pn2.BorderColor = Color.Silver;
             }
+            pn1.Cursor = Cursors.Default;
+            pn2.Cursor = Cursors.Hand;
             btnChange.Visible = false;
             pn1.BorderColor = Color.FromArgb(0, 139, 0);
             btnSelectCVImage.FillColor = pnCV2.BorderColor;
@@ -64,10 +68,9 @@ namespace JobHub
         }
         private void pnCV1_Click(object sender, EventArgs e)
         {
-            if (checkSelectCVInLibrary)
+            if (!checkSelectCVInLibrary)
             {
-
-                pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, 200,105);
+                pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, heightPanel1,105);
             }
             else
             {
@@ -94,7 +97,7 @@ namespace JobHub
 
         private void pnCV2_Click(object sender, EventArgs e)
         {
-            if (checkSelectUpFileCV)
+            if (!checkSelectUpFileCV)
             {
                 lblCVName.Visible = false;
                 pbDelete.Visible = false;
@@ -130,19 +133,19 @@ namespace JobHub
         {
             lblCVName.Visible= false;
             lblCVName.Text = "";
-            pbDelete.Visible= false;    
+            pbDelete.Visible= false;
+            checkSelectUpFileCV = true;
         }
 
         private void FApplyWithCV_Load(object sender, EventArgs e)
         {
             pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, 200, 105);
             awc.LoadJobNameOfForm(lblJobName, idJob);
-            awc.LoadForm(this,pnCV1, lblCVOn, lblCVLoad, fm.Account);
+            awc.LoadUC_CV(this,pnCV1, lblCVOn, lblCVLoad, fm.Account);
         }
-        public void LoadFormChoiceCVOn(Uc_ChoiceCV uc1, int idCV)
+        public void LoadFormChoiceCVOn(Uc_ChoiceCV uc1, int idCV, int CVType)
         {
-
-            checkSelectCVInLibrary = false;
+            checkSelectCVInLibrary = true;
             uc = new Uc_ChoiceCV();
             uc = uc1;
             this.idCV = idCV;
@@ -151,66 +154,82 @@ namespace JobHub
             uc.pnChoiceCV.BorderColor = Color.White;
             uc.pnChoiceCV.BorderThickness = 0;
             uc.Size = new Size(200, 20);
-            uc.lblCVName.Text = ": " + uc.lblCVName.Text;
+            lblSelectName.Visible = true;
+            if(CVType == 1)
+            {
+                lblSelectName.Text = "CV đã tải lên: ";
+            }
+            else
+            {
+                lblSelectName.Text = "CV online: ";
+            }
             uc.lblCVName.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            uc.Location = new Point(lblCVOn.Location.X + lblCVOn.Width - 17, lblCVOn.Location.Y - 7);
+            Size textSize = TextRenderer.MeasureText(lblSelectName.Text, lblSelectName.Font);
+            lblSelectName.Size = textSize;
+            uc.Location = new Point(lblSelectName.Location.X + lblSelectName.Width -15, lblSelectName.Location.Y - 7);
+            lblCVOn.Visible = false;
             btnChange.Visible = true;
 
         }
         private void btnApply_Click(object sender, EventArgs e)
         {
-           if(rbChoiceCV1.Checked == true )
+           if(rbChoiceCV1.Checked == true && idCV != -1)
            {
-                if (idCV != -1)
-                {
-                    awc.Apply(idJob, idCV, fm);
+                awc.Apply(idJob, idCV, fm, 0);
+                this.Dispose();
+                    
+           }
+           else if(rbChoiceCV2.Checked == true&& idCV != -1)
+           {
+                    awc.Apply(idJob, idCV, fm, 1);
                     this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng chọn CV để ứng tuyển");
-                }
-           }
-           else
-           {
-               
-           }
-            
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn CV để ứng tuyển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
         }
 
         private void btnChange_Click(object sender, EventArgs e)
         {
+            lblSelectName.Visible = false;
             uc.Dispose();
             foreach (Control control in pnCV1.Controls)
-            {
+             {
                 if (control.Name == "Uc_ChoiceCV")
                 {
                     control.Dispose();  
                 }
             }
-            checkSelectCVInLibrary = true;
+            checkSelectCVInLibrary = false;
             idCV = -1;
-            awc.LoadForm(this, pnCV1, lblCVOn, lblCVLoad, fm.Account);
-            pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, 200, 105);
+            awc.LoadUC_CV(this, pnCV1, lblCVOn, lblCVLoad, fm.Account);
+            pnCVClick(rbChoiceCV1, pnCV1, rbChoiceCV2, pnCV2, heightPanel1, 105);
             
         }
 
         private void btnSelectCVImage_Click(object sender, EventArgs e)
         {
-            checkSelectUpFileCV = false;
+            checkSelectUpFileCV = true;
             pnCVClick(rbChoiceCV2, pnCV2, rbChoiceCV1, pnCV1, 200, 35);
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Tệp PDF|*.pdf|Tệp DOCX|*.docx"; // Chỉ cho phép tải lên tệp PDF hoặc DOCX
+            openFileDialog.Filter = "Tệp PDF (*.pdf)|*.pdf|Tệp Word (*.doc;*.docx)|*.doc;*.docx";
+
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                string filePath = openFileDialog.FileName;
+
+
+
                 lblCVName.Visible = true;
                 pbDelete.Visible = true;
 
-                string filePath = openFileDialog.FileName;
+               
                 lblCVName.Text = Path.GetFileName(filePath);
 
-                // Tạo một thư mục mới nếu nó không tồn tại
                 string folderPath = Path.Combine(Application.StartupPath, "image");
                 if (!Directory.Exists(folderPath))
                 {
@@ -220,7 +239,6 @@ namespace JobHub
                 string fileName = Path.GetFileName(filePath);
                 string destinationPath = GetUniqueFileName(folderPath, fileName);
                 File.Copy(filePath, destinationPath);
-                //byte[] fileData = File.ReadAllBytes(filePath);
             }
         }
     }

@@ -9,7 +9,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace JobHub
 {
@@ -22,11 +23,7 @@ namespace JobHub
 
         public void LoadUc_SlideJob(Guna2Panel pn, Fmain fm)
         {
-            //Chưa hoàn thiện
             SqlDataReader dr = findJobDao.LoadUc_SlideJob();
-            
-
-
         }
         public void LoadFilterUcJob(FlowLayoutPanel flPanel, Fmain fm, bool tech, bool it, bool economy, string industry, string salary,
                                     string address, string experience, string search)
@@ -153,13 +150,11 @@ namespace JobHub
             SqlDataReader dr = findJobDao.LoadUCHotJob();
             pn.SendToBack();
             pn.Controls.Clear();
-            if (dr != null)
+            if (dr.Read())
             {
-                dr.Read();
-             
-                    uC_HotJob job = jobDetail.InsertInfoAndEventIntoUcHotJob(dr, fm);
-                    pn.Controls.Add(job);
-                    job.Dock = DockStyle.Bottom;
+                uC_HotJob job = jobDetail.InsertInfoAndEventIntoUcHotJob(dr, fm);
+                pn.Controls.Add(job);
+                job.Dock = DockStyle.Bottom;
                 dr.Close();
             }
         }

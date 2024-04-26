@@ -80,7 +80,7 @@ namespace JobHub
         }
 
 
-        public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
+/*        public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
         {
             //int i = 1;
             while (dr.Read())
@@ -108,7 +108,7 @@ namespace JobHub
                 sqlConnection.Close();
             }
             dr.Dispose();
-        }
+        }*/
         public bool CheckNull (string sql)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
@@ -119,13 +119,24 @@ namespace JobHub
             return false;
 
         }
-        public DataTable CheckAcount(string sql)
+        public DataTable CheckExists(string sql)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            int i = 4;
-            return dt;
+            try
+            {
+                if (sqlConnection.State != ConnectionState.Open)
+                {
+                    sqlConnection.Open();
+                }
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
 
         }
         public DataRow GetHotUcJob(string sql)

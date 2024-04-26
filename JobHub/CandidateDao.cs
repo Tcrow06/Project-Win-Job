@@ -20,14 +20,28 @@ namespace JobHub
             return db.loadData(sql);
                 
         }
+        //
         public void ApplyJob(int idJob, int idCv, int idCan)
         {
             string sql = string.Format($"insert into AppliedCV(idJob, idCandidate, idCV) values ({idJob}, {idCan}, {idCv})"); 
             db.ThucThi(sql);
         }
-        public void UnApplyJob(int idJob, int idCan, int idCv)
+        public void ApplyJob(int idJob, int idCv, int idCan, int CVType)
         {
-            string sql = string.Format($"delete AppliedCV where idJob = {idJob} and idCandidate = {idCan} and  idCV = {idCv}");
+            string sql = string.Format($"insert into AppliedCV(idJob, idCandidate, idCV, CVType) values ({idJob}, {idCan}, {idCv}, {CVType})");
+            db.ThucThi(sql);
+        }
+        public void AddCandidate(Candidate candidate)
+        {
+            
+            string sql = string.Format($@"insert into Candidate(idCandidate,candidateFirstName,candidateLastname) values(
+                                       {candidate.Id},'{candidate.FirstName}','{candidate.LastName}')");
+            db.ExcuteNoMess(sql);   
+        }
+
+        public void UnApplyJob(int idJob, int idCan)
+        {
+            string sql = string.Format($"delete AppliedCV where idJob = {idJob} and idCandidate = {idCan}");
             db.ThucThi(sql);
         }
         public void SavedJob(int idJob, int idCan)

@@ -44,6 +44,7 @@
             this.pnChoiceCV.Controls.Add(this.btn);
             this.pnChoiceCV.Controls.Add(this.lblView);
             this.pnChoiceCV.Controls.Add(this.lblCVName);
+            this.pnChoiceCV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnChoiceCV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnChoiceCV.Location = new System.Drawing.Point(0, 0);
             this.pnChoiceCV.Name = "pnChoiceCV";

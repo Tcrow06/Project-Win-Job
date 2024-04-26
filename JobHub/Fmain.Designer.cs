@@ -69,7 +69,7 @@
             this.btnFavouriteCV = new Guna.UI2.WinForms.Guna2Button();
             this.pnAcount = new Guna.UI2.WinForms.Guna2Panel();
             this.lblAccName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picDown = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picUp = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnContainMenu = new Guna.UI2.WinForms.Guna2Panel();
@@ -95,7 +95,7 @@
             this.pnSubNav21.SuspendLayout();
             this.pnSubNav31.SuspendLayout();
             this.pnAcount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUp)).BeginInit();
             this.pnContainMenu.SuspendLayout();
@@ -905,14 +905,14 @@
             // 
             this.pnAcount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
             this.pnAcount.Controls.Add(this.lblAccName);
-            this.pnAcount.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnAcount.Controls.Add(this.pbAvatar);
             this.pnAcount.Controls.Add(this.picDown);
             this.pnAcount.Controls.Add(this.picUp);
             this.guna2Transition1.SetDecoration(this.pnAcount, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnAcount.Location = new System.Drawing.Point(565, 247);
             this.pnAcount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnAcount.Name = "pnAcount";
-            this.pnAcount.Size = new System.Drawing.Size(255, 34);
+            this.pnAcount.Size = new System.Drawing.Size(255, 32);
             this.pnAcount.TabIndex = 10;
             // 
             // lblAccName
@@ -929,19 +929,19 @@
             this.lblAccName.TabIndex = 1;
             this.lblAccName.Text = "Lê Trường Sơn";
             // 
-            // guna2CirclePictureBox1
+            // pbAvatar
             // 
-            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 1);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(33, 30);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2Transition1.SetDecoration(this.pbAvatar, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(4, 1);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbAvatar.Size = new System.Drawing.Size(33, 30);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
             // 
             // picDown
             // 
@@ -1265,7 +1265,7 @@
             this.pnSubNav31.ResumeLayout(false);
             this.pnAcount.ResumeLayout(false);
             this.pnAcount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUp)).EndInit();
             this.pnContainMenu.ResumeLayout(false);
@@ -1312,10 +1312,8 @@
         private Guna.UI2.WinForms.Guna2Button btnCvCad;
         private Guna.UI2.WinForms.Guna2Button btnFavouriteCV;
         private Guna.UI2.WinForms.Guna2Button btnBack;
-        private Guna.UI2.WinForms.Guna2Panel pnAcount;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbAvatar;
         private System.Windows.Forms.Label lblAccName;
-        private Guna.UI2.WinForms.Guna2Panel pnContainMenu;
         private Guna.UI2.WinForms.Guna2PictureBox picUp;
         private Guna.UI2.WinForms.Guna2PictureBox picDown;
         private Guna.UI2.WinForms.Guna2Button btnCVMenu;
@@ -1330,5 +1328,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button btnMyCV;
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
+        private Guna.UI2.WinForms.Guna2Panel pnAcount;
+        private Guna.UI2.WinForms.Guna2Panel pnContainMenu;
     }
 }

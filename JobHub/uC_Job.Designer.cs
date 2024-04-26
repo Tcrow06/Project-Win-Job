@@ -56,6 +56,7 @@
             this.ucJob.Controls.Add(this.lblCompanyName);
             this.ucJob.Controls.Add(this.lblJobName);
             this.ucJob.Controls.Add(this.pbAvatar);
+            this.ucJob.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ucJob.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucJob.Location = new System.Drawing.Point(0, 0);
             this.ucJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

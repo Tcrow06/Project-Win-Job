@@ -308,5 +308,12 @@ namespace JobHub
                 }
             }
         }
+
+        public void InsertPicture(string link, Guna2PictureBox pb)
+        {
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
+            string imagePath = Path.Combine(projectFolderPath, link);
+            pb.Image = Image.FromFile(imagePath);
+        }
     }
 }

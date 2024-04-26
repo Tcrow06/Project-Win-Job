@@ -45,6 +45,7 @@
             this.pnContain.Controls.Add(this.lblCompanyName);
             this.pnContain.Controls.Add(this.lblJobName);
             this.pnContain.Controls.Add(this.pbAvatar);
+            this.pnContain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnContain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContain.FillColor = System.Drawing.Color.White;
             this.pnContain.Location = new System.Drawing.Point(0, 0);
