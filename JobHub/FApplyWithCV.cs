@@ -9,12 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace JobHub
 {
     public partial class FApplyWithCV : Form
     {
         private Function function = new Function();
+        private MyCV myCV = new MyCV(); 
         ApplyWithCV awc = new ApplyWithCV();
         int idJob;
         Fmain fm = new Fmain();
@@ -24,6 +26,7 @@ namespace JobHub
         private int heightPanel1;
         Uc_ChoiceCV uc;
         private string pathImage;
+
 
         public int HeightPanel1 { get => heightPanel1; set => heightPanel1 = value; }
 
@@ -116,20 +119,6 @@ namespace JobHub
             this.Close();
         }
 
-        private string GetUniqueFileName(string folderPath, string fileName)
-        {
-            int count = 1;
-            string newFileName = fileName;
-            string extension = Path.GetExtension(fileName);
-            string fileNameOnly = Path.GetFileNameWithoutExtension(fileName);
-
-            while (File.Exists(Path.Combine(folderPath, newFileName)))
-            {
-                newFileName = $"{fileNameOnly} ({count++}){extension}";
-            }
-
-            return Path.Combine(folderPath, newFileName);
-        }
 
         private void pbDelete_Click(object sender, EventArgs e)
         {
@@ -184,8 +173,9 @@ namespace JobHub
            else if(rbChoiceCV2.Checked == true&&lblCVName.Text.Trim().Length>0)
            {
 
-                ///Lưu CV vào bảng CV rồi sau đó lấy ID lại 
-                int idCVSelect = 1;
+                int idCVSelect = myCV.GetIdBeforeSaveNew();
+                myCV.AddImageCVIntoDB(lblCVName.Text.Trim(), fm.Account.Id, idCVSelect, lblCVName.Text.Trim());
+                function.SaveImage(pathImage);
                 awc.Apply(idJob, idCVSelect, fm, 1);
                 function.SaveImage(pathImage);
                 this.Dispose();
@@ -218,7 +208,7 @@ namespace JobHub
         private void btnSelectCVImage_Click(object sender, EventArgs e)
         {
             pnCVClick(rbChoiceCV2, pnCV2, rbChoiceCV1, pnCV1, 200, 35);
-            pathImage = function.SelectPicture();
+            pathImage = function.SelectImage();
             if(pathImage != null)
             {
                 lblCVName.Visible = true;

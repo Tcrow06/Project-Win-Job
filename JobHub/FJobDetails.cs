@@ -21,6 +21,7 @@ namespace JobHub
         private CompanyDetail cdd = new CompanyDetail();
         private JobDetail jdd = new JobDetail(); 
         private ReLoadFormCandidate reLoad = new ReLoadFormCandidate();
+        private Function function = new Function(); 
         private int idJob;
         private int idCp;
         //private string field;
@@ -56,9 +57,7 @@ namespace JobHub
             Size textSize = TextRenderer.MeasureText(lblNumofE.Text, lblNumofE.Font);
 
             lblEmployee.Location = new System.Drawing.Point(lblNumofE.Location.X + textSize.Width, lblNumofE.Location.Y);
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, cd.Avatar);
-            pbCompanyAvatar.Image = Image.FromFile(imagePath);
+            function.InsertImage(cd.Avatar,pbCompanyAvatar);
         }
         private void LoadJobDetails(int idJob)
         {

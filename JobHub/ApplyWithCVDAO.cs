@@ -18,7 +18,7 @@ namespace JobHub
         }
         public SqlDataReader GetUcInfoLoadCV(int idCandidate)
         {
-            string sql = $"select* from CV where CV.idCandidate ={idCandidate}";
+            string sql = $"select* from ImageCV where ImageCV.idCandidate ={idCandidate}";
             return db.loadData(sql);
         }
     }

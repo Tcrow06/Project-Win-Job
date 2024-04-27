@@ -17,6 +17,7 @@ namespace JobHub
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Fmain());
+            //Application.Run(new FConfirmCompanyAccount());
         }
     }
 }

@@ -127,6 +127,7 @@ namespace JobHub
                 else
                 {
                     string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["CVAvatar"].ToString().Trim());
+                    //MessageBox.Show(absoluteImagePath);
                     using (Image image = Image.FromFile(absoluteImagePath))
                     {
                         uC_CV.picAvatarCV.Image = new Bitmap(image);
@@ -309,11 +310,18 @@ namespace JobHub
             }
         }
 
-        public void InsertPicture(string link, Guna2PictureBox pb)
+        public Image InsertImage(string imageName, Guna2PictureBox pb)
         {
-            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-            string imagePath = Path.Combine(projectFolderPath, link);
-            pb.Image = Image.FromFile(imagePath);
+            string imagePath = getPathImage(imageName);
+           // pb.Image = Image.FromFile(imagePath);
+            Image im = new Bitmap(imagePath);
+            pb.Image = im;
+            return im;
+        }
+        public string getPathImage(string link)
+        {
+            string projectFolderPath = Directory.GetParent(Application.StartupPath).Parent.FullName + "\\image";
+            return Path.Combine(projectFolderPath, link);
         }
         private string GetUniqueFileName(string folderPath, string fileName)
         {
@@ -329,14 +337,15 @@ namespace JobHub
 
             return Path.Combine(folderPath, newFileName);
         }
-        public void SaveImage(string imagePath)
+        public string SaveImage(string imagePath)
         {
             string imageFolder = Directory.GetParent(Application.StartupPath).Parent.FullName + "\\image";
             string nameImage = Path.GetFileName(imagePath);
             string destinationPath = GetUniqueFileName(imageFolder, nameImage);
-            File.Copy(imagePath, destinationPath, true);
+            File.Copy(imagePath, destinationPath);
+            return Path.GetFileName(destinationPath);
         }
-        public string SelectPicture()
+        public string SelectImage()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {

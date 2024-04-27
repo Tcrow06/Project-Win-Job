@@ -23,28 +23,7 @@ namespace JobHub
 
         private void btnLoadPicture_Click(object sender, EventArgs e)
         {
-            /*using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Title = "Chọn ảnh";
-                openFileDialog.Filter = "Tất cả các tệp (*.*)|*.*|Ảnh (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        imagePath = openFileDialog.FileName;
-                        Image im = Image.FromFile(imagePath);
-                        txtBusinessLicenseLink.Text = Path.GetFileName(imagePath);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi khi mở tệp ảnh: " + ex.Message);
-                    }
-                }
-            }*/
-            imagePath = function.SelectPicture();
+            imagePath = function.SelectImage();
             if(imagePath != null)
             {
                 txtBusinessLicenseLink.Text = Path.GetFileName(imagePath);
@@ -56,8 +35,10 @@ namespace JobHub
             Company company = new Company(txtEmail.Text.Trim(),txtCompanyName.Text.Trim(),txtManagerName.Text.Trim(), txtBusinessLicenseLink.Text.Trim(),
                                         txtTaxCode.Text.Trim(), txtAddress.Text.Trim() + " " + cbCity.SelectedItem);
             Account account = new Account(txtEmail.Text.ToString(), txtPassword.Text.ToString(), company);
+            string nameImage = function.SaveImage(imagePath);
+            company.BusinessLicense = nameImage;
             recruiter.Register(company, account, this, txtConfirmPassword.Text.Trim());
-            function.SaveImage(imagePath);    
+             
 
                 
         }

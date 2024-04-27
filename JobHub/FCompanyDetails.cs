@@ -62,7 +62,7 @@ namespace JobHub
             lblAddress.Text = company.Address;
             listCompanyImage = company.ListCompanyImage;
 
-            function.InsertPicture(company.Avatar, pbAvatar);
+            function.InsertImage(company.Avatar, pbAvatar);
 
             pbBackground.Size = new Size(100, 100);
             pbBackground.BorderRadius = 50;
@@ -150,7 +150,7 @@ namespace JobHub
             string image = listCompanyImage[indexImage].Trim();
             if(image.Length > 0)
             {
-                function.InsertPicture(image, pictureBox);
+                function.InsertImage(image, pictureBox);
             }
         }
         private void LoadPanelImage()

@@ -85,6 +85,8 @@
     <Compile Include="CompanyDAO.cs" />
     <Compile Include="CompanyDetail.cs" />
     <Compile Include="CompanyDetailDAO.cs" />
+    <Compile Include="EditName.cs" />
+    <Compile Include="EditNameDAO.cs" />
     <Compile Include="FConfirmCompanyAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +125,12 @@
     <Compile Include="FCustomerMessageBox.Designer.cs">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEditName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEditName.Designer.cs">
+      <DependentUpon>FEditName.cs</DependentUpon>
+    </Compile>
     <Compile Include="FFixInfCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +148,7 @@
     <Compile Include="Function.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="MakeCVDAO.cs" />
+    <Compile Include="MyCV.cs" />
     <Compile Include="NhapFCustomerMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,11 +180,11 @@
     <Compile Include="FCVGuide.Designer.cs">
       <DependentUpon>FCVGuide.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCVPicture.cs">
+    <Compile Include="FShowImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCVPicture.Designer.cs">
-      <DependentUpon>FCVPicture.cs</DependentUpon>
+    <Compile Include="FShowImage.Designer.cs">
+      <DependentUpon>FShowImage.cs</DependentUpon>
     </Compile>
     <Compile Include="FFavouriteJob.cs">
       <SubType>Form</SubType>
@@ -268,6 +277,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recruiter.cs" />
     <Compile Include="ReLoadFormCandidate.cs" />
+    <Compile Include="ShowImage.cs" />
+    <Compile Include="ShowImageDao.cs" />
     <Compile Include="Uc_ChoiceCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,6 +302,12 @@
     </Compile>
     <Compile Include="uc_FollowCV.Designer.cs">
       <DependentUpon>uc_FollowCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ImageCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ImageCV.Designer.cs">
+      <DependentUpon>UC_ImageCV.cs</DependentUpon>
     </Compile>
     <Compile Include="uC_Job.cs">
       <SubType>UserControl</SubType>
@@ -363,6 +380,9 @@
     <EmbeddedResource Include="FCustomerMessageBox.resx">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FEditName.resx">
+      <DependentUpon>FEditName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FFixInfCV.resx">
       <DependentUpon>FFixInfCV.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,8 +404,8 @@
     <EmbeddedResource Include="FCVGuide.resx">
       <DependentUpon>FCVGuide.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCVPicture.resx">
-      <DependentUpon>FCVPicture.cs</DependentUpon>
+    <EmbeddedResource Include="FShowImage.resx">
+      <DependentUpon>FShowImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FFavouriteJob.resx">
       <DependentUpon>FFavouriteJob.cs</DependentUpon>
@@ -448,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_FollowCV.resx">
       <DependentUpon>uc_FollowCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ImageCV.resx">
+      <DependentUpon>UC_ImageCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_Job.resx">
       <DependentUpon>uC_Job.cs</DependentUpon>

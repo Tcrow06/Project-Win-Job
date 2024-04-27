@@ -4,21 +4,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 using PdfiumViewer;
 
 namespace JobHub
 {
     public partial class FMyCV : Form
     {
-        DBConection con = new DBConection();
         CVDAO CVDAO = new CVDAO();
+        Function function = new Function(); 
+        private MyCV myCV = new MyCV(); 
 
         private int idImageCV = -1;
         private int id = -1;
@@ -46,36 +45,32 @@ namespace JobHub
         {
             CVDAO.WriteData(dataTable, pnContainCV);
         }
-
-        public void LoadImage(string destinationFilePath)
+        public void LoadImage(DataRow dr)
         {
-            Guna2PictureBox pic = new Guna2PictureBox();
-            pic.Size = new Size(127, 124);
-            pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic.Image = Image.FromFile(Path.Combine(Application.StartupPath, "..\\..\\", destinationFilePath));
-            pnContainImageCV.Controls.Add(pic);
+            myCV.InsertInfoIntoUC(dr["image"].ToString().Trim(), pnContainImageCV, 
+                                        int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim());
         }
         public void WriteData(DataTable dataTable)
         {
             foreach(DataRow dr in dataTable.Rows)
             {
-                LoadImage(dr["image"].ToString().Trim());
+                LoadImage(dr);
             }
         }
         private void FMyCV_Load(object sender, EventArgs e)
         {
-            if(this.Id != -1)
+            LoadForm(); 
+        }
+        public void LoadForm()
+        {
+            if (this.Id != -1)
             {
                 DataTable dt = LoadData($@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, CV.jobName, CV.CVAvatar, CV.idCV
                             FROM Candidate
                             INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
                             where Candidate.idCandidate = {this.Id}");
                 WriteData(dt, pnContainCV);
-                DataTable dt_1 =LoadData($@"SELECT ImageCV.image
-                            FROM ImageCV
-                            INNER JOIN Candidate ON ImageCV.idCandidate = Candidate.idCandidate
-                            where Candidate.idCandidate = {this.Id}");
-                WriteData(dt_1);
+                myCV.LoadImageCV(this.Id, pnContainImageCV);
             }
         }
 
@@ -95,25 +90,18 @@ namespace JobHub
 
         private void btnLoadPDFCV_Click(object sender, EventArgs e)
         {
-            string cmd_select = $@"select max(idImageCV)
-                                   from ImageCV";
-            DataTable dt = CVDAO.ReadData(cmd_select);
-            if (dt == null)
-            {
-                idImageCV = 0;
-            }
-            else
-            {
-                idImageCV = Int32.Parse(dt.Rows[0][0].ToString()) + 1;
-            }
-            string destinationFilePath = CVDAO.SelectImageButton(Application.StartupPath, "image");
-            if(destinationFilePath != null && destinationFilePath != "")
-            {
-                string cmd_insert = $@"insert into ImageCV (image, idCandidate, idImageCV)
-                                 values (N'{destinationFilePath}', {this.Id}, {idImageCV})";
+            idImageCV = myCV.GetIdBeforeSaveNew();
 
-                CVDAO.Insert(cmd_insert);
-                LoadImage(destinationFilePath);
+            string destinationFilePath = function.SelectImage();
+            if (destinationFilePath != null)
+            {
+                string nameImage = function.SaveImage(destinationFilePath);
+
+                if (destinationFilePath != null && destinationFilePath != "")
+                {
+                    myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
+                    myCV.InsertInfoIntoUC(nameImage, pnContainImageCV, idImageCV, nameImage);
+                }
             }
         }
     }

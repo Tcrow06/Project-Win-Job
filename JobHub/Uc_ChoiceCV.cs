@@ -21,8 +21,6 @@ namespace JobHub
         public Uc_ChoiceCV()
         {
             InitializeComponent();
-/*            lblView.Visible = false;
-            btn.Visible = false;*/
         }
 
         private void UCChoiceCV_MouseHover(object sender, EventArgs e)
@@ -50,12 +48,12 @@ namespace JobHub
             Size textSize = TextRenderer.MeasureText(lblCVName.Text, lblCVName.Font);
             uc.lblCVName.Width = textSize.Width+50;
             uc.lblView.Location = new Point(lblCVName.Location.X + uc.lblCVName.Width, lblView.Location.Y);
-            int idCV = int.Parse(dr["idCv"].ToString());
+            int idCV = int.Parse(dr["idCV"].ToString());
             int idCandidate = account.Id;
 
             uc.clickUC += (sender, e) =>
             {
-                uc.LoadCVDetails(sender, e, idCV, idCandidate);
+                    uc.LoadCVDetails(sender, e, idCV, idCandidate, CVType);
             };
             uc.clickBtn += (sender, e) =>
             {
@@ -63,11 +61,19 @@ namespace JobHub
             };
             return uc;
         }
-        public void LoadCVDetails(object sender, EventArgs e, int idCV, int idCandidate)
+        public void LoadCVDetails(object sender, EventArgs e, int idCV, int idCandidate, int CVType)
         {
             FormHandler handler = new FormHandler();
-            handler.OpenNewForm(idCandidate, idCV);
+            if (CVType == 0)
+            {
+                handler.OpenNewForm(idCandidate, idCV);
+            }
+            else
+            {
+                handler.OpenImage(idCandidate, idCV);
+            }
         }
+
         public void LoadSelectedForm(object sender, EventArgs e, Uc_ChoiceCV uc, FApplyWithCV fa, int idCV, int CVType)
         {
             fa.LoadFormChoiceCVOn(uc,idCV, CVType);

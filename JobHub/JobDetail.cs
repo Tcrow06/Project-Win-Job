@@ -117,7 +117,7 @@ namespace JobHub
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
             job.lblJobAddress.Text = dr["jobAddress"].ToString();
             
-            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+            function.InsertImage(dr["companyAvatar"].ToString(), job.pbAvatar);
             job.IdJob = int.Parse(dr["idJob"].ToString());
             job.IdCompany = int.Parse(dr["idCompany"].ToString());
 
@@ -148,7 +148,7 @@ namespace JobHub
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
 
 
-            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+            function.InsertImage(dr["companyAvatar"].ToString(), job.pbAvatar);
 
             job.lblJobAddress.Text = dr["jobAddress"].ToString();
             job.IdCompany = int.Parse(dr["idCompany"].ToString());
@@ -174,7 +174,7 @@ namespace JobHub
             string field = dr["jobField"].ToString() ;
             job.lblCompanyName.Text = dr["companyName"].ToString();
 
-            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+            function.InsertImage(dr["companyAvatar"].ToString(), job.pbAvatar);
 
             job.loadJobClick += (sender, e) =>
             {
@@ -189,7 +189,7 @@ namespace JobHub
             job.JobField = dr["jobField"].ToString();
             job.lblJobName.Text = dr["jobName"].ToString();
 
-            function.InsertPicture(dr["companyAvatar"].ToString(), job.pbAvatar);
+            function.InsertImage(dr["companyAvatar"].ToString(), job.pbAvatar);
 
             job.pbAvatar.Height = job.pbAvatar.Width;
             job.lblField.Text = dr["jobField"].ToString();
