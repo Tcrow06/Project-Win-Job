@@ -96,11 +96,11 @@ namespace JobHub
             if (destinationFilePath != null)
             {
                 string nameImage = function.SaveImage(destinationFilePath);
-
                 if (destinationFilePath != null && destinationFilePath != "")
                 {
-                    myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
-                    myCV.InsertInfoIntoUC(nameImage, pnContainImageCV, idImageCV, nameImage);
+                    if(myCV.InsertInfoIntoUC(nameImage, pnContainImageCV, idImageCV, 
+                        nameImage))
+                        myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
                 }
             }
         }

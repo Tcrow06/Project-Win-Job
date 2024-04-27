@@ -35,9 +35,19 @@ namespace JobHub
             Company company = new Company(txtEmail.Text.Trim(),txtCompanyName.Text.Trim(),txtManagerName.Text.Trim(), txtBusinessLicenseLink.Text.Trim(),
                                         txtTaxCode.Text.Trim(), txtAddress.Text.Trim() + " " + cbCity.SelectedItem);
             Account account = new Account(txtEmail.Text.ToString(), txtPassword.Text.ToString(), company);
-            string nameImage = function.SaveImage(imagePath);
-            company.BusinessLicense = nameImage;
-            recruiter.Register(company, account, this, txtConfirmPassword.Text.Trim());
+            try
+            {
+                Image im = Image.FromFile(imagePath);
+                string nameImage = function.SaveImage(imagePath);
+                company.BusinessLicense = nameImage;
+                recruiter.Register(company, account, this, txtConfirmPassword.Text.Trim());
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi không thể chọn ảnh này");
+            }
+            
+            
              
 
                 

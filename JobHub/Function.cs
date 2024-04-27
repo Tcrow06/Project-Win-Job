@@ -312,11 +312,17 @@ namespace JobHub
 
         public Image InsertImage(string imageName, Guna2PictureBox pb)
         {
-            string imagePath = getPathImage(imageName);
-           // pb.Image = Image.FromFile(imagePath);
-            Image im = new Bitmap(imagePath);
-            pb.Image = im;
-            return im;
+            try
+            {
+                string imagePath = getPathImage(imageName);
+                Image im = new Bitmap(imagePath);
+                pb.Image = im;
+                return im;
+            }catch{
+                MessageBox.Show("Lỗi không thể tải ảnh");
+                return null;
+            }
+
         }
         public string getPathImage(string link)
         {
@@ -327,7 +333,7 @@ namespace JobHub
         {
             int count = 1;
             string newFileName = fileName;
-            string extension = Path.GetExtension(fileName);
+            string extension = ".JPEG";
             string fileNameOnly = Path.GetFileNameWithoutExtension(fileName);
 
             while (File.Exists(Path.Combine(folderPath, newFileName)))

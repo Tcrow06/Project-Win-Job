@@ -21,7 +21,6 @@ namespace JobHub
         }
         private void LoadImage()
         {
-
             try
             {
                 string imagePath = function.getPathImage(nameImage);
@@ -37,10 +36,12 @@ namespace JobHub
                 pbImage.SizeMode = PictureBoxSizeMode.Zoom;
 
                 pbImage.Image = im;
+                function.InsertImage(nameImage, pbImage);
             }
             catch (Exception)
             {
                 MessageBox.Show("Lỗi không tồn tại ảnh trong server", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
         private void FShowImage_Load(object sender, EventArgs e)

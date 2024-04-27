@@ -43,6 +43,7 @@ namespace JobHub
             company.Link = dr["companyLink"].ToString();
             company.Size = dr["companySize"].ToString();
             company.ListCompanyImage = dr["companyImagePath"] != DBNull.Value? dr["companyImagePath"].ToString().Split('+').ToList(): null;
+            company.BusinessLicense = dr["companyBusinessLicense"].ToString();
             return company;
 
         }

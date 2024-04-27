@@ -49,6 +49,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.guna2VSeparator3 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cboCity = new Guna.UI2.WinForms.Guna2Separator();
+            this.cbCity = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnCompanyyAccountRegister = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoadPicture = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
@@ -65,10 +69,6 @@
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.txtCompanyName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cboCity = new Guna.UI2.WinForms.Guna2Separator();
-            this.cbCity = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -338,6 +338,127 @@
             this.guna2Panel3.Size = new System.Drawing.Size(927, 285);
             this.guna2Panel3.TabIndex = 4;
             // 
+            // txtAddress
+            // 
+            this.txtAddress.BorderThickness = 0;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Location = new System.Drawing.Point(472, 144);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PlaceholderText = "Nhập địa chỉ";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(409, 34);
+            this.txtAddress.TabIndex = 26;
+            // 
+            // cboCity
+            // 
+            this.cboCity.Location = new System.Drawing.Point(477, 253);
+            this.cboCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboCity.Name = "cboCity";
+            this.cboCity.Size = new System.Drawing.Size(245, 8);
+            this.cboCity.TabIndex = 25;
+            // 
+            // cbCity
+            // 
+            this.cbCity.BackColor = System.Drawing.Color.Transparent;
+            this.cbCity.BorderThickness = 0;
+            this.cbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCity.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbCity.ItemHeight = 15;
+            this.cbCity.Items.AddRange(new object[] {
+            "TP. Hồ Chí Minh",
+            "An Giang",
+            "Bà Rịa-Vũng Tàu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bạc Liêu",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Định",
+            "Bình Dương",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cần Thơ",
+            "Cao Bằng",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hưng Yên",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên - Huế",
+            "Tiền Giang",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cbCity.Location = new System.Drawing.Point(477, 231);
+            this.cbCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCity.Name = "cbCity";
+            this.cbCity.Size = new System.Drawing.Size(245, 21);
+            this.cbCity.StartIndex = 0;
+            this.cbCity.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(473, 198);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 23);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Tỉnh";
+            // 
             // btnCompanyyAccountRegister
             // 
             this.btnCompanyyAccountRegister.BackColor = System.Drawing.Color.White;
@@ -547,126 +668,6 @@
             this.label5.Size = new System.Drawing.Size(102, 23);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tên công ty";
-            // 
-            // cboCity
-            // 
-            this.cboCity.Location = new System.Drawing.Point(477, 253);
-            this.cboCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboCity.Name = "cboCity";
-            this.cboCity.Size = new System.Drawing.Size(245, 8);
-            this.cboCity.TabIndex = 25;
-            // 
-            // cbCity
-            // 
-            this.cbCity.BackColor = System.Drawing.Color.Transparent;
-            this.cbCity.BorderThickness = 0;
-            this.cbCity.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCity.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCity.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbCity.ItemHeight = 15;
-            this.cbCity.Items.AddRange(new object[] {
-            "TP. Hồ Chí Minh",
-            "An Giang",
-            "Bà Rịa-Vũng Tàu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bạc Liêu",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Định",
-            "Bình Dương",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cần Thơ",
-            "Cao Bằng",
-            "Đà Nẵng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Nội",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hải Phòng",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Phú Yên",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên - Huế",
-            "Tiền Giang",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
-            this.cbCity.Location = new System.Drawing.Point(477, 231);
-            this.cbCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbCity.Name = "cbCity";
-            this.cbCity.Size = new System.Drawing.Size(245, 21);
-            this.cbCity.TabIndex = 24;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(473, 198);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 23);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Tỉnh";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.BorderThickness = 0;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAddress.DefaultText = "";
-            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(472, 144);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "Nhập địa chỉ";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(409, 34);
-            this.txtAddress.TabIndex = 26;
             // 
             // FRecruiter
             // 

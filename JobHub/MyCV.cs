@@ -36,25 +36,29 @@ namespace JobHub
         {
             cvDAO.AddImageCVIntoDB(imageName, idCandiate, idCV, CVName);
         }
-        public void InsertInfoIntoUC(string imageName, FlowLayoutPanel pn, int idCV, string CVName)
+        public bool InsertInfoIntoUC(string imageName, FlowLayoutPanel pn, int idCV, string CVName)
         {
             UC_ImageCV uc = new UC_ImageCV(imageName, idCV);
             uc.lblCVName.Text = Path.GetFileNameWithoutExtension(CVName);
             Image im = function.InsertImage(imageName, uc.pbImage);
-            uc.deleteUC += (sender, e) =>
-            { 
-                DeleteImageCV(idCV, uc, imageName, im);
-            };
-            uc.clickUC += (sender, e) =>
+            if (im !=null)
             {
-                FShowImage fShowImage = new FShowImage(Path.GetFileName(imageName));
-                fShowImage.ShowDialog();
-            };
-            uc.editUC += (sender, e) =>
-            {
-                EditCVName(idCV, uc.lblCVName.Text, uc);
-            };
-            pn.Controls.Add(uc);
+                uc.deleteUC += (sender, e) =>
+                {
+                    DeleteImageCV(idCV, uc, imageName, im);
+                };
+                uc.clickUC += (sender, e) =>
+                {
+                    FShowImage fShowImage = new FShowImage(Path.GetFileName(imageName));
+                    fShowImage.ShowDialog();
+                };
+                uc.editUC += (sender, e) =>
+                {
+                    EditCVName(idCV, uc.lblCVName.Text, uc);
+                };
+                pn.Controls.Add(uc);
+                return true;
+            }return false;
         }
         private void EditCVName(int idCV, string CVName, UC_ImageCV uc)
         {

@@ -15,6 +15,8 @@ namespace JobHub
         Image company = Properties.Resources.enterprise;
         Image file = Properties.Resources.checklist__1_;
         Image delete = Properties.Resources.detele;
+        Image accpet = Properties.Resources.accept;
+        ConfirmCompanyAccount confirm = new ConfirmCompanyAccount();
         public FConfirmCompanyAccount()
         {
             InitializeComponent();
@@ -24,28 +26,21 @@ namespace JobHub
         {
             if (dgv.DisplayedRowCount(false) < dgv.RowCount)
             {
-                dgv.Width = 814;
+                dgv.Width = 825;
             }
             else
             {
-                dgv.Width = 796;
+                dgv.Width = 809;
             }
         }
         private void ConfirmCreationOfCompanyAccount_Load(object sender, EventArgs e)
         {
-            for(int i=0; i< 20; i++)
-            {
-                dgv.Rows.Add(company, "Text2", file, true, delete, true);
-            }
-
-
+            confirm.LoadAllList(dgv);
             SetSizeDGV();
 
         }
         private void LoadFullGridView()
         {
-            //dgv.Rows.Clear();
-            //jobPostHistory.LoadFullGridView(fm.Account.Id, dgv);
             SetSizeDGV();
         }
 
@@ -54,47 +49,40 @@ namespace JobHub
             int x = e.ColumnIndex, y = e.RowIndex;
             if (y >= 0)
             {
-                CustomMessageBox cmb = new CustomMessageBox();
-                if (x == 2)
+                try
                 {
-                    //FPostJob fpj = new FPostJob(fm);
-                    try
+                    int idCompany = int.Parse(dgv.Rows[y].Cells[5].Value.ToString());
+                    if (x == 2)
                     {
-                        int idJob = int.Parse(dgv.Rows[y].Cells[5].Value.ToString());
-
-                        //Hiện form chỉnh sửa tại đây
-                        //fpj.ShowDialog();
-                        LoadFullGridView();
-                    }
-                    catch (Exception)
+                        confirm.ShowBusinessLicense(idCompany);
+                        
+                    }else if (x == 3)
                     {
-                        cmb.Show("Lỗi không thể sửa");
-                    }
-                    finally
-                    {
-
-                    }
-                }
-                if (x == 4)
-                {
-                    try
-                    {
-                        DialogResult result = MessageBox.Show("Xác nhận xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (result == DialogResult.Yes)
+                        DialogResult result = MessageBox.Show("Bạn có chắc chắn xác nhận ?", "Question",
+                                        MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.OK)
                         {
-                            //DeleteJob(int.Parse(dgv.Rows[y].Cells[6].Value.ToString()));
+
+                            confirm.Accept(idCompany);
                             LoadFullGridView();
                         }
 
                     }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.");
+                    else if (x== 4){
+                        DialogResult result = MessageBox.Show("Xác nhận không chấp nhận tài khoản.", "Thông báo",
+                                        MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        if (result == DialogResult.OK)
+                        {
+
+                            confirm.NoAccept(idCompany);
+                            LoadFullGridView();
+                        }
                     }
-                    finally
-                    {
-                    }
+
+                }catch(Exception) {
+                    MessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.");
                 }
+               
 
             }
         }
@@ -102,11 +90,12 @@ namespace JobHub
         private void dgv_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             int y = e.RowIndex, x = e.ColumnIndex;
-            int[] arrX = { 0, 1, 2, 3, };
+            //Cột hàng trên
+            int[] arrX = { 1};
             bool isExists = false;
             if (Array.IndexOf(arrX, x) != -1)
                 isExists = true;
-            if (y >= 0 && (x == 4 || x == 5) || (y == -1 && isExists))
+            if (y >= 0 && (x == 2||x== 3 || x == 4) || (y == -1 && isExists))
                 dgv.Cursor = Cursors.Hand;
             else
             {

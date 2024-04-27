@@ -50,7 +50,6 @@ namespace JobHub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             if(login.CheckAccount(txtLoginEmail.Text.Trim(), txtLoginPassword.Text.Trim(), fm))
             {
                 this.Close();

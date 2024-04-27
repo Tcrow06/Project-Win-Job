@@ -70,7 +70,7 @@ namespace JobHub
             }
             else
             {
-                handler.OpenImage(idCandidate, idCV);
+                handler.OpenImage(idCV);
             }
         }
 

@@ -17,7 +17,7 @@ namespace JobHub
             FCVDetail fCVDetail = new FCVDetail(idCadidate, idCV);
             fCVDetail.ShowDialog();
         }
-        public void OpenImage(int idCadidate, int idCV)
+        public void OpenImage(int idCV)
         {
             string sql = $"select * from ImageCV where idCV = {idCV}";
             SqlDataReader dr = db.loadData(sql);

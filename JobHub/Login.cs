@@ -26,6 +26,12 @@ namespace JobHub
                                 , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 fm.Account= null;
                 return false;
+            }else if(fm.Account.Type == 2)
+            {
+                FConfirmCompanyAccount fConfirmCompanyAccount = new FConfirmCompanyAccount();
+                fConfirmCompanyAccount.ShowDialog();
+                fm.Account = null;
+                return false;
             }
             return true;
         }

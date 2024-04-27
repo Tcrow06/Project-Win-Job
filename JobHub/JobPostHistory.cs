@@ -20,7 +20,6 @@ namespace JobHub
 
         public void LoadFullGridView(int idCompany, DataGridView dgv)
         {
-
             SqlDataReader dr = dao.LoadFullGridView(idCompany);
             while (dr.Read())
             {

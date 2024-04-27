@@ -85,6 +85,8 @@
     <Compile Include="CompanyDAO.cs" />
     <Compile Include="CompanyDetail.cs" />
     <Compile Include="CompanyDetailDAO.cs" />
+    <Compile Include="ConfirmCompanyAccount.cs" />
+    <Compile Include="ConfirmCompanyAccountDAO.cs" />
     <Compile Include="EditName.cs" />
     <Compile Include="EditNameDAO.cs" />
     <Compile Include="FConfirmCompanyAccount.cs">
@@ -673,6 +675,7 @@
     <None Include="Resources\checklist %281%29.png" />
     <None Include="Resources\checklist.png" />
     <None Include="Resources\office-building.png" />
+    <None Include="Resources\accept.png" />
     <Content Include="Resources\user.png" />
     <None Include="Resources\next.png" />
   </ItemGroup>

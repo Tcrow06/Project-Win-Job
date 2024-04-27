@@ -14,7 +14,7 @@ namespace JobHub
             string sql = string.Format($@"insert into Company(idCompany,companyEmail,companyName,companyBusinessLicense
                                             ,companyTaxCode, companyAddress ) values(
                                        {company.Id},'{company.Email}',N'{company.Name}',N'{company.BusinessLicense}',
-                                       '{company.TaxCode}','{company.Address}')");
+                                       '{company.TaxCode}',N'{company.Address}')");
 
             db.ExcuteNoMess(sql);
         }
