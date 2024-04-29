@@ -142,9 +142,9 @@
             this.guna2Transition1.SetDecoration(this.pnControlBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnControlBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnControlBox.Location = new System.Drawing.Point(0, 0);
-            this.pnControlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnControlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnControlBox.Name = "pnControlBox";
-            this.pnControlBox.Size = new System.Drawing.Size(969, 31);
+            this.pnControlBox.Size = new System.Drawing.Size(1292, 38);
             this.pnControlBox.TabIndex = 1;
             // 
             // label1
@@ -154,10 +154,9 @@
             this.guna2Transition1.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 4);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(60, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 29);
+            this.label1.Size = new System.Drawing.Size(87, 36);
             this.label1.TabIndex = 3;
             this.label1.Text = "JobHub";
             // 
@@ -168,10 +167,10 @@
             this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(9, 2);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(32, 27);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 33);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
@@ -186,10 +185,10 @@
             this.guna2Transition1.SetDecoration(this.crtMini, Guna.UI2.AnimatorNS.DecorationType.None);
             this.crtMini.FillColor = System.Drawing.Color.Transparent;
             this.crtMini.IconColor = System.Drawing.Color.White;
-            this.crtMini.Location = new System.Drawing.Point(861, 5);
-            this.crtMini.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.crtMini.Location = new System.Drawing.Point(1148, 6);
+            this.crtMini.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.crtMini.Name = "crtMini";
-            this.crtMini.Size = new System.Drawing.Size(30, 19);
+            this.crtMini.Size = new System.Drawing.Size(40, 23);
             this.crtMini.TabIndex = 2;
             // 
             // guna2ControlBox2
@@ -200,10 +199,10 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(897, 5);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1196, 6);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(30, 19);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(40, 23);
             this.guna2ControlBox2.TabIndex = 2;
             // 
             // guna2ControlBox1
@@ -213,10 +212,10 @@
             this.guna2Transition1.SetDecoration(this.guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(933, 5);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1244, 6);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(30, 19);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(40, 23);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // pnNav
@@ -229,10 +228,10 @@
             this.pnNav.Controls.Add(this.btnBack);
             this.guna2Transition1.SetDecoration(this.pnNav, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnNav.Location = new System.Drawing.Point(0, 31);
-            this.pnNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnNav.Location = new System.Drawing.Point(0, 38);
+            this.pnNav.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnNav.Name = "pnNav";
-            this.pnNav.Size = new System.Drawing.Size(174, 514);
+            this.pnNav.Size = new System.Drawing.Size(232, 633);
             this.pnNav.TabIndex = 2;
             // 
             // pnSubNav1
@@ -243,10 +242,10 @@
             this.pnSubNav1.Controls.Add(this.btnSaveJob);
             this.pnSubNav1.Controls.Add(this.btnAppliedJob);
             this.guna2Transition1.SetDecoration(this.pnSubNav1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav1.Location = new System.Drawing.Point(2, 2);
-            this.pnSubNav1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav1.Location = new System.Drawing.Point(3, 2);
+            this.pnSubNav1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav1.Name = "pnSubNav1";
-            this.pnSubNav1.Size = new System.Drawing.Size(171, 134);
+            this.pnSubNav1.Size = new System.Drawing.Size(228, 165);
             this.pnSubNav1.TabIndex = 3;
             // 
             // btnJob
@@ -266,10 +265,10 @@
             this.btnJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnJob.Image = ((System.Drawing.Image)(resources.GetObject("btnJob.Image")));
             this.btnJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJob.Location = new System.Drawing.Point(2, 2);
-            this.btnJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJob.Location = new System.Drawing.Point(3, 2);
+            this.btnJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJob.Name = "btnJob";
-            this.btnJob.Size = new System.Drawing.Size(168, 29);
+            this.btnJob.Size = new System.Drawing.Size(224, 36);
             this.btnJob.TabIndex = 4;
             this.btnJob.Text = "Việc làm";
             this.btnJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -294,10 +293,10 @@
             this.FindJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.FindJob.Image = ((System.Drawing.Image)(resources.GetObject("FindJob.Image")));
             this.FindJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.FindJob.Location = new System.Drawing.Point(2, 35);
-            this.FindJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FindJob.Location = new System.Drawing.Point(3, 42);
+            this.FindJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FindJob.Name = "FindJob";
-            this.FindJob.Size = new System.Drawing.Size(168, 29);
+            this.FindJob.Size = new System.Drawing.Size(224, 36);
             this.FindJob.TabIndex = 5;
             this.FindJob.Text = "Tìm việc";
             this.FindJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -322,10 +321,10 @@
             this.btnSaveJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnSaveJob.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveJob.Image")));
             this.btnSaveJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSaveJob.Location = new System.Drawing.Point(2, 68);
-            this.btnSaveJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveJob.Location = new System.Drawing.Point(3, 82);
+            this.btnSaveJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSaveJob.Name = "btnSaveJob";
-            this.btnSaveJob.Size = new System.Drawing.Size(168, 29);
+            this.btnSaveJob.Size = new System.Drawing.Size(224, 36);
             this.btnSaveJob.TabIndex = 6;
             this.btnSaveJob.Text = "Việc làm đã Lưu";
             this.btnSaveJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -350,10 +349,10 @@
             this.btnAppliedJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnAppliedJob.Image = ((System.Drawing.Image)(resources.GetObject("btnAppliedJob.Image")));
             this.btnAppliedJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAppliedJob.Location = new System.Drawing.Point(2, 101);
-            this.btnAppliedJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAppliedJob.Location = new System.Drawing.Point(3, 122);
+            this.btnAppliedJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAppliedJob.Name = "btnAppliedJob";
-            this.btnAppliedJob.Size = new System.Drawing.Size(168, 29);
+            this.btnAppliedJob.Size = new System.Drawing.Size(224, 36);
             this.btnAppliedJob.TabIndex = 7;
             this.btnAppliedJob.Text = "Việc làm đã ứng....";
             this.btnAppliedJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -367,10 +366,10 @@
             this.pnSubNav2.Controls.Add(this.btnCvGuide);
             this.pnSubNav2.Controls.Add(this.btnMyCV);
             this.guna2Transition1.SetDecoration(this.pnSubNav2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav2.Location = new System.Drawing.Point(2, 138);
-            this.pnSubNav2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav2.Location = new System.Drawing.Point(3, 169);
+            this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav2.Name = "pnSubNav2";
-            this.pnSubNav2.Size = new System.Drawing.Size(171, 102);
+            this.pnSubNav2.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav2.TabIndex = 5;
             // 
             // btnCV
@@ -390,10 +389,10 @@
             this.btnCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCV.Image = ((System.Drawing.Image)(resources.GetObject("btnCV.Image")));
             this.btnCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCV.Location = new System.Drawing.Point(2, 2);
-            this.btnCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCV.Location = new System.Drawing.Point(3, 2);
+            this.btnCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCV.Name = "btnCV";
-            this.btnCV.Size = new System.Drawing.Size(168, 29);
+            this.btnCV.Size = new System.Drawing.Size(224, 36);
             this.btnCV.TabIndex = 4;
             this.btnCV.Text = "Hồ sơ và CV";
             this.btnCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -418,10 +417,10 @@
             this.btnCvGuide.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCvGuide.Image = ((System.Drawing.Image)(resources.GetObject("btnCvGuide.Image")));
             this.btnCvGuide.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCvGuide.Location = new System.Drawing.Point(2, 35);
-            this.btnCvGuide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCvGuide.Location = new System.Drawing.Point(3, 42);
+            this.btnCvGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCvGuide.Name = "btnCvGuide";
-            this.btnCvGuide.Size = new System.Drawing.Size(168, 29);
+            this.btnCvGuide.Size = new System.Drawing.Size(224, 36);
             this.btnCvGuide.TabIndex = 6;
             this.btnCvGuide.Text = "Cv Guide";
             this.btnCvGuide.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -446,10 +445,10 @@
             this.btnMyCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnMyCV.Image = ((System.Drawing.Image)(resources.GetObject("btnMyCV.Image")));
             this.btnMyCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMyCV.Location = new System.Drawing.Point(2, 68);
-            this.btnMyCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMyCV.Location = new System.Drawing.Point(3, 82);
+            this.btnMyCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMyCV.Name = "btnMyCV";
-            this.btnMyCV.Size = new System.Drawing.Size(168, 29);
+            this.btnMyCV.Size = new System.Drawing.Size(224, 36);
             this.btnMyCV.TabIndex = 7;
             this.btnMyCV.Text = "Cv của tôi";
             this.btnMyCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -463,10 +462,10 @@
             this.pnSubNav3.Controls.Add(this.btnListCompany);
             this.pnSubNav3.Controls.Add(this.btnTopCompany);
             this.guna2Transition1.SetDecoration(this.pnSubNav3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav3.Location = new System.Drawing.Point(2, 242);
-            this.pnSubNav3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav3.Location = new System.Drawing.Point(3, 297);
+            this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav3.Name = "pnSubNav3";
-            this.pnSubNav3.Size = new System.Drawing.Size(171, 102);
+            this.pnSubNav3.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav3.TabIndex = 4;
             // 
             // btnCompany
@@ -486,10 +485,10 @@
             this.btnCompany.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnCompany.Image")));
             this.btnCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCompany.Location = new System.Drawing.Point(2, 2);
-            this.btnCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCompany.Location = new System.Drawing.Point(3, 2);
+            this.btnCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompany.Name = "btnCompany";
-            this.btnCompany.Size = new System.Drawing.Size(168, 29);
+            this.btnCompany.Size = new System.Drawing.Size(224, 36);
             this.btnCompany.TabIndex = 4;
             this.btnCompany.Text = "Công ty";
             this.btnCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -514,10 +513,10 @@
             this.btnListCompany.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnListCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnListCompany.Image")));
             this.btnListCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListCompany.Location = new System.Drawing.Point(2, 35);
-            this.btnListCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListCompany.Location = new System.Drawing.Point(3, 42);
+            this.btnListCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListCompany.Name = "btnListCompany";
-            this.btnListCompany.Size = new System.Drawing.Size(168, 29);
+            this.btnListCompany.Size = new System.Drawing.Size(224, 36);
             this.btnListCompany.TabIndex = 5;
             this.btnListCompany.Text = "Danh sách công...";
             this.btnListCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -543,10 +542,10 @@
             this.btnTopCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnTopCompany.Image")));
             this.btnTopCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTopCompany.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnTopCompany.Location = new System.Drawing.Point(2, 68);
-            this.btnTopCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTopCompany.Location = new System.Drawing.Point(3, 82);
+            this.btnTopCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTopCompany.Name = "btnTopCompany";
-            this.btnTopCompany.Size = new System.Drawing.Size(168, 29);
+            this.btnTopCompany.Size = new System.Drawing.Size(224, 36);
             this.btnTopCompany.TabIndex = 6;
             this.btnTopCompany.Text = "Top công ty";
             this.btnTopCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -571,10 +570,10 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogin.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnLogin.Location = new System.Drawing.Point(2, 354);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(3, 435);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(171, 29);
+            this.btnLogin.Size = new System.Drawing.Size(228, 36);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -599,10 +598,10 @@
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBack.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnBack.Location = new System.Drawing.Point(2, 395);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(3, 485);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(171, 29);
+            this.btnBack.Size = new System.Drawing.Size(228, 36);
             this.btnBack.TabIndex = 6;
             this.btnBack.Text = "Trở về";
             this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -616,10 +615,10 @@
             this.pnSubNav11.Controls.Add(this.btnPostJob);
             this.pnSubNav11.Controls.Add(this.btnListJob);
             this.guna2Transition1.SetDecoration(this.pnSubNav11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav11.Location = new System.Drawing.Point(178, 42);
-            this.pnSubNav11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav11.Location = new System.Drawing.Point(237, 52);
+            this.pnSubNav11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav11.Name = "pnSubNav11";
-            this.pnSubNav11.Size = new System.Drawing.Size(171, 102);
+            this.pnSubNav11.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav11.TabIndex = 6;
             this.pnSubNav11.Visible = false;
             // 
@@ -640,10 +639,10 @@
             this.btnJobCompany.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnJobCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnJobCompany.Image")));
             this.btnJobCompany.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJobCompany.Location = new System.Drawing.Point(2, 2);
-            this.btnJobCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJobCompany.Location = new System.Drawing.Point(3, 2);
+            this.btnJobCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobCompany.Name = "btnJobCompany";
-            this.btnJobCompany.Size = new System.Drawing.Size(168, 29);
+            this.btnJobCompany.Size = new System.Drawing.Size(224, 36);
             this.btnJobCompany.TabIndex = 4;
             this.btnJobCompany.Text = "Việc làm";
             this.btnJobCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -668,10 +667,10 @@
             this.btnPostJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnPostJob.Image = ((System.Drawing.Image)(resources.GetObject("btnPostJob.Image")));
             this.btnPostJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPostJob.Location = new System.Drawing.Point(2, 35);
-            this.btnPostJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPostJob.Location = new System.Drawing.Point(3, 42);
+            this.btnPostJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPostJob.Name = "btnPostJob";
-            this.btnPostJob.Size = new System.Drawing.Size(168, 29);
+            this.btnPostJob.Size = new System.Drawing.Size(224, 36);
             this.btnPostJob.TabIndex = 5;
             this.btnPostJob.Text = "Đăng công việc";
             this.btnPostJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -696,10 +695,10 @@
             this.btnListJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnListJob.Image = ((System.Drawing.Image)(resources.GetObject("btnListJob.Image")));
             this.btnListJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListJob.Location = new System.Drawing.Point(2, 68);
-            this.btnListJob.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListJob.Location = new System.Drawing.Point(3, 82);
+            this.btnListJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListJob.Name = "btnListJob";
-            this.btnListJob.Size = new System.Drawing.Size(168, 29);
+            this.btnListJob.Size = new System.Drawing.Size(224, 36);
             this.btnListJob.TabIndex = 6;
             this.btnListJob.Text = "Danh sách công...";
             this.btnListJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -714,10 +713,10 @@
             this.pnSubNav21.Controls.Add(this.guna2Button3);
             this.pnSubNav21.Controls.Add(this.guna2Button4);
             this.guna2Transition1.SetDecoration(this.pnSubNav21, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav21.Location = new System.Drawing.Point(178, 146);
-            this.pnSubNav21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav21.Location = new System.Drawing.Point(237, 180);
+            this.pnSubNav21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav21.Name = "pnSubNav21";
-            this.pnSubNav21.Size = new System.Drawing.Size(171, 102);
+            this.pnSubNav21.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav21.TabIndex = 7;
             this.pnSubNav21.Visible = false;
             // 
@@ -738,10 +737,10 @@
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(2, 2);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Location = new System.Drawing.Point(3, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(168, 29);
+            this.guna2Button2.Size = new System.Drawing.Size(224, 36);
             this.guna2Button2.TabIndex = 4;
             this.guna2Button2.Text = "Công ty";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -766,15 +765,16 @@
             this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(2, 35);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Location = new System.Drawing.Point(3, 42);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(168, 29);
+            this.guna2Button3.Size = new System.Drawing.Size(224, 36);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Thông tin công...";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.TextOffset = new System.Drawing.Point(30, 0);
             this.guna2HtmlToolTip1.SetToolTip(this.guna2Button3, "Thông tin công ty");
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 
@@ -794,10 +794,10 @@
             this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(2, 68);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button4.Location = new System.Drawing.Point(3, 82);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(168, 29);
+            this.guna2Button4.Size = new System.Drawing.Size(224, 36);
             this.guna2Button4.TabIndex = 6;
             this.guna2Button4.Text = "Danh sách công...";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -811,10 +811,10 @@
             this.pnSubNav31.Controls.Add(this.btnCvCad);
             this.pnSubNav31.Controls.Add(this.btnFavouriteCV);
             this.guna2Transition1.SetDecoration(this.pnSubNav31, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav31.Location = new System.Drawing.Point(178, 257);
-            this.pnSubNav31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav31.Location = new System.Drawing.Point(237, 316);
+            this.pnSubNav31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav31.Name = "pnSubNav31";
-            this.pnSubNav31.Size = new System.Drawing.Size(171, 102);
+            this.pnSubNav31.Size = new System.Drawing.Size(228, 126);
             this.pnSubNav31.TabIndex = 8;
             this.pnSubNav31.Visible = false;
             // 
@@ -835,10 +835,10 @@
             this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.Location = new System.Drawing.Point(2, 2);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button5.Location = new System.Drawing.Point(3, 2);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(168, 29);
+            this.guna2Button5.Size = new System.Drawing.Size(224, 36);
             this.guna2Button5.TabIndex = 4;
             this.guna2Button5.Text = "Ứng viên";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -863,10 +863,10 @@
             this.btnCvCad.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCvCad.Image = ((System.Drawing.Image)(resources.GetObject("btnCvCad.Image")));
             this.btnCvCad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCvCad.Location = new System.Drawing.Point(2, 35);
-            this.btnCvCad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCvCad.Location = new System.Drawing.Point(3, 42);
+            this.btnCvCad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCvCad.Name = "btnCvCad";
-            this.btnCvCad.Size = new System.Drawing.Size(168, 29);
+            this.btnCvCad.Size = new System.Drawing.Size(224, 36);
             this.btnCvCad.TabIndex = 5;
             this.btnCvCad.Text = "Cv ứng viên";
             this.btnCvCad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -891,10 +891,10 @@
             this.btnFavouriteCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnFavouriteCV.Image = ((System.Drawing.Image)(resources.GetObject("btnFavouriteCV.Image")));
             this.btnFavouriteCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFavouriteCV.Location = new System.Drawing.Point(2, 68);
-            this.btnFavouriteCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFavouriteCV.Location = new System.Drawing.Point(3, 82);
+            this.btnFavouriteCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFavouriteCV.Name = "btnFavouriteCV";
-            this.btnFavouriteCV.Size = new System.Drawing.Size(168, 29);
+            this.btnFavouriteCV.Size = new System.Drawing.Size(224, 36);
             this.btnFavouriteCV.TabIndex = 6;
             this.btnFavouriteCV.Text = "Cv yêu thích";
             this.btnFavouriteCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -910,10 +910,10 @@
             this.pnAcount.Controls.Add(this.picDown);
             this.pnAcount.Controls.Add(this.picUp);
             this.guna2Transition1.SetDecoration(this.pnAcount, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnAcount.Location = new System.Drawing.Point(424, 201);
-            this.pnAcount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnAcount.Location = new System.Drawing.Point(565, 247);
+            this.pnAcount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnAcount.Name = "pnAcount";
-            this.pnAcount.Size = new System.Drawing.Size(191, 26);
+            this.pnAcount.Size = new System.Drawing.Size(255, 32);
             this.pnAcount.TabIndex = 10;
             // 
             // lblAccName
@@ -923,11 +923,10 @@
             this.guna2Transition1.SetDecoration(this.lblAccName, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblAccName.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccName.ForeColor = System.Drawing.Color.White;
-            this.lblAccName.Location = new System.Drawing.Point(35, 5);
-            this.lblAccName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAccName.MaximumSize = new System.Drawing.Size(150, 0);
+            this.lblAccName.Location = new System.Drawing.Point(47, 6);
+            this.lblAccName.MaximumSize = new System.Drawing.Size(200, 0);
             this.lblAccName.Name = "lblAccName";
-            this.lblAccName.Size = new System.Drawing.Size(79, 13);
+            this.lblAccName.Size = new System.Drawing.Size(102, 19);
             this.lblAccName.TabIndex = 1;
             this.lblAccName.Text = "Lê Trường Sơn";
             // 
@@ -936,11 +935,11 @@
             this.guna2Transition1.SetDecoration(this.pbAvatar, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
             this.pbAvatar.ImageRotate = 0F;
-            this.pbAvatar.Location = new System.Drawing.Point(3, 1);
-            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbAvatar.Location = new System.Drawing.Point(4, 1);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbAvatar.Size = new System.Drawing.Size(25, 24);
+            this.pbAvatar.Size = new System.Drawing.Size(33, 30);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
@@ -950,10 +949,10 @@
             this.guna2Transition1.SetDecoration(this.picDown, Guna.UI2.AnimatorNS.DecorationType.None);
             this.picDown.Image = ((System.Drawing.Image)(resources.GetObject("picDown.Image")));
             this.picDown.ImageRotate = 0F;
-            this.picDown.Location = new System.Drawing.Point(175, 5);
-            this.picDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picDown.Location = new System.Drawing.Point(233, 6);
+            this.picDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picDown.Name = "picDown";
-            this.picDown.Size = new System.Drawing.Size(10, 11);
+            this.picDown.Size = new System.Drawing.Size(13, 14);
             this.picDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDown.TabIndex = 11;
             this.picDown.TabStop = false;
@@ -964,10 +963,10 @@
             this.guna2Transition1.SetDecoration(this.picUp, Guna.UI2.AnimatorNS.DecorationType.None);
             this.picUp.Image = ((System.Drawing.Image)(resources.GetObject("picUp.Image")));
             this.picUp.ImageRotate = 0F;
-            this.picUp.Location = new System.Drawing.Point(175, 6);
-            this.picUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picUp.Location = new System.Drawing.Point(233, 7);
+            this.picUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picUp.Name = "picUp";
-            this.picUp.Size = new System.Drawing.Size(10, 11);
+            this.picUp.Size = new System.Drawing.Size(13, 14);
             this.picUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUp.TabIndex = 10;
             this.picUp.TabStop = false;
@@ -983,10 +982,10 @@
             this.pnContainMenu.Controls.Add(this.btnSetting);
             this.pnContainMenu.Controls.Add(this.btnJobMenu);
             this.guna2Transition1.SetDecoration(this.pnContainMenu, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnContainMenu.Location = new System.Drawing.Point(422, 229);
-            this.pnContainMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnContainMenu.Location = new System.Drawing.Point(563, 282);
+            this.pnContainMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnContainMenu.Name = "pnContainMenu";
-            this.pnContainMenu.Size = new System.Drawing.Size(191, 154);
+            this.pnContainMenu.Size = new System.Drawing.Size(255, 190);
             this.pnContainMenu.TabIndex = 10;
             this.pnContainMenu.Visible = false;
             // 
@@ -1005,10 +1004,10 @@
             this.btnOut.FillColor = System.Drawing.Color.White;
             this.btnOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnOut.Location = new System.Drawing.Point(3, 115);
-            this.btnOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOut.Location = new System.Drawing.Point(4, 142);
+            this.btnOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(184, 37);
+            this.btnOut.Size = new System.Drawing.Size(245, 46);
             this.btnOut.TabIndex = 14;
             this.btnOut.Text = "Đăng xuất";
             this.btnOut.Click += new System.EventHandler(this.btnLogin_Click);
@@ -1028,10 +1027,10 @@
             this.btnCVMenu.FillColor = System.Drawing.Color.White;
             this.btnCVMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCVMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnCVMenu.Location = new System.Drawing.Point(3, 39);
-            this.btnCVMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCVMenu.Location = new System.Drawing.Point(4, 48);
+            this.btnCVMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCVMenu.Name = "btnCVMenu";
-            this.btnCVMenu.Size = new System.Drawing.Size(184, 37);
+            this.btnCVMenu.Size = new System.Drawing.Size(245, 46);
             this.btnCVMenu.TabIndex = 12;
             this.btnCVMenu.Text = "Hồ sơ và CV";
             // 
@@ -1050,10 +1049,10 @@
             this.btnSetting.FillColor = System.Drawing.Color.White;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnSetting.Location = new System.Drawing.Point(3, 76);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSetting.Location = new System.Drawing.Point(4, 94);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(184, 37);
+            this.btnSetting.Size = new System.Drawing.Size(245, 46);
             this.btnSetting.TabIndex = 13;
             this.btnSetting.Text = "Cài đặt";
             // 
@@ -1072,10 +1071,10 @@
             this.btnJobMenu.FillColor = System.Drawing.Color.White;
             this.btnJobMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnJobMenu.Location = new System.Drawing.Point(3, 2);
-            this.btnJobMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJobMenu.Location = new System.Drawing.Point(4, 2);
+            this.btnJobMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobMenu.Name = "btnJobMenu";
-            this.btnJobMenu.Size = new System.Drawing.Size(184, 37);
+            this.btnJobMenu.Size = new System.Drawing.Size(245, 46);
             this.btnJobMenu.TabIndex = 11;
             this.btnJobMenu.Text = "Việc làm";
             // 
@@ -1085,10 +1084,10 @@
             this.pnSubNav10.Controls.Add(this.btnJob1);
             this.pnSubNav10.Controls.Add(this.guna2Button6);
             this.guna2Transition1.SetDecoration(this.pnSubNav10, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav10.Location = new System.Drawing.Point(629, 32);
-            this.pnSubNav10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav10.Location = new System.Drawing.Point(839, 39);
+            this.pnSubNav10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav10.Name = "pnSubNav10";
-            this.pnSubNav10.Size = new System.Drawing.Size(171, 69);
+            this.pnSubNav10.Size = new System.Drawing.Size(228, 85);
             this.pnSubNav10.TabIndex = 8;
             // 
             // btnJob1
@@ -1108,10 +1107,10 @@
             this.btnJob1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnJob1.Image = ((System.Drawing.Image)(resources.GetObject("btnJob1.Image")));
             this.btnJob1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJob1.Location = new System.Drawing.Point(2, 2);
-            this.btnJob1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJob1.Location = new System.Drawing.Point(3, 2);
+            this.btnJob1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJob1.Name = "btnJob1";
-            this.btnJob1.Size = new System.Drawing.Size(168, 29);
+            this.btnJob1.Size = new System.Drawing.Size(224, 36);
             this.btnJob1.TabIndex = 4;
             this.btnJob1.Text = "Việc làm";
             this.btnJob1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1136,10 +1135,10 @@
             this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.Location = new System.Drawing.Point(2, 35);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button6.Location = new System.Drawing.Point(3, 42);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(168, 29);
+            this.guna2Button6.Size = new System.Drawing.Size(224, 36);
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Tìm việc";
             this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1152,10 +1151,10 @@
             this.pnSubNav20.Controls.Add(this.btnCV1);
             this.pnSubNav20.Controls.Add(this.guna2Button8);
             this.guna2Transition1.SetDecoration(this.pnSubNav20, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav20.Location = new System.Drawing.Point(629, 103);
-            this.pnSubNav20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
+            this.pnSubNav20.Location = new System.Drawing.Point(839, 127);
+            this.pnSubNav20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav20.Name = "pnSubNav20";
-            this.pnSubNav20.Size = new System.Drawing.Size(171, 68);
+            this.pnSubNav20.Size = new System.Drawing.Size(228, 84);
             this.pnSubNav20.TabIndex = 8;
             // 
             // btnCV1
@@ -1175,10 +1174,10 @@
             this.btnCV1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnCV1.Image = ((System.Drawing.Image)(resources.GetObject("btnCV1.Image")));
             this.btnCV1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCV1.Location = new System.Drawing.Point(2, 2);
-            this.btnCV1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCV1.Location = new System.Drawing.Point(3, 2);
+            this.btnCV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCV1.Name = "btnCV1";
-            this.btnCV1.Size = new System.Drawing.Size(168, 29);
+            this.btnCV1.Size = new System.Drawing.Size(224, 36);
             this.btnCV1.TabIndex = 4;
             this.btnCV1.Text = "Hồ sơ và CV";
             this.btnCV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1203,10 +1202,10 @@
             this.guna2Button8.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
             this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.Location = new System.Drawing.Point(2, 35);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button8.Location = new System.Drawing.Point(3, 42);
+            this.guna2Button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(168, 29);
+            this.guna2Button8.Size = new System.Drawing.Size(224, 36);
             this.guna2Button8.TabIndex = 6;
             this.guna2Button8.Text = "Cv Guide";
             this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1233,10 +1232,10 @@
             // 
             // Fmain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(969, 545);
+            this.ClientSize = new System.Drawing.Size(1292, 671);
             this.Controls.Add(this.pnAcount);
             this.Controls.Add(this.pnContainMenu);
             this.Controls.Add(this.pnSubNav31);
@@ -1249,7 +1248,7 @@
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Fmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";

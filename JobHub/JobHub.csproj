@@ -94,6 +94,8 @@
     <Compile Include="CompanyDetailDAO.cs" />
     <Compile Include="ConfirmCompanyAccount.cs" />
     <Compile Include="ConfirmCompanyAccountDAO.cs" />
+    <Compile Include="EditCompany.cs" />
+    <Compile Include="EditCompanyDao.cs" />
     <Compile Include="EditName.cs" />
     <Compile Include="EditNameDAO.cs" />
     <Compile Include="FCharts.cs">
@@ -101,6 +103,12 @@
     </Compile>
     <Compile Include="FCharts.Designer.cs">
       <DependentUpon>FCharts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompanyDetails2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompanyDetails2.Designer.cs">
+      <DependentUpon>FCompanyDetails2.cs</DependentUpon>
     </Compile>
     <Compile Include="FConfirmCompanyAccount.cs">
       <SubType>Form</SubType>
@@ -139,6 +147,12 @@
     </Compile>
     <Compile Include="FCustomerMessageBox.Designer.cs">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEditCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEditCompany.Designer.cs">
+      <DependentUpon>FEditCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="FEditName.cs">
       <SubType>Form</SubType>
@@ -383,6 +397,9 @@
     <EmbeddedResource Include="FCharts.resx">
       <DependentUpon>FCharts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCompanyDetails2.resx">
+      <DependentUpon>FCompanyDetails2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FConfirmCompanyAccount.resx">
       <DependentUpon>FConfirmCompanyAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FCustomerMessageBox.resx">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEditCompany.resx">
+      <DependentUpon>FEditCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEditName.resx">
       <DependentUpon>FEditName.cs</DependentUpon>

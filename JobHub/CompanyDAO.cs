@@ -12,9 +12,9 @@ namespace JobHub
         public void AddCompany(Company company)
         {
             string sql = string.Format($@"insert into Company(idCompany,companyEmail,companyName,companyBusinessLicense
-                                            ,companyTaxCode, companyAddress ) values(
+                                            ,companyTaxCode, companyAddress,companyLeaderName ) values(
                                        {company.Id},'{company.Email}',N'{company.Name}',N'{company.BusinessLicense}',
-                                       '{company.TaxCode}',N'{company.Address}')");
+                                       '{company.TaxCode}',N'{company.Address}',N'{company.LeaderName}')");
 
             db.ExcuteNoMess(sql);
         }
