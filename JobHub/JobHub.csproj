@@ -51,18 +51,21 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
-      <HintPath>..\packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
-    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +75,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
@@ -81,6 +86,8 @@
     <Compile Include="BestApplyDAO.cs" />
     <Compile Include="CandidateDao.cs" />
     <Compile Include="ChangTheSize.cs" />
+    <Compile Include="Charts.cs" />
+    <Compile Include="ChartsDAO.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CompanyDAO.cs" />
     <Compile Include="CompanyDetail.cs" />
@@ -89,6 +96,12 @@
     <Compile Include="ConfirmCompanyAccountDAO.cs" />
     <Compile Include="EditName.cs" />
     <Compile Include="EditNameDAO.cs" />
+    <Compile Include="FCharts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCharts.Designer.cs">
+      <DependentUpon>FCharts.cs</DependentUpon>
+    </Compile>
     <Compile Include="FConfirmCompanyAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -367,6 +380,9 @@
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="FCharts.resx">
+      <DependentUpon>FCharts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FConfirmCompanyAccount.resx">
       <DependentUpon>FConfirmCompanyAccount.cs</DependentUpon>
     </EmbeddedResource>

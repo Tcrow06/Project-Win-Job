@@ -38,7 +38,7 @@ namespace JobHub
         private void Fmain_Load(object sender, EventArgs e)
         {
             this.Height = 550;
-            FViews view = new FViews();
+            FCharts view = new FCharts();
             FormAndInfoCandidate fai = new FormAndInfoCandidate(view);
             this.Forms.Push(fai);
             view.MdiParent = this;

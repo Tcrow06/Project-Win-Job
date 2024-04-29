@@ -118,7 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2CirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picLoadImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAG
+        HwAABh8BsuLh/AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADUSURBVDhPpdOx
+        CcJgEIbhQ7CKlaXZQbAyG1g4gBYWYil29mLhDI7hNMEVbMRWCyF+L0T4vQtosHjgeP87bIxVVfWXGMxy
+        2creoeVhPwSzUhialGG/PipkLitJD5qww25R39pR/NKvuLV7Et4ecpBJjZnm97htjCPpyLTGTGv6sRB2
+        0pVz0phpvKW7CGEsM9dA4833EIaydg003nwPYSM9uSWNmcZbuosQrjKQvvDvAzONN79vTxdwkYVwBGaa
+        3+PWTkloi1vLZCn+4/mGm+zjw2ivsheuPTL65eFgDAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="picAvarta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFKQSURBVHhe7b0J

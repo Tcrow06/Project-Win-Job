@@ -58,7 +58,8 @@ namespace JobHub
                 };
                 pn.Controls.Add(uc);
                 return true;
-            }return false;
+            }
+            return false;
         }
         private void EditCVName(int idCV, string CVName, UC_ImageCV uc)
         {

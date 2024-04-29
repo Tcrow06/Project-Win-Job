@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PdfiumViewer;
+using Guna.UI2.WinForms;
 
 namespace JobHub
 {
@@ -41,9 +41,9 @@ namespace JobHub
             
         }
 
-        public void WriteData(DataTable dataTable, FlowLayoutPanel fpn)
+        public void WriteData(DataTable dataTable, FlowLayoutPanel fpn, Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
         {
-            CVDAO.WriteData(dataTable, pnContainCV);
+            CVDAO.WriteData(dataTable, pnContainCV, lblNameCandidate, picAvarta);
         }
         public void LoadImage(DataRow dr)
         {
@@ -65,11 +65,11 @@ namespace JobHub
         {
             if (this.Id != -1)
             {
-                DataTable dt = LoadData($@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, CV.jobName, CV.CVAvatar, CV.idCV
+                DataTable dt = LoadData($@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, Candidate.candidateAvatar, CV.jobName, CV.CVAvatar, CV.idCV
                             FROM Candidate
                             INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
                             where Candidate.idCandidate = {this.Id}");
-                WriteData(dt, pnContainCV);
+                WriteData(dt, pnContainCV, lblNameCandidate, picAvarta);
                 myCV.LoadImageCV(this.Id, pnContainImageCV);
             }
         }
@@ -84,7 +84,7 @@ namespace JobHub
             this.Hide();
             make.ShowDialog();
             DataTable dt = CVDAO.ReadData(cmd);
-            CVDAO.WriteData(dt, pnContainCV);
+            CVDAO.WriteData(dt, pnContainCV, lblNameCandidate, picAvarta);
             this.Show();
         }
 
@@ -103,6 +103,49 @@ namespace JobHub
                         myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
                 }
             }
+        }
+
+        private void updateCV(string path)
+        {
+            try
+            {
+                string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", path);
+                if (File.Exists(absoluteImagePath))
+                {
+                    Image img = Image.FromFile(absoluteImagePath);
+                    picAvarta.Image = img;
+                    string cmd_update = $@"update Candidate
+                                   set Candidate.candidateAvatar = N'{path}'
+                                   from Candidate
+                                   where Candidate.idCandidate = {this.Id}";
+                    CVDAO.Update(cmd_update);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy tập tin ảnh.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+        private void SelectImageButton()
+        {
+
+            string path = CVDAO.SelectImageButton(Application.StartupPath, "Resources");
+            if (path != null)
+            {
+                updateCV(path);
+            }
+            else
+            {
+                MessageBox.Show("Đã xảy ra lỗi");
+            }
+        }
+        private void picLoadImage_Click(object sender, EventArgs e)
+        {
+            SelectImageButton();
         }
     }
 }

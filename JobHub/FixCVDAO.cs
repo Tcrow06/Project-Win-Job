@@ -42,7 +42,7 @@ namespace JobHub
         public void UpdateData(DetailCV detailCV)
         {
             string cmd = $@"UPDATE CV
-                        SET CV.CVAvatar = '{detailCV.CVAvatar1}', CV.jobName = N'{detailCV.JobName}', CV.CVDescription = N'{detailCV.Experience}', CV.Skill = N'{detailCV.Skill}'
+                        SET CV.jobName = N'{detailCV.JobName}', CV.CVDescription = N'{detailCV.Experience}', CV.Skill = N'{detailCV.Skill}'
                         WHERE CV.idCV = {this.idCV} and CV.idCandidate = {idCadidate};";
             function.Update(cmd);
         }

@@ -33,6 +33,10 @@ namespace JobHub
 
         }
 
+        public void WriteData(DataTable dt, Label lblTotalJob)
+        {
+            lblTotalJob.Text = dt.Rows[0][0].ToString();
+        }
         public string SelectImageButton(string pathRoot, string dir)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -102,17 +106,20 @@ namespace JobHub
                 fpnJob.Controls.Add(job);
             }
         }
+
         public DataTable ReadData(string cmd)
         {
             return conection.ExcutionReadData(cmd);
         }
 
-        public void WriteData(DataTable dt, FlowLayoutPanel fpn)
+        public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameAvarta, Guna2CirclePictureBox picAvarta)
         {
             FormHandler handler = new FormHandler();
             fpn.Controls.Clear();
             foreach (DataRow dr in dt.Rows)
             {
+                lblNameAvarta.Text = dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
+                
                 uC_CV uC_CV = new uC_CV();
                 uC_CV.lblFirstName.Text = dr["candidateFirstName"].ToString();
                 uC_CV.lblLastName.Text = dr["candidateLastName"].ToString();
@@ -127,10 +134,22 @@ namespace JobHub
                 else
                 {
                     string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["CVAvatar"].ToString().Trim());
-                    //MessageBox.Show(absoluteImagePath);
                     using (Image image = Image.FromFile(absoluteImagePath))
                     {
                         uC_CV.picAvatarCV.Image = new Bitmap(image);
+                    }
+                }
+
+                if (dr["candidateAvatar"].ToString().Trim() == "")
+                {
+                    picAvarta.Image = Resources.iconuser;
+                }
+                else
+                {
+                    string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["candidateAvatar"].ToString().Trim());
+                    using (Image image = Image.FromFile(absoluteImagePath))
+                    {
+                        picAvarta.Image = new Bitmap(image);
                     }
                 }
                 uC_CV.OpenForm += (sender, e) =>
@@ -139,8 +158,6 @@ namespace JobHub
                     int idCV = Int32.Parse(dr["idCV"].ToString());
                     handler.OpenNewForm(idCandiate, idCV);
                 };
-
-
                 fpn.Controls.Add(uC_CV);
             }
         }

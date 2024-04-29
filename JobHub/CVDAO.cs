@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -25,9 +26,9 @@ namespace JobHub
         {
             function.Insert(cmd);   
         }
-        public void WriteData(DataTable dt, FlowLayoutPanel fpn)
+        public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
         {
-             function.WriteData(dt, fpn);
+             function.WriteData(dt, fpn, lblNameCandidate, picAvarta);
         }
 
         public string SelectImageButton(string pathRoot, string dir)
