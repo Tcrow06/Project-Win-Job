@@ -14,11 +14,13 @@ namespace JobHub
 {
     public partial class FCharts : Form
     {
+        Fmain Fmain;
         Charts charts = new Charts();
         ChartsDAO ChartsDAO = new ChartsDAO();
-        public FCharts()
+        public FCharts(Fmain fm)
         {
             InitializeComponent();
+            this.Fmain = fm;
         }
         
         private void ReadData(string cmd, Label label)
@@ -46,6 +48,18 @@ namespace JobHub
         {
             LoadData();
         }
-   
+
+        private void btnMoreJob_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FJob job = new FJob(Fmain);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            Fmain.forms.Push(fai);
+            Fmain.loadForm(job);
+        }
     }
 }

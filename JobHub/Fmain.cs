@@ -14,7 +14,7 @@ namespace JobHub
 {
     public partial class Fmain : Form
     {
-        private Stack<FormAndInfoCandidate> forms = new Stack<FormAndInfoCandidate>();
+        public Stack<FormAndInfoCandidate> forms = new Stack<FormAndInfoCandidate>();
         private Account account;
         private ReLoadFormCandidate reLoadForm = new ReLoadFormCandidate();
         private Candidate cd = new Candidate();
@@ -38,7 +38,7 @@ namespace JobHub
         private void Fmain_Load(object sender, EventArgs e)
         {
             this.Height = 550;
-            FCharts view = new FCharts();
+            FCharts view = new FCharts(this);
             FormAndInfoCandidate fai = new FormAndInfoCandidate(view);
             this.Forms.Push(fai);
             view.MdiParent = this;
@@ -59,7 +59,7 @@ namespace JobHub
         {
             DeleteChildForm();
             this.Height = 550;
-            FViews view = new FViews();
+            FCharts view = new FCharts(this);
             this.loadForm(view);
         }
         public void LoadTaskBar()
@@ -383,9 +383,9 @@ namespace JobHub
             }
             else if (form.Name == "FJob")
                 resize(1173, 598);
-            else if (form.Name == "FViews")
+            else if (form.Name == "FCharts")
             {
-                resize(900, 500);
+                resize(1050, 500);
             }
             else if (form.Name == "FCompanyDetails")
             {
@@ -433,7 +433,7 @@ namespace JobHub
             }
             else
             {
-                    FViews fv = new FViews();
+                    FCharts fv = new FCharts(this);
                     Forms.Clear();
                     this.loadForm(fv);
             }
@@ -523,7 +523,7 @@ namespace JobHub
         {
             Forms.Clear();
             this.Account = null;
-            this.loadForm(new FViews());
+            this.loadForm(new FCharts(this));
             btnLogin.Text = "Đăng nhập";
             LoadTaskBar();  
         }
@@ -563,6 +563,20 @@ namespace JobHub
             resize(fBest.Width + 200, fBest.Height + 50);
             fBest.Show();
             fBest.BringToFront();
+        }
+
+        private void btnJobMenu_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FJob job = new FJob(this);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            forms.Push(fai);
+            this.loadForm(job);
+            picDown_Click(sender, e);
         }
 
         private void btnTopCompany_Click(object sender, EventArgs e)

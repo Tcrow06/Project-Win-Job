@@ -277,12 +277,6 @@
     <Compile Include="FRecruiter.Designer.cs">
       <DependentUpon>FRecruiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="FViews.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FViews.Designer.cs">
-      <DependentUpon>FViews.cs</DependentUpon>
-    </Compile>
     <Compile Include="JobDetail.cs" />
     <Compile Include="JobDetailDAO.cs" />
     <Compile Include="JobPostHistory.cs" />
@@ -461,9 +455,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRecruiter.resx">
       <DependentUpon>FRecruiter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FViews.resx">
-      <DependentUpon>FViews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

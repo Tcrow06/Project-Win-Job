@@ -99,7 +99,7 @@ namespace JobHub
                     Label ="",
                     Y = double.Parse(dr["avg"].ToString().Trim()),
                 });
-                Thread.Sleep(500);
+                Thread.Sleep(100);
             } 
         }
     }
