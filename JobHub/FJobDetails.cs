@@ -207,7 +207,6 @@ namespace JobHub
                         cd.UnApplyJob(idJob, fm.Account.Id);
                         ApplyStatus();
                     }
-                    
                 }
                 else
                 {

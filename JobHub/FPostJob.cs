@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -345,6 +346,21 @@ namespace JobHub
 
         }
 
+        private void AddPlusAtLineStart(Guna2TextBox textBox1)
+        {
+            string[] lines = textBox1.Lines;
+            for (int i = 1; i < lines.Length; i++)
+            {
+                if (!lines[i].StartsWith("~") && !string.IsNullOrWhiteSpace(lines[i]))
+                {
+                    lines[i] = "~" + lines[i];
+                }
+            }
+            textBox1.Lines = lines;
+        }
+
+
+
         private void postJobBtn_Click(object sender, EventArgs e)
         {
             string sql = "SELECT MAX(idJob) FROM Job";
@@ -377,6 +393,11 @@ namespace JobHub
                 minSalary = 0;
                 maxSalary = (float)Convert.ToDouble(txtMaxSalary.Text);
             }
+
+            AddPlusAtLineStart(txtDescription);
+            AddPlusAtLineStart(txtRequire);
+            AddPlusAtLineStart(txtBenefit);
+
 
             JobDetail A = new JobDetail(storeMaxId, txtName.Text, fm.Account.Id, cboSalary.SelectedItem.ToString(), cboAddress.SelectedItem.ToString(), txtDescription.Text, txtExp.Text, txtRequire.Text, txtBenefit.Text, cboCatogory.Text, DateTime.Today, dtpDateDead.Value, minSalary, maxSalary);
             jd.Them(A);

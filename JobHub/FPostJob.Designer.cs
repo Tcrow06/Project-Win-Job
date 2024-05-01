@@ -46,7 +46,6 @@
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.postJobBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -62,13 +61,13 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtMaxSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMinSalary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cboAddress = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboSalary = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpDateDead = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cboAddress = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboSalary = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtMinSalary = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMaxSalary = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.pnCall.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -318,27 +317,6 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Miêu tả";
             // 
-            // btnBack
-            // 
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.Transparent;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBack.Location = new System.Drawing.Point(5, 409);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(216, 38);
-            this.btnBack.TabIndex = 11;
-            this.btnBack.Text = "Thoát";
-            this.btnBack.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBack.TextOffset = new System.Drawing.Point(15, 0);
-            // 
             // postJobBtn
             // 
             this.postJobBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -377,7 +355,6 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(77)))));
-            this.guna2Panel1.Controls.Add(this.btnBack);
             this.guna2Panel1.Controls.Add(this.postJobBtn);
             this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
             this.guna2Panel1.Controls.Add(this.pnCall);
@@ -550,40 +527,50 @@
             this.guna2Panel2.Size = new System.Drawing.Size(643, 463);
             this.guna2Panel2.TabIndex = 9;
             // 
-            // label11
+            // txtMaxSalary
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(315, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(145, 28);
-            this.label11.TabIndex = 66;
-            this.label11.Text = "Chuyên ngành";
+            this.txtMaxSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaxSalary.DefaultText = "";
+            this.txtMaxSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaxSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaxSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaxSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaxSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaxSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaxSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaxSalary.Location = new System.Drawing.Point(313, 772);
+            this.txtMaxSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaxSalary.Multiline = true;
+            this.txtMaxSalary.Name = "txtMaxSalary";
+            this.txtMaxSalary.PasswordChar = '\0';
+            this.txtMaxSalary.PlaceholderText = "Mức lương tối đa";
+            this.txtMaxSalary.SelectedText = "";
+            this.txtMaxSalary.Size = new System.Drawing.Size(263, 39);
+            this.txtMaxSalary.TabIndex = 70;
+            this.txtMaxSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxSalary_KeyPress);
             // 
-            // label8
+            // txtMinSalary
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(6, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 28);
-            this.label8.TabIndex = 65;
-            this.label8.Text = "Hạn chót apply";
-            // 
-            // dtpDateDead
-            // 
-            this.dtpDateDead.Checked = true;
-            this.dtpDateDead.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpDateDead.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDateDead.Location = new System.Drawing.Point(9, 128);
-            this.dtpDateDead.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDateDead.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDateDead.Name = "dtpDateDead";
-            this.dtpDateDead.Size = new System.Drawing.Size(277, 36);
-            this.dtpDateDead.TabIndex = 64;
-            this.dtpDateDead.Value = new System.DateTime(2024, 3, 27, 19, 40, 57, 765);
+            this.txtMinSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMinSalary.DefaultText = "";
+            this.txtMinSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMinSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMinSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMinSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMinSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMinSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMinSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMinSalary.Location = new System.Drawing.Point(9, 772);
+            this.txtMinSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMinSalary.Multiline = true;
+            this.txtMinSalary.Name = "txtMinSalary";
+            this.txtMinSalary.PasswordChar = '\0';
+            this.txtMinSalary.PlaceholderText = "Mức lương tối thiểu";
+            this.txtMinSalary.SelectedText = "";
+            this.txtMinSalary.Size = new System.Drawing.Size(268, 39);
+            this.txtMinSalary.TabIndex = 69;
+            this.txtMinSalary.TextChanged += new System.EventHandler(this.txtMinSalary_TextChanged);
+            this.txtMinSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinSalary_KeyPress);
             // 
             // cboAddress
             // 
@@ -696,52 +683,40 @@
             this.cboSalary.TabIndex = 67;
             this.cboSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtMinSalary
+            // label11
             // 
-            this.txtMinSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMinSalary.DefaultText = "";
-            this.txtMinSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMinSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMinSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMinSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMinSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMinSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMinSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMinSalary.Location = new System.Drawing.Point(9, 772);
-            this.txtMinSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMinSalary.Modified = true;
-            this.txtMinSalary.Multiline = true;
-            this.txtMinSalary.Name = "txtMinSalary";
-            this.txtMinSalary.PasswordChar = '\0';
-            this.txtMinSalary.PlaceholderText = "Mức lương tối thiểu";
-            this.txtMinSalary.SelectedText = "";
-            this.txtMinSalary.Size = new System.Drawing.Size(268, 39);
-            this.txtMinSalary.TabIndex = 69;
-            this.txtMinSalary.TextChanged += new System.EventHandler(this.txtMinSalary_TextChanged);
-            this.txtMinSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinSalary_KeyPress);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(315, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 28);
+            this.label11.TabIndex = 66;
+            this.label11.Text = "Chuyên ngành";
             // 
-            // txtMaxSalary
+            // label8
             // 
-            this.txtMaxSalary.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaxSalary.DefaultText = "";
-            this.txtMaxSalary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaxSalary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaxSalary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaxSalary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaxSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaxSalary.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMaxSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaxSalary.Location = new System.Drawing.Point(313, 772);
-            this.txtMaxSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMaxSalary.Modified = true;
-            this.txtMaxSalary.Multiline = true;
-            this.txtMaxSalary.Name = "txtMaxSalary";
-            this.txtMaxSalary.PasswordChar = '\0';
-            this.txtMaxSalary.PlaceholderText = "Mức lương tối đa";
-            this.txtMaxSalary.SelectedText = "";
-            this.txtMaxSalary.Size = new System.Drawing.Size(263, 39);
-            this.txtMaxSalary.TabIndex = 70;
-            this.txtMaxSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxSalary_KeyPress);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(6, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 28);
+            this.label8.TabIndex = 65;
+            this.label8.Text = "Hạn chót apply";
+            // 
+            // dtpDateDead
+            // 
+            this.dtpDateDead.Checked = true;
+            this.dtpDateDead.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDateDead.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDateDead.Location = new System.Drawing.Point(9, 128);
+            this.dtpDateDead.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDateDead.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDateDead.Name = "dtpDateDead";
+            this.dtpDateDead.Size = new System.Drawing.Size(277, 36);
+            this.dtpDateDead.TabIndex = 64;
+            this.dtpDateDead.Value = new System.DateTime(2024, 3, 27, 19, 40, 57, 765);
             // 
             // FPostJob
             // 
@@ -787,7 +762,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button postJobBtn;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

@@ -174,10 +174,25 @@ namespace JobHub
            {
 
                 int idCVSelect = myCV.GetIdBeforeSaveNew();
-                myCV.AddImageCVIntoDB(lblCVName.Text.Trim(), fm.Account.Id, idCVSelect, lblCVName.Text.Trim());
-                function.SaveImage(pathImage);
-                awc.Apply(idJob, idCVSelect, fm, 1);
-                function.SaveImage(pathImage);
+                string nameImage = function.SaveImage(pathImage);
+                
+                if (lblCVName.Text.Length>0)
+                {
+                    Guna2PictureBox pb = new Guna2PictureBox();
+
+                    function.InsertImage(nameImage, pb);
+                    if (pb.Image != null)
+                    {
+                        myCV.AddImageCVIntoDB(nameImage, fm.Account.Id, idCVSelect, nameImage);
+                        awc.Apply(idJob, idCVSelect, fm, 1);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hình ảnh không hợp lệ! Vui lòng scan lại ảnh khác");
+                    }
+                        
+                }
+
                 this.Dispose();
             }
             else

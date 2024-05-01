@@ -28,32 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_FollowCV));
+            this.pnCV = new Guna.UI2.WinForms.Guna2Panel();
             this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
             this.btnSumbit = new Guna.UI2.WinForms.Guna2Button();
             this.btnFollow = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.uC_CV1 = new JobHub.uC_CV();
-            this.guna2Panel1.SuspendLayout();
+            this.pbCV = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnLocalCV = new System.Windows.Forms.Panel();
+            this.uc_CV = new JobHub.uC_CV();
+            this.pnCV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCV)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // pnCV
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.btnRemove);
-            this.guna2Panel1.Controls.Add(this.btnSumbit);
-            this.guna2Panel1.Controls.Add(this.btnFollow);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Controls.Add(this.uC_CV1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(305, 271);
-            this.guna2Panel1.TabIndex = 0;
+            this.pnCV.BackColor = System.Drawing.Color.White;
+            this.pnCV.BorderColor = System.Drawing.Color.LightGray;
+            this.pnCV.BorderRadius = 10;
+            this.pnCV.BorderThickness = 2;
+            this.pnCV.Controls.Add(this.btnRemove);
+            this.pnCV.Controls.Add(this.btnSumbit);
+            this.pnCV.Controls.Add(this.btnFollow);
+            this.pnCV.Controls.Add(this.guna2PictureBox1);
+            this.pnCV.Controls.Add(this.pbCV);
+            this.pnCV.Controls.Add(this.pnLocalCV);
+            this.pnCV.Controls.Add(this.uc_CV);
+            this.pnCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnCV.Location = new System.Drawing.Point(0, 0);
+            this.pnCV.Name = "pnCV";
+            this.pnCV.Size = new System.Drawing.Size(305, 271);
+            this.pnCV.TabIndex = 0;
+            this.pnCV.Click += new System.EventHandler(this.uc_CV_Click);
             // 
             // btnRemove
             // 
@@ -107,6 +114,7 @@
             this.btnFollow.Size = new System.Drawing.Size(278, 45);
             this.btnFollow.TabIndex = 1;
             this.btnFollow.Text = "Theo dõi";
+            this.btnFollow.Click += new System.EventHandler(this.btnFollow_Click);
             // 
             // guna2PictureBox1
             // 
@@ -119,36 +127,59 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // uC_CV1
+            // pbCV
             // 
-            this.uC_CV1.BackColor = System.Drawing.Color.White;
-            this.uC_CV1.Location = new System.Drawing.Point(6, 9);
-            this.uC_CV1.Margin = new System.Windows.Forms.Padding(13, 12, 6, 6);
-            this.uC_CV1.Name = "uC_CV1";
-            this.uC_CV1.Size = new System.Drawing.Size(293, 190);
-            this.uC_CV1.TabIndex = 0;
+            this.pbCV.Image = ((System.Drawing.Image)(resources.GetObject("pbCV.Image")));
+            this.pbCV.ImageRotate = 0F;
+            this.pbCV.Location = new System.Drawing.Point(6, 9);
+            this.pbCV.Name = "pbCV";
+            this.pbCV.Size = new System.Drawing.Size(293, 190);
+            this.pbCV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCV.TabIndex = 4;
+            this.pbCV.TabStop = false;
+            this.pbCV.Click += new System.EventHandler(this.pbCV_Click);
+            // 
+            // pnLocalCV
+            // 
+            this.pnLocalCV.Location = new System.Drawing.Point(6, 9);
+            this.pnLocalCV.Name = "pnLocalCV";
+            this.pnLocalCV.Size = new System.Drawing.Size(294, 194);
+            this.pnLocalCV.TabIndex = 5;
+            // 
+            // uc_CV
+            // 
+            this.uc_CV.BackColor = System.Drawing.Color.White;
+            this.uc_CV.Location = new System.Drawing.Point(6, 9);
+            this.uc_CV.Margin = new System.Windows.Forms.Padding(13, 12, 6, 6);
+            this.uc_CV.Name = "uc_CV";
+            this.uc_CV.Size = new System.Drawing.Size(293, 190);
+            this.uc_CV.TabIndex = 0;
+            this.uc_CV.Click += new System.EventHandler(this.uc_CV_Click);
             // 
             // uc_FollowCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.pnCV);
             this.Name = "uc_FollowCV";
             this.Size = new System.Drawing.Size(305, 271);
-            this.guna2Panel1.ResumeLayout(false);
+            this.pnCV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        public uC_CV uC_CV1;
+        public Guna.UI2.WinForms.Guna2Panel pnCV;
+        public uC_CV uc_CV;
         public Guna.UI2.WinForms.Guna2Button btnFollow;
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public Guna.UI2.WinForms.Guna2Button btnRemove;
         public Guna.UI2.WinForms.Guna2Button btnSumbit;
+        public Guna.UI2.WinForms.Guna2PictureBox pbCV;
+        public System.Windows.Forms.Panel pnLocalCV;
     }
 }

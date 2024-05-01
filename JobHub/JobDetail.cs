@@ -15,6 +15,7 @@ namespace JobHub
         private JobDetailDAO jdd = new JobDetailDAO();
         private ChangTheSize changTheSize = new ChangTheSize();
         private Function function= new Function();
+        private Candidate candidate = new Candidate();  
 
         private int idJob;
         private string nameJob;
@@ -131,6 +132,18 @@ namespace JobHub
             {
                 job.SaveJob(sender, e, job.IdJob, fm);
             };
+
+            if (fm.Account != null)
+            {
+                if (candidate.CheckApplyStatus(job.IdJob, fm.Account.Id))
+                {
+                    job.btnApply.Text = "Hủy ứng tuyển";
+                    job.btnApply.Width += 30;
+                    job.btnApply.Location = new Point(job.btnApply.Location.X - 30, job.btnApply.Location.Y);
+                }
+                
+            }
+            
             return job;
         }
         public uC_Job InsertInfoAndEventIntoUcJob(SqlDataReader dr, Fmain fm)
