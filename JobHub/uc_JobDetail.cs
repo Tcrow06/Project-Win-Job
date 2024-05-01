@@ -14,12 +14,13 @@ namespace JobHub
     {
         CandidateDAO cd = new CandidateDAO();
         public event EventHandler JobSavedClick;
+        public event EventHandler btnApplyClick;
 
-/*        private int idJob;
-        private int idCompany;
+        /*        private int idJob;
+                private int idCompany;
 
-        public int IdJob { get => idJob; set => idJob = value; }
-        public int IdCompany { get => idCompany; set => idCompany = value; }*/
+                public int IdJob { get => idJob; set => idJob = value; }
+                public int IdCompany { get => idCompany; set => idCompany = value; }*/
         public uc_JobDetail()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace JobHub
         {
             OnJobDetailClick(e);
         }
+
 
         private void ptbSave_Click(object sender, EventArgs e)
         {
@@ -55,12 +57,24 @@ namespace JobHub
                 }
             }
         }
-        public void UnSaveJob(object sender, EventArgs e, int idJob, FlowLayoutPanel pn,Fmain fm, FFavouriteJob ffj)
+        public void UnSaveJob(object sender, EventArgs e, int idJob, FlowLayoutPanel pn, Fmain fm, FFavouriteJob ffj)
         {
             ptbSave.Image = Properties.Resources.heartChuaLuu;
             cd.UnSavedJob(idJob, fm.Account.Id);
             pn.Controls.Clear();
             ffj.LoadUcDetail();
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            if(btnApply.Text =="Ứng tuyển")
+            {
+                OnJobDetailClick(e);
+            }
+            else
+            {
+                btnApplyClick?.Invoke(sender, e);  
+            }
         }
     }
 }

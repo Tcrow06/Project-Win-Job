@@ -83,6 +83,14 @@ namespace JobHub
         {
             companyDAO.AddCompany(this);
         }
+        public void FollowCV(int idCompany, int idCV, int CVType)
+        {
+            companyDAO.FollowCV(idCompany,idCV,CVType);
+        }
+        public void UnFollowCV(int idCV, int CVType)
+        {
+            companyDAO.UnFollowCV(idCV, CVType);
+        }
     }
     
 }

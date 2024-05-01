@@ -26,16 +26,9 @@ namespace JobHub
         private CandidateDAO cdd = new CandidateDAO();
 
         public Candidate() { }
-       
-
-/*        public int Id { get => id; set => id = value; }
-        public string Phone { get => phone; set => phone = value; }
-        public string Email { get => email; set => email = value; }*/
+      
         public bool Gender { get => gender; set => gender = value; }
-        //public string Link { get => link; set => link = value; }
         public DateTime Birth { get => birth; set => birth = value; }
-        //public string Avatar { get => avatar; set => avatar = value; }
-        //public string Address { get => address; set => address = value; }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string FullName { get => fullName; set => fullName = value; }

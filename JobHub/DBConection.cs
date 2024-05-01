@@ -77,37 +77,6 @@ namespace JobHub
             }
             return dr;
         }
-
-
-/*        public void change(SqlDataReader dr, FlowLayoutPanel flPanel, Fmain fm)
-        {
-            //int i = 1;
-            while (dr.Read())
-            {
-                uC_Job job = new uC_Job();
-                job.lblJobName.Text = dr["jobName"].ToString();
-                changTheSize.setSize(130, 25, job.lblJobName);
-                job.lblCompanyName.Text = dr["companyName"].ToString();
-                job.lblSalary.Text = dr["jobSalary"].ToString();
-                job.lblJobAddress.Text = dr["jobAddress"].ToString();
-                flPanel.Controls.Add(job);
-                int idJob = int.Parse(dr["idJob"].ToString());
-                int idCp = int.Parse(dr["idCompany"].ToString());
-                job.loadJobClick += (sender, e) =>
-                {
-                    job.LoadJobDetail(sender, e, idJob, idCp, fm);
-                };
-                job.loadCompanyClick += (sender, e) =>
-                {
-                    job.LoadCompanyDetail(sender, e, idCp, fm);
-                };
-            }
-            if (sqlConnection.State == ConnectionState.Open)
-            {
-                sqlConnection.Close();
-            }
-            dr.Dispose();
-        }*/
         public bool CheckNull (string sql)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(sql, sqlConnection);

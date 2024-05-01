@@ -1,6 +1,6 @@
 ﻿namespace JobHub
 {
-    partial class FFollowCV
+    partial class FFollowedCV
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,16 @@
         {
             this.lblAddress = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flpn = new System.Windows.Forms.FlowLayoutPanel();
             this.uc_FollowCV1 = new JobHub.uc_FollowCV();
             this.uc_FollowCV2 = new JobHub.uc_FollowCV();
             this.uc_FollowCV3 = new JobHub.uc_FollowCV();
             this.uc_FollowCV4 = new JobHub.uc_FollowCV();
             this.uc_FollowCV5 = new JobHub.uc_FollowCV();
             this.uc_FollowCV6 = new JobHub.uc_FollowCV();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpn.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,36 +58,25 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel1.Controls.Add(this.flpn);
             this.guna2Panel1.Location = new System.Drawing.Point(31, 81);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(973, 499);
             this.guna2Panel1.TabIndex = 52;
             // 
-            // flowLayoutPanel1
+            // flpn
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.uc_FollowCV1);
-            this.flowLayoutPanel1.Controls.Add(this.uc_FollowCV2);
-            this.flowLayoutPanel1.Controls.Add(this.uc_FollowCV3);
-            this.flowLayoutPanel1.Controls.Add(this.uc_FollowCV4);
-            this.flowLayoutPanel1.Controls.Add(this.uc_FollowCV5);
-            this.flowLayoutPanel1.Controls.Add(this.uc_FollowCV6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 11);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(956, 478);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.BorderThickness = 2;
-            this.guna2Panel2.Controls.Add(this.lblAddress);
-            this.guna2Panel2.Location = new System.Drawing.Point(292, 12);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(352, 50);
-            this.guna2Panel2.TabIndex = 53;
+            this.flpn.AutoScroll = true;
+            this.flpn.Controls.Add(this.uc_FollowCV1);
+            this.flpn.Controls.Add(this.uc_FollowCV2);
+            this.flpn.Controls.Add(this.uc_FollowCV3);
+            this.flpn.Controls.Add(this.uc_FollowCV4);
+            this.flpn.Controls.Add(this.uc_FollowCV5);
+            this.flpn.Controls.Add(this.uc_FollowCV6);
+            this.flpn.Location = new System.Drawing.Point(11, 11);
+            this.flpn.Name = "flpn";
+            this.flpn.Size = new System.Drawing.Size(956, 478);
+            this.flpn.TabIndex = 0;
             // 
             // uc_FollowCV1
             // 
@@ -137,7 +126,18 @@
             this.uc_FollowCV6.Size = new System.Drawing.Size(305, 271);
             this.uc_FollowCV6.TabIndex = 5;
             // 
-            // FFollowCV
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.BorderThickness = 2;
+            this.guna2Panel2.Controls.Add(this.lblAddress);
+            this.guna2Panel2.Location = new System.Drawing.Point(292, 12);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(352, 50);
+            this.guna2Panel2.TabIndex = 53;
+            // 
+            // FFollowedCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,10 +146,12 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FFollowCV";
+            this.Name = "FFollowedCV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FollowCV";
+            this.Load += new System.EventHandler(this.FFollowedCV_Load);
             this.guna2Panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flpn.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -159,7 +161,7 @@
 
         private System.Windows.Forms.Label lblAddress;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private uc_FollowCV uc_FollowCV1;
         private uc_FollowCV uc_FollowCV2;

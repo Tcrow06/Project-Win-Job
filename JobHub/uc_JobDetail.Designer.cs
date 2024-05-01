@@ -95,7 +95,7 @@
             this.btnApply.Size = new System.Drawing.Size(124, 35);
             this.btnApply.TabIndex = 12;
             this.btnApply.Text = "Ứng tuyển";
-            this.btnApply.Click += new System.EventHandler(this.uc_JobDetail_Click);
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // pnluc
             // 
@@ -180,7 +180,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button btnApply;
         private Guna.UI2.WinForms.Guna2Panel pnluc;
         public System.Windows.Forms.Label lblCompanyName;
         public System.Windows.Forms.Label lblJobName;
@@ -189,5 +188,6 @@
         public System.Windows.Forms.Label lblSalary;
         public Guna.UI2.WinForms.Guna2PictureBox ptbSave;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        public Guna.UI2.WinForms.Guna2Button btnApply;
     }
 }

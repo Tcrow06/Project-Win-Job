@@ -121,11 +121,11 @@ namespace JobHub
                 lblNameAvarta.Text = dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
                 
                 uC_CV uC_CV = new uC_CV();
-                uC_CV.lblFirstName.Text = dr["candidateFirstName"].ToString();
-                uC_CV.lblLastName.Text = dr["candidateLastName"].ToString();
+                uC_CV.lblLastName.Text = dr["candidateFirstName"].ToString();
+                uC_CV.lblFirstName.Text = dr["candidateLastName"].ToString();
                 uC_CV.lblJobName.Text = dr["jobName"].ToString();
 
-                uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblFirstName.Text} {uC_CV.lblLastName.Text}";
+                uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblLastName.Text} {uC_CV.lblFirstName.Text}";
 
                 if (dr["CVAvatar"].ToString().Trim() == "")
                 {
@@ -392,5 +392,6 @@ namespace JobHub
             }
             return null;
         }
+
     }
 }

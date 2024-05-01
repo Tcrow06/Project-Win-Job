@@ -378,7 +378,6 @@ namespace JobHub
             form.MdiParent = this;
             if (form.Name == "FJobDetails")
             {
-                //resize(909, 568);
                 resize(950, 668);
             }
             else if (form.Name == "FJob")
@@ -428,7 +427,9 @@ namespace JobHub
                 Forms.Pop();
                 
                 FormAndInfoCandidate form = reLoadForm.ReLoadBack(this);
+                /*MessageBox.Show(form.Form.Name);*/
                 this.loadForm(form.Form);
+                
 
             }
             else
@@ -512,7 +513,7 @@ namespace JobHub
                 formdelete.Close();
 
             }
-            FFollowCV fcv = new FFollowCV(this);
+            FFollowedCV fcv = new FFollowedCV(this);
             
             FormAndInfoCandidate fai = new FormAndInfoCandidate(fcv);
             forms.Push(fai);
@@ -579,6 +580,28 @@ namespace JobHub
             resize(fBest.Width + 200, fBest.Height + 50);
             fBest.Show();
             fBest.BringToFront();
+        }
+
+        private void btnFindCandidate_Click(object sender, EventArgs e)
+        {
+            this.DeleteChildForm();
+            FFindCandidate view = new FFindCandidate(this);
+            view.MdiParent = this;
+            view.Dock = DockStyle.Fill;
+            resize(view.Width + 200, view.Height + 50);
+            view.Show();
+            view.BringToFront();
+        }
+
+        private void btnAppliedJob_Click(object sender, EventArgs e)
+        {
+            this.DeleteChildForm();
+            FAppliedCV view = new FAppliedCV(this);
+            view.MdiParent = this;
+            view.Dock = DockStyle.Fill;
+            resize(view.Width + 200, view.Height + 50);
+            view.Show();
+            view.BringToFront();
         }
     }
 }

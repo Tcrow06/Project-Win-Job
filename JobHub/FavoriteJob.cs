@@ -19,6 +19,7 @@ namespace JobHub
         public void LoadUc_JobDetail(FlowLayoutPanel pn, Fmain fm, Label x, FFavouriteJob ffb)
         {
             SqlDataReader dr = favoriteJobDao.LoadUc_JobDetail(pn, fm, x);  
+            pn.Controls.Clear();    
             int i = 0;
             if (dr != null)
             {
@@ -30,6 +31,11 @@ namespace JobHub
                     job.JobSavedClick += (sender, e) =>
                     {
                         job.UnSaveJob(sender, e, job.IdJob, pn, fm, ffb);
+                    };
+/*                    job.btnApply.Text = "Hủy ứng tuyển";*/
+                    job.btnApply.Click += (sender, e) =>
+                    {
+
                     };
                     pn.Controls.Add(job);
                 }

@@ -13,11 +13,11 @@ namespace JobHub
     public partial class uC_Job : uc_JobMain
     {
         public event EventHandler loadCompanyClick;
-        private int idJob;
+/*        private int idJob;
         private int idCompany;
 
         public int IdJob { get => idJob; set => idJob = value; }
-        public int IdCompany { get => idCompany; set => idCompany = value; }
+        public int IdCompany { get => idCompany; set => idCompany = value; }*/
 
         public uC_Job()
         {

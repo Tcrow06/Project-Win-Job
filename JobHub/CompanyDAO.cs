@@ -18,6 +18,17 @@ namespace JobHub
 
             db.ExcuteNoMess(sql);
         }
+        public void FollowCV(int idCompany, int idCV, int CVType)
+        {
+            string sql = string.Format($@"insert into FollowedCV(idCompany, idCV, CVType) values ( {idCompany},{idCV},{CVType})");
+            db.ThucThi(sql);
+        }
+        public void UnFollowCV(int idCV, int CVType)
+        {
+            string sql = string.Format($@"delete from FollowedCV where idCV = {idCV} and CVType = {CVType}");
+            db.ThucThi(sql);
+        }
+
 
 
     }
