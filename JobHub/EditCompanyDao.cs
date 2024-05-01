@@ -29,7 +29,7 @@ namespace JobHub
         public void AddOtherImage(EditCompany company)
         {
             string sql = $@"UPDATE Company
-                          SET companyImagePath = companyImagePath + '+' + N'{company.ListCompanyImage}' WHERE idCompany={company.ID} ";
+                          SET companyImagePath = companyImagePath + ' + ' + N'{company.ListCompanyImage}' WHERE idCompany={company.ID} ";
 
             db.ExcuteNoMess(sql);
         }
@@ -41,6 +41,25 @@ namespace JobHub
 
             db.ExcuteNoMess(sql);
         }
+
+        public void DeleteImage(EditCompany company)
+        {
+            string sql = $@"UPDATE Company
+                            SET companyImagePath=REPLACE(companyImagePath,N'{company.ListCompanyImage} +',N'')
+                                WHERE idCompany={company.ID} ";
+
+            db.ExcuteNoMess(sql);
+        }
+
+        public void DeleteOtherImage(EditCompany company)
+        {
+            string sql = $@"UPDATE Company
+                            SET companyImagePath=REPLACE(companyImagePath,N'+ {company.ListCompanyImage}',N'')
+                                WHERE idCompany={company.ID} ";
+
+            db.ExcuteNoMess(sql);
+        }
+
 
     }
 }

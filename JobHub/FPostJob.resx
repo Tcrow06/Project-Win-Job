@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADbSURBVDhPtZGh
-        CgJBFEV3QdEgiN0iyGarRTALfoPB6BdoMYo/YRAEo39gFYNFMCiIWMRk2qSOZ2aerItlBvHACe++vW8X
-        NvgbSqku7mR0h1IRZ6iJJXaDQhPPpmpxO8CDWRzhQ7c+eOIBp9jCUCoJhBGu0YUVRlK1EOzNyp0b1qVu
-        DlRRX/bhgmU5YY5kcIh3dGUi9QTCBp7M2hJjAWvYxyO+0S+rSDWBsIRz/QSkfiNzHsdmY+nJ6huWHdzI
-        mIJ8oNuwkMgPiiEucSuRP5TbeJXRH8q5n77AEgQv8nikSB+5f5gAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="postJobBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

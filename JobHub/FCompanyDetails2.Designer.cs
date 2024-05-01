@@ -36,6 +36,7 @@
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
             this.pnDetail = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flpDescription = new System.Windows.Forms.FlowLayoutPanel();
@@ -44,7 +45,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flpUC_JobDetail = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox13 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblPhone = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblGmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLink = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,16 +68,6 @@
             this.pbCompanyInfo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnLoadPicture = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox11 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox12 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox13 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbBackground = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ptbphone = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -75,15 +75,11 @@
             this.ptbLink = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ptbSize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnDeletePic = new Guna.UI2.WinForms.Guna2Button();
             this.pnDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.flpDescription.SuspendLayout();
-            this.pnImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).BeginInit();
@@ -93,6 +89,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
+            this.pnImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbphone)).BeginInit();
@@ -113,7 +114,7 @@
             this.btnImageAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
             this.btnImageAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnImageAdd.ForeColor = System.Drawing.Color.White;
-            this.btnImageAdd.Location = new System.Drawing.Point(657, 145);
+            this.btnImageAdd.Location = new System.Drawing.Point(646, 145);
             this.btnImageAdd.Name = "btnImageAdd";
             this.btnImageAdd.Size = new System.Drawing.Size(235, 39);
             this.btnImageAdd.TabIndex = 130;
@@ -233,6 +234,17 @@
             this.pnDetail.Size = new System.Drawing.Size(1027, 551);
             this.pnDetail.TabIndex = 123;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(657, 183);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(150, 10);
+            this.guna2PictureBox2.TabIndex = 79;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // guna2VSeparator1
             // 
             this.guna2VSeparator1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -320,6 +332,66 @@
             this.guna2HtmlLabel9.TabIndex = 72;
             this.guna2HtmlLabel9.Text = "Tuyển dụng";
             // 
+            // guna2PictureBox11
+            // 
+            this.guna2PictureBox11.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox11.ImageRotate = 0F;
+            this.guna2PictureBox11.Location = new System.Drawing.Point(2, 239);
+            this.guna2PictureBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox11.Name = "guna2PictureBox11";
+            this.guna2PictureBox11.Size = new System.Drawing.Size(1022, 142);
+            this.guna2PictureBox11.TabIndex = 71;
+            this.guna2PictureBox11.TabStop = false;
+            // 
+            // guna2PictureBox12
+            // 
+            this.guna2PictureBox12.BorderRadius = 10;
+            this.guna2PictureBox12.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox12.ImageRotate = 0F;
+            this.guna2PictureBox12.Location = new System.Drawing.Point(2, 256);
+            this.guna2PictureBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox12.Name = "guna2PictureBox12";
+            this.guna2PictureBox12.Size = new System.Drawing.Size(1022, 290);
+            this.guna2PictureBox12.TabIndex = 70;
+            this.guna2PictureBox12.TabStop = false;
+            // 
+            // guna2PictureBox13
+            // 
+            this.guna2PictureBox13.BorderRadius = 10;
+            this.guna2PictureBox13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.guna2PictureBox13.ImageRotate = 0F;
+            this.guna2PictureBox13.Location = new System.Drawing.Point(2, 199);
+            this.guna2PictureBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox13.Name = "guna2PictureBox13";
+            this.guna2PictureBox13.Size = new System.Drawing.Size(1022, 100);
+            this.guna2PictureBox13.TabIndex = 69;
+            this.guna2PictureBox13.TabStop = false;
+            // 
+            // guna2PictureBox10
+            // 
+            this.guna2PictureBox10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox10.FillColor = System.Drawing.Color.Silver;
+            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
+            this.guna2PictureBox10.ImageRotate = 0F;
+            this.guna2PictureBox10.Location = new System.Drawing.Point(725, 84);
+            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox10.Name = "guna2PictureBox10";
+            this.guna2PictureBox10.Size = new System.Drawing.Size(33, 23);
+            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox10.TabIndex = 68;
+            this.guna2PictureBox10.TabStop = false;
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(664, 42);
+            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(357, 51);
+            this.guna2PictureBox6.TabIndex = 67;
+            this.guna2PictureBox6.TabStop = false;
+            // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.AutoSize = false;
@@ -332,6 +404,56 @@
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(99, 24);
             this.guna2HtmlLabel3.TabIndex = 65;
             this.guna2HtmlLabel3.Text = "Giới thiệu";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BackColor = System.Drawing.Color.Silver;
+            this.guna2PictureBox5.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(2, 42);
+            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(665, 56);
+            this.guna2PictureBox5.TabIndex = 64;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox4.BorderRadius = 10;
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(2, 85);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(665, 108);
+            this.guna2PictureBox4.TabIndex = 63;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 10;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(2, 4);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(1019, 62);
+            this.guna2PictureBox3.TabIndex = 62;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox8.BorderRadius = 10;
+            this.guna2PictureBox8.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(648, 85);
+            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(374, 108);
+            this.guna2PictureBox8.TabIndex = 66;
+            this.guna2PictureBox8.TabStop = false;
             // 
             // lblPhone
             // 
@@ -494,127 +616,6 @@
             this.btnLoadPicture.Size = new System.Drawing.Size(31, 32);
             this.btnLoadPicture.TabIndex = 129;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(657, 183);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(150, 10);
-            this.guna2PictureBox2.TabIndex = 79;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox11
-            // 
-            this.guna2PictureBox11.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox11.ImageRotate = 0F;
-            this.guna2PictureBox11.Location = new System.Drawing.Point(2, 239);
-            this.guna2PictureBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox11.Name = "guna2PictureBox11";
-            this.guna2PictureBox11.Size = new System.Drawing.Size(1022, 142);
-            this.guna2PictureBox11.TabIndex = 71;
-            this.guna2PictureBox11.TabStop = false;
-            // 
-            // guna2PictureBox12
-            // 
-            this.guna2PictureBox12.BorderRadius = 10;
-            this.guna2PictureBox12.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox12.ImageRotate = 0F;
-            this.guna2PictureBox12.Location = new System.Drawing.Point(2, 256);
-            this.guna2PictureBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox12.Name = "guna2PictureBox12";
-            this.guna2PictureBox12.Size = new System.Drawing.Size(1022, 290);
-            this.guna2PictureBox12.TabIndex = 70;
-            this.guna2PictureBox12.TabStop = false;
-            // 
-            // guna2PictureBox13
-            // 
-            this.guna2PictureBox13.BorderRadius = 10;
-            this.guna2PictureBox13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.guna2PictureBox13.ImageRotate = 0F;
-            this.guna2PictureBox13.Location = new System.Drawing.Point(2, 199);
-            this.guna2PictureBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox13.Name = "guna2PictureBox13";
-            this.guna2PictureBox13.Size = new System.Drawing.Size(1022, 100);
-            this.guna2PictureBox13.TabIndex = 69;
-            this.guna2PictureBox13.TabStop = false;
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox10.FillColor = System.Drawing.Color.Silver;
-            this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(725, 84);
-            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(33, 23);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox10.TabIndex = 68;
-            this.guna2PictureBox10.TabStop = false;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(664, 42);
-            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(357, 51);
-            this.guna2PictureBox6.TabIndex = 67;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.BackColor = System.Drawing.Color.Silver;
-            this.guna2PictureBox5.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(2, 42);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(665, 56);
-            this.guna2PictureBox5.TabIndex = 64;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox4.BorderRadius = 10;
-            this.guna2PictureBox4.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(2, 85);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(665, 108);
-            this.guna2PictureBox4.TabIndex = 63;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BorderRadius = 10;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(2, 4);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(1019, 62);
-            this.guna2PictureBox3.TabIndex = 62;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox8
-            // 
-            this.guna2PictureBox8.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox8.BorderRadius = 10;
-            this.guna2PictureBox8.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(648, 85);
-            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(374, 108);
-            this.guna2PictureBox8.TabIndex = 66;
-            this.guna2PictureBox8.TabStop = false;
-            // 
             // pbAvatar
             // 
             this.pbAvatar.BackColor = System.Drawing.Color.White;
@@ -704,11 +705,30 @@
             this.guna2PictureBox1.TabIndex = 110;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // btnDeletePic
+            // 
+            this.btnDeletePic.BackColor = System.Drawing.Color.White;
+            this.btnDeletePic.BorderRadius = 8;
+            this.btnDeletePic.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeletePic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeletePic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.btnDeletePic.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeletePic.ForeColor = System.Drawing.Color.White;
+            this.btnDeletePic.Location = new System.Drawing.Point(887, 145);
+            this.btnDeletePic.Name = "btnDeletePic";
+            this.btnDeletePic.Size = new System.Drawing.Size(138, 39);
+            this.btnDeletePic.TabIndex = 132;
+            this.btnDeletePic.Text = "Xóa ảnh";
+            this.btnDeletePic.Click += new System.EventHandler(this.btnDeletePic_Click);
+            // 
             // FCompanyDetails2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 750);
+            this.Controls.Add(this.btnDeletePic);
             this.Controls.Add(this.pnImage);
             this.Controls.Add(this.btnImageAdd);
             this.Controls.Add(this.btnLoadPicture);
@@ -737,15 +757,9 @@
             this.Load += new System.EventHandler(this.FCompanyDetails2_Load);
             this.pnDetail.ResumeLayout(false);
             this.pnDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.flpDescription.ResumeLayout(false);
-            this.pnImage.ResumeLayout(false);
-            this.pnImage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).EndInit();
@@ -755,6 +769,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
+            this.pnImage.ResumeLayout(false);
+            this.pnImage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCompanyInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbphone)).EndInit();
@@ -814,5 +834,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox pbBack;
         private Guna.UI2.WinForms.Guna2PictureBox pbCompanyInfo;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI2.WinForms.Guna2Button btnDeletePic;
     }
 }
