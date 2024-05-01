@@ -51,15 +51,10 @@ namespace JobHub
                     }
                 }
             }
-            experience += "<" + uC_MakeCV1.txtEducation.Text.Trim();
-            if(experience == "<")
-            {
-                experience = "";
-            }
             DataTable dt = makeCVDAO.ReadData(cmd);
             this.idCV = Int32.Parse(dt.Rows[0]["max"].ToString()) + 1;
             DetailCV detailCV = new DetailCV(idCV, idCandidate, uC_MakeCV1.txtNameJob.Text.Trim(),
-            uC_MakeCV1.txtSkill.Text.Trim(), experience);        
+            uC_MakeCV1.txtSkill.Text.Trim(), experience, uC_MakeCV1.txtEducation.Text.Trim());        
             makeCVDAO.Insert(detailCV);
             MessageBox.Show("Lưu thành công");
             this.Close();

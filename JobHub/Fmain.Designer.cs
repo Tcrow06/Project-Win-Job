@@ -774,6 +774,7 @@
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.TextOffset = new System.Drawing.Point(30, 0);
             this.guna2HtmlToolTip1.SetToolTip(this.guna2Button3, "Thông tin công ty");
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 

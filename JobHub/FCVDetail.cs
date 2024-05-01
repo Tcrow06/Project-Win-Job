@@ -76,7 +76,7 @@ namespace JobHub
 
         private void btnFix_Click(object sender, EventArgs e)
         {
-            FFixInfCV fix = new FFixInfCV(this.idCV, this.idCandidate);
+            FFMCV fix = new FFMCV(this.idCV, this.idCandidate);
             this.Hide();
             fix.ShowDialog();
             FCVDetail_Load(sender, e);

@@ -34,19 +34,27 @@ namespace JobHub
             return function.ReadData(cmd);
         }
 
-        public void writeData(DataTable dt, Form form)
+        public void writeData(DataTable dt, FFMCV form)
         {
-
+            function.WriteData(dt, form);
         }
 
         public void UpdateData(DetailCV detailCV)
         {
             string cmd = $@"UPDATE CV
-                        SET CV.jobName = N'{detailCV.JobName}', CV.CVDescription = N'{detailCV.Experience}', CV.Skill = N'{detailCV.Skill}'
+                        SET CV.jobName = N'{detailCV.JobName}', CV.CVDescription = N'{detailCV.Experience}', CV.Skill = N'{detailCV.Skill}', CV.CVEducation = N'{detailCV.Education}'
                         WHERE CV.idCV = {this.idCV} and CV.idCandidate = {idCadidate};";
             function.Update(cmd);
         }
+        public void Update(Candidate candidate) 
+        {
 
+        }
+
+        public void Update(DetailCV detailCV)
+        {
+
+        }
         public void UpdateData(Candidate candidate)
         {
             string cmd = $@"UPDATE Candidate
