@@ -197,5 +197,29 @@ namespace JobHub
                 indexImage = 0;
             LoadImageIntoPictureBox(pbCompanyInfo, indexImage);
         }
+
+        private void btnDeletePic_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EditCompany fec = new EditCompany();
+                fec.ID = company.Id;
+                fec.ListCompanyImage = listCompanyImage[indexImage].Trim();
+                if(indexImage==0)
+                {
+                    fec.DeleteImage();
+                }
+                else
+                {
+                    fec.DeleteOtherImage();
+                }
+                FCompanyDetails2_Load(sender, e);
+                
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi không thể xóa ảnh này");
+            }
+        }
     }
 }
