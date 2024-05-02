@@ -56,7 +56,7 @@ namespace JobHub
                         if (dialog == DialogResult.OK)
                         {
                             candidate.UnApplyJob(job.IdJob, fm.Account.Id);
-                            job.Dispose();  
+                            LoadAppliedJob();
                         }
                     };
                     flpnAppliedCV.Controls.Add(job);

@@ -20,14 +20,16 @@ namespace JobHub
         private string address;
         private string skill;
         private string experience;
+        private string education;
 
-        public DetailCV(int id, int idCandidate, string jobName, string skill, string experience)
+        public DetailCV(int id, int idCandidate, string jobName, string skill, string experience, string education)
         {
             this.Id = id;
             this.IdCandidate = idCandidate;
             this.JobName = jobName ?? throw new ArgumentNullException(nameof(jobName));
             this.Skill = skill ?? throw new ArgumentException(nameof(email));
             this.Experience = experience ?? throw new ArgumentException(nameof(experience));
+            this.Education = education ?? throw new ArgumentNullException(nameof(education));
         }
         public DetailCV(int id, string jobName, string firstName, string lastName, string cVAvatar, string phoneNumber, string email, string address, string skill, string experience)
         {
@@ -55,5 +57,6 @@ namespace JobHub
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public int IdCandidate { get => idCandidate; set => idCandidate = value; }
+        public string Education { get => education; set => education = value; }
     }
 }

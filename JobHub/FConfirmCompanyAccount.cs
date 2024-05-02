@@ -41,6 +41,7 @@ namespace JobHub
         }
         private void LoadFullGridView()
         {
+            confirm.LoadAllList(dgv);
             SetSizeDGV();
         }
 

@@ -52,7 +52,6 @@ namespace JobHub
                     cl = cl + int.Parse(dr["soLuong"].ToString().Trim());
                 }
             }
-            // Generate random data for the datasets    
             var random = new Random();
             bIT.DataPoints.Add(new LPoint()
             {
@@ -99,7 +98,7 @@ namespace JobHub
                     Label ="",
                     Y = double.Parse(dr["avg"].ToString().Trim()),
                 });
-                Thread.Sleep(500);
+                Thread.Sleep(100);
             } 
         }
     }

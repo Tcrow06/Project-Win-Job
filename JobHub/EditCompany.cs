@@ -62,6 +62,18 @@ namespace JobHub
             editcompanyDAO.AddAvatar(this);
             MessageBox.Show("Update ảnh thành công");
         }
+
+        public void DeleteImage()
+        {
+            editcompanyDAO.DeleteImage(this);
+            MessageBox.Show("Xóa ảnh thành công");
+        }
+
+        public void DeleteOtherImage()
+        {
+            editcompanyDAO.DeleteOtherImage(this);
+            MessageBox.Show("Xóa ảnh thành công");
+        }
     }
 
 }

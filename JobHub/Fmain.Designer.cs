@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
@@ -115,22 +115,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation2;
             // 
             // pnControlBox
             // 
@@ -942,7 +942,7 @@
             this.pnAcount.Controls.Add(this.picDown);
             this.pnAcount.Controls.Add(this.picUp);
             this.guna2Transition1.SetDecoration(this.pnAcount, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnAcount.Location = new System.Drawing.Point(565, 247);
+            this.pnAcount.Location = new System.Drawing.Point(563, 247);
             this.pnAcount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnAcount.Name = "pnAcount";
             this.pnAcount.Size = new System.Drawing.Size(255, 32);
@@ -1024,8 +1024,7 @@
             // btnOut
             // 
             this.btnOut.BackColor = System.Drawing.Color.Silver;
-            this.btnOut.BorderColor = System.Drawing.Color.Silver;
-            this.btnOut.BorderRadius = 5;
+            this.btnOut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnOut.BorderThickness = 1;
             this.btnOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnOut, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1036,10 +1035,10 @@
             this.btnOut.FillColor = System.Drawing.Color.White;
             this.btnOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnOut.Location = new System.Drawing.Point(4, 142);
+            this.btnOut.Location = new System.Drawing.Point(3, 140);
             this.btnOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(245, 46);
+            this.btnOut.Size = new System.Drawing.Size(249, 46);
             this.btnOut.TabIndex = 14;
             this.btnOut.Text = "Đăng xuất";
             this.btnOut.Click += new System.EventHandler(this.btnLogin_Click);
@@ -1047,8 +1046,7 @@
             // btnCVMenu
             // 
             this.btnCVMenu.BackColor = System.Drawing.Color.Silver;
-            this.btnCVMenu.BorderColor = System.Drawing.Color.Silver;
-            this.btnCVMenu.BorderRadius = 5;
+            this.btnCVMenu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCVMenu.BorderThickness = 1;
             this.btnCVMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnCVMenu, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1059,18 +1057,17 @@
             this.btnCVMenu.FillColor = System.Drawing.Color.White;
             this.btnCVMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCVMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnCVMenu.Location = new System.Drawing.Point(4, 48);
+            this.btnCVMenu.Location = new System.Drawing.Point(3, 48);
             this.btnCVMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCVMenu.Name = "btnCVMenu";
-            this.btnCVMenu.Size = new System.Drawing.Size(245, 46);
+            this.btnCVMenu.Size = new System.Drawing.Size(249, 46);
             this.btnCVMenu.TabIndex = 12;
             this.btnCVMenu.Text = "Hồ sơ và CV";
             // 
             // btnSetting
             // 
             this.btnSetting.BackColor = System.Drawing.Color.Silver;
-            this.btnSetting.BorderColor = System.Drawing.Color.Silver;
-            this.btnSetting.BorderRadius = 5;
+            this.btnSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSetting.BorderThickness = 1;
             this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnSetting, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1081,18 +1078,17 @@
             this.btnSetting.FillColor = System.Drawing.Color.White;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnSetting.Location = new System.Drawing.Point(4, 94);
+            this.btnSetting.Location = new System.Drawing.Point(3, 94);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(245, 46);
+            this.btnSetting.Size = new System.Drawing.Size(249, 46);
             this.btnSetting.TabIndex = 13;
             this.btnSetting.Text = "Cài đặt";
             // 
             // btnJobMenu
             // 
             this.btnJobMenu.BackColor = System.Drawing.Color.Silver;
-            this.btnJobMenu.BorderColor = System.Drawing.Color.Silver;
-            this.btnJobMenu.BorderRadius = 5;
+            this.btnJobMenu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJobMenu.BorderThickness = 1;
             this.btnJobMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.btnJobMenu, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -1103,12 +1099,13 @@
             this.btnJobMenu.FillColor = System.Drawing.Color.White;
             this.btnJobMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
-            this.btnJobMenu.Location = new System.Drawing.Point(4, 2);
+            this.btnJobMenu.Location = new System.Drawing.Point(3, 2);
             this.btnJobMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJobMenu.Name = "btnJobMenu";
-            this.btnJobMenu.Size = new System.Drawing.Size(245, 46);
+            this.btnJobMenu.Size = new System.Drawing.Size(249, 46);
             this.btnJobMenu.TabIndex = 11;
             this.btnJobMenu.Text = "Việc làm";
+            this.btnJobMenu.Click += new System.EventHandler(this.btnJobMenu_Click);
             // 
             // pnSubNav10
             // 

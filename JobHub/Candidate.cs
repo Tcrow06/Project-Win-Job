@@ -58,12 +58,6 @@ namespace JobHub
             this.Email = email ?? throw new ArgumentNullException(nameof(email));
         }
 
-/*        public bool checkEmail(string email)
-        {
-            Regex regex = new Regex(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
-            return regex.IsMatch(email);
-        }*/
-
         public bool checkPhone(string phone)
         {
             Regex regex = new Regex(@"^\d{10}$");
@@ -84,6 +78,24 @@ namespace JobHub
                 this.Address = address ?? throw new ArgumentNullException(nameof(address));
             }
         }
+
+        public Candidate(int id, string firstName, string lastName, string phone, string email, bool gender, DateTime birth, string address, string avatar)
+        {
+            if (checkEmail(email) && checkPhone(phone) && firstName.Length > 0 && lastName.Length > 0
+                && address.Length > 0)
+            {
+                this.Phone = phone ?? throw new ArgumentNullException(nameof(phone));
+                this.Email = email ?? throw new ArgumentNullException(nameof(email));
+                this.Id = id;
+                this.FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
+                this.LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
+                this.Gender = gender;
+                this.Birth = birth;
+                this.Address = address ?? throw new ArgumentNullException(nameof(address));
+                this.Avatar = avatar;
+            }
+        }
+
         public Candidate GetInfoCandidate(Account account)
         {
             Candidate cd = new Candidate();
