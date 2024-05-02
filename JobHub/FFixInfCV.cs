@@ -64,10 +64,9 @@ namespace JobHub
                     }
                 }
                 FixCVDAO fix = new FixCVDAO(idCV, idCandidate);
-                experience += "<" + uC_MakeCV2.txtEducation.Text;
                 Candidate candidate = new Candidate(idCandidate, uC_MakeCV2.txtFirstName.Text.Trim(), uC_MakeCV2.txtLastName.Text.Trim(), uC_MakeCV2.txtPhoneNumber.Text.Trim(), uC_MakeCV2.txtEmail.Text.Trim(),
                 uC_MakeCV2.rdoBoy.Checked, uC_MakeCV2.dtpYob.Value, uC_MakeCV2.txtAddress.Text.Trim());
-                DetailCV detail = new DetailCV(idCV, idCandidate, uC_MakeCV2.txtNameJob.Text.Trim(), uC_MakeCV2.txtSkill.Text.Trim(), experience);
+                DetailCV detail = new DetailCV(idCV, idCandidate, uC_MakeCV2.txtNameJob.Text.Trim(), uC_MakeCV2.txtSkill.Text.Trim(), experience, uC_MakeCV2.txtEducation.Text.Trim());
                 fix.UpdateData(detail);
                 fix.UpdateData(candidate);
                 CustomMessageBox custom = new CustomMessageBox();

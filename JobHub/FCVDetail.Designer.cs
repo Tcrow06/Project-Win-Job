@@ -79,8 +79,8 @@
             // guna2Separator4
             // 
             this.guna2Separator4.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator4.Location = new System.Drawing.Point(233, 165);
-            this.guna2Separator4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator4.Location = new System.Drawing.Point(175, 134);
+            this.guna2Separator4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator4.Name = "guna2Separator4";
             this.guna2Separator4.Size = new System.Drawing.Size(411, 11);
             this.guna2Separator4.TabIndex = 8;
@@ -99,8 +99,8 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(13, 203);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator1.Location = new System.Drawing.Point(10, 165);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(196, 11);
             this.guna2Separator1.TabIndex = 2;
@@ -108,10 +108,10 @@
             // guna2Separator5
             // 
             this.guna2Separator5.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator5.Location = new System.Drawing.Point(0, 118);
-            this.guna2Separator5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator5.Location = new System.Drawing.Point(0, 96);
+            this.guna2Separator5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator5.Name = "guna2Separator5";
-            this.guna2Separator5.Size = new System.Drawing.Size(436, 11);
+            this.guna2Separator5.Size = new System.Drawing.Size(312, 9);
             this.guna2Separator5.TabIndex = 6;
             // 
             // lblLastName
@@ -144,8 +144,8 @@
             this.pnCall.Controls.Add(this.guna2PictureBox2);
             this.pnCall.Controls.Add(this.lblPhoneNumber);
             this.pnCall.Controls.Add(this.guna2PictureBox1);
-            this.pnCall.Location = new System.Drawing.Point(5, 282);
-            this.pnCall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnCall.Location = new System.Drawing.Point(4, 229);
+            this.pnCall.Margin = new System.Windows.Forms.Padding(2);
             this.pnCall.Name = "pnCall";
             this.pnCall.Size = new System.Drawing.Size(216, 116);
             this.pnCall.TabIndex = 1;
@@ -167,8 +167,8 @@
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(7, 71);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(5, 58);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(19, 14);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,8 +192,8 @@
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(7, 39);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(5, 32);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(19, 14);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,8 +217,8 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 7);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(5, 6);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(19, 14);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,8 +232,8 @@
             this.guna2Panel2.Controls.Add(this.lblJobName);
             this.guna2Panel2.Controls.Add(this.lblFirstName);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(228, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(171, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(420, 128);
             this.guna2Panel2.TabIndex = 9;
@@ -255,16 +255,16 @@
             this.pnEducation.Controls.Add(this.guna2Separator2);
             this.pnEducation.Controls.Add(this.label8);
             this.pnEducation.Controls.Add(this.lblInfEdu);
-            this.pnEducation.Location = new System.Drawing.Point(5, 410);
-            this.pnEducation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnEducation.Location = new System.Drawing.Point(4, 333);
+            this.pnEducation.Margin = new System.Windows.Forms.Padding(2);
             this.pnEducation.Name = "pnEducation";
             this.pnEducation.Size = new System.Drawing.Size(216, 135);
             this.pnEducation.TabIndex = 2;
             // 
             // guna2Separator2
             // 
-            this.guna2Separator2.Location = new System.Drawing.Point(7, 38);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator2.Location = new System.Drawing.Point(5, 31);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(196, 11);
             this.guna2Separator2.TabIndex = 11;
@@ -297,16 +297,16 @@
             this.pnSkill.Controls.Add(this.guna2Separator3);
             this.pnSkill.Controls.Add(this.label5);
             this.pnSkill.Controls.Add(this.lblSkill);
-            this.pnSkill.Location = new System.Drawing.Point(5, 518);
-            this.pnSkill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnSkill.Location = new System.Drawing.Point(4, 421);
+            this.pnSkill.Margin = new System.Windows.Forms.Padding(2);
             this.pnSkill.Name = "pnSkill";
             this.pnSkill.Size = new System.Drawing.Size(216, 126);
             this.pnSkill.TabIndex = 4;
             // 
             // guna2Separator3
             // 
-            this.guna2Separator3.Location = new System.Drawing.Point(7, 38);
-            this.guna2Separator3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator3.Location = new System.Drawing.Point(5, 31);
+            this.guna2Separator3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator3.Name = "guna2Separator3";
             this.guna2Separator3.Size = new System.Drawing.Size(196, 11);
             this.guna2Separator3.TabIndex = 11;
@@ -337,10 +337,10 @@
             // pnExperience
             // 
             this.pnExperience.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnExperience.Location = new System.Drawing.Point(228, 281);
-            this.pnExperience.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnExperience.Location = new System.Drawing.Point(171, 165);
+            this.pnExperience.Margin = new System.Windows.Forms.Padding(2);
             this.pnExperience.Name = "pnExperience";
-            this.pnExperience.Size = new System.Drawing.Size(420, 473);
+            this.pnExperience.Size = new System.Drawing.Size(315, 448);
             this.pnExperience.TabIndex = 10;
             // 
             // label1
@@ -379,7 +379,7 @@
             this.guna2Panel1.Controls.Add(this.picAvatarCV);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(228, 754);
             this.guna2Panel1.TabIndex = 6;
@@ -388,8 +388,8 @@
             // 
             this.pnControl.Controls.Add(this.btnBack);
             this.pnControl.Controls.Add(this.btnFix);
-            this.pnControl.Location = new System.Drawing.Point(5, 647);
-            this.pnControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnControl.Location = new System.Drawing.Point(5, 526);
+            this.pnControl.Margin = new System.Windows.Forms.Padding(2);
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(213, 126);
             this.pnControl.TabIndex = 12;
@@ -406,8 +406,8 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBack.Location = new System.Drawing.Point(3, 57);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(2, 46);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(208, 38);
             this.btnBack.TabIndex = 6;
@@ -428,8 +428,8 @@
             this.btnFix.ForeColor = System.Drawing.Color.White;
             this.btnFix.Image = ((System.Drawing.Image)(resources.GetObject("btnFix.Image")));
             this.btnFix.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFix.Location = new System.Drawing.Point(4, 1);
-            this.btnFix.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFix.Location = new System.Drawing.Point(3, 1);
+            this.btnFix.Margin = new System.Windows.Forms.Padding(2);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(208, 38);
             this.btnFix.TabIndex = 5;
@@ -444,8 +444,8 @@
             this.picLoadImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLoadImage.Image = ((System.Drawing.Image)(resources.GetObject("picLoadImage.Image")));
             this.picLoadImage.ImageRotate = 0F;
-            this.picLoadImage.Location = new System.Drawing.Point(131, 129);
-            this.picLoadImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picLoadImage.Location = new System.Drawing.Point(98, 105);
+            this.picLoadImage.Margin = new System.Windows.Forms.Padding(2);
             this.picLoadImage.Name = "picLoadImage";
             this.picLoadImage.Size = new System.Drawing.Size(29, 26);
             this.picLoadImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -457,8 +457,8 @@
             // 
             this.picAvatarCV.Image = ((System.Drawing.Image)(resources.GetObject("picAvatarCV.Image")));
             this.picAvatarCV.ImageRotate = 0F;
-            this.picAvatarCV.Location = new System.Drawing.Point(31, 17);
-            this.picAvatarCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picAvatarCV.Location = new System.Drawing.Point(23, 14);
+            this.picAvatarCV.Margin = new System.Windows.Forms.Padding(2);
             this.picAvatarCV.Name = "picAvatarCV";
             this.picAvatarCV.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picAvatarCV.Size = new System.Drawing.Size(137, 134);
@@ -483,7 +483,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FCVDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCVDetail";

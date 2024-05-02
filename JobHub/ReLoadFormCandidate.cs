@@ -27,7 +27,7 @@ namespace JobHub
             {
                 return form;
             }
-            return new FormAndInfoCandidate(new FViews(),-1, -1);
+            return new FormAndInfoCandidate(new FCharts(fm),-1, -1);
         }
         public FormAndInfoCandidate ReLoadLogin(Fmain fm)
         {
