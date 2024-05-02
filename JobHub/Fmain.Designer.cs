@@ -67,6 +67,7 @@
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCvCad = new Guna.UI2.WinForms.Guna2Button();
             this.btnFavouriteCV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFindCandidate = new Guna.UI2.WinForms.Guna2Button();
             this.pnAcount = new Guna.UI2.WinForms.Guna2Panel();
             this.lblAccName = new System.Windows.Forms.Label();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -358,6 +359,7 @@
             this.btnAppliedJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAppliedJob.TextOffset = new System.Drawing.Point(30, 0);
             this.guna2HtmlToolTip1.SetToolTip(this.btnAppliedJob, "Việc làm đã ứng tuyển");
+            this.btnAppliedJob.Click += new System.EventHandler(this.btnAppliedJob_Click);
             // 
             // pnSubNav2
             // 
@@ -810,11 +812,12 @@
             this.pnSubNav31.Controls.Add(this.guna2Button5);
             this.pnSubNav31.Controls.Add(this.btnCvCad);
             this.pnSubNav31.Controls.Add(this.btnFavouriteCV);
+            this.pnSubNav31.Controls.Add(this.btnFindCandidate);
             this.guna2Transition1.SetDecoration(this.pnSubNav31, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnSubNav31.Location = new System.Drawing.Point(237, 316);
             this.pnSubNav31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav31.Name = "pnSubNav31";
-            this.pnSubNav31.Size = new System.Drawing.Size(228, 126);
+            this.pnSubNav31.Size = new System.Drawing.Size(228, 164);
             this.pnSubNav31.TabIndex = 8;
             this.pnSubNav31.Visible = false;
             // 
@@ -901,6 +904,35 @@
             this.btnFavouriteCV.TextOffset = new System.Drawing.Point(30, 0);
             this.guna2HtmlToolTip1.SetToolTip(this.btnFavouriteCV, "Danh sách công việc của công ty");
             this.btnFavouriteCV.Click += new System.EventHandler(this.btnFavouriteCV_Click);
+            // 
+            // btnFindCandidate
+            // 
+            this.btnFindCandidate.BackColor = System.Drawing.Color.Transparent;
+            this.btnFindCandidate.BorderRadius = 8;
+            this.btnFindCandidate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnFindCandidate, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnFindCandidate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindCandidate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFindCandidate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFindCandidate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFindCandidate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
+            this.btnFindCandidate.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnFindCandidate.ForeColor = System.Drawing.Color.White;
+            this.btnFindCandidate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnFindCandidate.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnFindCandidate.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnFindCandidate.Image = ((System.Drawing.Image)(resources.GetObject("btnFindCandidate.Image")));
+            this.btnFindCandidate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFindCandidate.Location = new System.Drawing.Point(3, 122);
+            this.btnFindCandidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFindCandidate.Name = "btnFindCandidate";
+            this.btnFindCandidate.Size = new System.Drawing.Size(224, 36);
+            this.btnFindCandidate.TabIndex = 7;
+            this.btnFindCandidate.Text = "Tìm ứng viên";
+            this.btnFindCandidate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFindCandidate.TextOffset = new System.Drawing.Point(30, 0);
+            this.guna2HtmlToolTip1.SetToolTip(this.btnFindCandidate, "Danh sách công việc của công ty");
+            this.btnFindCandidate.Click += new System.EventHandler(this.btnFindCandidate_Click);
             // 
             // pnAcount
             // 
@@ -1331,5 +1363,6 @@
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
         private Guna.UI2.WinForms.Guna2Panel pnAcount;
         private Guna.UI2.WinForms.Guna2Panel pnContainMenu;
+        private Guna.UI2.WinForms.Guna2Button btnFindCandidate;
     }
 }

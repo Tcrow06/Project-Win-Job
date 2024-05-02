@@ -38,9 +38,9 @@ namespace JobHub
             DataTable dt = detailCVDAO.ReadData(query);
             detailCVDAO.WriteData(lblFirstName, lblLastName, lblJobName, lblIntroduce, lblPhoneNumber,
                 lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt);
-            
-            
-            
+
+
+
         }
         private void setLocation(int x, int y, Control ctrl)
         {
@@ -62,11 +62,12 @@ namespace JobHub
         private void FCVDetail_Load(object sender, EventArgs e)
         {
             loadData();
-            this.Size = new Size(500, 600);
+            
             setLocation(lblIntroduce.Location.X, lblIntroduce.Location.Y + lblIntroduce.Height + 5, pnCall);
             setLocation(pnCall.Location.X, pnCall.Location.Y + pnCall.Height + 5, pnEducation);
             setLocation(pnEducation.Location.X, pnEducation.Location.Y + 5 + pnEducation.Height, pnSkill);
             setLocation(pnSkill.Location.X, pnSkill.Location.Y + 5 + pnSkill.Height, pnControl);
+            this.Size = new Size(500, pnControl.Location.Y + 100);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -87,7 +88,7 @@ namespace JobHub
         {
             try
             {
-                string absoluteImagePath = Path.Combine(Application.StartupPath,"..\\..\\", path);
+                string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", path);
                 if (File.Exists(absoluteImagePath))
                 {
                     Image img = Image.FromFile(absoluteImagePath);

@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="conn" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=TU;Initial Catalog=JobHub;Integrated Security=True;Encrypt=False;MultipleActiveResultSets=True;</Value>
+      <Value Profile="(Default)">Data Source=LAPTOP-QHAH49DL\SQLEXPRESS01;Initial Catalog=JobHub;Integrated Security=True;Encrypt=False;MultipleActiveResultSets=True;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

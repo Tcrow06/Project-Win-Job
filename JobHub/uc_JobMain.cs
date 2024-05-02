@@ -38,10 +38,10 @@ namespace JobHub
             FJobDetails_Load(idJob, idCompany, fm);
 
         }
-        public void LoadJobDetail(object sender, EventArgs e,uc_JobMain job, Fmain fm)
+/*        public void LoadJobDetail(object sender, EventArgs e, uc_JobMain job, Fmain fm)
         {
             FJobDetails_Load(job, fm);
-            
+
         }
         private void FJobDetails_Load(int idJob, int idCp,string field, Fmain fm)
         {
@@ -59,7 +59,7 @@ namespace JobHub
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job, jobMain.idJob, jobMain.idCompany);
             fm.Forms.Push(fai);
             fm.loadForm(fai.Form);
-        }
+        }*/
         private void FJobDetails_Load(int idJob, int idCp, Fmain fm)
         {
             FJobDetails job = new FJobDetails(idJob, idCp, fm);

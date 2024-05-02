@@ -81,10 +81,12 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="AccountDAO.cs" />
+    <Compile Include="AppliedCV.cs" />
+    <Compile Include="AppliedCVDAO.cs" />
     <Compile Include="ApplyWithCV.cs" />
     <Compile Include="ApplyWithCVDAO.cs" />
     <Compile Include="BestApplyDAO.cs" />
-    <Compile Include="CandidateDao.cs" />
+    <Compile Include="CandidateDAO.cs" />
     <Compile Include="ChangTheSize.cs" />
     <Compile Include="Charts.cs" />
     <Compile Include="ChartsDAO.cs" />
@@ -98,6 +100,12 @@
     <Compile Include="EditCompanyDao.cs" />
     <Compile Include="EditName.cs" />
     <Compile Include="EditNameDAO.cs" />
+    <Compile Include="FAppliedCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAppliedCV.Designer.cs">
+      <DependentUpon>FAppliedCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCharts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +174,14 @@
     <Compile Include="FFixInfCV.Designer.cs">
       <DependentUpon>FFixInfCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFindCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFindCandidate.Designer.cs">
+      <DependentUpon>FFindCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindCandidate.cs" />
+    <Compile Include="FindCandidateDAO.cs" />
     <Compile Include="FixCVDAO.cs" />
     <Compile Include="FMakeCV.cs">
       <SubType>Form</SubType>
@@ -173,6 +189,8 @@
     <Compile Include="FMakeCV.Designer.cs">
       <DependentUpon>FMakeCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FollowedCV.cs" />
+    <Compile Include="FollowedCVDAO.cs" />
     <Compile Include="FormHandler.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Login.cs" />
@@ -272,11 +290,11 @@
     <Compile Include="FMyCV.Designer.cs">
       <DependentUpon>FMyCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FFollowCV.cs">
+    <Compile Include="FFollowedCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FFollowCV.Designer.cs">
-      <DependentUpon>FFollowCV.cs</DependentUpon>
+    <Compile Include="FFollowedCV.Designer.cs">
+      <DependentUpon>FFollowedCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAndInfoCandidate.cs" />
     <Compile Include="FPostJob.cs">
@@ -394,6 +412,9 @@
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="FAppliedCV.resx">
+      <DependentUpon>FAppliedCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCharts.resx">
       <DependentUpon>FCharts.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FFixInfCV.resx">
       <DependentUpon>FFixInfCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFindCandidate.resx">
+      <DependentUpon>FFindCandidate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMakeCV.resx">
       <DependentUpon>FMakeCV.cs</DependentUpon>
@@ -473,8 +497,8 @@
     <EmbeddedResource Include="FMyCV.resx">
       <DependentUpon>FMyCV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FFollowCV.resx">
-      <DependentUpon>FFollowCV.cs</DependentUpon>
+    <EmbeddedResource Include="FFollowedCV.resx">
+      <DependentUpon>FFollowedCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPostJob.resx">
       <DependentUpon>FPostJob.cs</DependentUpon>

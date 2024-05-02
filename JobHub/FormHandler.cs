@@ -12,6 +12,14 @@ namespace JobHub
     {
         DBConection db = new DBConection();
         public FormHandler() { }
+        
+        public void OpenFormCVDetailNotEdit(int idCadidate, int idCV)
+        {
+            FCVDetail fCVDetail = new FCVDetail(idCadidate, idCV);
+            fCVDetail.picLoadImage.Visible = false;
+            fCVDetail.btnFix.Visible = false;
+            fCVDetail.ShowDialog();
+        }
         public void OpenNewForm(int idCadidate, int idCV)
         {
             FCVDetail fCVDetail = new FCVDetail(idCadidate, idCV);

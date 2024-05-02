@@ -73,16 +73,22 @@ namespace JobHub
                                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (results == DialogResult.OK)
             {
-                cvDAO.DeleteImageCV(idCV);
-                uc.Dispose();
-                im.Dispose();
-                string imagePath = function.getPathImage(nameImage);
-                if (File.Exists(imagePath))
+                try
                 {
-                    File.Delete(imagePath);
-                    MessageBox.Show("Đã xóa tệp thành công.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    uc.Dispose();
+                    im.Dispose();
+                    string imagePath = function.getPathImage(nameImage);
+                    if (File.Exists(imagePath))
+                    {
+                        File.Delete(imagePath);
+                        MessageBox.Show("Đã xóa tệp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    cvDAO.DeleteImageCV(idCV);
                 }
+                catch
+                {
 
+                }
             }
         }
     
