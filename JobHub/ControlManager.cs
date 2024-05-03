@@ -47,7 +47,7 @@ namespace JobHub
             DataTable dt = function.ReadData(cmd);
             if(load.txtReviewJob.Text.Trim().Length > 0 && load.txtReviewJob.Text.Trim().Length > 0 && load.txtTime.Text.Trim().Length > 0)
             {
-                string newExperience = "+" + load.txtWhatJob.Text.Trim() + "-" + load.txtTime.Text.Trim() + ">" + load.txtReviewJob.Text.Trim();
+                string newExperience = "|!" + load.txtWhatJob.Text.Trim() + "|#" + load.txtTime.Text.Trim() + "|^" + load.txtReviewJob.Text.Trim();
                 string oldExperience = dt.Rows[0]["CVDescription"].ToString().Trim();
                 string result = oldExperience.Replace(newExperience, "").Trim();
                 string cmdUpdate = $@"Update CV
@@ -88,7 +88,7 @@ namespace JobHub
                         Array.Copy(uC_LoadIfJob, i + 1, newArray, i, uC_LoadIfJob.Length - i - 1);
                     }
                 }
-                for(int i = newArray.Length - 1; i>= 0; i--)
+                for(int i = newArray.Length - 1; i >= 0; i--)
                 {
                     containUC.Push(newArray[i]);
                 } 

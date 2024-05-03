@@ -80,11 +80,11 @@ namespace JobHub
                             FROM Candidate
                             INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
                             where Candidate.idCandidate = {this.Id}";
-            FMakeCV make = new FMakeCV(this.Id);
+            FCreatCV make = new FCreatCV(this.Id);
             this.Hide();
             make.ShowDialog();
-            DataTable dt = CVDAO.ReadData(cmd);
-            CVDAO.WriteData(dt, pnContainCV, lblNameCandidate, picAvarta);
+            //DataTable dt = CVDAO.ReadData(cmd);
+            //CVDAO.WriteData(dt, pnContainCV, lblNameCandidate, picAvarta);
             this.Show();
         }
 
@@ -103,6 +103,7 @@ namespace JobHub
                         myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
                 }
             }
+
         }
 
         private void updateCV(string path)

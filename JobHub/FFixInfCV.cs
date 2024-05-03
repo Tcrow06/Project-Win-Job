@@ -29,8 +29,8 @@ namespace JobHub
 
         public void readData()
         {
-            DataTable dt = fixCVDAO.readData(this.idCandidate, this.idCV);
-            fixCVDAO.ShowData(this.idCV, this.idCandidate, uC_MakeCV2.txtAddress, uC_MakeCV2.txtEducation, uC_MakeCV2.txtEmail, uC_MakeCV2.txtFirstName, uC_MakeCV2.txtLastName, uC_MakeCV2.txtNameJob, uC_MakeCV2.txtPhoneNumber, uC_MakeCV2.txtSkill, dt, uC_MakeCV2.fpnContain, uC_MakeCV2.rdoBoy, uC_MakeCV2.rdoGirl, uC_MakeCV2.dtpYob);
+            //DataTable dt = fixCVDAO.ReadData(this.idCandidate, this.idCV);
+            //fixCVDAO.ShowData(this.idCV, this.idCandidate, uC_MakeCV2.txtAddress, uC_MakeCV2.txtEducation, uC_MakeCV2.txtEmail, uC_MakeCV2.txtFirstName, uC_MakeCV2.txtLastName, uC_MakeCV2.txtNameJob, uC_MakeCV2.txtPhoneNumber, uC_MakeCV2.txtSkill, dt, uC_MakeCV2.fpnContain, uC_MakeCV2.rdoBoy, uC_MakeCV2.rdoGirl, uC_MakeCV2.dtpYob);
         }
         public FFixInfCV(int idCV, int idCandidate)
         {

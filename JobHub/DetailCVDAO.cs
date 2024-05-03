@@ -23,10 +23,10 @@ namespace JobHub
         public void WriteData(System.Windows.Forms.Label lblFirstName, System.Windows.Forms.Label lblLastName, System.Windows.Forms.Label lblJobName,
             System.Windows.Forms.Label lblIntroduce, System.Windows.Forms.Label lblPhoneNumber, System.Windows.Forms.Label lblEmail,
             System.Windows.Forms.Label lblAddress, System.Windows.Forms.Label lblSkill, 
-            System.Windows.Forms.Label lblInfEdu, FlowLayoutPanel pnExperience, Guna2CirclePictureBox picAvatarCV, DataTable dt)
+            System.Windows.Forms.Label lblInfEdu, FlowLayoutPanel pnExperience, Guna2CirclePictureBox picAvatarCV, DataTable dt, Guna2Panel pnContailMenu)
         {
             function.WriteData(lblFirstName, lblLastName, lblJobName, lblIntroduce,
-            lblPhoneNumber, lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt);
+            lblPhoneNumber, lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt, pnContailMenu);
         }
 
         public void Update(string cmd)

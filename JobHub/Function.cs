@@ -39,14 +39,14 @@ namespace JobHub
             string s = detail;
             if (s.Trim().Length > 0 && s[0] == '+')
             {
-                string[] array = s.Split('+');
+                    string[] array = s.Split(new char[] { '|', '!' }, StringSplitOptions.RemoveEmptyEntries);
                 uc_make.pnExperience.Controls.Clear();
                 for (int i = 0; i < array.Length; i++)
                 {
                     if (array[i] != "")
                     {
                         uC_JobDescription uC_JobDescription = new uC_JobDescription();
-                        string[] subArray = array[i].Split('-');
+                            string[] subArray = array[i].Split(new char[] {'|', '#'}, StringSplitOptions.RemoveEmptyEntries);
                         uC_JobDescription.lblViewJob.Text = subArray[0];
                         string[] subArray1 = subArray[1].Split('>');
                         uC_JobDescription.lblSince.Text = subArray1[0];
@@ -62,30 +62,50 @@ namespace JobHub
             Stack<uC_LoadIfJob> containUC = new Stack<uC_LoadIfJob>();
             ControlManager controlManager = new ControlManager(idCV, idCandidate);
             string s = detail.Trim();
-            if (s.Trim().Length > 0 && s[0] == '+')
+
+            if (s.Trim().Length > 0 && s[0] == '|' && s[1] == '!')
             {
-                string[] array = s.Split('+');
-                fpn.Controls.Clear();
-                for (int i = 0; i < array.Length; i++)
+                for (int i = 0; i < s.Length; ++i)
                 {
-                    if (array[i] != "")
+                    string temp = "";
+                    if (s[i] == '|' && s[i + 1] == '!')
                     {
                         uC_LoadIfJob uC_LoadIfJob = new uC_LoadIfJob();
-                        containUC.Push(uC_LoadIfJob);
-                        string[] subArray = array[i].Split('-');
-                        uC_LoadIfJob.txtWhatJob.Text = subArray[0];
-                        string[] subArray1 = subArray[1].Split('>');
-                        uC_LoadIfJob.txtTime.Text = subArray1[0];           
-                        uC_LoadIfJob.txtReviewJob.Text = subArray1[1];                      
+                        int j = i + 2;
+                        while (s[j] != '|' && s[j + 1] != '#')
+                        {
+                            temp += s[j];
+                            j++;
+                        }
+                        j += 2;
+                        uC_LoadIfJob.txtWhatJob.Text = temp;
+                        temp = "";
+                        while (s[j] != '|' && s[j + 1] != '^')
+                        {
+                            temp += s[j];
+                            j++;
+                        }
+                        uC_LoadIfJob.txtTime.Text = temp;
+                        j += 2;
+                        temp = "";
+                        while (j < s.Length - 1 && (s[j] != '|' && s[j + 1] != '+'))
+                        {                           
+                            temp += s[j];
+                            j++;
+                            if (j == s.Length - 1)
+                            {
+                                temp += s[j];
+                            }
+                        }
+                        uC_LoadIfJob.txtReviewJob.Text = temp;
                         AddEventUC(uC_LoadIfJob, containUC, fpn, controlManager);
-                        if (i == array.Length - 1)
+                        i = j - 1;
+                        if (j == s.Length - 1)
                         {
                             uC_LoadIfJob.btnAddPanel.Visible = true;
                         }
                     }
-                    
                 }
-
             }
             else
             {
@@ -110,7 +130,34 @@ namespace JobHub
         {
             ctrl.Location = new Point(x, y);
         }
+
         public void WriteData(DataTable dt, FFMCV fMCV)
+        {
+            ExcutionWriteData(dt, fMCV);
+        }
+
+        public void WriteData(DataTable dt, FCreatCV fMCV)
+        {
+            ExcutionWriteData(dt, fMCV);
+        }
+
+        public void IImage(string avt, Guna2CirclePictureBox picImage)
+        {
+            if (avt == "")
+            {
+                picImage.Image = Resources.iconuser;
+            }
+            else
+            {
+                string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", avt);
+                using (Image image = Image.FromFile(absoluteImagePath))
+                {
+                    picImage.Image = new Bitmap(image);
+                }
+            }
+        }
+
+        public void ExcutionWriteData(DataTable dt, FFMCV fMCV)
         {
 
             uC_MakeCV_1 uc_make = new uC_MakeCV_1();
@@ -128,13 +175,32 @@ namespace JobHub
                 uc_make.lblAddress.Text = dr["candidateAddress"].ToString().Trim();
                 uc_make.lblSkill.Text = dr["Skill"].ToString().Trim();
                 uc_make.lblJobName.Text = dr["jobName"].ToString().Trim();
+                uc_make.txtNameJob.Text = dr["jobName"].ToString().Trim();
                 uc_make.txtLastName.Text = dr["candidateLastName"].ToString().Trim();
                 uc_make.txtEmail.Text = dr["candidateEmail"].ToString().Trim();
                 uc_make.txtAddress.Text = dr["candidateAddress"].ToString().Trim();
                 uc_make.txtLinkAVT.Text = dr["candidateAvatar"].ToString().Trim();
                 uc_make.txtPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
                 uc_make.dtpYob.Value = DateTime.Parse(dr["candidateBirth"].ToString());
-                
+                uc_make.saveColor += color =>
+                {
+                    uc_make.pnContainMenu.BackColor = color;
+                };
+                IImage(dr["CVAvatar"].ToString(), uc_make.picAvatar);
+                uc_make.LoadImage += (sender, e) =>
+                {
+                    DetailCVDAO detailCVDAO = new DetailCVDAO();
+                    string path = detailCVDAO.SelectImageButton(Application.StartupPath, "Resources");
+                    if (path != null)
+                    {
+                        updateCV(path, uc_make.picAvatar, detailCVDAO, int.Parse(dr["idCV"].ToString()), int.Parse(dr["idCandidate"].ToString()));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã xảy ra lỗi");
+                    }
+
+                };
                 if (bool.Parse(dr["candidateGender"].ToString()))
                 {
                     uc_make.rdoBoy.Checked = true;
@@ -169,16 +235,15 @@ namespace JobHub
                                                 uC_LoadIfJob uc = (uC_LoadIfJob)control1;
                                                 if (uc.txtReviewJob.Text.Trim().Length > 0 && uc.txtTime.Text.Trim().Length > 0 && uc.txtReviewJob.Text.Trim().Length > 0)
                                                 {
-                                                    experience += "+" + uc.txtWhatJob.Text.Trim();
-                                                    experience += "-" + uc.txtTime.Text.Trim();
-                                                    experience += ">" + uc.txtReviewJob.Text.Trim();
+                                                    experience += "|!" + uc.txtWhatJob.Text.Trim();
+                                                    experience += "|#" + uc.txtTime.Text.Trim();
+                                                    experience += "|^" + uc.txtReviewJob.Text.Trim();
                                                 }
                                             }
                                         }
                                     }
                                    
-                                }
-                                
+                                }                               
                             }
                         }
                         string education = $"{uc_make.cboSalary.SelectedItem.ToString()} {uc_make.txtSchool.Text.Trim()} năm {uc_make.cboYear.SelectedItem.ToString()} tại {uc_make.cboCity.SelectedItem.ToString()}";
@@ -186,7 +251,7 @@ namespace JobHub
                         Candidate candidate = new Candidate(int.Parse(dr["idCandidate"].ToString()), uc_make.txtFirstName.Text.Trim(), uc_make.txtLastName.Text.Trim(), uc_make.txtPhoneNumber.Text.Trim(), uc_make.txtEmail.Text.Trim(),
                         uc_make.rdoBoy.Checked, uc_make.dtpYob.Value, uc_make.txtAddress.Text.Trim(), uc_make.txtLinkAVT.Text.Trim());
                         DetailCV detail = new DetailCV(int.Parse(dr["idCV"].ToString()), int.Parse(dr["idCandidate"].ToString()), uc_make.lblJobName.Text.Trim(), uc_make.txtSkills.Text.Trim(), experience, education);
-                        fix.UpdateData(detail);
+                        fix.UpdateData(detail, $"{uc_make.pnContainMenu.BackColor.R}, {uc_make.pnContainMenu.BackColor.G}, {uc_make.pnContainMenu.BackColor.B}");
                         fix.UpdateData(candidate);
                         MessageBox.Show("Sửa thành công");
                     }
@@ -200,6 +265,131 @@ namespace JobHub
             fMCV.Controls.Add(uc_make);
             uc_make.Dock = DockStyle.Fill;
         }
+
+        private void updateCV(string path, Guna2CirclePictureBox picAvatarCV, DetailCVDAO detailCVDAO, int idCV, int idCandidate)
+        {
+            try
+            {
+                string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", path);
+                if (File.Exists(absoluteImagePath))
+                {
+                    Image img = Image.FromFile(absoluteImagePath);
+                    picAvatarCV.Image = img;
+                    string cmd_update = $@"update CV
+                                   set CV.CVAvatar = N'{path}'
+                                   from CV
+                                   inner join Candidate on CV.idCandidate = Candidate.idCandidate
+                                   where CV.idCV = {idCV} and Candidate.idCandidate = {idCandidate}";
+                    detailCVDAO.Update(cmd_update);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy tập tin ảnh.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        public void ExcutionWriteData(DataTable dt, FCreatCV fMCV)
+        {
+
+            uC_MakeCV_1 uc_make = new uC_MakeCV_1();
+            foreach (DataRow dr in dt.Rows)
+            {
+                setLocation(uc_make.lblIntroduce.Location.X, uc_make.lblIntroduce.Location.Y + uc_make.lblIntroduce.Height + 5, uc_make.pnCall);
+                setLocation(uc_make.pnCall.Location.X, uc_make.pnCall.Location.Y + uc_make.pnCall.Height + 5, uc_make.pnEducation);
+                setLocation(uc_make.pnEducation.Location.X, uc_make.pnEducation.Location.Y + 5 + uc_make.pnEducation.Height, uc_make.pnSkill);
+                uc_make.txtFirstName.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblFirstNam.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblLastNam.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblIntroduce.Text = "Xin chào tôi tên là " + dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
+                uc_make.lblPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
+                uc_make.lblEmail.Text = dr["candidateEmail"].ToString().Trim();
+                uc_make.lblAddress.Text = dr["candidateAddress"].ToString().Trim();
+                uc_make.txtLastName.Text = dr["candidateLastName"].ToString().Trim();
+                uc_make.txtEmail.Text = dr["candidateEmail"].ToString().Trim();
+                uc_make.txtAddress.Text = dr["candidateAddress"].ToString().Trim();
+                uc_make.txtLinkAVT.Text = dr["candidateAvatar"].ToString().Trim();
+                uc_make.txtPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
+                uc_make.dtpYob.Value = DateTime.Parse(dr["candidateBirth"].ToString());
+                uc_make.saveColor += color =>
+                {
+                    uc_make.pnContainMenu.BackColor = color;
+                };
+
+                if (bool.Parse(dr["candidateGender"].ToString()))
+                {
+                    uc_make.rdoBoy.Checked = true;
+                    uc_make.rdoGirl.Checked = false;
+                }
+                else
+                {
+                    uc_make.rdoBoy.Checked = false;
+                    uc_make.rdoGirl.Checked = true;
+                }
+                MakeCVDAO makeCVDAO = new MakeCVDAO(int.Parse(dr["idCandidate"].ToString()));
+                string cmd = "select max(CV.idCV) as max from CV";
+                DataTable dt_max = makeCVDAO.ReadData(cmd);
+                int idCV = Int32.Parse(dt_max.Rows[0]["max"].ToString()) + 1;
+                uc_make.Done += (sender, e) =>
+                {
+                    string experience = "";
+                    foreach (Control control in uc_make.Controls)
+                    {
+                        if (control is Guna2Panel)
+                        {
+                            foreach (Control control2 in control.Controls)
+                            {
+                                if (control2 is FlowLayoutPanel)
+                                {
+                                    foreach (Control control1 in control2.Controls)
+                                    {
+                                        if (control1 is uC_LoadIfJob)
+                                        {
+                                            uC_LoadIfJob uc = (uC_LoadIfJob)control1;
+                                            if (uc.txtReviewJob.Text.Trim().Length > 0 && uc.txtTime.Text.Trim().Length > 0 && uc.txtReviewJob.Text.Trim().Length > 0)
+                                            {
+                                                experience += "|!" + uc.txtWhatJob.Text.Trim();
+                                                experience += "|#" + uc.txtTime.Text.Trim();
+                                                experience += "|^" + uc.txtReviewJob.Text.Trim();
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                    string education = $"{uc_make.cboSalary.SelectedItem.ToString()} {uc_make.txtSchool.Text.Trim()} năm {uc_make.cboYear.SelectedItem.ToString()} tại {uc_make.cboCity.SelectedItem.ToString()}";
+                    
+                    DetailCV detailCV = new DetailCV(idCV, int.Parse(dr["idCandidate"].ToString()), uc_make.txtNameJob.Text.Trim(),
+                    uc_make.txtSkills.Text.Trim(), experience, education);
+                    makeCVDAO.Insert(detailCV, $"{uc_make.pnContainMenu.BackColor.R}, {uc_make.pnContainMenu.BackColor.G}, {uc_make.pnContainMenu.BackColor.B}");
+                    MessageBox.Show("Lưu thành công");
+                };
+                uc_make.LoadImage += (sender, e) =>
+                {
+                    DetailCVDAO detailCVDAO = new DetailCVDAO();
+                    string path = detailCVDAO.SelectImageButton(Application.StartupPath, "Resources");
+                    if (path != null)
+                    {
+                        updateCV(path, uc_make.picAvatar, detailCVDAO, idCV, int.Parse(dr["idCandidate"].ToString()));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã xảy ra lỗi");
+                    }
+
+                };
+
+            }
+            fMCV.Controls.Add(uc_make);
+            uc_make.Dock = DockStyle.Fill;
+        }
+
         public void WriteData(DataTable dt, Label lblTotalJob)
         {
             lblTotalJob.Text = dt.Rows[0][0].ToString();
@@ -341,7 +531,7 @@ namespace JobHub
         public void WriteData(System.Windows.Forms.Label lblFirstName, System.Windows.Forms.Label lblLastName, System.Windows.Forms.Label lblJobName,
             System.Windows.Forms.Label lblIntroduce, System.Windows.Forms.Label lblPhoneNumber, System.Windows.Forms.Label lblEmail,
             System.Windows.Forms.Label lblAddress, System.Windows.Forms.Label lblSkill,
-            System.Windows.Forms.Label lblInfEdu, FlowLayoutPanel pnExperience, Guna2CirclePictureBox picAvatarCV, DataTable dt)
+            System.Windows.Forms.Label lblInfEdu, FlowLayoutPanel pnExperience, Guna2CirclePictureBox picAvatarCV, DataTable dt, Guna2Panel pnContailMenu)
         {
             foreach(DataRow dr in dt.Rows)
             {
@@ -353,7 +543,18 @@ namespace JobHub
                 lblEmail.Text = dr["candidateEmail"].ToString();
                 lblAddress.Text = dr["candidateAddress"].ToString();
                 lblSkill.Text = dr["Skill"].ToString();
-                if(dr["CVAvatar"].ToString().Trim() == "")
+                string rgb = dr["ThemeCV"].ToString().Trim();
+                string[] components = rgb.Split(',');
+
+                if (components.Length == 3)
+                {
+                    int red, green, blue;
+                    if (int.TryParse(components[0], out red) && int.TryParse(components[1], out green) && int.TryParse(components[2], out blue))
+                    {
+                        pnContailMenu.FillColor = Color.FromArgb(red, green, blue);
+                    }
+                }
+                if (dr["CVAvatar"].ToString().Trim() == "")
                 {
                     picAvatarCV.Image = Resources.iconuser;
                 }
@@ -366,24 +567,47 @@ namespace JobHub
                     }
                 }
                 string s = dr["CVDescription"].ToString().Trim();
-                if(s.Trim().Length > 0 && s[0] == '+')
+                if (s.Trim().Length > 0 && s[0] == '|' && s[1] == '!')
                 {
-                    string[] array = s.Split('+');
                     pnExperience.Controls.Clear();
-                    for (int i = 0; i < array.Length; i++)
+                    for (int i = 0; i < s.Length; ++i)
                     {
-                        if (array[i] != "")
+                        string temp = "";
+                        if (s[i] == '|' && s[i + 1] == '!')
                         {
                             uC_JobDescription uC_JobDescription = new uC_JobDescription();
-                            string[] subArray = array[i].Split('-');
-                            uC_JobDescription.lblViewJob.Text = subArray[0];
-                            string[] subArray1 = subArray[1].Split('>');
-                            uC_JobDescription.lblSince.Text = subArray1[0];
-                            uC_JobDescription.lblReviewJob.Text = subArray1[1];
+                            int j = i + 2;
+                            while (s[j] != '|' && s[j + 1] != '#')
+                            {
+                                temp += s[j];
+                                j++;
+                            }
+                            j += 2;
+                            uC_JobDescription.lblViewJob.Text = temp;
+                            temp = "";
+                            while (s[j] != '|' && s[j + 1] != '^')
+                            {
+                                temp += s[j];
+                                j++;
+                            }
+                            uC_JobDescription.lblSince.Text = temp;
+                            j += 2;
+                            temp = "";
+                            while (j < s.Length - 1 && (s[j] != '|' && s[j + 1] != '+'))
+                            {
+                                temp += s[j];
+                                j++;
+                                if (j == s.Length - 1)
+                                {
+                                    temp += s[j];
+                                }
+                            }
+                            uC_JobDescription.lblReviewJob.Text = temp;
                             pnExperience.Controls.Add(uC_JobDescription);
+                            i = j - 1;
                         }
                     }
-                } 
+                }
                 lblInfEdu.Text = dr["CVEducation"].ToString().Trim();
             }
                 
@@ -442,6 +666,7 @@ namespace JobHub
                 txtSkill.Text = row["Skill"].ToString();
                 txtAddress.Text = row["candidateAddress"].ToString();
                 yob.Value = DateTime.Parse(row["candidateBirth"].ToString());
+                txtEducation.Text = row["CVEducation"].ToString();
                 if (bool.Parse(row["candidateGender"].ToString()))
                 {
                     boy.Checked = true;
@@ -457,7 +682,7 @@ namespace JobHub
                 string s = row["CVDescription"].ToString().Trim();
                 if (s.Trim().Length > 0 && s[0] == '+')
                 {
-                    string[] array = s.Split('+');
+                    string[] array = s.Split(new char[] { '|', '!' }, StringSplitOptions.RemoveEmptyEntries);
                     fpn.Controls.Clear();
                     for (int i = 0; i < array.Length; i++)
                     {
@@ -465,21 +690,15 @@ namespace JobHub
                         {
                             uC_LoadIfJob uC_LoadIfJob = new uC_LoadIfJob();
                             containUC.Push(uC_LoadIfJob);
-                            string[] subArray = array[i].Split('-');
+                            string[] subArray = array[i].Split(new char[] {'|', '#'}, StringSplitOptions.RemoveEmptyEntries);
                             uC_LoadIfJob.txtWhatJob.Text = subArray[0];
-                            string[] subArray1 = subArray[1].Split('>');
+                            string[] subArray1 = subArray[1].Split(new char[] {'|', '^'}, StringSplitOptions.RemoveEmptyEntries);
                             uC_LoadIfJob.txtTime.Text = subArray1[0];
                             if (i == array.Length - 1)
                             {
-                                string[] sunArray2 = subArray1[1].Split('<');
-                                uC_LoadIfJob.txtReviewJob.Text = sunArray2[0];
-                                txtEducation.Text = sunArray2[1];
                                 uC_LoadIfJob.btnAddPanel.Visible = true;
                             }
-                            else
-                            {
-                                uC_LoadIfJob.txtReviewJob.Text = subArray1[1];
-                            }
+                            uC_LoadIfJob.txtReviewJob.Text = subArray1[1];
                             AddEventUC(uC_LoadIfJob, containUC, fpn, controlManager);
                         }
                     }
@@ -504,6 +723,23 @@ namespace JobHub
                 pb.Image = im;
                 return im;
             }catch{
+                MessageBox.Show("Lỗi không thể tải ảnh");
+                return null;
+            }
+
+        }
+
+        public Image InsertImage(string imageName, Guna2CirclePictureBox pb)
+        {
+            try
+            {
+                string imagePath = getPathImage(imageName);
+                Image im = new Bitmap(imagePath);
+                pb.Image = im;
+                return im;
+            }
+            catch
+            {
                 MessageBox.Show("Lỗi không thể tải ảnh");
                 return null;
             }

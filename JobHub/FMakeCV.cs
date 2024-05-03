@@ -78,15 +78,15 @@ namespace JobHub
         }
         private void FMakeCV_Load(object sender, EventArgs e)
         {
-            handler.setSizeForm(755, 700, this);
-            makeViewJob();
-            makeCVDAO = new MakeCVDAO(this.idCandidate);
-            DataTable dt = makeCVDAO.readData(this.idCandidate);
-            makeCVDAO.ShowData(idCandidate, uC_MakeCV1.txtAddress,
-            uC_MakeCV1.txtEmail, uC_MakeCV1.txtFirstName, uC_MakeCV1.txtLastName,
-            uC_MakeCV1.txtPhoneNumber,
-            dt, uC_MakeCV1.dtpYob,
-            uC_MakeCV1.rdoBoy, uC_MakeCV1.rdoGirl);
+           // handler.setSizeForm(755, 700, this);
+           // makeViewJob();
+           // makeCVDAO = new MakeCVDAO(this.idCandidate);
+           // //DataTable dt = makeCVDAO.readData(this.idCandidate);
+           //// makeCVDAO.ShowData(idCandidate, uC_MakeCV1.txtAddress,
+           // uC_MakeCV1.txtEmail, uC_MakeCV1.txtFirstName, uC_MakeCV1.txtLastName,
+           // uC_MakeCV1.txtPhoneNumber,
+           // //dt, uC_MakeCV1.dtpYob,
+           // uC_MakeCV1.rdoBoy, uC_MakeCV1.rdoGirl);
         }
     }
 }

@@ -25,18 +25,27 @@ namespace JobHub
             this.idCV = idCV;
             this.idCadidate = idCandidate;
         }
-        public DataTable readData(int idCadidate, int idCV)
+        public DataTable readData(string cmd)
         {
-            string cmd = $@"SELECT Candidate.*, CV.*
-                        FROM Candidate
-                        INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
-                        where Candidate.idCandidate = {idCadidate} And CV.idCV = {idCV}";
             return function.ReadData(cmd);
         }
 
         public void writeData(DataTable dt, FFMCV form)
         {
             function.WriteData(dt, form);
+        }
+
+        public void writeData(DataTable dt, FCreatCV form)
+        {
+            function.WriteData(dt, form);
+        }
+
+        public void UpdateData(DetailCV detailCV, string theme)
+        {
+            string cmd = $@"UPDATE CV
+                        SET CV.jobName = N'{detailCV.JobName}', CV.CVDescription = N'{detailCV.Experience}', CV.Skill = N'{detailCV.Skill}', CV.ThemeCV = '{theme}', CV.CVEducation = N'{detailCV.Education}'
+                        WHERE CV.idCV = {this.idCV} and CV.idCandidate = {idCadidate};";
+            function.Update(cmd);
         }
 
         public void UpdateData(DetailCV detailCV)

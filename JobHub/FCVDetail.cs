@@ -37,7 +37,7 @@ namespace JobHub
                             Where CV.idCV = {idCV}";
             DataTable dt = detailCVDAO.ReadData(query);
             detailCVDAO.WriteData(lblFirstName, lblLastName, lblJobName, lblIntroduce, lblPhoneNumber,
-                lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt);
+                lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt, pnContailMenu);
 
 
 
