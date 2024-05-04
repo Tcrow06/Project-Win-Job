@@ -20,6 +20,61 @@ namespace JobHub
         public Charts()
         {
         }
+        private GunaSplineAreaDataset gunaPieDataset;
+        private GunaAreaDataset gunaAreaDataset;
+        private GunaHorizontalBarDataset gunaHorizontalBarDataset;
+        public void InitializeGunaChart(GunaChart gunaChart, string s)
+        {
+            if(s == "Tron")
+            {
+                gunaPieDataset = new GunaSplineAreaDataset();
+                gunaPieDataset.YFormat = "Total {0:P}";
+                gunaPieDataset.Label = "FPT";
+                gunaPieDataset.LegendBoxFillColor = Color.FromArgb(45, 151, 255);
+                gunaChart.Datasets.Add(gunaPieDataset);
+            }
+            else if(s == "Duong")
+            {
+                gunaAreaDataset = new GunaAreaDataset();
+                gunaAreaDataset.Label = "NextTech";
+                gunaAreaDataset.LegendBoxFillColor = Color.FromArgb(221, 238, 254);
+                gunaAreaDataset.YFormat = "Total {0:P}";
+                gunaChart.Datasets.Add(gunaAreaDataset);
+            }
+            else if(s == "Cot")
+            {
+                gunaHorizontalBarDataset = new GunaHorizontalBarDataset();
+                gunaHorizontalBarDataset.Label = "VinGroup";
+                gunaHorizontalBarDataset.LegendBoxFillColor = Color.MediumSlateBlue;
+                gunaHorizontalBarDataset.YFormat = "Total {0:P}";
+                gunaChart.Datasets.Add(gunaHorizontalBarDataset);
+            }
+        }
+        public void GenerateDataAndLabels()
+        {
+            string[] monthLabels = { "Anuary", "March", "May", "July", "August"};
+
+            var random = new Random();
+            foreach (var label in monthLabels)
+            {
+                gunaPieDataset.DataPoints.Add(new LPoint()
+                {
+                    Label = label,
+                    Y = random.Next(10, 100),
+                });
+
+                gunaAreaDataset.DataPoints.Add(new LPoint()
+                {
+                    Label = label,
+                    Y = random.Next(10, 100),
+                });
+                gunaHorizontalBarDataset.DataPoints.Add(new LPoint()
+                {
+                    Label = label,
+                    Y = random.Next(10, 100),
+                });
+            }
+        }
 
         public void GenerateDataAndLabels(GunaBarDataset bIT, GunaBarDataset bEconomy, GunaBarDataset bTechnical, GunaBarDataset bOrther)
         {

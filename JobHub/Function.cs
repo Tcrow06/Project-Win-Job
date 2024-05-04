@@ -479,7 +479,17 @@ namespace JobHub
         {
             return conection.ExcutionReadData(cmd);
         }
+        public void DeleteMainCV()
+        {
+            string cmd = $@"Delete from CVReady";
+            ReadData(cmd);
+        }
 
+        public void SetMainCV(int idCandidate, int idCV, int type)
+        {
+            string cmd = $@"INSERT INTO CVReady (idCandidate, idCV, CVType  ) VALUES ('{idCandidate}', '{idCV}', '{type}')";
+            Insert(cmd);
+        } 
         public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameAvarta, Guna2CirclePictureBox picAvarta)
         {
             FormHandler handler = new FormHandler();
@@ -494,7 +504,13 @@ namespace JobHub
                 uC_CV.lblJobName.Text = dr["jobName"].ToString();
 
                 uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblLastName.Text} {uC_CV.lblFirstName.Text}";
-
+                uC_CV.btnMainCV.Click += (sender, e) =>
+                {
+                    DeleteMainCV();
+                    SetMainCV(int.Parse(dr["idCandidate"].ToString()), int.Parse(dr["idCV"].ToString()), 1);
+                    uC_CV.btnMainCV.Visible = false;
+                    MessageBox.Show("Đặt thành công");
+                };
                 if (dr["CVAvatar"].ToString().Trim() == "")
                 {
                     uC_CV.picAvatarCV.Image = Resources.ưqd;

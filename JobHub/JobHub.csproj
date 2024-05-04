@@ -203,6 +203,12 @@
     <Compile Include="FindCandidate.cs" />
     <Compile Include="FindCandidateDAO.cs" />
     <Compile Include="FixCVDAO.cs" />
+    <Compile Include="FMainCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMainCompany.Designer.cs">
+      <DependentUpon>FMainCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMakeCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -506,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FFindCandidate.resx">
       <DependentUpon>FFindCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMainCompany.resx">
+      <DependentUpon>FMainCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMakeCV.resx">
       <DependentUpon>FMakeCV.cs</DependentUpon>

@@ -36,9 +36,16 @@ namespace JobHub
         {
             cvDAO.AddImageCVIntoDB(imageName, idCandiate, idCV, CVName);
         }
-        public bool InsertInfoIntoUC(string imageName, FlowLayoutPanel pn, int idCV, string CVName)
+        public bool InsertInfoIntoUC(string imageName, FlowLayoutPanel pn, int idCV, string CVName, int idCandidate)
         {
             UC_ImageCV uc = new UC_ImageCV(imageName, idCV);
+            uc.btnMainCV.Click += (sender, e) =>
+            {
+                function.DeleteMainCV();
+                function.SetMainCV(idCandidate, idCV, 0);
+                uc.btnMainCV.Visible = false;
+                MessageBox.Show("Đặt thành công");
+            };
             uc.lblCVName.Text = Path.GetFileNameWithoutExtension(CVName);
             Image im = function.InsertImage(imageName, uc.pbImage);
             if (im !=null)
@@ -99,7 +106,7 @@ namespace JobHub
             while (dr.Read())
             {
                 InsertInfoIntoUC(dr["image"].ToString().Trim(), pn,
-                                    int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim());
+                                    int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString().Trim()));
             }
             
         }

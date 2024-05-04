@@ -44,5 +44,17 @@ namespace JobHub
         {
             deleteUC?.Invoke(sender, e);
         }
+
+        private void pbImage_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                btnMainCV.Visible = true;
+            }
+            else
+            {
+                btnMainCV.Visible = false;
+            }
+        }
     }
 }

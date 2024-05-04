@@ -20,7 +20,6 @@ namespace JobHub
         public List<string> LoadImage(string path, FlowLayoutPanel fpn, Guna2PictureBox picImage)
         {
             string[] listPath = path.Split('+');
-            //MessageBox.Show(listPath[0]);
             List<string> partsList = new List<string>(listPath);
             List<string> list = new List<string>();
             foreach (string item in partsList)

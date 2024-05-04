@@ -48,7 +48,7 @@ namespace JobHub
         public void LoadImage(DataRow dr)
         {
             myCV.InsertInfoIntoUC(dr["image"].ToString().Trim(), pnContainImageCV, 
-                                        int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim());
+                                        int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString()));
         }
         public void WriteData(DataTable dataTable)
         {
@@ -83,15 +83,12 @@ namespace JobHub
             FCreatCV make = new FCreatCV(this.Id);
             this.Hide();
             make.ShowDialog();
-            //DataTable dt = CVDAO.ReadData(cmd);
-            //CVDAO.WriteData(dt, pnContainCV, lblNameCandidate, picAvarta);
             this.Show();
         }
 
         private void btnLoadPDFCV_Click(object sender, EventArgs e)
         {
             idImageCV = myCV.GetIdBeforeSaveNew();
-
             string destinationFilePath = function.SelectImage();
             if (destinationFilePath != null)
             {
@@ -99,7 +96,7 @@ namespace JobHub
                 if (destinationFilePath != null && destinationFilePath != "")
                 {
                     if(myCV.InsertInfoIntoUC(nameImage, pnContainImageCV, idImageCV, 
-                        nameImage))
+                        nameImage, Id))
                         myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
                 }
             }

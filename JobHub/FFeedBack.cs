@@ -96,9 +96,9 @@ namespace JobHub
             }
         }
 
-        private void lblSend_Click(object sender, EventArgs e)
-        {  
-            if (txtFeedBack.Text.Trim() == "" && path.Trim() == "") 
+        private void picSend_Click(object sender, EventArgs e)
+        {
+            if (txtFeedBack.Text.Trim() == "" && path.Trim() == "")
             {
                 MessageBox.Show("Bạn chưa nhập đánh giá");
                 return;
@@ -106,7 +106,7 @@ namespace JobHub
             else
             {
                 path = "";
-                if(list!=null)
+                if (list != null)
                 {
                     for (int i = 0; i < list.Count; i++)
                     {
@@ -120,7 +120,7 @@ namespace JobHub
                         }
                     }
                 }
-                if (this.type==0)
+                if (this.type == 0)
                 {
                     FeedBack feedBack = new FeedBack(this.idCandidate, this.idObject, txtFeedBack.Text.Trim(), int.Parse(rsFeedBack.Value.ToString()), path);
                     feedBackDAO.SendJob(feedBack);
@@ -131,7 +131,7 @@ namespace JobHub
                     FeedBack feedBack = new FeedBack(this.idCandidate, this.idObject, txtFeedBack.Text.Trim(), int.Parse(rsFeedBack.Value.ToString()), path);
                     feedBackDAO.SendCompany(feedBack);
                 }
-                MessageBox.Show("Đánh giá thành công.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đánh giá thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

@@ -55,5 +55,17 @@ namespace JobHub
         {
             handler.OpenNewForm(idCandiate, idCV);
         }
+
+        private void uC_CV_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                btnMainCV.Visible = true;
+            }
+            else
+            {
+                btnMainCV.Visible = false;
+            }
+        }
     }
 }
