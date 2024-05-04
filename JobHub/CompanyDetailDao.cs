@@ -30,5 +30,32 @@ namespace JobHub
             string query = $"select * from Job inner join Company on Company.idCompany = Job.idCompany where job.idCompany = {idCompany}";
             return dbc.loadData(query);
         }
+        public SqlDataReader LoadUc_JobEvaluate(int idCompany)
+        {
+            string sql = $@"select* from CompanyEvaluate join Candidate on Candidate.idCandidate = CompanyEvaluate.idCandidate
+                            where idCompany = {idCompany}";
+            return dbc.loadData(sql);
+        }
+        public SqlDataReader LoadInfoEvaluate(int idCompany)
+        {
+            string sql = $@"SELECT idCompany,
+                            COUNT(CASE WHEN star = 1 THEN 1 END) AS s1,
+                            COUNT(CASE WHEN star = 2 THEN 1 END) AS s2,
+                            COUNT(CASE WHEN star = 3 THEN 1 END) AS s3,
+                            COUNT(CASE WHEN star = 4 THEN 1 END) AS s4,
+                            COUNT(CASE WHEN star = 5 THEN 1 END) AS s5
+                        FROM 
+                            CompanyEvaluate 
+                        WHERE 
+                            idCompany = {idCompany} 
+                        GROUP BY 
+                            idCompany;";
+            return dbc.loadData(sql);
+        }
+        public DataTable CheckEvaluated(int idCandidate, int idCompany)
+        {
+            string sql = $"select* from CompanyEvaluate where idCandidate ={idCandidate} and idCompany = {idCompany}";
+            return dbc.ExcutionReadData(sql); 
+        }
     }
 }

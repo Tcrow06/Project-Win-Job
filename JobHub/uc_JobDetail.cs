@@ -16,11 +16,6 @@ namespace JobHub
         public event EventHandler JobSavedClick;
         public event EventHandler btnApplyClick;
 
-        /*        private int idJob;
-                private int idCompany;
-
-                public int IdJob { get => idJob; set => idJob = value; }
-                public int IdCompany { get => idCompany; set => idCompany = value; }*/
         public uc_JobDetail()
         {
             InitializeComponent();
@@ -47,13 +42,13 @@ namespace JobHub
             {
                 if (cd.CheckSaveStatus(idJob, fm.Account.Id))
                 {
-                    ptbSave.Image = Properties.Resources.heartChuaLuu;
+                    ptbSave.Image = Properties.Resources.heartNotSaved;
                     cd.UnSavedJob(idJob, fm.Account.Id);
                 }
                 else
                 {
                     cd.SavedJob(idJob, fm.Account.Id);
-                    ptbSave.Image = Properties.Resources.heartDaLuu;
+                    ptbSave.Image = Properties.Resources.heartSave;
                 }
             }
         }

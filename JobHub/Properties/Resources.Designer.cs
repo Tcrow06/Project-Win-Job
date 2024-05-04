@@ -213,6 +213,26 @@ namespace JobHub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap heartNotSaved {
+            get {
+                object obj = ResourceManager.GetObject("heartNotSaved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heartSave {
+            get {
+                object obj = ResourceManager.GetObject("heartSave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_icon_silhouette {
             get {
                 object obj = ResourceManager.GetObject("home-icon-silhouette", resourceCulture);

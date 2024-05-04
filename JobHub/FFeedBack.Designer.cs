@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FFeedBack));
             this.pnTitle = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSend = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.pnFeedBack = new Guna.UI2.WinForms.Guna2Panel();
             this.fpnContainImage = new System.Windows.Forms.FlowLayoutPanel();
             this.picLoadImage = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -49,7 +49,7 @@
             // pnTitle
             // 
             this.pnTitle.Controls.Add(this.lblSend);
-            this.pnTitle.Controls.Add(this.label1);
+            this.pnTitle.Controls.Add(this.lblName);
             this.pnTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTitle.Location = new System.Drawing.Point(0, 0);
             this.pnTitle.Name = "pnTitle";
@@ -69,15 +69,15 @@
             this.lblSend.Text = "Gửi";
             this.lblSend.Click += new System.EventHandler(this.lblSend_Click);
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Đánh giá công ty";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(4, 11);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(132, 21);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Đánh giá công ty";
             // 
             // pnFeedBack
             // 
@@ -92,6 +92,7 @@
             // 
             // fpnContainImage
             // 
+            this.fpnContainImage.AutoScroll = true;
             this.fpnContainImage.Controls.Add(this.picLoadImage);
             this.fpnContainImage.Location = new System.Drawing.Point(3, 123);
             this.fpnContainImage.Name = "fpnContainImage";
@@ -198,7 +199,7 @@
 
         private Guna.UI2.WinForms.Guna2Panel pnTitle;
         private System.Windows.Forms.Label lblSend;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2Panel pnFeedBack;
         private System.Windows.Forms.FlowLayoutPanel fpnContainImage;
         private Guna.UI2.WinForms.Guna2TextBox txtFeedBack;

@@ -20,22 +20,31 @@ namespace JobHub
         public List<string> LoadImage(string path, FlowLayoutPanel fpn, Guna2PictureBox picImage)
         {
             string[] listPath = path.Split('+');
+            //MessageBox.Show(listPath[0]);
             List<string> partsList = new List<string>(listPath);
+            List<string> list = new List<string>();
             foreach (string item in partsList)
             {
                 if(item != "")
                 {
                     string item_path = func.SaveImage(item);
+                    list.Add(item_path);    
                     func.loadImageFeedBack(item_path, fpn, picImage, partsList);
                 }     
             }
-            return partsList;
+            return list;
         }
 
-        public void Send(FeedBack feedBack)
+        public void SendJob(FeedBack feedBack)
         {
             string cmd = $@"INSERT INTO JobEvaluate (idCandidate, idJob, description, star, image)
-                            VALUES ('{feedBack.IdCandidate}', '{feedBack.IdJob}', N'{feedBack.Des}', '{feedBack.Start}', N'{feedBack.Image}')";
+                            VALUES ('{feedBack.IdCandidate}', '{feedBack.IdObject}', N'{feedBack.Des}', '{feedBack.Start}', N'{feedBack.Image}')";
+            func.Insert(cmd);
+        }
+        public void SendCompany(FeedBack feedBack)
+        {
+            string cmd = $@"INSERT INTO CompanyEvaluate (idCandidate, idCompany, description, star, image)
+                            VALUES ('{feedBack.IdCandidate}', '{feedBack.IdObject}', N'{feedBack.Des}', '{feedBack.Start}', N'{feedBack.Image}')";
             func.Insert(cmd);
         }
     }

@@ -14,21 +14,41 @@ namespace JobHub
     {
         FeedBackDAO feedBackDAO = new FeedBackDAO();
         private int idCandidate;
-        private int idJob;
-        private string path = "";
+        private int idObject;
+        private int type;
+        private string path="";
         private List<string> list;
         public int IdCandidate { get => idCandidate; set => idCandidate = value; }
-        public int IdJob { get => idJob; set => idJob = value; }
+        public int IdObject { get => idObject; set => idObject = value; }
 
         public FFeedBack()
         {
             InitializeComponent();
         }
-        public FFeedBack(int idCandidate, int idJob)
+        public FFeedBack(int idCandidate, int idObject, int type)
         {
             InitializeComponent();
             this.idCandidate = idCandidate;
-            this.idJob = idJob;
+            this.idObject = idObject;
+            this.type = type;
+            LoadName();
+        }
+        private void LoadName()
+        {
+            if(type == 0)
+            {
+                lblName.Text = "Đánh giá công việc";
+            }
+            else
+            {
+                lblName.Text = "Đánh giá công ty";
+            }
+        }
+        public FFeedBack(int idCandidate, int idObject)
+        {
+            InitializeComponent();
+            this.idCandidate = idCandidate;
+            this.idObject = idObject;
         }
 
         private void picLoadImage_Click(object sender, EventArgs e)
@@ -86,35 +106,33 @@ namespace JobHub
             else
             {
                 path = "";
-                for (int i = 0; i < list.Count; i++)
+                if(list!=null)
                 {
-                    if (i == list.Count - 1)
+                    for (int i = 0; i < list.Count; i++)
                     {
-                        path += list[i];
+                        if (i == list.Count - 1)
+                        {
+                            path += list[i];
+                        }
+                        else
+                        {
+                            path += list[i] + "+";
+                        }
                     }
-                    else
-                    {
-                        path += list[i] + "+";
-                    }
                 }
-                if(list.Count < 1)
+                if (this.type==0)
                 {
-                    FeedBack feedBack = new FeedBack(this.idCandidate, this.idJob, txtFeedBack.Text.Trim(), int.Parse(rsFeedBack.Value.ToString()), "");
-                    feedBackDAO.Send(feedBack);
+                    FeedBack feedBack = new FeedBack(this.idCandidate, this.idObject, txtFeedBack.Text.Trim(), int.Parse(rsFeedBack.Value.ToString()), path);
+                    feedBackDAO.SendJob(feedBack);
 
                 }
-
-                else if(txtFeedBack.Text.Trim() == "")
+                else
                 {
-                    FeedBack feedBack = new FeedBack(this.idCandidate, this.idJob, "", int.Parse(rsFeedBack.Value.ToString()), path);
-                    feedBackDAO.Send(feedBack);
-
+                    FeedBack feedBack = new FeedBack(this.idCandidate, this.idObject, txtFeedBack.Text.Trim(), int.Parse(rsFeedBack.Value.ToString()), path);
+                    feedBackDAO.SendCompany(feedBack);
                 }
-                else if(txtFeedBack.Text.Trim() != "" && path != "")
-                {
-                    FeedBack feedBack = new FeedBack(this.idCandidate, this.idJob, txtFeedBack.Text.Trim(), int.Parse(rsFeedBack.Value.ToString()), path);
-                    feedBackDAO.Send(feedBack);
-                }
+                MessageBox.Show("Đánh giá thành công.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }

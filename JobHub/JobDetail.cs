@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -206,8 +207,8 @@ namespace JobHub
 
             job.pbAvatar.Height = job.pbAvatar.Width;
             job.lblField.Text = dr["jobField"].ToString();
-            job.lblNumberOfViews.Text = HandleNumbers(int.Parse(dr["jobNumberOfViews"]?.ToString()));
-            
+            job.lblNumberOfViews.Text = function.HandleNumbers(int.Parse(dr["jobNumberOfViews"]?.ToString()));
+
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
             job.IdCompany = int.Parse(dr["idCompany"].ToString()); 
             job.loadJobClick += (sender, e) =>
@@ -222,44 +223,9 @@ namespace JobHub
                 drCount.Read();
                 candidateNumber = int.Parse(drCount["CandidateNumbers"].ToString());
             }
-            job.lblNumberOfCandidates.Text = HandleNumbers(candidateNumber);
+            job.lblNumberOfCandidates.Text = function.HandleNumbers(candidateNumber);
 
             return job;
-        }
-        private string HandleNumbers(int number)
-        {
-            StringBuilder str = new StringBuilder();
-            str.Append("");
-            if (number< 1000)
-            {
-                str.Append(number.ToString());
-            }else if(number>=1000&& number < 1000000)
-            {
-                int n1 = number/1000;
-                number %= 1000;
-                int n2 = number/100;
-                
-                str.Append(n1.ToString());
-                if(n2 > 0)
-                {
-                    str.Append(","+n2.ToString());
-                }
-                str.Append(" N");
-            }
-            else
-            {
-                int n1 = number / 1000000;
-                number %= 1000000;
-                int n2 = number / 100000;
-
-                str.Append(n1.ToString());
-                if (n2 > 0)
-                {
-                    str.Append("," + n2.ToString());
-                }
-                str.Append(" Tr");
-            }
-            return str.ToString();
         }
         public void AddJob(JobDetail a)
         {
@@ -274,6 +240,23 @@ namespace JobHub
 
 
 
+        }
+        public SqlDataReader LoadUc_JobEvaluate(int idJob)
+        {
+            return jdd.LoadUc_JobEvaluate(idJob);
+        }
+        public SqlDataReader LoadInfoEvaluate(int idJob)
+        {
+            return jdd.LoadInfoEvaluate(idJob);
+        }
+        public bool CheckEvaluated(int idCandidate, int idJob)
+        {
+            DataTable dt = jdd.CheckEvaluated(idCandidate, idJob);
+            if (dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

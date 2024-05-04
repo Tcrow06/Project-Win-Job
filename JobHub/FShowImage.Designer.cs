@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
@@ -44,17 +44,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(970, 715);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pbImage
-            // 
-            this.pbImage.BackColor = System.Drawing.Color.Silver;
-            this.pbImage.BorderRadius = 5;
-            this.pbImage.ImageRotate = 0F;
-            this.pbImage.Location = new System.Drawing.Point(3, 3);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(938, 695);
-            this.pbImage.TabIndex = 0;
-            this.pbImage.TabStop = false;
             // 
             // guna2ControlBox1
             // 
@@ -77,6 +66,17 @@
             this.label2.Size = new System.Drawing.Size(197, 30);
             this.label2.TabIndex = 6;
             this.label2.Text = "Thông tin chi tiết ";
+            // 
+            // pbImage
+            // 
+            this.pbImage.BackColor = System.Drawing.Color.Silver;
+            this.pbImage.BorderRadius = 5;
+            this.pbImage.ImageRotate = 0F;
+            this.pbImage.Location = new System.Drawing.Point(3, 3);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(938, 695);
+            this.pbImage.TabIndex = 0;
+            this.pbImage.TabStop = false;
             // 
             // FShowImage
             // 
@@ -102,8 +102,8 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2PictureBox pbImage;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox pbImage;
     }
 }

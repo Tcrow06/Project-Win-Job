@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
@@ -735,7 +736,7 @@ namespace JobHub
         {
             try
             {
-                string imagePath = getPathImage(imageName);
+                string imagePath = getPathImage(imageName.Trim());
                 Image im = new Bitmap(imagePath);
                 pb.Image = im;
                 return im;
@@ -837,6 +838,88 @@ namespace JobHub
             }
             return null;
         }
+        public string HandleNumbers(int number)
+        {
+            StringBuilder str = new StringBuilder();
+            str.Append("");
+            if (number < 1000)
+            {
+                str.Append(number.ToString());
+            }
+            else if (number >= 1000 && number < 1000000)
+            {
+                int n1 = number / 1000;
+                number %= 1000;
+                int n2 = number / 100;
 
+                str.Append(n1.ToString());
+                if (n2 > 0)
+                {
+                    str.Append("," + n2.ToString());
+                }
+                str.Append(" N");
+            }
+            else
+            {
+                int n1 = number / 1000000;
+                number %= 1000000;
+                int n2 = number / 100000;
+
+                str.Append(n1.ToString());
+                if (n2 > 0)
+                {
+                    str.Append("," + n2.ToString());
+                }
+                str.Append(" Tr");
+            }
+            return str.ToString();
+        }
+        public void LoadUc_JobEvaluate(SqlDataReader dr,FlowLayoutPanel flpnUC)
+        {
+            flpnUC.Controls.Clear();
+            uc_Evaluate uc_Evaluate = new uc_Evaluate();
+            while (dr.Read())
+            {
+                uc_Evaluate uc = uc_Evaluate.LoadIntoIntoUC(dr);
+                flpnUC.Controls.Add(uc);
+            }
+        }
+        public void LoadInfoEvaluate(SqlDataReader dr, UC_EvaluateInfo uC_EvaluateInfo)
+        {
+            if (dr.Read())
+            {
+                List<int> list = new List<int>();
+                float avg = 0;
+                for (int i = 1; i <= 5; i++)
+                {
+                    int x = int.Parse(dr[$"s{i}"] != DBNull.Value ? dr[$"s{i}"].ToString() : "0");
+                    list.Add(x);
+                    avg += x * i;
+                }
+
+                avg /= list.Sum();
+                float roundedRating = (float)Math.Round(avg * 2) / 2;
+                uC_EvaluateInfo.rsJob.Value = roundedRating;
+                uC_EvaluateInfo.lblStar.Text = roundedRating.ToString();
+                uC_EvaluateInfo.lbl5.Location = new Point(uC_EvaluateInfo.lblStar.Location.X + uC_EvaluateInfo.lblStar.Size.Width, uC_EvaluateInfo.lblStar.Location.Y + 5);
+                uC_EvaluateInfo.lblStar5.Text += " (" + HandleNumbers(list[4]) + ")";
+                uC_EvaluateInfo.lblStar4.Text += " (" + HandleNumbers(list[3]) + ")";
+                uC_EvaluateInfo.lblStar3.Text += " (" + HandleNumbers(list[2]) + ")";
+                uC_EvaluateInfo.lblStar2.Text += " (" + HandleNumbers(list[1]) + ")";
+                uC_EvaluateInfo.lblStar1.Text += " (" + HandleNumbers(list[0]) + ")";
+                SetLocation(uC_EvaluateInfo.lblStar5, uC_EvaluateInfo.lblStar4);
+                SetLocation(uC_EvaluateInfo.lblStar4, uC_EvaluateInfo.lblStar3);
+                SetLocation(uC_EvaluateInfo.lblStar3, uC_EvaluateInfo.lblStar2);
+                SetLocation(uC_EvaluateInfo.lblStar2, uC_EvaluateInfo.lblStar1);
+
+
+
+            }
+
+        }
+        private void SetLocation(Label x, Label y)
+        {
+            y.Location = new Point(x.Location.X + x.Width + 20, x.Location.Y);
+        }
     }
 }

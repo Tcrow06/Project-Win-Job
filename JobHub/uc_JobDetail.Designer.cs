@@ -35,10 +35,10 @@
             this.lblJobName = new System.Windows.Forms.Label();
             this.btnApply = new Guna.UI2.WinForms.Guna2Button();
             this.pnluc = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptbSave = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblJobAddress = new System.Windows.Forms.Label();
-            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.ptbSave = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnluc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
@@ -87,7 +87,7 @@
             this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
+            this.btnApply.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnApply.ForeColor = System.Drawing.Color.White;
             this.btnApply.Location = new System.Drawing.Point(747, 61);
@@ -118,18 +118,6 @@
             this.pnluc.TabIndex = 14;
             this.pnluc.Click += new System.EventHandler(this.uc_JobDetail_Click);
             // 
-            // ptbSave
-            // 
-            this.ptbSave.Image = global::JobHub.Properties.Resources.heartChuaLuu;
-            this.ptbSave.ImageRotate = 0F;
-            this.ptbSave.Location = new System.Drawing.Point(885, 62);
-            this.ptbSave.Name = "ptbSave";
-            this.ptbSave.Size = new System.Drawing.Size(46, 35);
-            this.ptbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbSave.TabIndex = 14;
-            this.ptbSave.TabStop = false;
-            this.ptbSave.Click += new System.EventHandler(this.ptbSave_Click);
-            // 
             // lblJobAddress
             // 
             this.lblJobAddress.AutoSize = true;
@@ -142,6 +130,24 @@
             this.lblJobAddress.TabIndex = 9;
             this.lblJobAddress.Text = "Hồ Chí Minh";
             this.lblJobAddress.Click += new System.EventHandler(this.uc_JobDetail_Click);
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // ptbSave
+            // 
+            this.ptbSave.Image = global::JobHub.Properties.Resources.heartNotSaved;
+            this.ptbSave.ImageRotate = 0F;
+            this.ptbSave.Location = new System.Drawing.Point(885, 62);
+            this.ptbSave.Name = "ptbSave";
+            this.ptbSave.Size = new System.Drawing.Size(46, 35);
+            this.ptbSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSave.TabIndex = 14;
+            this.ptbSave.TabStop = false;
+            this.ptbSave.Click += new System.EventHandler(this.ptbSave_Click);
             // 
             // pbAvatar
             // 
@@ -157,12 +163,6 @@
             this.pbAvatar.TabIndex = 5;
             this.pbAvatar.TabStop = false;
             this.pbAvatar.Click += new System.EventHandler(this.uc_JobDetail_Click);
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // uc_JobDetail
             // 

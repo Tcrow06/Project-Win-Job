@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -40,7 +41,8 @@ namespace JobHub
         {
             LoadCompanyDetail();
             pnDetail.BringToFront();
-            LoadPanelImage();   
+            LoadPanelImage();
+            LoadEvaluate();
         }
         private int GetWidth(Guna2HtmlLabel l)
         {
@@ -142,6 +144,7 @@ namespace JobHub
         {   
             pnImage.Visible = false;
             pnDetail.Visible = true;
+            flpnEvaluate.Visible = false;
             pnDetail.BringToFront();
         }
         private void LoadImageIntoPictureBox(Guna2PictureBox pictureBox, int indexImage)
@@ -171,11 +174,13 @@ namespace JobHub
                 pbBack.Visible = false; 
                 pnImage.Visible = false;
             }
+            pnImage.Visible = false;
         }
         private void btnImage_Click(object sender, EventArgs e)
         {
             pnDetail.Visible = false;
             pnImage.Visible = true;
+            flpnEvaluate.Visible = false;
             pnImage.BringToFront();
         }
         private void pbBack_Click(object sender, EventArgs e)
@@ -191,6 +196,52 @@ namespace JobHub
             if (indexImage >= listCompanyImage.Count)
                 indexImage = 0;
             LoadImageIntoPictureBox(pbCompanyInfo, indexImage);
+        }
+
+        private void btnEvaluate_Click(object sender, EventArgs e)
+        {
+            pnDetail.Visible = false;
+            pnImage.Visible = false;
+            flpnEvaluate.Visible = true;
+            flpnEvaluate.BringToFront();
+        }
+        private void LoadInfoEvaluate()
+        {
+            SqlDataReader dr = companyDetail.LoadInfoEvaluate(company.Id);
+            function.LoadInfoEvaluate(dr, uC_EvaluateInfo);
+            uC_EvaluateInfo.clickBtn += (sender, e) =>
+            {
+                if (fm.Account!=null)
+                {
+                    if (companyDetail.CheckEvaluated(fm.Account.Id, company.Id))
+                    {
+                       MessageBox.Show("Bạn đã đánh giá nên không thể đánh giá thêm.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //mở form
+                        FFeedBack form = new FFeedBack(fm.Account.Id, company.Id, 1);
+                        form.ShowDialog();
+                        LoadEvaluate();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            };
+        }
+        private void LoadUc_JobEvaluate()
+        {
+            SqlDataReader dr = companyDetail.LoadUc_JobEvaluate(company.Id);
+            function.LoadUc_JobEvaluate(dr, flpnUC_Evaluate);
+
+        }
+        private void LoadEvaluate()
+        {
+            LoadInfoEvaluate();
+            LoadUc_JobEvaluate();
+            flpnEvaluate.Location = new Point(pnDetail.Location.X + 20, pnDetail.Location.Y);
         }
     }
 }
