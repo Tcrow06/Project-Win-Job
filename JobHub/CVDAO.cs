@@ -26,9 +26,9 @@ namespace JobHub
         {
             function.Insert(cmd);   
         }
-        public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
+        public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameCandidate, Guna2CirclePictureBox picAvarta, FlowLayoutPanel pn)
         {
-             function.WriteData(dt, fpn, lblNameCandidate, picAvarta);
+             function.WriteData(dt, fpn, lblNameCandidate, picAvarta, pn);
         }
 
         public string SelectImageButton(string pathRoot, string dir)

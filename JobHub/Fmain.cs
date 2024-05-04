@@ -52,7 +52,8 @@ namespace JobHub
         {
             DeleteChildForm();
             this.Height = 550;
-            FJobPostHistory view = new FJobPostHistory(this);
+            FMainCompany view = new FMainCompany();
+            //MessageBox.Show(view.Name);
             this.loadForm(view);
         }
         private void FirstLoadLoginOrLoginOut()
@@ -399,6 +400,10 @@ namespace JobHub
             else if (form.Name == "FFavouriteJob")
             {
                 resize(974, 538);
+            }
+            else if (form.Name == "FMainCompany")
+            {
+                resize(1085, 575);
             }
             
 

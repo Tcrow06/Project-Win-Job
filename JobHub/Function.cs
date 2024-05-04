@@ -345,13 +345,13 @@ namespace JobHub
                 uc_make.txtAddress.Text = dr["candidateAddress"].ToString().Trim();
                 uc_make.txtLinkAVT.Text = dr["candidateAvatar"].ToString().Trim();
                 uc_make.txtPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
-                uc_make.dtpYob.Value = DateTime.Parse(dr["candidateBirth"].ToString());
+                uc_make.dtpYob.Value = DateTime.Parse(dr["candidateBirth"]!= DBNull.Value ? dr["candidateBirth"].ToString() : DateTime.Now.ToString());
                 uC_LoadIfJob uC_LoadIfJob = new uC_LoadIfJob();
                 uC_LoadIfJob.btnAddPanel.Visible = true;
                 uc_make.pnExperienc.Controls.Add(uC_LoadIfJob);
                 containUC.Push(uC_LoadIfJob);
                 AddEventUC(uC_LoadIfJob, containUC, uc_make.pnExperienc, controlManager);
-                if (bool.Parse(dr["candidateGender"].ToString()))
+                if (bool.Parse(dr["candidateGender"]!=DBNull.Value ? dr["candidateGender"].ToString():"False"))
                 {
                     uc_make.rdoBoy.Checked = true;
                     uc_make.rdoGirl.Checked = false;
@@ -445,6 +445,7 @@ namespace JobHub
                 uc_Follow.btnSumbit.Text = "Đã xác nhận";
             };
 
+
             uc_Follow.Remove_Click += (sender, e) =>
             {
                 uc_Follow.btnRemove.Enabled = false;
@@ -479,9 +480,9 @@ namespace JobHub
         {
             return conection.ExcutionReadData(cmd);
         }
-        public void DeleteMainCV()
+        public void DeleteMainCV(int idCandidate)
         {
-            string cmd = $@"Delete from CVReady";
+            string cmd = $@"Delete from CVReady where idCandidate ={idCandidate}";
             ReadData(cmd);
         }
 
@@ -490,7 +491,7 @@ namespace JobHub
             string cmd = $@"INSERT INTO CVReady (idCandidate, idCV, CVType  ) VALUES ('{idCandidate}', '{idCV}', '{type}')";
             Insert(cmd);
         } 
-        public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameAvarta, Guna2CirclePictureBox picAvarta)
+        public void WriteData(DataTable dt, FlowLayoutPanel fpn, Label lblNameAvarta, Guna2CirclePictureBox picAvarta,  FlowLayoutPanel pn)
         {
             FormHandler handler = new FormHandler();
             fpn.Controls.Clear();
@@ -504,11 +505,20 @@ namespace JobHub
                 uC_CV.lblJobName.Text = dr["jobName"].ToString();
 
                 uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblLastName.Text} {uC_CV.lblFirstName.Text}";
-                uC_CV.btnMainCV.Click += (sender, e) =>
+                uC_CV.pbSelectMainCV.Click += (sender, e) =>
                 {
-                    DeleteMainCV();
-                    SetMainCV(int.Parse(dr["idCandidate"].ToString()), int.Parse(dr["idCV"].ToString()), 1);
-                    uC_CV.btnMainCV.Visible = false;
+                    int idCandidate = int.Parse(dr["idCandidate"].ToString());
+                    DeleteMainCV(idCandidate);
+                    foreach (uC_CV item in fpn.Controls)
+                    {
+                        item.pbSelectMainCV.Image = Resources.star;
+                    }
+                    foreach (UC_ImageCV item in pn.Controls)
+                    {
+                        item.pbSelectMainCV.Image = Resources.star;
+                    }
+                    SetMainCV(idCandidate, int.Parse(dr["idCV"].ToString()), 0);
+                    uC_CV.pbSelectMainCV.Image = Properties.Resources.star__1_;
                     MessageBox.Show("Đặt thành công");
                 };
                 if (dr["CVAvatar"].ToString().Trim() == "")
