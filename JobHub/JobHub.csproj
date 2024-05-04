@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -150,6 +150,12 @@
     <Compile Include="FCompanyJob.Designer.cs">
       <DependentUpon>FCompanyJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCreatCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCreatCV.Designer.cs">
+      <DependentUpon>FCreatCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCustomerMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,14 @@
     </Compile>
     <Compile Include="FEditName.Designer.cs">
       <DependentUpon>FEditName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBack.cs" />
+    <Compile Include="FeedBackDAO.cs" />
+    <Compile Include="FFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFeedBack.Designer.cs">
+      <DependentUpon>FFeedBack.cs</DependentUpon>
     </Compile>
     <Compile Include="FFixInfCV.cs">
       <SubType>Form</SubType>
@@ -374,6 +388,12 @@
     <Compile Include="UC_ImageCV.Designer.cs">
       <DependentUpon>UC_ImageCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="uC_imageFeedBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_imageFeedBack.Designer.cs">
+      <DependentUpon>uC_imageFeedBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="uC_Job.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -463,6 +483,9 @@
     <EmbeddedResource Include="FCompanyJob.resx">
       <DependentUpon>FCompanyJob.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCreatCV.resx">
+      <DependentUpon>FCreatCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCustomerMessageBox.resx">
       <DependentUpon>FCustomerMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEditName.resx">
       <DependentUpon>FEditName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFeedBack.resx">
+      <DependentUpon>FFeedBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FFixInfCV.resx">
       <DependentUpon>FFixInfCV.cs</DependentUpon>
@@ -572,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ImageCV.resx">
       <DependentUpon>UC_ImageCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_imageFeedBack.resx">
+      <DependentUpon>uC_imageFeedBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_Job.resx">
       <DependentUpon>uC_Job.cs</DependentUpon>

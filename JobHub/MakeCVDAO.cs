@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace JobHub
 {
@@ -23,18 +24,30 @@ namespace JobHub
             return function.ReadData(cmd);
         }
 
-        public void Insert(DetailCV detailcv)
+        public void Insert(DetailCV detailcv, string color)
         {
-            string cmd = $@"INSERT INTO CV (idCV, idCandidate, CVAvatar, jobName, CVDescription, Skill)
-                            VALUES ('{detailcv.Id}', '{detailcv.IdCandidate}', '{detailcv.CVAvatar1}', N'{detailcv.JobName}', N'{detailcv.Experience}', N'{detailcv.Skill}')";
+            string cmd = $@"INSERT INTO CV (idCV, idCandidate, CVAvatar, jobName, CVDescription, Skill, CVEducation, ThemeCV)
+                            VALUES ('{detailcv.Id}', '{detailcv.IdCandidate}', '{detailcv.CVAvatar1}', N'{detailcv.JobName}', N'{detailcv.Experience}', N'{detailcv.Skill}', N'{detailcv.Education}', '{color}')";
             function.Insert(cmd);
         }
-        public DataTable readData(int idCadidate)
+
+        public void Insert(DetailCV detailcv)
+        {
+            string cmd = $@"INSERT INTO CV (idCV, idCandidate, CVAvatar, jobName, CVDescription, Skill, CVEducation, ThemeCV)
+                            VALUES ('{detailcv.Id}', '{detailcv.IdCandidate}', '{detailcv.CVAvatar1}', N'{detailcv.JobName}', N'{detailcv.Experience}', N'{detailcv.Skill}', N'{detailcv.Education}', {Color.FromRgb(32, 154, 32)})";
+            function.Insert(cmd);
+        }
+        public DataTable ReadData(int idCadidate)
         {
             string cmd = $@"SELECT Candidate.*
                         FROM Candidate                       
                         where Candidate.idCandidate = {idCadidate}";
             return function.ReadData(cmd);
+        }
+
+        public void WriteData(DataTable dt, FCreatCV fCreatCV, int idCandidate)
+        {
+            function.WriteData(dt, fCreatCV, idCandidate);
         }
 
         public void ShowData(int idCandidate, Guna2TextBox txtAddress,

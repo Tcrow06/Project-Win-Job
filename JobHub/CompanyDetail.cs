@@ -91,9 +91,9 @@ namespace JobHub
         {
             return companyDetailDao.LoadInfoEvaluate(idJob);
         }
-        public bool CheckEvaluated(int idCandidate)
+        public bool CheckEvaluated(int idCandidate, int idCompany)
         {
-            DataTable dt = companyDetailDao.CheckEvaluated(idCandidate);
+            DataTable dt = companyDetailDao.CheckEvaluated(idCandidate, idCompany);
             if(dt.Rows.Count > 0)
             {
                 return true;

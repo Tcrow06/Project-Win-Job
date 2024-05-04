@@ -207,7 +207,6 @@ namespace JobHub
 
             job.pbAvatar.Height = job.pbAvatar.Width;
             job.lblField.Text = dr["jobField"].ToString();
-            /* job.lblNumberOfViews.Text = HandleNumbers(int.Parse(dr["jobNumberOfViews"]?.ToString()));*/
             job.lblNumberOfViews.Text = function.HandleNumbers(int.Parse(dr["jobNumberOfViews"]?.ToString()));
 
             job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
@@ -228,41 +227,6 @@ namespace JobHub
 
             return job;
         }
-        /*private string HandleNumbers(int number)
-        {
-            StringBuilder str = new StringBuilder();
-            str.Append("");
-            if (number< 1000)
-            {
-                str.Append(number.ToString());
-            }else if(number>=1000&& number < 1000000)
-            {
-                int n1 = number/1000;
-                number %= 1000;
-                int n2 = number/100;
-                
-                str.Append(n1.ToString());
-                if(n2 > 0)
-                {
-                    str.Append(","+n2.ToString());
-                }
-                str.Append(" N");
-            }
-            else
-            {
-                int n1 = number / 1000000;
-                number %= 1000000;
-                int n2 = number / 100000;
-
-                str.Append(n1.ToString());
-                if (n2 > 0)
-                {
-                    str.Append("," + n2.ToString());
-                }
-                str.Append(" Tr");
-            }
-            return str.ToString();
-        }*/
         public void AddJob(JobDetail a)
         {
             jdd.AddJob(a);
@@ -285,9 +249,9 @@ namespace JobHub
         {
             return jdd.LoadInfoEvaluate(idJob);
         }
-        public bool CheckEvaluated(int idCandidate)
+        public bool CheckEvaluated(int idCandidate, int idJob)
         {
-            DataTable dt = jdd.CheckEvaluated(idCandidate);
+            DataTable dt = jdd.CheckEvaluated(idCandidate, idJob);
             if (dt.Rows.Count > 0)
             {
                 return true;

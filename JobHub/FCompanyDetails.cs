@@ -213,13 +213,15 @@ namespace JobHub
             {
                 if (fm.Account!=null)
                 {
-                    if (companyDetail.CheckEvaluated(fm.Account.Id))
+                    if (companyDetail.CheckEvaluated(fm.Account.Id, company.Id))
                     {
-                        MessageBox.Show("Bạn đã đánh giá nên không thể đánh giá thêm.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       MessageBox.Show("Bạn đã đánh giá nên không thể đánh giá thêm.","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         //mở form
+                        FFeedBack form = new FFeedBack(fm.Account.Id, company.Id, 1);
+                        form.ShowDialog();
                         LoadEvaluate();
                     }
                 }
@@ -232,7 +234,7 @@ namespace JobHub
         private void LoadUc_JobEvaluate()
         {
             SqlDataReader dr = companyDetail.LoadUc_JobEvaluate(company.Id);
-            function.LoadUc_JobEvaluate(dr, flpnUC);
+            function.LoadUc_JobEvaluate(dr, flpnUC_Evaluate);
 
         }
         private void LoadEvaluate()

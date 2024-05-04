@@ -52,10 +52,10 @@ namespace JobHub
                             idCompany;";
             return dbc.loadData(sql);
         }
-        public DataTable CheckEvaluated(int idCandidate)
+        public DataTable CheckEvaluated(int idCandidate, int idCompany)
         {
-            string sql = $"select* from CompanyEvaluate where idCandidate ={idCandidate}";
-            return dbc.ExcutionReadData(sql);
+            string sql = $"select* from CompanyEvaluate where idCandidate ={idCandidate} and idCompany = {idCompany}";
+            return dbc.ExcutionReadData(sql); 
         }
     }
 }

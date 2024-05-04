@@ -39,6 +39,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pnContainMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.picLoadImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnSkill = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.lblIntroduce = new System.Windows.Forms.Label();
             this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
             this.label8 = new System.Windows.Forms.Label();
-            this.picAvatarCV = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Separator9 = new Guna.UI2.WinForms.Guna2Separator();
             this.label2 = new System.Windows.Forms.Label();
             this.lblExperience = new System.Windows.Forms.Label();
@@ -76,9 +76,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnEducations = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBackKN = new Guna.UI2.WinForms.Guna2Button();
             this.btnNextSkill = new Guna.UI2.WinForms.Guna2Button();
@@ -132,7 +129,7 @@
             this.txtLinkAVT = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLinkAVT = new System.Windows.Forms.Label();
             this.guna2Separator13 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtLink = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNameJob = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLink = new System.Windows.Forms.Label();
             this.guna2Separator12 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnNextKN = new Guna.UI2.WinForms.Guna2Button();
@@ -142,17 +139,20 @@
             this.pnContailKN = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnBlack = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnGreen = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnSubGreen = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnContainCV.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.pnContainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoadImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.pnSkill.SuspendLayout();
             this.pnEducation.SuspendLayout();
             this.pnCall.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarCV)).BeginInit();
             this.pnExperienc.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnEducations.SuspendLayout();
@@ -261,13 +261,13 @@
             // 
             this.pnContainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
             this.pnContainMenu.Controls.Add(this.picLoadImage);
+            this.pnContainMenu.Controls.Add(this.picAvatar);
             this.pnContainMenu.Controls.Add(this.pnSkill);
             this.pnContainMenu.Controls.Add(this.pnEducation);
             this.pnContainMenu.Controls.Add(this.pnCall);
             this.pnContainMenu.Controls.Add(this.lblIntroduce);
             this.pnContainMenu.Controls.Add(this.guna2Separator7);
             this.pnContainMenu.Controls.Add(this.label8);
-            this.pnContainMenu.Controls.Add(this.picAvatarCV);
             this.pnContainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnContainMenu.Location = new System.Drawing.Point(0, 0);
             this.pnContainMenu.Margin = new System.Windows.Forms.Padding(2);
@@ -277,17 +277,30 @@
             // 
             // picLoadImage
             // 
+            this.picLoadImage.BackColor = System.Drawing.Color.White;
             this.picLoadImage.BorderRadius = 8;
             this.picLoadImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLoadImage.Image = ((System.Drawing.Image)(resources.GetObject("picLoadImage.Image")));
             this.picLoadImage.ImageRotate = 0F;
-            this.picLoadImage.Location = new System.Drawing.Point(98, 105);
+            this.picLoadImage.Location = new System.Drawing.Point(92, 90);
             this.picLoadImage.Margin = new System.Windows.Forms.Padding(2);
             this.picLoadImage.Name = "picLoadImage";
             this.picLoadImage.Size = new System.Drawing.Size(22, 21);
             this.picLoadImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLoadImage.TabIndex = 11;
             this.picLoadImage.TabStop = false;
+            this.picLoadImage.Click += new System.EventHandler(this.picLoadImage_Click);
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.ImageRotate = 0F;
+            this.picAvatar.Location = new System.Drawing.Point(41, 34);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picAvatar.Size = new System.Drawing.Size(78, 74);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 0;
+            this.picAvatar.TabStop = false;
             // 
             // pnSkill
             // 
@@ -504,19 +517,6 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "About me";
             // 
-            // picAvatarCV
-            // 
-            this.picAvatarCV.Image = ((System.Drawing.Image)(resources.GetObject("picAvatarCV.Image")));
-            this.picAvatarCV.ImageRotate = 0F;
-            this.picAvatarCV.Location = new System.Drawing.Point(23, 14);
-            this.picAvatarCV.Margin = new System.Windows.Forms.Padding(2);
-            this.picAvatarCV.Name = "picAvatarCV";
-            this.picAvatarCV.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picAvatarCV.Size = new System.Drawing.Size(103, 109);
-            this.picAvatarCV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAvatarCV.TabIndex = 0;
-            this.picAvatarCV.TabStop = false;
-            // 
             // guna2Separator9
             // 
             this.guna2Separator9.FillColor = System.Drawing.Color.Black;
@@ -715,55 +715,6 @@
             this.label12.Size = new System.Drawing.Size(498, 32);
             this.label12.TabIndex = 2;
             this.label12.Text = "Hãy cho chúng tôi biết kinh nghiệm của bạn\r\n";
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(1198, 71);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(38, 37);
-            this.guna2CircleButton1.TabIndex = 134;
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.BackColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(120)))), ((int)(((byte)(171)))));
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(1198, 155);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(38, 37);
-            this.guna2CircleButton2.TabIndex = 135;
-            this.guna2CircleButton2.Click += new System.EventHandler(this.guna2CircleButton2_Click);
-            // 
-            // guna2CircleButton3
-            // 
-            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(202)))), ((int)(((byte)(239)))));
-            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton3.Location = new System.Drawing.Point(1198, 238);
-            this.guna2CircleButton3.Name = "guna2CircleButton3";
-            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(38, 37);
-            this.guna2CircleButton3.TabIndex = 136;
-            this.guna2CircleButton3.Click += new System.EventHandler(this.guna2CircleButton3_Click);
             // 
             // pnEducations
             // 
@@ -1556,7 +1507,7 @@
             this.pnContact.Controls.Add(this.txtLinkAVT);
             this.pnContact.Controls.Add(this.lblLinkAVT);
             this.pnContact.Controls.Add(this.guna2Separator13);
-            this.pnContact.Controls.Add(this.txtLink);
+            this.pnContact.Controls.Add(this.txtNameJob);
             this.pnContact.Controls.Add(this.lblLink);
             this.pnContact.Controls.Add(this.guna2Separator12);
             this.pnContact.Controls.Add(this.btnNextKN);
@@ -1628,25 +1579,26 @@
             this.guna2Separator13.Size = new System.Drawing.Size(271, 6);
             this.guna2Separator13.TabIndex = 138;
             // 
-            // txtLink
+            // txtNameJob
             // 
-            this.txtLink.BorderThickness = 0;
-            this.txtLink.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLink.DefaultText = "";
-            this.txtLink.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLink.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLink.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLink.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLink.Location = new System.Drawing.Point(19, 179);
-            this.txtLink.Name = "txtLink";
-            this.txtLink.PasswordChar = '\0';
-            this.txtLink.PlaceholderText = "Git, GitHub....";
-            this.txtLink.SelectedText = "";
-            this.txtLink.Size = new System.Drawing.Size(271, 23);
-            this.txtLink.TabIndex = 134;
+            this.txtNameJob.BorderThickness = 0;
+            this.txtNameJob.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameJob.DefaultText = "";
+            this.txtNameJob.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameJob.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameJob.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameJob.Location = new System.Drawing.Point(19, 179);
+            this.txtNameJob.Name = "txtNameJob";
+            this.txtNameJob.PasswordChar = '\0';
+            this.txtNameJob.PlaceholderText = "Fullstack";
+            this.txtNameJob.SelectedText = "";
+            this.txtNameJob.Size = new System.Drawing.Size(271, 23);
+            this.txtNameJob.TabIndex = 134;
+            this.txtNameJob.TextChanged += new System.EventHandler(this.txtNameJob_TextChanged);
             // 
             // lblLink
             // 
@@ -1655,9 +1607,9 @@
             this.lblLink.Location = new System.Drawing.Point(16, 161);
             this.lblLink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLink.Name = "lblLink";
-            this.lblLink.Size = new System.Drawing.Size(48, 15);
+            this.lblLink.Size = new System.Drawing.Size(80, 15);
             this.lblLink.TabIndex = 133;
-            this.lblLink.Text = "Liên kết";
+            this.lblLink.Text = "Tên công việc";
             // 
             // guna2Separator12
             // 
@@ -1767,16 +1719,65 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 138;
             // 
+            // btnBlack
+            // 
+            this.btnBlack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBlack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBlack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBlack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBlack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnBlack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBlack.ForeColor = System.Drawing.Color.White;
+            this.btnBlack.Location = new System.Drawing.Point(1198, 86);
+            this.btnBlack.Name = "btnBlack";
+            this.btnBlack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBlack.Size = new System.Drawing.Size(38, 37);
+            this.btnBlack.TabIndex = 139;
+            this.btnBlack.Click += new System.EventHandler(this.btnBlack_Click);
+            // 
+            // btnGreen
+            // 
+            this.btnGreen.BackColor = System.Drawing.Color.White;
+            this.btnGreen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGreen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGreen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGreen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGreen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(120)))), ((int)(((byte)(171)))));
+            this.btnGreen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGreen.ForeColor = System.Drawing.Color.White;
+            this.btnGreen.Location = new System.Drawing.Point(1198, 163);
+            this.btnGreen.Name = "btnGreen";
+            this.btnGreen.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnGreen.Size = new System.Drawing.Size(38, 37);
+            this.btnGreen.TabIndex = 140;
+            this.btnGreen.Click += new System.EventHandler(this.btnGreen_Click);
+            // 
+            // btnSubGreen
+            // 
+            this.btnSubGreen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubGreen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSubGreen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSubGreen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSubGreen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(202)))), ((int)(((byte)(239)))));
+            this.btnSubGreen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSubGreen.ForeColor = System.Drawing.Color.White;
+            this.btnSubGreen.Location = new System.Drawing.Point(1198, 248);
+            this.btnSubGreen.Name = "btnSubGreen";
+            this.btnSubGreen.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSubGreen.Size = new System.Drawing.Size(38, 37);
+            this.btnSubGreen.TabIndex = 141;
+            this.btnSubGreen.Click += new System.EventHandler(this.btnSubGreen_Click);
+            // 
             // uC_MakeCV_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.Controls.Add(this.btnSubGreen);
+            this.Controls.Add(this.btnGreen);
+            this.Controls.Add(this.btnBlack);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2CircleButton3);
-            this.Controls.Add(this.guna2CircleButton2);
-            this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.done);
             this.Controls.Add(this.rdoSkill);
             this.Controls.Add(this.gnSkill);
@@ -1804,6 +1805,7 @@
             this.pnContainMenu.ResumeLayout(false);
             this.pnContainMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoadImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.pnSkill.ResumeLayout(false);
             this.pnSkill.PerformLayout();
             this.pnEducation.ResumeLayout(false);
@@ -1813,7 +1815,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatarCV)).EndInit();
             this.pnExperienc.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -1872,7 +1873,6 @@
         public System.Windows.Forms.Label lblIntroduce;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator7;
         public System.Windows.Forms.Label label8;
-        public Guna.UI2.WinForms.Guna2CirclePictureBox picAvatarCV;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator9;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator8;
@@ -1883,9 +1883,6 @@
         public Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label label12;
-        public Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        public Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
-        public Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
         public Guna.UI2.WinForms.Guna2Button btnNextEducation;
         public Guna.UI2.WinForms.Guna2Panel pnEducations;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel5;
@@ -1942,12 +1939,16 @@
         public Guna.UI2.WinForms.Guna2Button btnBackEducation;
         public Guna.UI2.WinForms.Guna2Button btnBackContact;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        public Guna.UI2.WinForms.Guna2TextBox txtLink;
+        public Guna.UI2.WinForms.Guna2TextBox txtNameJob;
         public System.Windows.Forms.Label lblLink;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator12;
         public Guna.UI2.WinForms.Guna2TextBox txtLinkAVT;
         public System.Windows.Forms.Label lblLinkAVT;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator13;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox picAvatar;
+        public Guna.UI2.WinForms.Guna2CircleButton btnBlack;
+        public Guna.UI2.WinForms.Guna2CircleButton btnGreen;
+        public Guna.UI2.WinForms.Guna2CircleButton btnSubGreen;
     }
 }

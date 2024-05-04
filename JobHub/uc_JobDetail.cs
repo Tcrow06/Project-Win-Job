@@ -42,13 +42,13 @@ namespace JobHub
             {
                 if (cd.CheckSaveStatus(idJob, fm.Account.Id))
                 {
-                    ptbSave.Image = Properties.Resources.heartChuaLuu;
+                    ptbSave.Image = Properties.Resources.heartNotSaved;
                     cd.UnSavedJob(idJob, fm.Account.Id);
                 }
                 else
                 {
                     cd.SavedJob(idJob, fm.Account.Id);
-                    ptbSave.Image = Properties.Resources.heartDaLuu;
+                    ptbSave.Image = Properties.Resources.heartSave;
                 }
             }
         }

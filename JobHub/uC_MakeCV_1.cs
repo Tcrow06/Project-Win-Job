@@ -11,10 +11,12 @@ using System.Windows.Forms;
 
 namespace JobHub
 {
+    public delegate void Theme_color(Color rgb);
     public partial class uC_MakeCV_1 : UserControl
     {
         public event EventHandler Done;
-        public event EventHandler SetColor;
+        public event EventHandler LoadImage;
+        public Theme_color saveColor;
         Panel[] listPanel = new Panel[4];
         Guna2Separator[] listSep = new Guna2Separator[4];
         Guna2RadioButton[] listRDO = new Guna2RadioButton[4];
@@ -98,24 +100,6 @@ namespace JobHub
             setCol(pnContact);
         }
 
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-            SetColor?.Invoke(this, EventArgs.Empty);
-            pnContainMenu.BackColor = Color.FromArgb(54, 54, 54);
-        }
-
-        private void guna2CircleButton2_Click(object sender, EventArgs e)
-        {
-            SetColor?.Invoke(this, EventArgs.Empty);
-            pnContainMenu.BackColor = Color.FromArgb(42, 120, 171);
-        }
-
-        private void guna2CircleButton3_Click(object sender, EventArgs e)
-        {
-            SetColor?.Invoke(this, EventArgs.Empty);
-            pnContainMenu.BackColor = Color.FromArgb(142, 202, 239);
-        }
-
         private void uC_MakeCV_1_Load(object sender, EventArgs e)
         {
 
@@ -170,6 +154,34 @@ namespace JobHub
         private void txtSkills_TextChanged(object sender, EventArgs e)
         {
             EventTextChange(lblSkill, txtSkills);
+        }
+
+        private void txtNameJob_TextChanged(object sender, EventArgs e)
+        {
+            EventTextChange(lblJobName, txtNameJob);
+        }
+
+        private void picLoadImage_Click(object sender, EventArgs e)
+        {
+            LoadImage?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btnBlack_Click(object sender, EventArgs e)
+        {
+            saveColor?.Invoke(btnBlack.FillColor);
+            pnContainMenu.BackColor = btnBlack.FillColor;
+        }
+
+        private void btnGreen_Click(object sender, EventArgs e)
+        {
+            saveColor?.Invoke(btnGreen.FillColor);
+            pnContainMenu.BackColor = btnGreen.FillColor;
+        }
+
+        private void btnSubGreen_Click(object sender, EventArgs e)
+        {
+            saveColor?.Invoke(btnSubGreen.FillColor);
+            pnContainMenu.BackColor = btnSubGreen.FillColor;
         }
     }
 }

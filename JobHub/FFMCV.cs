@@ -38,7 +38,11 @@ namespace JobHub
 
         private DataTable readData()
         {
-            DataTable dt = fixCVDAO.readData(this.idCandidate, this.idCV);
+            string cmd = $@"SELECT Candidate.*, CV.*
+                        FROM Candidate
+                        INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
+                        where Candidate.idCandidate = {this.idCandidate} And CV.idCV = {this.idCV}";
+            DataTable dt = fixCVDAO.readData(cmd);
             return dt;
         }
 

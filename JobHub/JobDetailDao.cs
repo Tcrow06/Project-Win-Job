@@ -70,9 +70,9 @@ namespace JobHub
                             idJob;";
             return dbc.loadData(sql);
         }
-        public DataTable CheckEvaluated(int idCandidate)
+        public DataTable CheckEvaluated(int idCandidate, int idJob)
         {
-            string sql = $"select* from JobEvaluate where idCandidate ={idCandidate}";
+            string sql = $"select* from JobEvaluate where idCandidate ={idCandidate} and idJob= {idJob}";
             return dbc.ExcutionReadData(sql);
         }
 

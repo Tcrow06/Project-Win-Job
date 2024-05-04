@@ -54,7 +54,7 @@ namespace JobHub
         }
         private void LoadRelatedJobs(int idJob)
         {
-            jdd.LoadRelatedJobs(idJob,flpnRelatedJobs ,fm);
+            jdd.LoadRelatedJobs(idJob, flpnRelatedJobs, fm);
         }
         private void LoadCompanyDetails(int idCompany)
         {
@@ -66,12 +66,12 @@ namespace JobHub
             Size textSize = TextRenderer.MeasureText(lblNumofE.Text, lblNumofE.Font);
 
             lblEmployee.Location = new System.Drawing.Point(lblNumofE.Location.X + textSize.Width, lblNumofE.Location.Y);
-            function.InsertImage(cd.Avatar,pbCompanyAvatar);
+            function.InsertImage(cd.Avatar, pbCompanyAvatar);
         }
         private void LoadJobDetails(int idJob)
         {
             JobDetail jd = jdd.GetInfoJobDetailFromDB(idJob);
-            lblJobName.Text = jd.NameJob ;
+            lblJobName.Text = jd.NameJob;
             lblSalary.Text = jd.Salary;
             lblAddress.Text = jd.Address;
             lblExperience.Text = jd.Experience;
@@ -101,7 +101,7 @@ namespace JobHub
         }
         public void InfoJob(Panel pnInfo, string desc, Label lblName, Label lblInfo)
         {
-            if(desc != null)
+            if (desc != null)
             {
                 if (desc.Length > 0)
                 {
@@ -138,28 +138,28 @@ namespace JobHub
                 }
             }
         }
-        
+
         private void SaveStatus()
         {
             if (fm.Account == null)
             {
-                btnSave.Image = Properties.Resources.heartChuaLuu;
+                btnSave.Image = Properties.Resources.heartNotSaved;
             }
             else
             {
                 if (!cd.CheckSaveStatus(idJob, fm.Account.Id))
                 {
-                    btnSave.Image = Properties.Resources.heartChuaLuu;
+                    btnSave.Image = Properties.Resources.heartNotSaved;
                 }
                 else
                 {
-                    btnSave.Image = Properties.Resources.heartDaLuu;
+                    btnSave.Image = Properties.Resources.heartSave;
                 }
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(fm.Account == null)
+            if (fm.Account == null)
             {
                 fm.Login();
             }
@@ -185,7 +185,7 @@ namespace JobHub
         }
         private void ApplyStatus()
         {
-            if(fm.Account  == null)
+            if (fm.Account == null)
             {
                 btnApply.Text = "Ứng tuyển";
             }
@@ -205,14 +205,15 @@ namespace JobHub
         {
             if (fm.Account == null)
             {
-                fm.Login();   
+                fm.Login();
             }
             else
             {
                 if (cd.CheckApplyStatus(idJob, fm.Account.Id))
                 {
-                    DialogResult dialog = MessageBox.Show("Bạn có chắc chắn hủy ứng tuyển ?","Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if(dialog == DialogResult.OK) {
+                    DialogResult dialog = MessageBox.Show("Bạn có chắc chắn hủy ứng tuyển ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.OK)
+                    {
                         cd.UnApplyJob(idJob, fm.Account.Id);
                         ApplyStatus();
                     }
@@ -227,8 +228,8 @@ namespace JobHub
                     fm.loadForm(form.Form);
                 }
             }
-                
-  
+
+
         }
 
         private void btnDetail_Click(object sender, EventArgs e)
@@ -255,15 +256,18 @@ namespace JobHub
             function.LoadInfoEvaluate(dr, uC_EvaluateInfo);
             uC_EvaluateInfo.clickBtn += (sender, e) =>
             {
-                if (fm.Account!=null)
+                if (fm.Account != null)
                 {
-                    if (jdd.CheckEvaluated(fm.Account.Id))
+                    if (jdd.CheckEvaluated(fm.Account.Id, idJob))
                     {
                         MessageBox.Show("Bạn đã đánh giá nên không thể đánh giá thêm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         //mở form
+                        FFeedBack form = new FFeedBack(fm.Account.Id,idJob, 0);
+                        form.ShowDialog();
+                        LoadEvaluate();
                     }
                 }
                 else
