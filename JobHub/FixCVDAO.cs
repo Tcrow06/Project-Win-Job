@@ -35,9 +35,9 @@ namespace JobHub
             function.WriteData(dt, form);
         }
 
-        public void writeData(DataTable dt, FCreatCV form)
+        public void writeData(DataTable dt, FCreatCV form, int idCandidate)
         {
-            function.WriteData(dt, form);
+            function.WriteData(dt, form, idCandidate);
         }
 
         public void UpdateData(DetailCV detailCV, string theme)

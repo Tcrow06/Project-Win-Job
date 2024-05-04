@@ -32,7 +32,7 @@ namespace JobHub
         {
             //Candidate candidate = new Candidate(this.idCandidate, uc_make.txtFirstName.Text.Trim(), uc_make.txtLastName.Text.Trim(), uc_make.txtPhoneNumber.Text.Trim(),
             //                                    uc_make.txtEmail.Text.Trim(), uc_make.rdoBoy.Checked, uc_make.txtLink.Text.Trim(), uc_make.dtpYob.Value, uc_make.txtLinkAVT.Text.Trim(), uc_make.txtAddress.Text.Trim());
-            makeCVDAO.WriteData(dt, this);
+            makeCVDAO.WriteData(dt, this, idCandidate);
         }
 
         private void FCreatCV_Load(object sender, EventArgs e)

@@ -46,7 +46,7 @@ namespace JobHub
                     if (array[i] != "")
                     {
                         uC_JobDescription uC_JobDescription = new uC_JobDescription();
-                            string[] subArray = array[i].Split(new char[] {'|', '#'}, StringSplitOptions.RemoveEmptyEntries);
+                        string[] subArray = array[i].Split(new char[] {'|', '#'}, StringSplitOptions.RemoveEmptyEntries);
                         uC_JobDescription.lblViewJob.Text = subArray[0];
                         string[] subArray1 = subArray[1].Split('>');
                         uC_JobDescription.lblSince.Text = subArray1[0];
@@ -136,9 +136,9 @@ namespace JobHub
             ExcutionWriteData(dt, fMCV);
         }
 
-        public void WriteData(DataTable dt, FCreatCV fMCV)
+        public void WriteData(DataTable dt, FCreatCV fMCV, int idCandidate)
         {
-            ExcutionWriteData(dt, fMCV);
+            ExcutionWriteData(dt, fMCV, idCandidate);
         }
 
         public void IImage(string avt, Guna2CirclePictureBox picImage)
@@ -161,7 +161,7 @@ namespace JobHub
         {
 
             uC_MakeCV_1 uc_make = new uC_MakeCV_1();
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 setLocation(uc_make.lblIntroduce.Location.X, uc_make.lblIntroduce.Location.Y + uc_make.lblIntroduce.Height + 5, uc_make.pnCall);
                 setLocation(uc_make.pnCall.Location.X, uc_make.pnCall.Location.Y + uc_make.pnCall.Height + 5, uc_make.pnEducation);
@@ -182,10 +182,6 @@ namespace JobHub
                 uc_make.txtLinkAVT.Text = dr["candidateAvatar"].ToString().Trim();
                 uc_make.txtPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
                 uc_make.dtpYob.Value = DateTime.Parse(dr["candidateBirth"].ToString());
-                uc_make.saveColor += color =>
-                {
-                    uc_make.pnContainMenu.BackColor = color;
-                };
                 IImage(dr["CVAvatar"].ToString(), uc_make.picAvatar);
                 uc_make.LoadImage += (sender, e) =>
                 {
@@ -220,32 +216,7 @@ namespace JobHub
                     try
                     {
                         string experience = "";
-                        foreach (Control control in uc_make.Controls)
-                        {
-                            if (control is Guna2Panel)
-                            {
-                                foreach(Control control2 in control.Controls)
-                                {
-                                    if(control2 is FlowLayoutPanel)
-                                    {
-                                        foreach(Control control1 in control2.Controls)
-                                        {
-                                            if (control1 is uC_LoadIfJob)
-                                            {
-                                                uC_LoadIfJob uc = (uC_LoadIfJob)control1;
-                                                if (uc.txtReviewJob.Text.Trim().Length > 0 && uc.txtTime.Text.Trim().Length > 0 && uc.txtReviewJob.Text.Trim().Length > 0)
-                                                {
-                                                    experience += "|!" + uc.txtWhatJob.Text.Trim();
-                                                    experience += "|#" + uc.txtTime.Text.Trim();
-                                                    experience += "|^" + uc.txtReviewJob.Text.Trim();
-                                                }
-                                            }
-                                        }
-                                    }
-                                   
-                                }                               
-                            }
-                        }
+                        Repect(experience, uc_make);
                         string education = $"{uc_make.cboSalary.SelectedItem.ToString()} {uc_make.txtSchool.Text.Trim()} năm {uc_make.cboYear.SelectedItem.ToString()} tại {uc_make.cboCity.SelectedItem.ToString()}";
                         FixCVDAO fix = new FixCVDAO(int.Parse(dr["idCV"].ToString()), int.Parse(dr["idCandidate"].ToString()));
                         Candidate candidate = new Candidate(int.Parse(dr["idCandidate"].ToString()), uc_make.txtFirstName.Text.Trim(), uc_make.txtLastName.Text.Trim(), uc_make.txtPhoneNumber.Text.Trim(), uc_make.txtEmail.Text.Trim(),
@@ -266,6 +237,35 @@ namespace JobHub
             uc_make.Dock = DockStyle.Fill;
         }
 
+        public void Repect(string experience, uC_MakeCV_1 uc_make)
+        {
+            foreach (Control control in uc_make.Controls)
+            {
+                if (control is Guna2Panel)
+                {
+                    foreach (Control control2 in control.Controls)
+                    {
+                        if (control2 is FlowLayoutPanel)
+                        {
+                            foreach (Control control1 in control2.Controls)
+                            {
+                                if (control1 is uC_LoadIfJob)
+                                {
+                                    uC_LoadIfJob uc = (uC_LoadIfJob)control1;
+                                    if (uc.txtReviewJob.Text.Trim().Length > 0 && uc.txtTime.Text.Trim().Length > 0 && uc.txtReviewJob.Text.Trim().Length > 0)
+                                    {
+                                        experience += "|!" + uc.txtWhatJob.Text.Trim();
+                                        experience += "|#" + uc.txtTime.Text.Trim();
+                                        experience += "|^" + uc.txtReviewJob.Text.Trim();
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
         private void updateCV(string path, Guna2CirclePictureBox picAvatarCV, DetailCVDAO detailCVDAO, int idCV, int idCandidate)
         {
             try
@@ -293,12 +293,18 @@ namespace JobHub
             }
         }
 
-        public void ExcutionWriteData(DataTable dt, FCreatCV fMCV)
+        public void ExcutionWriteData(DataTable dt, FCreatCV fMCV, int idCandidate)
         {
-
+            int idCV = -1;
             uC_MakeCV_1 uc_make = new uC_MakeCV_1();
             foreach (DataRow dr in dt.Rows)
             {
+                MakeCVDAO makeCVDAO = new MakeCVDAO(int.Parse(dr["idCandidate"].ToString()));
+                string cmd = "select max(CV.idCV) as max from CV";
+                DataTable dt_max = makeCVDAO.ReadData(cmd);
+                idCV = Int32.Parse(dt_max.Rows[0]["max"].ToString()) + 1;
+                Stack<uC_LoadIfJob> containUC = new Stack<uC_LoadIfJob>();
+                ControlManager controlManager = new ControlManager(idCV, idCandidate);
                 setLocation(uc_make.lblIntroduce.Location.X, uc_make.lblIntroduce.Location.Y + uc_make.lblIntroduce.Height + 5, uc_make.pnCall);
                 setLocation(uc_make.pnCall.Location.X, uc_make.pnCall.Location.Y + uc_make.pnCall.Height + 5, uc_make.pnEducation);
                 setLocation(uc_make.pnEducation.Location.X, uc_make.pnEducation.Location.Y + 5 + uc_make.pnEducation.Height, uc_make.pnSkill);
@@ -315,11 +321,11 @@ namespace JobHub
                 uc_make.txtLinkAVT.Text = dr["candidateAvatar"].ToString().Trim();
                 uc_make.txtPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
                 uc_make.dtpYob.Value = DateTime.Parse(dr["candidateBirth"].ToString());
-                uc_make.saveColor += color =>
-                {
-                    uc_make.pnContainMenu.BackColor = color;
-                };
-
+                uC_LoadIfJob uC_LoadIfJob = new uC_LoadIfJob();
+                uC_LoadIfJob.btnAddPanel.Visible = true;
+                uc_make.pnExperienc.Controls.Add(uC_LoadIfJob);
+                containUC.Push(uC_LoadIfJob);
+                AddEventUC(uC_LoadIfJob, containUC, uc_make.pnExperienc, controlManager);
                 if (bool.Parse(dr["candidateGender"].ToString()))
                 {
                     uc_make.rdoBoy.Checked = true;
@@ -330,39 +336,10 @@ namespace JobHub
                     uc_make.rdoBoy.Checked = false;
                     uc_make.rdoGirl.Checked = true;
                 }
-                MakeCVDAO makeCVDAO = new MakeCVDAO(int.Parse(dr["idCandidate"].ToString()));
-                string cmd = "select max(CV.idCV) as max from CV";
-                DataTable dt_max = makeCVDAO.ReadData(cmd);
-                int idCV = Int32.Parse(dt_max.Rows[0]["max"].ToString()) + 1;
                 uc_make.Done += (sender, e) =>
                 {
                     string experience = "";
-                    foreach (Control control in uc_make.Controls)
-                    {
-                        if (control is Guna2Panel)
-                        {
-                            foreach (Control control2 in control.Controls)
-                            {
-                                if (control2 is FlowLayoutPanel)
-                                {
-                                    foreach (Control control1 in control2.Controls)
-                                    {
-                                        if (control1 is uC_LoadIfJob)
-                                        {
-                                            uC_LoadIfJob uc = (uC_LoadIfJob)control1;
-                                            if (uc.txtReviewJob.Text.Trim().Length > 0 && uc.txtTime.Text.Trim().Length > 0 && uc.txtReviewJob.Text.Trim().Length > 0)
-                                            {
-                                                experience += "|!" + uc.txtWhatJob.Text.Trim();
-                                                experience += "|#" + uc.txtTime.Text.Trim();
-                                                experience += "|^" + uc.txtReviewJob.Text.Trim();
-                                            }
-                                        }
-                                    }
-                                }
-
-                            }
-                        }
-                    }
+                    Repect(experience, uc_make);
                     string education = $"{uc_make.cboSalary.SelectedItem.ToString()} {uc_make.txtSchool.Text.Trim()} năm {uc_make.cboYear.SelectedItem.ToString()} tại {uc_make.cboCity.SelectedItem.ToString()}";
                     
                     DetailCV detailCV = new DetailCV(idCV, int.Parse(dr["idCandidate"].ToString()), uc_make.txtNameJob.Text.Trim(),
@@ -714,11 +691,12 @@ namespace JobHub
             }
         }
 
-        public Image InsertImage(string imageName, Guna2PictureBox pb)
+        public Image InsertImage(string imageName, Guna2PictureBox pb, uC_imageFeedBack uC_ImageFeed)
         {
             try
             {
                 string imagePath = getPathImage(imageName);
+                uC_ImageFeed.Path = imagePath;
                 Image im = new Bitmap(imagePath);
                 pb.Image = im;
                 return im;
@@ -729,7 +707,8 @@ namespace JobHub
 
         }
 
-        public Image InsertImage(string imageName, Guna2CirclePictureBox pb)
+        
+        public Image InsertImage(string imageName,Guna2PictureBox pb)
         {
             try
             {
@@ -772,6 +751,27 @@ namespace JobHub
             File.Copy(imagePath, destinationPath);
             return Path.GetFileName(destinationPath);
         }
+
+        public List<string> loadImageFeedBack(string path, FlowLayoutPanel fpn, Guna2PictureBox picImage, List<string> path_new)
+        {
+            if(path != "")
+            {
+                uC_imageFeedBack uC_ImageFeedBack = new uC_imageFeedBack();
+                uC_ImageFeedBack.btnDeleteImage.Click += (sender, e) =>
+                {
+                    
+                    fpn.Controls.Remove(uC_ImageFeedBack); 
+                    path_new.Remove(path);
+                    if(fpn.Controls.Count == 1)
+                    {
+                        picImage.Visible = true;
+                    }
+                };
+                InsertImage(path, uC_ImageFeedBack.picImageFeedBack, uC_ImageFeedBack);
+                fpn.Controls.Add(uC_ImageFeedBack);
+            }
+            return path_new;
+        }
         public string SelectImage()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -780,13 +780,31 @@ namespace JobHub
                 openFileDialog.Filter = "Tất cả các tệp (*.*)|*.*|Ảnh (*.png;*.jpg;*.jpeg;*.gif;*.bmp)|*.png;*.jpg;*.jpeg;*.gif;*.bmp";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
-
+                openFileDialog.Multiselect = true;
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-                        return openFileDialog.FileName;
-                        
+                        string[] path = openFileDialog.FileNames;
+                        if(path.Length == 1)
+                        {
+                            return openFileDialog.FileName;
+                        }
+                        string temp = "";
+                        for(int i = 0; i < path.Length; ++i)
+                        {
+                            if (i == path.Length - 1)
+                            {
+                                temp += path[i];
+
+                            }
+                            else
+                            {
+                                temp += path[i] + "+";
+                            }
+                        }
+                        return temp;
+
                     }
                     catch (Exception ex)
                     {

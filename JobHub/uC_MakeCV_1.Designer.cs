@@ -1791,10 +1791,10 @@
             this.Controls.Add(this.lbEducation);
             this.Controls.Add(this.lblExperience);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.pnContailKN);
             this.Controls.Add(this.pnContact);
             this.Controls.Add(this.pnSkills);
             this.Controls.Add(this.pnEducations);
-            this.Controls.Add(this.pnContailKN);
             this.Name = "uC_MakeCV_1";
             this.Size = new System.Drawing.Size(1245, 620);
             this.Load += new System.EventHandler(this.uC_MakeCV_1_Load);

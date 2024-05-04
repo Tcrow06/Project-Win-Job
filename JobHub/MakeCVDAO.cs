@@ -45,9 +45,9 @@ namespace JobHub
             return function.ReadData(cmd);
         }
 
-        public void WriteData(DataTable dt, FCreatCV fCreatCV)
+        public void WriteData(DataTable dt, FCreatCV fCreatCV, int idCandidate)
         {
-            function.WriteData(dt, fCreatCV);
+            function.WriteData(dt, fCreatCV, idCandidate);
         }
 
         public void ShowData(int idCandidate, Guna2TextBox txtAddress,
