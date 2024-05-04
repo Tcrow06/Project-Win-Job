@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -64,17 +65,17 @@ namespace JobHub
                     int idJob = int.Parse(dr["idJob"].ToString());
                     if (fm.Account == null)
                     {
-                        job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                        job.ptbSave.Image = Properties.Resources.heartNotSaved;
                     }
                     else
                     {
                         if (!candidate.CheckSaveStatus(idJob, fm.Account.Id))
                         {
-                            job.ptbSave.Image = Properties.Resources.heartChuaLuu;
+                            job.ptbSave.Image = Properties.Resources.heartNotSaved;
                         }
                         else
                         {
-                            job.ptbSave.Image = Properties.Resources.heartDaLuu;
+                            job.ptbSave.Image = Properties.Resources.heartSave;
                         }
                     }
                     pn.Controls.Add(job);
@@ -82,5 +83,23 @@ namespace JobHub
                 dr.Dispose();
             }
         }
+        public SqlDataReader LoadUc_JobEvaluate(int idJob)
+        {
+            return companyDetailDao.LoadUc_JobEvaluate(idJob);
+        }
+        public SqlDataReader LoadInfoEvaluate(int idJob)
+        {
+            return companyDetailDao.LoadInfoEvaluate(idJob);
+        }
+        public bool CheckEvaluated(int idCandidate)
+        {
+            DataTable dt = companyDetailDao.CheckEvaluated(idCandidate);
+            if(dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

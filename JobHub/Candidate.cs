@@ -96,17 +96,16 @@ namespace JobHub
             }
         }
 
-        public Candidate GetInfoCandidate(Account account)
+        public Candidate GetInfoCandidate(int idCandidate)
         {
             Candidate cd = new Candidate();
-            SqlDataReader dr = cdd.GetInfoCandidate(account.Id);
+            SqlDataReader dr = cdd.GetInfoCandidate(idCandidate);
             if (dr.Read())
             {
-                //cd.LastName = dr["candidateLastName"] != DBNull.Value ? dr["candidateLastName"].ToString() : "la";
                 cd.LastName = dr["candidateLastName"].ToString();
                 cd.FirstName = dr["candidateFirstName"].ToString();
                 cd.FullName = cd.LastName + " " + cd.FirstName; 
-                cd.Avatar = dr["candidateAvatar"].ToString();
+                cd.Avatar = dr["candidateAvatar"] != DBNull.Value && dr["candidateAvatar"].ToString().Length > 0 ? dr["candidateAvatar"].ToString() : "user.png";
             }
             return cd;
         }

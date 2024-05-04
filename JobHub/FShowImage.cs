@@ -23,16 +23,16 @@ namespace JobHub
         {
             try
             {
-                string imagePath = function.getPathImage(nameImage);
+                string imagePath = function.getPathImage(nameImage.Trim());
                 Image im = Image.FromFile(imagePath);
-                if (pbImage.Width < im.Width)
-                {
+/*                if (pbImage.Width < im.Width)
+                {*/
                     pbImage.Height = pbImage.Width * im.Height / im.Width;
-                }
+/*                }
                 else
                 {
                     pbImage.Size = im.Size;
-                }
+                }*/
                 pbImage.SizeMode = PictureBoxSizeMode.Zoom;
 
                 pbImage.Image = im;

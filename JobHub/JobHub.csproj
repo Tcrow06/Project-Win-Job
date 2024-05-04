@@ -344,11 +344,29 @@
     <Compile Include="uc_CVInfor.Designer.cs">
       <DependentUpon>uc_CVInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_Evaluate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Evaluate.Designer.cs">
+      <DependentUpon>uc_Evaluate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_EvaluateInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EvaluateInfo.Designer.cs">
+      <DependentUpon>UC_EvaluateInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_FollowCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uc_FollowCV.Designer.cs">
       <DependentUpon>uc_FollowCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FormEvaluate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FormEvaluate.Designer.cs">
+      <DependentUpon>UC_FormEvaluate.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ImageCV.cs">
       <SubType>UserControl</SubType>
@@ -417,6 +435,12 @@
     <Compile Include="FUserInfo.Designer.cs">
       <DependentUpon>FUserInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_PbEvaluate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_PbEvaluate.Designer.cs">
+      <DependentUpon>uc_PbEvaluate.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="FAppliedCV.resx">
       <DependentUpon>FAppliedCV.cs</DependentUpon>
@@ -453,7 +477,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FFMCV.resx">
       <DependentUpon>FFMCV.cs</DependentUpon>
-    </EmbeddedResource >
+    </EmbeddedResource>
     <EmbeddedResource Include="FFindCandidate.resx">
       <DependentUpon>FFindCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,8 +558,17 @@
     <EmbeddedResource Include="uc_CVInfor.resx">
       <DependentUpon>uc_CVInfor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc_Evaluate.resx">
+      <DependentUpon>uc_Evaluate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EvaluateInfo.resx">
+      <DependentUpon>UC_EvaluateInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_FollowCV.resx">
       <DependentUpon>uc_FollowCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FormEvaluate.resx">
+      <DependentUpon>UC_FormEvaluate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ImageCV.resx">
       <DependentUpon>UC_ImageCV.cs</DependentUpon>
@@ -570,6 +603,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FUserInfo.resx">
       <DependentUpon>FUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_PbEvaluate.resx">
+      <DependentUpon>uc_PbEvaluate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
@@ -745,6 +781,8 @@
     <None Include="Resources\checklist.png" />
     <None Include="Resources\office-building.png" />
     <None Include="Resources\accept.png" />
+    <None Include="Resources\heartSave.png" />
+    <None Include="Resources\heartNotSaved.png" />
     <Content Include="Resources\user.png" />
     <None Include="Resources\next.png" />
   </ItemGroup>

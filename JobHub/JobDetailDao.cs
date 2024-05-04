@@ -43,12 +43,40 @@ namespace JobHub
         }
         public SqlDataReader LoadRelatedJobs(int idJob)
         {
-            string sqlField = $@"select Job.jobField form Job where idJob = {idJob}";
             string sql = string.Format($@"select top 5 * from Job inner join Company on Company.idCompany = Job.idCompany
                                           where Job.jobField = (select Job.jobField from Job where idJob = {idJob}) and job.idJob != {idJob}");
 
             return dbc.loadData(sql);
         }
+        public SqlDataReader LoadUc_JobEvaluate(int idJob)
+        {
+            string sql = $@"select* from JobEvaluate join Candidate on Candidate.idCandidate = JobEvaluate.idCandidate
+                            where idJob = {idJob}";
+            return dbc.loadData(sql);
+        }
+        public SqlDataReader LoadInfoEvaluate(int idJob)
+        {
+            string sql = $@"SELECT idJob,
+                            COUNT(CASE WHEN star = 1 THEN 1 END) AS s1,
+                            COUNT(CASE WHEN star = 2 THEN 1 END) AS s2,
+                            COUNT(CASE WHEN star = 3 THEN 1 END) AS s3,
+                            COUNT(CASE WHEN star = 4 THEN 1 END) AS s4,
+                            COUNT(CASE WHEN star = 5 THEN 1 END) AS s5
+                        FROM 
+                            JobEvaluate 
+                        WHERE 
+                            idJob = {idJob} 
+                        GROUP BY 
+                            idJob;";
+            return dbc.loadData(sql);
+        }
+        public DataTable CheckEvaluated(int idCandidate)
+        {
+            string sql = $"select* from JobEvaluate where idCandidate ={idCandidate}";
+            return dbc.ExcutionReadData(sql);
+        }
+
+
 
     }
 }

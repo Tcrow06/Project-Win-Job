@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JobHub
 {
@@ -19,18 +21,19 @@ namespace JobHub
     {
         private Candidate cd = new Candidate();
         private CompanyDetail cdd = new CompanyDetail();
-        private JobDetail jdd = new JobDetail(); 
+        private JobDetail jdd = new JobDetail();
         private ReLoadFormCandidate reLoad = new ReLoadFormCandidate();
-        private Function function = new Function(); 
+        private Function function = new Function();
         private int idJob;
         private int idCp;
+        private uc_Evaluate uc_Evaluate = new uc_Evaluate();
         //private string field;
         private Fmain fm;
         public FJobDetails()
         {
             InitializeComponent();
         }
-        public FJobDetails(int idJob,int IdCp, Fmain fm)
+        public FJobDetails(int idJob, int IdCp, Fmain fm)
         {
             this.fm = fm;
             this.idJob = idJob;
@@ -42,6 +45,12 @@ namespace JobHub
             LoadJobDetails(idJob);
             LoadCompanyDetails(idCp);
             LoadRelatedJobs(idJob);
+            LoadEvaluate();
+        }
+        private void LoadEvaluate()
+        {
+            LoadUc_JobEvaluate();
+            LoadInfoEvaluate();
         }
         private void LoadRelatedJobs(int idJob)
         {
@@ -222,5 +231,46 @@ namespace JobHub
   
         }
 
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            flpnEvaluate.Visible = false;
+            flpnDetail.Visible = true;
+            flpnDetail.BringToFront();
+        }
+
+        private void btnEvaluate_Click(object sender, EventArgs e)
+        {
+            flpnDetail.Visible = false;
+            flpnEvaluate.Visible = true;
+            flpnEvaluate.BringToFront();
+        }
+        private void LoadUc_JobEvaluate()
+        {
+            SqlDataReader dr = jdd.LoadUc_JobEvaluate(idJob);
+            function.LoadUc_JobEvaluate(dr, flpnUC);
+        }
+        private void LoadInfoEvaluate()
+        {
+            SqlDataReader dr = jdd.LoadInfoEvaluate(idJob);
+            function.LoadInfoEvaluate(dr, uC_EvaluateInfo);
+            uC_EvaluateInfo.clickBtn += (sender, e) =>
+            {
+                if (fm.Account!=null)
+                {
+                    if (jdd.CheckEvaluated(fm.Account.Id))
+                    {
+                        MessageBox.Show("Bạn đã đánh giá nên không thể đánh giá thêm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //mở form
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            };
+        }
     }
 }
