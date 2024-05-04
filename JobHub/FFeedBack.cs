@@ -15,7 +15,7 @@ namespace JobHub
         FeedBackDAO feedBackDAO = new FeedBackDAO();
         private int idCandidate;
         private int idJob;
-        private string path;
+        private string path = "";
         private List<string> list;
         public int IdCandidate { get => idCandidate; set => idCandidate = value; }
         public int IdJob { get => idJob; set => idJob = value; }

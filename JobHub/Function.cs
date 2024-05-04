@@ -37,20 +37,42 @@ namespace JobHub
         public void WriteJob(string detail, uC_MakeCV_1 uc_make)
         {
             string s = detail;
-            if (s.Trim().Length > 0 && s[0] == '+')
+            if (s.Trim().Length > 0 && s[0] == '|' && s[1] == '!')
             {
-                    string[] array = s.Split(new char[] { '|', '!' }, StringSplitOptions.RemoveEmptyEntries);
-                uc_make.pnExperience.Controls.Clear();
-                for (int i = 0; i < array.Length; i++)
+                for (int i = 0; i < s.Length; ++i)
                 {
-                    if (array[i] != "")
+                    string temp = "";
+                    if (s[i] == '|' && s[i + 1] == '!')
                     {
                         uC_JobDescription uC_JobDescription = new uC_JobDescription();
-                        string[] subArray = array[i].Split(new char[] {'|', '#'}, StringSplitOptions.RemoveEmptyEntries);
-                        uC_JobDescription.lblViewJob.Text = subArray[0];
-                        string[] subArray1 = subArray[1].Split('>');
-                        uC_JobDescription.lblSince.Text = subArray1[0];
-                        uC_JobDescription.lblReviewJob.Text = subArray1[1];
+                        int j = i + 2;
+                        while (s[j] != '|' && s[j + 1] != '#')
+                        {
+                            temp += s[j];
+                            j++;
+                        }
+                        j += 2;
+                        uC_JobDescription.lblViewJob.Text = temp;
+                        temp = "";
+                        while (s[j] != '|' && s[j + 1] != '^')
+                        {
+                            temp += s[j];
+                            j++;
+                        }
+                        uC_JobDescription.lblSince.Text = temp;
+                        j += 2;
+                        temp = "";
+                        while (j < s.Length - 1 && (s[j] != '|' && s[j + 1] != '+'))
+                        {
+                            temp += s[j];
+                            j++;
+                            if (j == s.Length - 1)
+                            {
+                                temp += s[j];
+                            }
+                        }
+                        uC_JobDescription.lblReviewJob.Text = temp;
+                        i = j - 1;
                         uc_make.pnExperience.Controls.Add(uC_JobDescription);
                     }
                 }
@@ -167,8 +189,8 @@ namespace JobHub
                 setLocation(uc_make.pnCall.Location.X, uc_make.pnCall.Location.Y + uc_make.pnCall.Height + 5, uc_make.pnEducation);
                 setLocation(uc_make.pnEducation.Location.X, uc_make.pnEducation.Location.Y + 5 + uc_make.pnEducation.Height, uc_make.pnSkill);
                 uc_make.txtFirstName.Text = dr["candidateFirstName"].ToString().Trim();
-                uc_make.lblFirstNam.Text = dr["candidateFirstName"].ToString().Trim();
-                uc_make.lblLastNam.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblFirstName.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblLastName.Text = dr["candidateFirstName"].ToString().Trim();
                 uc_make.lblIntroduce.Text = "Xin chào tôi tên là " + dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
                 uc_make.lblPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
                 uc_make.lblEmail.Text = dr["candidateEmail"].ToString().Trim();
@@ -215,8 +237,7 @@ namespace JobHub
                 {
                     try
                     {
-                        string experience = "";
-                        Repect(experience, uc_make);
+                        string experience = Repect(uc_make);
                         string education = $"{uc_make.cboSalary.SelectedItem.ToString()} {uc_make.txtSchool.Text.Trim()} năm {uc_make.cboYear.SelectedItem.ToString()} tại {uc_make.cboCity.SelectedItem.ToString()}";
                         FixCVDAO fix = new FixCVDAO(int.Parse(dr["idCV"].ToString()), int.Parse(dr["idCandidate"].ToString()));
                         Candidate candidate = new Candidate(int.Parse(dr["idCandidate"].ToString()), uc_make.txtFirstName.Text.Trim(), uc_make.txtLastName.Text.Trim(), uc_make.txtPhoneNumber.Text.Trim(), uc_make.txtEmail.Text.Trim(),
@@ -237,8 +258,9 @@ namespace JobHub
             uc_make.Dock = DockStyle.Fill;
         }
 
-        public void Repect(string experience, uC_MakeCV_1 uc_make)
+        public string Repect(uC_MakeCV_1 uc_make)
         {
+            string experience = "";
             foreach (Control control in uc_make.Controls)
             {
                 if (control is Guna2Panel)
@@ -265,6 +287,8 @@ namespace JobHub
                     }
                 }
             }
+            return experience;
+
         }
         private void updateCV(string path, Guna2CirclePictureBox picAvatarCV, DetailCVDAO detailCVDAO, int idCV, int idCandidate)
         {
@@ -309,8 +333,8 @@ namespace JobHub
                 setLocation(uc_make.pnCall.Location.X, uc_make.pnCall.Location.Y + uc_make.pnCall.Height + 5, uc_make.pnEducation);
                 setLocation(uc_make.pnEducation.Location.X, uc_make.pnEducation.Location.Y + 5 + uc_make.pnEducation.Height, uc_make.pnSkill);
                 uc_make.txtFirstName.Text = dr["candidateFirstName"].ToString().Trim();
-                uc_make.lblFirstNam.Text = dr["candidateFirstName"].ToString().Trim();
-                uc_make.lblLastNam.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblFirstName.Text = dr["candidateFirstName"].ToString().Trim();
+                uc_make.lblLastName.Text = dr["candidateFirstName"].ToString().Trim();
                 uc_make.lblIntroduce.Text = "Xin chào tôi tên là " + dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
                 uc_make.lblPhoneNumber.Text = dr["candidatePhone"].ToString().Trim();
                 uc_make.lblEmail.Text = dr["candidateEmail"].ToString().Trim();
@@ -338,8 +362,7 @@ namespace JobHub
                 }
                 uc_make.Done += (sender, e) =>
                 {
-                    string experience = "";
-                    Repect(experience, uc_make);
+                    string experience = Repect(uc_make);
                     string education = $"{uc_make.cboSalary.SelectedItem.ToString()} {uc_make.txtSchool.Text.Trim()} năm {uc_make.cboYear.SelectedItem.ToString()} tại {uc_make.cboCity.SelectedItem.ToString()}";
                     
                     DetailCV detailCV = new DetailCV(idCV, int.Parse(dr["idCandidate"].ToString()), uc_make.txtNameJob.Text.Trim(),
