@@ -16,7 +16,7 @@ namespace JobHub
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMainCompany());
+            Application.Run(new Fmain());
         }
     }
 }
