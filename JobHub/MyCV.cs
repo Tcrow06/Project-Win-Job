@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobHub.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -36,14 +37,22 @@ namespace JobHub
         {
             cvDAO.AddImageCVIntoDB(imageName, idCandiate, idCV, CVName);
         }
-        public bool InsertInfoIntoUC(string imageName, FlowLayoutPanel pn, int idCV, string CVName, int idCandidate)
+        public bool InsertInfoIntoUC(string imageName, FlowLayoutPanel pn, int idCV, string CVName, int idCandidate, FlowLayoutPanel flpn)
         {
             UC_ImageCV uc = new UC_ImageCV(imageName, idCV);
-            uc.btnMainCV.Click += (sender, e) =>
+            uc.pbSelectMainCV.Click += (sender, e) =>
             {
-                function.DeleteMainCV();
-                function.SetMainCV(idCandidate, idCV, 0);
-                uc.btnMainCV.Visible = false;
+                function.DeleteMainCV(idCandidate);
+                function.SetMainCV(idCandidate, idCV, 1);
+                foreach (UC_ImageCV item in pn.Controls)
+                {
+                    item.pbSelectMainCV.Image = Resources.star;
+                }
+                foreach (uC_CV item in flpn.Controls)
+                {
+                    item.pbSelectMainCV.Image = Resources.star;
+                }
+                uc.pbSelectMainCV.Image = Properties.Resources.star__1_;
                 MessageBox.Show("Đặt thành công");
             };
             uc.lblCVName.Text = Path.GetFileNameWithoutExtension(CVName);
@@ -99,14 +108,14 @@ namespace JobHub
             }
         }
     
-        public void LoadImageCV(int idCandidate,FlowLayoutPanel pn)
+        public void LoadImageCV(int idCandidate,FlowLayoutPanel pn, FlowLayoutPanel flpn)
         {
             pn.Controls.Clear();
             SqlDataReader dr = cvDAO.GetImageCV(idCandidate);
             while (dr.Read())
             {
                 InsertInfoIntoUC(dr["image"].ToString().Trim(), pn,
-                                    int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString().Trim()));
+                                    int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString().Trim()), flpn);
             }
             
         }

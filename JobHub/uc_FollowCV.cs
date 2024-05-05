@@ -47,11 +47,12 @@ namespace JobHub
                 uc_FollowCV.pnLocalCV.Controls.Add(uc_cv);
                 uc_cv.Dock = DockStyle.Fill;
                 uc_FollowCV.pnLocalCV.BringToFront();
+                uc_cv.pbSelectMainCV.Visible = false;
                 uc_cv.OpenForm += (sender, e) =>
                 {
 
                     int idCandiate = Int32.Parse(dr["idCandidate"].ToString());
-                    int idCV = Int32.Parse(dr["idCV"].ToString());
+                    int idCV = Int32.Parse(dr["idCV"].ToString()); 
                     handler.OpenFormCVDetailNotEdit(idCandiate, idCV);
                 };
             }

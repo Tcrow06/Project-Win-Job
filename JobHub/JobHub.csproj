@@ -821,6 +821,8 @@
     <None Include="Resources\accept.png" />
     <None Include="Resources\heartSave.png" />
     <None Include="Resources\heartNotSaved.png" />
+    <None Include="Resources\star %281%29.png" />
+    <None Include="Resources\star.png" />
     <Content Include="Resources\user.png" />
     <None Include="Resources\next.png" />
   </ItemGroup>

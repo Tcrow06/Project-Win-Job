@@ -41,14 +41,14 @@ namespace JobHub
             
         }
 
-        public void WriteData(DataTable dataTable, FlowLayoutPanel fpn, Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
+        public void WriteData(DataTable dataTable,Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
         {
-            CVDAO.WriteData(dataTable, pnContainCV, lblNameCandidate, picAvarta);
+            CVDAO.WriteData(dataTable, pnContainCV, lblNameCandidate, picAvarta, pnContainImageCV);
         }
         public void LoadImage(DataRow dr)
         {
             myCV.InsertInfoIntoUC(dr["image"].ToString().Trim(), pnContainImageCV, 
-                                        int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString()));
+                                        int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString()), pnContainCV);
         }
         public void WriteData(DataTable dataTable)
         {
@@ -69,8 +69,8 @@ namespace JobHub
                             FROM Candidate
                             INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
                             where Candidate.idCandidate = {this.Id}");
-                WriteData(dt, pnContainCV, lblNameCandidate, picAvarta);
-                myCV.LoadImageCV(this.Id, pnContainImageCV);
+                WriteData(dt, lblNameCandidate, picAvarta);
+                myCV.LoadImageCV(this.Id, pnContainImageCV, pnContainCV);
             }
         }
 
@@ -96,7 +96,7 @@ namespace JobHub
                 if (destinationFilePath != null && destinationFilePath != "")
                 {
                     if(myCV.InsertInfoIntoUC(nameImage, pnContainImageCV, idImageCV, 
-                        nameImage, Id))
+                        nameImage, Id,pnContainCV))
                         myCV.AddImageCVIntoDB(nameImage, this.Id, idImageCV, nameImage);
                 }
             }

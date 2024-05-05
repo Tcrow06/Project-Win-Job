@@ -37,8 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblIntroduce = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnMainCV = new Guna.UI2.WinForms.Guna2Button();
+            this.pbSelectMainCV = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatarCV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectMainCV)).BeginInit();
             this.SuspendLayout();
             // 
             // picAvatarCV
@@ -133,30 +134,22 @@
             this.guna2Separator1.Size = new System.Drawing.Size(151, 9);
             this.guna2Separator1.TabIndex = 14;
             // 
-            // btnMainCV
+            // pbSelectMainCV
             // 
-            this.btnMainCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMainCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMainCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMainCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMainCV.FillColor = System.Drawing.Color.White;
-            this.btnMainCV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMainCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnMainCV.Image = ((System.Drawing.Image)(resources.GetObject("btnMainCV.Image")));
-            this.btnMainCV.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnMainCV.Location = new System.Drawing.Point(61, 70);
-            this.btnMainCV.Name = "btnMainCV";
-            this.btnMainCV.Size = new System.Drawing.Size(131, 29);
-            this.btnMainCV.TabIndex = 15;
-            this.btnMainCV.Text = "Đặt làm CV Chính";
-            this.btnMainCV.Visible = false;
+            this.pbSelectMainCV.Image = global::JobHub.Properties.Resources.star;
+            this.pbSelectMainCV.Location = new System.Drawing.Point(192, 2);
+            this.pbSelectMainCV.Name = "pbSelectMainCV";
+            this.pbSelectMainCV.Size = new System.Drawing.Size(20, 20);
+            this.pbSelectMainCV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSelectMainCV.TabIndex = 18;
+            this.pbSelectMainCV.TabStop = false;
             // 
             // uC_CV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnMainCV);
+            this.Controls.Add(this.pbSelectMainCV);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblIntroduce);
             this.Controls.Add(this.label1);
@@ -169,8 +162,8 @@
             this.Name = "uC_CV";
             this.Size = new System.Drawing.Size(214, 155);
             this.Click += new System.EventHandler(this.uC_CV_Click);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.uC_CV_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.picAvatarCV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSelectMainCV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +179,6 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblIntroduce;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        public Guna.UI2.WinForms.Guna2Button btnMainCV;
+        public System.Windows.Forms.PictureBox pbSelectMainCV;
     }
 }
