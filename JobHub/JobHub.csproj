@@ -94,6 +94,8 @@
     <Compile Include="CompanyDAO.cs" />
     <Compile Include="CompanyDetail.cs" />
     <Compile Include="CompanyDetailDAO.cs" />
+    <Compile Include="CompanyList.cs" />
+    <Compile Include="CompanyListDao.cs" />
     <Compile Include="ConfirmCompanyAccount.cs" />
     <Compile Include="ConfirmCompanyAccountDAO.cs" />
     <Compile Include="EditCompany.cs" />
@@ -117,6 +119,12 @@
     </Compile>
     <Compile Include="FCompanyDetails2.Designer.cs">
       <DependentUpon>FCompanyDetails2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompanyList.Designer.cs">
+      <DependentUpon>FCompanyList.cs</DependentUpon>
     </Compile>
     <Compile Include="FConfirmCompanyAccount.cs">
       <SubType>Form</SubType>
@@ -352,6 +360,18 @@
     <Compile Include="Uc_ChoiceCV.Designer.cs">
       <DependentUpon>Uc_ChoiceCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="uC_Company.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_Company.Designer.cs">
+      <DependentUpon>uC_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uC_CompanyMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_CompanyMain.Designer.cs">
+      <DependentUpon>uC_CompanyMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="uC_CV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -477,6 +497,9 @@
     <EmbeddedResource Include="FCompanyDetails2.resx">
       <DependentUpon>FCompanyDetails2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCompanyList.resx">
+      <DependentUpon>FCompanyList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FConfirmCompanyAccount.resx">
       <DependentUpon>FConfirmCompanyAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -586,6 +609,12 @@
     </Compile>
     <EmbeddedResource Include="Uc_ChoiceCV.resx">
       <DependentUpon>Uc_ChoiceCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_Company.resx">
+      <DependentUpon>uC_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_CompanyMain.resx">
+      <DependentUpon>uC_CompanyMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_CV.resx">
       <DependentUpon>uC_CV.cs</DependentUpon>
