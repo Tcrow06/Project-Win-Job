@@ -111,7 +111,7 @@
             this.btnImageAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnImageAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnImageAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImageAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.btnImageAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
             this.btnImageAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnImageAdd.ForeColor = System.Drawing.Color.White;
             this.btnImageAdd.Location = new System.Drawing.Point(646, 145);
@@ -129,7 +129,7 @@
             this.btnCompanyyAccountRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCompanyyAccountRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCompanyyAccountRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCompanyyAccountRegister.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.btnCompanyyAccountRegister.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
             this.btnCompanyyAccountRegister.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCompanyyAccountRegister.ForeColor = System.Drawing.Color.White;
             this.btnCompanyyAccountRegister.Location = new System.Drawing.Point(406, 145);
@@ -615,6 +615,7 @@
             this.btnLoadPicture.Name = "btnLoadPicture";
             this.btnLoadPicture.Size = new System.Drawing.Size(31, 32);
             this.btnLoadPicture.TabIndex = 129;
+            this.btnLoadPicture.Click += new System.EventHandler(this.btnLoadPicture_Click);
             // 
             // pbAvatar
             // 
@@ -713,7 +714,7 @@
             this.btnDeletePic.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDeletePic.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDeletePic.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeletePic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(0)))));
+            this.btnDeletePic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(215)))), ((int)(((byte)(105)))));
             this.btnDeletePic.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeletePic.ForeColor = System.Drawing.Color.White;
             this.btnDeletePic.Location = new System.Drawing.Point(887, 145);
