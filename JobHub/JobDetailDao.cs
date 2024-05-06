@@ -76,6 +76,15 @@ namespace JobHub
             return dbc.ExcutionReadData(sql);
         }
 
+        public void UpdateJob(JobDetail A)
+        {
+            string sqlSre = $@"UPDATE Job SET jobName=N'{A.NameJob}' ,jobAddress=N'{A.Address}' ,jobExperience=N'{A.Experience}',
+                                   jobDescription=N'{A.Description}',jobRequirement=N'{A.Requirement}', jobBenefit=N'{A.Benefit}',
+                                     jobField=N'{A.Category}',jobMinSalary=N'{A.MinSalary}',jobMaxSalary=N'{A.MaxSalary}'     
+                                      ,jobRegisterDead = '{A.RegisterDead}'  WHERE idJob={A.IdJob}";
+            dbc.ExcuteNoMess(sqlSre);
+        }
+
 
 
     }
