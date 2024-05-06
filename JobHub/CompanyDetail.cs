@@ -18,6 +18,7 @@ namespace JobHub
         private CompanyDetailDAO companyDetailDao = new CompanyDetailDAO(); 
         private CandidateDAO candidate = new CandidateDAO();  
         private JobDetail jobDetail = new JobDetail();
+        private Function function = new Function();
 
         public Company GetInfoCompanyDetail(int idCompany)
         {
@@ -100,6 +101,41 @@ namespace JobHub
             }
             return false;
         }
+
+        public uC_Company InsertInfoAndEventIntoUcCompany(SqlDataReader dr, Fmain fm)
+        {
+            uC_Company company = new uC_Company();
+            int idCompany = int.Parse(dr["idCompany"].ToString());
+            company.IdCompany = idCompany;
+            company.lblCompanyName.Text= dr["companyName"].ToString();
+            function.InsertImage(dr["companyAvatar"].ToString(), company.pbCompanyAvatar);
+            company.lblNumofE.Text= dr["companySize"].ToString();
+            company.lblCompanyAddress.Text= dr["companyAddress"].ToString();
+            return company;
+/*
+            company.lbl = dr["jobName"].ToString();
+
+            job.lblCompanyName.Text = dr["companyName"].ToString();
+            job.lblSalary.Text = job.HandleSalary(dr["jobMinSalary"].ToString(), dr["jobMaxSalary"].ToString());
+
+
+            function.InsertImage(dr["companyAvatar"].ToString(), job.pbAvatar);
+
+            job.lblJobAddress.Text = dr["jobAddress"].ToString();
+            job.IdCompany = int.Parse(dr["idCompany"].ToString());
+
+            job.loadJobClick += (sender, e) =>
+            {
+                job.LoadJobDetail(sender, e, job.IdJob, job.IdCompany, fm);
+            };
+            job.loadCompanyClick += (sender, e) =>
+            {
+                job.LoadCompanyDetail(sender, e, job.IdCompany, fm);
+            };
+            changTheSize.setSize(130, 25, job.lblJobName);
+            return job;*/
+        }
+
 
     }
 }

@@ -620,5 +620,19 @@ namespace JobHub
             view.Show();
             view.BringToFront();
         }
+
+        private void btnListCompany_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FCompanyList job = new FCompanyList(this);
+            resize(job.Width + 200, job.Height + 50);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            forms.Push(fai);
+            this.loadForm(job);
+        }
     }
 }
