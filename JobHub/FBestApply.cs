@@ -15,6 +15,7 @@ namespace JobHub
     {
         Fmain fm;
         BestApplyDAO bestApplyDAO = new BestApplyDAO();
+        Charts charts = new Charts();
         public FBestApply()
         {
             InitializeComponent();
@@ -37,10 +38,15 @@ namespace JobHub
         public void LoadData(DataTable dt)
         {
             bestApplyDAO.LoadData(dt, pnJob, pnContainCV);
+            
         }
         private void FBestApply_Load(object sender, EventArgs e)
         {
             DataTable dt = ReadData();
+            charts.InitializeGunaChart(gunaChart1, "Line");
+            charts.Insert();
+            charts.InitializeGunaChart(gunaChart2);
+            charts.GenerateDataAndLabels_1();
             LoadData(dt);
         }
     }

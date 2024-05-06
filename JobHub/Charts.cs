@@ -23,6 +23,8 @@ namespace JobHub
         private GunaSplineAreaDataset gunaPieDataset;
         private GunaAreaDataset gunaAreaDataset;
         private GunaHorizontalBarDataset gunaHorizontalBarDataset;
+        private GunaLineDataset gunaLineDataset;
+        private GunaBarDataset gunaBarDataset;
         public void InitializeGunaChart(GunaChart gunaChart, string s)
         {
             if(s == "Tron")
@@ -49,7 +51,35 @@ namespace JobHub
                 gunaHorizontalBarDataset.YFormat = "Total {0:P}";
                 gunaChart.Datasets.Add(gunaHorizontalBarDataset);
             }
+            else if(s == "Line")
+            {
+                gunaLineDataset = new GunaLineDataset();
+                gunaLineDataset.Label = "Lương Theo Kinh Nghiệm";
+                gunaLineDataset.LegendBoxFillColor = Color.DodgerBlue;
+                gunaLineDataset.FillColor = Color.DodgerBlue;
+                gunaLineDataset.BorderColor = Color.DodgerBlue;
+                gunaLineDataset.YFormat = "Income {0:C}";
+                gunaChart.Datasets.Add(gunaLineDataset);
+            }
         }
+
+
+
+        public void Insert()
+        {
+            string[] kn = { "1", "2", "3", "5", "10" };
+            int[] Salary = { 10, 12, 15, 20, 50 };
+            var random = new Random();
+            for(int i = 0; i < kn.Length; ++i)
+            {
+                gunaLineDataset.DataPoints.Add(new LPoint()
+                {
+                    Label = kn[i],
+                    Y = Salary[i], 
+                });        
+            }
+        }
+    
         public void GenerateDataAndLabels()
         {
             string[] monthLabels = { "Anuary", "March", "May", "July", "August"};
@@ -155,6 +185,48 @@ namespace JobHub
                 });
                 Thread.Sleep(100);
             } 
+        }
+
+        public void InitializeGunaChart(GunaChart gunaChart)
+        {
+            gunaLineDataset = new GunaLineDataset();
+            gunaLineDataset.Label = "CV";
+            gunaLineDataset.LegendBoxFillColor = Color.DodgerBlue;
+            gunaLineDataset.FillColor = Color.DodgerBlue;
+            gunaLineDataset.BorderColor = Color.DodgerBlue;
+            gunaLineDataset.YFormat = "Income {0:C}";
+
+            gunaBarDataset = new GunaBarDataset();
+            gunaBarDataset.Label = "Month";
+            gunaBarDataset.LegendBoxFillColor = Color.MediumSlateBlue;
+            gunaBarDataset.FillColors.Add(Color.MediumSlateBlue);
+            gunaBarDataset.FillColors.Add(Color.MediumPurple);
+            gunaBarDataset.YFormat = "C";
+
+            gunaChart.Datasets.Add(gunaLineDataset);
+            gunaChart.Datasets.Add(gunaBarDataset);
+
+            GenerateDataAndLabels_1();
+        }
+
+        public void GenerateDataAndLabels_1()
+        {
+            string[] monthLabels = { "January", "February", "June", "July" };
+            var random = new Random();
+            foreach (var label in monthLabels)
+            {
+                gunaLineDataset.DataPoints.Add(new LPoint()
+                {
+                    Label = label,
+                    Y = random.Next(10, 100),
+                });
+
+                gunaBarDataset.DataPoints.Add(new LPoint()
+                {
+                    Label = label,
+                    Y = random.Next(10, 100),
+                });
+            }
         }
     }
 }

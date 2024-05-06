@@ -117,4 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="guna2CirclePictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHySURBVDhPY2ho
+        uMpW0X4mA4jLQTgm+0CmXeCWchiGiYNwfC5Ezj5wS521z7qF2qGreBgq2k8GVrad/g/D0Zn7jtoHbv0P
+        w8hycbkHj8DErX3W/7fxXdfBAJSoQlYUnLzvDC4DUkqOnIaJ2/huABqybifQBWfmIyvyidt9DZcBWVXH
+        4HK2fpv+W3mvuwVywRFkRW7hO5/gMqCw7uRjuAEBm4EGrPkIMuAVsiLn4G1fcRlQ3nz6C7KcpdeavwzR
+        OYceROQe+gfCoflH/5oGbfpr7rP+HwibBm76CxLDLr/2v5Hjwt8MIblHi6NzDvwHYbPa6/8188/9t/Re
+        A8YaQLZZzTWwHLq8icvS/4buKzYwKLa+FFdse/wfhOU6noKxfOsjMIbx0eUVmu79ly05/1+24Y4O2ACY
+        BC4cufz1/323v/w/fv/r/8LNb8FiUpVXiDPAdc7L/4/e/fgfv+rN/8DFr/6nr3sDFifagM79H/73HPwA
+        Zi85++n/xiuf/3ce+EC8AWXb3v5fc+kzmB2y5NX/tUD2gtMfiTdArefZ/3OPv/3fdePz/1UXP/9/+PbH
+        f8tpzxEGyPQ9FgIq/IeuERkrdz/7n7T69f/sDW/+6/Q/B4tJVgANqLmtzAACcu1PQuXan5YTi2VaHrZL
+        193sYWBgYAAAWvJsJejgsfoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="guna2CirclePictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        bQAAAG0BjlwfygAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAImSURBVDhPY/j/
+        /z9WDAQ8whwczrL87G4gNjY1IIwhoC3MG28qLng3WFXqba+d7p9eW91/ISrS7y0lhR7YSotkoKtHMIC2
+        6Ajz72+x0v463cngf5iazP9QVen/D5I8/v/JC/z/Kzfgf7u1zi8TccETIgwMvBgG6Anz79jmb/U/QFnq
+        /xwXo/8/gRpAGtHx6QjH/zZSwkdRDFDk50ppttL6DNJ8L9EdQ9NvND7IJUAvFcANsJAQugxyNshmZIUg
+        vNLf7P8sb1RxkHccZUXvgw0A+d1fWeopyM8wZ4NokEu+ZPv9d9cV/+9lJPH/fYYviiERarIfQXpBBhR0
+        2uh+BQUYTLLPW+e/p4r4/2Z7rf+b+6z/H5rr8L/MTg3FgD473X/CHGyVUAN0vsBC+0mK538fU9H/jRGq
+        /70MJP7/PxcCxjHOcv9vxbuhGCDIxlIBMoDHT0nyCUwizlj2/9nZ5v/T/WX+X17u9v//aaABQHx/k+f/
+        CCNZuAHharIfQHrBgWgmIXgZFDAg28O1pf+H6kmBcRiQDQobGA4H4kfJnuBAdJARvQePBVlejqRmS62P
+        MNMJ4TYrnZ+m4gJ5cANAWFuIbxsokWDTgIxBaqwkhQ7D9MENAPlHU4hvT4uV1ieQE9E1gsTarLV/GIoJ
+        HAWpxTAAhlUEuWOMxQRuBSpLveq20f3VY6v7J0hF6g0wnO6ZiQuloKtH4SBjkC08HCyOoCyNbCMq/s8A
+        ANGyNZGSy91EAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="guna2CirclePictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        bQAAAG0BjlwfygAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALISURBVDhPZZJr
+        SFNRAMfvJIZlBn4oQv2gUIFE9MlMU+iB5iODxCAjTXyUQVbGiJWZpsaQCHWmkppGOnXz/XZpzmStIN2a
+        sLozX/hYtVa6TZvNx7+dq5uuPvy455x7fj+49xwKgB0Gg+GAXq/PWBrmy83iU2YCGZM18u7f/VsnLKPy
+        XbZBM21a0MixUudqB1kz6EdN+l/N2WSv1VuXM2IdFwruaRe5UVhMvQTTg+NYqXK3yebGvdANumN+hm2B
+        Bf1Xby0mPBxtAWP9M8Ei9wKsLMV54s9lF6xUujHyjJgFjZSyyFv4niRgAuS7FmoLlv8LnKewFO+CWbED
+        Jluo/wJ6bfQycSnyc+YHZfgZHwhdXKDlGYSF2H1MwBTlBHUtiwlMyygoaCcM0c6Q0zuh1TXCaDSmU9Mt
+        79X0IyHU/ocg381iUHg4Y8R/D35fdAZd7QBRHRtZbduR1k4x8Afc0KkOhWI6V02peXVrdLYQdFYNaL+D
+        mxHPXTAmHMasdD8yW3dsym9cLXKwhRB0j4SvUSOPG1aZgIVPDwXoC41Fk/dRdJ+IwOeqTjSPVuJcRRD8
+        cnwRIwxBo+oMIxNefYlcpUYL2+fW5Wq0n+VAGJDAUHLyKtISqxCcWw6fnCj4FkcwBL+MQb0qnAlIxhLm
+        KE2/UqDOa7aTBadvICWch+ToChxLycMR7n0E8OPtIl0jCaC/1VQyx6h8O2YW8XpBEOb0IfN6A5IinyM5
+        6gV8OUXwuVOGsKJSXOkvQqKk0EIROkc/mJljJJfhdd2wuOaJFFbSr9Uzgbu3WhCeX80EQvilSBoosZH/
+        sUNsu4kSiWRbV6VcuzXATW4Cp2ECnMZxhOUK7AK8oQZthsWxBQgikYrdK1T2iPgyFD+VbciTG4zjdmsH
+        bkrLkato68lQidhWzxawotMZvaTqH2W87qn51NapVQIZkzWNTudlvx/UX7e7vZJ4uLwMAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
 </root>

@@ -423,11 +423,9 @@ namespace JobHub
         {
             string cmd = $@"select * froM AppliedCV join CV on AppliedCV.idCV = cv.idCV where AppliedCV.idJob = {idJob}";
             DataTable dt_1 = conection.ExcutionReadData(cmd);
-            uc_FollowCV uc_Follow = new uc_FollowCV();
-            uc_Follow.btnSumbit.Visible = true;
-            uc_Follow.btnSumbit.Visible = true;
-            uc_Follow.btnFollow.Visible = false;
-            uc_Follow.Sumbit_Click += (sender, e) =>
+            uC_SubCV uc_Follow = new uC_SubCV();
+            uc_Follow.btnName.Text = "Lê Trường Sơn";
+            uc_Follow.btnAcess.Click += (sender, e) =>
             {
                 int count = 0;
                 string cmd_read = $@"select Company.quantityCVAccess
@@ -441,23 +439,21 @@ namespace JobHub
                 string cmd_1 = $@"UPDATE Company
                                 SET quantityCVAccess = {count + 1}
                                 WHERE idCompany = '{idComapny}'";
+
+
+                string cmd_2 = $@"update AppliedCV set AppliedCV.State = 1 where idCandidate = 1 and idJob = 2";
+
                 conection.ExcutionUpdateDate(cmd_1);
-                uc_Follow.btnSumbit.Text = "Đã xác nhận";
+                conection.ExcutionUpdateDate(cmd_2);
+                uc_Follow.btnAcess.Text = "Đã xác nhận";
             };
-
-
-            uc_Follow.Remove_Click += (sender, e) =>
-            {
-                uc_Follow.btnRemove.Enabled = false;
-            };
-
+            contain.Controls.Clear();
             contain.Controls.Add(uc_Follow);
         }
 
      
         public void LoadJob(DataTable dt, FlowLayoutPanel fpnJob, FlowLayoutPanel fpnContainCV)
         {
-            
             foreach(DataRow dr in dt.Rows)
             {
                 uC_Job job = new uC_Job();

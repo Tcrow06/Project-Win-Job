@@ -59,6 +59,11 @@ namespace JobHub
                             LoadAppliedJob();
                         }
                     };
+                    if (int.Parse(dr["State"].ToString()) == 1)
+                    {
+                        job.lblState.Visible = true;
+                        job.lblState.Text = "Đã xác nhận";
+                    }
                     flpnAppliedCV.Controls.Add(job);
                 }
                 dr.Dispose();

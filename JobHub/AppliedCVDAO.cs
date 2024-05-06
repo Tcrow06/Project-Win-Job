@@ -13,8 +13,8 @@ namespace JobHub
         public AppliedCVDAO() { }  
         public SqlDataReader LoadAppliedCV(int idCandidate)
         {
-            string query = $@"select Job.idJob, Job.idCompany, Job.idCandidate, Job.jobField ,Job.jobName,Company.companyName,Company.companyAvatar, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress
-                from Company join (select  Job.idJob,Job.jobField, Job.idCompany, AppliedCV.idCandidate, Job.jobName, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress 
+            string query = $@"select Job.idJob, Job.State, Job.idCompany, Job.idCandidate, Job.jobField ,Job.jobName,Company.companyName,Company.companyAvatar, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress
+                from Company join (select  Job.idJob,Job.jobField, Job.idCompany, AppliedCV.idCandidate, AppliedCV.State, Job.jobName, job.jobMinSalary , job.jobMaxSalary, Job.jobAddress 
                 from AppliedCV join Job on Job.idJob = AppliedCV.idJob) as Job on Job.idCompany = Company.idCompany where Job.idCandidate = {idCandidate} ";
 
             return db.loadData(query);
