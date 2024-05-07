@@ -1,4 +1,5 @@
-﻿using JobHub.Properties;
+﻿using Guna.UI2.WinForms;
+using JobHub.Properties;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -107,7 +108,78 @@ namespace JobHub
                 }
             }
         }
-    
+        public void LoadCreateCV(FMyCV fMyCV,FlowLayoutPanel fpn ,Label lblNameCandidate,Guna2CirclePictureBox picAvatar, FlowLayoutPanel pn)
+        {
+            DataTable dt = cvDAO.GetCreateCV(fMyCV.Id);
+            FormHandler handler = new FormHandler();
+            fpn.Controls.Clear();
+            foreach (DataRow dr in dt.Rows)
+            {
+                lblNameCandidate.Text = dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
+
+                uC_CV uC_CV = new uC_CV();
+                uC_CV.lblLastName.Text = dr["candidateFirstName"].ToString();
+                uC_CV.lblFirstName.Text = dr["candidateLastName"].ToString();
+                uC_CV.lblJobName.Text = dr["jobName"].ToString();
+
+                uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblLastName.Text} {uC_CV.lblFirstName.Text}";
+                int idCV = int.Parse(dr["idCV"].ToString());
+                uC_CV.pbSelectMainCV.Click += (sender, e) =>
+                {
+                    int idCandidate = int.Parse(dr["idCandidate"].ToString());
+                    function.DeleteMainCV(idCandidate);
+                    foreach (uC_CV item in fpn.Controls)
+                    {
+                        item.pbSelectMainCV.Image = Resources.star;
+                    }
+                    foreach (UC_ImageCV item in pn.Controls)
+                    {
+                        item.pbSelectMainCV.Image = Resources.star;
+                    }
+                    function.SetMainCV(idCandidate, idCV, 0);
+                    uC_CV.pbSelectMainCV.Image = Properties.Resources.star__1_;
+                    MessageBox.Show("Đặt thành công");
+                };
+                if (dr["CVAvatar"] == DBNull.Value || dr["CVAvatar"].ToString().Trim().Length == 0)
+                {
+                    uC_CV.picAvatarCV.Image = Resources.ưqd;
+                }
+                else
+                {
+                    Guna2PictureBox pb = new Guna2PictureBox();
+                    function.InsertImage(dr["CVAvatar"].ToString().Trim(), pb);
+                    uC_CV.picAvatarCV.Image = pb.Image;
+                }
+
+                if (dr["candidateAvatar"] == DBNull.Value || dr["candidateAvatar"].ToString().Trim().Length == 0)
+                {
+                    picAvatar.Image = Resources.ưqd;
+                }
+                else
+                {
+
+                    Guna2PictureBox pb = new Guna2PictureBox();
+                    function.InsertImage(dr["candidateAvatar"].ToString().Trim(), pb);
+                    picAvatar.Image = pb.Image;
+                }
+                uC_CV.OpenForm += (sender, e) =>
+                {
+                    int idCandiate = Int32.Parse(dr["idCandidate"].ToString());
+                    handler.OpenNewForm(idCandiate, idCV);
+                    fMyCV.LoadForm();
+                };
+                uC_CV.deleteUC += (sender, e) =>
+                {
+                    cvDAO.DeleteCreateCV(idCV);
+                    MessageBox.Show("Đã xóa tệp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    fMyCV.LoadForm();
+
+                };
+                fpn.Controls.Add(uC_CV);
+            }
+
+        }
+
         public void LoadImageCV(int idCandidate,FlowLayoutPanel pn, FlowLayoutPanel flpn)
         {
             pn.Controls.Clear();
@@ -118,6 +190,11 @@ namespace JobHub
                                     int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString().Trim()), flpn);
             }
             
+        }
+
+        public void UpdateImageCandidate(string nameImage, int idCandidate)
+        {
+            cvDAO.UpdateImageCandidate(nameImage, idCandidate); 
         }
     }
 }

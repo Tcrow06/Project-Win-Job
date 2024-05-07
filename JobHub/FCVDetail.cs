@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace JobHub
         private int idCV;
         DBConection con = new DBConection();
         DetailCVDAO detailCVDAO = new DetailCVDAO();
-
+        private Function function =new Function();
         public FCVDetail()
         {
             InitializeComponent();
@@ -38,9 +39,6 @@ namespace JobHub
             DataTable dt = detailCVDAO.ReadData(query);
             detailCVDAO.WriteData(lblFirstName, lblLastName, lblJobName, lblIntroduce, lblPhoneNumber,
                 lblEmail, lblAddress, lblSkill, lblInfEdu, pnExperience, picAvatarCV, dt, pnContailMenu);
-
-
-
         }
         private void setLocation(int x, int y, Control ctrl)
         {
@@ -127,7 +125,23 @@ namespace JobHub
 
         private void picLoadImage_Click(object sender, EventArgs e)
         {
-            SelectImageButton();
+            string pathImage = function.SelectImage();
+            Guna2PictureBox pb = new Guna2PictureBox();
+            if(function.InsertImage(pathImage, pb) != null)
+            {
+                picAvatarCV.Image = pb.Image;
+                string nameImage = function.SaveImage(pathImage);
+                detailCVDAO.UpdateImageCV(nameImage, this.idCV);
+            }  
+            
+        }
+        private void getNameImage()
+        {
+
+            SqlDataReader dr = detailCVDAO.GetNameImageInDB(this.idCV);
+            if (dr != null) { 
+                dr.Read();
+            }
         }
     }
 }

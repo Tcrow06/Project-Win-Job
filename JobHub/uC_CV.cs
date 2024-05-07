@@ -1,4 +1,5 @@
-﻿using JobHub.Properties;
+﻿using Guna.UI2.WinForms;
+using JobHub.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace JobHub
     {
         public EventHandler OpenForm;
         private FormHandler handler = new FormHandler();
+        public event EventHandler deleteUC;
+        private Function function = new Function(); 
         public uC_CV()
         {
             InitializeComponent();
@@ -33,22 +36,17 @@ namespace JobHub
             uC_CV.lblJobName.Text = dr["jobName"].ToString();
 
             uC_CV.lblIntroduce.Text = $@"Xin chào, tôi tên là {uC_CV.lblLastName.Text} {uC_CV.lblFirstName.Text}";
-
-            if (dr["CVAvatar"].ToString().Trim() == "")
+            if (dr["CVAvatar"] == DBNull.Value || dr["CVAvatar"].ToString().Trim().Length == 0)
             {
                 uC_CV.picAvatarCV.Image = Resources.ưqd;
-                  
             }
             else
             {
-                string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["CVAvatar"].ToString().Trim());
-                using (Image image = Image.FromFile(absoluteImagePath))
-                {
-                    uC_CV.picAvatarCV.Image = new Bitmap(image);
-                }
+                Guna2PictureBox pb = new Guna2PictureBox();
+                function.InsertImage(dr["CVAvatar"].ToString().Trim(), pb);
+                uC_CV.picAvatarCV.Image = pb.Image;
             }
-            
-            //MessageBox.Show(uC_CV.lblLastName.Text = dr["candidateFirstName"].ToString());
+
             return uC_CV;
         }
         public void OpenNewForm(object sender, EventArgs e, int idCandiate, int idCV)
@@ -56,5 +54,9 @@ namespace JobHub
             handler.OpenNewForm(idCandiate, idCV);
         }
 
+        private void pbDeteleCV_Click(object sender, EventArgs e)
+        {
+            deleteUC?.Invoke(sender, e);
+        }
     }
 }

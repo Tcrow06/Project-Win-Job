@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace JobHub
@@ -14,6 +14,7 @@ namespace JobHub
     internal class DetailCVDAO
     {
         Function function = new Function();
+        private DBConection db =new DBConection();
 
         public DataTable ReadData(string cmd)
         {
@@ -37,6 +38,16 @@ namespace JobHub
         public string SelectImageButton(string pathRoot, string dir)
         {
             return function.SelectImageButton(pathRoot, dir);
+        }
+        public SqlDataReader GetNameImageInDB(int idCV)
+        {
+            string sql = $@"select CVAvatar from CV where idCV ={idCV}";
+            return db.loadData(sql);
+        }
+        public void UpdateImageCV(string nameImage, int idCV)
+        {
+            string sql = $"update CV set CVAvatar = N'{nameImage}' where idCV = {idCV}";
+            db.ExcuteNoMess(sql);   
         }
     }
 }

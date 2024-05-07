@@ -322,6 +322,7 @@ namespace JobHub
         {
             int idCV = -1;
             uC_MakeCV_1 uc_make = new uC_MakeCV_1();
+            string pathImage = "";
             foreach (DataRow dr in dt.Rows)
             {
                 MakeCVDAO makeCVDAO = new MakeCVDAO(int.Parse(dr["idCandidate"].ToString()));
@@ -368,20 +369,17 @@ namespace JobHub
                     
                     DetailCV detailCV = new DetailCV(idCV, int.Parse(dr["idCandidate"].ToString()), uc_make.txtNameJob.Text.Trim(),
                     uc_make.txtSkills.Text.Trim(), experience, education);
+                    detailCV.CVAvatar1 = SaveImage(pathImage);
                     makeCVDAO.Insert(detailCV, $"{uc_make.pnContainMenu.BackColor.R}, {uc_make.pnContainMenu.BackColor.G}, {uc_make.pnContainMenu.BackColor.B}");
                     MessageBox.Show("Lưu thành công");
                 };
                 uc_make.LoadImage += (sender, e) =>
                 {
-                    DetailCVDAO detailCVDAO = new DetailCVDAO();
-                    string path = detailCVDAO.SelectImageButton(Application.StartupPath, "Resources");
-                    if (path != null)
+                    pathImage = SelectImage();
+                    Guna2PictureBox pb = new Guna2PictureBox();
+                    if (InsertImage(pathImage, pb) != null)
                     {
-                        updateCV(path, uc_make.picAvatar, detailCVDAO, idCV, int.Parse(dr["idCandidate"].ToString()));
-                    }
-                    else
-                    {
-                        MessageBox.Show("Đã xảy ra lỗi");
+                        uc_make.picAvatar.Image = pb.Image;
                     }
 
                 };
@@ -517,30 +515,27 @@ namespace JobHub
                     uC_CV.pbSelectMainCV.Image = Properties.Resources.star__1_;
                     MessageBox.Show("Đặt thành công");
                 };
-                if (dr["CVAvatar"].ToString().Trim() == "")
+                if (dr["CVAvatar"]==DBNull.Value|| dr["CVAvatar"].ToString().Trim().Length==0)
                 {
                     uC_CV.picAvatarCV.Image = Resources.ưqd;
                 }
                 else
                 {
-                    string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["CVAvatar"].ToString().Trim());
-                    using (Image image = Image.FromFile(absoluteImagePath))
-                    {
-                        uC_CV.picAvatarCV.Image = new Bitmap(image);
-                    }
+                    Guna2PictureBox pb = new Guna2PictureBox();
+                    InsertImage(dr["CVAvatar"].ToString().Trim(), pb);
+                    uC_CV.picAvatarCV.Image = pb.Image;
                 }
 
-                if (dr["candidateAvatar"].ToString().Trim() == "")
+                if (dr["candidateAvatar"]==DBNull.Value|| dr["candidateAvatar"].ToString().Trim().Length == 0)
                 {
-                    picAvarta.Image = Resources.iconuser;
+                    picAvarta.Image = Resources.ưqd;
                 }
                 else
                 {
-                    string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["candidateAvatar"].ToString().Trim());
-                    using (Image image = Image.FromFile(absoluteImagePath))
-                    {
-                        picAvarta.Image = new Bitmap(image);
-                    }
+
+                    Guna2PictureBox pb = new Guna2PictureBox();
+                    InsertImage(dr["candidateAvatar"].ToString().Trim(), pb);
+                    picAvarta.Image = pb.Image;
                 }
                 uC_CV.OpenForm += (sender, e) =>
                 {
@@ -577,17 +572,15 @@ namespace JobHub
                         pnContailMenu.FillColor = Color.FromArgb(red, green, blue);
                     }
                 }
-                if (dr["CVAvatar"].ToString().Trim() == "")
+                if (dr["CVAvatar"]==DBNull.Value|| dr["CVAvatar"].ToString().Trim().Length==0)
                 {
-                    picAvatarCV.Image = Resources.iconuser;
+                    picAvatarCV.Image = Resources.ưqd;
                 }
                 else
                 {
-                    string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", dr["CVAvatar"].ToString().Trim());
-                    using (Image image = Image.FromFile(absoluteImagePath))
-                    {
-                        picAvatarCV.Image = new Bitmap(image);
-                    }
+                    Guna2PictureBox pb = new Guna2PictureBox();
+                    InsertImage(dr["CVAvatar"].ToString().Trim(), pb);
+                    picAvatarCV.Image = pb.Image;
                 }
                 string s = dr["CVDescription"].ToString().Trim();
                 if (s.Trim().Length > 0 && s[0] == '|' && s[1] == '!')

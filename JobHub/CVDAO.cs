@@ -59,6 +59,11 @@ namespace JobHub
             string sql = $@"delete from ImageCV where idCV = {idCV}";
             db.ExcuteNoMess(sql);
         }
+        public void DeleteCreateCV(int idCV)
+        {
+            string sql = $@"delete from CV where idCV = {idCV}";
+            db.ExcuteNoMess(sql);
+        }
         public SqlDataReader GetImageCV(int idCandidate)
         {
             string sql = $@"SELECT ImageCV.image, idCV, CVName, Candidate.idCandidate
@@ -67,6 +72,20 @@ namespace JobHub
                             where Candidate.idCandidate = {idCandidate}";
             return db.loadData(sql);
         }
-        
+        public void UpdateImageCandidate(string nameImage , int idCandidate)
+        {
+            string sql = $@"update Candidate set candidateAvatar = N'{nameImage}' where idCandidate ={idCandidate}";
+            db.ExcuteNoMess(sql);
+        }
+        public DataTable GetCreateCV(int idCandidate)
+        {
+            string sql = $@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, Candidate.candidateAvatar, CV.jobName, CV.CVAvatar, CV.idCV
+                            FROM Candidate
+                            INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
+                            where Candidate.idCandidate = {idCandidate}";
+            return db.ExcutionReadData(sql);
+        }
+
+
     }
 }

@@ -25,6 +25,7 @@ namespace JobHub
             uc_Evaluate uc = new uc_Evaluate();
             Candidate candidate = can.GetInfoCandidate(int.Parse(dr["idCandidate"].ToString()));
             uc.lblName.Text = candidate.FullName;
+            
             function.InsertImage(candidate.Avatar, uc.pbAvatar);
             uc.lblComment.Text = dr["description"].ToString();
             uc.rsJob.Value = int.Parse(dr["star"].ToString());

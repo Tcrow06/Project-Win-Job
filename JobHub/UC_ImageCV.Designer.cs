@@ -45,19 +45,20 @@
             this.lblCVName.AutoEllipsis = true;
             this.lblCVName.Font = new System.Drawing.Font("Segoe UI", 7F);
             this.lblCVName.ForeColor = System.Drawing.Color.Black;
-            this.lblCVName.Location = new System.Drawing.Point(2, 138);
-            this.lblCVName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCVName.Location = new System.Drawing.Point(3, 170);
             this.lblCVName.Name = "lblCVName";
-            this.lblCVName.Size = new System.Drawing.Size(83, 15);
+            this.lblCVName.Size = new System.Drawing.Size(111, 18);
             this.lblCVName.TabIndex = 5;
             this.lblCVName.Text = "Fullstack developer";
             // 
             // pbSelectMainCV
             // 
+            this.pbSelectMainCV.BackColor = System.Drawing.Color.Transparent;
             this.pbSelectMainCV.Image = global::JobHub.Properties.Resources.star;
-            this.pbSelectMainCV.Location = new System.Drawing.Point(113, 2);
+            this.pbSelectMainCV.Location = new System.Drawing.Point(151, 2);
+            this.pbSelectMainCV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbSelectMainCV.Name = "pbSelectMainCV";
-            this.pbSelectMainCV.Size = new System.Drawing.Size(20, 20);
+            this.pbSelectMainCV.Size = new System.Drawing.Size(27, 25);
             this.pbSelectMainCV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSelectMainCV.TabIndex = 17;
             this.pbSelectMainCV.TabStop = false;
@@ -66,10 +67,10 @@
             // 
             this.pbDeteleImage.Image = ((System.Drawing.Image)(resources.GetObject("pbDeteleImage.Image")));
             this.pbDeteleImage.ImageRotate = 0F;
-            this.pbDeteleImage.Location = new System.Drawing.Point(118, 137);
-            this.pbDeteleImage.Margin = new System.Windows.Forms.Padding(2);
+            this.pbDeteleImage.Location = new System.Drawing.Point(157, 169);
+            this.pbDeteleImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbDeteleImage.Name = "pbDeteleImage";
-            this.pbDeteleImage.Size = new System.Drawing.Size(14, 15);
+            this.pbDeteleImage.Size = new System.Drawing.Size(19, 18);
             this.pbDeteleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDeteleImage.TabIndex = 7;
             this.pbDeteleImage.TabStop = false;
@@ -79,10 +80,10 @@
             // 
             this.pbEditName.Image = ((System.Drawing.Image)(resources.GetObject("pbEditName.Image")));
             this.pbEditName.ImageRotate = 0F;
-            this.pbEditName.Location = new System.Drawing.Point(85, 139);
-            this.pbEditName.Margin = new System.Windows.Forms.Padding(2);
+            this.pbEditName.Location = new System.Drawing.Point(113, 171);
+            this.pbEditName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbEditName.Name = "pbEditName";
-            this.pbEditName.Size = new System.Drawing.Size(11, 12);
+            this.pbEditName.Size = new System.Drawing.Size(15, 15);
             this.pbEditName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbEditName.TabIndex = 6;
             this.pbEditName.TabStop = false;
@@ -95,9 +96,9 @@
             this.pbImage.Image = ((System.Drawing.Image)(resources.GetObject("pbImage.Image")));
             this.pbImage.ImageRotate = 0F;
             this.pbImage.Location = new System.Drawing.Point(0, 0);
-            this.pbImage.Margin = new System.Windows.Forms.Padding(2);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(138, 133);
+            this.pbImage.Size = new System.Drawing.Size(184, 163);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImage.TabIndex = 0;
             this.pbImage.TabStop = false;
@@ -105,16 +106,16 @@
             // 
             // UC_ImageCV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pbSelectMainCV);
             this.Controls.Add(this.pbDeteleImage);
             this.Controls.Add(this.pbEditName);
             this.Controls.Add(this.lblCVName);
             this.Controls.Add(this.pbImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 5);
             this.Name = "UC_ImageCV";
-            this.Size = new System.Drawing.Size(138, 158);
+            this.Size = new System.Drawing.Size(184, 194);
             ((System.ComponentModel.ISupportInitialize)(this.pbSelectMainCV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeteleImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditName)).EndInit();

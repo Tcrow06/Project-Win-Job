@@ -17,7 +17,8 @@ namespace JobHub
     {
         CVDAO CVDAO = new CVDAO();
         Function function = new Function(); 
-        private MyCV myCV = new MyCV(); 
+        private MyCV myCV = new MyCV();
+        
 
         private int idImageCV = -1;
         private int id = -1;
@@ -35,7 +36,7 @@ namespace JobHub
             this.Id = id;
         }
 
-        private DataTable LoadData(string cmd)
+/*        private DataTable LoadData(string cmd)
         {
             return CVDAO.ReadData(cmd);
             
@@ -44,19 +45,19 @@ namespace JobHub
         public void WriteData(DataTable dataTable,Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
         {
             CVDAO.WriteData(dataTable, pnContainCV, lblNameCandidate, picAvarta, pnContainImageCV);
-        }
-        public void LoadImage(DataRow dr)
+        }*/
+/*        public void LoadImage(DataRow dr)
         {
             myCV.InsertInfoIntoUC(dr["image"].ToString().Trim(), pnContainImageCV, 
                                         int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString()), pnContainCV);
-        }
-        public void WriteData(DataTable dataTable)
+        }*/
+/*        public void WriteData(DataTable dataTable)
         {
             foreach(DataRow dr in dataTable.Rows)
             {
                 LoadImage(dr);
             }
-        }
+        }*/
         private void FMyCV_Load(object sender, EventArgs e)
         {
             LoadForm(); 
@@ -65,25 +66,19 @@ namespace JobHub
         {
             if (this.Id != -1)
             {
-                DataTable dt = LoadData($@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, Candidate.candidateAvatar, CV.jobName, CV.CVAvatar, CV.idCV
-                            FROM Candidate
-                            INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
-                            where Candidate.idCandidate = {this.Id}");
-                WriteData(dt, lblNameCandidate, picAvarta);
+                myCV.LoadCreateCV(this, pnContainCV, lblNameCandidate, picAvatar, pnContainImageCV);
                 myCV.LoadImageCV(this.Id, pnContainImageCV, pnContainCV);
             }
         }
+        
 
         private void btnMakeCV_Click(object sender, EventArgs e)
         {
-            string cmd = $@"SELECT Candidate.idCandidate,Candidate.candidateFirstName, Candidate.candidateLastName, CV.jobName, CV.CVAvatar, CV.idCV
-                            FROM Candidate
-                            INNER JOIN CV ON CV.idCandidate = Candidate.idCandidate
-                            where Candidate.idCandidate = {this.Id}";
             FCreatCV make = new FCreatCV(this.Id);
             this.Hide();
             make.ShowDialog();
             this.Show();
+            LoadForm(); 
         }
 
         private void btnLoadPDFCV_Click(object sender, EventArgs e)
@@ -102,48 +97,17 @@ namespace JobHub
             }
 
         }
-
-        private void updateCV(string path)
-        {
-            try
-            {
-                string absoluteImagePath = Path.Combine(Application.StartupPath, "..\\..\\", path);
-                if (File.Exists(absoluteImagePath))
-                {
-                    Image img = Image.FromFile(absoluteImagePath);
-                    picAvarta.Image = img;
-                    string cmd_update = $@"update Candidate
-                                   set Candidate.candidateAvatar = N'{path}'
-                                   from Candidate
-                                   where Candidate.idCandidate = {this.Id}";
-                    CVDAO.Update(cmd_update);
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy tập tin ảnh.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-        }
-        private void SelectImageButton()
-        {
-
-            string path = CVDAO.SelectImageButton(Application.StartupPath, "Resources");
-            if (path != null)
-            {
-                updateCV(path);
-            }
-            else
-            {
-                MessageBox.Show("Đã xảy ra lỗi");
-            }
-        }
         private void picLoadImage_Click(object sender, EventArgs e)
         {
-            SelectImageButton();
+            string pathImage = function.SelectImage();
+            Guna2PictureBox pb = new Guna2PictureBox();
+            if (function.InsertImage(pathImage, pb) != null)
+            {
+                picAvatar.Image = pb.Image;
+                string nameImage = function.SaveImage(pathImage);
+                myCV.UpdateImageCandidate(nameImage, this.Id);
+            }
         }
+
     }
 }
