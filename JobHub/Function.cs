@@ -749,6 +749,10 @@ namespace JobHub
         
         public Image InsertImage(string imageName,Guna2PictureBox pb)
         {
+            if (imageName ==null|| imageName.Length == 0)
+            {
+                return null;
+            }
             try
             {
                 string imagePath = getPathImage(imageName.Trim());
@@ -784,6 +788,9 @@ namespace JobHub
         }
         public string SaveImage(string imagePath)
         {
+            if(imagePath==null || imagePath.Length == 0) {
+                return null;
+            }
             string imageFolder = Directory.GetParent(Application.StartupPath).Parent.FullName + "\\image";
             string nameImage = Path.GetFileName(imagePath);
             string destinationPath = GetUniqueFileName(imageFolder, nameImage);

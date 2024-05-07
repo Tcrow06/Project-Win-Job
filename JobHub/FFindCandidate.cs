@@ -37,15 +37,18 @@ namespace JobHub
                 int CVType = int.Parse(dr["CVType"].ToString());
                 int idCV = int.Parse(dr["idCV"].ToString());
                 DataTable dt1 = findCandidate.GetInfoCV(idCV, CVType);
-                DataRow dr1 = dt1.Rows[0];
-                uc_FollowCV uc = uc_FollowCV.InsertInfoAndEventIntoUcFollowCV(dr1, CVType);
-                uc.btnFollow.Text = "Theo dõi";
-                uc.btnFollowClick += (sender, e) =>
+                if(dt1.Rows.Count > 0)
                 {
-                    uc.FollowClick(uc.btnFollow.Text, fm.Account.Id, idCV, CVType);
-                    LoadUC_CV();
-                };
-                pnCV.Controls.Add(uc);
+                    DataRow dr1 = dt1.Rows[0];
+                    uc_FollowCV uc = uc_FollowCV.InsertInfoAndEventIntoUcFollowCV(dr1, CVType);
+                    uc.btnFollow.Text = "Theo dõi";
+                    uc.btnFollowClick += (sender, e) =>
+                    {
+                        uc.FollowClick(uc.btnFollow.Text, fm.Account.Id, idCV, CVType);
+                        LoadUC_CV();
+                    };
+                    pnCV.Controls.Add(uc);
+                }
             }
 
         }

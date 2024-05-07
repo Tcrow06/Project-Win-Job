@@ -153,6 +153,7 @@
             this.pbDeteleCV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDeteleCV.TabIndex = 19;
             this.pbDeteleCV.TabStop = false;
+            this.pbDeteleCV.Visible = false;
             this.pbDeteleCV.Click += new System.EventHandler(this.pbDeteleCV_Click);
             // 
             // uC_CV

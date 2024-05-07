@@ -118,6 +118,7 @@ namespace JobHub
                 lblNameCandidate.Text = dr["candidateFirstName"].ToString().Trim() + " " + dr["candidateLastName"].ToString().Trim();
 
                 uC_CV uC_CV = new uC_CV();
+                uC_CV.pbDeteleCV.Visible = true;
                 uC_CV.lblLastName.Text = dr["candidateFirstName"].ToString();
                 uC_CV.lblFirstName.Text = dr["candidateLastName"].ToString();
                 uC_CV.lblJobName.Text = dr["jobName"].ToString();

@@ -36,28 +36,6 @@ namespace JobHub
             this.Id = id;
         }
 
-/*        private DataTable LoadData(string cmd)
-        {
-            return CVDAO.ReadData(cmd);
-            
-        }
-
-        public void WriteData(DataTable dataTable,Label lblNameCandidate, Guna2CirclePictureBox picAvarta)
-        {
-            CVDAO.WriteData(dataTable, pnContainCV, lblNameCandidate, picAvarta, pnContainImageCV);
-        }*/
-/*        public void LoadImage(DataRow dr)
-        {
-            myCV.InsertInfoIntoUC(dr["image"].ToString().Trim(), pnContainImageCV, 
-                                        int.Parse(dr["idCV"].ToString().Trim()), dr["CVName"].ToString().Trim(), int.Parse(dr["idCandidate"].ToString()), pnContainCV);
-        }*/
-/*        public void WriteData(DataTable dataTable)
-        {
-            foreach(DataRow dr in dataTable.Rows)
-            {
-                LoadImage(dr);
-            }
-        }*/
         private void FMyCV_Load(object sender, EventArgs e)
         {
             LoadForm(); 
