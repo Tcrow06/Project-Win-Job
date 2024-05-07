@@ -115,6 +115,7 @@
             this.lblCompanyName.TabIndex = 6;
             this.lblCompanyName.TabStop = true;
             this.lblCompanyName.Text = "Công Ty TNHH1TV Thành Đạt";
+            this.lblCompanyName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCompanyName_LinkClicked);
             // 
             // guna2PictureBox5
             // 

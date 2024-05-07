@@ -109,6 +109,9 @@ namespace JobHub
             jd.Benefit = dr["jobBenefit"].ToString();
             jd.RegisterDead = Convert.ToDateTime(dr["jobRegisterDead"]).Date;
             jd.PostDate = Convert.ToDateTime(dr["jobPostDate"]).Date;
+            jd.MinSalary = (float)Convert.ToDouble(dr["jobMinSalary"]);
+            jd.MaxSalary = (float)Convert.ToDouble(dr["jobMaxSalary"]);
+            jd.Category = dr["jobField"].ToString();
             return jd;
         }
         public uc_JobDetail InsertInfoAndEventIntoUcJobDetail(SqlDataReader dr, Fmain fm)

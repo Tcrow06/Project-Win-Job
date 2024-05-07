@@ -137,6 +137,7 @@ namespace JobHub
             LoadCompanyDetail();
             pnDetail.BringToFront();
             LoadPanelImage();
+            btnDeletePic.Visible = true;
         }
 
         private void btnImageAdd_Click(object sender, EventArgs e)
@@ -168,6 +169,7 @@ namespace JobHub
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
+            btnDeletePic.Visible = false;
             pnImage.Visible = false;
             pnDetail.Visible = true;
             pnDetail.BringToFront();
@@ -176,6 +178,7 @@ namespace JobHub
 
         private void btnImage_Click(object sender, EventArgs e)
         {
+            btnDeletePic.Visible = true;
             pnDetail.Visible = false;
             pnImage.Visible = true;
             pnImage.BringToFront();
@@ -219,6 +222,25 @@ namespace JobHub
             catch
             {
                 MessageBox.Show("Lỗi không thể xóa ảnh này");
+            }
+        }
+
+        private void btnLoadPicture_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EditCompany fec = new EditCompany();
+                imagePath = function.SelectImage();
+                Image im = Image.FromFile(imagePath);
+                string nameImage = function.SaveImage(imagePath);
+                fec.Avatar = nameImage;
+                fec.ID = company.Id;
+                fec.AddAvatar();
+                FCompanyDetails2_Load(sender, e);
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi không thể chọn ảnh này");
             }
         }
     }

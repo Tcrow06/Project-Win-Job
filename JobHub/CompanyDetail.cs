@@ -111,6 +111,11 @@ namespace JobHub
             function.InsertImage(dr["companyAvatar"].ToString(), company.pbCompanyAvatar);
             company.lblNumofE.Text= dr["companySize"].ToString();
             company.lblCompanyAddress.Text= dr["companyAddress"].ToString();
+            company.loadCompanyClick += (sender, e) =>
+            {
+                company.LoadCompanyDetail(sender, e, company.IdCompany, fm);
+            };
+
             return company;
 /*
             company.lbl = dr["jobName"].ToString();
