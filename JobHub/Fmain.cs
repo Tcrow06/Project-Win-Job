@@ -585,7 +585,16 @@ namespace JobHub
 
         private void btnTopCompany_Click(object sender, EventArgs e)
         {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
 
+            }
+            FTopCompany topCompany = new FTopCompany();
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(topCompany);
+            forms.Push(fai);
+            this.loadForm(topCompany);
+            picDown_Click(sender, e);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)

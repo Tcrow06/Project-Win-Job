@@ -360,6 +360,8 @@
     <Compile Include="ReLoadFormCandidate.cs" />
     <Compile Include="ShowImage.cs" />
     <Compile Include="ShowImageDao.cs" />
+    <Compile Include="TopCompany.cs" />
+    <Compile Include="TopCompanyDAO.cs" />
     <Compile Include="Uc_ChoiceCV.cs">
       <SubType>UserControl</SubType>
     </Compile>

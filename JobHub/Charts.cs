@@ -209,6 +209,28 @@ namespace JobHub
             GenerateDataAndLabels_1();
         }
 
+        public void InitializeGunaChart(GunaChart gunaChart,string a, string b)
+        {
+            gunaLineDataset = new GunaLineDataset();
+            gunaLineDataset.Label = a;
+            gunaLineDataset.LegendBoxFillColor = Color.DodgerBlue;
+            gunaLineDataset.FillColor = Color.DodgerBlue;
+            gunaLineDataset.BorderColor = Color.DodgerBlue;
+            gunaLineDataset.YFormat = "Income {0:C}";
+
+            gunaBarDataset = new GunaBarDataset();
+            gunaBarDataset.Label = b;
+            gunaBarDataset.LegendBoxFillColor = Color.MediumSlateBlue;
+            gunaBarDataset.FillColors.Add(Color.MediumSlateBlue);
+            gunaBarDataset.FillColors.Add(Color.MediumPurple);
+            gunaBarDataset.YFormat = "C";
+
+            gunaChart.Datasets.Add(gunaLineDataset);
+            gunaChart.Datasets.Add(gunaBarDataset);
+
+            GenerateDataAndLabels_1();
+        }
+
         public void GenerateDataAndLabels_1()
         {
             string[] monthLabels = { "January", "February", "June", "July" };

@@ -12,9 +12,20 @@ namespace JobHub
 {
     public partial class FTopCompany : Form
     {
+        TopCompanyDAO TopCompanyDAO = new TopCompanyDAO();
+        Charts charts = new Charts();
         public FTopCompany()
         {
             InitializeComponent();
+        }
+
+        private void FTopCompany_Load(object sender, EventArgs e)
+        {
+            charts.InitializeGunaChart(gunaChart1, "CV", "Tháng");
+            charts.InitializeGunaChart(gunaChart2, "Doanh Thu", "Tháng");
+            charts.InitializeGunaChart(gunaChart3, "Đánh Giá", "Tháng");
+            DataTable dt = TopCompanyDAO.ReadData();
+            TopCompanyDAO.WriteData(dt, dgvCompany);
         }
     }
 }

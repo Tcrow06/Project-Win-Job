@@ -3,11 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="conn" Type="System.String" Scope="Application">
-<<<<<<< HEAD
-      <Value Profile="(Default)">Data Source=DESKTOP-742LD2D;Initial Catalog=JobWin;Integrated Security=True;Encrypt=False;Encrypt=False;MultipleActiveResultSets=True;</Value>
-=======
-      <Value Profile="(Default)">Data Source=TU;Initial Catalog=JobHub;Integrated Security=True;Encrypt=False;MultipleActiveResultSets=True;</Value>
->>>>>>> 07d58633f3a8301a2bce7631e74ed3454f76d3e7
+      <Value Profile="(Default)">Data Source=DESKTOP-742LD2D;Initial Catalog=JobWin;Integrated Security=True;Encrypt=False;MultipleActiveResultSets=True;</Value>
     </Setting>
   </Settings>
 </SettingsFile>
