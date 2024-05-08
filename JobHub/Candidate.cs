@@ -100,13 +100,18 @@ namespace JobHub
         {
             Candidate cd = new Candidate();
             SqlDataReader dr = cdd.GetInfoCandidate(idCandidate);
-            if (dr.Read())
+            try
             {
-                cd.LastName = dr["candidateLastName"].ToString();
-                cd.FirstName = dr["candidateFirstName"].ToString();
-                cd.FullName = cd.LastName + " " + cd.FirstName; 
-                cd.Avatar = dr["candidateAvatar"] != DBNull.Value && dr["candidateAvatar"].ToString().Length > 0 ? dr["candidateAvatar"].ToString() : "user.png";
+                if (dr.Read())
+                {
+                    cd.LastName = dr["candidateLastName"].ToString();
+                    cd.FirstName = dr["candidateFirstName"].ToString();
+                    cd.FullName = cd.LastName + " " + cd.FirstName;
+                    cd.Avatar = dr["candidateAvatar"] != DBNull.Value && dr["candidateAvatar"].ToString().Length > 0 ? dr["candidateAvatar"].ToString() : "user.png";
+                    cd.Email = dr["candidateEmail"].ToString();
+                }
             }
+            catch { }
             return cd;
         }
         public bool CheckAllNotNull()

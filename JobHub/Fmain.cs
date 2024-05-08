@@ -53,7 +53,6 @@ namespace JobHub
             DeleteChildForm();
             this.Height = 550;
             FMainCompany view = new FMainCompany();
-            //MessageBox.Show(view.Name);
             this.loadForm(view);
         }
         private void FirstLoadLoginOrLoginOut()
@@ -404,13 +403,20 @@ namespace JobHub
             else if (form.Name == "FMainCompany")
             {
                 resize(1085, 575);
+            }else if(form.Name == "FPostJob")
+            {
+                resize(850, 500);
             }
-            
+            try
+            {
+                form.Dock = DockStyle.Fill;
+                form.Show();
+                form.BringToFront();
+            }
+            catch
+            {
 
-
-            form.Dock = DockStyle.Fill;
-            form.Show();
-            form.BringToFront();
+            }
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -430,16 +436,30 @@ namespace JobHub
                 Forms.Pop();
                 
                 FormAndInfoCandidate form = reLoadForm.ReLoadBack(this);
-                /*MessageBox.Show(form.Form.Name);*/
                 this.loadForm(form.Form);
                 
 
             }
-            else
+            else if(this.Account!=null)
             {
+                if (this.Account.Type == 0)
+                {
                     FCharts fv = new FCharts(this);
                     Forms.Clear();
                     this.loadForm(fv);
+                }
+                else
+                {
+                    FMainCompany fmc = new FMainCompany();
+                    Forms.Clear();
+                    this.loadForm(fmc);
+                }
+            }
+            else
+            {
+                FCharts fv = new FCharts(this);
+                Forms.Clear();
+                this.loadForm(fv);
             }
 
         }
@@ -487,13 +507,19 @@ namespace JobHub
 
         private void btnPostJob_Click(object sender, EventArgs e)
         {
-            this.DeleteChildForm();   
+/*            this.DeleteChildForm();   
             FPostJob jsh = new FPostJob(this);
             jsh.MdiParent = this;
-            resize(jsh.Width + 200, jsh.Height + 50);
+            resize(jsh.Width + 200, jsh.Height + 110);
+            //MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
             jsh.Dock = DockStyle.Fill;
             jsh.Show();
-            jsh.BringToFront();
+            jsh.BringToFront();*/
+
+            FPostJob job = new FPostJob(this);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            forms.Push(fai);
+            this.loadForm(job);
         }
 
         private void FindJob_Click(object sender, EventArgs e)
@@ -511,16 +537,18 @@ namespace JobHub
 
         private void btnFavouriteCV_Click(object sender, EventArgs e)
         {
-            foreach (Form formdelete in this.MdiChildren)
+/*            foreach (Form formdelete in this.MdiChildren)
             {
                 formdelete.Close();
 
-            }
+            }*/
             FFollowedCV fcv = new FFollowedCV(this);
             
             FormAndInfoCandidate fai = new FormAndInfoCandidate(fcv);
             forms.Push(fai);
             this.loadForm(fai.Form);
+            resize(959, 567);
+            
         }
 
         private void btnOut_Click(object sender, EventArgs e)
@@ -560,13 +588,11 @@ namespace JobHub
 
         private void btnCvCad_Click(object sender, EventArgs e)
         {
-            this.DeleteChildForm();
-            FBestApply fBest = new FBestApply(this);
-            fBest.MdiParent = this;
-            fBest.Dock = DockStyle.Fill;
-            resize(fBest.Width + 200, fBest.Height + 50);
-            fBest.Show();
-            fBest.BringToFront();
+            FBestApply job = new FBestApply(this);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            forms.Push(fai);
+            this.loadForm(job);
+            resize(1140,590);
         }
 
         private void btnJobMenu_Click(object sender, EventArgs e)

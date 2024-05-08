@@ -37,6 +37,7 @@ namespace JobHub
                     {
 
                     };
+                    
                     pn.Controls.Add(job);
                 }
                 dr.Dispose();

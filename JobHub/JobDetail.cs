@@ -139,13 +139,33 @@ namespace JobHub
 
             if (fm.Account != null)
             {
+                /*job.btnApply.Visible = false;*/
                 if (candidate.CheckApplyStatus(job.IdJob, fm.Account.Id))
                 {
                     job.btnApply.Text = "Hủy ứng tuyển";
                     job.btnApply.Width += 30;
                     job.btnApply.Location = new Point(job.btnApply.Location.X - 30, job.btnApply.Location.Y);
+
+                    try
+                    {
+                        int state = int.Parse(dr["State"].ToString());
+                        if (state == 1)
+                        {
+                            job.lblState.Visible = true;
+                            job.lblState.Text = "Đã xác nhận";
+                        }
+                        else if (state == -1) 
+                        {
+                            job.lblState.Visible = true;
+                            job.lblState.Text = "Đã bị loại";
+                        }
+                    }
+                    catch
+                    {
+
+                    }
                 }
-                
+
             }
             
             return job;

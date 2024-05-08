@@ -27,7 +27,15 @@ namespace JobHub
             {
                 return form;
             }
-            return new FormAndInfoCandidate(new FCharts(fm),-1, -1);
+
+            if(fm.Account!= null)
+            {
+                if (fm.Account.Type == 0)
+                    return new FormAndInfoCandidate(new FCharts(fm), -1, -1);
+                else
+                    return new FormAndInfoCandidate(new FMainCompany(), -1, -1);
+            }
+            return new FormAndInfoCandidate(new FCharts(fm), -1, -1);
         }
         public FormAndInfoCandidate ReLoadLogin(Fmain fm)
         {

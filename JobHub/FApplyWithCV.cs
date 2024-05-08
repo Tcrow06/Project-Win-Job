@@ -26,6 +26,7 @@ namespace JobHub
         private int heightPanel1;
         Uc_ChoiceCV uc;
         private string pathImage;
+        private int CVTypeApply = 0;
 
 
         public int HeightPanel1 { get => heightPanel1; set => heightPanel1 = value; }
@@ -149,10 +150,12 @@ namespace JobHub
             if(CVType == 1)
             {
                 lblSelectName.Text = "CV đã tải lên: ";
+                CVTypeApply = 1;
             }
             else
             {
                 lblSelectName.Text = "CV online: ";
+                CVTypeApply= 0;
             }
             uc.lblCVName.Font = new Font("Segoe UI", 9, FontStyle.Bold);
             Size textSize = TextRenderer.MeasureText(lblSelectName.Text, lblSelectName.Font);
@@ -166,7 +169,7 @@ namespace JobHub
         {
            if(rbChoiceCV1.Checked == true && idCV != -1)
            {
-                awc.Apply(idJob, idCV, fm, 0);
+                awc.Apply(idJob, idCV, fm, CVTypeApply);
                 this.Dispose();
                     
            }

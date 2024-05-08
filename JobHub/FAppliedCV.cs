@@ -59,11 +59,18 @@ namespace JobHub
                             LoadAppliedJob();
                         }
                     };
-                    if (int.Parse(dr["State"].ToString()) == 1)
+                    int state = int.Parse(dr["State"].ToString());
+                    if ( state== 1)
                     {
                         job.lblState.Visible = true;
                         job.lblState.Text = "Đã xác nhận";
                     }
+                    else if(state== -1)
+                    {
+                        job.lblState.Visible = true;
+                        job.lblState.Text = "Đã bị loại";
+                    }
+                    
                     flpnAppliedCV.Controls.Add(job);
                 }
                 dr.Dispose();

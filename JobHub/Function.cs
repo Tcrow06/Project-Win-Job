@@ -20,6 +20,7 @@ namespace JobHub
     internal class Function
     {
         DBConection conection = new DBConection();
+        Candidate can = new Candidate();
         public void Insert(string cmd)
         {
             conection.ExcutionInsertData(cmd);
@@ -419,39 +420,89 @@ namespace JobHub
 
         public void AddEvent(int idJob, int idComapny, FlowLayoutPanel contain)
         {
-            string cmd = $@"select * froM AppliedCV join CV on AppliedCV.idCV = cv.idCV where AppliedCV.idJob = {idJob}";
+            contain.Controls.Clear();   
+            string cmd = $@"select * froM AppliedCV where AppliedCV.idJob = {idJob}";
             DataTable dt_1 = conection.ExcutionReadData(cmd);
-            uC_SubCV uc_Follow = new uC_SubCV();
-            uc_Follow.btnName.Text = "Lê Trường Sơn";
-            uc_Follow.btnAcess.Click += (sender, e) =>
+            foreach(DataRow dr in dt_1.Rows)
             {
-                int count = 0;
-                string cmd_read = $@"select Company.quantityCVAccess
-                                     from Company
-                                     where Company.idCompany = {idComapny}";
-                DataTable dt = conection.ExcutionReadData(cmd_read);
-                if (dt.Rows[0][0].ToString() != null && dt.Rows[0][0].ToString() != "")
+                uC_SubCV uc_Follow = new uC_SubCV();
+                Candidate candidate = can.GetInfoCandidate(int.Parse(dr["idCandidate"].ToString()));
+                uc_Follow.btnName.Text = candidate.FullName;
+                uc_Follow.btnEmail.Text = candidate.Email;
+                int idCV = int.Parse(dr["idCV"].ToString());    
+                DataTable dtInfoCV;
+                string sqlInfoCV = "";
+                int CVType = int.Parse(dr["CVType"].ToString().Trim());
+                if (CVType ==0)
                 {
-                    count = int.Parse(dt.Rows[0][0].ToString());
+                    sqlInfoCV  = $@"select*from CV where idCV={idCV}";
+                    
                 }
-                string cmd_1 = $@"UPDATE Company
-                                SET quantityCVAccess = {count + 1}
-                                WHERE idCompany = '{idComapny}'";
+                else
+                {
+                    sqlInfoCV = $@"select*from ImageCV where idCV={idCV}";
+                }
+                dtInfoCV = conection.ExcutionReadData(sqlInfoCV);
+
+                int idCandidate = int.Parse(dtInfoCV.Rows[0]["idCandidate"].ToString());
+                uc_Follow.btnJob.Text = dtInfoCV.Rows[0]["CVName"].ToString();
+                if (dr["State"].ToString()=="0")
+                {
+                    
+                    uc_Follow.btnAcess.Click += (sender, e) =>
+                    {
+                        string cmd_2 = $@"update AppliedCV set AppliedCV.State = 1 where idCandidate ={idCandidate}  and idJob = {idJob}";
+                        conection.ExcuteNoMess(cmd_2);
+                        uc_Follow.btnAcess.Text = "Đã xác nhận";
+                        uc_Follow.btnAcess.Width += 50;
+                        uc_Follow.btnRemove.Visible = false;
+                    };
+                    uc_Follow.btnRemove.Click += (sender, e) =>
+                    {
+                        string cmd_2 = $@"update AppliedCV set AppliedCV.State = -1 where idCandidate = {idCandidate}  and idJob = {idJob}";
+                        conection.ExcuteNoMess(cmd_2);
+                        uc_Follow.btnRemove.Text = "Đã loại";
+                        uc_Follow.btnRemove.Width += 50;
+                        uc_Follow.btnAcess.Visible = false;
+                    };
+                }
+                else if(dr["State"].ToString() == "1")
+                {
+                    uc_Follow.btnAcess.Text = "Đã xác nhận";
+                    uc_Follow.btnAcess.Width += 50;
+                    uc_Follow.btnRemove.Visible = false;
+                }
+                else
+                {
+                    uc_Follow.btnRemove.Text = "Đã loại";
+                    uc_Follow.btnRemove.Width += 50;
+                    uc_Follow.btnAcess.Visible = false;
+                }
 
 
-                string cmd_2 = $@"update AppliedCV set AppliedCV.State = 1 where idCandidate = 1 and idJob = 2";
+                uc_Follow.uc_click += (sender, e) =>
+                {
+                    FormHandler handler = new FormHandler();
+                    if (CVType == 0)
+                    {
+                        handler.OpenNewForm(idCandidate, idCV);
+                    }
+                    else
+                    {
+                        handler.OpenImage(idCV);
+                    }
+                };
 
-                conection.ExcutionUpdateDate(cmd_1);
-                conection.ExcutionUpdateDate(cmd_2);
-                uc_Follow.btnAcess.Text = "Đã xác nhận";
-            };
-            contain.Controls.Clear();
-            contain.Controls.Add(uc_Follow);
+
+                contain.Controls.Add(uc_Follow);
+            }
+            
         }
 
      
         public void LoadJob(DataTable dt, FlowLayoutPanel fpnJob, FlowLayoutPanel fpnContainCV)
         {
+            fpnJob.Controls.Clear();    
             foreach(DataRow dr in dt.Rows)
             {
                 uC_Job job = new uC_Job();
