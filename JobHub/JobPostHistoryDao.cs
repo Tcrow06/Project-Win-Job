@@ -21,7 +21,6 @@ namespace JobHub
         }
         public void DeleteJob(int idJob)
         {
-            MessageBox.Show("co");
             string query = string.Format($"delete Job where Job.idJob = {idJob}");
             db.ThucThi(query );
         }

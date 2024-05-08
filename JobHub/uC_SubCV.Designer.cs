@@ -44,11 +44,11 @@
             this.btnJob = new Guna.UI2.WinForms.Guna2Button();
             this.btnEmail = new Guna.UI2.WinForms.Guna2Button();
             this.btnName = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pnContainCV.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnContainCV
@@ -238,7 +238,7 @@
             this.guna2Panel2.Controls.Add(this.btnJob);
             this.guna2Panel2.Controls.Add(this.btnEmail);
             this.guna2Panel2.Controls.Add(this.btnName);
-            this.guna2Panel2.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel2.Controls.Add(this.pbAvatar);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -309,18 +309,18 @@
             this.btnName.Text = "Lê Trường Sơn";
             this.btnName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2CirclePictureBox1
+            // pbAvatar
             // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 10);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(90, 90);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
+            this.pbAvatar.ImageRotate = 0F;
+            this.pbAvatar.Location = new System.Drawing.Point(7, 10);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(4);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbAvatar.Size = new System.Drawing.Size(90, 90);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
             // 
             // label8
             // 
@@ -347,7 +347,7 @@
             this.pnContainCV.ResumeLayout(false);
             this.pnContainCV.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,7 +355,7 @@
         #endregion
 
         public Guna.UI2.WinForms.Guna2Panel pnContainCV;
-        public Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pbAvatar;
         public System.Windows.Forms.Label label8;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         public Guna.UI2.WinForms.Guna2Button btnJob;

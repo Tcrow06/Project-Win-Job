@@ -443,7 +443,12 @@ namespace JobHub
                     sqlInfoCV = $@"select*from ImageCV where idCV={idCV}";
                 }
                 dtInfoCV = conection.ExcutionReadData(sqlInfoCV);
-
+                if(CVType == 0)
+                {
+                    Guna2PictureBox im = new Guna2PictureBox();
+                    InsertImage(dtInfoCV.Rows[0]["CVAvatar"].ToString(), im );
+                    uc_Follow.pbAvatar.Image = im.Image;
+                }
                 int idCandidate = int.Parse(dtInfoCV.Rows[0]["idCandidate"].ToString());
                 uc_Follow.btnJob.Text = dtInfoCV.Rows[0]["CVName"].ToString();
                 if (dr["State"].ToString()=="0")

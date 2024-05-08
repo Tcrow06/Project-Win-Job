@@ -616,10 +616,12 @@ namespace JobHub
                 formdelete.Close();
 
             }
-            FTopCompany topCompany = new FTopCompany();
+            FTopCompany topCompany = new FTopCompany(this);
             FormAndInfoCandidate fai = new FormAndInfoCandidate(topCompany);
             forms.Push(fai);
             this.loadForm(topCompany);
+            resize(1200, 525);
+            //MessageBox.Show(this.Width.ToString()+" " + this.Height.ToString());
             picDown_Click(sender, e);
         }
 

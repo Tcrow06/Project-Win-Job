@@ -15,7 +15,7 @@ namespace JobHub
         {
             string cmd = $@"Select Company.idCompany, Company.companySize, Company.companyName ,CompanyEvaluate.star
                             from Company
-                            inner join CompanyEvaluate on CompanyEvaluate.idCompany = Company.idCompany";
+                            inner join CompanyEvaluate on CompanyEvaluate.idCompany = Company.idCompany ";
             return func.ReadData(cmd);
         }
 

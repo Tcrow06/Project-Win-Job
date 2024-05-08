@@ -102,25 +102,28 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1018, 126);
+            this.guna2Panel1.Size = new System.Drawing.Size(1357, 155);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.Controls.Add(this.gunaChart3);
-            this.guna2Panel4.Location = new System.Drawing.Point(721, 3);
+            this.guna2Panel4.Location = new System.Drawing.Point(961, 4);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(293, 120);
+            this.guna2Panel4.Size = new System.Drawing.Size(391, 148);
             this.guna2Panel4.TabIndex = 1;
             // 
             // gunaChart3
             // 
             chartFont1.FontName = "Arial";
             this.gunaChart3.Legend.LabelFont = chartFont1;
-            this.gunaChart3.Location = new System.Drawing.Point(4, 1);
+            this.gunaChart3.Location = new System.Drawing.Point(5, 1);
+            this.gunaChart3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaChart3.Name = "gunaChart3";
-            this.gunaChart3.Size = new System.Drawing.Size(284, 117);
+            this.gunaChart3.Size = new System.Drawing.Size(379, 144);
             this.gunaChart3.TabIndex = 2;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -151,18 +154,20 @@
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.gunaChart2);
-            this.guna2Panel3.Location = new System.Drawing.Point(362, 3);
+            this.guna2Panel3.Location = new System.Drawing.Point(483, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(293, 120);
+            this.guna2Panel3.Size = new System.Drawing.Size(391, 148);
             this.guna2Panel3.TabIndex = 1;
             // 
             // gunaChart2
             // 
             chartFont9.FontName = "Arial";
             this.gunaChart2.Legend.LabelFont = chartFont9;
-            this.gunaChart2.Location = new System.Drawing.Point(5, 0);
+            this.gunaChart2.Location = new System.Drawing.Point(7, 0);
+            this.gunaChart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaChart2.Name = "gunaChart2";
-            this.gunaChart2.Size = new System.Drawing.Size(284, 117);
+            this.gunaChart2.Size = new System.Drawing.Size(379, 144);
             this.gunaChart2.TabIndex = 1;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 12;
@@ -193,18 +198,20 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.gunaChart1);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel2.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(293, 120);
+            this.guna2Panel2.Size = new System.Drawing.Size(391, 148);
             this.guna2Panel2.TabIndex = 0;
             // 
             // gunaChart1
             // 
             chartFont17.FontName = "Arial";
             this.gunaChart1.Legend.LabelFont = chartFont17;
-            this.gunaChart1.Location = new System.Drawing.Point(4, 4);
+            this.gunaChart1.Location = new System.Drawing.Point(5, 5);
+            this.gunaChart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(286, 112);
+            this.gunaChart1.Size = new System.Drawing.Size(381, 138);
             this.gunaChart1.TabIndex = 0;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
@@ -237,9 +244,10 @@
             this.guna2Panel5.BackColor = System.Drawing.Color.White;
             this.guna2Panel5.Controls.Add(this.dgvCompany);
             this.guna2Panel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel5.Location = new System.Drawing.Point(3, 133);
+            this.guna2Panel5.Location = new System.Drawing.Point(4, 164);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(1011, 351);
+            this.guna2Panel5.Size = new System.Drawing.Size(1348, 432);
             this.guna2Panel5.TabIndex = 1;
             // 
             // dgvCompany
@@ -271,9 +279,11 @@
             this.dgvCompany.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCompany.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCompany.Location = new System.Drawing.Point(0, 0);
+            this.dgvCompany.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCompany.Name = "dgvCompany";
             this.dgvCompany.RowHeadersVisible = false;
-            this.dgvCompany.Size = new System.Drawing.Size(1011, 351);
+            this.dgvCompany.RowHeadersWidth = 51;
+            this.dgvCompany.Size = new System.Drawing.Size(1348, 432);
             this.dgvCompany.TabIndex = 0;
             this.dgvCompany.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCompany.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -296,15 +306,17 @@
             this.dgvCompany.ThemeStyle.RowsStyle.Height = 22;
             this.dgvCompany.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCompany.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvCompany.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompany_CellClick);
             // 
             // FTopCompany
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 496);
+            this.ClientSize = new System.Drawing.Size(1357, 610);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FTopCompany";
             this.Text = "FTopCompany";
             this.Load += new System.EventHandler(this.FTopCompany_Load);
