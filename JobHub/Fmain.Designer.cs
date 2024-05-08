@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.pnControlBox = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +45,6 @@
             this.btnAppliedJob = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCV = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCvGuide = new Guna.UI2.WinForms.Guna2Button();
             this.btnMyCV = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCompany = new Guna.UI2.WinForms.Guna2Button();
@@ -81,7 +80,6 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav20 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCV1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
@@ -336,13 +334,12 @@
             // 
             this.pnSubNav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
             this.pnSubNav2.Controls.Add(this.btnCV);
-            this.pnSubNav2.Controls.Add(this.btnCvGuide);
             this.pnSubNav2.Controls.Add(this.btnMyCV);
             this.guna2Transition1.SetDecoration(this.pnSubNav2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnSubNav2.Location = new System.Drawing.Point(3, 169);
             this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav2.Name = "pnSubNav2";
-            this.pnSubNav2.Size = new System.Drawing.Size(228, 126);
+            this.pnSubNav2.Size = new System.Drawing.Size(228, 91);
             this.pnSubNav2.TabIndex = 5;
             // 
             // btnCV
@@ -372,34 +369,6 @@
             this.btnCV.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCV.Click += new System.EventHandler(this.btnCV_Click);
             // 
-            // btnCvGuide
-            // 
-            this.btnCvGuide.BackColor = System.Drawing.Color.Transparent;
-            this.btnCvGuide.BorderRadius = 8;
-            this.btnCvGuide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnCvGuide, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnCvGuide.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCvGuide.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCvGuide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCvGuide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCvGuide.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
-            this.btnCvGuide.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCvGuide.ForeColor = System.Drawing.Color.White;
-            this.btnCvGuide.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnCvGuide.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnCvGuide.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnCvGuide.Image = ((System.Drawing.Image)(resources.GetObject("btnCvGuide.Image")));
-            this.btnCvGuide.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCvGuide.Location = new System.Drawing.Point(3, 42);
-            this.btnCvGuide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCvGuide.Name = "btnCvGuide";
-            this.btnCvGuide.Size = new System.Drawing.Size(224, 36);
-            this.btnCvGuide.TabIndex = 6;
-            this.btnCvGuide.Text = "Cv Guide";
-            this.btnCvGuide.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCvGuide.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnCvGuide.Click += new System.EventHandler(this.btnCvGuide_Click);
-            // 
             // btnMyCV
             // 
             this.btnMyCV.BackColor = System.Drawing.Color.Transparent;
@@ -418,7 +387,7 @@
             this.btnMyCV.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
             this.btnMyCV.Image = ((System.Drawing.Image)(resources.GetObject("btnMyCV.Image")));
             this.btnMyCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMyCV.Location = new System.Drawing.Point(3, 82);
+            this.btnMyCV.Location = new System.Drawing.Point(3, 42);
             this.btnMyCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMyCV.Name = "btnMyCV";
             this.btnMyCV.Size = new System.Drawing.Size(224, 36);
@@ -435,7 +404,7 @@
             this.pnSubNav3.Controls.Add(this.btnListCompany);
             this.pnSubNav3.Controls.Add(this.btnTopCompany);
             this.guna2Transition1.SetDecoration(this.pnSubNav3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav3.Location = new System.Drawing.Point(3, 297);
+            this.pnSubNav3.Location = new System.Drawing.Point(3, 262);
             this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav3.Name = "pnSubNav3";
             this.pnSubNav3.Size = new System.Drawing.Size(228, 126);
@@ -543,7 +512,7 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogin.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnLogin.Location = new System.Drawing.Point(3, 435);
+            this.btnLogin.Location = new System.Drawing.Point(3, 400);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(228, 36);
@@ -571,7 +540,7 @@
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBack.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnBack.Location = new System.Drawing.Point(3, 485);
+            this.btnBack.Location = new System.Drawing.Point(3, 450);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(228, 36);
@@ -773,6 +742,7 @@
             this.guna2Button4.Text = "Danh sách công...";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.TextOffset = new System.Drawing.Point(30, 0);
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // pnSubNav31
             // 
@@ -1145,12 +1115,11 @@
             // 
             this.pnSubNav20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
             this.pnSubNav20.Controls.Add(this.btnCV1);
-            this.pnSubNav20.Controls.Add(this.guna2Button8);
             this.guna2Transition1.SetDecoration(this.pnSubNav20, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnSubNav20.Location = new System.Drawing.Point(839, 127);
             this.pnSubNav20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav20.Name = "pnSubNav20";
-            this.pnSubNav20.Size = new System.Drawing.Size(228, 84);
+            this.pnSubNav20.Size = new System.Drawing.Size(228, 43);
             this.pnSubNav20.TabIndex = 8;
             // 
             // btnCV1
@@ -1180,54 +1149,26 @@
             this.btnCV1.TextOffset = new System.Drawing.Point(30, 0);
             this.btnCV1.Click += new System.EventHandler(this.btnCV1_Click);
             // 
-            // guna2Button8
-            // 
-            this.guna2Button8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.BorderRadius = 8;
-            this.guna2Button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2Button8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button8.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button8.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
-            this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.Location = new System.Drawing.Point(3, 42);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(224, 36);
-            this.guna2Button8.TabIndex = 6;
-            this.guna2Button8.Text = "Cv Guide";
-            this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.TextOffset = new System.Drawing.Point(30, 0);
-            this.guna2Button8.Click += new System.EventHandler(this.btnCvGuide_Click);
-            // 
             // guna2Transition1
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation3;
             // 
             // guna2BorderlessForm1
             // 
@@ -1318,7 +1259,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTopCompany;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav2;
         private Guna.UI2.WinForms.Guna2Button btnCV;
-        private Guna.UI2.WinForms.Guna2Button btnCvGuide;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Button btnAppliedJob;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav11;
@@ -1347,7 +1287,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private System.Windows.Forms.FlowLayoutPanel pnSubNav20;
         private Guna.UI2.WinForms.Guna2Button btnCV1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button btnMyCV;
         private Guna.UI2.WinForms.Guna2Panel pnAcount;
         private Guna.UI2.WinForms.Guna2Panel pnContainMenu;

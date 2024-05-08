@@ -137,7 +137,7 @@ namespace JobHub
             LoadCompanyDetail();
             pnDetail.BringToFront();
             LoadPanelImage();
-            btnDeletePic.Visible = true;
+            btnDeletePic.Visible = false;
         }
 
         private void btnImageAdd_Click(object sender, EventArgs e)
