@@ -108,7 +108,7 @@ namespace JobHub
         private void LoadPanelImage()
         {
 
-            if (listCompanyImage != null)
+            if (listCompanyImage != null )
             {
                 LoadImageIntoPictureBox(pbCompanyInfo, 0);
                 pnImage.Location = pnDetail.Location;
@@ -125,11 +125,19 @@ namespace JobHub
             }
         }
 
+        private void LoadPanelEdit()
+        {
+            panelEditCompany.Location = pnDetail.Location;
+        }
+
 
         private void btnCompanyyAccountRegister_Click(object sender, EventArgs e)
         {
-            FEditCompany fec = new FEditCompany(fm);
-            fec.Show();
+            btnDeletePic.Visible = false;
+            pnImage.Visible = false;
+            panelEditCompany.Visible = true;
+            pnDetail.Visible = false;
+            panelEditCompany.BringToFront();
         }
 
         private void FCompanyDetails2_Load(object sender, EventArgs e)
@@ -137,11 +145,17 @@ namespace JobHub
             LoadCompanyDetail();
             pnDetail.BringToFront();
             LoadPanelImage();
+            LoadPanelEdit();
+            lblImage.Visible = false;
+            pbNext.Visible = false;
+            pbBack.Visible = false;
+            pnImage.Visible = false;
             btnDeletePic.Visible = false;
         }
 
         private void btnImageAdd_Click(object sender, EventArgs e)
         {
+
             try
             {
                 EditCompany fec = new EditCompany();
@@ -151,15 +165,18 @@ namespace JobHub
                 fec.ListCompanyImage = nameImage;
                 fec.ID = company.Id;
 
-                if (listCompanyImage.Count == 0)
+                if (listCompanyImage == null)
                 {
                     fec.AddImagePath();
                 }
-                else
+                else if (listCompanyImage.Count != 0)
                 {
                     fec.AddOtherImagePath();
                 }
-                FCompanyDetails2_Load(sender, e);
+                company = companyDetail.GetInfoCompanyDetail(company.Id);
+
+                listCompanyImage = company.ListCompanyImage;
+                LoadPanelImage();
             }
             catch
             {
@@ -171,18 +188,22 @@ namespace JobHub
         {
             btnDeletePic.Visible = false;
             pnImage.Visible = false;
+            panelEditCompany.Visible = false;
             pnDetail.Visible = true;
             pnDetail.BringToFront();
-            LoadCompanyDetail();
         }
 
         private void btnImage_Click(object sender, EventArgs e)
         {
             btnDeletePic.Visible = true;
             pnDetail.Visible = false;
+            panelEditCompany.Visible = false;
+            pnImage.Visible = true;
+            lblImage.Visible = true;
+            pbNext.Visible = true;
+            pbBack.Visible = true;
             pnImage.Visible = true;
             pnImage.BringToFront();
-            LoadCompanyDetail();
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -208,16 +229,29 @@ namespace JobHub
                 EditCompany fec = new EditCompany();
                 fec.ID = company.Id;
                 fec.ListCompanyImage = listCompanyImage[indexImage].Trim();
-                if(indexImage==0)
+                if (listCompanyImage.Count == 1)
+                {
+                    fec.DeleteOnlyImage();
+                    listCompanyImage = null;
+                    LoadPanelImage();
+                }
+                else if (indexImage == 0)
                 {
                     fec.DeleteImage();
+                    company = companyDetail.GetInfoCompanyDetail(company.Id);
+                    listCompanyImage = company.ListCompanyImage;
+                    LoadPanelImage();
                 }
-                else
+                else if (indexImage != 0)
                 {
                     fec.DeleteOtherImage();
+                    company = companyDetail.GetInfoCompanyDetail(company.Id);
+                    listCompanyImage = company.ListCompanyImage;
+                    LoadPanelImage();
                 }
-                FCompanyDetails2_Load(sender, e);
-                
+
+                btnDeletePic.Visible = true;
+
             }
             catch
             {
@@ -242,6 +276,34 @@ namespace JobHub
             {
                 MessageBox.Show("Lỗi không thể chọn ảnh này");
             }
+        }
+
+        private void btnEditCompany_Click(object sender, EventArgs e)
+        {
+            btnDeletePic.Visible = false;
+            pnImage.Visible = false;
+            panelEditCompany.Visible = true;
+            pnDetail.Visible = false;
+            panelEditCompany.BringToFront();
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            EditCompany ec = new EditCompany(company.Id, txtPhone.Text, txtWeb.Text, txtCompanySize.Text, txtDescription.Text);
+            try
+            {
+                ec.AddCompany();
+            }
+            catch
+            {
+                MessageBox.Show("Gặp lỗi bất ngờ");
+            }
+            finally
+            {
+                MessageBox.Show("Update thông tin thành công", "Thành công");
+
+            }
+            FCompanyDetails2_Load(sender,e);
         }
     }
 }

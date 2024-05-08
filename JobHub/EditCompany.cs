@@ -74,6 +74,12 @@ namespace JobHub
             editcompanyDAO.DeleteOtherImage(this);
             MessageBox.Show("Xóa ảnh thành công");
         }
+
+        public void DeleteOnlyImage()
+        {
+            editcompanyDAO.DeleteOnlyImage(this);
+            MessageBox.Show("Xóa ảnh thành công");
+        }
     }
 
 }

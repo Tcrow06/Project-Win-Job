@@ -41,9 +41,11 @@ namespace JobHub
             finally
             {
                 MessageBox.Show("Update thông tin thành công", "Thành công");
-                FCompanyDetails2 fcd2 = new FCompanyDetails2();
+                
 
             }
+            FCompanyDetails2 fcd2 = new FCompanyDetails2();
+            fcd2.LoadCompanyDetail();
         }
     }
 }

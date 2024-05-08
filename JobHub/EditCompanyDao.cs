@@ -60,6 +60,15 @@ namespace JobHub
             db.ExcuteNoMess(sql);
         }
 
+        public void DeleteOnlyImage(EditCompany company)
+        {
+            string sql = $@"UPDATE Company
+                            SET companyImagePath=REPLACE(companyImagePath,N'{company.ListCompanyImage}',N'')
+                                WHERE idCompany={company.ID} ";
+
+            db.ExcuteNoMess(sql);
+        }
+
 
     }
 }
