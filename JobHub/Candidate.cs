@@ -110,6 +110,7 @@ namespace JobHub
                     cd.Avatar = dr["candidateAvatar"] != DBNull.Value && dr["candidateAvatar"].ToString().Length > 0 ? dr["candidateAvatar"].ToString() : "user.png";
                     cd.Email = dr["candidateEmail"].ToString();
                     cd.Address = dr["candidateAddress"].ToString();
+
                 }
             }
             catch { }

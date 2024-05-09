@@ -16,7 +16,7 @@ namespace JobHub
         private CompanyDetail companyDetail = new CompanyDetail();
         private Candidate cd = new Candidate();
         Fmain fm = new Fmain();
-
+          
         private Company company = new Company();
         private Function function = new Function();
         private string imagePath;
