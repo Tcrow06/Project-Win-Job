@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.pnNav = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.fpnContainCV = new System.Windows.Forms.FlowLayoutPanel();
             this.pnNav.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +46,15 @@
             this.pnNav.Name = "pnNav";
             this.pnNav.Size = new System.Drawing.Size(1048, 43);
             this.pnNav.TabIndex = 0;
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2VSeparator1.FillThickness = 3;
+            this.guna2VSeparator1.Location = new System.Drawing.Point(9, 9);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 28);
+            this.guna2VSeparator1.TabIndex = 10;
             // 
             // label8
             // 
@@ -65,29 +74,20 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderRadius = 8;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel1.Controls.Add(this.fpnContainCV);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 43);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1048, 576);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // fpnContainCV
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1048, 576);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.guna2VSeparator1.FillThickness = 3;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(9, 9);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 28);
-            this.guna2VSeparator1.TabIndex = 10;
+            this.fpnContainCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fpnContainCV.Location = new System.Drawing.Point(0, 0);
+            this.fpnContainCV.Name = "fpnContainCV";
+            this.fpnContainCV.Size = new System.Drawing.Size(1048, 576);
+            this.fpnContainCV.TabIndex = 0;
             // 
             // FPostCV
             // 
@@ -111,7 +111,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnNav;
         public System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fpnContainCV;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
     }
 }

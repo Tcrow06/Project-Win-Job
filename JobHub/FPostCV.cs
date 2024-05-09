@@ -12,6 +12,7 @@ namespace JobHub
 {
     public partial class FPostCV : Form
     {
+        PostCV cv = new PostCV();
         Fmain fm;
         public FPostCV()
         {
@@ -22,6 +23,13 @@ namespace JobHub
         {
             InitializeComponent();
             this.fm = fm;
+        }
+
+        public void LoadData()
+        {
+            string cmd = "select InputJob.des, InputJob.salaryOffer, Candidate.* from InputJob inner join Candidate on Candidate.idCandidate = InputJob.idCandidate";
+            DataTable dt = cv.ReadData(cmd);
+            cv.WriteCV(dt, fpnContainCV);
         }
     }
 }

@@ -36,19 +36,19 @@
             this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pnContainCV = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnJob = new Guna.UI2.WinForms.Guna2Button();
             this.btnEmail = new Guna.UI2.WinForms.Guna2Button();
             this.btnName = new Guna.UI2.WinForms.Guna2Button();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnContainCV = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblOffer = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblKN = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
-            this.pnContainCV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.pnContainCV.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFlow
@@ -179,80 +179,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(322, 130);
             this.guna2Panel2.TabIndex = 21;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(3, 149);
-            this.label8.MaximumSize = new System.Drawing.Size(400, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 20);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Trình độ";
-            // 
-            // pnContainCV
-            // 
-            this.pnContainCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.pnContainCV.BorderRadius = 8;
-            this.pnContainCV.Controls.Add(this.label4);
-            this.pnContainCV.Controls.Add(this.label3);
-            this.pnContainCV.Controls.Add(this.label1);
-            this.pnContainCV.Controls.Add(this.btnFlow);
-            this.pnContainCV.Controls.Add(this.btnAcess);
-            this.pnContainCV.Controls.Add(this.guna2RadioButton3);
-            this.pnContainCV.Controls.Add(this.guna2RadioButton2);
-            this.pnContainCV.Controls.Add(this.guna2RadioButton1);
-            this.pnContainCV.Controls.Add(this.label2);
-            this.pnContainCV.Controls.Add(this.guna2Panel2);
-            this.pnContainCV.Controls.Add(this.label8);
-            this.pnContainCV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContainCV.Location = new System.Drawing.Point(0, 0);
-            this.pnContainCV.Margin = new System.Windows.Forms.Padding(4);
-            this.pnContainCV.Name = "pnContainCV";
-            this.pnContainCV.Size = new System.Drawing.Size(322, 359);
-            this.pnContainCV.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 230);
-            this.label1.MaximumSize = new System.Drawing.Size(309, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 40);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Back End Java 4 năm Kinh nghiệm, sử dụng thành thạo Spring Framwork\r\n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 283);
-            this.label3.MaximumSize = new System.Drawing.Size(400, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Mức lương";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(106, 283);
-            this.label4.MaximumSize = new System.Drawing.Size(400, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 20);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "40 000 000 VND";
-            // 
             // guna2Button1
             // 
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -350,6 +276,80 @@
             this.pbAvatar.TabIndex = 0;
             this.pbAvatar.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(3, 149);
+            this.label8.MaximumSize = new System.Drawing.Size(400, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 20);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Trình độ";
+            // 
+            // pnContainCV
+            // 
+            this.pnContainCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.pnContainCV.BorderRadius = 8;
+            this.pnContainCV.Controls.Add(this.lblOffer);
+            this.pnContainCV.Controls.Add(this.label3);
+            this.pnContainCV.Controls.Add(this.lblKN);
+            this.pnContainCV.Controls.Add(this.btnFlow);
+            this.pnContainCV.Controls.Add(this.btnAcess);
+            this.pnContainCV.Controls.Add(this.guna2RadioButton3);
+            this.pnContainCV.Controls.Add(this.guna2RadioButton2);
+            this.pnContainCV.Controls.Add(this.guna2RadioButton1);
+            this.pnContainCV.Controls.Add(this.label2);
+            this.pnContainCV.Controls.Add(this.guna2Panel2);
+            this.pnContainCV.Controls.Add(this.label8);
+            this.pnContainCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContainCV.Location = new System.Drawing.Point(0, 0);
+            this.pnContainCV.Margin = new System.Windows.Forms.Padding(4);
+            this.pnContainCV.Name = "pnContainCV";
+            this.pnContainCV.Size = new System.Drawing.Size(322, 359);
+            this.pnContainCV.TabIndex = 1;
+            // 
+            // lblOffer
+            // 
+            this.lblOffer.AutoSize = true;
+            this.lblOffer.BackColor = System.Drawing.Color.Transparent;
+            this.lblOffer.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOffer.ForeColor = System.Drawing.Color.Black;
+            this.lblOffer.Location = new System.Drawing.Point(106, 283);
+            this.lblOffer.MaximumSize = new System.Drawing.Size(400, 0);
+            this.lblOffer.Name = "lblOffer";
+            this.lblOffer.Size = new System.Drawing.Size(119, 20);
+            this.lblOffer.TabIndex = 33;
+            this.lblOffer.Text = "40 000 000 VND";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(3, 283);
+            this.label3.MaximumSize = new System.Drawing.Size(400, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Mức lương";
+            // 
+            // lblKN
+            // 
+            this.lblKN.AutoSize = true;
+            this.lblKN.BackColor = System.Drawing.Color.Transparent;
+            this.lblKN.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKN.ForeColor = System.Drawing.Color.Black;
+            this.lblKN.Location = new System.Drawing.Point(11, 230);
+            this.lblKN.MaximumSize = new System.Drawing.Size(309, 0);
+            this.lblKN.Name = "lblKN";
+            this.lblKN.Size = new System.Drawing.Size(306, 40);
+            this.lblKN.TabIndex = 31;
+            this.lblKN.Text = "Back End Java 4 năm Kinh nghiệm, sử dụng thành thạo Spring Framwork\r\n";
+            // 
             // uC_PostCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,9 +359,9 @@
             this.Name = "uC_PostCV";
             this.Size = new System.Drawing.Size(322, 359);
             this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.pnContainCV.ResumeLayout(false);
             this.pnContainCV.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,9 +381,9 @@
         public Guna.UI2.WinForms.Guna2CirclePictureBox pbAvatar;
         public System.Windows.Forms.Label label8;
         public Guna.UI2.WinForms.Guna2Panel pnContainCV;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblKN;
         public Guna.UI2.WinForms.Guna2Button guna2Button1;
-        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lblOffer;
         public System.Windows.Forms.Label label3;
     }
 }
