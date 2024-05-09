@@ -685,5 +685,21 @@ namespace JobHub
             forms.Push(fai);
             this.loadForm(job);
         }
+
+        private void btnPostFindJob_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FInputJob job = new FInputJob(this);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            forms.Push(fai);
+            this.loadForm(job);
+            resize(950, 500);
+            //MessageBox.Show(this.Width.ToString() + " " + this.Height.ToString());
+
+        }
     }
 }

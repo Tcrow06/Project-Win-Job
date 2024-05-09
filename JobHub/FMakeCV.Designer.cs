@@ -3,7 +3,7 @@
     partial class FMakeCV
     {
         /// <summary>
-        /// Required designer variable.
+/*        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -66,11 +66,11 @@
             this.uC_MakeCV1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.uC_MakeCV1.Name = "uC_MakeCV1";
             this.uC_MakeCV1.Size = new System.Drawing.Size(766, 640);
-            this.uC_MakeCV1.TabIndex = 0;
+            this.uC_MakeCV1.TabIndex = 0;*/
             // 
             // FMakeCV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+/*            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(766, 695);
@@ -82,14 +82,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FMakeCV";
             this.Load += new System.EventHandler(this.FMakeCV_Load);
-            this.ResumeLayout(false);
-
+            this.ResumeLayout(false);*/
+/*
         }
 
         #endregion
 
         private uC_MakeCV uC_MakeCV1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;*/
     }
 }

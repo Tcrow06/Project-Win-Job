@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace JobHub
 {
-    public partial class FMakeCV : Form
+/*    public partial class FMakeCV : Form
     {
         private int idCandidate;
         private int idCV;        
@@ -88,5 +88,5 @@ namespace JobHub
            // //dt, uC_MakeCV1.dtpYob,
            // uC_MakeCV1.rdoBoy, uC_MakeCV1.rdoGirl);
         }
-    }
+    }*/
 }

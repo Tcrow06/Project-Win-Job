@@ -18,7 +18,7 @@ namespace JobHub
             InitializeComponent();
         }
 
-        private void uC_MakeCV_Load(object sender, EventArgs e)
+/*        private void uC_MakeCV_Load(object sender, EventArgs e)
         {
             guna2VScrollBar1.BindingContainer = fpnContain;
         }
@@ -26,6 +26,6 @@ namespace JobHub
         private void picLink_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
 }

@@ -47,7 +47,7 @@ namespace JobHub
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            try
+/*            try
             {
                 string experience = "";
                 foreach (Control control in uC_MakeCV2.fpnContain.Controls)
@@ -76,7 +76,7 @@ namespace JobHub
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
 
         }
     }

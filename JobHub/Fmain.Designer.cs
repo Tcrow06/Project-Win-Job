@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmain));
             this.pnControlBox = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,6 +84,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
+            this.btnPostFindJob = new Guna.UI2.WinForms.Guna2Button();
             this.pnControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnNav.SuspendLayout();
@@ -335,11 +336,12 @@
             this.pnSubNav2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
             this.pnSubNav2.Controls.Add(this.btnCV);
             this.pnSubNav2.Controls.Add(this.btnMyCV);
+            this.pnSubNav2.Controls.Add(this.btnPostFindJob);
             this.guna2Transition1.SetDecoration(this.pnSubNav2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnSubNav2.Location = new System.Drawing.Point(3, 169);
             this.pnSubNav2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav2.Name = "pnSubNav2";
-            this.pnSubNav2.Size = new System.Drawing.Size(228, 91);
+            this.pnSubNav2.Size = new System.Drawing.Size(228, 133);
             this.pnSubNav2.TabIndex = 5;
             // 
             // btnCV
@@ -404,7 +406,7 @@
             this.pnSubNav3.Controls.Add(this.btnListCompany);
             this.pnSubNav3.Controls.Add(this.btnTopCompany);
             this.guna2Transition1.SetDecoration(this.pnSubNav3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pnSubNav3.Location = new System.Drawing.Point(3, 262);
+            this.pnSubNav3.Location = new System.Drawing.Point(3, 304);
             this.pnSubNav3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
             this.pnSubNav3.Name = "pnSubNav3";
             this.pnSubNav3.Size = new System.Drawing.Size(228, 126);
@@ -512,7 +514,7 @@
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogin.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnLogin.Location = new System.Drawing.Point(3, 400);
+            this.btnLogin.Location = new System.Drawing.Point(3, 442);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(228, 36);
@@ -540,7 +542,7 @@
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBack.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnBack.Location = new System.Drawing.Point(3, 450);
+            this.btnBack.Location = new System.Drawing.Point(3, 492);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(228, 36);
@@ -1153,22 +1155,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // guna2BorderlessForm1
             // 
@@ -1194,6 +1196,34 @@
         System.Drawing.Color.Red,
         System.Drawing.Color.Blue,
         System.Drawing.Color.Orange};
+            // 
+            // btnPostFindJob
+            // 
+            this.btnPostFindJob.BackColor = System.Drawing.Color.Transparent;
+            this.btnPostFindJob.BorderRadius = 8;
+            this.btnPostFindJob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnPostFindJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnPostFindJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPostFindJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPostFindJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPostFindJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPostFindJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
+            this.btnPostFindJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPostFindJob.ForeColor = System.Drawing.Color.White;
+            this.btnPostFindJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnPostFindJob.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPostFindJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnPostFindJob.Image = ((System.Drawing.Image)(resources.GetObject("btnPostFindJob.Image")));
+            this.btnPostFindJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPostFindJob.Location = new System.Drawing.Point(3, 82);
+            this.btnPostFindJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPostFindJob.Name = "btnPostFindJob";
+            this.btnPostFindJob.Size = new System.Drawing.Size(224, 36);
+            this.btnPostFindJob.TabIndex = 8;
+            this.btnPostFindJob.Text = "Đăng tìm việc ";
+            this.btnPostFindJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPostFindJob.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnPostFindJob.Click += new System.EventHandler(this.btnPostFindJob_Click);
             // 
             // Fmain
             // 
@@ -1295,5 +1325,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
+        private Guna.UI2.WinForms.Guna2Button btnPostFindJob;
     }
 }
