@@ -349,7 +349,7 @@ namespace JobHub
         {
             if (checkHeight(pnSubNav31, 35))
             {
-                Show(pnSubNav31, 102);
+                Show(pnSubNav31, 164);
             }
             else
             {
@@ -680,6 +680,20 @@ namespace JobHub
 
             }
             FCompanyList job = new FCompanyList(this);
+            resize(job.Width + 200, job.Height + 50);
+            FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
+            forms.Push(fai);
+            this.loadForm(job);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            foreach (Form formdelete in this.MdiChildren)
+            {
+                formdelete.Close();
+
+            }
+            FPostCV job = new FPostCV(this);
             resize(job.Width + 200, job.Height + 50);
             FormAndInfoCandidate fai = new FormAndInfoCandidate(job);
             forms.Push(fai);

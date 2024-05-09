@@ -226,6 +226,12 @@
     <Compile Include="FollowedCV.cs" />
     <Compile Include="FollowedCVDAO.cs" />
     <Compile Include="FormHandler.cs" />
+    <Compile Include="FPostCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPostCV.Designer.cs">
+      <DependentUpon>FPostCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPostJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -500,6 +506,12 @@
     <Compile Include="uc_PbEvaluate.Designer.cs">
       <DependentUpon>uc_PbEvaluate.cs</DependentUpon>
     </Compile>
+    <Compile Include="uC_PostCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uC_PostCV.Designer.cs">
+      <DependentUpon>uC_PostCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="uC_SubCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -560,6 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMakeCV.resx">
       <DependentUpon>FMakeCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPostCV.resx">
+      <DependentUpon>FPostCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPostJob.resx">
       <DependentUpon>FPostJob.cs</DependentUpon>
@@ -695,6 +710,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_PbEvaluate.resx">
       <DependentUpon>uc_PbEvaluate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uC_PostCV.resx">
+      <DependentUpon>uC_PostCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uC_SubCV.resx">
       <DependentUpon>uC_SubCV.cs</DependentUpon>
