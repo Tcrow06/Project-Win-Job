@@ -135,6 +135,7 @@ namespace JobHub
         public DataTable ExcutionReadData(string cmd)
         {
             DataTable dt = new DataTable();
+            /*MessageBox.Show(cmd);*/
             using (SqlConnection connection = new SqlConnection((Properties.Settings.Default.conn)))
             {
                 connection.Open();

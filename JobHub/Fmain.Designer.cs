@@ -46,6 +46,7 @@
             this.pnSubNav2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCV = new Guna.UI2.WinForms.Guna2Button();
             this.btnMyCV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPostFindJob = new Guna.UI2.WinForms.Guna2Button();
             this.pnSubNav3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCompany = new Guna.UI2.WinForms.Guna2Button();
             this.btnListCompany = new Guna.UI2.WinForms.Guna2Button();
@@ -65,6 +66,7 @@
             this.btnCvCad = new Guna.UI2.WinForms.Guna2Button();
             this.btnFavouriteCV = new Guna.UI2.WinForms.Guna2Button();
             this.btnFindCandidate = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnAcount = new Guna.UI2.WinForms.Guna2Panel();
             this.lblAccName = new System.Windows.Forms.Label();
             this.pbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -84,11 +86,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
-<<<<<<< HEAD
-            this.btnPostFindJob = new Guna.UI2.WinForms.Guna2Button();
-=======
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
->>>>>>> 72d1d3f0fa8e4ae9b58e0ca853f36289dc521d2b
             this.pnControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnNav.SuspendLayout();
@@ -402,6 +399,34 @@
             this.btnMyCV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMyCV.TextOffset = new System.Drawing.Point(30, 0);
             this.btnMyCV.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // btnPostFindJob
+            // 
+            this.btnPostFindJob.BackColor = System.Drawing.Color.Transparent;
+            this.btnPostFindJob.BorderRadius = 8;
+            this.btnPostFindJob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.btnPostFindJob, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnPostFindJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPostFindJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPostFindJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPostFindJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPostFindJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
+            this.btnPostFindJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPostFindJob.ForeColor = System.Drawing.Color.White;
+            this.btnPostFindJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnPostFindJob.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnPostFindJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.btnPostFindJob.Image = ((System.Drawing.Image)(resources.GetObject("btnPostFindJob.Image")));
+            this.btnPostFindJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPostFindJob.Location = new System.Drawing.Point(3, 82);
+            this.btnPostFindJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPostFindJob.Name = "btnPostFindJob";
+            this.btnPostFindJob.Size = new System.Drawing.Size(224, 36);
+            this.btnPostFindJob.TabIndex = 8;
+            this.btnPostFindJob.Text = "Đăng tìm việc ";
+            this.btnPostFindJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPostFindJob.TextOffset = new System.Drawing.Point(30, 0);
+            this.btnPostFindJob.Click += new System.EventHandler(this.btnPostFindJob_Click);
             // 
             // pnSubNav3
             // 
@@ -872,10 +897,38 @@
             this.btnFindCandidate.Name = "btnFindCandidate";
             this.btnFindCandidate.Size = new System.Drawing.Size(224, 36);
             this.btnFindCandidate.TabIndex = 7;
-            this.btnFindCandidate.Text = "Tìm ứng viên";
+            this.btnFindCandidate.Text = "Tìm CV";
             this.btnFindCandidate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFindCandidate.TextOffset = new System.Drawing.Point(30, 0);
             this.btnFindCandidate.Click += new System.EventHandler(this.btnFindCandidate_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Location = new System.Drawing.Point(3, 162);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(224, 36);
+            this.guna2Button1.TabIndex = 8;
+            this.guna2Button1.Text = "Tìm ứng viên";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // pnAcount
             // 
@@ -1202,64 +1255,6 @@
         System.Drawing.Color.Blue,
         System.Drawing.Color.Orange};
             // 
-<<<<<<< HEAD
-            // btnPostFindJob
-            // 
-            this.btnPostFindJob.BackColor = System.Drawing.Color.Transparent;
-            this.btnPostFindJob.BorderRadius = 8;
-            this.btnPostFindJob.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.btnPostFindJob, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnPostFindJob.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPostFindJob.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPostFindJob.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPostFindJob.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPostFindJob.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
-            this.btnPostFindJob.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPostFindJob.ForeColor = System.Drawing.Color.White;
-            this.btnPostFindJob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnPostFindJob.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnPostFindJob.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.btnPostFindJob.Image = ((System.Drawing.Image)(resources.GetObject("btnPostFindJob.Image")));
-            this.btnPostFindJob.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPostFindJob.Location = new System.Drawing.Point(3, 82);
-            this.btnPostFindJob.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPostFindJob.Name = "btnPostFindJob";
-            this.btnPostFindJob.Size = new System.Drawing.Size(224, 36);
-            this.btnPostFindJob.TabIndex = 8;
-            this.btnPostFindJob.Text = "Đăng tìm việc ";
-            this.btnPostFindJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPostFindJob.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnPostFindJob.Click += new System.EventHandler(this.btnPostFindJob_Click);
-=======
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(154)))), ((int)(((byte)(32)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(207)))), ((int)(((byte)(79)))));
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 162);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(224, 36);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Tìm ứng viên";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(30, 0);
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
->>>>>>> 72d1d3f0fa8e4ae9b58e0ca853f36289dc521d2b
-            // 
             // Fmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1360,10 +1355,7 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
-<<<<<<< HEAD
         private Guna.UI2.WinForms.Guna2Button btnPostFindJob;
-=======
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
->>>>>>> 72d1d3f0fa8e4ae9b58e0ca853f36289dc521d2b
     }
 }

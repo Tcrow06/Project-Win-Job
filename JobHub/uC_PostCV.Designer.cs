@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uC_PostCV));
             this.btnFlow = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAcess = new Guna.UI2.WinForms.Guna2Button();
             this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -63,31 +62,12 @@
             this.btnFlow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnFlow.ImageOffset = new System.Drawing.Point(-2, 0);
             this.btnFlow.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnFlow.Location = new System.Drawing.Point(194, 314);
+            this.btnFlow.Location = new System.Drawing.Point(191, 311);
             this.btnFlow.Margin = new System.Windows.Forms.Padding(4);
             this.btnFlow.Name = "btnFlow";
             this.btnFlow.Size = new System.Drawing.Size(111, 33);
             this.btnFlow.TabIndex = 30;
             this.btnFlow.Text = "Theo dõi";
-            // 
-            // btnAcess
-            // 
-            this.btnAcess.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAcess.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAcess.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAcess.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAcess.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAcess.FillColor = System.Drawing.Color.Transparent;
-            this.btnAcess.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(177)))), ((int)(((byte)(84)))));
-            this.btnAcess.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnAcess.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnAcess.Location = new System.Drawing.Point(7, 314);
-            this.btnAcess.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAcess.Name = "btnAcess";
-            this.btnAcess.Size = new System.Drawing.Size(143, 33);
-            this.btnAcess.TabIndex = 4;
-            this.btnAcess.Text = "Liên hệ";
             // 
             // guna2RadioButton3
             // 
@@ -108,6 +88,7 @@
             this.guna2RadioButton3.UncheckedState.BorderThickness = 2;
             this.guna2RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton3.CheckedChanged += new System.EventHandler(this.guna2RadioButton2_CheckedChanged);
             // 
             // guna2RadioButton2
             // 
@@ -130,6 +111,7 @@
             this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
             this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton2.CheckedChanged += new System.EventHandler(this.guna2RadioButton2_CheckedChanged);
             // 
             // guna2RadioButton1
             // 
@@ -150,6 +132,7 @@
             this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
             this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton1.CheckedChanged += new System.EventHandler(this.guna2RadioButton2_CheckedChanged);
             // 
             // label2
             // 
@@ -297,7 +280,6 @@
             this.pnContainCV.Controls.Add(this.label3);
             this.pnContainCV.Controls.Add(this.lblKN);
             this.pnContainCV.Controls.Add(this.btnFlow);
-            this.pnContainCV.Controls.Add(this.btnAcess);
             this.pnContainCV.Controls.Add(this.guna2RadioButton3);
             this.pnContainCV.Controls.Add(this.guna2RadioButton2);
             this.pnContainCV.Controls.Add(this.guna2RadioButton1);
@@ -369,7 +351,6 @@
         #endregion
 
         public Guna.UI2.WinForms.Guna2Button btnFlow;
-        public Guna.UI2.WinForms.Guna2Button btnAcess;
         public Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
         public Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
         public Guna.UI2.WinForms.Guna2Button btnName;

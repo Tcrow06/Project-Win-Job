@@ -15,7 +15,11 @@ namespace JobHub
         public FollowedCVDAO() { }  
         public DataTable LoadFollowedCV(int idCompany)
         {
-            string sql = $"select * from FollowedCV where idCompany = {idCompany}";
+            /*string sql = $"select * from FollowedCV where idCompany = {idCompany}";*/
+            /*string sql = $"select InputJob.des, InputJob.salaryOffer,InputJob.jobName, Candidate.* from InputJob inner join Candidate on Candidate.idCandidate = InputJob.idCandidate where " +
+                $"exist (select* from FollowedCV where  FollowedCV.idCompany = {idCompany}) as com , com.IdCandidate = Candidate.idCandidate";*/
+            string sql = $@"SELECT InputJob.des, InputJob.salaryOffer, InputJob.jobName, Candidate.* FROM InputJob INNER JOIN Candidate ON Candidate.idCandidate = InputJob.idCandidate WHERE EXISTS (SELECT * FROM FollowedCV WHERE FollowedCV.idCompany = {idCompany} AND FollowedCV.IdCandidate = Candidate.idCandidate)";
+
             return db.ExcutionReadData(sql);
         }
         public DataTable GetInfoCV(int idCV, int CVType)

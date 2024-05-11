@@ -537,18 +537,18 @@ namespace JobHub
 
         private void btnFavouriteCV_Click(object sender, EventArgs e)
         {
-/*            foreach (Form formdelete in this.MdiChildren)
-            {
-                formdelete.Close();
+            /*            foreach (Form formdelete in this.MdiChildren)
+                        {
+                            formdelete.Close();
 
-            }*/
+                        }*/
             FFollowedCV fcv = new FFollowedCV(this);
-            
+
             FormAndInfoCandidate fai = new FormAndInfoCandidate(fcv);
             forms.Push(fai);
             this.loadForm(fai.Form);
             resize(959, 567);
-            
+
         }
 
         private void btnOut_Click(object sender, EventArgs e)

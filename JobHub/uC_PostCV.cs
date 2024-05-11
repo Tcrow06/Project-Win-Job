@@ -16,5 +16,12 @@ namespace JobHub
         {
             InitializeComponent();
         }
+
+        private void guna2RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            guna2RadioButton2.Checked = true;
+            guna2RadioButton1.Checked = false;
+            guna2RadioButton3.Checked = false;
+        }
     }
 }

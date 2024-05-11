@@ -23,13 +23,14 @@ namespace JobHub
         {
             InitializeComponent();
             this.fm = fm;
+            LoadData();
         }
 
         public void LoadData()
         {
-            string cmd = "select InputJob.des, InputJob.salaryOffer, Candidate.* from InputJob inner join Candidate on Candidate.idCandidate = InputJob.idCandidate";
+            string cmd = "select InputJob.des, InputJob.salaryOffer,InputJob.jobName, Candidate.* from InputJob inner join Candidate on Candidate.idCandidate = InputJob.idCandidate";
             DataTable dt = cv.ReadData(cmd);
-            cv.WriteCV(dt, fpnContainCV);
+            cv.WriteCV(dt, fpnContainCV, fm);
         }
     }
 }
